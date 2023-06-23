@@ -407,29 +407,45 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Kidhibiti cha Wi-Fi huruhusu programu iwashe au izime Wi-Fi, itafute na iunganishe kwenye mitandao ya Wi-Fi, iongeze au iondoe mitandao au ianzishe mtandaopepe wa eneo mahususi."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Zaidi"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Mahali"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Huenda huduma za mahali zikatumia vyanzo kama vile GPS, Wi‑Fi, mitandao ya simu na vitambuzi ili kubaini mahali kilipo kifaa chako."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Tumia data ya mahali"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Ruhusu programu unazobainisha zifikie mahali ulipo"</string>
+    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ukizima kipengle hiki, ufikiaji wa data ya mahali kwenye programu zote utaondolewa isipokuwa zile zinazohitajika katika usaidizi kwa dereva"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Tumia data ya mahali katika usaidizi kwa dereva"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Kipengele cha mahali cha gari kimezimwa"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Programu za usaidizi kwa dereva hazifikii data ya mahali ulipo"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Badilisha"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Ruhusu programu zinazosaidia kuendesha zifikie mahali uliko"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ukizima kipengele hiki, programu za usaidizi kwa dereva zinazotegemea taarifa za mahali zitazimwa"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Zima hata hivyo"</string>
+    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Yaliyofikiwa hivi karibuni"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yaliyofikiwa hivi karibuni"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Angalia zote"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Hakuna programu za hivi karibuni"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Usaidizi kwa dereva"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Programu zenye ruhusa ya kufikia data ya mahali lilipo gari hili katika vipengele vya usaidizi kwa dereva"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Sera ya faragha"</string>
+    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
+    <skip />
+    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
+    <skip />
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Ruhusa za kiwango cha programu"</string>
+    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
+    <skip />
     <string name="location_settings_services_title" msgid="1186133632690970468">"Huduma za Mahali"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Tumia data ya mahali"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Huenda huduma za mahali zikatumia vyanzo kama vile GPS, Wi‑Fi, mitandao ya simu na vitambuzi ili kubaini mahali kilipo kifaa chako."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Usaidizi kwa dereva"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Taarifa za mahali zinazotumwa kwenye programu za usaidizi kwa dereva hazijumuishi maelezo yanayokutambulisha. Huhifadhiwa kwa muda usiozidi siku 2 kabla ya kufutwa."</string>
+    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
+    <skip />
+    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
+    <skip />
+    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
+    <skip />
+    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Maikrofoni"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Tumia maikrofoni"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Ruhusu programu zote zifikie maikrofoni yako"</string>

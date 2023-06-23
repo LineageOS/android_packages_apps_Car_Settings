@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Control de Wi-Fi permite que esta app active o desactive la conexión Wi-Fi, busque redes Wi-Fi y se conecte a ellas, agregue o quite redes, o inicie un hotspot de acceso local exclusivo."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Más"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"La ubicación puede usar fuentes como GPS, Wi-Fi, redes móviles y sensores para obtener la ubicación estimada del dispositivo."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar ubicación"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Permitir apps espec. acceder a ubicación"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Usa la ubicación del vehículo con cualquier app que hayas especificado."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Si desactivas este parámetro, se quitará el acceso a la ubicación para todas las apps, excepto las necesarias para asistencia al conductor"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Usar ubicación para asist. al conductor"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Ubicación del vehículo desactivada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps de asist. sin acceso a tu ubicación"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Cambiar"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permitir apps de asist. acceder a ubic."</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Si desactivas las apps de asistencia al conductor, se inhabilitarán las funciones que dependan de los datos de ubicación"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desactivar de todos modos"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Si desactivas las apps de asistencia al conductor, se inhabilitarán las funciones que dependan de la información de ubicación"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desactivar de todos modos"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Las funciones de asistencia al conductor siempre tienen acceso a la ubicación del vehículo"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funciones que te ayudan a conducir"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Permite que las funciones integradas aprobadas por el fabricante del vehículo accedan a su ubicación."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Con acceso reciente"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Con acceso reciente"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todas"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ninguna app reciente"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia al conductor"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apps con permiso de ubic. para asist."</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Política de Privacidad"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funciones que te ayudan a conducir"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Estas funciones integradas pueden acceder a la ubicación del vehículo para asistir en la conducción"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Política"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos en las apps"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Administra los permisos individuales de las apps"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicios de ubicación"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usar ubicación"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"La ubicación puede usar fuentes como GPS, Wi-Fi, redes móviles y sensores para obtener la ubicación estimada del dispositivo."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia al conductor"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Los datos de ubicación enviados a las apps de asistencia al conductor no contienen información que permita identificarte. Se almacenan durante un máximo de 2 días antes de que se los borre."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Acceso a la ubicación"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Elige si las apps pueden acceder a la ubicación del vehículo"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Es posible que el software del fabricante de tu vehículo acceda a su ubicación de todas formas."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Revisa la Política de Privacidad de cada app para obtener más información sobre el modo en que usan tus datos de ubicación."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas las apps accedan al micrófono"</string>

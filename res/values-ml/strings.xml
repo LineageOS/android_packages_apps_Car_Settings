@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"വൈഫൈ ഓണാക്കാനോ ഓഫാക്കാനോ, സ്‌കാൻ ചെയ്‌ത് വൈഫൈ നെറ്റ്‌വർക്കുകളിലേക്ക് കണക്‌റ്റ് ചെയ്യാനും നെറ്റ്‌വർക്കുകൾ ചേർക്കാനോ നീക്കം ചെയ്യാനോ, ഉപകരണം ഉള്ളിടത്ത് മാത്രം പ്രവർത്തിക്കുന്ന ഹോട്ട്‌സ്‌പോട്ട് ആരംഭിക്കാനോ വൈഫൈ നിയന്ത്രണം ആപ്പിനെ അനുവദിക്കുന്നു."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"കൂടുതൽ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ ലൊക്കേഷൻ കണക്കാക്കാൻ സഹായിക്കുന്നതിന് GPS, വൈഫൈ, മൊബൈൽ നെറ്റ്‌വർക്കുകൾ, സെൻസറുകൾ പോലുള്ള ഉറവിടങ്ങൾ ലൊക്കേഷൻ ഉപയോഗിച്ചേക്കാം."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"നിങ്ങൾ വ്യക്തമാക്കുന്ന ആപ്പുകളെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കൂ"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"നിങ്ങൾ പ്രത്യേകം തിരഞ്ഞെടുക്കുന്ന ഏത് ആപ്പിനൊപ്പവും നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷൻ ഉപയോഗിക്കുക."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ഇത് ഓഫാക്കിയാൽ, ഡ്രെെവർ സഹായിക്ക് ആവശ്യമായവ ഒഴികെയുള്ള എല്ലാ ആപ്പുകൾക്കുമുള്ള ലൊക്കേഷൻ ആക്‌സസ് നീക്കം ചെയ്യപ്പെടും"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ഡ്രൈവർ സഹായിക്ക് ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"വാഹന ലൊക്കേഷൻ ഓഫാണ്"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ഡ്രൈവർ സഹായി ആപ്പുകൾക്ക് ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാനാകില്ല"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"മാറ്റുക"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ഡ്രെെവിംഗിന് സഹായിക്കുന്ന ആപ്പുകളെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കൂ"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ഇത് ഓഫാക്കിയാൽ, ലൊക്കേഷൻ വിവരങ്ങളെ ആശ്രയിക്കുന്ന ഡ്രൈവർ സഹായി ആപ്പുകൾ പ്രവർത്തനരഹിതമാകും"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"എന്തായാലും ഓഫാക്കുക"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ഇത് ഓഫാക്കിയാൽ, ലൊക്കേഷൻ വിവരങ്ങളെ ആശ്രയിക്കുന്ന ഡ്രൈവർ സഹായി ആപ്പുകൾ പ്രവർത്തനരഹിതമാകും"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"എന്തായാലും ഓഫാക്കുക"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ഡ്രൈവർ സഹായി ഫീച്ചറുകൾക്ക് നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷനിലേക്ക് എപ്പോഴും ആക്‌സസ് ഉണ്ടായിരിക്കും"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"ഡ്രെെവ് ചെയ്യാൻ സഹായിക്കുന്ന ഫീച്ചറുകൾ"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"കാറിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യുന്നതിന്, നിങ്ങളുടെ കാർ നിർമ്മാതാവ് അംഗീകരിച്ച ബിൽറ്റ് ഇൻ ഫീച്ചറുകൾ അനുവദിക്കുക."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"എല്ലാം കാണുക"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"അടുത്തിടെ ഉപയോഗിച്ച ആപ്പുകളൊന്നുമില്ല"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ഡ്രൈവർ സഹായി"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ഡ്രൈവർ സഹായി ഫീച്ചറുകൾക്ക്, ഈ വാഹനത്തിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ അനുമതിയുള്ള ആപ്പുകൾ"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"സ്വകാര്യതാ നയം"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"ഡ്രെെവ് ചെയ്യാൻ സഹായിക്കുന്ന ഫീച്ചറുകൾ"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"ഡ്രെെവിംഗിന് സഹായിക്കുന്നതിന്, നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ ഈ ബിൽറ്റ് ഇൻ ഫീച്ചറുകൾക്ക് കഴിയും"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"നയം"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ആപ്പ്-തല അനുമതികൾ"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"വ്യക്തിഗത ആപ്പ് അനുമതികൾ മാനേജ് ചെയ്യുക"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ലൊക്കേഷൻ സേവനങ്ങൾ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ ലൊക്കേഷൻ കണക്കാക്കാൻ സഹായിക്കുന്നതിന് GPS, വൈഫൈ, മൊബൈൽ നെറ്റ്‌വർക്കുകൾ, സെൻസറുകൾ പോലുള്ള ഉറവിടങ്ങൾ ലൊക്കേഷൻ ഉപയോഗിച്ചേക്കാം."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ഡ്രൈവർ സഹായി"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"ഡ്രൈവർ സഹായി ആപ്പുകളിലേക്ക് അയച്ച ലൊക്കേഷൻ വിവരങ്ങളിൽ നിങ്ങളെ തിരിച്ചറിയാൻ സഹായിക്കുന്ന വിവരങ്ങളില്ല. ഇത് ഇല്ലാതാക്കുന്നതിന് മുമ്പ് പരമാവധി 2 ദിവസത്തേക്ക് സംഭരിക്കും."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"ലൊക്കേഷൻ ആക്‌സസ്"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"ആപ്പുകൾക്ക് നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാനാകുമോ എന്ന് തിരഞ്ഞെടുക്കുക"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"കാർ നിർമ്മാതാവ് നൽകുന്ന സോഫ്‌റ്റ്‌വെയറിന് നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷനിലേക്ക് തുടർന്നും ആക്‌സസ് ഉണ്ടാകും."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"ഓരോ ആപ്പിന്റെയും സ്വകാര്യതാ നയം അവലോകനം ചെയ്‌ത് അവ ഓരോന്നും നിങ്ങളുടെ ലൊക്കേഷൻ ഡാറ്റ ഉപയോഗിക്കുന്നത് എങ്ങനെ എന്നതിനെക്കുറിച്ച് കൂടുതലറിയുക."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"മൈക്രോഫോൺ"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"മൈക്രോഫോൺ ഉപയോഗിക്കുക"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"നിങ്ങളുടെ മൈക്രോഫോൺ ആക്‌സസ് ചെയ്യാൻ എല്ലാ ആപ്പുകളെയും അനുവദിക്കുക"</string>

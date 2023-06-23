@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"ವೈ-ಫೈ ನಿಯಂತ್ರಣವು, ವೈ-ಫೈ ಅನ್ನು ಆನ್ ಅಥವಾ ಆಫ್ ಮಾಡಲು, ವೈ-ಫೈ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಮತ್ತು ಸಂಪರ್ಕಿಸಲು, ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಅಥವಾ ತೆಗೆದುಹಾಕಲು ಹಾಗೂ ಸ್ಥಳೀಯವಾದ ಹಾಟ್‌ಸ್ಪಾಟ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ಈ ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ಇನ್ನಷ್ಟು"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ಸ್ಥಳ"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"ಸ್ಥಳವು ನಿಮ್ಮ ಸಾಧನದ ಸ್ಥಳವನ್ನು ಅಂದಾಜು ಮಾಡಲು ಸಹಾಯ ಮಾಡುವುದಕ್ಕಾಗಿ GPS, ವೈಫೈ, ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳು ಮತ್ತು ಸೆನ್ಸರ್‌ಗಳಂತಹ ಮೂಲಗಳನ್ನು ಬಳಸಬಹುದು."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ಸ್ಥಳ ಬಳಸಿ"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪ್ರವೇಶಿಸಲು ನೀವು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"ನೀವು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಯಾವುದೇ ಆ್ಯಪ್‌ನೊಂದಿಗೆ ನಿಮ್ಮ ಕಾರ್‌ನ ಸ್ಥಳವನ್ನು ಬಳಸಿ."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯದ ಫೀಚರ್‌ಗೆ ಅಗತ್ಯವಿರುವುದನ್ನು ಹೊರತುಪಡಿಸಿ ಇದು ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳಿಗೆ ಸ್ಥಳ ಆ್ಯಕ್ಸೆಸ್ ತೆಗೆದುಹಾಕುತ್ತದೆ"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಫೀಚರ್‌ಗಾಗಿ ಸ್ಥಳ ಬಳಸಿ"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ವಾಹನದ ಸ್ಥಳ ಆಫ್ ಆಗಿದೆ"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್ ನಿಮ್ಮ ಸ್ಥಳ ಆ್ಯಕ್ಸೆಸ್‌ಗೆ ಸಾಧ್ಯವಿಲ್ಲ"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ಬದಲಾಯಿಸಿ"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಪ್ರವೇಶಿಸುವಲ್ಲಿ ಡ್ರೈವಿಂಗ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಸ್ಥಳ ಮಾಹಿತಿಯ ಮೇಲೆ ಅವಲಂಬಿತವಾದ ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತದೆ"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ಹೇಗಿದ್ದರೂ ಆಫ್ ಮಾಡಿ"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಸ್ಥಳದ ಮಾಹಿತಿಯ ಮೇಲೆ ಅವಲಂಬಿತವಾಗಿರುವ ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್‌ಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗುತ್ತದೆ"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ಹೇಗಿದ್ದರೂ ಆಫ್ ಮಾಡಿ"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳು ಯಾವಾಗಲೂ ನಿಮ್ಮ ಕಾರ್‌ನ ಸ್ಥಳಕ್ಕೆ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಹೊಂದಿರುತ್ತವೆ"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"ಡ್ರೈವ್ ಮಾಡಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳು"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ನಿಮ್ಮ ಕಾರ್‌ನ ಸ್ಥಳವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು, ನಿಮ್ಮ ಕಾರ್‌ನ ತಯಾರಕರು ಅನುಮೋದಿಸಿದ ಬಿಲ್ಟ್-ಇನ್ ಫೀಚರ್‌ಗಳನ್ನು ಅನುಮತಿಸಿ."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ಇತ್ತೀಚೆಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ಇತ್ತೀಚೆಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ಇತ್ತೀಚಿನ ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಫೀಚರ್‌ಗೆ ಈ ವಾಹನದ ಸ್ಥಳ ಆ್ಯಕ್ಸೆಸ್‌ಗೆ ಸ್ಥಳ ಅನುಮತಿ ಇರುವ ಆ್ಯಪ್"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"ಗೌಪ್ಯತೆ ನೀತಿ"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"ಡ್ರೈವ್ ಮಾಡಲು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುವ ಫೀಚರ್‌ಗಳು"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"ಈ ಬಿಲ್ಟ್-ಇನ್ ಫೀಚರ್‌ಗಳು ಡ್ರೈವಿಂಗ್‌ಗೆ ಸಹಾಯ ಮಾಡಲು ನಿಮ್ಮ ಕಾರ್‌ನ ಸ್ಥಳವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದು"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"ನೀತಿ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ಆ್ಯಪ್‌ ಹಂತದ ಅನುಮತಿಗಳು"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"ವೈಯಕ್ತಿಕ ಆ್ಯಪ್ ಅನುಮತಿಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ಸ್ಥಳ ಸೇವೆಗಳು"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ಸ್ಥಳವನ್ನು ಬಳಸಿ"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"ಸ್ಥಳವು ನಿಮ್ಮ ಸಾಧನದ ಸ್ಥಳವನ್ನು ಅಂದಾಜು ಮಾಡಲು ಸಹಾಯ ಮಾಡುವುದಕ್ಕಾಗಿ GPS, ವೈಫೈ, ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳು ಮತ್ತು ಸೆನ್ಸರ್‌ಗಳಂತಹ ಮೂಲಗಳನ್ನು ಬಳಸಬಹುದು."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯ ಮಾಡುವ ಆ್ಯಪ್‌ಗಳಿಗೆ ಕಳುಹಿಸಲಾಗುವ ಸ್ಥಳದ ಮಾಹಿತಿಯು ನಿಮ್ಮನ್ನು ಗುರುತಿಸುವಂತಹ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಿರುವುದಿಲ್ಲ. ಅಳಿಸುವ ಮೊದಲು ಅದನ್ನು ಗರಿಷ್ಠ 2 ದಿನಗಳವರೆಗೆ ಸಂಗ್ರಹಿಸಿಡಲಾಗುತ್ತದೆ."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"ಸ್ಥಳದ ಆ್ಯಕ್ಸೆಸ್"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"ಆ್ಯಪ್‌ಗಳು ನಿಮ್ಮ ಕಾರ್‌ನ ಸ್ಥಳವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದೇ ಎಂಬುದನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"ನಿಮ್ಮ ಕಾರ್‌ನ ತಯಾರಕರಿಂದ ಸಂಚಾಲಿತವಾದ ಸಾಫ್ಟ್‌ವೇರ್ ಇನ್ನೂ ನಿಮ್ಮ ಕಾರ್‌ನ ಸ್ಥಳಕ್ಕೆ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಹೊಂದಿರಬಹುದು."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"ಪ್ರತಿ ಆ್ಯಪ್ ತನ್ನ ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು ಪರಿಶೀಲಿಸುವ ಮೂಲಕ ನಿಮ್ಮ ಸ್ಥಳದ ಡೇಟಾವನ್ನು ಹೇಗೆ ಬಳಸುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ಮೈಕ್ರೋಫೋನ್"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ಮೈಕ್ರೋಫೋನ್ ಅನ್ನು ಬಳಸಿ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ನಿಮ್ಮ ಮೈಕ್ರೊಫೋನ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳಿಗೆ ಅನುಮತಿಸಿ"</string>
