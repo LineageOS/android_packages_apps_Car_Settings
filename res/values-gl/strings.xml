@@ -401,35 +401,51 @@
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Priorizar aplicación"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso ás SMS de tarificación adicional"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"As SMS de tarificación adicional poden implicar cargos engadidos nas facturas do teu operador. Se activas o permiso para unha aplicación, poderás enviar este tipo de mensaxes a través desa aplicación."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Acceso a datos de uso"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Acceso aos datos de uso"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Co acceso aos datos de uso unha aplicación pode realizar un seguimento das demais aplicacións que usas e de con que frecuencia as utilizas, así como do teu operador, da configuración do idioma e doutros detalles."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control da wifi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Co control da wifi, as aplicacións poden activar ou desactivar a wifi, buscar redes wifi, conectarse a elas, engadir ou eliminar redes e iniciar unha zona wifi local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Máis"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Localización"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Os servizos de localización poden usar fontes como o GPS, a wifi, as redes de telefonía móbil e os sensores para determinar onde está o teu dispositivo."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localización"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Deixa que as apps elixidas accedan á posición"</string>
+    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desactivas esta opción, quitarase o permiso de localización en todas as aplicacións excepto nas que sexa necesario por mor da asistencia para a condución"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Usar localización para a condución"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Localización do vehículo desactivada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"As apps de asistencia non acceden á localización"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Cambiar"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permite que as apps de condución accedan á localización"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Se desactivas esta opción, deshabilitaranse as aplicacións de asistencia para a condución que utilizan a información de localización"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desactivar de todos os xeitos"</string>
+    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Accesos recentes"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesos recentes"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todo"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ningunha aplicación accedeu recentemente"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia para a condución"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplicacións con acceso á localización do vehículo para asistencia para a condución"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Política de privacidade"</string>
+    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
+    <skip />
+    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
+    <skip />
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos para as aplicacións"</string>
+    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
+    <skip />
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizos de localización"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utilizar localización"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Os servizos de localización poden usar fontes como o GPS, a wifi, as redes de telefonía móbil e os sensores para determinar onde está o teu dispositivo."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia para a condución"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Os datos sobre a localización que se envían ás aplicacións de asistencia para a condución non conteñen información que permita identificarte. Almacénanse durante un máximo de 2 días e despois elimínanse."</string>
+    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
+    <skip />
+    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
+    <skip />
+    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
+    <skip />
+    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as aplicacións accedan ao micrófono"</string>

@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi control allows an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks, add or remove networks, or start a local-only hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"More"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Location"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Location may use sources like GPS, Wi‑Fi, mobile networks, and sensors to help estimate your device’s location."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Use location"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Allow apps you specify to access your location"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Use your car’s location with any app you’ve specified."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"If you turn this off, it will remove location access for all apps except those needed for driver assistance"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Use location for driver assistance"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Vehicle location is off"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Driver assistance apps cannot access your location"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Change"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Allow apps that help with driving to access your location"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"If you turn this off, driver assistance apps that rely on location information will be disabled"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Turn off anyway"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"If you turn this off, driver assistance apps that rely on location information will be disabled"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Turn off anyway"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Driver assistance features always have access to your car’s location"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Features that help you drive"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Allow built‑in features, approved by your car’s manufacturer, to access your car’s location."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Recently accessed"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Recently accessed"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"View all"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"No recent apps"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Driver assistance"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apps with permission to access this vehicle’s location for driver assistance features"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Privacy policy"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Features that help you drive"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"These built‑in features can access your car’s location to assist with driving"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Policy"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"App-level permissions"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Manage individual app permissions"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Location Services"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Use location"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Location may use sources like GPS, Wi‑Fi, mobile networks, and sensors to help estimate your device’s location."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Driver assistance"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Location information sent to driver assistance apps doesn’t contain information that identifies you. It’s stored for a maximum of 2 days before being deleted."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Location access"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Choose if apps can access your car’s location"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Software powered by your car’s manufacturer may still have access to your car’s location."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Learn more about how each app uses your Location data by reviewing its Privacy Policy."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microphone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Use microphone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Allow all apps to access your microphone"</string>
