@@ -407,29 +407,45 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Le contrôle Wi-Fi permet d\'autoriser une application à activer ou à désactiver le Wi-Fi, à rechercher les réseaux Wi-Fi et à s\'y connecter, à ajouter ou retirer des réseaux, ou à lancer un point d\'accès local uniquement."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Plus"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Les services de localisation peuvent utiliser des sources comme le GPS, le Wi-Fi, les réseaux cellulaires et les capteurs pour estimer la position de votre appareil."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Utiliser ma position"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Autoriser les applis que vous précisez à accéder à votre position"</string>
+    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Si vous désactivez ce paramètre, vous retirerez l\'accès de toutes les applications à votre position, à l\'exception de celles requises pour l\'assistance au conducteur"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Utiliser la position pour l\'assist. au conducteur"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"La position du véhicule est désactivée"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Les applis d\'assist. au conducteur ne peuvent accéder à votre position"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Modifier"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Autoriser les applis d\'aide à la conduite à accéder à votre position"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Si vous désactivez cette option, les applications d\'assistance au conducteur qui dépendent des données de position seront désactivées"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Désactiver quand même"</string>
+    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Accès récents"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accès récents"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tout afficher"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Aucune application récente"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Assistance au conducteur"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Applis avec autorisation d\'accéder à la position (assist. au conducteur)"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Politique de confidentialité"</string>
+    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
+    <skip />
+    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
+    <skip />
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations à l\'échelle des applis"</string>
+    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
+    <skip />
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Utiliser ma position"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Les services de localisation peuvent utiliser des sources comme le GPS, le Wi-Fi, les réseaux cellulaires et les capteurs pour estimer la position de votre appareil."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistance au conducteur"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Les données de localisation envoyées aux applications d\'assistance au conducteur ne contiennent aucune information permettant de déterminer votre identité. Elles sont stockées un maximum de deux jours, puis elles sont supprimées."</string>
+    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
+    <skip />
+    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
+    <skip />
+    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
+    <skip />
+    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microphone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Utiliser le microphone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Autoriser toutes les applications à accéder à votre microphone"</string>

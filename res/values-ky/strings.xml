@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi\'ды көзөмөлдөө колдонмого Wi-Fi\'ды өчүрүп же күйгүзүүгө, Wi-Fi тармактарын издеп, аларга туташууга, тармактарды кошуп же алып салууга же жергиликтүү байланыш түйүнүн иштетүүгө уруксат берет."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Дагы"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Жайгашкан жер"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Түзмөктүн жайгашкан жери GPS, Wi‑Fi, мобилдик тармактар жана сенсорлор аркылуу аныкталат."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Жайгашкан жерди колдонуу"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Көрсөтүлгөн колдонмолорго кайда жүргөнүңүздү көрүүгө уруксат бериңиз"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Сиз көрсөткөн колдонмолор унааңыздын жүргөн жерин аныктай алат."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Бул функцияны өчүрсөңүз, айдоочуларга арналган колдонмолор гана жүргөн жерди аныктай алышат"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Айдоочулардын функциялары жүргөн жерди аныктасын"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Унаанын жайгашкан жерин аныктоо өчүк"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Айдоочуларга арналган колдонмолор кайда жүргөнүңүздү көрө албайт"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өзгөртүү"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Унаада жардам берген колдонмолорго кайда жүргөнүңүздү көрүүгө уруксат бериңиз"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Эгер өчүрсөңүз, кайда жүргөнүңүздү аныктаган айдоочулардын колдонмолору өчүрүлөт"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Баары бир өчүрүү"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Эгер өчүрсөңүз, кайда жүргөнүңүздү аныктаган айдоочулардын колдонмолору өчүрүлөт"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Баары бир өчүрүү"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Айдоочуга көмөктөш функциялар унааңыздын жүргөн жерин ар дайым көрө алат"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Унаа айдоого жардам берүүчү функциялар"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Унааңыздын өндүрүүчүсү ырастаган алдын ала орнотулган функцияларга унааңыздын жүргөн жерин көрүүгө уруксат бериңиз."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Жакында пайдалангандар"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Жакында пайдалангандар"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Баарын көрүү"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Бир да колдонмо пайдалана элек"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> •Айдоочуларга арналган функциялар"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Бул унаанын жүргөн жерин аныктаган колдонмолор айдоочуларга арналган функциялар үчүн колдонулат"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Купуялык саясаты"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Унаа айдоого жардам берүүчү функциялар"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Алдын ала орнотулган бул функциялар унаа айдоого жардам берүү үчүн, унааңыздын жүргөн жерин көрө алат"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Саясат"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Колдонмонун уруксаттары"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Өзүнчө колдонмолордун уруксаттарын тескөө"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Жайгашкан жерди аныктоо кызматтары"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Жайгашкан жерди аныктоо"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Түзмөктүн жайгашкан жери GPS, Wi‑Fi, мобилдик тармактар жана сенсорлор аркылуу аныкталат."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Айдоочуга көмөктөш функциялар"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Айдоочуларга арналган колдонмолордо кайда жүргөнүңүз көрүнүп, өздүгүңүз көрүнбөйт. Маалымат 2 күнгө чейин сакталып, андан кийин өчүп калат."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Жүргөн жерди көрсөтүү"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Колдонмолор унааңыздын жүргөн жерин көрүп же көрө албай турганын тандаңыз"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Унааңыздын өндүрүүчүсү сунуштаган программа унааңыздын жүргөн жерин көрө бериши мүмкүн."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Купуялык саясатын карап чыгып, ар бир колдонмо жүргөн жериңиз тууралуу маалыматты кантип колдонорун кененирээк билип алыңыз."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофонду колдонуу"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бардык колдонмолорго микрофонуңузду пайдаланууга уруксат бериңиз"</string>

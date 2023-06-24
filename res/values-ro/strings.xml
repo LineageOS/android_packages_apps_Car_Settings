@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Cu controlul rețelei Wi-Fi, o aplicație poate să activeze sau să dezactiveze conexiunea Wi-Fi, să scaneze și să se conecteze la rețelele Wi-Fi, să adauge sau să elimine rețele sau să pornească un hotspot local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mai multe"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Locație"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Locația poate folosi surse precum GPS, Wi-Fi, rețele mobile și senzori pentru a ajuta la estimarea locației dispozitivului."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Folosește locația"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Permite aplicațiilor indicate accesul la locație"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Folosește locația mașinii pentru toate aplicațiile selectate."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Dacă dezactivezi opțiunea, permisiunea de acces la locație va fi eliminată pentru toate aplicațiile, cu excepția celor necesare în asistența pentru șofer."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Folosește locația pentru asistență oferită șoferului"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Locația vehiculului este dezactivată"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Aplicațiile de asistență pentru șofer nu-ți pot accesa locația"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Schimbă"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permite accesul la locație aplicațiilor de asistență pentru șofer"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Dacă dezactivezi opțiunea, aplicațiile de asistență pentru șofer care se bazează pe informațiile despre locație se vor dezactiva."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Dezactivează oricum"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Dacă dezactivezi opțiunea, aplicațiile de asistență pentru șofer care se bazează pe informațiile despre locație se vor dezactiva"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Dezactivează oricum"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Funcțiile de asistență pentru șofer au în permanență acces la locația mașinii"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcții care te ajută să conduci"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Permite accesul funcțiilor încorporate, aprobate de producătorul mașinii, la locația mașinii."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Accesate recent"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesate recent"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Afișează-le pe toate"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Nicio aplicație recentă"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Asistență pentru șofer"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplicațiile cu permisiune pentru locație în funcțiile de asistență pentru șofer"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Politica de confidențialitate"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funcții care te ajută să conduci"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Aceste funcții încorporate pot accesa locația mașinii pentru a oferi asistență la condus"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Politică"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisiuni la nivel de aplicație"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Gestionează permisiunile pentru aplicații individuale"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicii de localizare"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Folosește locația"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Locația poate folosi surse precum GPS, Wi-Fi, rețele mobile și senzori pentru a ajuta la estimarea locației dispozitivului."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistență pentru șofer"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Informațiile despre locație trimise aplicațiilor de asistență pentru șofer nu conțin date care te identifică. Acestea sunt stocate timp de maximum două zile înainte de a fi șterse."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Accesul la locație"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Alege dacă aplicațiile pot accesa locația mașinii"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Software-ul furnizat de producătorul mașinii poate avea în continuare acces la locația mașinii."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Află mai multe despre modul în care fiecare aplicație folosește datele tale privind locațiile, citind Politica de confidențialitate asociată."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Folosește microfonul"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permite accesul tuturor aplicațiilor la microfon"</string>

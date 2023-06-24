@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Контрола WiFi мреже омогућава апликацији да укључи или искључи WiFi, тражи и повезује се на WiFi мреже, додаје или уклања мреже или покреће само локални хотспот."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Још"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Локација може да користи изворе као што су GPS, WiFi, мобилне мреже и сензори да би се лакше одредила локација уређаја."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Користи локацију"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Дозвољава локацију за апликације које наведете"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Локација аутомобила се користи на свим апликацијама које сте навели."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ако искључите ово, уклониће приступ локацији за све апликације осим оних које су потребне за помоћ за возаче"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Користи локацију за помоћ за возаче"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Локација возика је искључена"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Апликације помоћи за возаче не приступају локацији"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Промени"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Дозвољава приступ локацији апликацијама за помоћ у вожњи"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ако искључите ово, апликације помоћи за возаче које се ослањају на информације о локацији ће се онемогућити"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Ипак искључи"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ако искључите ово, апликације помоћи за возаче које се ослањају на информације о локацији ће се онемогућити"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Ипак искључи"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Функције помоћи за возаче увек имају приступ локацији аутомобила"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функције које вам помажу у вожњи"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Дозволи уграђене функције које је одобрио произвођач аутомобила да приступају локацији аутомобила"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Недавно приступано"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Недавно приступано"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Прикажи све"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Нема недавних апликација"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Помоћ за возаче"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Апликације са дозволом за приступ локацији возила у сврху функција помоћи за возаче"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Политика приватности"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Функције које вам помажу у вожњи"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Ове уграђене функције могу да приступају локацији аутомобила ради пружања помоћи при вожњи"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Смернице"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволе на нивоу апликација"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Управљајте дозволама за појединачне апликације"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуге локације"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Користи локацију"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Локација може да користи изворе као што су GPS, WiFi, мобилне мреже и сензори да би се лакше одредила локација уређаја."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Помоћ за возаче"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Информације о локацији које се шаљу апликацијама помоћи за возаче не садрже информације које вас идентификују. Чувају се највише 2 дана пре него што се избришу."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Приступ локацији"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Одаберите да ли апликације могу да приступају локацији аутомобила"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Софтвер који пружа произвођач аутомобила може и даље да има приступ локацији аутомобила"</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Прегледајте политику приватности апликације да бисте сазнали више о томе како она користи податке о локацији."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Користи микрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Дозволите свим апликацијама да приступају микрофону"</string>

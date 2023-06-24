@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi tarmoqlarni boshqarish ilovaga Wi-Fi aloqasini yoqish yoki faolsizlantirish, Wi-Fi tarmoqlarni aniqlash va ularga ulanish, tarmoqlar kiritish yoki ularni olib tashlash yoki faqat mahalliy hotspotni ishga tushirish imkoniyatini beradi."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Yana"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Joylashuv"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Joylashuvni aniqlash xizmati bu qurilmaning joylashuvini bilish uchun GPS, Wi-Fi, mobil tarmoqlar va sensorlar kabi manbalardan foydalanadi."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Geolokatsiyani yoqish"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Tanlangan ilovalarga ruxsat berish"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Siz belgilagan har qanday ilova yordamida avtomobilingiz joylashuvidan foydalaning."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Bu parametrni faolsizlantirsangiz, barcha ilovalar uchun joylashuvdan foydalanish bekor qilinadi, faqat haydovchiga yordam uchun zarurlari faolsizlantirilmaydi"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Haydovchiga yordam uchun joylashuv axboroti ishlating"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Transport vositasi joylashuvi yoqilmagan"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Joylashuv axborotiga kirish imkonsiz"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Almashtirish"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Joylashuv axborotiga kirishga ruxsat berish"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Bu parametrni faolsizlantirsangiz, joylashuv axborotini talab qiladigan haydovchiga yordam funksiyalari oʻchiriladi"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Baribir oʻchirilsin"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Bu parametrni faolsizlantirsangiz, joylashuv axborotini talab qiladigan haydovchiga yordam funksiyalari oʻchiriladi"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Baribir oʻchirilsin"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Haydovchiga yordam funksiyalari doim avtomobilingiz joylashuvidan foydalanishi mumkin"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Avtomobil haydashga yordamchi funksiyalar"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Avtomobilingiz ishlab chiqaruvchisi tomonidan tasdiqlangan ichki funksiyalarga avtomobilingiz joylashuviga kirishga ruxsat bering."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Yaqinda kirilgan"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yaqinda kirilgan"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Hammasini ochish"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Yaqinda hech qanday ilova ochilmagan"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Haydovchiga yordam"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Ruxsati bor ilovalar yoʻlda haydovchiga yordam berish uchun avtomobilning joylashuv axborotidan foydalanadi"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Maxfiylik siyosati"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Avtomobil haydashga yordamchi funksiyalar"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Bu ichki funksiyalar avtomobilda harakatlanishga yordam berish uchun avtomobilingiz joylashuvidan foydalanishi mumkin"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Siyosat"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Ilovalar uchun ruxsatlar"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Alohida ilova uchun ruxsatlarni boshqarish"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Joylashuv axborotiga asoslangan xizmatlar"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Geolokatsiyani yoqish"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Joylashuvni aniqlash xizmati bu qurilmaning joylashuvini bilish uchun GPS, Wi-Fi, mobil tarmoqlar va sensorlar kabi manbalardan foydalanadi."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Haydovchiga yordam"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Joylashuv axboroti haydovchiga yordam ilovalariga yuboriladi, lekin tarkibida shaxsingizga oid axborot boʻlmaydi. Bu axborot oʻchib ketishidan oldin maksimum 2 kun saqlanadi."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Joylashuv axborotiga ruxsat"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Ilovalar avtomobilingiz joylashuvidan foydalanishi yoki foydalanmasligini tanlang"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Avtomobilingiz ishlab chiqaruvchisi tomonidan ishlab chiqarilgan dastur hali ham avtomobilingiz joylashuviga kirishi mumkin."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Maxfiylik siyosatini tekshirish orqali har bir ilova joylashuv axborotidan qanday foydalanishi haqida batafsil axborot oling."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofon ishlatish"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Barcha ilovalarga mikrofoningizdan foydalanishga ruxsat bering"</string>
