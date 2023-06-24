@@ -407,29 +407,45 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi 제어를 사용하면 앱에서 Wi-Fi를 사용 또는 사용 중지하고, Wi-Fi 네트워크를 검색 및 연결하고, 네트워크를 추가 또는 제거하며, 로컬 전용 핫스팟을 시작하도록 허용합니다."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"더보기"</string>
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"기기의 위치를 추정하는 데 GPS, Wi-Fi, 모바일 네트워크, 센서 등의 데이터가 사용될 수 있습니다."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"위치 사용"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"지정한 앱이 내 위치에 액세스하도록 허용합니다."</string>
+    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"이 기능을 끄면 운전자 지원을 위해 필요한 경우를 제외하고 모든 앱에서 위치 액세스 권한이 삭제됩니다."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"운전자 지원을 위해 위치 정보 사용"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"자동차 위치 사용 중지됨"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"운전자 지원 앱이 내 위치 정보에 액세스할 수 없음"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"변경"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"운전 지원 앱이 내 위치에 액세스하도록 허용합니다."</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"기능을 끄면 위치 정보를 사용하는 운전자 지원 앱이 사용 중지됩니다."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"무시하고 사용 중지"</string>
+    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"최근 액세스함"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"최근 액세스함"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"모두 보기"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"최근에 사용한 앱 없음"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • 운전자 지원"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"운전자 지원 기능을 위해 이 자동차의 위치 정보에 액세스할 수 있는 앱"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"개인정보처리방침"</string>
+    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
+    <skip />
+    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
+    <skip />
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"앱 수준 권한"</string>
+    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
+    <skip />
     <string name="location_settings_services_title" msgid="1186133632690970468">"위치 서비스"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"위치 사용"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"기기의 위치를 추정하는 데 GPS, Wi-Fi, 모바일 네트워크, 센서 등의 데이터가 사용될 수 있습니다."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"운전자 지원"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"운전자 지원 앱에 전송되는 위치 정보에는 개인 식별 정보가 포함되지 않습니다. 정보는 최대 2일 동안 보관된 후 삭제됩니다."</string>
+    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
+    <skip />
+    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
+    <skip />
+    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
+    <skip />
+    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"마이크"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"마이크 사용"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"모든 앱이 마이크에 액세스하도록 허용"</string>
