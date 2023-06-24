@@ -407,29 +407,45 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Kablosuz bağlantı kontrolü, bir uygulamanın kablosuz bağlantıyı açmasına veya kapatmasına, kablosuz ağları taramasına, eklemesine ya da kaldırmasına, kablosuz ağlara bağlanmasına veya yalnızca yerel hotspot bağlantısı başlatmasına izin verir."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Daha fazla"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Konum"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Konum hizmeti, cihazınızın konumunu tahmin etmesine yardımcı olması için GPS, kablosuz ve mobil ağlar ile sensörler gibi kaynakları kullanabilir."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Konumu kullan"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Belirttiğiniz uygulamaların konuma erişmesine izin verin"</string>
+    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Bu ayarı kapatırsanız sürüş yardımı için gerekli olanlar dışında tüm uygulamaların konum erişimi kaldırılır"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Sürüş yardımı için konum kullan"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Araç konumu kapalı"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Sürüş yardımı uygulamaları konumunuza erişemez"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Değiştir"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Sürüşe yardımcı uygulamaların konuma erişmesine izin verin"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Bu özelliği kapatırsanız konum bilgilerine dayanan sürüş yardımı uygulamaları devre dışı bırakılır"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Yine de kapat"</string>
+    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
+    <skip />
+    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Yakın zamanda erişildi"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yakın zamanda erişildi"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tümünü göster"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Kameraya yakın zamanda erişen uygulama yok"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Sürüş yardımı"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Sürüş yardımı özellikleri için bu aracın konumuna erişim izni olan uygulamalar"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Gizlilik politikası"</string>
+    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
+    <skip />
+    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
+    <skip />
+    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
+    <skip />
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Uygulama düzeyinde izinler"</string>
+    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
+    <skip />
     <string name="location_settings_services_title" msgid="1186133632690970468">"Konum Hizmetleri"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Konumu kullan"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Konum hizmeti, cihazınızın konumunu tahmin etmesine yardımcı olması için GPS, kablosuz ve mobil ağlar ile sensörler gibi kaynakları kullanabilir."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Sürüş yardımı"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Sürüş yardımı uygulamalarına gönderilen konum bilgilerinde sizi tanımlayan bilgiler yer almaz. Bilgiler silinmeden önce en fazla 2 gün depolanır."</string>
+    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
+    <skip />
+    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
+    <skip />
+    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
+    <skip />
+    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
+    <skip />
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofonu kullan"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Tüm uygulamaların mikrofonunuza erişmesine izin verin"</string>

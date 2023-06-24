@@ -407,29 +407,31 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"वाई-फ़ाई का नियंत्रण किसी ऐप्लिकेशन को वाई-फ़ाई चालू या बंद करने, वाई-फ़ाई नेटवर्क ढूंढने और उससे जुड़ने की अनुमति देता है. साथ ही, नेटवर्क जोड़ने या हटाने या सिर्फ़ सीमित दायरे में इस्तेमाल होने वाला हॉटस्पॉट चालू करने की अनुमति देता है."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ज़्यादा सेटिंग"</string>
     <string name="location_settings_title" msgid="901334356682423679">"जगह की जानकारी"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"जगह की जानकारी देने वाली सेवा, आपके डिवाइस की मौजूदा जगह का पता लगाने के लिए, जीपीएस, वाई-फ़ाई, मोबाइल नेटवर्क, और सेंसर जैसे स्रोतों का इस्तेमाल कर सकती है."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"जगह की जानकारी का इस्तेमाल करें"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"जिन ऐप्लिकेशन को आपने चुना है उन्हें अपनी जगह की जानकारी को ऐक्सेस करने की अनुमति दें"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"अपने चुने हुए किसी ऐप्लिकेशन के साथ कार की जगह की जानकारी का इस्तेमाल करें."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"इसे बंद करने पर, ड्राइवर की सुरक्षा में मदद करने की सुविधाओं वाले ऐप्लिकेशन को छोड़कर, दूसरा कोई भी ऐप्लिकेशन जगह की जानकारी ऐक्सेस नहीं कर पाएगा"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ड्राइवर असिस्टेंस के लिए, जगह की जानकारी इस्तेमाल करें"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"गाड़ी की जानकारी देने की सुविधा बंद है"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ड्राइवर असिस्टेंस ऐप्लिकेशन, जगह की जानकारी ऐक्सेस नहीं कर सकते"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"बदलें"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ड्राइविंग में मदद करने वाले ऐप्लिकेशन को, जगह की जानकारी ऐक्सेस करने दें"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"इसे बंद करने पर, ड्राइवर की सुरक्षा में मदद करने की सुविधाओं वाले वे ऐप्लिकेशन बंद हो जाएंगे जो जगह की जानकारी का इस्तेमाल करते हैं"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"फिर भी बंद करें"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"इसे बंद करने पर, ड्राइवर की सुरक्षा में मदद करने की सुविधाओं वाले वे ऐप्लिकेशन बंद हो जाएंगे जो जगह की जानकारी का इस्तेमाल करते हैं"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"फिर भी बंद करें"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ड्राइवर की सुरक्षा में मदद करने वाली सुविधाएं, आपकी कार की जगह की जानकारी को हमेशा ऐक्सेस कर सकती हैं"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"ड्राइव करने में मदद करने वाली सुविधाएं"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"कार की जगह की जानकारी का ऐक्सेस देने के लिए, कार मैन्युफ़ैक्चरर से मंज़ूरी मिली पहले से मौजूद सुविधाओं को अनुमति दें."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"हाल ही में, जगह की जानकारी ऐक्सेस करने वाले ऐप्लिकेशन"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"हाल ही में, जगह की जानकारी ऐक्सेस करने वाले ऐप्लिकेशन"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"सभी ऐप्लिकेशन देखें"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"हाल ही में, किसी ऐप्लिकेशन ने जगह की जानकारी ऐक्सेस नहीं की"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ड्राइवर की सुरक्षा में मदद करने वाली सुविधाएं"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ड्राइवर असिस्टेंस के लिए, इस गाड़ी की जगह की जानकारी का ऐक्सेस रखने वाले ऐप्लिकेशन"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"निजता नीति"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"ड्राइव करने में मदद करने वाली सुविधाएं"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"ड्राइव करने में मदद करने के लिए पहले से मौजूद ये सुविधाएं, आपकी कार की जगह की जानकारी को ऐक्सेस कर सकती हैं."</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"नीति"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ऐप्लिकेशन-लेवल की अनुमतियां"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"हर ऐप्लिकेशन की अनुमतियां मैनेज करें"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"जगह की जानकारी से जुड़ी सेवाएं"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"जगह की जानकारी का इस्तेमाल करें"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"जगह की जानकारी देने वाली सेवा, आपके डिवाइस की मौजूदा जगह का पता लगाने के लिए, जीपीएस, वाई-फ़ाई, मोबाइल नेटवर्क, और सेंसर जैसे स्रोतों का इस्तेमाल कर सकती है."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ड्राइवर की सुरक्षा से जुड़ी मदद करने वाली सुविधाएं"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"ड्राइवर की सुरक्षा में मदद करने की सुविधाओं वाले ऐप्लिकेशन को, जगह की जो जानकारी भेजी जाती है उसमें आपकी पहचान से जुड़ी जानकारी शामिल नहीं होती है. इस जानकारी को ज़्यादा से ज़्यादा दो दिन तक सेव करके रखा जाता है. इसके बाद, इसे मिटा दिया जाता है."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"कार की जगह की जानकारी का ऐक्सेस"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"चुनें कि ऐप्लिकेशन आपकी कार की जगह की जानकारी का ऐक्सेस कर सकते हैं या नहीं"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"कार मैन्युफ़ैक्चरर का बनाया सॉफ़्टवेयर अब भी आपकी कार की जगह की जानकारी को ऐक्सेस कर सकता है."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"हर ऐप्लिकेशन की निजता नीति पढ़कर यह जानें कि वह ऐप्लिकेशन आपकी कार की जगह की जानकारी का इस्तेमाल कैसे करता है."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"माइक्रोफ़ोन"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"माइक्रोफ़ोन इस्तेमाल करें"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"सभी ऐप्लिकेशन को अपना माइक्रोफ़ोन ऐक्सेस करने की अनुमति दें"</string>
