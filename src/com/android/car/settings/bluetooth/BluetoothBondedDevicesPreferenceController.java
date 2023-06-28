@@ -341,6 +341,11 @@ public class BluetoothBondedDevicesPreferenceController extends
     }
 
     @Override
+    protected boolean shouldShowChevronIcon() {
+        return true;
+    }
+
+    @Override
     protected boolean shouldShowIcon() {
         return false;
     }

@@ -236,12 +236,6 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         assertThat(connectBluetoothButton.isEnabled()).isTrue();
         connectBluetoothButton.onClick();
 
-        when(mBondedCachedDevice.isConnected()).thenReturn(true);
-
-        // Need to call onDeviceBondStateChanged to notify the listener.
-        // We can pass in any values since refreshUi() doesn't take any arguments
-        mPreferenceController.onDeviceBondStateChanged(
-                /* cachedDevice= */ null, /* bondState= */ -1);
         assertThat(connectBluetoothButton.isVisible()).isFalse();
 
         ToggleButtonActionItem phoneProfileButton =

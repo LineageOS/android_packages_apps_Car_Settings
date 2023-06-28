@@ -60,8 +60,8 @@ public class MultiActionPreferenceTest {
         MockitoAnnotations.initMocks(this);
         mRootView = View.inflate(mContext, R.layout.multi_action_preference, null);
         mHolder = PreferenceViewHolder.createInstanceForTests(mRootView);
-        mContext.setTheme(R.style.CarSettingTheme);
-        mTypedArray = spy(mContext.obtainStyledAttributes(null, R.styleable.MultiActionPreference));
+        // Mocked int and boolean values from TypedArray seem to be 0, so default values can't be
+        // used. Must manually set tested values
         doReturn(mTypedArray).when(mContext).obtainStyledAttributes(nullable(AttributeSet.class),
                 eq(R.styleable.MultiActionPreference));
     }
@@ -268,9 +268,9 @@ public class MultiActionPreferenceTest {
     @Test
     @UiThreadTest
     public void toggleButtons_onClickRestricted_checkedStateDoesNotChange() {
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
+        when(mTypedArray.getInteger(eq(R.styleable.MultiActionPreference_group_two_action_item_one),
                 anyInt())).thenReturn(0);
-        when(mTypedArray.getInt(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
+        when(mTypedArray.getInteger(eq(R.styleable.MultiActionPreference_group_two_action_item_two),
                 anyInt())).thenReturn(0);
         mPref = new MultiActionPreference(mContext);
         mPref.getGroupTwoActionItem(MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)

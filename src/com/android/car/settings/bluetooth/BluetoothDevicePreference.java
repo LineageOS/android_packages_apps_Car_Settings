@@ -45,6 +45,9 @@ public class BluetoothDevicePreference extends MultiActionPreference {
     private final CachedBluetoothDevice mCachedDevice;
     private final boolean mShowDevicesWithoutNames;
     private final boolean mShowDisconnectedStateSubtitle;
+
+    private final boolean mShowChevron;
+
     private final boolean mShowIcon;
 
     private final CachedBluetoothDevice.Callback mDeviceCallback = this::refreshUi;
@@ -53,16 +56,17 @@ public class BluetoothDevicePreference extends MultiActionPreference {
 
     public BluetoothDevicePreference(Context context, CachedBluetoothDevice cachedDevice) {
         this(context, cachedDevice, /* showDisconnectedStateSubtitle= */
-                true, /* showIcon= */ true);
+                true, /* showChevron= */ false, /* showIcon= */ true);
     }
 
     public BluetoothDevicePreference(Context context, CachedBluetoothDevice cachedDevice,
-            boolean showDisconnectedStateSubtitle,  boolean showIcon) {
+            boolean showDisconnectedStateSubtitle, boolean showChevron, boolean showIcon) {
         super(context);
         mCachedDevice = cachedDevice;
         mShowDisconnectedStateSubtitle = showDisconnectedStateSubtitle;
         mShowDevicesWithoutNames = SystemProperties.getBoolean(
                 BluetoothUtils.BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_PROPERTY, false);
+        mShowChevron = showChevron;
         mShowIcon = showIcon;
     }
 
@@ -111,6 +115,8 @@ public class BluetoothDevicePreference extends MultiActionPreference {
         setTitle(mCachedDevice.getName());
 
         setSummary(getConnectionSummary());
+
+        showChevron(mShowChevron);
 
         if (mShowIcon) {
             Pair<Drawable, String> pair = com.android.settingslib.bluetooth.BluetoothUtils
