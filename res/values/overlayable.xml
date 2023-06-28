@@ -38,19 +38,19 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="array" name="wifi_signals"/>
       <item type="array" name="wifi_tether_security"/>
       <item type="array" name="wifi_tether_security_values"/>
+      <item type="attr" name="action_item_one"/>
+      <item type="attr" name="action_item_one_enabled"/>
+      <item type="attr" name="action_item_one_shown"/>
+      <item type="attr" name="action_item_three"/>
+      <item type="attr" name="action_item_three_enabled"/>
+      <item type="attr" name="action_item_three_shown"/>
+      <item type="attr" name="action_item_two"/>
+      <item type="attr" name="action_item_two_enabled"/>
+      <item type="attr" name="action_item_two_shown"/>
       <item type="attr" name="controller"/>
       <item type="attr" name="disabledTitleColor"/>
       <item type="attr" name="dividerColor"/>
       <item type="attr" name="enabledTitleColor"/>
-      <item type="attr" name="group_one_action_item_one"/>
-      <item type="attr" name="group_one_action_item_one_enabled"/>
-      <item type="attr" name="group_one_action_item_one_shown"/>
-      <item type="attr" name="group_two_action_item_one"/>
-      <item type="attr" name="group_two_action_item_one_enabled"/>
-      <item type="attr" name="group_two_action_item_one_shown"/>
-      <item type="attr" name="group_two_action_item_two"/>
-      <item type="attr" name="group_two_action_item_two_enabled"/>
-      <item type="attr" name="group_two_action_item_two_shown"/>
       <item type="attr" name="icon"/>
       <item type="attr" name="iconColor"/>
       <item type="attr" name="layout"/>
@@ -95,13 +95,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="bluetooth_bonded_device_icon_color_checked"/>
       <item type="color" name="bluetooth_bonded_device_icon_color_unchecked"/>
       <item type="color" name="bluetooth_bonded_device_off_background_color"/>
-      <item type="color" name="bluetooth_connect_device_button_background"/>
       <item type="color" name="bluetooth_device_icon_color"/>
       <item type="color" name="bluetooth_disabled_device_background_color"/>
       <item type="color" name="bluetooth_disabled_device_icon_color"/>
       <item type="color" name="brightness_thumb_inner_ring_color"/>
       <item type="color" name="brightness_thumb_outer_ring_color"/>
-      <item type="color" name="car_grey_400_disabled"/>
       <item type="color" name="car_grey_400_with_disable"/>
       <item type="color" name="config_progress_background_tint"/>
       <item type="color" name="ic_launcher_settings_background"/>
@@ -167,7 +165,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="bluetooth_bonded_device_border_width"/>
       <item type="dimen" name="bluetooth_bonded_device_button_radius"/>
       <item type="dimen" name="bluetooth_bonded_device_button_size"/>
-      <item type="dimen" name="bluetooth_bonded_device_connect_button_size"/>
       <item type="dimen" name="bluetooth_bonded_device_foreground_icon_inset"/>
       <item type="dimen" name="bluetooth_device_foreground_icon_inset"/>
       <item type="dimen" name="bluetooth_device_icon_size"/>
@@ -213,9 +210,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="icon_size"/>
       <item type="dimen" name="lock_hint_min_height"/>
       <item type="dimen" name="lock_hint_padding"/>
-      <item type="dimen" name="multi_action_preference_drawable_button_height"/>
-      <item type="dimen" name="multi_action_preference_drawable_button_margin"/>
-      <item type="dimen" name="multi_action_preference_drawable_button_width"/>
       <item type="dimen" name="multi_action_preference_item_container_padding"/>
       <item type="dimen" name="multi_action_preference_item_divider_margin_end"/>
       <item type="dimen" name="multi_action_preference_toggle_button_margin"/>
@@ -300,8 +294,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_backspace"/>
       <item type="drawable" name="ic_block"/>
       <item type="drawable" name="ic_blocked_by_admin"/>
+      <item type="drawable" name="ic_bluetooth_button"/>
       <item type="drawable" name="ic_bluetooth_button_unavailable"/>
-      <item type="drawable" name="ic_bluetooth_connect_button"/>
       <item type="drawable" name="ic_bluetooth_media"/>
       <item type="drawable" name="ic_bluetooth_media_unavailable"/>
       <item type="drawable" name="ic_bluetooth_phone"/>
@@ -417,7 +411,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="user_disclaimer_action_button_background"/>
       <item type="drawable" name="wifi_signal"/>
       <item type="id" name="alphanumeric_pin"/>
-      <item type="id" name="barrier"/>
       <item type="id" name="bottomDivider"/>
       <item type="id" name="button1"/>
       <item type="id" name="button1Icon"/>
@@ -473,16 +466,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="message"/>
       <item type="id" name="message_below_pin"/>
       <item type="id" name="multi_action_preference_divider"/>
-      <item type="id" name="multi_action_preference_divider1"/>
-      <item type="id" name="multi_action_preference_drawable_button"/>
-      <item type="id" name="multi_action_preference_drawable_button_container"/>
-      <item type="id" name="multi_action_preference_drawable_button_loading_indicator"/>
       <item type="id" name="multi_action_preference_first_action_container"/>
-      <item type="id" name="multi_action_preference_item_container0"/>
       <item type="id" name="multi_action_preference_item_container1"/>
       <item type="id" name="multi_action_preference_item_container2"/>
-      <item type="id" name="multi_action_preference_second_action_container1"/>
-      <item type="id" name="multi_action_preference_second_action_container2"/>
+      <item type="id" name="multi_action_preference_item_container3"/>
+      <item type="id" name="multi_action_preference_second_action_container"/>
       <item type="id" name="multi_action_preference_toggle_button"/>
       <item type="id" name="pairing_caption"/>
       <item type="id" name="pairing_code_message"/>
@@ -568,7 +556,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="layout" name="fallback_home_finishing_boot"/>
       <item type="layout" name="logical_preference_group"/>
       <item type="layout" name="multi_action_preference"/>
-      <item type="layout" name="multi_action_preference_drawable_button"/>
       <item type="layout" name="multi_action_preference_toggle_button"/>
       <item type="layout" name="pin_pad_view"/>
       <item type="layout" name="preference_dialog_password_edittext"/>

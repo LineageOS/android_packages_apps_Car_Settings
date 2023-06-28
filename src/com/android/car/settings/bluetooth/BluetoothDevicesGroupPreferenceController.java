@@ -92,15 +92,7 @@ public abstract class BluetoothDevicesGroupPreferenceController extends
      */
     protected BluetoothDevicePreference createDevicePreference(CachedBluetoothDevice cachedDevice) {
         return new BluetoothDevicePreference(getContext(), cachedDevice,
-                shouldShowDisconnectedStateSubtitle(),
-                shouldShowIcon());
-    }
-
-    /**
-     * Returns whether icon should be displayed
-     */
-    protected boolean shouldShowIcon() {
-        return true;
+                shouldShowDisconnectedStateSubtitle());
     }
 
     /**

@@ -31,7 +31,7 @@
         android:paddingStart="?android:attr/listPreferredItemPaddingStart"
         android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/barrier"
+        app:layout_constraintEnd_toStartOf="@id/multi_action_preference_second_action_container"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
         <com.android.car.ui.uxr.DrawableStateImageView
@@ -72,55 +72,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@android:id/title"
             app:layout_constraintBottom_toBottomOf="parent"/>
-
     </com.android.car.ui.uxr.DrawableStateConstraintLayout>
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="start"
-        app:constraint_referenced_ids="multi_action_preference_second_action_container1,multi_action_preference_second_action_container2"/>
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/multi_action_preference_second_action_container1"
-        android:layout_height="0dp"
-        android:layout_width="wrap_content"
-        android:paddingEnd="@dimen/multi_action_preference_item_container_padding"
-        android:paddingStart="@dimen/multi_action_preference_item_container_padding"
-        app:layout_constraintStart_toEndOf="@id/multi_action_preference_first_action_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <View
-            android:id="@+id/multi_action_preference_divider1"
-            android:layout_width="@dimen/car_ui_divider_width"
-            android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/car_ui_preference_content_margin_bottom"
-            android:layout_marginTop="@dimen/car_ui_preference_content_margin_top"
-            android:layout_marginEnd="@dimen/multi_action_preference_item_divider_margin_end"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/multi_action_preference_item_container0"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            style="@style/Preference.CarUi.Divider"/>
-
-        <com.android.car.ui.uxr.DrawableStateFrameLayout
-            android:id="@+id/multi_action_preference_item_container0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:focusable="false"
-            app:layout_constraintStart_toEndOf="@id/multi_action_preference_divider1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/multi_action_preference_second_action_container2"
+        android:id="@+id/multi_action_preference_second_action_container"
         android:layout_height="0dp"
         android:layout_width="wrap_content"
         android:paddingEnd="@dimen/multi_action_preference_item_container_padding"
@@ -159,6 +114,16 @@
             android:layout_height="wrap_content"
             android:focusable="false"
             app:layout_constraintStart_toEndOf="@id/multi_action_preference_item_container1"
+            app:layout_constraintEnd_toStartOf="@id/multi_action_preference_item_container3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.android.car.ui.uxr.DrawableStateFrameLayout
+            android:id="@+id/multi_action_preference_item_container3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            app:layout_constraintStart_toEndOf="@id/multi_action_preference_item_container2"
             app:layout_constraintEnd_toStartOf="@android:id/widget_frame"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>

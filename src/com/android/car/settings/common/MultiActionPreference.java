@@ -23,7 +23,6 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.Nullable;
@@ -33,33 +32,21 @@ import com.android.car.settings.R;
 import com.android.car.ui.preference.CarUiPreference;
 
 /**
- * A class for preferences that have a main click action along with up to two group of actions that
- * can be displayed separately. One group of actions consists of two action items and the other of
- * one action item.
+ * A class for preferences that have a main click action along with up to three other actions.
  */
 public class MultiActionPreference extends CarUiPreference
         implements BaseActionItem.ActionItemInfoChangeListener {
 
     /**
-     * Identifier enum for the second group which consists of two different action items.
+     * Identifier enum for the three different action items.
      */
-    public enum ActionItemGroupTwo {
+    public enum ActionItem {
         ACTION_ITEM1,
         ACTION_ITEM2,
+        ACTION_ITEM3,
     }
 
-    /**
-     * Identifier enum for the first group which consists of one action items.
-     */
-    public enum ActionItemGroupOne {
-        ACTION_ITEM1,
-    }
-
-    @Nullable
-    private Integer mSummaryColor;
-
-    protected BaseActionItem[] mActionItemArrayGroupOne = new BaseActionItem[1];
-    protected BaseActionItem[] mActionItemArrayGroupTwo = new BaseActionItem[2];
+    protected BaseActionItem[] mActionItemArray = new BaseActionItem[3];
 
     public MultiActionPreference(Context context,
             AttributeSet attrs,
@@ -94,41 +81,52 @@ public class MultiActionPreference extends CarUiPreference
                 R.styleable.MultiActionPreference);
 
         try {
-
             // Single case switch statement for now with the assumption more ActionItems will be
             // added in the future
-            switch (a.getInt(
-                    R.styleable.MultiActionPreference_group_one_action_item_one, -1)) {
+            switch(a.getInt(
+                    R.styleable.MultiActionPreference_action_item_one, -1)) {
                 case 0:
-                    mActionItemArrayGroupOne[0] = new DrawableButtonActionItem(this);
+                    mActionItemArray[0] = new ToggleButtonActionItem(this);
                     break;
                 default:
                     break;
             }
 
-            setGroupOneVisibleAndEnableState(a);
-
-            // Single case switch statement for now with the assumption more ActionItems will be
-            // added in the future
-            switch (a.getInt(
-                    R.styleable.MultiActionPreference_group_two_action_item_one, -1)) {
+            switch(a.getInt(
+                    R.styleable.MultiActionPreference_action_item_two, -1)) {
                 case 0:
-                    mActionItemArrayGroupTwo[0] = new ToggleButtonActionItem(this);
+                    mActionItemArray[1] = new ToggleButtonActionItem(this);
                     break;
                 default:
                     break;
             }
 
-            switch (a.getInt(
-                    R.styleable.MultiActionPreference_group_two_action_item_two, -1)) {
+            switch(a.getInt(
+                    R.styleable.MultiActionPreference_action_item_three, -1)) {
                 case 0:
-                    mActionItemArrayGroupTwo[1] = new ToggleButtonActionItem(this);
+                    mActionItemArray[2] = new ToggleButtonActionItem(this);
                     break;
                 default:
                     break;
             }
 
-            setGroupTwoVisibleAndEnableState(a);
+            int[] actionItemVisibility = {
+                    R.styleable.MultiActionPreference_action_item_one_shown,
+                    R.styleable.MultiActionPreference_action_item_two_shown,
+                    R.styleable.MultiActionPreference_action_item_three_shown};
+            int[] actionItemEnabled = {
+                    R.styleable.MultiActionPreference_action_item_one_enabled,
+                    R.styleable.MultiActionPreference_action_item_two_enabled,
+                    R.styleable.MultiActionPreference_action_item_three_enabled};
+
+            for (int i = 0; i < mActionItemArray.length; i++) {
+                if (mActionItemArray[i] != null) {
+                    mActionItemArray[i].setVisible(a.getBoolean(
+                            actionItemVisibility[i], true));
+                    mActionItemArray[i].setEnabled(a.getBoolean(
+                            actionItemEnabled[i], true));
+                }
+            }
         } finally {
             a.recycle();
         }
@@ -136,93 +134,43 @@ public class MultiActionPreference extends CarUiPreference
         setLayoutResource(R.layout.multi_action_preference);
     }
 
-    private void setGroupOneVisibleAndEnableState(TypedArray styledAttributes) {
-        int[] actionItemVisibility = {
-                R.styleable.MultiActionPreference_group_one_action_item_one_shown};
-        int[] actionItemEnabled = {
-                R.styleable.MultiActionPreference_group_one_action_item_one_enabled};
-
-        setGroupVisibleAndEnableState(mActionItemArrayGroupOne, actionItemVisibility,
-                actionItemEnabled, styledAttributes);
-    }
-
-    private void setGroupTwoVisibleAndEnableState(TypedArray styledAttributes) {
-        int[] actionItemVisibility = {
-                R.styleable.MultiActionPreference_group_two_action_item_one_shown,
-                R.styleable.MultiActionPreference_group_two_action_item_two_shown};
-        int[] actionItemEnabled = {
-                R.styleable.MultiActionPreference_group_two_action_item_one_enabled,
-                R.styleable.MultiActionPreference_group_two_action_item_two_enabled};
-
-        setGroupVisibleAndEnableState(mActionItemArrayGroupTwo, actionItemVisibility,
-                actionItemEnabled, styledAttributes);
-    }
-
-    private void setGroupVisibleAndEnableState(BaseActionItem[] items, int[] actionItemVisibility,
-            int[] actionItemEnabled, TypedArray styledAttributes) {
-        for (int i = 0; i < items.length; i++) {
-            if (items[i] != null) {
-                items[i].setVisible(styledAttributes.getBoolean(
-                        actionItemVisibility[i], true));
-                items[i].setEnabled(styledAttributes.getBoolean(
-                        actionItemEnabled[i], true));
-            }
-        }
-    }
-
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
-
-        if (mSummaryColor != null) {
-            TextView summary = requireViewByRefId(holder.itemView, android.R.id.summary);
-            summary.setTextColor(mSummaryColor);
-        }
-
-        View actionContainerGroupOne = requireViewByRefId(holder.itemView,
-                R.id.multi_action_preference_second_action_container1);
-        FrameLayout container0 = requireViewByRefId(holder.itemView,
-                R.id.multi_action_preference_item_container0);
-
-        View actionContainerGroupTwo = requireViewByRefId(holder.itemView,
-                R.id.multi_action_preference_second_action_container2);
+        View actionContainer = requireViewByRefId(holder.itemView,
+                R.id.multi_action_preference_second_action_container);
         FrameLayout container1 = requireViewByRefId(holder.itemView,
                 R.id.multi_action_preference_item_container1);
         FrameLayout container2 = requireViewByRefId(holder.itemView,
                 R.id.multi_action_preference_item_container2);
+        FrameLayout container3 = requireViewByRefId(holder.itemView,
+                R.id.multi_action_preference_item_container3);
 
-        setGroupVisibilityStateAndListeners(mActionItemArrayGroupOne, actionContainerGroupOne);
-        setGroupVisibilityStateAndListeners(mActionItemArrayGroupTwo, actionContainerGroupTwo);
-
-        if (mActionItemArrayGroupOne[0] != null) {
-            mActionItemArrayGroupOne[0].bindViewHolder(container0);
-        }
-
-        if (mActionItemArrayGroupTwo[0] != null) {
-            mActionItemArrayGroupTwo[0].bindViewHolder(container1);
-        }
-
-        if (mActionItemArrayGroupTwo[1] != null) {
-            mActionItemArrayGroupTwo[1].bindViewHolder(container2);
-        }
-
-    }
-
-    private void setGroupVisibilityStateAndListeners(BaseActionItem[] items, View groupContainer) {
-        boolean isActionContainerGroupVisible = false;
-        for (BaseActionItem baseActionItem : items) {
+        boolean isActionContainerVisible = false;
+        for (BaseActionItem baseActionItem: mActionItemArray) {
             if (baseActionItem != null) {
                 baseActionItem.setPreference(this)
                         .setRestrictedOnClickListener(getOnClickWhileRestrictedListener());
 
                 if (baseActionItem.isVisible()) {
-                    isActionContainerGroupVisible = true;
+                    isActionContainerVisible = true;
                 }
             }
         }
 
-        groupContainer.setVisibility(
-                isActionContainerGroupVisible ? View.VISIBLE : View.GONE);
+        actionContainer.setVisibility(isActionContainerVisible ? View.VISIBLE : View.GONE);
+
+        if (mActionItemArray[0] != null) {
+            mActionItemArray[0].bindViewHolder(container1);
+        }
+
+        if (mActionItemArray[1] != null) {
+            mActionItemArray[1].bindViewHolder(container2);
+        }
+
+        if (mActionItemArray[2] != null) {
+            mActionItemArray[2].bindViewHolder(container3);
+        }
     }
 
     @Override
@@ -231,41 +179,16 @@ public class MultiActionPreference extends CarUiPreference
     }
 
     /**
-     * Gets color of the summary text
+     * Retrieve the specified BaseActionItem based on the index.
      */
-    public Integer getSummaryColor() {
-        return mSummaryColor;
-    }
-
-    /**
-     * Sets color of the summary text
-     */
-    public void setSummaryColor(Integer summaryColorResId) {
-        mSummaryColor = summaryColorResId;
-        notifyChanged();
-    }
-
-    /**
-     * Retrieve the specified BaseActionItem based on the index in the first group of actions
-     */
-    public BaseActionItem getGroupOneActionItem(ActionItemGroupOne actionItem) {
+    public BaseActionItem getActionItem(ActionItem actionItem) {
         switch (actionItem) {
             case ACTION_ITEM1:
-                return mActionItemArrayGroupOne[0];
-            default:
-                throw new IllegalArgumentException("Invalid button requested");
-        }
-    }
-
-    /**
-     * Retrieve the specified BaseActionItem based on the index in the second group of actions
-     */
-    public BaseActionItem getGroupTwoActionItem(ActionItemGroupTwo actionItem) {
-        switch (actionItem) {
-            case ACTION_ITEM1:
-                return mActionItemArrayGroupTwo[0];
+                return mActionItemArray[0];
             case ACTION_ITEM2:
-                return mActionItemArrayGroupTwo[1];
+                return mActionItemArray[1];
+            case ACTION_ITEM3:
+                return mActionItemArray[2];
             default:
                 throw new IllegalArgumentException("Invalid button requested");
         }

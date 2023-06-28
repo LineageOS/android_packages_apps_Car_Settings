@@ -27,7 +27,6 @@ import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.DrawableButtonActionItem;
 import com.android.car.settings.common.MultiActionPreference;
 import com.android.car.settings.common.ToggleButtonActionItem;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -45,38 +44,34 @@ public class BluetoothDevicePreference extends MultiActionPreference {
     private final CachedBluetoothDevice mCachedDevice;
     private final boolean mShowDevicesWithoutNames;
     private final boolean mShowDisconnectedStateSubtitle;
-    private final boolean mShowIcon;
-
     private final CachedBluetoothDevice.Callback mDeviceCallback = this::refreshUi;
 
     private UpdateToggleButtonListener mUpdateToggleButtonListener;
 
     public BluetoothDevicePreference(Context context, CachedBluetoothDevice cachedDevice) {
-        this(context, cachedDevice, /* showDisconnectedStateSubtitle= */
-                true, /* showIcon= */ true);
+        this(context, cachedDevice, /* showDisconnectedStateSubtitle= */ true);
     }
 
     public BluetoothDevicePreference(Context context, CachedBluetoothDevice cachedDevice,
-            boolean showDisconnectedStateSubtitle,  boolean showIcon) {
+            boolean showDisconnectedStateSubtitle) {
         super(context);
         mCachedDevice = cachedDevice;
         mShowDisconnectedStateSubtitle = showDisconnectedStateSubtitle;
         mShowDevicesWithoutNames = SystemProperties.getBoolean(
                 BluetoothUtils.BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_PROPERTY, false);
-        mShowIcon = showIcon;
     }
 
     @Override
     protected void init(@Nullable AttributeSet attrs) {
-        mActionItemArrayGroupOne[0] = new DrawableButtonActionItem(this);
-        mActionItemArrayGroupTwo[0] = new ToggleButtonActionItem(this);
-        mActionItemArrayGroupTwo[1] = new ToggleButtonActionItem(this);
+        mActionItemArray[0] = new ToggleButtonActionItem(this);
+        mActionItemArray[1] = new ToggleButtonActionItem(this);
+        mActionItemArray[2] = new ToggleButtonActionItem(this);
         super.init(attrs);
 
         // Hide actions by default.
-        mActionItemArrayGroupOne[0].setVisible(false);
-        mActionItemArrayGroupTwo[0].setVisible(false);
-        mActionItemArrayGroupTwo[1].setVisible(false);
+        mActionItemArray[0].setVisible(false);
+        mActionItemArray[1].setVisible(false);
+        mActionItemArray[2].setVisible(false);
     }
 
     /**
@@ -109,22 +104,14 @@ public class BluetoothDevicePreference extends MultiActionPreference {
 
     private void refreshUi() {
         setTitle(mCachedDevice.getName());
+        setSummary(mCachedDevice.getCarConnectionSummary(/* shortSummary= */ true,
+                mShowDisconnectedStateSubtitle));
 
-        setSummary(getConnectionSummary());
-
-        if (mShowIcon) {
-            Pair<Drawable, String> pair = com.android.settingslib.bluetooth.BluetoothUtils
-                    .getBtClassDrawableWithDescription(getContext(), mCachedDevice);
-            if (pair.first != null) {
-                setIcon(pair.first);
-                getIcon().setTintList(getContext().getColorStateList(R.color.icon_color_default));
-            }
-        }
-
-        if (mCachedDevice.isConnected()) {
-            setSummaryColor(getContext().getColor(R.color.text_color_accent_with_disable));
-        } else {
-            setSummaryColor(getContext().getColor(R.color.car_grey_400_disabled));
+        Pair<Drawable, String> pair = com.android.settingslib.bluetooth.BluetoothUtils
+                .getBtClassDrawableWithDescription(getContext(), mCachedDevice);
+        if (pair.first != null) {
+            setIcon(pair.first);
+            getIcon().setTintList(getContext().getColorStateList(R.color.icon_color_default));
         }
 
         setEnabled(!mCachedDevice.isBusy());
@@ -179,22 +166,14 @@ public class BluetoothDevicePreference extends MultiActionPreference {
     }
 
     @Override
-    public ToggleButtonActionItem getGroupTwoActionItem(ActionItemGroupTwo actionItem) {
-        switch (actionItem) {
+    public ToggleButtonActionItem getActionItem(ActionItem actionItem) {
+        switch(actionItem) {
             case ACTION_ITEM1:
-                return (ToggleButtonActionItem) mActionItemArrayGroupTwo[0];
+                return (ToggleButtonActionItem) mActionItemArray[0];
             case ACTION_ITEM2:
-                return (ToggleButtonActionItem) mActionItemArrayGroupTwo[1];
-            default:
-                throw new IllegalArgumentException("Invalid button requested");
-        }
-    }
-
-    @Override
-    public DrawableButtonActionItem getGroupOneActionItem(ActionItemGroupOne actionItem) {
-        switch (actionItem) {
-            case ACTION_ITEM1:
-                return (DrawableButtonActionItem) mActionItemArrayGroupOne[0];
+                return (ToggleButtonActionItem) mActionItemArray[1];
+            case ACTION_ITEM3:
+                return (ToggleButtonActionItem) mActionItemArray[2];
             default:
                 throw new IllegalArgumentException("Invalid button requested");
         }
