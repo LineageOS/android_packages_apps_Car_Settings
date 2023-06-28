@@ -81,14 +81,11 @@ public class BluetoothDevicePreferenceTest {
 
     @Test
     public void actionIsHiddenByDefault() {
-        assertThat(mPreference.getGroupOneActionItem(
-                        MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1)
+        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
                 .isVisible()).isFalse();
-        assertThat(mPreference.getGroupTwoActionItem(
-                        MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1)
+        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
                 .isVisible()).isFalse();
-        assertThat(mPreference.getGroupTwoActionItem(
-                        MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2)
+        assertThat(mPreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM1)
                 .isVisible()).isFalse();
     }
 
@@ -111,7 +108,7 @@ public class BluetoothDevicePreferenceTest {
 
     @Test
     public void onAttached_notConnected_setsCarConnectionSummaryAsSummary() {
-        String summary = "Summary";
+        String summary = "summary";
         when(mCachedDevice.isConnected()).thenReturn(false);
         when(mCachedDevice.getCarConnectionSummary(anyBoolean(), anyBoolean())).thenReturn(summary);
 
@@ -123,8 +120,7 @@ public class BluetoothDevicePreferenceTest {
     @Test
     public void onAttached_connected_setsCarConnectionSummaryAsSummary() {
         when(mCachedDevice.isConnected()).thenReturn(true);
-
-        String summary = "Summary";
+        String summary = "summary";
         when(mCachedDevice.getCarConnectionSummary(anyBoolean(), anyBoolean())).thenReturn(summary);
 
         mPreference.onAttached();
@@ -215,7 +211,6 @@ public class BluetoothDevicePreferenceTest {
     @Test
     public void onDeviceAttributesChanged_refreshesUi() {
         String name = "name";
-        when(mCachedDevice.isConnected()).thenReturn(false);
         when(mCachedDevice.getName()).thenReturn(name);
         String summary = "summary";
         when(mCachedDevice.getCarConnectionSummary(anyBoolean(), anyBoolean())).thenReturn(summary);

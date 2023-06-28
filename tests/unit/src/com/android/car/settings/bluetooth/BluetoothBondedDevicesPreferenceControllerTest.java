@@ -46,7 +46,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.DrawableButtonActionItem;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.MultiActionPreference;
@@ -206,6 +205,22 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
     }
 
     @Test
+    public void bluetoothButtonClicked_connected_disconnectsFromDevice() {
+        when(mBondedCachedDevice.isConnected()).thenReturn(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+
+        ToggleButtonActionItem bluetoothButton = devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM1);
+        assertThat(bluetoothButton.isVisible()).isTrue();
+        bluetoothButton.onClick();
+
+        verify(mBondedCachedDevice).disconnect();
+    }
+
+    @Test
     public void bluetoothButtonClicked_notConnected_connectsToDevice() {
         when(mBondedCachedDevice.isConnected()).thenReturn(false);
         when(mUserManager.hasUserRestriction(TEST_RESTRICTION)).thenReturn(false);
@@ -214,39 +229,12 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         BluetoothDevicePreference devicePreference =
                 (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
 
-        DrawableButtonActionItem connectBluetoothButton = devicePreference.getGroupOneActionItem(
-                MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1);
-        assertThat(connectBluetoothButton.isEnabled()).isTrue();
-        connectBluetoothButton.onClick();
+        ToggleButtonActionItem bluetoothButton = devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM1);
+        assertThat(bluetoothButton.isEnabled()).isTrue();
+        bluetoothButton.onClick();
 
         verify(mBondedCachedDevice).connect();
-    }
-
-    @Test
-    public void bluetoothConnectButtonClicked_notConnected_hidesConnectButtonShowsProfileButtons() {
-        when(mBondedCachedDevice.isConnected()).thenReturn(false);
-        when(mUserManager.hasUserRestriction(TEST_RESTRICTION)).thenReturn(false);
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.onStart(mLifecycleOwner);
-        BluetoothDevicePreference devicePreference =
-                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
-
-        DrawableButtonActionItem connectBluetoothButton = devicePreference.getGroupOneActionItem(
-                MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1);
-        assertThat(connectBluetoothButton.isEnabled()).isTrue();
-        connectBluetoothButton.onClick();
-
-        assertThat(connectBluetoothButton.isVisible()).isFalse();
-
-        ToggleButtonActionItem phoneProfileButton =
-                devicePreference.getGroupTwoActionItem(
-                        MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1);
-        assertThat(phoneProfileButton.isVisible()).isTrue();
-
-        ToggleButtonActionItem mediaProfileButton =
-                devicePreference.getGroupTwoActionItem(
-                        MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2);
-        assertThat(mediaProfileButton.isVisible()).isTrue();
     }
 
     @Test
@@ -258,8 +246,8 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         BluetoothDevicePreference devicePreference =
                 (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
 
-        ToggleButtonActionItem phoneButton = devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1);
+        ToggleButtonActionItem phoneButton = devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM2);
         assertThat(phoneButton.isEnabled()).isTrue();
         assertThat(mPhoneProfile.isEnabled(mBondedDevice)).isFalse();
         phoneButton.onClick();
@@ -276,8 +264,8 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         BluetoothDevicePreference devicePreference =
                 (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
 
-        ToggleButtonActionItem mediaButton = devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2);
+        ToggleButtonActionItem mediaButton = devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM3);
         mediaButton.onClick();
 
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
@@ -297,12 +285,12 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
 
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
-        assertThat(devicePreference.getGroupOneActionItem(
-                MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1).isEnabled()).isTrue();
-        assertThat(devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1).isEnabled()).isFalse();
-        assertThat(devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2).isEnabled()).isFalse();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM1).isEnabled()).isTrue();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM2).isEnabled()).isFalse();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM3).isEnabled()).isFalse();
     }
 
     @Test
@@ -319,12 +307,12 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
 
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
-        assertThat(devicePreference.getGroupOneActionItem(
-                MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1).isEnabled()).isTrue();
-        assertThat(devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1).isEnabled()).isFalse();
-        assertThat(devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2).isEnabled()).isFalse();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM1).isEnabled()).isTrue();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM2).isEnabled()).isFalse();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM3).isEnabled()).isFalse();
     }
 
     @Test
@@ -345,12 +333,12 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
 
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
-        assertThat(devicePreference.getGroupOneActionItem(
-                MultiActionPreference.ActionItemGroupOne.ACTION_ITEM1).isEnabled()).isTrue();
-        assertThat(devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1).isEnabled()).isTrue();
-        assertThat(devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2).isEnabled()).isTrue();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM1).isEnabled()).isTrue();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM2).isEnabled()).isTrue();
+        assertThat(devicePreference.getActionItem(
+                MultiActionPreference.ActionItem.ACTION_ITEM3).isEnabled()).isTrue();
     }
 
     @Test
@@ -371,12 +359,11 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         // Due to the limitations of the testing environment, onBindViewHolder() is never called and
         // thus certain fields are never set. Manually set it here.
         ToggleButtonActionItem phoneItem =
-                devicePreference.getGroupTwoActionItem(
-                        MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1);
+                devicePreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2);
         String toastText = mContext.getResources()
                 .getString(R.string.car_ui_restricted_while_driving);
         phoneItem.setRestrictedOnClickListener(p -> Toast.makeText(mContext, toastText,
-                Toast.LENGTH_LONG).show());
+                        Toast.LENGTH_LONG).show());
         phoneItem.setPreference(devicePreference);
 
         phoneItem.onClick();
@@ -403,8 +390,7 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         // Due to the limitations of the testing environment, onBindViewHolder() is never called and
         // thus certain fields are never set. Manually set them here.
         ToggleButtonActionItem mediaItem =
-                devicePreference.getGroupTwoActionItem(
-                        MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2);
+                devicePreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3);
         String toastText = mContext.getResources()
                 .getString(R.string.car_ui_restricted_while_driving);
         mediaItem.setRestrictedOnClickListener(p -> Toast.makeText(mContext, toastText,
@@ -430,8 +416,7 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
 
         String toastText = mContext.getResources().getString(R.string.action_unavailable);
 
-        devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM1).onClick();
+        devicePreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2).onClick();
 
         ExtendedMockito.verify(() -> Toast.makeText(any(), eq(toastText), anyInt()));
         verify(mMockToast).show();
@@ -450,8 +435,7 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
 
         String toastText = mContext.getResources().getString(R.string.action_unavailable);
 
-        devicePreference.getGroupTwoActionItem(
-                MultiActionPreference.ActionItemGroupTwo.ACTION_ITEM2).onClick();
+        devicePreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3).onClick();
 
         ExtendedMockito.verify(() -> Toast.makeText(any(), eq(toastText), anyInt()));
         verify(mMockToast).show();
