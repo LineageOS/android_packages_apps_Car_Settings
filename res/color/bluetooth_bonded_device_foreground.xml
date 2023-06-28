@@ -14,6 +14,10 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- @color/car_grey_400 but with disabled and ux restricted states. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_checked="false"
+          android:color="@color/bluetooth_bonded_device_icon_color_unchecked"/>
     <item android:color="@color/bluetooth_bonded_device_icon_color_checked"/>
 </selector>

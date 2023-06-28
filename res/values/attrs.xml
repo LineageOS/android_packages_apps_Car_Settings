@@ -95,31 +95,30 @@
     </declare-styleable>
 
     <declare-styleable name="MultiActionPreference">
-        <!-- Determines the first action item in group one -->
-        <attr name="group_one_action_item_one" format="enum">
-            <enum name="drawableButton" value="0"/>
-        </attr>
-        <!-- Determines if the first action item in group one is initially shown -->
-        <attr name="group_one_action_item_one_shown" format="boolean"/>
-        <!-- Determines if the first action item in group one is initially enabled -->
-        <attr name="group_one_action_item_one_enabled" format="boolean"/>
-
-        <!-- Determines the first action item in group two -->
-        <attr name="group_two_action_item_one" format="enum">
+        <!-- Determines the first action item -->
+        <attr name="action_item_one" format="enum">
             <enum name="toggleButton" value="0"/>
         </attr>
-        <!-- Determines the second action item in group two -->
-        <attr name="group_two_action_item_two" format="enum">
+        <!-- Determines the second action item -->
+        <attr name="action_item_two" format="enum">
             <enum name="toggleButton" value="0"/>
         </attr>
-        <!-- Determines if the first action item in group two is initially shown -->
-        <attr name="group_two_action_item_one_shown" format="boolean"/>
-        <!-- Determines if the first action item in group two is initially enabled -->
-        <attr name="group_two_action_item_one_enabled" format="boolean"/>
-        <!-- Determines if the second action item in group two is initially shown -->
-        <attr name="group_two_action_item_two_shown" format="boolean"/>
-        <!-- Determines if the second action item in group two is initially enabled -->
-        <attr name="group_two_action_item_two_enabled" format="boolean"/>
+        <!-- Determines the third action item -->
+        <attr name="action_item_three" format="enum">
+            <enum name="toggleButton" value="0"/>
+        </attr>
+        <!-- Determines if the first action item is initially shown -->
+        <attr name="action_item_one_shown" format="boolean"/>
+        <!-- Determines if the first action item is initially enabled -->
+        <attr name="action_item_one_enabled" format="boolean"/>
+        <!-- Determines if the second action item is initially shown -->
+        <attr name="action_item_two_shown" format="boolean"/>
+        <!-- Determines if the second action item is initially enabled -->
+        <attr name="action_item_two_enabled" format="boolean"/>
+        <!-- Determines if the third action item is initially shown -->
+        <attr name="action_item_three_shown" format="boolean"/>
+        <!-- Determines if the third action item is initially enabled -->
+        <attr name="action_item_three_enabled" format="boolean"/>
     </declare-styleable>
 
     <attr name="wifiSignalColor" format="color"/>
