@@ -409,43 +409,29 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokasyon"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Posibleng gumamit ang mga lokasyon ng mga source na gaya ng GPS, Wi‑Fi, mga mobile network, at sensor para tumulong sa pagtantiya ng lokasyon ng iyong device."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gumamit ng lokasyon"</string>
-    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Gamitin ang lokasyon ng iyong kotse sa anumang app na tinukoy mo."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Kung io-off mo ito, maaalis ang access sa lokasyon para sa lahat ng app maliban sa mga kailangan para sa tulong sa driver"</string>
-    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
-    <skip />
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Kung io-off mo ito, madi-disable ang mga app ng tulong sa driver na dumedepende sa impormasyon ng lokasyon"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"I-off pa rin"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Palaging may access sa lokasyon ng iyong kotse ang mga feature ng tulong sa driver"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Mga feature na nakakatulong magmaneho"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Payagang i-access ng mga built-in na feature, na inaprubahan ng manufacturer ng iyong kotse, ang lokasyon ng kotse mo."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Kamakailang na-access"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Kamakailang na-access"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tingnan lahat"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Walang kamakailang app"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Tulong sa driver"</string>
-    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
-    <skip />
-    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
-    <skip />
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Mga feature na nakakatulong magmaneho"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Maa-access ng mga built‑in na feature na ito ang lokasyon ng iyong kotse para makatulong sa pagmamaneho"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Patakaran"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Mga pahintulot sa antas ng app"</string>
-    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
-    <skip />
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Pamahalaan ang mga pahintulot ng mga individwal na app"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Mga Serbisyo ng Lokasyon"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Gumamit ng lokasyon"</string>
-    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
-    <skip />
-    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
-    <skip />
-    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
-    <skip />
-    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
-    <skip />
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Access sa lokasyon"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Piliin kung puwedeng i-access ng mga app ang lokasyon ng iyong kotse"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Posibleng may access pa rin sa lokasyon ng iyong kotse ang software na pinapagana ng manufacturer ng kotse mo."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Alamin pa kung paano ginagamit ng bawat app ang data ng iyong Lokasyon sa pamamagitan ng pagsuri sa Patakaran sa Privacy nito."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikropono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Gamitin ang mikropono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Payagan ang lahat ng app na i-access ang iyong mikropono"</string>
