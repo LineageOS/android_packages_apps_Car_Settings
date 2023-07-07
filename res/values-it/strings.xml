@@ -409,43 +409,29 @@
     <string name="location_settings_title" msgid="901334356682423679">"Posizione"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Il servizio di geolocalizzazione potrebbe usare fonti quali GPS, reti mobili, Wi-Fi e sensori per stabilire la posizione approssimativa del dispositivo."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usa posizione"</string>
-    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Utilizza la posizione dell\'auto con tutte le app indicate."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se disattivi questa impostazione, verrà rimosso l\'accesso alla posizione per tutte le app ad eccezione di quelle che lo richiedono per l\'assistenza alla guida"</string>
-    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
-    <skip />
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se disattivi questa impostazione, verranno disattivate le app di assistenza alla guida che si basano sui dati sulla posizione"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Disattiva comunque"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Le funzionalità di assistenza alla guida hanno sempre accesso alla posizione dell\'auto"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funzionalità di assistenza alla guida"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Consenti alle funzionalità integrate, approvate dal produttore del veicolo, di accedere alla posizione dell\'auto."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Usi recenti"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Usi recenti"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Mostra tutte"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Nessuna app recente"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Assistenza alla guida"</string>
-    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
-    <skip />
-    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
-    <skip />
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funzionalità di assistenza alla guida"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Queste funzionalità integrate possono accedere alla posizione dell\'auto per assisterti nella guida"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Norme"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorizzazioni a livello di app"</string>
-    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
-    <skip />
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Gestisci le singole autorizzazioni app"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizi di geolocalizzazione"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usa posizione"</string>
-    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
-    <skip />
-    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
-    <skip />
-    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
-    <skip />
-    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
-    <skip />
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Accesso alla posizione"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Scegli se le app possono accedere alla posizione dell\'auto"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Il software fornito dal produttore del veicolo potrebbe avere ancora accesso alla posizione dell\'auto."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Scopri di più su come ogni app utilizza i dati sulla posizione esaminando le relative norme sulla privacy."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usa il microfono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Consenti a tutte le app di accedere al microfono"</string>

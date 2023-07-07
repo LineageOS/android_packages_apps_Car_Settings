@@ -409,43 +409,29 @@
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"உங்கள் சாதனத்தின் இருப்பிடத்தைக் கணிக்க உதவுவதற்கு GPS, வைஃபை, மொபைல் நெட்வொர்க்குகள், சென்சார்கள் போன்றவற்றை இருப்பிட அமைப்புகள் பயன்படுத்தக்கூடும்."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"இருப்பிடத்தைப் பயன்படுத்துதல்"</string>
-    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="5651728747635881194">"நீங்கள் குறிப்பட்ட எந்த ஆப்ஸுடனும் உங்கள் காரின் இருப்பிடத்தைப் பயன்படுத்தலாம்."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"இதை முடக்கினால், ஓட்டுநர் உதவி அம்சத்திற்குத் தேவையான ஆப்ஸைத் தவிர, மற்ற ஆப்ஸ் அனைத்துக்கும் இருப்பிட அணுகல் அகற்றப்படும்."</string>
-    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
-    <skip />
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"இதை முடக்கினால், இருப்பிடத் தகவல்களைச் சார்ந்துள்ள ஓட்டுநர் உதவி ஆப்ஸ் முடக்கப்படும்"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"பரவாயில்லை, முடக்கு"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ஓட்டுநர் உதவி அம்சங்களுக்கு உங்கள் காரின் இருப்பிட அணுகல் எப்போதும் இருக்கும்"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"வாகனம் ஓட்ட உதவும் அம்சங்கள்"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"உங்கள் காரின் உற்பத்தியாளர் அனுமதித்துள்ள, உள்ளமைக்கப்பட்ட அம்சங்களுக்குக் காரின் இருப்பிட அணுகலை வழங்கும்."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"சமீபத்தில் அணுகியவை"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"சமீபத்தில் அணுகியவை"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"அனைத்தையும் காட்டுதல்"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"சமீபத்திய ஆப்ஸ் எதுவுமில்லை"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ஓட்டுநர் உதவி"</string>
-    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
-    <skip />
-    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
-    <skip />
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"வாகனம் ஓட்ட உதவும் அம்சங்கள்"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"வாகனம் ஓட்டுவது தொடர்பாக உங்களுக்கு உதவ, உள்ளமைக்கப்பட்ட இந்த அம்சங்களால் உங்கள் காரின் இருப்பிடத்தை அணுக முடியும்"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"கொள்கை"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ஆப்ஸ் நிலை அனுமதிகள்"</string>
-    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
-    <skip />
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"ஆப்ஸ் அனுமதிகளை தனித்தனியே நிர்வகிக்கலாம்"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"இருப்பிடச் சேவைகள்"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"இருப்பிடத்தைப் பயன்படுத்து"</string>
-    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
-    <skip />
-    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
-    <skip />
-    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
-    <skip />
-    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
-    <skip />
+    <string name="location_access_settings_title" msgid="2378398106582207440">"இருப்பிட அணுகல்"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"உங்கள் காரின் இருப்பிடத்தை ஆப்ஸ் அணுகலாமா என்பதைத் தேர்வுசெய்யலாம்"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"எனினும், உங்கள் காரின் உற்பத்தியாளர் வழங்கியுள்ள மென்பொருளுக்குக் காரின் இருப்பிட அணுகல் இருக்கக்கூடும்."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"ஒவ்வொரு ஆப்ஸின் தனியுரிமைக் கொள்கையையும் படித்துப் பார்த்து அவை உங்கள் இருப்பிடத் தரவை எப்படிப் பயன்படுத்துகின்றன என்பது குறித்து மேலும் அறிந்துகொள்ளலாம்."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"மைக்ரோஃபோன்"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"மைக்ரோஃபோனைப் பயன்படுத்துதல்"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"மைக்ரோஃபோனை அனைத்து ஆப்ஸும் அணுகுவதற்கு அனுமதிக்கும்"</string>
