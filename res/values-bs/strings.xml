@@ -409,29 +409,29 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Lokacija može koristiti izvore kao što su GPS, WiFi, mobilne mreže i senzori za lakšu procjenu lokacije uređaja."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Koristi lokaciju"</string>
-    <string name="location_toggle_summary" msgid="5651728747635881194">"Lokacija automobila upotrebljava se sa svim aplikacijama koje ste naveli."</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Koristite lokaciju automobila s bilo kojom aplikacijom koju navedete."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ako isključite ovu funkciju, uklonit će se pristup lokaciji za sve aplikacije, osim onih koje su potrebne za pomoć za vozače"</string>
-    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ako isključite tu postavku, onemogućit će se aplikacije za pomoć u vožnji koje se oslanjaju na lokacijske podatke"</string>
-    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Ipak isključi"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Značajke pomoći u vožnji uvijek imaju pristup lokaciji vašeg automobila"</string>
-    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Značajke za pomoć u vožnji"</string>
-    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Ugrađenim značajkama, koje odobrava proizvođač vašeg automobila, dopustite pristup lokaciji automobila."</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ako isključite ovu funkciju, onemogućit će se aplikacije pomoći za vozače koje se oslanjaju na podatke o lokaciji"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Svejedno isključi"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Funkcije pomoći za vozače uvijek imaju pristup lokaciji automobila"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funkcije koje vam pomažu prilikom vožnje"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Dozvolite ugrađenim funkcijama, koje je odobrio proizvođač automobila, da pristupaju lokaciji automobila."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Nedavno pristupano"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedavno pristupano"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Prikaži sve"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Nema nedavnih aplikacija"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Pomoć za vozače"</string>
-    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Značajke za pomoć u vožnji"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Ove ugrađene značajke mogu pristupiti lokaciji vašeg automobila radi pomaganja u vožnji"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funkcije koje vam pomažu prilikom vožnje"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Ove ugrađene funkcije mogu pristupati lokaciji automobila da vam pomognu prilikom vožnje"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Pravila"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Odobrenja na nivou aplikacija"</string>
-    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Upravljajte dopuštenjima pojedinačnih aplikacija"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Upravljajte odobrenjima za pojedinačne aplikacije"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Koristi lokaciju"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"Pristup lokaciji"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"Odaberite mogu li aplikacije pristupati lokaciji automobila"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Softver koji pruža proizvođač vašeg automobila i dalje može imati pristup lokaciji automobila."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Da biste saznali više o tome kako pojedina aplikacija upotrebljava vaše podatke o lokaciji, pregledajte njezina pravila o privatnosti."</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Softver koji pruža proizvođač automobila i dalje može imati pristup lokaciji automobila."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Saznajte više o tome kako svaka aplikacija koristi podatke o lokaciji pregledanjem njenih Pravila privatnosti."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Koristite mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Dozvolite svim aplikacijama da pristupaju mikrofonu"</string>

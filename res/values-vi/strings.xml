@@ -409,43 +409,29 @@
     <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Dịch vụ vị trí có thể sử dụng những nguồn như GPS, Wi‑Fi, mạng di động và cảm biến để giúp ước tính vị trí của thiết bị."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Dùng thông tin vị trí"</string>
-    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Cho ứng dụng mà bạn chỉ định được phép sử dụng thông tin vị trí của ô tô"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Thao tác tắt tính năng này sẽ xoá quyền truy cập thông tin vị trí của mọi ứng dụng, ngoại trừ các ứng dụng cần thiết để hỗ trợ người lái xe."</string>
-    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
-    <skip />
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Thao tác tắt chế độ này cũng sẽ vô hiệu hoá các ứng dụng hỗ trợ người lái xe cần đến thông tin vị trí."</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Vẫn tắt"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Các tính năng hỗ trợ người lái xe luôn có quyền truy cập vào thông tin vị trí của ô tô"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Các tính năng trợ giúp bạn lái xe"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Cho các tính năng tích hợp sẵn mà nhà sản xuất ô tô phê duyệt được phép truy cập vào thông tin vị trí của ô tô."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Xem tất cả"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Không có ứng dụng nào mới truy cập"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Ứng dụng hỗ trợ người lái xe"</string>
-    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
-    <skip />
-    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
-    <skip />
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Các tính năng trợ giúp bạn lái xe"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Các tính năng tích hợp sẵn có thể truy cập vào thông tin vị trí của ô tô để hỗ trợ bạn lái xe"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Chính sách"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Quyền cấp ứng dụng"</string>
-    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
-    <skip />
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Quản lý quyền của từng ứng dụng"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Dịch vụ vị trí"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Sử dụng vị trí"</string>
-    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
-    <skip />
-    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
-    <skip />
-    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
-    <skip />
-    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
-    <skip />
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Quyền truy cập thông tin vị trí"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Chọn xem các ứng dụng có thể truy cập vào thông tin vị trí của ô tô hay không"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Phần mềm do nhà sản xuất ô tô cung cấp có thể vẫn có quyền truy cập vào thông tin vị trí của ô tô."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Tìm hiểu thêm về cách từng ứng dụng sử dụng dữ liệu Vị trí của bạn bằng cách xem Chính sách quyền riêng tư của ứng dụng đó."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrô"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Sử dụng micrô"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Cho phép mọi ứng dụng truy cập vào micrô"</string>

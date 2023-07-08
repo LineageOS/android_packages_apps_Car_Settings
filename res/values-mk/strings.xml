@@ -409,43 +409,29 @@
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_settings_footer" msgid="296892848338100051">"Услугата „Локација“ може да користи извори како GPS, Wi‑Fi, мобилни мрежи и сензори за да помогне да се процени локацијата на уредот."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Користи ја локацијата"</string>
-    <!-- no translation found for location_toggle_summary (5651728747635881194) -->
-    <skip />
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Користете ја локацијата на вашиот автомобил со секоја апликација што сте ја навеле."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ако го исклучите ова, ќе се отстрани пристапот до локацијата за сите апликации, освен за оние што се потребни за помош за возачи"</string>
-    <!-- no translation found for adas_location_toggle_off_warning (2269555998731648820) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_confirm_label (7500504328355834995) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_popup_summary (1039486633002074646) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_title (6131739109988811006) -->
-    <skip />
-    <!-- no translation found for adas_location_toggle_summary (7055141074159770928) -->
-    <skip />
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ако го исклучите ова, апликациите за помош за возачи што зависат од податоците за локација ќе бидат оневозможени"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Сепак исклучи"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Функциите за помош за возачи секогаш имаат пристап до локацијата на вашиот автомобил"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функции што ви помагаат при возењето"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Дозволете вградените функции, одобрени од производителот на возилото, да пристапуваат до локацијата на вашиот автомобил."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Неодамна пристапени"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Неодамна пристапени"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Прикажи ги сите"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Нема неодамнешни апликации"</string>
     <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Помош за возачи"</string>
-    <!-- no translation found for location_adas_apps_list_title (482882078448695177) -->
-    <skip />
-    <!-- no translation found for location_adas_apps_list_summary (2565295911865582355) -->
-    <skip />
-    <!-- no translation found for location_driver_assistance_privacy_policy_button_text (1092702462617222722) -->
-    <skip />
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Функции што ви помагаат при возењето"</string>
+    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Овие вградени функции може да пристапуваат до локацијата на вашиот автомобил за да ви помогнат при возењето"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Правило"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на ниво на апликација"</string>
-    <!-- no translation found for location_settings_app_permissions_summary (87851720569447224) -->
-    <skip />
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Управувајте со поединечните дозволи за апликациите"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги според локација"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Користи ја локацијата"</string>
-    <!-- no translation found for location_access_settings_title (2378398106582207440) -->
-    <skip />
-    <!-- no translation found for location_access_settings_summary (7676354917209152932) -->
-    <skip />
-    <!-- no translation found for location_access_disclaimer_summary (2002359472274646540) -->
-    <skip />
-    <!-- no translation found for location_adas_app_info_summary (8081478531253561593) -->
-    <skip />
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Пристап до локацијата"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Одредете дали апликациите може да пристапуваат до локацијата на вашиот автомобил"</string>
+    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Софтверот обезбеден од производителот на возилото може сѐ уште да има пристап до локацијата на вашиот автомобил."</string>
+    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Дознајте повеќе за начинот на кој секоја апликација ги користи податоците за вашата локација така што ќе ја погледнете нејзината „Политика за приватност“."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Користи го микрофонот"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Дозволете пристап до микрофонот за сите апликации"</string>
