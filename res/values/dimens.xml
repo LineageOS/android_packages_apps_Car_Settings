@@ -79,6 +79,10 @@
     <dimen name="bluetooth_device_icon_size">44dp</dimen>
     <dimen name="bluetooth_device_foreground_icon_inset">8dp</dimen>
 
+    <!-- Wifi -->
+    <dimen name="hotspot_qr_code_size">256dp</dimen>
+    <dimen name="qc_code_preference_margin">@*android:dimen/car_padding_1</dimen>
+
     <!-- Edit Username -->
     <dimen name="edit_username_padding_start">@*android:dimen/car_margin</dimen>
     <dimen name="edit_username_padding_end">@*android:dimen/car_margin</dimen>
@@ -207,5 +211,7 @@
 
     <!-- Blocked by admin icon -->
     <dimen name="block_by_admin_icon_padding">@*android:dimen/car_padding_2</dimen>
+
+    <dimen name="rounded_corner_radius">16dp</dimen>
 
 </resources>

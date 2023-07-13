@@ -349,6 +349,8 @@
     <string name="wifi_hotspot_auto_off_summary">Wi\u2011Fi hotspot will turn off if no devices are connected</string>
     <!-- Content description for the hotspot state switch. [CHAR LIMIT=NONE] -->
     <string name="wifi_hotspot_state_switch_content_description" translatable="false">Hotspot toggle switch</string>
+    <!-- Text for the hotspot QR code. -->
+    <string name="wifi_hotspot_qr_code_text">Scan this QR code to join</string>
     <!-- This string asks the user whether or not to allow an app to enable WiFi. [CHAR LIMIT=NONE] -->
     <string name="wifi_ask_enable"><xliff:g id="requester" example="FancyApp">%s</xliff:g> wants to turn on Wi-Fi</string>
     <!-- This string asks the user whether or not to allow an app to disable WiFi. [CHAR LIMIT=NONE] -->
