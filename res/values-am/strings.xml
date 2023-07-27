@@ -40,7 +40,7 @@
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"የተንቀሳቃሽ ስልክ ውሂብ ይጥፋ?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"መምረጥ ያስፈልጋል"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ለተንቀሳቃሽ ውሂብ <xliff:g id="CARRIER">%1$s</xliff:g>ን ይጠቀሙ?"</string>
-    <string name="sim_change_data_message" msgid="4669775284395549069">"ለተንቀሳቃሽ ስልክ ውሂብ <xliff:g id="CARRIER2_0">%2$s</xliff:g>ን እየተጠቀሙ ነው። ወደ <xliff:g id="CARRIER1">%1$s</xliff:g> ከቀየሩ <xliff:g id="CARRIER2_1">%2$s</xliff:g> ከእንግዲህ ለተንቀሳቃሽ ስልክ ውሂብ ስራ ላይ አይውልም።"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"ለተንቀሳቃሽ ስልክ ውሂብ <xliff:g id="CARRIER2_0">%2$s</xliff:g>ን እየተጠቀሙ ነው። ወደ <xliff:g id="CARRIER1">%1$s</xliff:g> ከቀየሩ <xliff:g id="CARRIER2_1">%2$s</xliff:g> ከእንግዲህ ለተንቀሳቃሽ ስልክ ውሂብ ሥራ ላይ አይውልም።"</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g>ን ይጠቀሙ"</string>
     <string name="roaming_title" msgid="6218635014519017734">"በማዛወር ላይ"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"በእንቅስቃሴ ላይ ሲሆን ከውሂብ አገልግሎቶች ጋር ተገናኝ"</string>
@@ -165,6 +165,7 @@
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ጠፍቷል"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"መገናኛ ነጥብን በራስሰር አጥፋ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi መገናኛ ነጥብ ምንም መሣሪያዎች ካልተገናኙ ይጠፋል"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"ለመቀላቀል ይህን QR ኮድ ይቃኙ"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fiን ማብራት ይፈልጋል"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fiን ማጥፋት ይፈልጋል"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ስህተት"</string>
@@ -328,8 +329,8 @@
     <string name="application_version_label" msgid="8556889839783311649">"ስሪት፦ %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ምንም ፈቃዶች አልተሰጡም"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ምንም ፈቃዶች አልተጠየቁም"</string>
-    <string name="unused_apps" msgid="648471933781010395">"ስራ ላይ ያልዋሉ መተግበሪያዎች"</string>
-    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# ስራ ላይ ያልዋለ መተግበሪያ}one{# ስራ ላይ ያልዋሉ መተግበሪያዎች}other{# ስራ ላይ ያልዋሉ መተግበሪያዎች}}"</string>
+    <string name="unused_apps" msgid="648471933781010395">"ሥራ ላይ ያልዋሉ መተግበሪያዎች"</string>
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# ሥራ ላይ ያልዋለ መተግበሪያ}one{# ሥራ ላይ ያልዋሉ መተግበሪያዎች}other{# ሥራ ላይ ያልዋሉ መተግበሪያዎች}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ፈቃዶችን ያስወግዱ እና ቦታ ያስለቅቁ"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s በውስጣዊ ማከማቻ ውስጥ ነው"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ለመተግበሪያ አፈጻጸም ቅድሚያ ለመስጠት የስርዓት ንብረቶችን ይጠቀማል"</string>
@@ -582,7 +583,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"ሌሎች መተግበሪያዎች"</string>
     <string name="storage_files" msgid="6382081694781340364">"ፋይሎች"</string>
     <string name="storage_system" msgid="1271345630248014010">"ሥርዓት"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"ስርዓት የAndroid ስሪት <xliff:g id="VERSION">%s</xliff:g>ን ለማሄድ ስራ ላይ የዋሉ ፋይሎችን ያካትታል"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"ስርዓት የAndroid ስሪት <xliff:g id="VERSION">%s</xliff:g>ን ለማሄድ ሥራ ላይ የዋሉ ፋይሎችን ያካትታል"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"የኦዲዮ ፋይሎች"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"በማስላት ላይ…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"የመተግበሪያ መጠን"</string>
@@ -784,7 +785,7 @@
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"በዚህ የሚተዳደር ተሽከርካሪ ላይ ቅጽበታዊ ገፅ እይታዎችን ማንሳት አይቻልም"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"በዚህ በሚተዳደር ተሽከርካሪ ውስጥ ይህን መተግበሪያ መክፈት አይቻልም"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"በክሬዲት አቅራቢዎ ታግዷል"</string>
-    <string name="default_admin_support_msg" msgid="2986598061733013282">"የአንዳንድ ባህሪያት መዳረሻ በድርጅቱ ተገድቧል።\n\nጥያቄዎች ካሉዎት የድርጅቱን ስራ አስኪያጅ ያነጋግሩ።"</string>
+    <string name="default_admin_support_msg" msgid="2986598061733013282">"የአንዳንድ ባህሪያት መዳረሻ በድርጅቱ ተገድቧል።\n\nጥያቄዎች ካሉዎት የድርጅቱን ሥራ አስኪያጅ ያነጋግሩ።"</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"የተሽከርካሪ አስተዳዳሪ መተግበሪያዎች"</string>
     <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# የገበረ መተግበሪያ}one{# የገበሩ መተግበሪያዎች}other{# የገበሩ መተግበሪያዎች}}"</string>
