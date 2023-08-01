@@ -22,6 +22,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="animator" name="trans_right_out"/>
       <item type="anim" name="trans_fade_in"/>
       <item type="anim" name="trans_fade_out"/>
+      <item type="array" name="config_allowed_bluetooth_scanning_packages"/>
       <item type="array" name="config_ignore_ux_restrictions"/>
       <item type="array" name="config_ringtone_audio_attribute_usages_map_key"/>
       <item type="array" name="config_ringtone_uri_map_value"/>
