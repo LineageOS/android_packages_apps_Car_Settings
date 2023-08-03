@@ -81,12 +81,6 @@ android_app {
     required: ["allowed_privapp_com.android.car.settings"],
 
     dxflags: ["--multi-dex"],
-
-    product_variables: {
-        pdk: {
-            enabled: false,
-        },
-    },
 }
 
 // Duplicate of CarSettings which includes testing only resources for Robolectric
@@ -142,12 +136,6 @@ android_app {
     },
 
     dxflags: ["--multi-dex"],
-
-    product_variables: {
-        pdk: {
-            enabled: false,
-        },
-    },
 }
 
 android_library {
@@ -201,10 +189,4 @@ android_library {
     dxflags: ["--multi-dex"],
 
     aaptflags: ["--extra-packages com.android.car.settings"],
-
-    product_variables: {
-        pdk: {
-            enabled: false,
-        },
-    },
 }
