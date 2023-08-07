@@ -122,8 +122,8 @@ public class AdasLocationSwitchPreferenceController extends
 
         setClickableWhileDisabled(getPreference(), /* clickable= */true, preference -> {
             if (!mIsClickable) {
-                Toast.makeText(getContext(), R.string.adas_location_toggle_popup_summary,
-                        Toast.LENGTH_LONG).show();
+                getFragmentController().showDialog(getToggleDisabledDialog(),
+                        ConfirmationDialogFragment.TAG);
                 return;
             }
             if (!mIsPowerPolicyOn) {
@@ -179,6 +179,13 @@ public class AdasLocationSwitchPreferenceController extends
                             }
                         })
                 .setPositiveButton(android.R.string.cancel, /* confirmListener= */ null)
+                .build();
+    }
+
+    private ConfirmationDialogFragment getToggleDisabledDialog() {
+        return new ConfirmationDialogFragment.Builder(getContext())
+                .setMessage(R.string.adas_location_toggle_popup_summary)
+                .setPositiveButton(android.R.string.ok, /* confirmListener= */ null)
                 .build();
     }
 }

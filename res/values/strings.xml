@@ -935,7 +935,7 @@
     </string>
     <!-- Summary of why adas location toggle cannot be disabled [CHAR LIMIT=NONE] -->
     <string name="adas_location_toggle_popup_summary">
-        Driver assistance features always have access to your car\u2019s location
+        This setting can\u2019t be changed and has been disabled by your car manufacturer.
     </string>
     <!-- Title of location access toggle setting [CHAR LIMIT=40] -->
     <string name="adas_location_toggle_title">
@@ -955,14 +955,13 @@
     <!-- Message indicating that no apps have accessed location recently [CHAR LIMIT=60] -->
     <string name="location_no_recent_access">No recent apps</string>
     <!-- Label for driver assistance apps that recently accessed location [CHAR LIMIT=60] -->
-    <string name="driver_assistance_label"><xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver assistance</string>
+    <string name="driver_assistance_label">
+        <xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver assistance \u2022
+        Requires access
+    </string>
     <!-- Title for adas apps list [CHAR LIMIT=40] -->
     <string name="location_adas_apps_list_title">
         Features that help you drive
-    </string>
-    <!-- Summary of adas apps list [CHAR LIMIT=NONE] -->
-    <string name="location_adas_apps_list_summary">
-        These built\u2011in features can access your car\u2019s location to assist with driving
     </string>
     <!-- Text policy button of Location access app [CHAR LIMIT=40] -->
     <string name="location_driver_assistance_privacy_policy_button_text">Policy</string>
@@ -986,12 +985,14 @@
     </string>
     <!-- Location access page disclaimer summary [CHAR LIMIT=NONE] -->
     <string name="location_access_disclaimer_summary">
-        Software powered by your car\u2019s manufacturer may still have access to your
-        car\u2019s location.
+        Your car manufacturer may still have access to your car\u2019s location. You can review
+        their policies for more info.
     </string>
     <!-- Location access adas app info summary [CHAR LIMIT=NONE] -->
     <string name="location_adas_app_info_summary">
-        Learn more about how each app uses your Location data by reviewing its Privacy Policy.
+        These built\u2011in features require access to your car\u2019s location to assist with
+        driving.\n\nLearn more about how each app uses your Location data by reviewing its Privacy
+        Policy.
     </string>
 
     <!-- Microphone --><skip/>
