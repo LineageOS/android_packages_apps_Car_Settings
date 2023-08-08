@@ -120,13 +120,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    public void unclickable_onPreferenceClicked_noChange_showCorrectToast() throws Throwable {
-        int correctToastId = R.string.adas_location_toggle_popup_summary;
-        mActivityTestRule.runOnUiThread(() -> {
-            ExtendedMockito.when(Toast.makeText(any(), eq(correctToastId), anyInt()))
-                    .thenReturn(mToast);
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+    public void unclickable_onPreferenceClicked_noChange_showToggleDisabledDialog() {
         initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
                 /* isClickable= */false);
 
@@ -135,19 +129,13 @@ public class AdasLocationSwitchPreferenceControllerTest {
         assertThat(mSwitchPreference.isEnabled()).isFalse();
         assertThat(mSwitchPreference.isChecked()).isTrue();
         verify(mLocationManager, never()).setAdasGnssLocationEnabled(anyBoolean());
-        verify(mFragmentController, never())
-                .showDialog(any(ConfirmationDialogFragment.class), any());
-        verify(mToast).show();
+        verify(mFragmentController)
+                .showDialog(any(ConfirmationDialogFragment.class),
+                        eq(ConfirmationDialogFragment.TAG));
     }
 
     @Test
-    public void unclickable_powerPolicyOff_onPreferenceClicked_showCorrectToast() throws Throwable {
-        int correctToastId = R.string.adas_location_toggle_popup_summary;
-        mActivityTestRule.runOnUiThread(() -> {
-            ExtendedMockito.when(Toast.makeText(any(), eq(correctToastId), anyInt()))
-                    .thenReturn(mToast);
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+    public void unclickable_powerPolicyOff_onPreferenceClicked_showToggleDisabledDialog() {
         initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
                 /* isClickable= */false);
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
@@ -155,7 +143,10 @@ public class AdasLocationSwitchPreferenceControllerTest {
 
         mSwitchPreference.performClick();
 
-        verify(mToast).show();
+        verify(mLocationManager, never()).setAdasGnssLocationEnabled(anyBoolean());
+        verify(mFragmentController)
+                .showDialog(any(ConfirmationDialogFragment.class),
+                        eq(ConfirmationDialogFragment.TAG));
     }
 
     @Test
