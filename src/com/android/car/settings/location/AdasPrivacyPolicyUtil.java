@@ -43,10 +43,8 @@ public final class AdasPrivacyPolicyUtil {
      * link to its location permission settings.
      */
     public static CarUiTwoActionTextPreference createPrivacyPolicyPreference(
-            Context context, String pkgName, UserHandle userHandle) {
+            Context context, PackageManager packageManager, String pkgName, UserHandle userHandle) {
         CarUiTwoActionTextPreference pref = new CarUiTwoActionTextPreference(context);
-
-        PackageManager packageManager = context.getPackageManager();
 
         IconDrawableFactory drawableFactory = IconDrawableFactory.newInstance(context);
         int userId = userHandle.getIdentifier();

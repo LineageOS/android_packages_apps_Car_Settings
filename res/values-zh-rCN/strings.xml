@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"自适应亮度"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"根据环境调节屏幕亮度"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"“护眼模式”已开启"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"夜间模式"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"网络和互联网"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"移动网络"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# 张 SIM 卡}other{# 张 SIM 卡}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"配对请求"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"点按即可与 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 配对。"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"选择蓝牙设备"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"蓝牙"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"手机"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"媒体"</string>
     <string name="language_settings" msgid="2079258598337245546">"语言"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"语言和输入法"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"建议"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"应用权限"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"控制应用对您的数据的使用权限"</string>
     <string name="applications_settings" msgid="794261395191035632">"应用信息"</string>
-    <string name="force_stop" msgid="2153183697014720520">"强行停止"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"要强行停止吗？"</string>
+    <string name="force_stop" msgid="1616958676171167028">"停止应用"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"要停止应用吗？"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"如果您强行停止某个应用，可能会导致该应用无法正常运行。"</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"已停止“<xliff:g id="APP_NAME">%1$s</xliff:g>”。"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"要优先保证应用性能吗？"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"开启该设置可能会导致系统不稳定或对硬件产生长期影响。是否继续？"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"是"</string>
@@ -325,7 +328,7 @@
     <string name="application_version_label" msgid="8556889839783311649">"版本：%1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"未授予任何权限"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"未请求任何权限"</string>
-    <string name="unused_apps" msgid="648471933781010395">"闲置应用"</string>
+    <string name="unused_apps" msgid="648471933781010395">"未使用的应用"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# 个未使用的应用}other{# 个未使用的应用}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"撤消权限并释放空间"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"将使用%s的内部存储空间"</string>
@@ -442,13 +445,16 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"系统更新"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"高级"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"关于、法律信息、重置等"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"重启信息娱乐系统"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"重启您汽车的信息娱乐系统可能需要几分钟的时间。是否继续？"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"继续"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 版本"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 安全补丁程序级别"</string>
     <string name="hardware_info" msgid="3973165746261507658">"型号和硬件"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"型号：<xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"基带版本"</string>
     <string name="kernel_version" msgid="7327212934187011508">"内核版本"</string>
-    <string name="build_number" msgid="3997326631001009102">"Build 号"</string>
+    <string name="build_number" msgid="3997326631001009102">"版本号"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"蓝牙地址"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"未提供"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"状态"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"开发者选项"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"重置选项"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"重置网络、应用或设备"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"重置网络"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"这将重置所有网络设置，其中包括："</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"WLAN"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"重置 WLAN 和蓝牙"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"此操作将重置 WLAN 和蓝牙设置，移除之前连接过的以下对象的系统已存信息："</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"WLAN 网络和密码"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"移动数据"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"蓝牙"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"手机和其他蓝牙设备"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"清空所有车辆 eSIM"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"此操作不会取消您的服务套餐。"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"无法重置 eSIM"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{必须少于 # 位数}other{必须少于 # 位数}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"不允许使用以升序、降序或重复序列进行排列的一串数字"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕锁定选项"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除凭据"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有证书"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有内容吗？"</string>
@@ -733,6 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"退出演示模式"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"关闭"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"驾车时无法使用此功能"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"车辆行驶期间无法添加个人资料"</string>
     <string name="default_search_query" msgid="3137420627428857068">"搜索"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和语音"</string>

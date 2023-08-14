@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Прилагодљива осветљеност"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Прилагодите осветљење екрана окружењу"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Ноћно светло је укључено"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Ноћни режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Мрежа и интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобилна мрежа"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM картица}one{# SIM картица}few{# SIM картице}other{# SIM картица}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Захтев за упаривање"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Додирните да бисте упарили са уређајем <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Одаберите Bluetooth уређај"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Телефон"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Медији"</string>
     <string name="language_settings" msgid="2079258598337245546">"Језици"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Језици и унос"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Предложени"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Дозволе за апликације"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Контролишу приступ апликација подацима"</string>
     <string name="applications_settings" msgid="794261395191035632">"Информације о апликацији"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Принудно заустави"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Желите ли да принудно зауставите?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Заустави апликацију"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Заустављате апликацију?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ако принудно зауставите апликацију, можда ће се понашати неочекивано."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"Апликација <xliff:g id="APP_NAME">%1$s</xliff:g> је заустављена."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Дајете приоритет учинку апликације?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"То може да изазове потенцијалну нестабилност система или дуготрајни утицај на хардвер. Желите да наставите?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Да"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ажурирања система"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Напредно"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Основни подаци, правне информације, ресетовање и друго"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Рестартуј систем за инфо-забаву"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Рестартовање система за инфо-забаву може да потраје пар минута. Желите да наставите?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Настави"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Верзија Android-а"</string>
     <string name="security_patch" msgid="4794276590178386903">"Ниво безбедносне закрпе за Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Модел и хардвер"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Опције за програмере"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Опције за ресетовање"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Ресетовање мреже, апликација или уређаја"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Ресетуј мрежу"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Овим ресетујете сва подешавања мреже, укључујући:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"WiFi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Ресетуј WiFi и Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Овим ресетујете WiFi и Bluetooth подешавања, чиме се уклања меморија претходно повезаних:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"WiFi мрежа и лозинки"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобилни подаци"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"телефона и других Bluetooth уређаја"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Избриши све eSIM-ове возила"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Тиме нећете отказати тарифни пакет."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Ресетовање eSIM-ова није успело"</string>
@@ -597,7 +603,7 @@
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Дозволићете аутоматско синхронизовање података?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Све промене које унесете на налоге на вебу ће аутоматски бити копиране у возило.\n\nНеки налози могу и аутоматски да копирају на веб све промене које унесете у возилу."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Забранићете аутоматско синхронизовање података?"</string>
-    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"То ће смањити потрошњу података, али биће потребно да ручно синхронизујете сваки налог да бисте прикупили недавне информације. Нећете примати обавештења о ажурирањима."</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"То ће се смањити потрошњу података, али биће потребно да ручно синхронизујете сваки налог да бисте прикупили недавне информације. Нећете примати обавештења о ажурирањима."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Информације о налогу"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Додајте налог"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Додајте налог"</string>
@@ -616,7 +622,7 @@
     <string name="sync_in_progress" msgid="1237573373537382416">"Синхронизација је у току..."</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"Додирните да бисте синхронизовали одмах <xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
-    <string name="sync_button_sync_now" msgid="5767643057970371315">"Синхронизуј"</string>
+    <string name="sync_button_sync_now" msgid="5767643057970371315">"Синхронизуј одмах"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Откажи синхронизацију"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Синхронизација тренутно има проблема. Ускоро ће се наставити."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Приватност"</string>
@@ -645,7 +651,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Настави"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Пробај поново"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Прескочи"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Подесите откључавање екрана"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Подесите закључавање екрана"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Одаберите PIN"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Одаберите лозинку"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Тренутно закључавање екрана"</string>
@@ -684,7 +690,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Обриши"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Откажи"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Потврди"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Мора да има бар 4 знака"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Мора да садржи најмање 4 знака"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"Овај тип браве је недоступан."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Мора да садржи само цифре 0–9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Администратор уређаја не дозвољава употребу недавно коришћеног PIN-а"</string>
@@ -694,23 +700,22 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Администратор уређаја не дозвољава употребу недавно коришћене лозинке"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Грешка при чувању лозинке"</string>
     <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"ИТ администратор блокира честе лозинке. Изаберите другу лозинку."</string>
-    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Мора да има бар једно слово"</string>
-    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Мора да има бар једну цифру"</string>
-    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Мора да има бар један симбол"</string>
-    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Мора да има бар # слово}one{Мора да има бар # слово}few{Мора да има бар # слова}other{Мора да има бар # слова}}"</string>
-    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Мора да има бар # мало слово}one{Мора да има бар # мало слово}few{Мора да има бар # мала слова}other{Мора да има бар # малих слова}}"</string>
-    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Мора да има бар # велико слово}one{Мора да има бар # велико слово}few{Мора да има бар # велика слова}other{Мора да има бар # великих слова}}"</string>
-    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Мора да има бар # цифру}one{Мора да има бар # цифру}few{Мора да има бар # цифре}other{Мора да има бар # цифара}}"</string>
-    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Мора да има бар # специјални симбол}one{Мора да има бар # специјални симбол}few{Мора да има бар # специјална симбола}other{Мора да има бар # специјалних симбола}}"</string>
-    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Мора да има бар # знак који није слово}one{Мора да има бар # знак који није слово}few{Мора да има бар # знака који нису слова}other{Мора да има бар # знакова који нису слова}}"</string>
-    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Мора да има бар # знак који није број}one{Мора да има бар # знак који није број}few{Мора да има бар # знака који нису бројеви}other{Мора да има бар # знакова који нису бројеви}}"</string>
-    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Мора да има бар # знак}one{Мора да има бар # знак}few{Мора да има бар # знака}other{Мора да има бар # знакова}}"</string>
-    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Мора да има бар # цифру}one{Мора да има бар # цифру}few{Мора да има бар # цифре}other{Мора да има бар # цифара}}"</string>
+    <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"Мора да садржи најмање једно слово"</string>
+    <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"Мора да садржи најмање једну цифру"</string>
+    <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"Мора да садржи најмање један симбол"</string>
+    <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{Мора да садржи најмање # слово}one{Мора да садржи најмање # слово}few{Мора да садржи најмање # слова}other{Мора да садржи најмање # слова}}"</string>
+    <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{Мора да садржи најмање # мало слово}one{Мора да садржи најмање # мало слово}few{Мора да садржи најмање # мала слова}other{Мора да садржи најмање # малих слова}}"</string>
+    <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Мора да садржи најмање # велико слово}one{Мора да садржи најмање # велико слово}few{Мора да садржи најмање # велика слова}other{Мора да садржи најмање # великих слова}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Мора да садржи најмање # цифру}one{Мора да садржи најмање # цифру}few{Мора да садржи најмање # цифре}other{Мора да садржи најмање # цифара}}"</string>
+    <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Мора да садржи најмање # специјални симбол}one{Мора да садржи најмање # специјални симбол}few{Мора да садржи најмање # специјална симбола}other{Мора да садржи најмање # специјалних симбола}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Мора да садржи најмање # знак који није слово}one{Мора да садржи најмање # знак који није слово}few{Мора да садржи најмање # знака који нису слова}other{Мора да садржи најмање # знакова који нису слова}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Мора да садржи најмање # знак који није број}one{Мора да садржи најмање # знак који није број}few{Мора да садржи најмање # знака који нису бројеви}other{Мора да садржи најмање # знакова који нису бројеви}}"</string>
+    <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Мора да садржи најмање # знак}one{Мора да садржи најмање # знак}few{Мора да садржи најмање # знака}other{Мора да садржи најмање # знакова}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Мора да садржи најмање # цифру}one{Мора да садржи најмање # цифру}few{Мора да садржи најмање # цифре}other{Мора да садржи најмање # цифара}}"</string>
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Мора да садржи мање од # знака}one{Мора да садржи мање од # знака}few{Мора да садржи мање од # знака}other{Мора да садржи мање од # знакова}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Мора да садржи мање од # цифре}one{Мора да садржи мање од # цифре}few{Мора да садржи мање од # цифре}other{Мора да садржи мање од # цифара}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Растући, опадајући или поновљени низ цифара није дозвољен"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опције закључавања екрана"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пре <xliff:g id="NUM_DAYS">%3$s</xliff:g> дан(а)"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Обриши акредитиве"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Уклoните све сертификате"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Желите ли да уклоните сав садржај?"</string>
@@ -733,6 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Напусти режим демонстр."</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОДБАЦИ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функција није доступна током вожње"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Не можете да додате профил током вожње"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Претражите"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Помоћник и глас"</string>

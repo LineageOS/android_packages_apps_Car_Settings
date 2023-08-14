@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Kecerahan adaptif"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Menyesuaikan kecerahan layar dengan lingkungan"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Mode Cahaya Malam aktif"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Mode malam"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Jaringan &amp; internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Jaringan seluler"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Permintaan penyambungan"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Ketuk agar terhubung dengan <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Pilih perangkat Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Ponsel"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Media"</string>
     <string name="language_settings" msgid="2079258598337245546">"Bahasa"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Bahasa &amp; masukan"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Disarankan"</string>
@@ -303,11 +305,12 @@
     <string name="default_applications" msgid="1558183275638697087">"Aplikasi default"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"Aplikasi yang memengaruhi performa"</string>
     <string name="app_permissions" msgid="32799922508313948">"Izin aplikasi"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrol akses aplikasi ke data Anda"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"Mengontrol akses aplikasi ke data Anda"</string>
     <string name="applications_settings" msgid="794261395191035632">"Info aplikasi"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Paksa berhenti"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Paksa berhenti?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Hentikan aplikasi"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Hentikan aplikasi?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Jika aplikasi dihentikan paksa, fungsinya mungkin akan terganggu."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> telah dihentikan."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Prioritaskan performa aplikasi?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Tindakan ini dapat berpotensi menyebabkan ketidakstabilan sistem atau dampak jangka panjang pada hardware. Ingin melanjutkan?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ya"</string>
@@ -378,7 +381,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"Baru Dibuka"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Lihat %1$d aplikasi"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Pengelola izin"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Kontrol akses aplikasi ke data Anda"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"Mengontrol akses aplikasi ke data Anda"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Untuk Asisten dan lainnya"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplikasi yang memengaruhi performa}other{# aplikasi yang memengaruhi performa}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Ke sistem dan setelan lainnya"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Update sistem"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Lanjutan"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Tentang, info hukum, reset, dan lainnya"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Mulai ulang sistem infotainmen"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Memulai ulang sistem infotainmen mobil Anda dapat memerlukan waktu beberapa menit. Ingin melanjutkan?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Lanjutkan"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versi Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Tingkat patch keamanan Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Model &amp; hardware"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opsi developer"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opsi reset"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Mereset jaringan, aplikasi, atau perangkat"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Reset jaringan"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Tindakan ini akan menyetel ulang semua setelan jaringan, termasuk:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Reset Wi‑Fi dan Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Tindakan ini akan mereset setelan Wi‑Fi dan Bluetooth, serta menghapus histori setelan perangkat yang sebelumnya terhubung:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Sandi dan jaringan Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Kuota"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Ponsel dan perangkat Bluetooth lainnya"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Hapus semua eSIM kendaraan"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Tindakan ini tidak akan membatalkan paket layanan Anda."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Tidak dapat menyetel ulang eSIM"</string>
@@ -574,7 +580,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Aplikasi lainnya"</string>
     <string name="storage_files" msgid="6382081694781340364">"File"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem mencakup file yang digunakan untuk menjalankan Android versi <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem menyertakan file yang digunakan untuk menjalankan Android versi <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"File audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Menghitung…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Ukuran aplikasi"</string>
@@ -656,7 +662,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Gambar pola pembuka kunci"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Angkat jari ketika selesai"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Pola direkam"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Gambar lagi pola untuk mengonfirmasi"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Gambar pola lagi untuk mengonfirmasi"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Hubungkan minimal 4 titik. Coba lagi."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Pola salah"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cara menggambar pola pembuka kunci"</string>
@@ -672,7 +678,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Masukkan sandi"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Untuk keamanan, setel PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Masukkan ulang PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN minimal 4 digit"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN harus minimal 4 digit"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN tidak valid, minimal 4 digit."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN tidak cocok"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Error saat menyimpan PIN"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Harus kurang dari # digit}other{Harus kurang dari # digit}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Urutan digit naik, turun, atau berulang tidak diizinkan"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsi kunci layar"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> hari yang lalu"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hapus kredensial"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Hapus semua sertifikat"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Hapus semua konten?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Keluar dari Demo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"TOLAK"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Fitur tidak tersedia saat mengemudi"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Minta pengemudi untuk mengubah setelan"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Anda tidak dapat melakukan tindakan ini"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Tidak dapat menambahkan profil saat mengemudi"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Telusuri"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asisten &amp; suara"</string>
