@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ຖ້າທ່ານປິດສິ່ງນີ້, ມັນຈະລຶບສິດເຂົ້າເຖິງສະຖານທີ່ຂອງແອັບທັງໝົດອອກ ຍົກເວັ້ນສິດເຂົ້າເຖິງທີ່ຈຳເປັນສຳລັບຕົວຊ່ວຍຜູ້ຂັບ"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ຫາກທ່ານປິດການຕັ້ງຄ່ານີ້, ລະບົບຈະປິດການນຳໃຊ້ແອັບຕົວຊ່ວຍຜູ້ຂັບທີ່ໃຊ້ຂໍ້ມູນສະຖານທີ່"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ຢືນຢັນການປິດ"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ຄຸນສົມບັດຕົວຊ່ວຍຜູ້ຂັບຈະມີສິດເຂົ້າເຖິງສະຖານທີ່ຂອງລົດຂອງທ່ານຢູ່ຕະຫຼອດ"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ການຕັ້ງຄ່ານີ້ບໍ່ສາມາດປ່ຽນແປງໄດ້ ແລະ ຖືກປິດການນຳໃຊ້ໂດຍຜູ້ຜະລິດລົດຂອງທ່ານ."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ຄຸນສົມບັດທີ່ຊ່ວຍທ່ານໃນການຂັບລົດ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ອະນຸຍາດໃຫ້ຄຸນສົມບັດໃນຕົວ, ເຊິ່ງໄດ້ຮັບອະນຸມັດຈາກຜູ້ຜະລິດລົດຂອງທ່ານ, ເຂົ້າເຖິງສະຖານທີ່ຂອງລົດຂອງທ່ານ."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ເຂົ້າເຖິງຫຼ້າສຸດ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ເຂົ້າເຖິງຫຼ້າສຸດ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ເບິ່ງທັງໝົດ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ບໍ່ມີແອັບທີ່ໃຊ້ຫຼ້າສຸດ"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ຕົວຊ່ວຍຜູ້ຂັບ"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ຕົວຊ່ວຍຜູ້ຂັບ • ຕ້ອງການສິດເຂົ້າເຖິງ"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"ຄຸນສົມບັດທີ່ຊ່ວຍທ່ານໃນການຂັບລົດ"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"ຄຸນສົມບັດໃນຕົວເຫຼົ່ານີ້ສາມາດເຂົ້າເຖິງສະຖານທີ່ຂອງລົດຂອງທ່ານເພື່ອໃຫ້ຄວາມຊ່ວຍເຫຼືອໃນການຂັບລົດໄດ້"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"ນະໂຍບາຍ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ການອະນຸຍາດລະດັບແອັບ"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"ຈັດການການອະນຸຍາດແອັບແຕ່ລະລາຍການ"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ໃຊ້ສະຖານທີ່"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"ສິດເຂົ້າເຖິງສະຖານທີ່"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"ເລືອກວ່າຈະໃຫ້ແອັບເຂົ້າເຖິງສະຖານທີ່ຂອງລົດຂອງທ່ານຫຼືບໍ່"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"ຊອບແວທີ່ຂັບເຄື່ອນໂດຍຜູ້ຜະລິດລົດຂອງທ່ານອາດຍັງມີສິດເຂົ້າເຖິງສະຖານທີ່ຂອງລົດຂອງທ່ານ."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"ສຶກສາເພີ່ມເຕີມກ່ຽວກັບວິທີທີ່ແຕ່ລະແອັບໃຊ້ຂໍ້ມູນສະຖານທີ່ຂອງທ່ານໂດຍການອ່ານນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງແອັບດັ່ງກ່າວ."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ຜູ້ຜະລິດລົດຂອງທ່ານອາດຍັງມີສິດເຂົ້າເຖິງສະຖານທີ່ຂອງລົດຂອງທ່ານ. ທ່ານສາມາດກວດສອບເບິ່ງນະໂຍບາຍຂອງເຂົາເຈົ້າສຳລັບຂໍ້ມູນເພີ່ມເຕີມ."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"ຄຸນສົມບັດໃນຕົວເຫຼົ່ານີ້ຕ້ອງການສິດເຂົ້າເຖິງສະຖານທີ່ຂອງລົດຂອງທ່ານເພື່ອຊ່ວຍເຫຼືອໃນການຂັບຂີ່.\n\nສຶກສາເພີ່ມເຕີມກ່ຽວກັບວ່າແຕ່ລະແອັບໃຊ້ຂໍ້ມູນສະຖານທີ່ຂອງທ່ານແນວໃດໂດຍການກວດສອບເບິ່ງນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງມັນ."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ໄມໂຄຣໂຟນ"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ໃຊ້ໄມໂຄຣໂຟນ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ອະນຸຍາດໃຫ້ແອັບທັງໝົດເຂົ້າເຖິງໄມໂຄຣໂຟນຂອງທ່ານ"</string>

@@ -137,7 +137,7 @@
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"در دسترس نیست چون «مکان» خاموش است. "<annotation id="link">"مکان"</annotation>" را روشن کنید."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"اسکن کردن Wi‑Fi روشن شود؟"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"روشن کردن"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"اسکن کردن Wi-Fi روشن شد"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"اسکن شبکه‌های Wi-Fi روشن شد"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"تغییر وضعیت خودکار به داده تلفن همراه"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"وقتی Wi-Fi به اینترنت دسترسی ندارد، از داده تلفن همراه استفاده شود. ممکن است هزینه مصرف داده اعمال شود."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"پیدا کردن شبکه‌های Wi-Fi و اتصال به آن‌ها"</string>
@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"اگر این تنظیم را خاموش کنید، دسترسی به مکان برای همه برنامه‌ها حذف خواهد شد، به‌جز برنامه‌هایی که برای «دستیار راننده» موردنیاز هستند"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"اگر این تنظیم را خاموش کنید، برنامه‌های «دستیار راننده» که بر اطلاعات مکان متکی‌اند غیرفعال خواهد شد"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"درهرصورت خاموش شود"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ویژگی‌های «دستیار راننده» همیشه به مکان خودروتان دسترسی دارد"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"این تنظیم را نمی‌توان تغییر داد و ازسوی سازنده خودرو غیرفعال شده است."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ویژگی‌هایی که در رانندگی به شما کمک می‌کند"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"به ویژگی‌های داخلی که توسط سازنده خودرو تأیید شده است اجازه می‌دهد به مکان خودروتان دسترسی داشته باشد."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"مشاهده همه برنامه‌ها"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"برنامه اخیری وجود ندارد"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • دستیار راننده"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • دستیار راننده • به دسترسی نیاز دارد"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"ویژگی‌هایی که در رانندگی به شما کمک می‌کند"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"این ویژگی‌های داخلی می‌توانند برای کمک به رانندگی به مکان خودروتان دسترسی داشته باشند"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"خط‌مشی"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"اجازه‌های سطح برنامه"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"مدیریت مجزای اجازه‌های برنامه"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"استفاده از مکان"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"دسترسی به مکان"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"انتخاب کنید برنامه‌ها بتوانند به مکان خودروتان دسترسی داشته باشند یا نه"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"ممکن است نرم‌افزاری که سازنده خودروتان ارائه می‌دهد همچنان به مکان خودروی شما دسترسی داشته باشد."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"با مرور «خط‌مشی رازداری» هر برنامه، درباره نحوه استفاده آن برنامه از «داده‌های مکان» اطلاعات بیشتری کسب کنید."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ممکن است سازنده خودروتان همچنان به مکان خودروی شما دسترسی داشته باشد. برای کسب اطلاعات بیشتر می‌توانید خط‌مشی‌های سازنده را مرور کنید."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"این ویژگی‌های داخلی برای کمک در رانندگی باید به مکان خودروتان دسترسی داشته باشند.\n\nبرای کسب اطلاعات بیشتر درباره اینکه هر برنامه چگونه از «داده‌های مکان» شما استفاده می‌کند، «خط‌مشی رازداری» برنامه موردنظر را مرور کنید."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"میکروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"استفاده از میکروفون"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"همه برنامه‌ها مجاز می‌شوند به میکروفون دسترسی داشته باشند"</string>

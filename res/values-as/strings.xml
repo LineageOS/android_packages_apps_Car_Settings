@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"আপুনি যদি এইটো অফ কৰে, তেন্তে চালক সাহায্যৰ বাবে আৱশ্যক হোৱা এপৰ বাহিৰে এইটোৱে আটাইবোৰ এপৰ বাবে অৱস্থানৰ এক্সেছ আঁতৰাব"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"আপুনি যদি এইটো অফ কৰে, তেন্তে অৱস্থানৰ তথ্যৰ ওপৰত নিৰ্ভৰশীল চালকৰ সাহায্য এপ্‌সমূহ অক্ষম কৰা হ’ব"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"তথাপি অফ কৰক"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"চালক সাহায্য সুবিধাসমূহৰ ওচৰত সকলো সময়তে আপোনাৰ গাড়ীৰ অৱস্থানৰ এক্সেছ থাকে"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"এই ছেটিংটো সলনি কৰিব নোৱাৰি আৰু সেইটো আপোনাৰ কাৰ নিৰ্মাতাই অক্ষম কৰিছে।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"আপোনাক গাড়ী চলোৱাত সহায় কৰা সুবিধাসমূহ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"আপোনাৰ গাড়ী নিৰ্মাতাই অনুমোদন জনোৱা বিল্ট-ইন সুবিধাসমূহক আপোনাৰ গাড়ীৰ অৱস্থান এক্সেছ কৰিবলৈ অনুমতি দিয়ক।"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"আটাইবোৰ চাওক"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"কোনো শেহতীয়া এপ্‌ নাই"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • চালক সাহায্য"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • চালক সাহায্য • এক্সেছৰ আৱশ্যক"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"আপোনাক গাড়ী চলোৱাত সহায় কৰা সুবিধাসমূহ"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"এই বিল্ট-ইন সুবিধাসমূহে গাড়ী চলোৱাৰ সময়ত সহায় কৰিবলৈ আপোনাৰ গাড়ীৰ অৱস্থান এক্সেছ কৰিব পাৰে"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"নীতি"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"এপ্‌-স্তৰৰ অনুমতি"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"প্ৰতিটো এপৰ অনুমতি পৰিচালনা কৰক"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"অৱস্থান ব্যৱহাৰ কৰক"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"অৱস্থানৰ এক্সেছ"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"এপ্‌সমূহে আপোনাৰ গাড়ীৰ অৱস্থান এক্সেছ কৰিব পাৰেনে নোৱাৰে সেয়া বাছনি কৰক"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"আপোনাৰ গাড়ী নিৰ্মাতাই আগবঢ়োৱা ছফ্টৱেৰে তথাপি আপোনাৰ গাড়ীৰ অৱস্থানৰ এক্সেছ পাব পাৰে।"</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"প্ৰতিটো এপৰ গোপনীয়তাৰ নীতি পৰ্যালোচনা কৰি সেইসমূহে কেনেকৈ আপোনাৰ অৱস্থানৰ ডেটা ব্যৱহাৰ কৰে সেই বিষয়ে অধিক জানক।"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"আপোনাৰ গাড়ীৰ নিৰ্মাতাৰ ওচৰত এতিয়াও আপোনাৰ গাড়ীৰ অৱস্থানৰ এক্সেছ থাকিব পাৰে। অধিক তথ্যৰ বাবে আপুনি তেওঁলোকৰ নীতি পৰ্যালোচনা কৰিব পাৰে।"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"এই বিল্ট-ইন সুবিধাসমূহে গাড়ী চলোৱাৰ ক্ষেত্ৰত সহায় কৰিবলৈ আপোনাৰ গাড়ীৰ অৱস্থান এক্সেছ কৰাৰ আৱশ্যক।\n\nপ্ৰতিটো এপৰ গোপনীয়তাৰ নীতি পৰ্যালোচনা কৰি সেইসমূহে কিদৰে আপোনাৰ অৱস্থানৰ ডেটা ব্যৱহাৰ কৰে সেই বিষয়ে অধিক জানক।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্ৰ’ফ’ন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্র’ফ’ন ব্যৱহাৰ কৰক"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"আটাইবোৰ এপক আপোনাৰ মাইক্ৰ’ফ’ন এক্সেছ কৰিবলৈ দিয়ক"</string>

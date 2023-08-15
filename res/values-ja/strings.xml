@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"この設定を OFF にすると、すべてのアプリで位置情報へのアクセス権限が削除されます。ただし、ドライバー サポートに位置情報を必要とするアプリは除きます。"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"この設定を OFF にすると、位置情報を使用するドライバー サポート アプリは無効になります"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"OFF にする"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ドライバー サポート機能は車の位置情報に常にアクセスできます"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"この設定は変更できません。車のメーカーが無効に設定しています。"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"運転をサポートする機能"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"車のメーカーが承認したビルトイン機能に車の位置情報へのアクセスを許可します。"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"最近アクセスしたもの"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"最近アクセスしたもの"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"すべて表示"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"最近使ったアプリはありません"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ドライバー サポート"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ドライバー サポート • アクセス権限が必要"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"運転をサポートする機能"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"運転をサポートする目的で、これらのビルトイン機能は車の位置情報にアクセスできます"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"ポリシー"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"アプリレベルの権限"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"権限をアプリごとに個別に管理します"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"位置情報を使用"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"位置情報へのアクセス"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"アプリが車の位置情報にアクセスできる場合は選択します"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"車のメーカーのソフトウェアが引き続き車の位置情報にアクセスできる場合があります。"</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"各アプリが位置情報をどのように利用するかについて、プライバシー ポリシーで確認します。"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"車のメーカーが引き続き車の位置情報にアクセスできる場合があります。詳しくは、車のメーカーのポリシーをご覧ください。"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"これらの組み込みのドライバー サポート機能を利用するには、アプリに車の位置情報へのアクセスを許可する必要があります。\n\n各アプリが位置情報をどのように利用するかについては、プライバシー ポリシーをご覧ください。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"マイク"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"マイクの使用"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"すべてのアプリにマイクへのアクセスを許可します"</string>

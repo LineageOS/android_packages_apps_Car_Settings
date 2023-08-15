@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Хэрэв та үүнийг унтраавал энэ нь жолоочийн туслахад шаардлагатайгаас бусад бүх аппын байршилд хандах эрхийг хасна"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Хэрэв та үүнийг унтраавал байршлын мэдээлэлд тулгуурласан жолоочийн туслах аппуудыг идэвхгүй болно"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Ямартай ч унтраах"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Жолоочийн туслахын онцлогууд таны автомашины байршилд үргэлж хандах эрхтэй байна"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Энэ тохиргоог өөрчлөх боломжгүй бөгөөд таны автомашин үйлдвэрлэгч идэвхгүй болгосон."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Танд жолоодоход туслах онцлогууд"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Таны автомашин үйлдвэрлэгчийн зөвшөөрсөн бүрэлдэхүүн онцлогуудыг таны автомашины байршилд хандахыг зөвшөөрнө үү."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Саяхан хандсан"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Саяхан хандсан"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Бүгдийг харах"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Саяхан хандсан апп алга"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Жолоочийн туслах"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Жолоочийн туслах • Хандалт шаардлагатай"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"Танд жолоодоход туслах онцлогууд"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Эдгээр бүрэлдэхүүн онцлог жолоодоход туслахын тулд таны автомашины байршилд хандах боломжтой"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Бодлого"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Аппын түвшний зөвшөөрөл"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Бие даасан аппын зөвшөөрлийг удирдах"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Байршлыг ашиглах"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"Байршлын хандалт"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"Аппууд таны автомашины байршилд хандаж болох эсэхийг сонгоно уу"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Таны автомашин үйлдвэрлэгчээс дэмжсэн программ хангамж таны автомашины байршилд хандах эрхтэй байж магадгүй."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Апп тус бүрийн нууцлалын бодлогыг шалгаснаар тэд таны Байршлын өгөгдлийг хэрхэн ашигладаг талаар нэмэлт мэдээлэл авна уу."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Таны автомашин үйлдвэрлэгч автомашины тань байршилд хандах эрх хэвээр байж магадгүй. Та дэлгэрэнгүй мэдээлэл авах бол түүний бодлогыг шалгах боломжтой."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Эдгээр бүрэлдэхүүн онцлогт жолоодоход туслахад таны автомашины байршилд хандах эрх шаардлагатай.\n\nАпп бүрийн нууцлалын бодлогыг шалгаснаар тус бүр нь таны Байршлын өгөгдлийг хэрхэн ашигладаг талаар нэмэлт мэдээлэл авна уу."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофоныг ашиглах"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Бүх аппад таны микрофонд хандахыг зөвшөөрнө үү"</string>

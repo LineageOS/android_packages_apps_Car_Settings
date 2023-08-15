@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Αν απενεργοποιήσετε αυτήν τη επιλογή, θα καταργηθεί η πρόσβαση στην τοποθεσία για όλες τις εφαρμογές, εκτός από αυτές που απαιτούνται για υποβοήθηση οδηγού"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι εφαρμογές υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίας θα απενεργοποιηθούν"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Απενεργοποίηση ούτως ή άλλως"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Οι λειτουργίες υποβοήθησης οδηγού έχουν πάντα πρόσβαση στην τοποθεσία του αυτοκινήτου σας"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Δεν είναι δυνατή η αλλαγή αυτής της ρύθμισης και ο κατασκευαστής του αυτοκινήτου σας την έχει απενεργοποιήσει."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Λειτουργίες που βοηθούν στην οδήγηση"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Επιτρέψτε σε ενσωματωμένες λειτουργίες που έχουν εγκριθεί από τον κατασκευαστή του αυτοκινήτου σας να έχουν πρόσβαση στην τοποθεσία του."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Πρόσφατη πρόσβαση"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Πρόσφατη πρόσβαση"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Προβολή όλων"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Καμία πρόσφατη εφαρμογή"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Υποβοήθηση οδηγού"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Υποβοήθηση οδηγού • Απαιτεί πρόσβαση"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"Λειτουργίες που βοηθούν στην οδήγηση"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Αυτές οι ενσωματωμένες λειτουργίες έχουν πρόσβαση στην τοποθεσία του αυτοκινήτου για να σας βοηθούν στην οδήγηση"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Πολιτική"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Άδειες επιπέδου εφαρμογής"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Διαχειριστείτε άδειες μεμονωμένων εφαρμογών"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Χρήση τοποθεσίας"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"Πρόσβαση στην τοποθεσία"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"Επιλέξτε αν οι εφαρμογές θα έχουν πρόσβαση στην τοποθεσία του αυτοκινήτου σας"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Το λογισμικό που υποστηρίζεται από τον κατασκευαστή του αυτοκινήτου ενδέχεται να εξακολουθεί να έχει πρόσβαση στην τοποθεσία του αυτοκινήτου σας."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Ελέγξτε την Πολιτική απορρήτου κάθε εφαρμογής για να μάθετε περισσότερα σχετικά με τον τρόπο που χρησιμοποιεί τα δεδομένα τοποθεσίας σας."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Ο κατασκευαστής του αυτοκινήτου ενδέχεται να εξακολουθεί να έχει πρόσβαση στην τοποθεσία του αυτοκινήτου σας. Ελέγξτε τις πολιτικές του κατασκευαστή για περισσότερες πληροφορίες."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Αυτές οι ενσωματωμένες λειτουργίες χρειάζονται πρόσβαση στην τοποθεσία του αυτοκινήτου σας για να σας βοηθήσουν στην οδήγηση.\n\nΕλέγξτε την πολιτική απορρήτου κάθε εφαρμογής για να μάθετε περισσότερα σχετικά με το πώς χρησιμοποιεί τα δεδομένα τοποθεσίας σας."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Μικρόφωνο"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Χρήση μικροφώνου"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Επιτρέψτε σε όλες τις εφαρμογές να έχουν πρόσβαση στο μικρόφωνο"</string>

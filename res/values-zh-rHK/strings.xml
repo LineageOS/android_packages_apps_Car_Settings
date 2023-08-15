@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"關閉此功能後，系統便會移除所有應用程式的位置權限，但駕駛輔助所需的應用程式除外"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"關閉此功能後，需要依賴位置資料的駕駛輔助應用程式將會停用"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"繼續關閉"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"駕駛輔助功能一律可存取汽車的位置"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"此設定無法變更，並且已被汽車製造商停用。"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"協助您駕駛的功能"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"允許經汽車製造商核准的內置功能存取汽車的位置。"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"最近存取"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"最近存取"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"查看全部"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"沒有最近存取過的應用程式"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • 駕駛輔助"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • 駕駛輔助 • 需要存取權"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"協助您駕駛的功能"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"這些內置功能可存取汽車的位置以協助駕駛"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"政策"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"應用程式層級權限"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"管理個別應用程式權限"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置資訊"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"位置資料存取權"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"選擇應用程式是否可存取汽車的位置"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"由汽車製造商提供技術的軟件可能仍可存取汽車的位置。"</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"查看其《私隱權政策》，進一步瞭解每個應用程式如何使用您的位置資料。"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"汽車製造商可能仍可存取汽車的位置。你可查看其政策以瞭解詳情。"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"這些內置功能需要存取你汽車的位置才能輔助駕駛。\n\n查看其《私隱權政策》，進一步瞭解每個應用程式如何使用你的位置資料。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"麥克風"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麥克風"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"允許所有應用程式存取你的麥克風"</string>

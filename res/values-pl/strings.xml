@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Jeśli to wyłączysz, dostęp do lokalizacji stracą wszystkie aplikacje oprócz tych, które są potrzebne do wspomagania kierowcy"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Jeśli to wyłączysz, aplikacje wspomagania kierowcy korzystające z informacji o lokalizacji również zostaną wyłączone"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Wyłącz mimo to"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Funkcje wspomagania kierowcy zawsze mają dostęp do lokalizacji Twojego samochodu"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Tego ustawienia nie można zmienić. Zostało ono wyłączone przez producenta samochodu."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funkcje ułatwiające prowadzenie pojazdu"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Zezwól wbudowanym funkcjom zatwierdzonym przez producenta samochodu na dostęp do lokalizacji samochodu."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Ostatnie użycie"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Ostatnie użycie"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Wyświetl wszystko"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Brak ostatnich aplikacji"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Funkcje wspomagania kierowcy"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Funkcje wspomagania kierowcy • Wymaga dostępu"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funkcje ułatwiające prowadzenie pojazdu"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Te wbudowane funkcje mogą uzyskiwać dostęp do lokalizacji Twojego samochodu, aby ułatwić Ci prowadzenie pojazdu"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Zasady"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Uprawnienia na poziomie aplikacji"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Zarządzaj uprawnieniami poszczególnych aplikacji"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Używaj lokalizacji"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"Dostęp do lokalizacji"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"Zdecyduj, czy aplikacje mogą mieć dostęp do lokalizacji Twojego samochodu"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Oprogramowanie obsługiwane przez producenta samochodu może nadal mieć dostęp do lokalizacji Twojego samochodu."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Więcej informacji o tym, jak każda aplikacja korzysta z Twoich danych o lokalizacji, znajdziesz w jej polityce prywatności."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Producent samochodu może nadal mieć dostęp do lokalizacji Twojego samochodu. Więcej informacji znajdziesz w jego regulaminie."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Te wbudowane funkcje wymagają dostępu do lokalizacji samochodu, żeby zapewnić wspomaganie kierowcy.\n\nWięcej o tym, jak poszczególne aplikacje wykorzystują dane o lokalizacji, znajdziesz w ich polityce prywatności."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Używaj mikrofonu"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Pozwól wszystkim aplikacjom na dostęp do mikrofonu"</string>
