@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଡ୍ରାଇଭର ସହାୟତା ପାଇଁ ଆବଶ୍ୟକ ଆପ୍ସ ବ୍ୟତୀତ ଏହା ସମସ୍ତ ଆପ୍ସ ପାଇଁ ଲୋକେସନ ଆକ୍ସେସକୁ କାଢ଼ି ଦେବ"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସ ଅକ୍ଷମ ହୋଇଯିବ"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ଯେ କୌଣସି ଉପାୟରେ ବନ୍ଦ କରନ୍ତୁ"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ଡ୍ରାଇଭର ସହାୟତା ଫିଚରଗୁଡ଼ିକ ପାଖରେ ସର୍ବଦା ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ ଥାଏ"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ଏହି ସେଟିଂକୁ ପରିବର୍ତ୍ତନ କରାଯାଇପାରିବ ନାହିଁ ଏବଂ ଏହାକୁ ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ଦ୍ୱାରା ଅକ୍ଷମ କରାଯାଇଛି।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ଡ୍ରାଇଭ କରିବାରେ ସାହାଯ୍ୟ କରୁଥିବା ଫିଚରଗୁଡ଼ିକ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ଦ୍ୱାରା ଅନୁମୋଦିତ ବିଲ୍ଟ-ଇନ ଫିଚରଗୁଡ଼ିକୁ ଅନୁମତି ଦିଅନ୍ତୁ।"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ସବୁ ଦେଖନ୍ତୁ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ବର୍ତ୍ତମାନର କୌଣସି ଆପ ନାହିଁ"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା • ଆକ୍ସେସ ଆବଶ୍ୟକ କରେ"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"ଡ୍ରାଇଭ କରିବାରେ ସାହାଯ୍ୟ କରୁଥିବା ଫିଚରଗୁଡ଼ିକ"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"ଡ୍ରାଇଭିଂରେ ସହାୟତା କରିବାକୁ ଏହି ବିଲ୍ଟ-ଇନ ଫିଚରଗୁଡ଼ିକ ଆପଣଙ୍କ କାର ଲୋକେସନକୁ ଆକ୍ସେସ କରିପାରନ୍ତି"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"ନୀତି"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"ବ୍ୟକ୍ତିଗତ ଆପର ଅନୁମତିଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"ଲୋକେସନ ଆକ୍ସେସ"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"ଆପ୍ସ ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ କରିପାରିବ ନା ନାହିଁ ତାହା ବାଛନ୍ତୁ"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ଦ୍ଵାରା ପରିଚାଳିତ ସଫ୍ଟୱେର ପାଖରେ ଏବେ ବି ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ ଥାଇପାରେ।"</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"ପ୍ରତ୍ୟେକ ଆପ ନିଜ ଗୋପନୀୟତା ନୀତିର ସମୀକ୍ଷା କରି ଆପଣଙ୍କ ଲୋକେସନ ଡାଟାକୁ କିପରି ବ୍ୟବହାର କରୁଛି ସେ ବିଷୟରେ ଅଧିକ ଜାଣନ୍ତୁ।"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ପାଖରେ ଏବେ ବି ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ ଥାଇପାରେ। ଅଧିକ ସୂଚନା ପାଇଁ ଆପଣ ତା\'ର ନୀତିଗୁଡ଼ିକର ସମୀକ୍ଷା କରିପାରିବେ।"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"ଡ୍ରାଇଭିଂରେ ସହାୟତା କରିବାକୁ ଏହି ବିଲ୍ଟ-ଇନ ଫିଚରଗୁଡ଼ିକ ପାଇଁ ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ ଆବଶ୍ୟକ।\n\nପ୍ରତ୍ୟେକ ଆପର ଗୋପନୀୟତା ନୀତିକୁ ସମୀକ୍ଷା କରି ଏହା ଆପଣଙ୍କ ଲୋକେସନକୁ କିପରି ବ୍ୟବହାର କରେ ସେ ବିଷୟରେ ଅଧିକ ଜାଣନ୍ତୁ।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ମାଇକ୍ରୋଫୋନ୍"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ମାଇକ୍ରୋଫୋନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ଆପଣଙ୍କ ମାଇକ୍ରୋଫୋନକୁ ଆକ୍ସେସ୍ କରିବା ପାଇଁ ସମସ୍ତ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
