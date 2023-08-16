@@ -415,16 +415,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ပိတ်လိုက်ပါက ယာဉ်မောင်းသူ အထောက်အကူကို လိုအပ်သောအက်ပ်များမှအပ အက်ပ်အားလုံးအတွက် တည်နေရာသုံးခွင့်ကို ဖယ်ရှားပါမည်"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ပိတ်လိုက်ပါက တည်နေရာအချက်အလက်အပေါ် အားထားရသော ယာဉ်မောင်းသူအထောက်အကူပြုအက်ပ်များ ပိတ်သွားပါမည်"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"မည်သို့ဖြစ်စေ ပိတ်ရန်"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"ယာဉ်မောင်းသူ အထောက်အကူပြု အင်္ဂါရပ်များသည် သင့်ကားတည်နေရာကို အမြဲ ရယူပါသည်"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ဤဆက်တင်ကို ပြောင်း၍မရပါ။ ၎င်းကို ကားထုတ်လုပ်သူက ပိတ်ထားသည်။"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"မောင်းနှင်မှုကို ကူညီသော အင်္ဂါရပ်များ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"သင့်ကားတည်နေရာကို ရယူရန် ကားထုတ်လုပ်သူက အတည်ပြုထားသော အသင့်ပါပြီး အင်္ဂါရပ်များကို ခွင့်ပြုပါ။"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"လတ်တလော သုံးထားသည်များ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"လတ်တလော သုံးထားသည်များ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"အားလုံးကြည့်ရန်"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"လတ်တလောအက်ပ်များ မရှိပါ"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ယာဉ်မောင်းသူ အထောက်အကူ"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ယာဉ်မောင်းသူ အထောက်အကူ • သုံးခွင့်လိုအပ်သည်"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"မောင်းနှင်မှုကို ကူညီသော အင်္ဂါရပ်များ"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"ဤအသင့်ပါပြီး အင်္ဂါရပ်များသည် ကားမောင်းရာတွင် ကူညီရန် သင့်ကားတည်နေရာကို ရယူနိုင်သည်"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"မူဝါဒ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"အက်ပ်အဆင့် ခွင့်ပြုချက်များ"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"အက်ပ်ခွင့်ပြုချက် တစ်ခုချင်းစီအား စီမံရန်"</string>
@@ -432,8 +431,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"တည်နေရာကို သုံးရန်"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"တည်နေရာသုံးခွင့်"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"အက်ပ်များက သင့်ကားတည်နေရာကို ရယူခွင့် ရှိ၊ မရှိ ရွေးချယ်ပါ"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"သင့်ကားထုတ်လုပ်သူက ပံ့ပိုးထားသော ဆော့ဖ်ဝဲသည် ကားတည်နေရာကို ရယူနိုင်သေးသည်။"</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"‘ကိုယ်ရေးအချက်အလက်လုံခြုံမှုဆိုင်ရာ မူဝါဒ’ ကို ဖတ်ရှုခြင်းဖြင့် အက်ပ်တစ်ခုစီက သင်၏ ‘တည်နေရာဒေတာ’ ကို အသုံးပြုပုံအကြောင်း ပိုမိုလေ့လာပါ။"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"သင်၏ ကားထုတ်လုပ်သူက ကားတည်နေရာကို သုံးခွင့်ရှိနိုင်သေးသည်။ အသေးစိတ်အချက်များအတွက် ၎င်းတို့၏မူဝါဒများကို ဖတ်ရှုနိုင်ပါသည်။"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"ဤအသင့်ပါပြီး တူးလ်များသည် ယာဉ်မောင်းရာတွင် အကူအညီပေးရန် သင့်ကား၏တည်နေရာ သုံးခွင့်လိုအပ်သည်။\n\n၎င်း၏ ‘ကိုယ်ရေးအချက်အလက်လုံခြုံမှုဆိုင်ရာ မူဝါဒ’ ကို ဖတ်ရှုခြင်းဖြင့် အက်ပ်တစ်ခုစီက သင်၏ ‘တည်နေရာဒေတာ’ ကို မည်သို့အသုံးပြုပုံအကြောင်း ပိုမိုလေ့လာပါ။"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"မိုက်ခရိုဖုန်း"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"မိုက်ခရိုဖုန်း အသုံးပြုရန်"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"အက်ပ်အားလုံးကို မိုက်ခရိုဖုန်းသုံးခွင့်ပေးနိုင်သည်"</string>

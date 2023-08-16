@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Hvis du deaktiverer dette, fjernes adgangstilladelsen til lokation for alle apps, bortset fra de apps, der er nødvendige for at bruge førerassistance"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Hvis du deaktiverer dette, deaktiveres apps til førerassistance, som kræver lokationsoplysninger"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Deaktiver alligevel"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Funktioner til førerassistance har altid adgang til bilens lokation"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Denne indstilling kan ikke ændres og er blevet deaktiveret af bilproducenten."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funktioner til bilkørslen"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Tillad, at indbyggede funktioner, som er godkendte af producenten af din bil, kan tilgå bilens lokation."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Tilgået for nylig"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Tilgået for nylig"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Se alle"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ingen apps har haft adgang til lokationen for nylig"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Førerassistance"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Førerassistance • Adgang er påkrævet"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funktioner til bilkørslen"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Disse indbyggede funktioner kan tilgå bilens lokation for at hjælpe dig med bilkørslen"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Politik"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tilladelser på appniveau"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Administrer individuelle apptilladelser"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Brug lokation"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"Lokationsadgang"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"Vælg, om apps kan tilgå bilens lokation"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Software, der udbydes af producenten af din bil, kan muligvis stadig tilgå bilens lokation."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Få flere oplysninger om, hvordan en app anvender dine lokationsdata, ved at gennemgå dens privatlivspolitik."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Bilproducenten har muligvis stadig adgang til bilens lokation. Du kan gennemgå bilproducentens politikker for at få flere oplysninger."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Disse indbyggede funktioner kræver adgang til bilens lokation for at hjælpe dig med bilkørslen.\n\nFå flere oplysninger om, hvordan en app anvender dine lokationsdata, ved at gennemgå dens privatlivspolitik."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Brug mikrofonen"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Giv alle apps adgang til din mikrofon"</string>

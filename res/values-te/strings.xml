@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"మీరు దీన్ని ఆఫ్ చేస్తే, డ్రైవర్ సహాయం కోసం అవసరమైన యాప్‌లు మినహా అన్ని యాప్‌ల కోసం ఇది లొకేషన్ యాక్సెస్‌ను తీసివేస్తుంది"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"మీరు దీన్ని ఆఫ్ చేస్తే, లొకేషన్ సమాచారంపై ఆధారపడే డ్రైవర్ సహాయ యాప్‌లు డిజేబుల్ చేయబడతాయి"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ఏదేమైనా ఆఫ్ చేయండి"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"డ్రైవర్ సహాయ ఫీచర్‌లు ఎల్లప్పుడూ మీ కారు లొకేషన్‌కు యాక్సెస్‌ను కలిగి ఉంటాయి"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ఈ సెట్టింగ్‌ను మార్చడం సాధ్యం కాదు, మీ కారు తయారీదారుచే డిజేబుల్ చేయబడింది."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"మీరు డ్రైవ్ చేయడంలో సహాయపడే ఫీచర్‌లు"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"మీ కారు లొకేషన్‌ను యాక్సెస్ చేయడానికి, కారు తయారీదారుచే ఆమోదించబడిన బిల్ట్-ఇన్ ఫీచర్‌లను అనుమతించండి."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ఇటీవల యాక్సెస్ చేసినవి"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ఇటీవల యాక్సెస్ చేసినవి"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"అన్నింటినీ చూడండి"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ఇటీవలి యాప్‌లు ఏవీ లేవు"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • డ్రైవర్ సహాయం"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • డ్రైవర్ సహాయం • యాక్సెస్ అవసరం"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"మీరు డ్రైవ్ చేయడంలో సహాయపడే ఫీచర్‌లు"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"ఈ బిల్ట్-ఇన్ ఫీచర్‌లు డ్రైవింగ్ చేయడంలో సహాయం చేయడానికి మీ కారు లొకేషన్‌ను యాక్సెస్ చేయగలవు"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"పాలసీ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"యాప్‌-స్థాయి అనుమతులు"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"వ్యక్తిగత యాప్ అనుమతులను మేనేజ్ చేయండి"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"లొకేషన్ యాక్సెస్"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"యాప్‌లు మీ కారు లొకేషన్‌ను యాక్సెస్ చేయగలవో లేదో ఎంచుకోండి"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"మీ కారు తయారీదారుచే డెవలప్ చేయబడిన సాఫ్ట్‌వేర్ ఇప్పటికీ కారు లొకేషన్‌కు యాక్సెస్‌ను కలిగి ఉండవచ్చు."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"ప్రతి యాప్ దాని గోప్యతా పాలసీని రివ్యూ చేయడం ద్వారా మీ లొకేషన్ డేటాను ఎలా ఉపయోగిస్తుందనే దాని గురించి మరింత తెలుసుకోండి."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"మీ కారు తయారీదారు ఇప్పటికీ మీ కారు లొకేషన్‌కు యాక్సెస్ కలిగి ఉండవచ్చు. మరింత సమాచారం కోసం మీరు వారి పాలసీలను రివ్యూ చేయవచ్చు."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"ఈ బిల్ట్-ఇన్ ఫీచర్‌లకు డ్రైవింగ్ చేసేటప్పుడు సహాయం చేయడానికి మీ కారు తాలూకు లొకేషన్ యాక్సెస్ అవసరం.\n\nప్రతి యాప్ దాని గోప్యతా పాలసీని రివ్యూ చేయడం ద్వారా మీ లొకేషన్ డేటాను ఎలా ఉపయోగిస్తుందనే దాని గురించి మరింత తెలుసుకోండి."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"మైక్రోఫోన్"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"మైక్రోఫోన్‌ను ఉపయోగించండి"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"మీ మైక్రోఫోన్‌ను యాక్సెస్ చేయడానికి అన్ని యాప్‌లను అనుమతించండి"</string>
