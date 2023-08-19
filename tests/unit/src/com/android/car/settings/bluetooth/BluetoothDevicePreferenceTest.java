@@ -35,7 +35,6 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.MultiActionPreference;
-import com.android.settingslib.R;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 
@@ -125,10 +124,7 @@ public class BluetoothDevicePreferenceTest {
 
         mPreference.onAttached();
 
-        // We append device type to the summary when device is connected
-        String deviceType = mContext.getString(R.string.bluetooth_talkback_bluetooth);
-        String summaryWithDeviceType = summary + " · " + deviceType;
-        assertThat(mPreference.getSummary()).isEqualTo(summaryWithDeviceType);
+        assertThat(mPreference.getSummary()).isEqualTo(summary);
     }
 
     @Test

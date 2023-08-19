@@ -43,6 +43,7 @@ import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.SwitchPreference;
+import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 
 import com.android.car.settings.R;
@@ -123,6 +124,7 @@ public final class PairNewDevicePreferenceControllerUnitTest {
     }
 
     @Test
+    @UiThreadTest
     public void restrictedByDpm_availabilityIsAvailableForViewing_zoneRead() {
         EnterpriseTestUtils.mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
         mPreferenceController.setAvailabilityStatusForZone("read");
