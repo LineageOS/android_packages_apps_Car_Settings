@@ -52,7 +52,9 @@ public class WifiTile extends SettingsQCItem {
         if (isHiddenForZone()) {
             return null;
         }
-        boolean wifiEnabled = mWifiManager.isWifiEnabled();
+        int wifiState = mWifiManager.getWifiState();
+        boolean wifiEnabled = wifiState == WifiManager.WIFI_STATE_ENABLED
+                || wifiState == WifiManager.WIFI_STATE_ENABLING;
         Icon icon = Icon.createWithResource(getContext(), WifiQCUtils.getIcon(mWifiManager));
 
         String userRestriction = UserManager.DISALLOW_CONFIG_WIFI;
@@ -70,7 +72,8 @@ public class WifiTile extends SettingsQCItem {
                 .setIcon(icon)
                 .setChecked(wifiEnabled)
                 .setAction(getBroadcastIntent())
-                .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
+                .setEnabled(!WifiQCUtils.isWifiBusy(mWifiManager) && !hasUmRestrictions
+                        && !hasDpmRestrictions && isWritableForZone())
                 .setClickableWhileDisabled(hasDpmRestrictions | isReadOnlyForZone)
                 .setDisabledClickAction(disabledPendingIntent)
                 .setSubtitle(WifiQCUtils.getSubtitle(getContext(), mWifiManager))
