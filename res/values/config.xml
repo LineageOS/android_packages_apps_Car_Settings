@@ -172,4 +172,12 @@
     <string-array name="config_allowed_bluetooth_scanning_packages">
         <item>com.android.car.carlauncher</item>
     </string-array>
+
+    <!--
+        List of packages whose android.permission.BIND_NOTIFICATION_LISTENER_SERVICE permission
+         shouldn't be changed.
+     -->
+    <string-array name="config_fixed_notification_access_packages">
+        <item>com.android.car.notification</item>
+    </string-array>
 </resources>
