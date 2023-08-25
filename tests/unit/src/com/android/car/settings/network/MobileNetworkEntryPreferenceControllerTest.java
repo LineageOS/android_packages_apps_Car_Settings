@@ -30,6 +30,7 @@ import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.withSettings;
@@ -83,7 +84,6 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
     private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private LifecycleOwner mLifecycleOwner;
-    private CarUiTwoActionSwitchPreference mPreference;
     private MobileNetworkEntryPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
     private MockitoSession mSession;
@@ -102,6 +102,8 @@ public class MobileNetworkEntryPreferenceControllerTest {
     private NetworkCapabilities mCapabilities;
     @Mock
     private ContentResolver mMockContentResolver;
+    @Mock
+    private CarUiTwoActionSwitchPreference mMockPreference;
 
     @Before
     @UiThreadTest
@@ -140,10 +142,9 @@ public class MobileNetworkEntryPreferenceControllerTest {
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-        mPreference = new CarUiTwoActionSwitchPreference(mContext);
         mPreferenceController = new MobileNetworkEntryPreferenceController(mContext,
                 "key", mFragmentController, mCarUxRestrictions);
-        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
+        PreferenceControllerTestUtil.assignPreference(mPreferenceController, mMockPreference);
     }
 
     @After
@@ -338,7 +339,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
     public void onCreate_noSubscriptions_disabled() {
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreference.isEnabled()).isFalse();
+        verify(mMockPreference).setEnabled(false);
     }
 
     @Test
@@ -350,7 +351,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreference.isEnabled()).isTrue();
+        verify(mMockPreference, times(2)).setEnabled(true);
     }
 
     @Test
@@ -362,7 +363,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreference.getSummary()).isEqualTo(TEST_NETWORK_NAME);
+        verify(mMockPreference).setSummary(TEST_NETWORK_NAME);
     }
 
     @Test
@@ -375,8 +376,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreference.getSummary()).isEqualTo(
-                mContext.getString(R.string.mobile_network_state_off));
+        verify(mMockPreference).setSummary(mContext.getString(R.string.mobile_network_state_off));
     }
 
     @Test
@@ -390,7 +390,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreference.isEnabled()).isTrue();
+        verify(mMockPreference, times(2)).setEnabled(true);
     }
 
     @Test
@@ -404,7 +404,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
-        assertThat(mPreference.getSummary()).isEqualTo(StringUtil.getIcuPluralsString(mContext, 2,
+        verify(mMockPreference).setSummary(StringUtil.getIcuPluralsString(mContext, 2,
                 R.string.mobile_network_summary_count));
     }
 
@@ -412,7 +412,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
     @UiThreadTest
     public void performClick_noSim_noFragmentStarted() {
         mPreferenceController.onCreate(mLifecycleOwner);
-        mPreference.performClick();
+        mPreferenceController.handlePreferenceClicked(mMockPreference);
 
         verify(mFragmentController, never()).launchFragment(
                 any(Fragment.class));
@@ -428,7 +428,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
         mPreferenceController.onCreate(mLifecycleOwner);
-        mPreference.performClick();
+        mPreferenceController.handlePreferenceClicked(mMockPreference);
 
         ArgumentCaptor<MobileNetworkFragment> captor = ArgumentCaptor.forClass(
                 MobileNetworkFragment.class);
@@ -449,7 +449,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
 
         mPreferenceController.onCreate(mLifecycleOwner);
-        mPreference.performClick();
+        mPreferenceController.handlePreferenceClicked(mMockPreference);
 
         verify(mFragmentController).launchFragment(
                 any(MobileNetworkListFragment.class));
@@ -464,9 +464,10 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         when(mTelephonyManager.isDataEnabled()).thenReturn(false);
         mPreferenceController.onCreate(mLifecycleOwner);
-        assertThat(mPreference.isSecondaryActionChecked()).isFalse();
 
-        mPreference.performSecondaryActionClick();
+        verify(mMockPreference).setOnSecondaryActionClickListener(any());
+        verify(mMockPreference).setSecondaryActionChecked(false);
+        mPreferenceController.onSecondaryActionClick(true);
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
         verify(mTelephonyManager).setDataEnabled(true);
@@ -481,9 +482,10 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         when(mTelephonyManager.isDataEnabled()).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
-        assertThat(mPreference.isSecondaryActionChecked()).isTrue();
 
-        mPreference.performSecondaryActionClick();
+        verify(mMockPreference).setOnSecondaryActionClickListener(any());
+        verify(mMockPreference).setSecondaryActionChecked(true);
+        mPreferenceController.onSecondaryActionClick(false);
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
         verify(mTelephonyManager).setDataEnabled(false);
