@@ -30,6 +30,7 @@ import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
 import androidx.annotation.CallSuper;
+import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
@@ -78,9 +79,7 @@ public class MobileNetworkEntryPreferenceController extends
     @Override
     protected void onCreateInternal() {
         super.onCreateInternal();
-        getPreference().setOnSecondaryActionClickListener(isChecked -> {
-            mTelephonyManager.setDataEnabled(isChecked);
-        });
+        getPreference().setOnSecondaryActionClickListener(this::onSecondaryActionClick);
     }
 
     @Override
@@ -169,5 +168,10 @@ public class MobileNetworkEntryPreferenceController extends
             uri = Settings.Global.getUriFor(Settings.Global.MOBILE_DATA + subId);
         }
         return uri;
+    }
+
+    @VisibleForTesting
+    void onSecondaryActionClick(boolean isChecked) {
+        mTelephonyManager.setDataEnabled(isChecked);
     }
 }
