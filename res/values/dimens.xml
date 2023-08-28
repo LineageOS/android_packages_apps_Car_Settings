@@ -82,6 +82,8 @@
     <!-- Wifi -->
     <dimen name="hotspot_qr_code_size">256dp</dimen>
     <dimen name="qc_code_preference_margin">@*android:dimen/car_padding_1</dimen>
+    <!-- The white area around the actual barcode of the QR code -->
+    <dimen name="qr_code_margin">1.5dp</dimen>
 
     <!-- Edit Username -->
     <dimen name="edit_username_padding_start">@*android:dimen/car_margin</dimen>

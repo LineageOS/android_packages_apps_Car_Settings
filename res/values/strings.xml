@@ -338,9 +338,11 @@
     <!-- Label that is shown as a dialog summary informing users they must pick at LEAST one band for their hotspot [CHAR LIMIT=25]-->
     <string name="wifi_ap_band_select_one">Choose at least one band for Wi\u2011Fi hotspot:</string>
     <!-- Tethering controls, item title to go into the tethering settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
-    <string name="tether_settings_title_all">Hotspot &amp; tethering</string>
+    <string name="tether_settings_title_all">Wi\u2011Fi hotspot</string>
     <!-- Settings title to go into the hotspot settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
     <string name="hotspot_settings_title">Hotspot</string>
+    <!-- The title for the switch to turn on and off the hotspot [CHAR LIMIT=45] -->
+    <string name="wifi_hotspot_switch_title">Use Wi\u2011Fi hotspot</string>
     <!-- Subtitle for when Wi-Fi hotspot is toggled off [CHAR LIMIT=45] -->
     <string name="wifi_hotspot_state_off">Off</string>
     <!-- Title for the toggle to turn off hotspot automatically [CHAR LIMIT=50]-->
@@ -349,8 +351,10 @@
     <string name="wifi_hotspot_auto_off_summary">Wi\u2011Fi hotspot will turn off if no devices are connected</string>
     <!-- Content description for the hotspot state switch. [CHAR LIMIT=NONE] -->
     <string name="wifi_hotspot_state_switch_content_description" translatable="false">Hotspot toggle switch</string>
-    <!-- Text for the hotspot QR code. -->
-    <string name="wifi_hotspot_qr_code_text">Scan this QR code to join</string>
+    <!-- Text for the hotspot QR code related information. [CHAR LIMIT=50] -->
+    <string name="wifi_hotspot_qr_code_text">Scan this QR code to join \u0022%s\u0022</string>
+    <!-- Text for the hotspot QR code related information. [CHAR LIMIT=50] -->
+    <string name="wifi_hotspot_qr_code_password_text">Hotspot password: %s</string>
     <!-- This string asks the user whether or not to allow an app to enable WiFi. [CHAR LIMIT=NONE] -->
     <string name="wifi_ask_enable"><xliff:g id="requester" example="FancyApp">%s</xliff:g> wants to turn on Wi-Fi</string>
     <!-- This string asks the user whether or not to allow an app to disable WiFi. [CHAR LIMIT=NONE] -->

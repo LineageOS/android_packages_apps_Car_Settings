@@ -21,7 +21,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.wifi.SoftApConfiguration;
 import android.util.Log;
-import android.widget.ImageView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
@@ -76,12 +75,12 @@ public class WifiTetherQrCodePreferenceController extends
 
     @Override
     public void onWifiTetheringAvailable() {
-        updateQrCode();
+        refreshUi();
     }
 
     @Override
     public void onWifiTetheringUnavailable() {
-        updateQrCode();
+        refreshUi();
     }
 
     @Override
@@ -102,8 +101,15 @@ public class WifiTetherQrCodePreferenceController extends
         return CONDITIONALLY_UNAVAILABLE;
     }
 
-    private void updateQrCode() {
+    @Override
+    protected void updateState(WifiTetherQrCodePreference preference) {
+        super.updateState(preference);
+        updateQrCode(preference);
+    }
+
+    private void updateQrCode(WifiTetherQrCodePreference preference) {
         if (mWifiTetheringHandler.isWifiTetheringEnabled()) {
+            Bitmap bmp = null;
             String name = getCarSoftApConfig().getSsid();
             String password = getCarSoftApConfig().getPassphrase();
             int securityType = getCarSoftApConfig().getSecurityType();
@@ -114,20 +120,15 @@ public class WifiTetherQrCodePreferenceController extends
                 content = String.format(QR_CODE_FORMAT, name, password);
             }
             try {
-                int size = Math.round(getContext().getResources().getDimension(
-                        R.dimen.hotspot_qr_code_size));
-                Bitmap bmp = QrCodeGenerator.encodeQrCode(content, size);
-
-                ImageView qrCode = getPreference().getQRCodeView();
-                if (qrCode != null) {
-                    qrCode.setImageBitmap(bmp);
-                }
+                int size = getContext().getResources().getDimensionPixelSize(
+                        R.dimen.hotspot_qr_code_size);
+                int margin = getContext().getResources().getDimensionPixelSize(
+                        R.dimen.qr_code_margin);
+                bmp = QrCodeGenerator.encodeQrCode(content, size, margin);
             } catch (Exception e) {
                 Log.w(TAG, "Exception found: " + e);
             }
+            preference.setPreferenceInfo(bmp, name, password);
         }
-
-        refreshUi();
     }
-
 }
