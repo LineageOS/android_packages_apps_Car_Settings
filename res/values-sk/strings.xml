@@ -662,7 +662,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Nakreslite bezpečnostný vzor"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Na záver zdvihnite prst z obrazovky"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Vzor bol zaznamenaný"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Znovu nakreslite pre potvrdenie"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Znova nakreslite vzor pre potvrdenie"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Musíte spojiť aspoň 4 body. Skúste to znova."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nesprávny vzor"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ako kresliť bezpečnostný vzor obrazovky"</string>
@@ -755,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Pridať profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Odstrániť tento profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Pridanie profilu"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Tento profil je aktuálne prihlásený ako vodič. Skúste to znova, keď sa profil nebude používať ako vodič."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Jas displeja"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Ak chcete vidieť svoje zariadenia, zapnite Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ak chcete spárovať zariadenie, otvorte nastavenia Bluetooth"</string>
