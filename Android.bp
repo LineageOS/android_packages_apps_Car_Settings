@@ -208,3 +208,9 @@ android_library {
         },
     },
 }
+
+filegroup {
+    name: "CarSettings_proguard_flags",
+    srcs: ["proguard.flags"],
+}
+
