@@ -238,6 +238,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="progress_bar_preference_padding_top"/>
       <item type="dimen" name="progress_bar_preference_progressbar_margin_top"/>
       <item type="dimen" name="qc_code_preference_margin"/>
+      <item type="dimen" name="qr_code_margin"/>
       <item type="dimen" name="rounded_corner_radius"/>
       <item type="dimen" name="secondary_icon_size"/>
       <item type="dimen" name="suggestions_action_bar_height"/>
@@ -454,6 +455,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="hint_text"/>
       <item type="id" name="hotspot_qr_code"/>
       <item type="id" name="hotspot_qr_code_instruction"/>
+      <item type="id" name="hotspot_qr_code_password"/>
       <item type="id" name="icon_frame"/>
       <item type="id" name="key0"/>
       <item type="id" name="key1"/>
@@ -1508,11 +1510,13 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_hotspot_name_summary_connecting"/>
       <item type="string" name="wifi_hotspot_name_title"/>
       <item type="string" name="wifi_hotspot_password_title"/>
+      <item type="string" name="wifi_hotspot_qr_code_password_text"/>
       <item type="string" name="wifi_hotspot_qr_code_text"/>
       <item type="string" name="wifi_hotspot_security_none"/>
       <item type="string" name="wifi_hotspot_security_title"/>
       <item type="string" name="wifi_hotspot_state_off"/>
       <item type="string" name="wifi_hotspot_state_switch_content_description"/>
+      <item type="string" name="wifi_hotspot_switch_title"/>
       <item type="string" name="wifi_hotspot_wpa2_personal"/>
       <item type="string" name="wifi_hotspot_wpa3_sae"/>
       <item type="string" name="wifi_ip_address"/>
