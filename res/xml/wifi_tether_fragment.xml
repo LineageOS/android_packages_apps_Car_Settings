@@ -28,6 +28,7 @@
         settings:searchable="false"/>
     <com.android.car.settings.wifi.preferences.WifiTetherQrCodePreference
         android:key="@string/pk_wifi_tether_qr_code"
+        android:selectable="false"
         settings:controller="com.android.car.settings.wifi.WifiTetherQrCodePreferenceController"
         settings:showChevron="false"/>
     <com.android.car.settings.common.ValidatedEditTextPreference
