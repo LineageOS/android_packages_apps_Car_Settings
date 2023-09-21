@@ -97,8 +97,6 @@ public class WifiTetherStateSwitchPreferenceController extends
     }
 
     private void updateSwitchPreference(boolean switchOn) {
-        getPreference().setTitle(switchOn ? R.string.car_ui_preference_switch_on
-                : R.string.car_ui_preference_switch_off);
         getPreference().setChecked(switchOn);
     }
 }

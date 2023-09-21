@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"আপনি এটি বন্ধ করলে, \'ড্রাইভার অ্যাসিস্ট্যান্স\'-এর জন্য প্রয়োজনীয় অ্যাপ বাদে বাকি সব অ্যাপের ক্ষেত্রে লোকেশন অ্যাক্সেস সংক্রান্ত অনুমতি এটি সরিয়ে দেবে"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"আপনি এটি বন্ধ করলে, লোকেশন সংক্রান্ত তথ্যের উপরে নির্ভর করে কাজ করা ড্রাইভার অ্যাসিস্ট্যান্স অ্যাপ বন্ধ হয়ে যাবে"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"যাইহোক বন্ধ করুন"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"\'ড্রাইভার অ্যাসিস্ট্যান্স\' ফিচার সব সময় আপনার গাড়ির লোকেশন অ্যাক্সেস করতে পারে"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"এই সেটিং পরিবর্তন করা যাবে না এবং আপনার গাড়ি প্রস্তুতকারীর মাধ্যমে বন্ধ করা হয়েছে।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"আপনার গাড়ি চালানোর সহায়ক ফিচার"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"আপনার গাড়ির লোকেশন অ্যাক্সেস করতে আপনার গাড়ি উৎপাদনকারী অনুমোদিত বিল্ট-ইন ফিচারে অনুমতি দিন।"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"সব দেখুন"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"কোনও সাম্প্রতিক অ্যাপ নেই"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ড্রাইভার অ্যাসিস্ট্যান্স"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ড্রাইভার অ্যাসিস্ট্যান্স • অ্যাক্সেস দিতে হবে"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"আপনার গাড়ি চালানোর সহায়ক ফিচার"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"গাড়ি চালানোয় সাহায্য করতে এই বিল্ট-ইন ফিচার আপনার গাড়ির লোকেশন অ্যাক্সেস করতে পারবে"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"নীতি"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"অ্যাপ-লেবেল অনুমতি"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"আলাদা আলাদা অ্যাপকে দেওয়া অনুমতি ম্যানেজ করুন"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"লোকেশন ব্যবহার করুন"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"লোকেশনের অ্যাক্সেস"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"কোনও অ্যাপ আপনার গাড়ির লোকেশন অ্যাক্সেস করতে পারবে কিনা তা বেছে নিন"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"আপনার গাড়ি উৎপাদনকারী সংস্থা পরিচালিত সফ্টওয়্যার এখনও আপনার গাড়ির লোকেশন অ্যাক্সেস করতে পারে।"</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"প্রতিটি অ্যাপ কীভাবে আপনার লোকেশন ডেটা ব্যবহার করে, গোপনীয়তা নীতি পর্যালোচনা করে সেই সম্পর্কে আরও জানুন।"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"আপনার গাড়ি প্রস্তুতকারীর কাছে এখনও হয়ত গাড়ির লোকেশনের অ্যাক্সেস আছে। আপনি আরও তথ্যের জন্য তাদের নীতি পর্যালোচনা করতে পারবেন।"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"গাড়ি চালানোর ক্ষেত্রে আপনাকে সাহায্য করার জন্য এইসব বিল্ট-ইন ফিচারের আপনার গাড়ির লোকেশনের অ্যাক্সেস প্রয়োজন।\n\nপ্রতিটি অ্যাপ কীভাবে এর গোপনীয়তা নীতি পর্যালোচনা করার মাধ্যমে আপনার লোকেশন ডেটা ব্যবহার করে সেই সম্পর্কে আরও জানুন।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্রোফোন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্রোফোন ব্যবহার করুন"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"সব অ্যাপকে আপনার মাইক্রোফোন ব্যবহার করার অনুমতি দিন"</string>

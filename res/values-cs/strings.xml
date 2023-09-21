@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Pokud tuto možnost vypnete, o přístup k poloze přijdou všechny aplikace (kromě aplikací nezbytných k asistenci pro řidiče)"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Pokud tuto možnost vypnete, budou deaktivovány funkce asistence pro řidiče, které vyžadují údaje o poloze."</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Přesto vypnout"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Funkce asistence pro řidiče mají vždy přístup k poloze auta"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Toto nastavení nelze změnit, deaktivoval jej výrobce auta."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funkce, které vám usnadňují řízení"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Povolte vestavěným funkcím (schváleným výrobcem auta) přístup k poloze auta."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Nedávno používáno"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedávno používáno"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Zobrazit vše"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Žádné nedávné aplikace"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Asistence pro řidiče"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Asistence pro řidiče • Vyžaduje přístup"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funkce, které vám usnadňují řízení"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Tyto vestavěné funkce mají přístup k poloze auta, aby vám mohly pomáhat při řízení"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Zásady"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Oprávnění na úrovni aplikace"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Správa oprávnění jednotlivých aplikací"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Používat polohu"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"Přístup k poloze"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"Určete, zda budou mít aplikace přístup k poloze auta"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Software od výrobce auta může mít nadále přístup k poloze auta."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Další informace o využití údajů o poloze jednotlivými aplikacemi najdete v jejich zásadách ochrany soukromí."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Výrobce auta může mít nadále přístup k poloze auta. Další informace najdete v jeho zásadách."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Tyto vestavěné funkce vyžadují přístup k poloze auta, aby vám mohly poskytovat asistenci během jízdy.\n\nDalší informace o využití údajů o poloze jednotlivými aplikacemi najdete v jejich zásadách ochrany soukromí."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Použít mikrofon"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Povolit všem aplikacím přístup k mikrofonu"</string>

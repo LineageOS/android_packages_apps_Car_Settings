@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desactivas esta opción, quitarase o permiso de localización en todas as aplicacións excepto nas que sexa necesario por mor da asistencia para a condución"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se desactivas esta opción, deshabilitaranse as aplicacións de asistencia para a condución que utilizan a información de localización"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desactivar de todos os xeitos"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"As funcións de asistencia para a condución sempre teñen acceso á localización do teu coche"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"O fabricante do coche desactivou esta opción de configuración, que non pode cambiarse."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcións que che axudan a conducir"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Dálles permiso ás funcións integradas (autorizadas polo fabricante do teu coche) para que accedan á localización do coche."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Accesos recentes"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesos recentes"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todo"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ningunha aplicación accedeu recentemente"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia para a condución"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia para a condución • Necesita acceso"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funcións que che axudan a conducir"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Estas funcións integradas poden acceder á localización do teu coche para darche asistencia conducindo"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Política"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos para as aplicacións"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Xestiona os permisos de aplicacións individualmente"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Utilizar localización"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"Acceso á localización"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"Escolle se queres que as aplicacións poidan acceder á localización do teu coche"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"É posible que o software do fabricante do coche siga tendo acceso á localización do teu coche."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"Revisa a política de privacidade de cada aplicación para obter máis información sobre como utiliza os teus datos de localización."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Pode que o fabricante do coche siga tendo acceso á localización do vehículo. Se queres obter máis información, podes consultar as súas políticas."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Estas funcións integradas necesitan acceder á localización do coche para poder prestarche asistencia coa condución.\n\nSe queres obter máis información sobre como utiliza os teus datos de localización cada aplicación, consulta a súa política de privacidade."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Micrófono"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar micrófono"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as aplicacións accedan ao micrófono"</string>

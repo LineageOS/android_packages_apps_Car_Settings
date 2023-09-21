@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ប្រសិនបើបិទ​ទីតាំងនេះ វានឹងដកសិទ្ធិចូលប្រើទីតាំង​សម្រាប់កម្មវិធីទាំងអស់ លើកលែងតែ​កម្មវិធីដែលត្រូវការ​មុខងារជំនួយអ្នកបើកបរ"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"មិនអីទេ បិទចុះ"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"មុខងារជំនួយអ្នកបើកបរមានសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នកជានិច្ច"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"មិនអាចផ្លាស់ប្ដូរការកំណត់នេះបានទេ និងត្រូវបានបិទដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នក។"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"មុខងារដែលជួយអ្នកក្នុងការបើកបរ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"អនុញ្ញាតឱ្យមុខងារដែលមានភ្ជាប់មកជាមួយស្រាប់ ដែលត្រូវបានអនុញ្ញាតដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នក ចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក។"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"មើលទាំងអស់"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"គ្មាន​កម្មវិធី​ថ្មីៗ"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ជំនួយអ្នកបើកបរ"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ជំនួយអ្នកបើកបរ • ត្រូវការសិទ្ធិចូលប្រើប្រាស់"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"មុខងារដែលជួយអ្នកក្នុងការបើកបរ"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"មុខងារដែលមានភ្ជាប់មកជាមួយស្រាប់ទាំងនេះអាចមានសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក ដើម្បីជួយក្នុងការបើកបរ"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"គោលការណ៍"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ការ​អនុញ្ញាត​កម្រិត​កម្មវិធី"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"គ្រប់គ្រងការអនុញ្ញាតកម្មវិធីនីមួយៗ"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"ការចូលប្រើប្រាស់ទីតាំង"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"ជ្រើសរើសថាតើកម្មវិធីណាខ្លះអាចមានសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"កម្មវិធីដែលដំណើរការដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នកអាចនៅតែមានសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក។"</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"ស្វែងយល់បន្ថែមអំពីរបៀបដែលកម្មវិធីនីមួយៗប្រើទិន្នន័យទីតាំងរបស់អ្នកដោយពិនិត្យមើលលើគោលការណ៍ឯកជនភាពរបស់កម្មវិធីនោះ។"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នកអាចនឹងនៅតែមានសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក។ អ្នកអាចមើលគោលការណ៍របស់ពួកគេ ដើម្បីព័ត៌មានបន្ថែម។"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"មុខងារភ្ជាប់មកជាមួយស្រាប់ទាំងនេះត្រូវការសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក ដើម្បីផ្ដល់ជំនួយដល់ការបើកបរ។\n\nស្វែងយល់បន្ថែមអំពីរបៀបដែលកម្មវិធីនីមួយៗប្រើប្រាស់ទិន្នន័យ​ទីតាំងរបស់អ្នកដោយពិនិត្យមើលគោលការណ៍ឯកជនភាពរបស់កម្មវិធីនោះ។"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​មីក្រូហ្វូន​របស់អ្នក"</string>

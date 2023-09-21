@@ -414,16 +414,15 @@
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Si vous désactivez ce paramètre, vous retirerez l\'accès de toutes les applications à votre position, à l\'exception de celles requises pour l\'assistance au conducteur"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Si vous désactivez cette option, les applications d\'assistance au conducteur qui dépendent des données de localisation seront désactivées"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Désactiver quand même"</string>
-    <string name="adas_location_toggle_popup_summary" msgid="1039486633002074646">"Les fonctionnalités d\'assistance au conducteur ont toujours accès à la localisation de votre voiture"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Ce paramètre ne peut pas être modifié et a été désactivé par le constructeur automobile."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Fonctionnalités vous aidant à conduire"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Autorisez les fonctionnalités intégrées, approuvées par le fabricant de votre voiture, à accéder à la localisation de votre voiture."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Accès récents"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accès récents"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tout afficher"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Aucune application récente"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Assistance au conducteur"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Assistance au conducteur • Requiert l\'accès à la position"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"Fonctionnalités vous aidant à conduire"</string>
-    <string name="location_adas_apps_list_summary" msgid="2565295911865582355">"Ces fonctionnalités intégrées peuvent accéder à la localisation de votre voiture pour vous aider à conduire."</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Politique"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations à l\'échelle des applis"</string>
     <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Gérer les autorisations des applications individuelles"</string>
@@ -431,8 +430,8 @@
     <string name="location_use_location_title" msgid="117735895374606680">"Utiliser ma position"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"Accès à la localisation"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"Choisissez si les applications peuvent accéder à la localisation de votre voiture"</string>
-    <string name="location_access_disclaimer_summary" msgid="2002359472274646540">"Les logiciels fournis par le fabricant de votre voiture peuvent toujours accéder à la localisation de votre voiture."</string>
-    <string name="location_adas_app_info_summary" msgid="8081478531253561593">"En savoir plus sur la manière dont chaque application utilise vos données de localisation en consultant sa politique de confidentialité."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Il se peut que le constructeur automobile ait encore accès à la position de votre voiture. Vous pouvez consulter ses politiques pour en savoir plus."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Ces fonctionnalités intégrées nécessitent l\'accès à la position de votre voiture pour faciliter la conduite.\n\nPour en savoir plus sur la façon dont chaque application utilise vos données de localisation, consultez sa politique de confidentialité."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microphone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Utiliser le microphone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Autoriser toutes les applications à accéder à votre microphone"</string>
