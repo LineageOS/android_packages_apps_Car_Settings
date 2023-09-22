@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"請為 Wi-Fi 熱點至少選擇一個頻段："</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"熱點和網絡共享"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi 熱點"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"熱點"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"使用 Wi-Fi 熱點"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"關閉"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自動關閉熱點"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"當沒有連接任何裝置時，Wi‑Fi 熱點就會關閉"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"掃瞄此 QR 碼即可加入"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"掃瞄此 QR 碼即可加入「%s」"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"熱點密碼：%s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求關閉 Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"錯誤"</string>

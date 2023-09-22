@@ -142,7 +142,7 @@
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Utilitza dades mòbils quan la Wi‑Fi no tingui accés a Internet. És possible que s\'apliquin càrrecs per ús de dades."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Cerca xarxes Wi‑Fi i connecta-t\'hi"</string>
     <string name="learn_more" msgid="8214605928933358604">"Més informació"</string>
-    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nom punt d\'accés Wi‑Fi"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nom punt d\'accés"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"S\'està activant <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Altres dispositius es poden connectar a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Contrasenya punt d\'accés Wi‑Fi"</string>
@@ -160,12 +160,18 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Tria almenys una banda per al punt d\'accés Wi-Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Punt d\'accés Wi-Fi i compartició de xarxa"</string>
+    <!-- no translation found for tether_settings_title_all (6076625733772210734) -->
+    <skip />
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Punt d\'accés Wi‑Fi"</string>
+    <!-- no translation found for wifi_hotspot_switch_title (5011183846278097937) -->
+    <skip />
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desactivat"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactiva el punt d\'accés Wi‑Fi automàticament"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"El punt d\'accés Wi‑Fi es desactivarà si no hi ha cap dispositiu connectat"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Escaneja aquest codi QR per unir-t\'hi"</string>
+    <!-- no translation found for wifi_hotspot_qr_code_text (6074599244483100567) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_qr_code_password_text (400288180113940870) -->
+    <skip />
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> vol activar la Wi‑Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> vol desactivar la Wi‑Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>

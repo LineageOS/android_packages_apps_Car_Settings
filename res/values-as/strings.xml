@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"২.৪ গিগাহাৰ্টজ"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"৫.০ গিগাহাৰ্টজ"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ৱাই-ফাই হটস্পটৰ বাবে কমেও এটা বেণ্ড বাছনি কৰক:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"হ’টস্পট আৰু টেডাৰিং"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"ৱাই-ফাই হটস্পট"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"হটস্পট"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ৱাই-ফাই হটস্পট ব্যৱহাৰ কৰক"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"অফ আছে"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"স্বয়ংক্ৰিয়ভাৱে হটস্পট অফ কৰক"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"যদি কোনো ডিভাইচ সংযোগ হৈ নাথাকে, তেন্তে ৱাই-ফাই হটস্পট অফ হ’ব"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"যোগদান কৰিবলৈ এই কিউআৰ ক’ডটো স্কেন কৰক"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\"ৰ সৈতে সংযোগ কৰিবলৈ এই কিউআৰ ক’ডটো স্কেন কৰক"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"হটস্পটৰ পাছৱৰ্ড: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>এ ৱাই-ফাই অন কৰিব বিচাৰে"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> এ ৱাই-ফাই অফ কৰিব বিচাৰিছে"</string>
     <string name="wifi_error" msgid="3105105447117289410">"আসোঁৱাহ"</string>

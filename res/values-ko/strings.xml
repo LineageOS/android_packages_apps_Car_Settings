@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi 핫스팟 대역 한 개 이상 선택"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"핫스팟 및 테더링"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi 핫스팟"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"핫스팟"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi‑Fi 핫스팟 사용"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"사용 안함"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"자동으로 핫스팟 사용 중지"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"연결된 기기가 없으면 Wi‑Fi 핫스팟이 사용 중지됩니다."</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"참가하려면 이 QR 코드를 스캔하세요."</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\'%s\'에 연결하려면 이 QR 코드를 스캔하세요."</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"핫스팟 비밀번호: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>에서 Wi-Fi를 사용 설정하려고 합니다."</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>에서 Wi-Fi를 사용 중지하려고 합니다."</string>
     <string name="wifi_error" msgid="3105105447117289410">"오류"</string>
