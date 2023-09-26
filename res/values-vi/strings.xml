@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Chọn 1 băng tần cho điểm phát sóng Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Điểm phát sóng và chia sẻ Internet"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Điểm phát sóng Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Điểm phát sóng"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Sử dụng điểm phát sóng Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Tắt"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Tự động tắt điểm phát sóng"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Điểm phát sóng Wi-Fi sẽ tắt nếu không có thiết bị nào kết nối"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Quét mã QR này để truy cập"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Quét mã QR để kết nối \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Mật khẩu điểm phát sóng: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> muốn bật Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> muốn tắt Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Lỗi"</string>
@@ -882,7 +884,7 @@
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Tuỳ chọn"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Cài đặt"</string>
     <string name="camera_settings_title" msgid="2837785830355288903">"Máy ảnh"</string>
-    <string name="camera_toggle_title" msgid="1990732328673068456">"Sử dụng máy ảnh"</string>
+    <string name="camera_toggle_title" msgid="1990732328673068456">"Sử dụng camera"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Cho phép tất cả ứng dụng truy cập vào dữ liệu máy ảnh"</string>
     <string name="camera_manage_permissions" msgid="9005596413781984368">"Quản lý quyền truy cập vào dữ liệu máy ảnh"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Mới truy cập gần đây"</string>

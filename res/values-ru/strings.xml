@@ -160,12 +160,18 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Диапазон частот для точек доступа Wi-Fi."</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступа и режим модема"</string>
+    <!-- no translation found for tether_settings_title_all (6076625733772210734) -->
+    <skip />
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка доступа"</string>
+    <!-- no translation found for wifi_hotspot_switch_title (5011183846278097937) -->
+    <skip />
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Отключено"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматически выключать точку доступа"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Выключать точку доступа Wi‑Fi, если к ней не подключено ни одного устройства"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Чтобы подключиться, отсканируйте QR-код"</string>
+    <!-- no translation found for wifi_hotspot_qr_code_text (6074599244483100567) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_qr_code_password_text (400288180113940870) -->
+    <skip />
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> запрашивает включение Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> запрашивает отключение Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Ошибка"</string>

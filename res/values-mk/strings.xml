@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Избери барем еден појас:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка на пристап и врзување"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Точка на пристап за Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка на пристап"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Користи „Точка на пристап за Wi-Fi“"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Исклучен"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматско исклучување на точката на пристап"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Точката на пристап преку Wi‑Fi ќе се исклучи ако нема поврзани уреди"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Скенирајте го QR-кодов за да се придружите"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Скенирајте го QR-кодов за да се придружите на „%s“"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Лозинка на точката за пристап: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> сака да вклучи Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> сака да исклучи Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Грешка"</string>
