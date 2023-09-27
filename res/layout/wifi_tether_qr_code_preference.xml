@@ -42,6 +42,7 @@
         android:antialias="true"
         android:layout_marginTop="@dimen/qc_code_preference_margin"
         android:layout_marginBottom="@dimen/qc_code_preference_margin"
+        app:cardElevation="@dimen/card_view_elevation"
         app:cardCornerRadius="@dimen/rounded_corner_radius">
         <ImageView
             android:id="@+id/hotspot_qr_code"
