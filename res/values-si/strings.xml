@@ -160,18 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi හොට්ස්පොට් සඳහා අවම වශයෙන් එක් කලාපයක් තෝරන්න:"</string>
-    <!-- no translation found for tether_settings_title_all (6076625733772210734) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi-Fi හොට්ස්පොට්"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"හොට්ස්පොට්"</string>
-    <!-- no translation found for wifi_hotspot_switch_title (5011183846278097937) -->
-    <skip />
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi-Fi හොට්ස්පොට් භාවිත කරන්න"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ක්‍රියාවිරහිතයි"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"හොට්ස්පොට් ස්වයංක්‍රීයව ක්‍රියාවිරහිත කරන්න"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"උපාග සම්බන්ධ කර නැතිනම් Wi‑Fi හොට්ස්පොට් ක්‍රියාවිරහිත වනු ඇත"</string>
-    <!-- no translation found for wifi_hotspot_qr_code_text (6074599244483100567) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_qr_code_password_text (400288180113940870) -->
-    <skip />
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" වෙත එකතු වීමට මෙම QR කේතය ස්කෑන් කරන්න"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"හොට්ස්පොට් මුරපදය: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> හට Wi-Fi සක්‍රීය කිරීමට අවශ්‍යයි"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> හට Wi-Fi අක්‍රිය කිරීමට අවශ්‍ය ය"</string>
     <string name="wifi_error" msgid="3105105447117289410">"දෝෂය"</string>
