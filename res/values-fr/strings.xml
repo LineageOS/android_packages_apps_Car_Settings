@@ -160,18 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Sélectionnez au moins une bande pour le point d\'accès Wi-Fi :"</string>
-    <!-- no translation found for tether_settings_title_all (6076625733772210734) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Point d\'accès Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Point d\'accès"</string>
-    <!-- no translation found for wifi_hotspot_switch_title (5011183846278097937) -->
-    <skip />
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Utiliser le point d\'accès Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Désactivé"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Désactiver le point d\'accès automatiquement"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Le point d\'accès Wi-Fi se désactive si aucun appareil n\'est connecté"</string>
-    <!-- no translation found for wifi_hotspot_qr_code_text (6074599244483100567) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_qr_code_password_text (400288180113940870) -->
-    <skip />
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Scannez ce code QR pour rejoindre \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Mot de passe du point d\'accès : %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> requiert l\'activation du Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> requiert la désactivation du Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erreur"</string>
