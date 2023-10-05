@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Alkalmazkodó fényerő"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Képernyő hozzáigazítása a környezethez"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Éjszakai fény bekapcsolva"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Éjszakai mód"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Hálózat és internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilhálózat"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Párosítási kérelem"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Koppintson a(z) <xliff:g id="DEVICE_NAME">%1$s</xliff:g> eszközzel való párosításhoz."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth-eszköz kiválasztása"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Média"</string>
     <string name="language_settings" msgid="2079258598337245546">"Nyelvek"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Nyelvek és bevitel"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Javasolt"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Alkalmazásengedélyek"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Az adataihoz hozzáférő alkalmazások kezelése"</string>
     <string name="applications_settings" msgid="794261395191035632">"Alkalmazásinfó"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Kényszerített leállítás"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Kényszeríti a leállítást?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Alkalmazás leállítása"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Leállítja az alkalmazást?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ha leállásra kényszeríti az alkalmazást, lehetséges, hogy hibásan fog működni."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> leállítva."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Priorizálja az alkalmazásteljesítményt?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Ez a rendszer instabilitását idézheti elő, vagy hosszú távon kihathat a hardver működésére. Biztosan folytatja?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Igen"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Rendszerfrissítések"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Haladó"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Névjegy, jogi információk, visszaállítás és egyebek"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Infotainmentrendszer újraindítása"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Az autó infotainmentrendszerének újraindítása eltarthat néhány percig. Biztosan folytatja?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Folytatás"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-verzió"</string>
     <string name="security_patch" msgid="4794276590178386903">"Androidos biztonsági hibajavító csomag"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Modell és hardver"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Fejlesztői beállítások"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Beállítások visszaállítása"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Hálózat, alkalmazások vagy eszköz visszaállítása"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Hálózati adatok visszaállítása"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Ez visszaállítja az összes hálózati beállítást, beleértve a következőket:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"A Wi‑Fi és a Bluetooth visszaállítása"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Ezzel visszaállítja a Wi‑Fi- és a Bluetooth-beállításokat, valamint eltávolítja a memóriából a következőket:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Korábban csatlakoztatott Wi‑Fi-hálózatok és kapcsolódó jelszavak."</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobiladat"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Korábban csatlakoztatott telefonok és más Bluetooth-eszközök."</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"A jármű összes eSIM-jének törlése"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Ezzel előfizetése nem szűnik meg."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Nem lehet visszaállítani az eSIM-eket"</string>
@@ -709,8 +715,7 @@
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# karakternél rövidebbnek kell lennie}other{# karakternél rövidebbnek kell lennie}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# számjegynél rövidebbnek kell lennie}other{# számjegynél rövidebbnek kell lennie}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Növekvő, csökkenő vagy ismétlődő számsor megadása nem engedélyezett"</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"A képernyőzár beállításai"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> nappal ezelőtt"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Képernyőzárolási lehetőségek"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hitelesítési adatok törlése"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Összes tanúsítvány eltávolítása"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Eltávolítja az összes tartalmat?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Kilépés a demóból"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ELVETÉS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Vezetés közben nem áll rendelkezésre a funkció"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Kérje meg a sofőrt a beállítás módosítására"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Nem hajthatja végre ezt a műveletet"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Vezetés közben nem lehet profilt hozzáadni"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Keresés"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Segéd és hang"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profil hozzáadása"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"A profil törlése"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profil hozzáadása"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"A profil jelenleg sofőrként van bejelentkezve. Próbálja újra, ha a profil nem sofőrként van használatban."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"A kijelző fényereje"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Eszközei megtekintéséhez kapcsolja be a Bluetootht"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Eszköz párosításához nyissa meg a Bluetooth-beállításokat"</string>

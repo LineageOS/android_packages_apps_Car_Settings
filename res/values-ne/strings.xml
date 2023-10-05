@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"अनुकूलनीय चमक"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"वातावरणअनुसार स्क्रिनको चमक समायोजन गर्नुहोस्"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Night Light सक्रिय छ"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"रात्रि मोड"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"नेटवर्क र इन्टरनेट"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"मोबाइल नेटवर्क"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# वटा SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"जोडा बनाउनका लागि गरिएको अनुरोध"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>सँग जोडा बनाउन ट्याप गर्नुहोस्।"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ब्लुटुथ यन्त्र छनौट गर्नुहोस्"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"ब्लुटुथ"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"फोन"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"मिडिया"</string>
     <string name="language_settings" msgid="2079258598337245546">"भाषाहरू"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"भाषा र इनपुट"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"सिफारिस गरिएको"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"एपसम्बन्धी अनुमति"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"कुन कुन एपले तपाईंको डेटा प्रयोग गर्न पाउँछन् भन्ने कुरा तय गर्नुहोस्"</string>
     <string name="applications_settings" msgid="794261395191035632">"एपसम्बन्धी जानकारी"</string>
-    <string name="force_stop" msgid="2153183697014720520">"जबर्जस्ती रोक्नुहोस्"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"जबरजस्ती रोक्ने हो?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"एप बन्द गर्नुहोस्"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"एप बन्द गर्ने हो?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"तपाईंले कुनै एपलाई जबरजस्ती रोक्नुभयो भने त्यसले सही तरिकाले काम नगर्न सक्छ।"</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> बन्द गरिएको छ।"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"एपको पर्फर्मेन्सलाई प्राथमिकता दिने हो?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"तपाईंले यो सुविधा अन गर्नुभयो भने सिस्टममा अस्थिरता हुने वा यसले लामो समयका लागि हार्डवेयरमा असर गर्ने सम्भावना हुन्छ। तपाईं जारी राख्न चाहनुहुन्छ?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"अँ"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"प्रणालीसम्बन्धी अद्यावधिकहरू"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"उन्नत"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"यसको बारेमा, कानुनी जानकारी, रिसेट गर्नुहोस् र थप सेटिङ"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"इन्फोटेनमेन्ट प्रणाली रिस्टार्ट गर्नुहोस्"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"तपाईंको कारको इन्फोटेनमेन्ट सिस्टम रिस्टार्ट गर्न केही बेर लाग्न सक्छ। तपाईं जारी राख्न चाहनुहुन्छ?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"जारी राख्नुहोस्"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android संस्करण"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android सुरक्षा प्याचको चरण"</string>
     <string name="hardware_info" msgid="3973165746261507658">"मोडेल तथा हार्डवेयर"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"विकासकर्ताका विकल्पहरू"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"रिसेटका विकल्पहरू"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"नेटवर्क, एप वा यन्त्रको रिसेटसम्बन्धी विकल्प"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"नेटवर्क रिसेट गर्नुहोस्"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"यस कार्यले निम्नलगायत नेटवर्कसम्बन्धी सम्पूर्ण सेटिङहरू रिसेट गर्ने छ:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi तथा ब्लुटुथ रिसेट गर्नुहोस्"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"यसले पहिले कनेक्ट गरिएका मेमोरीहरू हटाएर Wi‑Fi र ब्लुटुथका सेटिङ रिसेट गर्ने छ:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi नेटवर्क तथा पासवर्डहरू"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"मोबाइल डेटा"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"ब्लुटुथ"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"फोन तथा अन्य ब्लुटुथ डिभाइसहरू"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"सबै सवारीका eSIM हरू मेट्नुहोस्‌"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"यस कार्यले तपाईंको सेवाको योजना रद्द गर्ने छैन।"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM हरू रिसेट गर्न सकिएन"</string>
@@ -688,12 +694,12 @@
     <string name="locktype_unavailable" msgid="2678317466336249126">"यो प्रकारको लक उपलब्ध छैन।"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"अनिवार्य रूपमा ० देखि ९ सम्मका अङ्कहरू मात्र समावेश हुनु पर्छ।"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"यन्त्रको प्रशासकले पछिल्लो PIN प्रयोग गर्न अनुमति दिँदैन"</string>
-    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"तपाईंका सूचना प्रविधि व्यवस्थापकले धेरै प्रयोग हुने PIN हरूको प्रयोगमा रोक लगाउनु भएको छ। कुनै फरक PIN प्रयोग गरी हेर्नुहोस्।"</string>
+    <string name="lockpassword_pin_denylisted_by_admin" msgid="3752574009492336468">"तपाईंका IT एड्मिनले धेरै प्रयोग हुने PIN हरूको प्रयोगमा रोक लगाउनु भएको छ। कुनै फरक PIN प्रयोग गरी हेर्नुहोस्।"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"यसमा कुनै अमान्य वर्ण समावेश गर्न मिल्दैन।"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"अमान्य पासवर्ड, कम्तीमा ४ वर्णको हुनु पर्छ।"</string>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"यन्त्रको व्यवस्थापकले पछिल्लो पासवर्ड प्रयोग गर्ने अनुमति दिँदैन"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"पासवर्ड सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
-    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"तपाईंका सूचना प्रविधि व्यवस्थापकले धेरै प्रयोग हुने पासवर्डहरूको प्रयोगमा रोक लगाउनु भएको छ। कुनै फरक पासवर्ड प्रयोग गरी हेर्नुहोस्।"</string>
+    <string name="lockpassword_password_denylisted_by_admin" msgid="8611831198794524730">"तपाईंका IT एड्मिनले धेरै प्रयोग हुने पासवर्डहरूको प्रयोगमा रोक लगाउनु भएको छ। कुनै फरक पासवर्ड प्रयोग गरी हेर्नुहोस्।"</string>
     <string name="lockpassword_password_requires_alpha" msgid="713641878535268163">"अनिवार्य रूपमा कम्तीमा पनि एउटा अक्षर समावेश हुनु पर्छ"</string>
     <string name="lockpassword_password_requires_digit" msgid="8120467503175627546">"अनिवार्य रूपमा कम्तीमा पनि एउटा अङ्क समावेश हुनु पर्छ"</string>
     <string name="lockpassword_password_requires_symbol" msgid="6294855131052831204">"अनिवार्य रूपमा कम्तीमा पनि एउटा चिन्ह समावेश हुनु पर्छ"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{अनिवार्य रूपमा # भन्दा कम अङ्क हुनु पर्छ}other{अनिवार्य रूपमा # भन्दा कम अङ्क हुनु पर्छ}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"बढ्दो, घट्दो वा दोहोरिएका अङ्कहरूको अनुक्रमलाई निषेध गरिएको छ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रिन लकका विकल्पहरू"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिनअघि"</string>
     <string name="credentials_reset" msgid="873900550885788639">"प्रमाणहरू मेट्नुहोस्"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"सबै प्रमाणहरू हटाउनुहोस्"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"सम्पूर्ण सामग्री हटाउने हो?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोडबाट बाहिरिनुहोस्"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"खारेज गर्नुहोस्"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"सवारी साधन चलाइरहेका बेला यो सुविधा उपलब्ध छैन"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"कृपया चालकलाई सेटिङ बदल्न अनुरोध गर्नुहोस्"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"तपाईं यो कार्य गर्न सक्नुहुन्न"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"गाडी चलाइरहेका बेला प्रोफाइल थप्न सकिँदैन"</string>
     <string name="default_search_query" msgid="3137420627428857068">"खोज"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"सहायक तथा Voice"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"कुनै प्रोफाइल थप्नुहोस्"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"यो प्रोफाइल मेटाउनुहोस्"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"प्रोफाइल थप्नुहोस्"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"यो प्रोफाइल प्रयोग गरी हाल ड्राइभरका रूपमा साइन इन गरिएको छ। यो प्रोफाइल ड्राइभरका रूपमा प्रयोग नगरिएका बेला फेरि प्रयास गर्नुहोस्।"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"डिस्प्लेको चमक"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"आफ्ना डिभाइस हेर्न ब्लुटुथ अन गर्नुहोस्"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"डिभाइस कनेक्ट गर्न ब्लुटुथ सेटिङ खोल्नुहोस्"</string>

@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Luminozitate adaptivă"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajustează luminozitatea ecranului în funcție de mediu"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Lumina de noapte este activată"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Modul noapte"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rețea și internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rețea mobilă"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# card SIM}few{# carduri SIM}other{# de carduri SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitare de conectare"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Atinge pentru a asocia cu <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Alege dispozitivul Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Media"</string>
     <string name="language_settings" msgid="2079258598337245546">"Limbi"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Limbi și introducere de text"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugerate"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Permisiuni pentru aplicații"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Controlează accesul aplicațiilor la date"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informații despre aplicație"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Oprește forțat"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Oprești forțat?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Oprește aplicația"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Oprești aplicația?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Dacă forțezi oprirea unei aplicații, aceasta se poate comporta necorespunzător."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> a fost oprită."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Prioritizezi performanța aplicației?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Această opțiune poate duce la instabilitatea sistemului sau la efecte pe termen lung asupra componentelor hardware. Continui?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Da"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizări de sistem"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Avansate"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Despre, informații legale, resetare și altele"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Repornește sistemul de infotainment"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Repornirea sistemului de infotainment al mașinii poate dura câteva minute. Continui?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Continuă"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versiunea Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nivelul corecției de securitate Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Model și hardware"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opțiuni dezvoltator"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opțiuni de resetare"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Resetează rețeaua, aplicațiile sau dispozitivul"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Resetează rețeaua"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Această acțiune va reseta toate setările pentru rețea, inclusiv:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Resetează Wi‑Fi și Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Acest lucru va reseta setările Wi‑Fi și Bluetooth, eliminând memoria articolelor conectate anterior:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"rețele Wi‑Fi și parole"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Date mobile"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"telefoane și alte dispozitive Bluetooth;"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Șterge toate eSIM-urile vehiculului"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Astfel, planul de servicii nu va fi anulat."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Cardurile eSIM nu se pot reseta"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Trebuie să conțină mai puțin de # cifră}few{Trebuie să conțină mai puțin de # cifre}other{Trebuie să conțină mai puțin de # de cifre}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Șirurile de cifre ascendente, descendente sau repetate nu sunt permise"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opțiuni de blocare a ecranului"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: acum <xliff:g id="NUM_DAYS">%3$s</xliff:g> zile"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Șterge datele de conectare"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Elimină toate certificatele"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Elimini întregul conținut?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Închide demonstrația"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"RESPINGE"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funcția nu este disponibilă când conduci"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Solicită ca șoferul să schimbe setarea"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Nu poți realiza această acțiune"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Nu poți adăuga un profil în timp ce conduci"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Căutați"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistent și voce"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Adaugă un profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Șterge profilul"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Adaugă un profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Profilul este conectat momentan ca șofer. Încearcă din nou când profilul nu este în uz ca șofer."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Luminozitatea ecranului"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Pentru a vedea dispozitivele, activează Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Pentru a asocia un dispozitiv, deschide setările Bluetooth"</string>

@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"ଅନୁକୂଳ ଉଜ୍ଜ୍ୱଳତା"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ପରିବେଶ ଅନୁଯାୟୀ ସ୍କ୍ରିନ୍ ଉଜ୍ଜ୍ୱଳତା ଆଡଜଷ୍ଟ କରନ୍ତୁ"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"ରାତି ଆଲୋକ ଅନ୍ ହୋଇଛି"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"ନାଇଟ୍ ମୋଡ୍"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ନେଟ୍‌ୱର୍କ ଓ ଇର୍ଣ୍ଟନେଟ୍"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"ମୋବାଇଲ୍‌ ନେଟ୍‌ୱର୍କ"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{#ଟି SIM}other{#ଟି SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ପେୟାରିଙ୍ଗ ଅନୁରୋଧ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ସହ ପେୟାର୍‌ କରିବାକୁ ଟାପ୍‌ କରନ୍ତୁ"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ବ୍ଲୁଟୂଥ ଡିଭାଇସ ବାଛନ୍ତୁ"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"ବ୍ଲୁଟୁଥ"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"ଫୋନ"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"ମିଡିଆ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ଭାଷା"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ଭାଷା ଓ ଇନ୍‌‌ପୁଟ୍‌"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"ପରାମର୍ଶିତ"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"ଆପ ଅନୁମତିଗୁଡ଼ିକ"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"ଆପଣଙ୍କ ଡାଟାକୁ ଆପର ଆକ୍ସେସ୍ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
     <string name="applications_settings" msgid="794261395191035632">"ଆପ୍‌ ସୂଚନା"</string>
-    <string name="force_stop" msgid="2153183697014720520">"ବାଧ୍ୟତାର ସହ ବନ୍ଦ କରନ୍ତୁ"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"ବାଧ୍ୟତାର ସହ ବନ୍ଦ କରିବେ?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"ଆପକୁ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"ଆପକୁ ବନ୍ଦ କରିବେ?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ଯଦି ଆପଣ ଏକ ଆପ୍ ବାଧ୍ୟତାର ସହ ବନ୍ଦ କରନ୍ତି, ତେବେ ଏହା ଅସ୍ୱାଭାବିକ ବ୍ୟବହାର କରିପାରେ।"</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g>କୁ ବନ୍ଦ କରାଯାଇଛି।"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ଆପ ପରଫରମାନ୍ସକୁ ପ୍ରାଥମିକତା ଦେବେ?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"ଏହା ସମ୍ଭାବ୍ୟ ସିଷ୍ଟମ ଅସ୍ଥିରତା ସୃଷ୍ଟି କରିପାରେ କିମ୍ବା ହାର୍ଡୱେର ଉପରେ ଦୀର୍ଘ-କାଳୀନ ପ୍ରଭାବ ପକାଇପାରେ। ଆପଣ ଜାରି ରଖିବାକୁ ଚାହାଁନ୍ତି?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"ହଁ"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"ସିଷ୍ଟମ୍‌ ଅପ୍‌ଡେଟ୍"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"ଉନ୍ନତ"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"ଏହା ବିଷୟରେ, ଆଇନଗତ ସୂଚନା, ରିସେଟ୍ ଏବଂ ଆହୁରି ଅଧିକ"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମକୁ ରିଷ୍ଟାର୍ଟ କରନ୍ତୁ"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ଆପଣଙ୍କ କାରର ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମକୁ ରିଷ୍ଟାର୍ଟ କରିବା ପାଇଁ କିଛି ସମୟ ଲାଗିପାରେ। ଆପଣ ଜାରି ରଖିବାକୁ ଚାହାଁନ୍ତି?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"ଜାରି ରଖନ୍ତୁ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ସଂସ୍କରଣ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ସୁରକ୍ଷା ପାଚ୍‌ ସ୍ତର"</string>
     <string name="hardware_info" msgid="3973165746261507658">"ମଡେଲ୍ ଓ ହାର୍ଡୱେୟାର୍"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"ଡେଭ୍‌ଲପର୍‌ମାନଙ୍କ ପାଇଁ ବିକଳ୍ପଗୁଡ଼ିକ"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"ରିସେଟ୍‌ କରିବାର ବିକଳ୍ପଗୁଡ଼ିକ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ନେଟ୍‌ୱାର୍କ, ଆପ୍‌, କିମ୍ବା ଡିଭାଇସ୍‌ ରିସେଟ୍‍"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"ନେଟ୍‍ୱାର୍କ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"ଏହା ସମସ୍ତ ନେଟ୍‍ୱାର୍କ ସେଟିଂକୁ ରିସେଟ୍‍ କରିବ, ଅନ୍ତର୍ଭୁକ୍ତ ଅଟେ:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"ୱାଇ-ଫାଇ"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"ୱାଇ-ଫାଇ ଏବଂ ବ୍ଲୁଟୁଥକୁ ରିସେଟ କରନ୍ତୁ"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"ପୂର୍ବରୁ କନେକ୍ଟ କରାଯାଇଥିବା ଏହି ଡିଭାଇସଗୁଡ଼ିକର ମେମୋରୀକୁ କାଢ଼ି ଦେଇ ଏହା ୱାଇ-ଫାଇ ଏବଂ ବ୍ଲୁଟୁଥ ସେଟିଂସକୁ ରିସେଟ କରିବ:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"ୱାଇ-ଫାଇ ନେଟୱାର୍କ ଏବଂ ପାସୱାର୍ଡଗୁଡ଼ିକ"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"ମୋବାଇଲ୍‍ ଡାଟା"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"ବ୍ଲୁଟୁଥ୍‍"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"ଫୋନ ଏବଂ ଅନ୍ୟ ବ୍ଲୁଟୁଥ ଡିଭାଇସଗୁଡ଼ିକ"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"ସମସ୍ତ ଗାଡି eSIM ଖାଲି କରିଦିଅନ୍ତୁ"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"ଏହା ଆପଣଙ୍କ ସେବା ପ୍ଲାନ ବାତିଲ କରିବ ନାହିଁ।"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM ରିସେଟ୍‌ କରିପାରିବ ନାହିଁ"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{#ଟି ଅଙ୍କରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}other{#ଟି ଅଙ୍କରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ସଂଖ୍ୟାର କ୍ରମବୃଦ୍ଧି, କ୍ରମହ୍ରାସ, କିମ୍ବା ପୁନରାବୃତ୍ତ କ୍ରମ ଅନୁମୋଦିତ ନୁହେଁ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ସ୍କ୍ରିନ୍‌ ଲକ୍‌ ବିକଳ୍ପ"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ଦିନ ପୂର୍ବେ"</string>
     <string name="credentials_reset" msgid="873900550885788639">"କ୍ରେଡେନସିଆଲ୍ ଖାଲି କରନ୍ତୁ"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ସବୁ ସର୍ଟିଫିକେଟ୍‌କୁ କାଢ଼ି ଦିଅନ୍ତୁ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"ସବୁ କିଛି କାଢ଼ି ଦେବେ?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ଖାରଜ କରନ୍ତୁ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ଗାଡ଼ି ଚଲାଇବା ସମୟରେ ଫିଚର୍ ଉପଲବ୍ଧ ହେବ ନାହିଁ"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ସେଟିଂ ପରିବର୍ତ୍ତନ କରିବାକୁ ଡ୍ରାଇଭରଙ୍କୁ ଅନୁରୋଧ କରନ୍ତୁ"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"ଆପଣ ଏହି କାର୍ଯ୍ୟ କରିପାରିବେ ନାହିଁ"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ଗାଡ଼ି ଚଲାଇବା ବେଳେ ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରିପାରିବେ ନାହିଁ"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant ଓ ଭଏସ୍"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ଏକ ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ଏହି ପ୍ରୋଫାଇଲକୁ ଡିଲିଟ୍ କରନ୍ତୁ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରନ୍ତୁ"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ପ୍ରୋଫାଇଲକୁ ଏବେ ଡ୍ରାଇଭର ଭାବେ ସାଇନ ଇନ କରାଯାଇଛି। ପ୍ରୋଫାଇଲ ଡ୍ରାଇଭର ଭାବେ ବ୍ୟବହାର ହେଉନଥିବା ବେଳେ ପୁଣି ଚେଷ୍ଟା କର।"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ଡିସପ୍ଲେ ଉଜ୍ଜ୍ୱଳତା"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ଆପଣଙ୍କ ଡିଭାଇସଗୁଡ଼ିକୁ ଦେଖିବା ପାଇଁ, ବ୍ଲୁଟୁଥ ଚାଲୁ କରନ୍ତୁ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ଏକ ଡିଭାଇସକୁ ପେୟାର କରିବା ପାଇଁ, ବ୍ଲୁଟୁଥ ସେଟିଂସ ଖୋଲନ୍ତୁ"</string>

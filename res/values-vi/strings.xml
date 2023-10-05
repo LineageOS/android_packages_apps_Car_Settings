@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Độ sáng thích ứng"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Điều chỉnh độ sáng của màn hình theo môi trường"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Chế độ ánh sáng đêm đang bật"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Chế độ ban đêm"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Mạng và Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mạng di động"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Yêu cầu ghép nối"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Nhấn để ghép nối với <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Chọn thiết bị Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Điện thoại"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Nội dung nghe nhìn"</string>
     <string name="language_settings" msgid="2079258598337245546">"Ngôn ngữ"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Ngôn ngữ và nhập liệu"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Đề xuất"</string>
@@ -299,15 +301,16 @@
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilomet trên lít"</string>
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Lít trên một trăm kilomet"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Ứng dụng và thông báo"</string>
-    <string name="all_applications" msgid="7798210477486822168">"Hiển thị tất cả các ứng dụng"</string>
+    <string name="all_applications" msgid="7798210477486822168">"Hiện tất cả ứng dụng"</string>
     <string name="default_applications" msgid="1558183275638697087">"Ứng dụng mặc định"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"Ứng dụng ảnh hưởng đến hiệu suất"</string>
     <string name="app_permissions" msgid="32799922508313948">"Quyền ứng dụng"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Kiểm soát quyền truy cập của ứng dụng vào dữ liệu của bạn"</string>
     <string name="applications_settings" msgid="794261395191035632">"Thông tin ứng dụng"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Buộc dừng"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Buộc dừng?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Dừng ứng dụng"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Dừng ứng dụng?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Nếu bạn buộc dừng một ứng dụng, thì ứng dụng đó có thể hoạt động không đúng cách."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> đã bị dừng."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Ưu tiên hiệu suất của ứng dụng?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Việc này có thể khiến hệ thống gặp nguy cơ bị mất ổn định hoặc tác động lâu dài đến phần cứng. Bạn có muốn tiếp tục không?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Có"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Bản cập nhật hệ thống"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Nâng cao"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Thông tin thiết bị, thông tin pháp lý, đặt lại, v.v."</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Khởi động lại hệ thống thông tin giải trí"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Quá trình khởi động lại hệ thống thông tin giải trí trên ô tô có thể mất vài phút. Bạn có muốn tiếp tục không?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Tiếp tục"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Phiên bản Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Cấp bản vá bảo mật của Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Kiểu máy và phần cứng"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Tùy chọn của nhà phát triển"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Tùy chọn đặt lại"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Đặt lại mạng, ứng dụng hoặc thiết bị"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Đặt lại mạng"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Hành động này sẽ đặt lại tất cả tùy chọn cài đặt mạng, bao gồm:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Đặt lại Wi‑Fi và Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Thao tác này sẽ đặt lại chế độ cài đặt Wi‑Fi và Bluetooth, xoá bộ nhớ của thiết bị đã kết nối trước đó:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Mạng Wi-Fi và mật khẩu"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Dữ liệu di động"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Điện thoại và các thiết bị Bluetooth khác"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Xóa tất cả eSIM của xe"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Thao tác này sẽ không hủy gói dịch vụ của bạn."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Không thể đặt lại eSIM"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Phải có ít hơn # chữ số}other{Phải có ít hơn # chữ số}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Không cho phép thứ tự chữ số tăng dần, giảm dần hoặc lặp lại"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Tùy chọn phương thức khóa màn hình"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ngày trước"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Xóa thông tin xác thực"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Xóa tất cả chứng chỉ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Xóa tất cả nội dung?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Thoát chế độ demo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BỎ QUA"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Bạn không sử dụng được tính năng này khi đang lái xe"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Yêu cầu người lái thay đổi chế độ cài đặt"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Bạn không thực hiện được thao tác này"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Không thể thêm hồ sơ khi đang lái xe"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Tìm kiếm"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Trợ lý và Voice"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Thêm hồ sơ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Xóa hồ sơ này"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Thêm hồ sơ"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Hồ sơ này đang được đăng nhập với tư cách người lái. Hãy thử lại khi không dùng hồ sơ này lúc lái xe."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Độ sáng của màn hình"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Để xem các thiết bị của bạn, hãy bật Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Để ghép nối thiết bị, hãy mở phần cài đặt Bluetooth"</string>

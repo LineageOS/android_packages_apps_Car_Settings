@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"ਅਨੁਕੂਲ ਚਮਕ"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ਵਾਤਾਵਰਨ ਮੁਤਾਬਕ ਸਕ੍ਰੀਨ ਦੀ ਚਮਕ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"\'ਰਾਤ ਦੀ ਰੋਸ਼ਨੀ\' ਮੋਡ ਚਾਲੂ ਹੈ"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"ਰਾਤ ਵਾਲਾ ਮੋਡ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ਨੈੱਟਵਰਕ ਅਤੇ ਇੰਟਰਨੈੱਟ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"ਮੋਬਾਈਲ ਨੈੱਟਵਰਕ"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# ਸਿਮ}one{# ਸਿਮ}other{# ਸਿਮ}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ਜੋੜਾਬੱਧ ਕਰਨ ਦੀ ਬੇਨਤੀ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨਾਲ ਜੋੜਾ ਬਣਾਉਣ ਲਈ ਟੈਪ ਕਰੋ।"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ਬਲੂਟੁੱਥ ਡੀਵਾਈਸ ਚੁਣੋ"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"ਬਲੂਟੁੱਥ"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"ਫ਼ੋਨ"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"ਮੀਡੀਆ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ਭਾਸ਼ਾਵਾਂ"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਇਨਪੁੱਟ"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"ਸੁਝਾਇਆ ਗਿਆ"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"ਐਪ ਇਜਾਜ਼ਤਾਂ"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"ਐਪ ਦੀ ਤੁਹਾਡੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਕੰਟਰੋਲ ਕਰੋ"</string>
     <string name="applications_settings" msgid="794261395191035632">"ਐਪ ਜਾਣਕਾਰੀ"</string>
-    <string name="force_stop" msgid="2153183697014720520">"ਜ਼ਬਰਦਸਤੀ ਬੰਦ ਕਰੋ"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"ਕੀ ਜ਼ਬਰਦਸਤੀ ਬੰਦ ਕਰਨਾ ਹੈ?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"ਐਪ ਬੰਦ ਕਰੋ"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"ਕੀ ਐਪ ਬੰਦ ਕਰਨੀ ਹੈ?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਐਪ ਨੂੰ ਜ਼ਬਰਦਸਤੀ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਹੋ ਸਕਦਾ ਹੈ ਇਹ ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ ਨਾ ਕਰੇ।"</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> ਬੰਦ ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ।"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ਕੀ ਐਪ ਦੀ ਕਾਰਗੁਜ਼ਾਰੀ ਨੂੰ ਤਰਜੀਹ ਦੇਣੀ ਹੈ?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"ਇਸ ਨਾਲ ਸੰਭਾਵੀ ਸਿਸਟਮ ਅਸਥਿਰਤਾ ਜਾਂ ਲੰਬੇ-ਸਮੇਂ ਦਾ ਹਾਰਡਵੇਅਰ ਪ੍ਰਭਾਵ ਹੋ ਸਕਦਾ ਹੈ। ਕੀ ਤੁਸੀਂ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"ਹਾਂ"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"ਸਿਸਟਮ ਅੱਪਡੇਟ"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"ਉੱਨਤ"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"ਇਸ ਬਾਰੇ, ਕਨੂੰਨੀ ਜਾਣਕਾਰੀ, ਰੀਸੈੱਟ ਕਰੋ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਨੂੰ ਮੁੜ-ਸ਼ੁਰੂ ਕਰੋ"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਨੂੰ ਮੁੜ-ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਕੁਝ ਮਿੰਟ ਲੱਗ ਸਕਦੇ ਹਨ। ਕੀ ਤੁਸੀਂ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"ਜਾਰੀ ਰੱਖੋ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ਵਰਜਨ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ਸੁਰੱਖਿਆ ਪੈਚ ਪੱਧਰ"</string>
     <string name="hardware_info" msgid="3973165746261507658">"ਮਾਡਲ ਅਤੇ ਹਾਰਡਵੇਅਰ"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"ਵਿਕਾਸਕਾਰ ਚੋਣਾਂ"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"ਰੀਸੈੱਟ ਵਿਕਲਪ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ਨੈੱਟਵਰਕ, ਐਪਾਂ ਜਾਂ ਡੀਵਾਈਸ ਰੀਸੈੱਟ"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"ਨੈੱਟਵਰਕ ਰੀਸੈੱਟ ਕਰੋ"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"ਇਹ  ਸਾਰੀਆਂ ਨੈੱਟਵਰਕ ਸੈਟਿੰਗਾਂ ਰੀਸੈੱਟ ਕਰ ਦੇਵੇਗਾ, ਜਿਸ ਵਿੱਚ ਇਹ ਵੀ ਸ਼ਾਮਲ ਹਨ:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"ਵਾਈ-ਫਾਈ"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"ਵਾਈ-ਫਾਈ ਅਤੇ ਬਲੂਟੁੱਥ ਨੂੰ ਰੀਸੈੱਟ ਕਰੋ"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"ਇਸ ਨਾਲ ਵਾਈ-ਫਾਈ ਅਤੇ ਬਲੂਟੁੱਥ ਸੈਟਿੰਗਾਂ ਰੀਸੈੱਟ ਹੋ ਜਾਣਗੀਆਂ ਅਤੇ ਮੈਮੋਰੀ ਵਿੱਚੋਂ ਪਹਿਲਾਂ ਕਨੈਕਟ ਕੀਤੇ ਡੀਵਾਈਸਾਂ ਦੀ ਜਾਣਕਾਰੀ ਹਟ ਜਾਵੇਗੀ:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"ਵਾਈ-ਫਾਈ ਨੈੱਟਵਰਕ ਅਤੇ ਪਾਸਵਰਡ"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"ਮੋਬਾਈਲ ਡਾਟਾ"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"ਬਲੂਟੁੱਥ"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"ਫ਼ੋਨ ਅਤੇ ਹੋਰ ਬਲੂਟੁੱਥ ਡੀਵਾਈਸ"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"ਸਾਰੇ ਵਾਹਨ ਈ-ਸਿਮਾਂ ਨੂੰ ਮਿਟਾਓ"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"ਇਸ ਨਾਲ ਤੁਹਾਡਾ ਸੇਵਾ ਪਲਾਨ ਰੱਦ ਨਹੀਂ ਹੋਵੇਗਾ।"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"ਈ-ਸਿਮ ਰੀਸੈੱਟ ਨਹੀਂ ਕੀਤੇ ਜਾ ਸਕਦੇ"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# ਅੰਕ ਤੋਂ ਘੱਟ ਹੋਣਾ ਲਾਜ਼ਮੀ ਹੈ}one{# ਅੰਕ ਤੋਂ ਘੱਟ ਹੋਣਾ ਲਾਜ਼ਮੀ ਹੈ}other{# ਅੰਕਾਂ ਤੋਂ ਘੱਟ ਹੋਣੇ ਲਾਜ਼ਮੀ ਹਨ}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ਅੰਕਾਂ ਦਾ ਵਧਦਾ ਕ੍ਰਮ, ਘਟਦਾ ਕ੍ਰਮ ਜਾਂ ਦੁਹਰਾਈ ਗਈ ਲੜੀ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ਸਕ੍ਰੀਨ ਲਾਕ ਦੇ ਵਿਕਲਪ"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ਦਿਨ ਪਹਿਲਾਂ"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ ਕਲੀਅਰ ਕਰੋ"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ਸਾਰੇ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਹਟਾਓ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"ਕੀ ਸਾਰੀਆਂ ਸਮੱਗਰੀਆਂ ਹਟਾਉਣੀਆਂ ਹਨ?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ਡੈਮੋ ਮੋਡ ਤੋ ਬਾਹਰ ਜਾਓ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ਖਾਰਜ ਕਰੋ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ਚਲਦੀ ਗੱਡੀ ਵਿੱਚ ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ਡਰਾਈਵਰ ਨੂੰ ਸੈਟਿੰਗ ਬਦਲਣ ਲਈ ਬੇਨਤੀ ਕਰੋ"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"ਤੁਸੀਂ ਇਹ ਕਾਰਵਾਈ ਨਹੀਂ ਕਰ ਸਕਦੇ"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ਚਲਦੀ ਗੱਡੀ ਵਿੱਚ ਪ੍ਰੋਫਾਈਲ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ"</string>
     <string name="default_search_query" msgid="3137420627428857068">"ਖੋਜ"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant ਅਤੇ ਅਵਾਜ਼"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ਕੋਈ ਪ੍ਰੋਫਾਈਲ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ਇਹ ਪ੍ਰੋਫਾਈਲ ਮਿਟਾਓ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ਪ੍ਰੋਫਾਈਲ ਸ਼ਾਮਲ ਕਰੋ"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ਫ਼ਿਲਹਾਲ ਇਹ ਪ੍ਰੋਫਾਈਲ ਡਰਾਈਵਰ ਵਜੋਂ ਸਾਈਨ-ਇਨ ਹੈ। ਪ੍ਰੋਫਾਈਲ ਡਰਾਈਵਰ ਵਜੋਂ ਵਰਤੋਂ ਵਿੱਚ ਨਾ ਹੋਣ \'ਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ਡਿਸਪਲੇ ਚਮਕ"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ਆਪਣੇ ਡੀਵਾਈਸ ਦੇਖਣ ਲਈ, ਬਲੂਟੁੱਥ ਚਾਲੂ ਕਰੋ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ਕਿਸੇ ਡੀਵਾਈਸ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰਨ ਲਈ, ਬਲੂਟੁੱਥ ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ"</string>

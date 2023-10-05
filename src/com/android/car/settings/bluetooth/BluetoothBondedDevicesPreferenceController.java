@@ -104,9 +104,21 @@ public class BluetoothBondedDevicesPreferenceController extends
     @Override
     protected BluetoothDevicePreference createDevicePreference(CachedBluetoothDevice cachedDevice) {
         BluetoothDevicePreference pref = super.createDevicePreference(cachedDevice);
-        pref.getActionItem(BLUETOOTH_BUTTON).setVisible(true);
-        pref.getActionItem(PHONE_BUTTON).setVisible(true);
-        pref.getActionItem(MEDIA_BUTTON).setVisible(true);
+        ToggleButtonActionItem bluetoothItem = pref.getActionItem(BLUETOOTH_BUTTON);
+        ToggleButtonActionItem phoneItem = pref.getActionItem(PHONE_BUTTON);
+        ToggleButtonActionItem mediaItem = pref.getActionItem(MEDIA_BUTTON);
+
+        bluetoothItem.setVisible(true);
+        phoneItem.setVisible(true);
+        mediaItem.setVisible(true);
+
+        bluetoothItem.setContentDescription(getContext(),
+                R.string.bluetooth_bonded_bluetooth_toggle_content_description);
+        phoneItem.setContentDescription(getContext(),
+                R.string.bluetooth_bonded_phone_toggle_content_description);
+        mediaItem.setContentDescription(getContext(),
+                R.string.bluetooth_bonded_media_toggle_content_description);
+
         pref.setToggleButtonUpdateListener(this);
         mHasUxRestriction = hasNoSetupUxRestriction();
         setButtonsCheckedAndListeners(pref);

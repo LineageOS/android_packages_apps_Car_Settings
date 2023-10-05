@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Anpassad ljusstyrka"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Justera skärmens ljusstyrka efter omgivningen"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Nattljus är aktiverat"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Nattläge"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Nätverk och internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilnätverk"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-kort}other{# SIM-kort}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Begäran om parkoppling"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tryck om du vill parkoppla med <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Välj Bluetooth-enhet"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Media"</string>
     <string name="language_settings" msgid="2079258598337245546">"Språk"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Språk och inmatning"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Förslag"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Appbehörigheter"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Styr appåtkomst till din data"</string>
     <string name="applications_settings" msgid="794261395191035632">"Appinformation"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Tvinga att avsluta"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vill du tvinga appen att avsluta?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Avsluta appen"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Vill du avsluta appen?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Om du tvingar appen att avsluta kanske den inte fungerar som den ska."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> har avslutats."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Vill du prioritera appars prestanda?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Detta kan göra att systemet blir instabilt, och det kan påverka maskinvaran långsiktigt. Vill du fortsätta?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ja"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemuppdateringar"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Avancerat"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Om, juridisk information, återställning med mera"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Starta om infotainmentsystemet"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Det kan ta några minuter att starta om bilens infotainmentsystem. Vill du fortsätta?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Fortsätt"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-version"</string>
     <string name="security_patch" msgid="4794276590178386903">"Korrigeringsnivå för Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Modell och maskinvara"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Utvecklaralternativ"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Återställningsalternativ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Nätverk, appar eller ehetsåterställning"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Återställ nätverk"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Om du gör detta återställs alla nätverksinställningar, inklusive:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Återställ wifi och Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Detta återställer wifi- och Bluetooth-inställningarna och tar bort minnet av tidigare anslutna"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"wifi-nätverk och lösenord."</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobildata"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"telefoner och andra Bluetooth-enheter"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Rensa alla eSIM för fordonet"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Serviceavtalet fortsätter att gälla."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Det gick inte att återställa eSIM-korten"</string>
@@ -652,11 +658,11 @@
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Ange ett mönster som skydd"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Rensa"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Avbryt"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Ditt nya grafiska lösenord"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Ditt nya mönster"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Rita ett mönster"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Lyft fingret när du är klar"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Mönstret har registrerats"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Bekräfta genom att rita lösenordet igen"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Rita mönstret igen för att bekräfta"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Anslut minst 4 punkter. Försök igen."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Fel mönster"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Så här ritar du ett mönster"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Lösenordet får inte innehålla fler än # siffra}other{Lösenordet får inte innehålla fler än # siffror}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"En stigande, fallande eller upprepad siffersekvens är inte tillåten"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Alternativ för skärmlås"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> dagar sedan"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Rensa användaruppgifter"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Ta bort alla certifikat"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Vill du ta bort allt innehåll?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Avsluta demoläget"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORERA"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funktionen är inte tillgänglig när du kör"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Begär att föraren ändrar inställningen"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Du kan inte utföra den här åtgärden"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Du kan inte lägga till en profil medan du kör"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Sök"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent och röst"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Lägg till en profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Radera den här profilen"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Lägg till profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Den här profilen är inloggad som förare. Försök igen när profilen inte används som förare."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Skärmens ljusstyrka"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktivera Bluetooth för att visa enheterna"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Öppna Bluetooth-inställningarna för att koppla en enhet"</string>

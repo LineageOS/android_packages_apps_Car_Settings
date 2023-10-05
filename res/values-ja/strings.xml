@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"明るさの自動調節"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"環境に合わせて画面の明るさを調節します"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"夜間モード ON"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"夜間モード"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ネットワークとインターネット"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"モバイル ネットワーク"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# 件の SIM}other{# 件の SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ペア設定リクエスト"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"「<xliff:g id="DEVICE_NAME">%1$s</xliff:g>」とペア設定するにはタップしてください。"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth デバイスの選択"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"スマートフォン"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"メディア"</string>
     <string name="language_settings" msgid="2079258598337245546">"言語"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"言語と入力"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"候補"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"アプリの権限"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"アプリのデータアクセスを管理します"</string>
     <string name="applications_settings" msgid="794261395191035632">"アプリ情報"</string>
-    <string name="force_stop" msgid="2153183697014720520">"強制停止"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"強制停止しますか？"</string>
+    <string name="force_stop" msgid="1616958676171167028">"アプリを停止"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"アプリを停止しますか？"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"アプリを強制停止すると、アプリが正常に機能しなくなる恐れがあります。"</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> を停止しました。"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"アプリのパフォーマンスを優先する"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"システムを不安定にしたり、ハードウェアに長期的な影響を及ぼしたりする可能性があります。続行しますか？"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"はい"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"システム アップデート"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"詳細設定"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"概要、規約、リセットなど"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"インフォテインメント システムの再起動"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"車のインフォテインメント システムの再起動には数分かかります。続行しますか？"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"続行"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android のバージョン"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android セキュリティ パッチレベル"</string>
     <string name="hardware_info" msgid="3973165746261507658">"モデルとハードウェア"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"開発者向けオプション"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"リセット オプション"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ネットワーク、アプリ、デバイスのリセット"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"ネットワークをリセット"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"この操作を行うと、以下を含むすべてのネットワーク設定がリセットされます。"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi-Fi と Bluetooth をリセット"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Wi‑Fi と Bluetooth の設定をリセットし、以前に接続したデバイスの履歴を削除します。"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi-Fi ネットワークとパスワード"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"モバイルデータ"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"スマートフォンとその他の Bluetooth デバイス"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"車のすべての eSIM を消去"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"この操作でご利用のサービスプランがキャンセルされることはありません。"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM のリセットエラー"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# 桁未満にしてください}other{# 桁未満にしてください}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"一連の数字を昇順や降順にしたり、繰り返したりすることはできません"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"画面ロックの方法"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> 日前"</string>
     <string name="credentials_reset" msgid="873900550885788639">"認証情報の消去"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"証明書をすべて削除する"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"コンテンツをすべて削除しますか？"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"デモを終了"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"閉じる"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"この機能は運転中は利用できません"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ドライバーに設定の変更をリクエストしてください"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"このアクションは実行できません"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"運転中はプロファイルを追加できません"</string>
     <string name="default_search_query" msgid="3137420627428857068">"検索"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"アシスタントと音声"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"プロファイルを追加"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"このプロファイルを削除"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"プロファイルを追加"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"このプロファイルはドライバーとしてログインしています。ドライバーとして使用していないときにお試しください。"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ディスプレイの明るさ"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"デバイスを表示するには、Bluetooth を ON にしてください"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"デバイスをペア設定するには、Bluetooth の設定を開いてください"</string>

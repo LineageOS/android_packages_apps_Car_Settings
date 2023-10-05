@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"בהירות מותאמת"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"התאמת בהירות המסך לסביבה"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"\'תאורת לילה\' פועלת"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"מצב לילה"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"רשת ואינטרנט"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"רשת סלולרית"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{כרטיס SIM אחד}one{# כרטיסי SIM}two{# כרטיסי SIM}other{# כרטיסי SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"בקשת התאמה"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"יש להקיש כדי ליצור התאמה עם <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"בחירת מכשיר Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"טלפון"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"מדיה"</string>
     <string name="language_settings" msgid="2079258598337245546">"שפות"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"שפות וקלט"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"הצעות"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"הרשאות הניתנות לאפליקציה"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"שליטה בגישת האפליקציה לנתונים שלך"</string>
     <string name="applications_settings" msgid="794261395191035632">"פרטי אפליקציה"</string>
-    <string name="force_stop" msgid="2153183697014720520">"סגירה ידנית"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"לסגור ידנית?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"עצירת האפליקציה"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"לעצור את האפליקציה?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"אם סוגרים אפליקציה ידנית, ייתכן שהיא לא תפעל כהלכה."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"עצרת את האפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"לקבוע עדיפות לפי ביצועי האפליקציות?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"הפעולה הזו עלולה לגרום לאי יציבות במערכת או להשפיע על החומרה לטווח ארוך. רוצה להמשיך?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"כן"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"עדכוני מערכת"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"מתקדם"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"מידע, פרטים משפטיים, איפוס ועוד"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"הפעלה מחדש של מערכת המידע והבידור"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ההפעלה מחדש של מערכת המידע והבידור ברכב עשויה להימשך כמה דקות. רוצה להמשיך?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"המשך"</string>
     <string name="firmware_version" msgid="8491753744549309333">"גרסת Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"רמת תיקון האבטחה ב-Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"דגם וחומרה"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"אפשרויות למפתחים"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"אפשרויות איפוס"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"איפוס של הרשת, האפליקציות או של המכשיר"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"איפוס הרשת"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"פעולה זו תאפס את כל הגדרות הרשת, כולל:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"איפוס ה-Bluetooth וה-Wi-Fi"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"הפעולה הזו תאפס את הגדרות ה-Bluetooth וה-Wi-Fi ותסיר מההיסטוריה:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"רשתות Wi-Fi וסיסמאות"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"חבילת גלישה"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"טלפונים ומכשירי Bluetooth אחרים"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"מחיקת כל כרטיסי ה-eSIM של הרכב"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"הפעולה לא תבטל את תוכנית השירות שלך."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"לא ניתן לאתחל את כרטיסי ה-eSIM"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{צריכה להיות קצרה מספרה אחת}one{צריכה להיות קצרה מ-# ספרות}two{צריכה להיות קצרה מ-# ספרות}other{צריכה להיות קצרה מ-# ספרות}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"אין להגדיר רצף ספרות עולה, יורד או חוזר"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"אפשרויות נעילת מסך"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : לפני <xliff:g id="NUM_DAYS">%3$s</xliff:g> ימים"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ניקוי פרטי כניסה"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"הסרת כל האישורים"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"להסיר את כל התכנים?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"יציאה ממצב הדגמה"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"סגירה"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"התכונה לא זמינה בזמן הנהיגה"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"צריך לבקש מהנהג לשנות את ההגדרה"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"לא ניתן לבצע את הפעולה הזו"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"לא ניתן להוסיף פרופיל בזמן הנהיגה"</string>
     <string name="default_search_query" msgid="3137420627428857068">"חיפוש"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant והקול"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"להוספת פרופיל"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"מחיקת הפרופיל"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"הוספת פרופיל"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"הפרופיל הזה משמש כרגע את החשבון של הנהג. יש לנסות שוב כשהפרופיל לא בשימוש הנהג."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"בהירות התצוגה"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"כדי להציג את המכשירים שלך, צריך להפעיל את Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"כדי להתאים מכשיר, צריך לפתוח את הגדרות Bluetooth"</string>

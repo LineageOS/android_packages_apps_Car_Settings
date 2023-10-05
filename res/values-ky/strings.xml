@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Ыңгайлашуучу жарык"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Экрандын жарыктыгын айлана-чөйрөгө жараша тууралоо"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Түнкү режим күйүк"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Түнкү режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Тармак жана Интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобилдик тармак"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM карта}other{# SIM карта}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Байланыштыруу өтүнүчү"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> менен жупташуу үчүн таптап коюңуз."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth түзмөгүн тандоо"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Телефон"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Медиа"</string>
     <string name="language_settings" msgid="2079258598337245546">"Тилдер"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Тилдер жана киргизүү ыкмасы"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Сунушталган тилдер"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Колдонмонун уруксаттары"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Колдонмолорго маалыматыңыздын жеткиликтүүлүгүн көзөмөлдөйсүз"</string>
     <string name="applications_settings" msgid="794261395191035632">"Колдонмо тууралуу маалымат"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Мажбурлап токтотуу"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Токтотулсунбу?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Колдонмону токтотуу"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Колдонмону токтотосузбу?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Колдонмону мажбурлап токтотсоңуз, ал туура эмес иштеп калышы мүмкүн."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> токтотулду."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Колдонмого артыкчылык берилсинби?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Бул системанын туруктуу иштөөсүнө же аппараттык камсыздоого кедергисин тийгизиши мүмкүн. Улантасызбы?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ооба"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системанын жаңыртуулары"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Өркүндөтүлгөн"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Маалымат, юридикалык маалымат, баштапкы абалга келтирүү жана башкалар"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Инфозоок системасын өчүрүп күйгүзүү"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Унаадагы инфозоок системасын өчүрүп күйгүзүү бир нече мүнөткө созулушу мүмкүн. Улантасызбы?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Улантуу"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android версиясы"</string>
     <string name="security_patch" msgid="4794276590178386903">"Коопсуздук системасын жаңыртуу:"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Үлгү жана аппараттык камсыздоо"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Иштеп чыгуучунун параметрлери"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Кайра коюу опциялары"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Тармактын, колдонмолордун же түзмөктүн параметрлерин кайра коюу"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Тармакты баштапкы абалга келтирүү"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Ушуну менен тармак параметрлеринин баары баштапкы абалга келтирилет, анын ичинде:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi жана Bluetooth\'ду кайра коюу"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Буга чейин туташкан нерселердин эстутумун өчүрүү менен, Wi-Fi жана Bluetooth параметрлерин кайра коет:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi тармактары жана сырсөздөр"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобилдик Интернет"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Телефондор жана башка Bluetooth түзмөктөрү"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Унаадагы бардык eSIM-карталар тазалансын"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Байланыш операторуңуздун тарифтик планы жокко чыгарылбайт."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM-карталар кайра коюлган жок"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# сандан ашпашы керек}other{# сандан ашпашы керек}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Сандар чоңойгон, кичирейген же кайталанган ыраатта болбошу керек"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды кулпулоо ыкмалары"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн мурун"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Эсептик дайындарды тазалоо"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Бардык тастыктамалар өчүрүлөт"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Баарын өчүрөсүзбү?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Демо режимден чыгуу"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЧЕТКЕ КАГУУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Унаа айдаганда бул функция жеткиликтүү эмес"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Айдоочудан параметрди өзгөртүүнү сураныңыз"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Бул аракетти аткара албайсыз"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Унаа айдап баратканда профиль кошууга болбойт"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Издөө"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Жардамчы жана үн"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Профиль кошуу"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Бул профилди өчүрүү"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профиль кошуу"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Бул профилди учурда айдоочу колдонуп жатат. Ал чыккандан кийин кайталап көрүңүз."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Экрандын жарыктыгы"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Түзмөктөрдү көрүү үчүн Bluetooth\'ду күйгүзүңүз"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Түзмөктү жупташтыруу үчүн Bluetooth\'дун параметрлерин ачыңыз"</string>
@@ -844,7 +852,7 @@
     <string name="factory_reset_later_button" msgid="2653125445148367016">"Кийинчерээк баштапкы абалга келтирүү"</string>
     <string name="factory_reset_later_text" msgid="6371031843489938419">"Инфозоок тутуму унаа кайра от алганда баштапкы абалга келтирилет."</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"Баштапкы абалга келтирүү үчүн унааны токтотуңуз."</string>
-    <string name="power_component_disabled" msgid="7084144472096800457">"Бул жөндөөнү азыр өзгөртүүгө болбойт"</string>
+    <string name="power_component_disabled" msgid="7084144472096800457">"Бул параметрди азыр өзгөртүүгө болбойт"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Атайын мүмкүнчүлүктөр"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"Коштомо жазуулар"</string>
     <string name="captions_settings_title" msgid="5738067618097295831">"Коштомо жазуулардын параметрлери"</string>

@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"పరిసర అనుకూల ప్రకాశం"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"స్క్రీన్ ప్రకాశాన్ని పరిసరాలకు అనుగుణంగా సర్దుబాటు చేయండి"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"రాత్రి కాంతి ఆన్‌లో ఉంది"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"రాత్రి మోడ్"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"నెట్‌వర్క్ &amp; ఇంటర్నెట్"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"మొబైల్ నెట్‌వర్క్"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMలు}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"జత చేయడానికి రిక్వెస్ట్‌"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>తో పెయిర్ చేయడానికి ట్యాప్ చేయండి."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"బ్లూటూత్ పరికరాన్ని ఎంచుకోండి"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"బ్లూటూత్"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"ఫోన్"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"మీడియా"</string>
     <string name="language_settings" msgid="2079258598337245546">"భాషలు"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"భాషలు &amp; ఇన్‌పుట్"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"సూచించినవి"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"యాప్ అనుమతులు"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"మీ డేటాకు యాప్ యాక్సెస్‌ను కంట్రోల్ చేస్తుంది"</string>
     <string name="applications_settings" msgid="794261395191035632">"యాప్ సమాచారం"</string>
-    <string name="force_stop" msgid="2153183697014720520">"ఫోర్స్ స్టాప్"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"ఫోర్స్ స్టాప్ చేయాలా?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"యాప్‌ను ఆపివేయండి"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"యాప్‌ను ఆపివేయాలా?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"మీరు ఏదైనా యాప్‌ను ఫోర్స్ స్టాప్ చేస్తే, అది సరిగ్గా పని చేయకపోవచ్చు."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> ఆపివేయబడింది."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"యాప్ పనితీరుకు ప్రాధాన్యత ఇవ్వాలా?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"దీని వలన సిస్టమ్ స్థిరంగా పని చేయకపోవచ్చు లేదా హార్డ్‌వేర్‌పై దీర్ఘకాలిక ప్రభావం ఉండవచ్చు. మీరు కొనసాగించాలనుకుంటున్నారా?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"అవును"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"సిస్టమ్ అప్‌డేట్‌లు"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"అధునాతనం"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"పరిచయం, చట్టపరమైన సమాచారం, రీసెట్, మరిన్ని"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను రీస్టార్ట్ చేయండి"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"మీ కారు తాలూకు సమాచారంతో కూడిన వినోదం సిస్టమ్‌ను రీస్టార్ట్ చేయడానికి కొన్ని నిమిషాలు పట్టవచ్చు. మీరు కొనసాగాలనుకుంటున్నారా?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"కొనసాగించండి"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android వెర్షన్"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android సెక్యూరిటీ ప్యాచ్ స్థాయి"</string>
     <string name="hardware_info" msgid="3973165746261507658">"మోడల్ &amp; హార్డ్‌వేర్"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"డెవలపర్ ఎంపికలు"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"రీసెట్ ఎంపికలు"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"నెట్‌వర్క్, యాప్‌లు లేదా పరికరాన్ని రీసెట్ చేయండి"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"నెట్‌వర్క్‌ని రీసెట్ చేయండి"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"ఇది అన్ని నెట్‌వర్క్ సెట్టింగ్‌లను రీసెట్ చేస్తుంది, వీటితో సహా:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi, బ్లూటూత్‌ని రీసెట్ చేయండి"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"ఇది Wi‑Fi, బ్లూటూత్ సెట్టింగ్‌లను రీసెట్ చేస్తుంది, గతంలో కనెక్ట్ చేయబడిన మెమరీని తీసివేస్తుంది:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi నెట్‌వర్క్‌లు, పాస్‌వర్డ్‌లు"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"మొబైల్ డేటా"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"బ్లూటూత్"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"ఫోన్‌లు, ఇతర బ్లూటూత్ పరికరాలు"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"వాహన eSIMలన్నింటినీ తొలగించండి"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"ఇది మీ సేవా ప్లాన్‌ని రద్దు చేయదు."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"ESIMలను రీసెట్ చేయడం సాధ్యం కాదు"</string>
@@ -635,7 +641,7 @@
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ఏదీ కాదు"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"ఆకృతి"</string>
-    <string name="security_lock_pin" msgid="4891899974369503200">"పిన్"</string>
+    <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"పాస్‌‌వర్డ్"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"లాక్ రకాన్ని ఎంచుకోండి"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"లాక్ ఎంపికలు"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{తప్పనిసరిగా # కంటే తక్కువ అంకెను కలిగి ఉండాలి}other{తప్పనిసరిగా # కంటే తక్కువ అంకెలను కలిగి ఉండాలి}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"అంకెలను ఆరోహణ, అవరోహణ క్రమంలో లేదా ఒకే అంకెను వరుసగా పునరావృతంగా ఉపయోగించకూడదు"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"స్క్రీన్ లాక్ ఎంపికలు"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> రోజుల క్రితం"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ఆధారాలను క్లియర్ చేయండి"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"అన్ని స‌ర్టిఫికెట్‌ల‌ను తీసివేయండి"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"అన్ని కంటెంట్‌లను తీసివేయాలా?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"డెమో నుండి నిష్క్రమించండి"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"విస్మరించు"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"డ్రైవింగ్ చేస్తున్నప్పుడు ఈ ఫీచర్ అందుబాటులో ఉండదు"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"సెట్టింగ్‌ను మార్చమని డ్రైవర్‌ను రిక్వెస్ట్ చేయండి"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"మీరు ఈ చర్యను చేయడం సాధ్యం కాదు"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"డ్రైవింగ్ చేస్తున్నప్పుడు, ప్రొఫైల్‌ను జోడించడం సాధ్యం కాదు"</string>
     <string name="default_search_query" msgid="3137420627428857068">"సెర్చ్ చేయండి"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant &amp; వాయిస్"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ఒక ప్రొఫైల్‌ను జోడించండి"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ఈ ప్రొఫైల్‌ను తొలగించండి"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ప్రొఫైల్‌ను జోడించండి"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ఈ ప్రొఫైల్‌లో ప్రస్తుతం డ్రైవర్‌గా సైన్ ఇన్ చేశారు. ప్రొఫైల్ డ్రైవర్‌గా ఉపయోగించనప్పుడు మళ్లీ ట్రై చేయి."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"డిస్‌ప్లే బ్రైట్‌నెస్"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"మీ పరికరాలను చూడటానికి, బ్లూటూత్‌ను ఆన్ చేయండి"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"పరికరాన్ని పెయిర్ చేయడానికి, బ్లూటూత్ సెట్టింగ్‌లను తెరవండి"</string>

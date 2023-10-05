@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптивна яркост"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Коригиране на яркостта на екрана спрямо околната среда"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Нощно осветление: Включено"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Нощен режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Мрежа и интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобилна мрежа"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM карта}other{# SIM карти}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Заявка за сдвояване"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Докоснете за сдвояване с(ъс) <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Изберете устройство с Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Телефон"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Мултимедия"</string>
     <string name="language_settings" msgid="2079258598337245546">"Езици"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Езици и въвеждане"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Предложени"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Разрешения за приложенията"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Управлявайте достъпа на приложенията до данните ви"</string>
     <string name="applications_settings" msgid="794261395191035632">"Информация за приложенията"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Принудително спиране"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Да се спре ли принудително?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Спиране на приложението"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Да се спре ли приложението?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Ако принудително спрете приложение, то може да не функционира правилно."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"Приложението <xliff:g id="APP_NAME">%1$s</xliff:g> е спряно."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Ефективност на прил.: Приоритизиране?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Това може да доведе до потенциални проблеми със стабилността на системата или дълготрайно въздействие върху хардуера. Искате ли да продължите?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Да"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системни актуализации"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Разширени"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Всичко за Android Auto, правна информация, нулиране и др."</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Рестартиране на основното устройство"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Рестартирането на основното устройство на автомобила ви може да отнеме няколко минути. Искате ли да продължите?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Напред"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версия на Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Ниво на корекцията на сигурността под Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Модел и хардуер"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Опции за програмисти"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Опции за нулиране"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Нулиране на мрежата, приложенията или устройството"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Нулиране на мрежата"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Това действие ще нулира всички мрежови настройки, включително:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Нулиране на Wi‑Fi и Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Това действие ще нулира настройките за Wi‑Fi и Bluetooth и ще премахне историята на по-рано свързаните:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi мрежи и пароли."</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобилни данни"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Телефони и други устройства с Bluetooth."</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Изтриване на всички ел. SIM карти за автомобила"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Това действие няма да анулира плана ви за услуги."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Електронните SIM карти не могат да бъдат нулирани"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Трябва да съдържа по-малко от # цифра}other{Трябва да съдържа по-малко от # цифри}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Възходящите, низходящите и повтарящите се поредици от цифри не са разрешени"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заключване на екрана"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : Преди <xliff:g id="NUM_DAYS">%3$s</xliff:g> дни"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Изчистване на идентификационните данни"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Премахване на всички сертификати"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Да се премахне ли цялото съдържание?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Демонстр. режим: Изход"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОТХВЪРЛЯНЕ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функцията не е налице по време на шофиране"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Поискайте от шофьора да промени настройката"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Не можете да извършите това действие"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Потр. профил не може да се добави по време на шофиране"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Търсете"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Асистент и Voice"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Добавяне на потребителски профил"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Изтриване на този потр. профил"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Добавяне на потребителски профил"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Понастоящем този потребителски профил се използва от шофьор. Опитайте отново, когато не се използва така."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яркост на екрана"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"За да видите устройствата си, включете Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"За да сдвоите устройство, отворете настройките за Bluetooth"</string>

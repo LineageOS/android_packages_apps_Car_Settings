@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"روشنایی تطبیقی"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"تنظیم روشنایی صفحه‌نمایش متناسب با محیط"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"«نور شب» روشن است"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"حالت شب"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"شبکه و اینترنت"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"شبکه تلفن همراه"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# سیم‌کارت}one{# سیم‌کارت}other{# سیم‌کارت}}"</string>
@@ -138,7 +137,7 @@
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"در دسترس نیست چون «مکان» خاموش است. "<annotation id="link">"مکان"</annotation>" را روشن کنید."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"اسکن کردن Wi‑Fi روشن شود؟"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"روشن کردن"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"اسکن کردن Wi-Fi روشن شد"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"اسکن شبکه‌های Wi-Fi روشن شد"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"تغییر وضعیت خودکار به داده تلفن همراه"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"وقتی Wi-Fi به اینترنت دسترسی ندارد، از داده تلفن همراه استفاده شود. ممکن است هزینه مصرف داده اعمال شود."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"پیدا کردن شبکه‌های Wi-Fi و اتصال به آن‌ها"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"درخواست مرتبط‌سازی"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"برای مرتبط‌سازی با <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ضربه بزنید."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"انتخاب دستگاه بلوتوث"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"بلوتوث"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"تلفن"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"رسانه"</string>
     <string name="language_settings" msgid="2079258598337245546">"زبان‌ها"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"زبان‌ها و ورودی"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"پیشنهادی"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"اجازه‌های برنامه"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"کنترل دسترسی برنامه به داده‌های شما"</string>
     <string name="applications_settings" msgid="794261395191035632">"اطلاعات برنامه"</string>
-    <string name="force_stop" msgid="2153183697014720520">"توقف اجباری"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"توقف اجباری؟"</string>
+    <string name="force_stop" msgid="1616958676171167028">"متوقف کردن برنامه"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"برنامه متوقف شود؟"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"توقف اجباری یک برنامه ممکن است باعث عملکرد نادرست آن شود."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> متوقف شده است."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"عملکرد برنامه در اولویت قرار بگیرد؟"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"این کار می‌تواند منجر به ناپایداری احتمالی سیستم یا تأثیرات سخت‌افزاری بلندمدت شود. می‌خواهید ادامه دهید؟"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"بله"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"به‌روزرسانی‌های سیستم"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"پیشرفته"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"درباره، اطلاعات حقوقی، بازنشانی، و غیره"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"بازراه‌اندازی سیستم اطلاعات-سرگرمی"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"بازراه‌اندازی سیستم اطلاعات-سرگرمی خودرو می‌تواند چند دقیقه طول بکشد. می‌خواهید ادامه دهید؟"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"ادامه"</string>
     <string name="firmware_version" msgid="8491753744549309333">"نسخه Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"سطح وصله امنیتی Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"مدل و سخت‌افزار"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"گزینه‌های تولیدکننده"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"بازنشانی گزینه‌ها"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"شبکه، برنامه‌ها یا بازنشانی دستگاه"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"بازنشانی شبکه"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"با این کار همه تنظیمات شبکه بازنشانی می‌شود، ازجمله:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"بازنشانی Wi-Fi و بلوتوث"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"با این کار، تنظیمات Wi-Fi و بلوتوث بازنشانی می‌شوند و حافظه اتصال قبلی این موارد پاک می‌شود:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"شبکه‌ها و گذرواژه‌های Wi-Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"داده تلفن همراه"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"بلوتوث"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"تلفن‌ها و دیگر دستگاه‌های بلوتوث"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"پاک کردن همه سیم‌کارت‌های داخلی خودرو"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"با این کار طرح سرویستان لغو نمی‌شود."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"نمی‌توان سیم‌کارت‌های داخلی را بازنشانی کرد"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{باید کمتر از # رقم باشد}one{باید کمتر از # رقم باشد}other{باید کمتر از # رقم باشد}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ترتیب صعودی، نزولی یا تکراری ارقام مجاز نیست"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"گزینه‌های قفل صفحه"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> روز پیش"</string>
     <string name="credentials_reset" msgid="873900550885788639">"پاک کردن اطلاعات اعتباری"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"حذف تمام گواهی‌ها"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"همه محتوا حذف شود؟"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"خروج از حالت نمایشی"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"رد کردن"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"این ویژگی هنگام رانندگی در دسترس نیست"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"از راننده بخواهید تنظیم را تغییر دهد"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"نمی‌توانید این کنش را انجام دهید"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"نمی‌توان هنگام رانندگی نمایه اضافه کرد"</string>
     <string name="default_search_query" msgid="3137420627428857068">"جستجو"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"«دستیار» و صدا"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"افزودن یک نمایه"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"حذف کردن این نمایه"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"افزودن نمایه"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"فعلاً این نمایه به‌عنوان راننده وارد شده است. وقتی از نمایه به‌عنوان راننده استفاده نمی‌شود امتحان کنید."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"روشنایی نمایشگر"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"برای دیدن دستگاه‌ها، بلوتوث را روشن کنید"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"برای جفت کردن دستگاه، تنظیمات بلوتوث را باز کنید"</string>

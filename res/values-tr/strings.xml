@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Uyarlanabilir parlaklık"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Ekran parlaklığını ortama göre ayarla"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Gece Işığı açık"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Gece modu"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Ağ ve internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobil ağ"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Eşleme isteği"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ile eşlemek için dokunun."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth cihazı seçin"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Medya"</string>
     <string name="language_settings" msgid="2079258598337245546">"Diller"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Diller ve giriş"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Önerilen"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Uygulama izinleri"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Verilere uygulama erişimini denetleyin"</string>
     <string name="applications_settings" msgid="794261395191035632">"Uygulama bilgileri"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Zorla durdur"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Zorla durdurulsun mu?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Uygulamayı durdur"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Uygulama durdurulsun mu?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Uygulama zorla durdurulursa hatalı davranabilir."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> durduruldu."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Uygulama performansına öncelik verilsin mi?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Bu ayarın açılması, sistem kararsızlıklarına veya donanım üzerinde uzun süreli etkiye sebep olabilir. Devam etmek istiyor musunuz?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Evet"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistem güncellemeleri"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Gelişmiş"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Hakkında, yasal bilgiler, sıfırlama ve diğer ayarlar"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Bilgi-eğlence sistemini yeniden başlatın"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Arabanızın bilgi-eğlence sistemini yeniden başlatmak birkaç dakika sürebilir. Devam etmek istiyor musunuz?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Devam"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android sürümü"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android güvenlik yaması düzeyi"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Model ve donanım"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Geliştirici seçenekleri"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Sıfırlama seçenekleri"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Ağı, uygulamaları veya cihazı sıfırlama"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Ağı sıfırla"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Bu işlem, şunlar dahil tüm ağ ayarlarını sıfırlayacak:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Kablosuz"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Kablosuz ağı ve Bluetooth\'u sıfırla"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Bu işlem, kablosuz ağ ve Bluetooth ayarlarını sıfırlayarak daha önce bağlanan cihazların belleğini kaldıracaktır:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Kablosuz ağlar ve şifreler"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobil veri"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefonlar ve diğer Bluetooth cihazlar"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Tüm araç eSIM\'lerini sil"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Bu işlem, hizmet planınızı iptal etmez."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM\'ler sıfırlanamıyor"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{En çok # haneli olmalıdır}other{En çok # haneli olmalıdır}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Artan, azalan veya tekrar eden rakam dizisine izin verilmiyor"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekran kilidi seçenekleri"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> gün önce"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Kimlik bilgilerini temizle"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Tüm sertifikaları kaldır"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Tüm içerik kaldırılsın mı?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan çık"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"KAPAT"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Sürüş sırasında bu özellik kullanılamaz"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Sürücüden ayarı değiştirmesini isteyin"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Bu işlemi gerçekleştiremezsiniz"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Sürüş sırasında kullanıcı eklenemez"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Ara"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistan ve ses"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profil ekle"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Bu profili sil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profil ekle"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Bu profil şu anda sürücü olarak oturum açtı. Profil sürücü olarak kullanılmadığında tekrar deneyin."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ekran parlaklığı"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Cihazlarınızı görmek için Bluetooth\'u açın"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Cihaz eşlemek için Bluetooth ayarlarını açın"</string>

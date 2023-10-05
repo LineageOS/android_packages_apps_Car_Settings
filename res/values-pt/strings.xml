@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brilho adaptável"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajustar o brilho da tela para o ambiente"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"O Modo noturno está ativado"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Modo noturno"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rede e Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rede móvel"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# chip}one{# chip}other{# chips}}"</string>
@@ -139,7 +138,7 @@
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Ativar a \"busca por Wi‑Fi\"?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Ativar"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Busca por Wi‑Fi ativada"</string>
-    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Alternar para dados móveis automaticamente"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Mudar para dados móveis automaticamente"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Usar dados móveis quando o Wi-Fi perder o acesso à Internet. Cobranças de dados podem ser aplicadas."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Encontrar redes Wi-Fi e conectar"</string>
     <string name="learn_more" msgid="8214605928933358604">"Saiba mais"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitação de pareamento"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toque para parear com <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Escolher dispositivo Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Smartphone"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Mídia"</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas e entrada"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugestões"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Permissões do app"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Controlar acesso de apps aos seus dados"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informações do app"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Forçar fechamento"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Forçar fechamento?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Parar o app"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Parar o app?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Se você forçar o fechamento de um app, ele poderá apresentar mau funcionamento."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"O app <xliff:g id="APP_NAME">%1$s</xliff:g> foi parado."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Priorizar o desempenho do app?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Isso pode causar instabilidade no sistema ou impacto de longo prazo no hardware. Continuar?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Sim"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Atualizações do sistema"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Avançadas"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Sobre, informações legais, redefinir e mais"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Reiniciar o sistema de infoentretenimento"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"A reinicialização do sistema de infoentretenimento do carro pode levar alguns minutos. Continuar?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Continuar"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versão do Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nível do patch de segurança do Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Modelo e hardware"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opções do desenvolvedor"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opções de redefinição"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Redefinição de rede, apps ou dispositivo"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Redefinir rede"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Isso redefinirá todas as configurações de rede, incluindo:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Redefinir Wi-Fi e Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Esta ação vai redefinir as configurações de Wi-Fi e Bluetooth, removendo a memória das conexões anteriores:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Senhas e redes Wi-Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Dados móveis"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Smartphones e outros dispositivos Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Limpar todos os eSIMs do veículo"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Essa ação não cancelará seu plano de serviços."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Não é possível redefinir os eSIMs"</string>
@@ -710,13 +716,12 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Precisa ter menos de # dígito}one{Precisa ter menos de # dígito}other{Precisa ter menos de # dígitos}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Não é permitido usar uma sequência de dígitos em ordem crescente, decrescente ou repetidos"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opções de bloqueio de tela"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> dias atrás"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Limpar credenciais"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Remover todos os certificados"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Remover todo o conteúdo?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Armazenamento de credenciais apagado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Armazenamento de credenciais não apagado."</string>
-    <string name="forget" msgid="3971143908183848527">"Ignorar"</string>
+    <string name="forget" msgid="3971143908183848527">"Esquecer"</string>
     <string name="connect" msgid="5861699594602380150">"Conectar"</string>
     <string name="disconnect" msgid="6140789953324820336">"Desconectar"</string>
     <string name="delete_button" msgid="5840500432614610850">"Excluir"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Sair da demonstração"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"DISPENSAR"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Recurso não disponível enquanto você dirige"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Solicitar que o motorista mude a configuração"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Não é possível realizar esta ação"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Não é possível adicionar perfis enquanto você dirige"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Pesquisa"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistente e Voice"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Adicionar um perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Excluir este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Adicionar perfil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"O perfil foi acessado como motorista. Tente outra vez quando o perfil não estiver nessa função."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brilho da tela"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver seus dispositivos, ative o Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para parear um dispositivo, abra as configurações do Bluetooth"</string>

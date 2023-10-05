@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillantor adaptativa"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajusta la brillantor de la pantalla a l\'entorn"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Llum nocturna activada"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Mode nocturn"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Xarxa i Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Xarxa mòbil"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# targeta SIM}other{# targetes SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Sol·licitud de vinculació"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca per vincular el dispositiu amb <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Tria un dispositiu Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telèfon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Multimèdia"</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomes"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomes i introducció de text"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Suggerits"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Permisos d\'aplicacions"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Controla l\'accés de les aplicacions a les teves dades"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informació de les aplicacions"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Força l\'aturada"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vols forçar l\'aturada?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Atura l\'aplicació"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Vols aturar l\'aplicació?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Si forces l\'aturada d\'una aplicació, és possible que no funcioni correctament."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> s\'ha aturat."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Vols prioritzar el rendiment de l\'app?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Això pot provocar inestabilitat al sistema o afectar el maquinari a llarg termini. Vols continuar?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Sí"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualitzacions del sistema"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Configuració avançada"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Informació sobre el dispositiu, informació legal, restabliment de les dades de fàbrica i més"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Reinicia el sistema d\'informació i entreteniment"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Reiniciar el sistema d\'informació i entreteniment del cotxe pot tardar uns quants minuts. Vols continuar?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Continua"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versió d\'Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nivell de pedaç de seguretat d\'Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Model i maquinari"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opcions per a desenvolupadors"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opcions de restabliment"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Restabliment de la xarxa, de les aplicacions o del dispositiu"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Restableix la xarxa"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Es restablirà tota la configuració de la xarxa, com ara les opcions següents:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Restableix la Wi‑Fi i el Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Això restablirà la configuració de la Wi‑Fi i el Bluetooth, fet que suprimirà la memòria de les connexions anteriors:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Contrasenyes i xarxes Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Dades mòbils"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telèfons i altres dispositius Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Esborra totes les eSIM del vehicle"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Aquesta acció no cancel·larà el teu pla de servei."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"No es poden restablir les eSIM"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Ha de tenir menys d’# dígit}other{Ha de tenir menys de # dígits}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"No es permet cap seqüència de dígits ascendents, descendents ni repetits"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcions de bloqueig de pantalla"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: fa <xliff:g id="NUM_DAYS">%3$s</xliff:g> dies"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Esborrar les credencials"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Suprimeix tots els certificats"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Vols suprimir tots els continguts?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Surt de la demostració"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORA"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Aquesta funció no està disponible mentre condueixes"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Sol·licita al conductor que canviï l\'opció de configuració"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"No pots dur a terme aquesta acció"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"No pots afegir perfils mentre condueixes"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Cerca"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent i veu"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Afegeix un perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Suprimeix aquest perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Afegeix un perfil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Aquest perfil té la sessió iniciada com a conductor. Torna-hi quan el conductor no utilitzi el perfil."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brillantor de la pantalla"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Per veure els teus dispositius, activa el Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Per vincular un dispositiu, obre la configuració del Bluetooth"</string>

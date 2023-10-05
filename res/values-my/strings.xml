@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"အလိုက်သင့် တောက်ပမှု"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ဖန်သားပြင်တောက်ပမှုကို ပတ်ဝန်းကျင်နှင့် ချိန်ညှိနိုင်သည်"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"\'ညအလင်းရောင်\' ကို ဖွင့်ထားသည်"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"ညသုံးမုဒ်"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ကွန်ရက်နှင့် အင်တာနက်"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"မိုဘိုင်းကွန်ရက်"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{ဆင်းမ် # ကတ်}other{ဆင်းမ် # ကတ်}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> နှင့် တွဲချိတ်ရန် တို့ပါ။"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ဘလူးတုသ် စက်ကိရိယာကို ရွေးပါ"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"ဘလူးတုသ်"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"ဖုန်း"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"မီဒီယာ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ဘာသာစကားများ"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ဘာသာစကားနှင့် ထည့်သွင်းမှုစနစ်"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"အကြံပြုထားသည်"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"အက်ပ်ခွင့်ပြုချက်များ"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"အက်ပ်၏ သင့်ဒေတာအသုံးပြုခွင့်ကို ထိန်းချုပ်ရန်"</string>
     <string name="applications_settings" msgid="794261395191035632">"အက်ပ်အချက်အလက်များ"</string>
-    <string name="force_stop" msgid="2153183697014720520">"ချက်ချင်း ရပ်ရန်"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"မဖြစ်မနေ ရပ်ခိုင်းမလား။"</string>
+    <string name="force_stop" msgid="1616958676171167028">"အက်ပ်ကို ရပ်ရန်"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"အက်ပ်ကို ရပ်မလား။"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"အက်ပ်ကို မဖြစ်မနေရပ်ခိုင်းလျှင် ပုံမှန် အလုပ်လုပ်တော့မည် မဟုတ်ပါ။"</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> ကိုရပ်လိုက်သည်။"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"အက်ပ်စွမ်းဆောင်ရည်ကို ဦးစားပေးမလား။"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"၎င်းသည် စနစ်မတည်ငြိမ်မှု (သို့) ရေရှည်တွင် ဟာ့ဒ်ဝဲထိခိုက်မှုကို ဖြစ်စေနိုင်သည်။ ရှေ့ဆက်လိုပါသလား။"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Yes"</string>
@@ -443,6 +446,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"စနစ်အပ်ဒိတ်များ"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"အဆင့်မြင့်"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"အကြောင်း၊ ဥပဒေဆိုင်ရာ အချက်အလက်၊ ပြင်ဆင်သတ်မှတ်ရန် စသည်"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်ကို ပြန်စရန်"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"ကား၏ သတင်းနှင့်ဖျော်ဖြေရေး စနစ်ကို ပြန်စရန် မိနစ်အနည်းငယ် ကြာနိုင်သည်။ ရှေ့ဆက်လိုပါသလား။"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"ရှေ့ဆက်ရန်"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ဗားရှင်း"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android လုံခြုံရေးပက်ချ်အဆင့်"</string>
     <string name="hardware_info" msgid="3973165746261507658">"မော်ဒယ်နှင့် စက်ပစ္စည်းဆိုင်ရာ"</string>
@@ -483,11 +489,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"ဆော့ဝဲရေးသူ ရွေးစရာများ"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"ပြင်ဆင်သတ်မှတ်ရန် ရွေးစရာများ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ကွန်ရက်၊ အက်ပ်များ (သို့) စက်ပစ္စည်း ပြင်ဆင်သတ်မှတ်ခြင်း"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"ကွန်ရက် ပြင်ဆင်သတ်မှတ်ရန်"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"၎င်းသည် အောက်ပါတို့အပါအဝင် ကွန်ရက်ဆက်တင်များအားလုံးကို ပြင်ဆင်သတ်မှတ်လိုက်ပါမည်−"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi နှင့်ဘလူးတုသ်ကို ပြင်ဆင်သတ်မှတ်ရန်"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"၎င်းက ယခင် ချိတ်ဆက်ထားသောမှတ်ဉာဏ်ကို ဖယ်ရှား၍ Wi‑Fi နှင့် ဘလူးတုသ် ဆက်တင်များအား ပြင်ဆင်သတ်မှတ်လိမ့်မည်-"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi-Fi ကွန်ရက်နှင့် စကားဝှက်များ"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"မိုဘိုင်းဒေတာ"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"ဘလူးတုသ်"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"ဖုန်းနှင့် အခြား ဘလူးတုသ်သုံးစက်များ"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"ယာဉ် eSIM အားလုံးကို ဖျက်ပါ"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"၎င်းက သင်၏ ဝန်ဆောင်မှုအစီအစဉ်ကို ပယ်ဖျက်မည်မဟုတ်ပါ။"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM များ ပြင်ဆင်သတ်မှတ်၍မရပါ"</string>
@@ -711,7 +717,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{ဂဏန်း # လုံးထက် နည်းရမည်}other{ဂဏန်း # လုံးထက် နည်းရမည်}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ငယ်စဉ်ကြီးလိုက်၊ ကြီးစဉ်ငယ်လိုက် သို့မဟုတ် ထပ်နေသည့် နံပါတ်စဉ်များကို ခွင့်မပြုပါ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"မျက်နှာပြင်လော့ခ်ချခြင်း ရွေးချယ်စရာများ"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> - လွန်ခဲ့သော <xliff:g id="NUM_DAYS">%3$s</xliff:g> ရက်"</string>
     <string name="credentials_reset" msgid="873900550885788639">"အထောက်အထားများကို ရှင်းလင်းခြင်း"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"အသိအမှတ်ပြုလက်မှတ်အားလုံးကို ဖယ်ရှားရန်"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"အကြောင်းအရာအားလုံးကို ဖယ်ရှားမလား။"</string>
@@ -734,6 +739,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"သရုပ်ပြမှ ထွက်ရန်"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ပယ်ရန်"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ကားမောင်းနေစဉ် ဝန်ဆောင်မှု မရနိုင်ပါ"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ဆက်တင်ပြောင်းပေးရန် ယာဉ်မောင်းအား တောင်းဆိုပါ"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"ဤလုပ်ဆောင်ချက်ကို ဆောင်ရွက်၍မရပါ"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ကားမောင်းနေစဉ် ပရိုဖိုင်ကို ထည့်၍မရပါ"</string>
     <string name="default_search_query" msgid="3137420627428857068">"ရှာရန်"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant နှင့် Voice"</string>
@@ -749,6 +756,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ပရိုဖိုင် ထည့်ရန်"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ဤပရိုဖိုင်ကို ဖျက်ရန်"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ပရိုဖိုင် ထည့်ရန်"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ဤပရိုဖိုင်သည် မောင်းသူအဖြစ် လက်ရှိ လက်မှတ်ထိုးဝင်ထားသည်။ မောင်းသူအဖြစ် ပရိုဖိုင် မသုံးချိန်၌ ပြန်စမ်းပါ။"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"မျက်နှာပြင် တောက်ပမှု"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"သင့်စက်များကို တွေ့နိုင်ရန် ဘလူးတုသ်ဖွင့်ပါ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"စက်နှင့်တွဲချိတ်ရန် ဘလူးတုသ် ဆက်တင်များကို ဖွင့်ပါ"</string>

@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"自動調整亮度"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"根據環境調整螢幕亮度"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"夜燈模式已開啟"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"夜間模式"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"網路和網際網路"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"行動網路"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# 張 SIM 卡}other{# 張 SIM 卡}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"配對要求"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"輕觸即可與「<xliff:g id="DEVICE_NAME">%1$s</xliff:g>」配對。"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"選擇藍牙裝置"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"藍牙"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"電話"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"媒體"</string>
     <string name="language_settings" msgid="2079258598337245546">"語言"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"語言與輸入設定"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"建議"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"應用程式權限"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"控管可存取資料的應用程式"</string>
     <string name="applications_settings" msgid="794261395191035632">"應用程式資訊"</string>
-    <string name="force_stop" msgid="2153183697014720520">"強制停止"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"要強制停止嗎？"</string>
+    <string name="force_stop" msgid="1616958676171167028">"停止應用程式"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"要停止應用程式嗎？"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"如果你強制停止應用程式，應用程式可能無法正常運作。"</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」已停止。"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"要開啟應用程式效能優先設定嗎？"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"這麼做可能會導致系統不穩定，長期下來可能會對硬體造成影響。要繼續嗎？"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"是"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"系統更新"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"進階"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"關於、法律資訊、重設和其他設定"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"重新啟動資訊娛樂系統"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"重新啟動車輛資訊娛樂系統可能需要幾分鐘的時間。要繼續嗎？"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"繼續"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 版本"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 安全性修補程式等級"</string>
     <string name="hardware_info" msgid="3973165746261507658">"型號與硬體"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"開發人員選項"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"重設選項"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"重設網路、應用程式或裝置"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"重設網路"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"這麼做會重設所有網路設定，包括："</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"重設 Wi‑Fi 和藍牙"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"這麼做會重設 Wi‑Fi 和藍牙設定，並移除先前的連線記錄："</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi 網路和密碼"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"行動數據"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"藍牙"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"手機和其他藍牙裝置"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"清除所有車輛的 eSIM 卡"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"這項操作不會取消你的服務方案。"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"無法重設 eSIM 卡"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{必須少於 # 位數}other{必須少於 # 位數}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"不允許使用依遞增或遞減順序排列或是重複的一串數字"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"螢幕鎖定選項"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除憑證"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有憑證"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有內容嗎？"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"結束示範模式"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"關閉"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"開車時無法使用這項功能"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"請要求駕駛變更設定"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"無法執行這項動作"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"開車時無法新增設定檔"</string>
     <string name="default_search_query" msgid="3137420627428857068">"搜尋"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和語音功能"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"新增設定檔"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"刪除這個設定檔"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"新增設定檔"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"這個設定檔目前已使用駕駛的身分登入。請在設定檔並非以駕駛身分使用時再試一次。"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"螢幕亮度"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"裝置必須開啟藍牙，才會顯示在畫面上"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"如要配對裝置，請開啟藍牙設定"</string>

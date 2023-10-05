@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Дасан зохицох боломжтой гэрэлтүүлэг"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Дэлгэцийн гэрэлтүүлгийг орчинтой тохируулах"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Шөнийн гэрэл асаалттай байна"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Шөнийн горим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Сүлжээ &amp; интернэт"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобайл сүлжээ"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Хослуулах хүсэлт"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-тай хослуулахын тулд товшино уу."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth төхөөрөмж сонгох"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Утас"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Медиа"</string>
     <string name="language_settings" msgid="2079258598337245546">"Хэл"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Хэл &amp; оролт"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Санал болгосон"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Аппын зөвшөөрөл"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Өгөгдлийнхөө аппын хандалтыг хянах"</string>
     <string name="applications_settings" msgid="794261395191035632">"Аппын мэдээлэл"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Хүчээр зогсоох"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Хүчээр зогсоох уу?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Аппыг зогсоох"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Аппыг зогсоох уу?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Та аппыг хүчээр зогсоосон тохиолдолд энэ нь буруу ажиллаж болзошгүй."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g>-г зогсоосон."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Аппын гүйцэтгэлийг эрэмбэлэх үү?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Энэ нь системийг тогтворгүй болгох эсвэл техник хангамжид урт хугацаанд нөлөөлж магадгүй. Та үргэлжлүүлэхийг хүсэж байна уу?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Тийм"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системийн шинэчлэлт"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Дэвшилтэт"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Тухай, хуулийн мэдээлэл, шинэчлэх болон бусад"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Инфотэйнмент системийг дахин эхлүүлэх"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Таны машины инфотэйнмент системийг дахин эхлүүлэхэд хэдэн минут зарцуулж болно. Та үргэлжлүүлэхийг хүсэж байна уу?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Үргэлжлүүлэх"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Андройд хувилбар"</string>
     <string name="security_patch" msgid="4794276590178386903">"Андройдын аюулгүй байдлын засварын түвшин"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Загвар, техник хангамж"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Хөгжүүлэгчийн тохиргоо"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Сонголтыг шинэчлэх"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Сүлжээ, апп эсвэл төхөөрөмжийг шинэчлэх"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Сүлжээг шинэчлэх"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Энэ нь сүлжээний бүх тохиргоог шинэчлэх бөгөөд үүнд дараах багтана:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi болон Bluetooth-г шинэчлэх"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Энэ нь Wi‑Fi болон Bluetooth тохиргоог шинэчилж, өмнө нь холбогдсон санах ойг хасна:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi-Fi сүлжээ болон нууц үг"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобайл дата"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Утас болон бусад Bluetooth төхөөрөмж"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Бүх тээврийн хэрэгслийн eSIMs-г устгах"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Энэ таны үйлчилгээний багцыг цуцлахгүй."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM-г шинэчлэх боломжгүй байна"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# цифрээс цөөн байх ёстой}other{# цифрээс цөөн байх ёстой}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Өсөж буй, буурч буй эсвэл давхардсан цифрийг зөвшөөрдөггүй"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Дэлгэцийн түгжээний сонголтууд"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> өдрийн өмнө"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Мандат үнэмлэх арилгах"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Бүх сертификатыг хасах"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Бүх контентыг хасах уу?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Туршилтаас гарах"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ҮЛ ХЭРЭГСЭХ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Жолоо барьж байх үед онцлог боломжгүй"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Жолоочоос тохиргоог өөрчлөхийг хүснэ үү"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Та энэ үйлдлийг гүйцэтгэх боломжгүй"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Жолоо барьж байх үед профайл нэмэх боломжгүй"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Хайх"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Туслах, дуу хоолой"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Профайл нэмэх"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Энэ профайлыг устгах"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профайл нэмэх"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Энэ профайл одоогоор жолоочоор нэвтэрсэн байна. Профайлыг жолоочоор ашиглаагүй үед дахин оролдоно уу."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Дэлгэцийн гэрэлтүүлэг"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Төхөөрөмжүүдээ харахын тулд Bluetooth-г асаана уу"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Төхөөрөмжийг хослуулахын тулд Bluetooth тохиргоог нээнэ үү"</string>

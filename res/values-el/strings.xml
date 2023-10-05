@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Προσαρμοστική φωτεινότητα"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Προσαρμογή φωτεινότητας οθόνης στο περιβάλλον"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Νυχτερινός φωτισμός ενεργός"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Νυχτερινή λειτουργία"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Δίκτυο και διαδίκτυο"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Δίκτυο κινητής τηλεφωνίας"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Αίτημα σύζευξης"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Πατήστε για σύζευξη με τη συσκευή <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Επιλέξτε συσκευή Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Τηλέφωνο"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Μέσα"</string>
     <string name="language_settings" msgid="2079258598337245546">"Γλώσσες"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Γλώσσες και είσοδος"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Προτεινόμενες"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Άδειες εφαρμογών"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Ελέγξτε την πρόσβαση των εφαρμογών στα δεδομένα σας"</string>
     <string name="applications_settings" msgid="794261395191035632">"Πληροφορίες εφαρμογής"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Αναγκαστική διακοπή"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Αναγκαστική διακοπή;"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Διακοπή εφαρμογής"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Διακοπή εφαρμογής;"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Εάν επιβάλετε τη διακοπή μιας εφαρμογής, ενδέχεται να μην λειτουργήσει σωστά."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"Η εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> διακόπηκε."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Προτεραιότητα στην απόδοση εφαρμογών;"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Αυτό μπορεί να προκαλέσει πιθανή αστάθεια συστήματος ή να έχει μακροπρόθεσμο αντίκτυπο στον εξοπλισμό. Θέλετε να συνεχίσετε;"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ναι"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ενημερώσεις συστήματος"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Σύνθετες"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Πληροφορίες, νομικές πληροφορίες, επαναφορά και άλλα"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Επανεκκίνηση συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Η επανεκκίνηση του συστήματος ενημέρωσης και ψυχαγωγίας του αυτοκινήτου μπορεί να διαρκέσει λίγα λεπτά. Θέλετε να συνεχίσετε;"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Συνέχεια"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Έκδοση Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Επίπεδο ενημέρωσης κώδικα ασφαλείας Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Μοντέλο και εξοπλισμός"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Επιλογές για προγραμματιστές"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Επαναφορά επιλογών"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Επαναφορά δικτύου, εφαρμογών ή συσκευής"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Επαναφορά δικτύου"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Με αυτήν την ενέργεια, θα γίνει επαναφορά όλων των ρυθμίσεων δικτύου, συμπεριλαμβανομένων των εξής:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Επαναφορά Wi‑Fi και Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Αυτή η ενέργεια θα επαναφέρει τις ρυθμίσεις Wi‑Fi και Bluetooth και θα καταργήσει το ιστορικό των συνδεδεμένων:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Δικτύων Wi‑Fi και κωδικών πρόσβασης"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Δεδομένα κινητής τηλεφωνίας"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Τηλεφώνων και άλλων συσκευών Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Διαγραφή όλων των eSIM του οχήματος"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Με αυτήν την ενέργεια, δεν θα ακυρωθεί το πρόγραμμα υπηρεσίας σας."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Δεν είναι δυνατή η επαναφορά eSIM"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Πρέπει να περιέχει λιγότερα από # ψηφίο.}other{Πρέπει να περιέχει λιγότερα από # ψηφία.}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Δεν επιτρέπεται η αύξουσα, φθίνουσα ή επαναλαμβανόμενη ακολουθία ψηφίων"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Επιλογές κλειδώματος οθόνης"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ημέρες πριν"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Διαγραφή διαπιστευτηρίων"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Κατάργηση όλων των πιστοποιητικών"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Να καταργηθεί όλο το περιεχόμενο;"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Έξοδος από επίδειξη"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ΠΑΡΑΒΛΕΨΗ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Η λειτουργία δεν διατίθεται κατά τη διάρκεια της οδήγησης."</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Ζητήστε από τον οδηγό να αλλάξει τη ρύθμιση"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Δεν μπορείτε να πραγματοποιήσετε αυτήν την ενέργεια"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Δεν είναι δυνατή η προσθήκη προφίλ κατά την οδήγηση."</string>
     <string name="default_search_query" msgid="3137420627428857068">"Αναζήτηση"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Βοηθός και φωνή"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Προσθέστε ένα προφίλ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Διαγραφή αυτού του προφίλ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Προσθήκη προφίλ"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Ο οδηγός είναι συνδεδεμένος στο προφίλ. Δοκιμάστε ξανά όταν το προφίλ δεν χρησιμοποιείται από τον οδηγό."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Φωτεινότητα οθόνης"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Για εμφάνιση των συσκευών σας, ενεργοποιήστε το Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Για σύζευξη μιας συσκευής, ανοίξτε τις ρυθμίσεις του Bluetooth"</string>

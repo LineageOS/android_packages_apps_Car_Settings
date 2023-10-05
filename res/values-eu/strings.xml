@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Distira egokitua"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Doitu pantailaren distira ingurunearen arabera"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Aktibatuta dago Gaueko argia"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Gau modua"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Sareak eta Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Sare mugikorra"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Parekatzeko eskaera"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Sakatu <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuarekin parekatzeko."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Aukeratu Bluetooth bidezko gailua"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetootha"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefonoa"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Multimedia-edukia"</string>
     <string name="language_settings" msgid="2079258598337245546">"Hizkuntzak"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Hizkuntzak eta idazketa"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Iradokitakoak"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Aplikazio-baimenak"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrolatu aplikazioek datuak atzitzeko duten baimena"</string>
     <string name="applications_settings" msgid="794261395191035632">"Aplikazioaren informazioa"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Behartu gelditzera"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Gelditzera behartu nahi duzu?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Gelditu aplikazioa"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Aplikazioa gelditu nahi duzu?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Aplikazioak gelditzera behartzen badituzu, baliteke behar bezala ez funtzionatzea."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"Gelditu da <xliff:g id="APP_NAME">%1$s</xliff:g>."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Aplikazioen errendimendua lehenetsi nahi duzu?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Baliteke sistema ezegonkortzea edo eginbideak epe luzerako eragina edukitzea hardwarean. Aurrera egin nahi duzu?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Bai"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistemaren eguneratzeak"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Aurreratuak"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Sistemari buruz, legezko informazioa, berrezartzea eta beste"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Berrabiarazi autoko informazio- eta aisia-sistema"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Minutu batzuk beharko dira autoaren informazio- eta aisia-sistema berrabiarazteko. Aurrera egin nahi duzu?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Egin aurrera"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-en bertsioa"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android-en segurtasun-adabakiaren maila"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Modeloa eta hardwarea"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Garatzaileentzako aukerak"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Berrezartzeko aukerak"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Sarea, aplikazioak edo gailua berrezartzea"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Berrezarri sarea"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Sareko ezarpen guztiak berrezarriko dira; besteak beste:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wifi‑konexioa"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Berrezarri wifiaren eta Bluetootharen ezarpenak"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Wifiaren eta Bluetootharen ezarpenak berrezarriko dira; aurrez konektatutako gailu hauen memoria kentzen:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wifi-sareak eta pasahitzak"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Datu-konexioa"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetootha"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefonoak eta Bluetooth bidezko beste gailu batzuk"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Ezabatu ibilgailuaren eSIM txarteletako eduki guztia"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Ez da utziko bertan behera daukazun zerbitzu-plana."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Ezin dira berrezarri eSIM txartelak"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# zenbaki baino gutxiago eduki behar du}other{# zenbaki baino gutxiago eduki behar ditu}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Ezin da erabili goranzko, beheranzko edo errepikatutako digitu-sekuentziarik"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Pantaila blokeatzeko aukerak"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: duela <xliff:g id="NUM_DAYS">%3$s</xliff:g> egun"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Garbitu kredentzialak"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Kendu ziurtagiri guztiak"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Eduki guztiak kendu nahi dituzu?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Irten demo modutik"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BAZTERTU"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Eginbide hau ezin da erabili gidatu bitartean"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Eskatu gidariari ezarpenak aldatzeko"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Ezin duzu gauzatu ekintza hori"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Gidatu bitartean ezin da gehitu profilik"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Bilatu"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Laguntzailea eta ahotsa"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Gehitu profil bat"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Ezabatu profila"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Gehitu profila"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Gidari gisa hasi da saioa profil honekin. Saiatu berriro profila gidari gisa erabiltzen ari ez denean."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Bistaratu distira"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktibatu Bluetootha gailuak ikusteko"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ireki Bluetootharen ezarpenak gailu batekin parekatzeko"</string>

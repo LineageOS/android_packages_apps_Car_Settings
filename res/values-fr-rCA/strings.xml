@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosité adaptative"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Réglez la luminosité de l\'écran à l\'environnement"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Éclairage nocturne activé"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Mode Nuit"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Réseau et Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Réseau cellulaire"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# carte SIM}one{# carte SIM}other{# cartes SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Demande d\'association"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Touchez pour associer à <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Sélectionner un appareil Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Téléphone"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Contenu multimédia"</string>
     <string name="language_settings" msgid="2079258598337245546">"Langues"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Langues et modes d\'entrée"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Suggérées"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Autorisations de l\'application"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Gérez l\'accès des applications à vos données"</string>
     <string name="applications_settings" msgid="794261395191035632">"Détails de l\'application"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Forcer l\'arrêt"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Voulez-vous forcer l\'arrêt?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Arrêter l\'application"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Arrêter l\'application?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"L\'arrêt forcé d\'une application peut provoquer un fonctionnement instable."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> s\'est arrêté."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Prioriser la performance de l\'appli?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Cela peut engendrer une instabilité système ou avoir un effet à long terme sur le matériel. Voulez-vous continuer?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Oui"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour du système"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Avancé"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"À propos, renseignements légaux, réinitialisation et plus"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Redémarrer le système d\'infodivertissement"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Le redémarrage du système d\'infodivertissement de votre voiture peut prendre quelques minutes. Voulez-vous continuer?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Continuer"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Version d\'Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Niveau du correctif de sécurité Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Modèle et matériel"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Options pour les développeurs"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Options de réinitialisation"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Réseau, applications ou réinitialisation de l\'appareil"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Réinitialiser le réseau"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Cette opération réinitialisera tous les paramètres réseau, y compris les suivants :"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Réinitialiser le Wi-Fi et le Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Cette action réinitialisera les paramètres Wi-Fi et Bluetooth, retirant de la mémoire ce qui était précédemment connecté tel que :"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"le réseau et les mots de passe Wi-Fi."</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Données cellulaires"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"les téléphones et autres appareils Bluetooth;"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Effacer toutes les cartes eSIM du véhicule"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Cette action n\'annulera pas votre forfait."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Impossible de réinitialiser les cartes eSIM"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Doit contenir moins de # chiffre}one{Doit contenir moins de # chiffre}other{Doit contenir moins de # chiffres}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Les suites croissantes, décroissantes ou répétitives de chiffres ne sont pas autorisées"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Effacer les authentifiants"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Retirer tous les certificats"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Voulez-vous retirer l\'intégralité du contenu?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Quitter le mode démo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORER"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Cette fonctionnalité n\'est pas accessible durant la conduite"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Demandez au conducteur de modifier le paramètre"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Vous ne pouvez pas effectuer cette action"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Impossible d\'ajouter un profil durant la conduite"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Recherche"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant et voix"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Ajouter un profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Supprimer ce profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Ajouter un profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Ce profil est actuellement connecté en tant que conducteur. Réessayez lorsque le profil n\'a pas ce rôle."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Luminosité de l\'écran"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Pour afficher vos appareils, activez le Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Pour associer un appareil, ouvrez les paramètres Bluetooth"</string>

@@ -60,6 +60,42 @@ public final class EnterpriseDisclosurePreferenceControllerTest extends
     }
 
     @Test
+    public void testNoDeviceOwnerComponent_noDisclosure_zoneWrite() {
+        mockNoDeviceOwner();
+
+        mEnterpriseDisclosurePreferenceController.setAvailabilityStatusForZone("write");
+        mEnterpriseDisclosurePreferenceController.updateState(mPreference);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mEnterpriseDisclosurePreferenceController.getAvailabilityStatus(),
+                DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testNoDeviceOwnerComponent_noDisclosure_zoneRead() {
+        mockNoDeviceOwner();
+
+        mEnterpriseDisclosurePreferenceController.setAvailabilityStatusForZone("read");
+        mEnterpriseDisclosurePreferenceController.updateState(mPreference);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mEnterpriseDisclosurePreferenceController.getAvailabilityStatus(),
+                DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testNoDeviceOwnerComponent_noDisclosure_zoneHidden() {
+        mockNoDeviceOwner();
+
+        mEnterpriseDisclosurePreferenceController.setAvailabilityStatusForZone("hidden");
+        mEnterpriseDisclosurePreferenceController.updateState(mPreference);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mEnterpriseDisclosurePreferenceController.getAvailabilityStatus(),
+                DISABLED_FOR_PROFILE);
+    }
+
+    @Test
     public void testOrganizationNameAbsent_genericDisclosure() {
         mockDeviceOwner();
         mockOrganizationName(null);

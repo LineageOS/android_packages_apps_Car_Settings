@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"밝기 자동 조절"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"화면 밝기를 환경에 맞게 조정"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"야간 조명 켜짐"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"야간 모드"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"네트워크 및 인터넷"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"모바일 네트워크"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{SIM #개}other{SIM #개}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"페어링 요청"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>에 페어링하려면 탭하세요."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"블루투스 기기 선택"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"블루투스"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"전화"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"미디어"</string>
     <string name="language_settings" msgid="2079258598337245546">"언어"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"언어 및 입력"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"추천"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"앱 권한"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"내 데이터에 대한 앱 액세스 권한 제어"</string>
     <string name="applications_settings" msgid="794261395191035632">"앱 정보"</string>
-    <string name="force_stop" msgid="2153183697014720520">"강제 종료"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"강제 종료하시겠습니까?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"앱 종료"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"앱을 종료하시겠습니까?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"앱을 강제 종료하면 예기치 않은 오류가 발생할 수 있습니다."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> 앱이 종료되었습니다."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"앱 성능 우선순위를 지정하시겠습니까?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"잠재적으로 시스템이 불안정해지거나 장기적인 하드웨어 문제가 발생할 수 있습니다. 계속하시겠습니까?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"예"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"시스템 업데이트"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"고급"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"정보, 법률 정보, 초기화 등"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"인포테인먼트 시스템을 다시 시작합니다"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"차량 인포테인먼트 시스템을 다시 시작하려면 몇 분이 걸릴 수 있습니다. 계속하시겠습니까?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"계속"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 버전"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 보안 패치 수준"</string>
     <string name="hardware_info" msgid="3973165746261507658">"모델 및 하드웨어"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"개발자 옵션"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"옵션 재설정"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"네트워크, 앱, 기기 재설정"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"네트워크 초기화"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"다음을 포함한 모든 네트워크 설정을 초기화합니다."</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi 및 블루투스 재설정"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Wi‑Fi 및 블루투스 설정이 재설정되며 이전에 연결됐던 내역은 삭제됩니다."</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi-Fi 네트워크 및 비밀번호"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"모바일 데이터"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"블루투스"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"휴대전화 및 기타 블루투스 기기"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"모든 자동차 eSIM 삭제"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"서비스 요금제는 취소되지 않습니다."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM을 재설정할 수 없음"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{#자리 미만이어야 합니다.}other{#자리 미만이어야 합니다.}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"연속으로 올라가거나 내려가는 숫자 또는 반복되는 숫자의 배열은 허용되지 않습니다."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"화면 잠금 옵션"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g>일 전"</string>
     <string name="credentials_reset" msgid="873900550885788639">"사용자 인증 정보 삭제"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"모든 인증서 삭제"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"콘텐츠를 모두 삭제하시겠습니까?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"데모 종료"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"닫기"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"운전 중에 사용할 수 없는 기능입니다."</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"운전자에게 설정 변경을 요청하세요."</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"이 작업을 실행할 수 없습니다."</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"운전 중에는 프로필을 추가할 수 없습니다."</string>
     <string name="default_search_query" msgid="3137420627428857068">"검색"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"어시스턴트 및 음성"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"프로필 추가"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"이 프로필 삭제"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"프로필 추가"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"이 프로필은 운전자로 로그인된 상태입니다. 운전자가 프로필을 사용하지 않을 때 다시 시도해 보세요."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"디스플레이 밝기"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"기기를 표시하려면 블루투스를 사용 설정하세요."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"기기를 페어링하려면 블루투스 설정을 여세요."</string>

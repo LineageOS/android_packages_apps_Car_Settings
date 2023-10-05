@@ -72,7 +72,7 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
 
     @Before
     @UiThreadTest
-    public void setUp() {
+    public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
 
@@ -141,7 +141,11 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_AdasAppWithLocationPermission_showApp() {
+    public void refreshUi_multipleAdasAppWithLocationPermission() {
+        PackageTagsList list =
+                new PackageTagsList.Builder().add("testApp1").add("testApp2").build();
+        when(mLocationManager.getAdasAllowlist()).thenReturn(list);
+
         when(mPackageManager.checkPermission(
                         eq(Manifest.permission.ACCESS_COARSE_LOCATION), anyString()))
                 .thenReturn(PackageManager.PERMISSION_GRANTED);
@@ -150,7 +154,7 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
                 .thenReturn(PackageManager.PERMISSION_GRANTED);
 
         mPreferenceController.refreshUi();
-        assertThat(mPreference.getPreferenceCount()).isEqualTo(1);
+        assertThat(mPreference.getPreferenceCount()).isEqualTo(2);
     }
 
     @Test
@@ -177,18 +181,6 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
                         eq(Manifest.permission.ACCESS_COARSE_LOCATION), anyString()))
                 .thenReturn(PackageManager.PERMISSION_GRANTED);
 
-        when(mContext.getPackageManager()).thenReturn(mPackageManager);
-
-        ApplicationInfo appInfo = new ApplicationInfo();
-        Bundle bundle = new Bundle();
-        appInfo.metaData = bundle;
-        bundle.putCharSequence(
-                "privacy_policy",
-                "https://developer.android.com/guide/topics/manifest/meta-data-element");
-
-        when(mPackageManager.getApplicationInfoAsUser(any(), anyInt(), anyInt()))
-                .thenReturn(appInfo);
-
         mPreferenceController.refreshUi();
         CarUiTwoActionTextPreference perf =
                 (CarUiTwoActionTextPreference) mPreference.getPreference(0);
@@ -207,8 +199,6 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
         when(mPackageManager.checkPermission(
                         eq(Manifest.permission.ACCESS_COARSE_LOCATION), anyString()))
                 .thenReturn(PackageManager.PERMISSION_GRANTED);
-
-        when(mContext.getPackageManager()).thenReturn(mPackageManager);
 
         ApplicationInfo appInfo = new ApplicationInfo();
         Bundle bundle = new Bundle();
@@ -232,8 +222,6 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
                         eq(Manifest.permission.ACCESS_COARSE_LOCATION), anyString()))
                 .thenReturn(PackageManager.PERMISSION_GRANTED);
 
-        when(mContext.getPackageManager()).thenReturn(mPackageManager);
-
         ApplicationInfo appInfo = new ApplicationInfo();
         when(mPackageManager.getApplicationInfoAsUser(any(), anyInt(), anyInt()))
                 .thenReturn(appInfo);
@@ -254,8 +242,6 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
                         eq(Manifest.permission.ACCESS_COARSE_LOCATION), anyString()))
                 .thenReturn(PackageManager.PERMISSION_GRANTED);
 
-        when(mContext.getPackageManager()).thenReturn(mPackageManager);
-
         when(mPackageManager.getApplicationInfoAsUser(any(), anyInt(), anyInt()))
                 .thenThrow(new NameNotFoundException());
 
@@ -263,11 +249,15 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
         assertThat(mPreference.getPreferenceCount()).isEqualTo(0);
     }
 
-    private void initializePreference() {
-        // This test is expected to run on a device with the adaslocation on the device, because of
-        // {@link AdasPrivacyPolicyUtil#createPrivacyPolicyPreference(Context, String, UserHandle)}
-        PackageTagsList list =
-                new PackageTagsList.Builder().add("com.google.android.car.adaslocation").build();
+    private void initializePreference() throws Exception {
+        ApplicationInfo appInfo = new ApplicationInfo();
+        Bundle bundle = new Bundle();
+        appInfo.metaData = bundle;
+        bundle.putCharSequence("privacy_policy", "test App Url");
+        when(mPackageManager.getApplicationInfoAsUser(any(), anyInt(), anyInt()))
+                .thenReturn(appInfo);
+
+        PackageTagsList list = new PackageTagsList.Builder().add("testApp").build();
         when(mLocationManager.getAdasAllowlist()).thenReturn(list);
 
         mPreferenceController.onCreate(mLifecycleOwner);

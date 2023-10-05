@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Жарықтықты бейімдеу"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Экранның жарықтығын қоршаған ортаға қарай реттеу"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Түнгі жарық режимі қосулы"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Түнгі режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Желі және интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобильдік желі"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM картасы}other{# SIM картасы}}"</string>
@@ -222,10 +221,13 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Жұптау сұрауы"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> құрылғысымен жұптау үшін түртіңіз."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth құрылғысын таңдау"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Телефон"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Meдиа"</string>
     <string name="language_settings" msgid="2079258598337245546">"Тілдер"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Тілдер және енгізу"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Ұсынылған"</string>
-    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Барлық тілдер"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Барлық тіл"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Пернетақта"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Пернетақтаны басқару"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Мәтінді дыбыстау шығысы"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Қолданба рұқсаттары"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Қолданбалардың деректерді пайдалану рұқсатын басқару"</string>
     <string name="applications_settings" msgid="794261395191035632">"Қолданба ақпараты"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Қолмен тоқтату"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Қолмен тоқтатылсын ба?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Қолданбаны тоқтату"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Қолданба тоқтатылсын ба?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Қолданбаны қолмен тоқтату оның жұмысына кері әсерін тигізуі мүмкін."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы тоқтатылды."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Қолданба өнімділігін басым ету керек пе?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Бұл әрекет жүйе жұмысын тұрақсыз қылуы не жабдыққа ұзақ мерзімді әсер етуі мүмкін. Жалғастырғыңыз келе ме?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Иә"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Жүйенің жаңа нұсқалары"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Қосымша"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Сипаттама, құқықтық ақпарат, бастапқы күйге қайтару және т.б."</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Ақпараттық-сауықтық жүйені өшіріп қосу"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Көліктің ақпараттық-сауықтық жүйесін өшіріп қосу бірнеше минут алуы мүмкін. Жалғастырғыңыз келе ме?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Жалғастыру"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android нұсқасы"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android қауіпсіздік түзетуінің деңгейі"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Үлгі және жабдық"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Әзірлеуші опциялары"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Бастапқы күйге қайтару"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Желі, қолданбалар және құрылғы параметрлерін қайтару"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Желіні бастапқы күйге қайтару"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Келесілерді қоса, барлық желі параметрлері бастапқы күйіне қайтарылады:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi мен Bluetooth-ты бастапқы күйге қайтару"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Wi‑Fi мен Bluetooth параметрлері бастапқы күйге қайтарылып, бұрын жалғанған құрылғы мен желі мәліметтері өшіріледі:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi желілері мен құпия сөздері."</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Мобильдік интернет"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"телефондар мен басқа да Bluetooth құрылғылары;"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Көліктің барлық eSIM карталарының деректерін өшіру"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Қызмет жоспарынан бас тартылмайды."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM карталарын бастапқы күйіне қайтару мүмкін емес"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Ең көбі # цифр болуы керек.}other{Ең көбі # цифр болуы керек.}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Сандардың артатын, кемитін немесе қайталанатын ретіне рұқсат берілмейді"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды құлыптау опциялары"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн бұрын"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Тіркелу деректерін өшіру"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Барлық сертификаттарды өшіру"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Контент толығымен өшірілсін бе?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Деморежимнен шығу"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЖАБУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Көлік жүргізу кезінде бұл функция жұмыс істемейді."</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Жүргізушіден параметрді өзгертуді сұраңыз."</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Сіз бұл әрекетті орындай алмайсыз."</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Көлік жүргізу кезінде профиль қосу мүмкін емес"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Іздеу"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant және Voice"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Профиль қосу"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Бұл профильді жою"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профиль қосу"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Профильге жүргізуші ретінде кіріліп тұр. Профиль жүргізуші атынан пайдаланылмағанда қайталап көріңіз."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Дисплей жарықтығы"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Құрылғыларыңызды көру үшін Bluetooth-ты қосыңыз."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Құрылғыны жұптау үшін Bluetooth параметрлерін ашыңыз."</string>

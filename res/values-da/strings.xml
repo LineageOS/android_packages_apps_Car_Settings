@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Automatisk lysstyrke"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Tilpas skærmens lysstyrke til omgivelserne"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Nattelys er aktiveret"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Nattilstand"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netværk og internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilnetværk"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-kort}one{# SIM-kort}other{# SIM-kort}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Anmodning om parring"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tryk for at parre med <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Vælg Bluetooth-enhed"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefon"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Medier"</string>
     <string name="language_settings" msgid="2079258598337245546">"Sprog"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Sprog og indtastning"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Foreslået"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Apptilladelser"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Administrer dine apps\' adgang til data"</string>
     <string name="applications_settings" msgid="794261395191035632">"Appinfo"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Tving til at standse"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Vil du tvinge appen til at standse?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Stands app"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Vil du standse appen?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Hvis du tvinger en app til at standse, kan det medføre, at den ikke fungerer korrekt."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> er blevet standset."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Vil du prioritere app-ydeevnen?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Dette kan muligvis medføre, at systemet bliver ustabilt, eller have en langvarig effekt på hardwaren. Vil du fortsætte?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ja"</string>
@@ -406,7 +409,7 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokation"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Anvend lokation"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Giv visse apps adgang til din lokation"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Hvis du deaktiverer dette, fjernes adgangstilladelsen til lokation for alle apps, bortset fra de apps, der er nødvendige for at bruge førerassistance"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Hvis du deaktiverer dette, fjernes lokationstilladelse for alle apps, bortset fra de apps, der er nødvendige for at bruge førerassistance"</string>
     <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Brug lokation til førerassistance"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Bilens lokation er deaktiveret"</string>
     <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps til førerassistance har ikke lokationsadgang"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemopdateringer"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Avanceret"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Om, juridiske oplysninger, nulstilling m.m."</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Genstart infotainmentsystemet"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Det kan tage et par minutter at genstarte bilens infotainmentsystem. Vil du fortsætte?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Fortsæt"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-version"</string>
     <string name="security_patch" msgid="4794276590178386903">"Seneste sikkerhedsopdatering i Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Model og hardware"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Indstillinger for udviklere"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Nulstil valg"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Nulstilling af netværk, apps eller enhed"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Nulstil netværk"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Denne handling nulstiller alle netværksindstillingerne, bl.a.:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Nulstil Wi‑Fi og Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Dette vil nulstille indstillingerne for Wi-Fi og Bluetooth samt fjerne historikken for tidligere tilknyttede:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi-netværk og adgangskoder"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobildata"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefoner og Bluetooth-enheder"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Nulstil alle eSIM-kort til køretøjer"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Dette medfører ikke, at din serviceaftale annulleres."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM-kort kan ikke nulstilles"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Skal indeholde færre end # tal}one{Skal indeholde færre end # tal}other{Skal indeholde færre end # tal}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Stigende eller faldende talsekvens og gentagne tal er ikke tilladt"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Valgmuligheder for skærmlås"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> dage siden"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Ryd loginoplysninger"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Fjern alle certifikater"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Vil du fjerne alt indhold?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Luk demotilstand"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"AFVIS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funktionen er ikke tilgængelig, mens du kører"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Bed føreren om at ændre indstillingen"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Du kan ikke udføre denne handling"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Du kan ikke tilføje brugere, mens du kører"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Søg"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google Assistent og stemmekommandoer"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Tilføj en profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Slet denne profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Tilføj profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Denne profil bruges i øjeblikket af bilisten. Prøv igen, når profilen ikke er i brug af bilisten."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Skærmens lysstyrke"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktivér Bluetooth for at se dine enheder"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Åbn Bluetooth-indstillingerne for at parre en enhed"</string>

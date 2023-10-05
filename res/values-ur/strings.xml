@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"تغیر پذیر چمک"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"اسکرین کی چمک ماحول کے مطابق ایڈجسٹ کریں"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"نائٹ لائٹ آن ہے"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"نائٹ موڈ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"نیٹ ورک اور انٹرنیٹ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"موبائل نیٹ ورک"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIMs}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"جوڑا بنانے کی درخواست"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"‫<xliff:g id="DEVICE_NAME">%1$s</xliff:g> کے ساتھ جوڑا بنانے کیلئے تھپتھپائیں۔"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"بلوٹوتھ آلہ منتخب کریں"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"بلوٹوتھ"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"فون"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"میڈیا"</string>
     <string name="language_settings" msgid="2079258598337245546">"زبانیں"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"زبانیں اور ان پٹ"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"تجویز کردہ"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"ایپ کی اجازتیں"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"اپنے ڈیٹا تک ایپ کی رسائی کو کنٹرول کریں"</string>
     <string name="applications_settings" msgid="794261395191035632">"ایپ کی معلومات"</string>
-    <string name="force_stop" msgid="2153183697014720520">"زبردستی روکیں"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"زبردستی روکیں؟"</string>
+    <string name="force_stop" msgid="1616958676171167028">"ایپ بند کریں"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"ایپ بند کریں؟"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"اگر آپ کسی ایپ کو زبردستی روک دیتے ہیں تو یہ غلط برتاؤ کر سکتی ہے۔"</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> کو بند کر دیا گیا ہے۔"</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"ایپ کی کارکردگی کو ترجیح دیں؟"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"یہ ممکنہ نظام کے عدم استحکام یا طویل مدتی ہارڈ ویئر کے اثرات کا سبب بن سکتا ہے۔ کیا آپ جاری رکھنا چاہتے ہیں؟"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"ہاں"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"سسٹم اپ ڈیٹس"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"جدید ترین"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"کے بارے میں، قانونی معلومات، ری سیٹ کریں اور بہت کچھ"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"معلوماتی انٹرٹینمنٹ سسٹم کو ری سٹارٹ کریں"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"آپ کی کار کے معلوماتی انٹرٹینمنٹ سسٹم کو دوبارہ شروع کرنے میں چند منٹ لگ سکتے ہیں۔ کیا آپ جاری رکھنا چاہتے ہیں؟"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"جاری رکھیں"</string>
     <string name="firmware_version" msgid="8491753744549309333">"‫Android ورژن"</string>
     <string name="security_patch" msgid="4794276590178386903">"‫Android سیکیورٹی پیچ کا لیول"</string>
     <string name="hardware_info" msgid="3973165746261507658">"ماڈل اور ہارڈ ویئر"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"ڈویلپر کے اختیارات"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"ری سیٹ کے اختیارات"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"نیٹ ورک، ایپس یا آلہ کو ری سیٹ کرنا"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"نیٹ ورک کو ری سیٹ کریں"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"اس سے نیٹ ورک کی تمام ترتیبات ری سیٹ ہو جائیں گی، بشمول:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Wi-Fi اور بلوٹوتھ کو ری سیٹ کریں"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"پہلے سے منسلک میموری کو ہٹا کر یہ Wi‑Fi اور بلوٹوتھ کی ترتیبات کو ری سیٹ کر دے گا:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi نیٹ ورکس اور پاس ورڈز"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"موبائل ڈیٹا"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"بلوٹوتھ"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"فونز اور دیگر بلوٹوتھ آلات"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"گاڑی کے سبھی eSIMs کو مٹائیں"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"اس سے آپ کا سروس پلان منسوخ نہیں ہوگا۔"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIMs کو ری سیٹ نہیں کیا جا سکتا"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# ہندسے سے کم ہونا چاہیے}other{# ہندسے سے کم ہونے چاہئیں}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ہندسوں کی صعودی، نزولی یا مکرر ترتیب کی اجازت نہیں ہے"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"اسکرین لاک کے اختیارات"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> دن پہلے"</string>
     <string name="credentials_reset" msgid="873900550885788639">"اسنادات صاف کریں"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"سبھی سرٹیفیکیٹس کو ہٹائیں"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"سبھی مواد کو ہٹائیں؟"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ڈیمو سے باہر نکلیں"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"برخاست کریں"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ڈرائیونگ کے دوران یہ خصوصیت دستیاب نہیں ہے"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ڈرائیور سے ترتیب تبدیل کرنے کی درخواست کریں"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"آپ اس کارروائی کو انجام نہیں دے سکتے"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ڈرائیونگ کے دوران پروفائل کو شامل نہیں کیا جا سکتا"</string>
     <string name="default_search_query" msgid="3137420627428857068">"تلاش کریں"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"اسسٹنٹ اور آواز"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ایک پروفائل شامل کریں"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"اس پروفائل کو حذف کریں"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"پروفائل شامل کریں"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"یہ پروفائل فی الحال بطور ڈرائیور سائن ان ہے۔ جب پروفائل بطور ڈرائیور استعمال میں نہ ہو تو دوبارہ کوشش کریں۔"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ڈسپلے کی چمک"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"اپنے آلات دیکھنے کے لیے بلوٹوتھ آن کریں"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"آلے کا جوڑا بنانے کے لیے بلوٹوتھ کی ترتیبات کھولیں"</string>

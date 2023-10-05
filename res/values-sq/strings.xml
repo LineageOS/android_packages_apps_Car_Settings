@@ -24,7 +24,6 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"Ndriçimi me përshtatje"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Rregullo ndriçimin e ekranit sipas ambientit"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"\"Drita e natës\" është aktive"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"Modaliteti i natës"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rrjeti dhe interneti"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rrjeti celular"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# kartë SIM}other{# karta SIM}}"</string>
@@ -222,6 +221,9 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Kërkesa e çiftimit"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Trokit për ta çiftuar me <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Zgjidh pajisjen me Bluetooth"</string>
+    <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
+    <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"Telefoni"</string>
+    <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"Media"</string>
     <string name="language_settings" msgid="2079258598337245546">"Gjuhët"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Gjuhët dhe metodat e hyrjes"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugjeruar"</string>
@@ -305,9 +307,10 @@
     <string name="app_permissions" msgid="32799922508313948">"Lejet e aplikacionit"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Kontrollo qasjen e aplikacioneve te të dhënat e tua"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informacioni mbi aplikacionin"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Ndalo me forcë"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Të ndalohet me forcë?"</string>
+    <string name="force_stop" msgid="1616958676171167028">"Ndalo aplikacionin"</string>
+    <string name="force_stop_dialog_title" msgid="4481858344628934971">"Të ndalohet aplikacioni?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Nëse e ndalon me forcë një aplikacion, ai mund të përjetojë çrregullime në funksionim."</string>
+    <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> është ndaluar."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Të ketë përparësi performanca e apl.?"</string>
     <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Kjo mund të shkaktojë paqëndrueshmëri të mundshme të sistemit ose ndikim afatgjatë te hardueri. Dëshiron të vazhdosh?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Po"</string>
@@ -442,6 +445,9 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Përditësimet e sistemit"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Të përparuara"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Informacione, informacione ligjore, rivendosja etj."</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Rinis sistemin info-argëtues"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Rinisja e sistemit info-argëtues të makinës sate mund të zgjasë disa minuta. Dëshiron të vazhdosh?"</string>
+    <string name="continue_confirmation" msgid="1598892163951467191">"Vazhdo"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versioni i Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Niveli i korrigjimit të sigurisë së Android"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Modeli dhe hardueri"</string>
@@ -482,11 +488,11 @@
     <string name="developer_options_settings" msgid="1530739225109118480">"Opsionet e zhvilluesit"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opsionet e rivendosjes"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Rivendosja e rrjetit, aplikacioneve ose pajisjes"</string>
-    <string name="reset_network_title" msgid="1284233059990797263">"Rivendos rrjetin"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Kjo do të rivendosë të gjitha cilësimet e rrjetit, duke përfshirë:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_title" msgid="3077846909739832734">"Rivendos Wi‑Fi dhe Bluetooth"</string>
+    <string name="reset_network_desc" msgid="3332203703135823033">"Kjo do të rivendosë cilësimet e Wi-Fi dhe të Bluetooth, duke hequr memorien e lidhjeve të mëparshme:"</string>
+    <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Rrjetet Wi‑Fi dhe fjalëkalimet"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Të dhënat celulare"</li></string>
-    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefonat dhe pajisjet e tjera Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Spastro të gjitha kartat eSIM të automjetit"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Kjo nuk do të anulojë planin tënd të shërbimit."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Kartat eSIM nuk mund të rivendosen"</string>
@@ -710,7 +716,6 @@
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Duhet të ketë më pak se # shifër}other{Duhet të ketë më pak se # shifra}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsionet e kyçjes së ekranit"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ditë më parë"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Pastro kredencialet"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Hiqi të gjitha certifikatat"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Të hiqen të gjitha përmbajtjet?"</string>
@@ -733,6 +738,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Dil nga demonstrimi"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"HIQ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Veçoria nuk ofrohet gjatë drejtimit të makinës"</string>
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Kërkoji drejtuesit të ndryshojë cilësimin"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Nuk mund ta kryesh këtë veprim"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Profili nuk mund të shtohet gjatë drejtimit të makinës"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Kërko"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"\"Asistenti\" dhe zëri"</string>
@@ -748,6 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Shto një profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Fshije këtë profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Shto profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Profili është aktualisht identifikuar si shofer. Provo kur profili të mos jetë në përdorim si shofer."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ndriçimi i ekranit"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Për të parë pajisjet e tua, aktivizo Bluetooth-in"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Për të çiftuar një pajisje, hap cilësimet e Bluetooth-it"</string>
