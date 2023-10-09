@@ -136,16 +136,7 @@ public class SaveLockWorker extends Fragment {
      */
     @WorkerThread
     void saveLock() {
-        final int userId = getUserId();
-
-        // If called after setLockCredential, this will always be true
-        boolean isPatternEverChosen = getUtils().isPatternEverChosen(userId);
-
-        getUtils().setLockCredential(mEnteredCredential, mCurrentCredential, userId);
-
-        if (mEnteredCredential.isPattern() && !isPatternEverChosen) {
-            getUtils().setVisiblePatternEnabled(true, userId);
-        }
+        getUtils().setLockCredential(mEnteredCredential, mCurrentCredential, getUserId());
     }
 
     // Save chosen lock task.
