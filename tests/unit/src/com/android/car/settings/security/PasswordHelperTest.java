@@ -21,14 +21,15 @@ import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_LOW;
 import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_MEDIUM;
 import static android.app.admin.DevicePolicyManager.PASSWORD_COMPLEXITY_NONE;
 
-import static com.android.internal.widget.LockPatternUtils.CREDENTIAL_TYPE_PASSWORD_OR_PIN;
+import static com.android.internal.widget.LockPatternUtils.CREDENTIAL_TYPE_NONE;
 
-import static com.google.common.truth.Truth.assertWithMessage;
+import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
+import android.app.admin.DevicePolicyManager;
 import android.app.admin.PasswordMetrics;
 import android.content.Context;
 import android.os.UserHandle;
@@ -37,7 +38,6 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.R;
-import com.android.car.setupwizardlib.InitialLockSetupConstants.LockTypes;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockscreenCredential;
 import com.android.settingslib.utils.StringUtil;
@@ -50,12 +50,11 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import java.util.List;
-
 @RunWith(AndroidJUnit4.class)
 public final class PasswordHelperTest {
     // Never valid
     private static final String SHORT_SEQUENTIAL_PASSWORD = "111";
+    private static final String LENGTH_3_PATTERN = "123";
     // Only valid when None/Low complexity
     private static final String MEDIUM_SEQUENTIAL_PASSWORD = "22222";
     private static final String LONG_SEQUENTIAL_PASSWORD = "111111111";
@@ -65,9 +64,7 @@ public final class PasswordHelperTest {
     // Valid for all complexities
     private static final String LONG_ALPHANUMERIC_PASSWORD = "a11r1t131";
     private static final String LONG_PIN_PASSWORD = "113982125";
-
-    private static final String PASSWORD_MESSAGE = "helper.validate(%s)";
-    private static final String ERROR_MESSAGE = "helper.convertErrorCodeToMessages()";
+    private static final String LENGTH_4_PATTERN = "1234";
 
     private final Context mContext = ApplicationProvider.getApplicationContext();
     private int mUserId;
@@ -83,503 +80,229 @@ public final class PasswordHelperTest {
     @Before
     public void setUp() {
         mUserId = UserHandle.myUserId();
-        mPasswordMetrics = new PasswordMetrics(CREDENTIAL_TYPE_PASSWORD_OR_PIN);
+        mPasswordMetrics = new PasswordMetrics(CREDENTIAL_TYPE_NONE);
         when(mLockPatternUtils.getPasswordHistoryHashFactor(any(), anyInt()))
                 .thenReturn(new byte[0]);
     }
 
+    private LockscreenCredential createPassword(String password) {
+        return LockscreenCredential.createPassword(password);
+    }
+
+    private LockscreenCredential createPin(String pin) {
+        return LockscreenCredential.createPin(pin);
+    }
+
+    private LockscreenCredential createPattern(String patternString) {
+        return LockscreenCredential.createPattern(LockPatternUtils.byteArrayToPattern(
+                    patternString.getBytes()));
+    }
+
+    private String passwordTooShort(int lengthRequired) {
+        return StringUtil.getIcuPluralsString(mContext, lengthRequired,
+                R.string.lockpassword_password_too_short);
+    }
+
+    private String pinTooShort(int lengthRequired) {
+        return StringUtil.getIcuPluralsString(mContext, lengthRequired,
+                R.string.lockpassword_pin_too_short);
+    }
+
+    private String patternTooShort(int lengthRequired) {
+        return StringUtil.getIcuPluralsString(mContext, lengthRequired,
+                R.string.lockpattern_recording_incorrect_too_short);
+    }
+
+    private PasswordHelper newPasswordHelper(
+            @DevicePolicyManager.PasswordComplexity int complexity) {
+        return new PasswordHelper(mContext, mUserId, mLockPatternUtils, mPasswordMetrics,
+                complexity);
+    }
+
+    private void assertCredentialValid(@DevicePolicyManager.PasswordComplexity int minComplexity,
+            LockscreenCredential credential) {
+        PasswordHelper helper = newPasswordHelper(minComplexity);
+
+        // Test the overload of validateCredential() that doesn't require the existing credential.
+        assertThat(helper.validateCredential(credential)).isTrue();
+        assertThat(helper.getCredentialValidationErrorMessages()).isEqualTo("");
+
+        // Test the overload of validateCredential() that requires the existing credential.
+        assertThat(helper.validateCredential(credential, mExistingCredential)).isTrue();
+        assertThat(helper.getCredentialValidationErrorMessages()).isEqualTo("");
+
+    }
+
+    private void assertCredentialInvalid(@DevicePolicyManager.PasswordComplexity int minComplexity,
+            LockscreenCredential credential, String expectedError) {
+        PasswordHelper helper = newPasswordHelper(minComplexity);
+
+        // Test the overload of validateCredential() that doesn't require the existing credential.
+        assertThat(helper.validateCredential(credential)).isFalse();
+        assertThat(helper.getCredentialValidationErrorMessages()).isEqualTo(expectedError);
+
+        // Test the overload of validateCredential() that requires the existing credential.
+        assertThat(helper.validateCredential(credential, mExistingCredential)).isFalse();
+        assertThat(helper.getCredentialValidationErrorMessages()).isEqualTo(expectedError);
+    }
+
     @Test
     public void passwordComplexityNone_shortSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_NONE);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                SHORT_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 4,
-                R.string.lockpassword_password_too_short);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PASSWORD,
-                        /* credentialBytes */ SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_NONE,
+                createPassword(SHORT_SEQUENTIAL_PASSWORD),
+                passwordTooShort(4));
     }
 
     @Test
     public void passwordComplexityNone_mediumSequentialPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_NONE);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                MEDIUM_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.NO_ERROR);
-        String noErrorMessage = passwordHelper.validateSetupWizardAndReturnError(
-                /* lockType */ LockTypes.PASSWORD,
-                /* credentialBytes */ MEDIUM_SEQUENTIAL_PASSWORD.getBytes());
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(noErrorMessage)
-                .isEqualTo(PasswordHelper.NO_ERROR_MESSAGE);
+        assertCredentialValid(PASSWORD_COMPLEXITY_NONE, createPassword(MEDIUM_SEQUENTIAL_PASSWORD));
     }
 
     @Test
     public void passwordComplexityLow_shortSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_LOW);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                SHORT_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 4,
-                R.string.lockpassword_password_too_short);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PASSWORD,
-                        /* credentialBytes */ SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages)
-                .containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_LOW,
+                createPassword(SHORT_SEQUENTIAL_PASSWORD),
+                passwordTooShort(4));
     }
 
     @Test
     public void passwordComplexityLow_mediumSequentialPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_LOW);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                MEDIUM_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.NO_ERROR);
-        String noErrorMessage = passwordHelper.validateSetupWizardAndReturnError(
-                /* lockType */ LockTypes.PASSWORD,
-                /* credentialBytes */ MEDIUM_SEQUENTIAL_PASSWORD.getBytes());
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(noErrorMessage)
-                .isEqualTo(PasswordHelper.NO_ERROR_MESSAGE);
+        assertCredentialValid(PASSWORD_COMPLEXITY_LOW, createPassword(MEDIUM_SEQUENTIAL_PASSWORD));
     }
 
     @Test
     public void passwordComplexityMedium_shortSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_MEDIUM);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                SHORT_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 4,
-                R.string.lockpassword_password_too_short);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PASSWORD,
-                        /* credentialBytes */ SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages)
-                .containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_MEDIUM,
+                createPassword(SHORT_SEQUENTIAL_PASSWORD),
+                passwordTooShort(4));
     }
 
     @Test
     public void passwordComplexityMedium_mediumSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_MEDIUM);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                MEDIUM_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 4,
-                R.string.lockpassword_pin_no_sequential_digits);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PASSWORD,
-                        /* credentialBytes */ MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages)
-                .containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_MEDIUM,
+                createPassword(MEDIUM_SEQUENTIAL_PASSWORD),
+                mContext.getString(R.string.lockpassword_pin_no_sequential_digits));
     }
 
     @Test
     public void passwordComplexityMedium_mediumAlphanumericPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_MEDIUM);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                MEDIUM_ALPHANUMERIC_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_ALPHANUMERIC_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.NO_ERROR);
-        String noErrorMessage = passwordHelper.validateSetupWizardAndReturnError(
-                /* lockType */ LockTypes.PASSWORD,
-                /* credentialBytes */ MEDIUM_ALPHANUMERIC_PASSWORD.getBytes());
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
-                .that(noErrorMessage)
-                .isEqualTo(PasswordHelper.NO_ERROR_MESSAGE);
+        assertCredentialValid(
+                PASSWORD_COMPLEXITY_MEDIUM,
+                createPassword(MEDIUM_ALPHANUMERIC_PASSWORD));
     }
 
     @Test
     public void passwordComplexityHigh_mediumSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_HIGH);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                MEDIUM_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedFirstError = StringUtil.getIcuPluralsString(mContext, /* count= */ 6,
-                R.string.lockpassword_password_too_short);
-        String expectedSecondError = mContext.getString(
-                R.string.lockpassword_pin_no_sequential_digits);
-        String combinedError = passwordHelper.getCombinedErrorMessage(
-                /* messages */ List.of(expectedFirstError, expectedSecondError));
-        // the error message displayed in SUW should be the first error detected
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PASSWORD,
-                        /* credentialBytes */ MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(combinedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        // PasswordMetrics considers a password "numeric" based on whether it is a pin or a
-        // password. So even though "2222" is numeric, it will have the minimum length requirement
-        // of a password.
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedFirstError,
-                expectedSecondError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_HIGH,
+                createPassword(MEDIUM_SEQUENTIAL_PASSWORD),
+                passwordTooShort(6) + "\n"
+                    + mContext.getString(R.string.lockpassword_pin_no_sequential_digits));
     }
 
     @Test
     public void passwordComplexityHigh_mediumAlphanumericPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_HIGH);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                MEDIUM_ALPHANUMERIC_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_ALPHANUMERIC_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 6,
-                R.string.lockpassword_password_too_short);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PASSWORD,
-                        /* credentialBytes */ MEDIUM_ALPHANUMERIC_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_HIGH,
+                createPassword(MEDIUM_ALPHANUMERIC_PASSWORD),
+                passwordTooShort(6));
     }
 
     @Test
     public void passwordComplexityHigh_longSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_HIGH);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                LONG_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(LONG_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = mContext.getString(R.string.lockpassword_pin_no_sequential_digits);
-        assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PASSWORD,
-                        /* credentialBytes */ LONG_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_HIGH,
+                createPassword(LONG_SEQUENTIAL_PASSWORD),
+                mContext.getString(R.string.lockpassword_pin_no_sequential_digits));
     }
 
     @Test
     public void passwordComplexityHigh_longAlphanumericPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ false, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_HIGH);
-
-        LockscreenCredential password = LockscreenCredential.createPassword(
-                LONG_ALPHANUMERIC_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, LONG_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
-        assertWithMessage(PASSWORD_MESSAGE, LONG_ALPHANUMERIC_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(LONG_ALPHANUMERIC_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.NO_ERROR);
-        String noErrorMessage = passwordHelper.validateSetupWizardAndReturnError(
-                /* lockType */ LockTypes.PASSWORD,
-                /* credentialBytes */ LONG_ALPHANUMERIC_PASSWORD.getBytes());
-        assertWithMessage(PASSWORD_MESSAGE, LONG_ALPHANUMERIC_PASSWORD)
-                .that(noErrorMessage)
-                .isEqualTo(PasswordHelper.NO_ERROR_MESSAGE);
+        assertCredentialValid(PASSWORD_COMPLEXITY_HIGH, createPassword(LONG_ALPHANUMERIC_PASSWORD));
     }
 
     @Test
     public void pinComplexityNone_shortSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_NONE);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                SHORT_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 4,
-                R.string.lockpassword_pin_too_short);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PIN,
-                        /* credentialBytes */ SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_NONE,
+                createPin(SHORT_SEQUENTIAL_PASSWORD),
+                pinTooShort(4));
     }
 
     @Test
     public void pinComplexityNone_mediumSequentialPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_NONE);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                MEDIUM_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.NO_ERROR);
-        String noErrorMessage = passwordHelper.validateSetupWizardAndReturnError(
-                /* lockType */ LockTypes.PIN,
-                /* credentialBytes */ MEDIUM_SEQUENTIAL_PASSWORD.getBytes());
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(noErrorMessage)
-                .isEqualTo(PasswordHelper.NO_ERROR_MESSAGE);
+        assertCredentialValid(PASSWORD_COMPLEXITY_NONE, createPin(MEDIUM_SEQUENTIAL_PASSWORD));
     }
 
     @Test
-    public void pinComplexityLow_shortSequentialPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_LOW);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                SHORT_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 4,
-                R.string.lockpassword_pin_too_short);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PIN,
-                        /* credentialBytes */ SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedError);
+    public void pinComplexityLow_shortSequentialPassword_invalid() {
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_LOW,
+                createPin(SHORT_SEQUENTIAL_PASSWORD),
+                pinTooShort(4));
     }
 
     @Test
     public void pinComplexityLow_mediumSequentialPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_LOW);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                MEDIUM_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.NO_ERROR);
-        String noErrorMessage = passwordHelper.validateSetupWizardAndReturnError(
-                /* lockType */ LockTypes.PIN,
-                /* credentialBytes */ MEDIUM_SEQUENTIAL_PASSWORD.getBytes());
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(noErrorMessage)
-                .isEqualTo(PasswordHelper.NO_ERROR_MESSAGE);
+        assertCredentialValid(PASSWORD_COMPLEXITY_LOW, createPin(MEDIUM_SEQUENTIAL_PASSWORD));
     }
 
     @Test
     public void pinComplexityMedium_shortSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_MEDIUM);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                SHORT_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 4,
-                R.string.lockpassword_pin_too_short);
-        assertWithMessage(PASSWORD_MESSAGE, SHORT_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PIN,
-                        /* credentialBytes */ SHORT_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages)
-                .containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_MEDIUM,
+                createPin(SHORT_SEQUENTIAL_PASSWORD),
+                pinTooShort(4));
     }
 
     @Test
     public void pinComplexityMedium_mediumSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_MEDIUM);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                MEDIUM_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-        String expectedError = mContext.getString(R.string.lockpassword_pin_no_sequential_digits);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PIN,
-                        /* credentialBytes */ MEDIUM_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_MEDIUM,
+                createPin(MEDIUM_SEQUENTIAL_PASSWORD),
+                mContext.getString(R.string.lockpassword_pin_no_sequential_digits));
     }
 
     @Test
     public void pinComplexityMedium_mediumPinPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_MEDIUM);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                MEDIUM_PIN_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_PIN_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.NO_ERROR);
-        String noErrorMessage = passwordHelper.validateSetupWizardAndReturnError(
-                /* lockType */ LockTypes.PIN,
-                /* credentialBytes */ MEDIUM_PIN_PASSWORD.getBytes());
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
-                .that(noErrorMessage)
-                .isEqualTo(PasswordHelper.NO_ERROR_MESSAGE);
+        assertCredentialValid(PASSWORD_COMPLEXITY_MEDIUM, createPin(MEDIUM_PIN_PASSWORD));
     }
 
     @Test
     public void pinComplexityHigh_mediumPinPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_HIGH);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                MEDIUM_PIN_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, MEDIUM_PIN_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(MEDIUM_PIN_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = StringUtil.getIcuPluralsString(mContext, /* count= */ 8,
-                R.string.lockpassword_pin_too_short);
-        assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PIN,
-                        /* credentialBytes */ MEDIUM_PIN_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages)
-                .containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_HIGH,
+                createPin(MEDIUM_PIN_PASSWORD),
+                pinTooShort(8));
     }
 
     @Test
     public void pinComplexityHigh_longSequentialPassword_invalid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_HIGH);
-
-        LockscreenCredential password = LockscreenCredential.createPin(
-                LONG_SEQUENTIAL_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isFalse();
-        assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(LONG_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.ERROR_CODE);
-
-        String expectedError = mContext.getString(R.string.lockpassword_pin_no_sequential_digits);
-        assertWithMessage(PASSWORD_MESSAGE, LONG_SEQUENTIAL_PASSWORD)
-                .that(passwordHelper.validateSetupWizardAndReturnError(
-                        /* lockType */ LockTypes.PIN,
-                        /* credentialBytes */ LONG_SEQUENTIAL_PASSWORD.getBytes()))
-                .isEqualTo(expectedError);
-
-        List<String> messages = passwordHelper.convertErrorCodeToMessages();
-        assertWithMessage(ERROR_MESSAGE).that(messages).containsExactly(expectedError);
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_HIGH,
+                createPin(LONG_SEQUENTIAL_PASSWORD),
+                mContext.getString(R.string.lockpassword_pin_no_sequential_digits));
     }
 
     @Test
     public void pinComplexityHigh_longPinPassword_valid() {
-        PasswordHelper passwordHelper = new PasswordHelper(mContext, /* isPin= */ true, mUserId,
-                mLockPatternUtils, mPasswordMetrics, PASSWORD_COMPLEXITY_HIGH);
+        assertCredentialValid(PASSWORD_COMPLEXITY_HIGH, createPin(LONG_PIN_PASSWORD));
+    }
 
-        LockscreenCredential password = LockscreenCredential.createPin(
-                LONG_PIN_PASSWORD);
-        assertWithMessage(PASSWORD_MESSAGE, LONG_PIN_PASSWORD)
-                .that(passwordHelper.validate(password, mExistingCredential)).isTrue();
-        assertWithMessage(PASSWORD_MESSAGE, LONG_PIN_PASSWORD)
-                .that(passwordHelper.validateSetupWizard(LONG_PIN_PASSWORD.getBytes()))
-                .isEqualTo(PasswordHelper.NO_ERROR);
-        String noErrorMessage = passwordHelper.validateSetupWizardAndReturnError(
-                /* lockType */ LockTypes.PIN,
-                /* credentialBytes */ LONG_PIN_PASSWORD.getBytes());
-        assertWithMessage(PASSWORD_MESSAGE, LONG_PIN_PASSWORD)
-                .that(noErrorMessage)
-                .isEqualTo(PasswordHelper.NO_ERROR_MESSAGE);
+    @Test
+    public void patternComplexityNone_length3Pattern_invalid() {
+        assertCredentialInvalid(
+                PASSWORD_COMPLEXITY_NONE,
+                createPattern(LENGTH_3_PATTERN),
+                patternTooShort(4));
+    }
+
+    @Test
+    public void patternComplexityNone_length4Pattern_valid() {
+        assertCredentialValid(PASSWORD_COMPLEXITY_NONE, createPattern(LENGTH_4_PATTERN));
     }
 }
