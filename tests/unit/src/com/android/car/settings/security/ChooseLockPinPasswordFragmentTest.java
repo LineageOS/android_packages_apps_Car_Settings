@@ -43,8 +43,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import java.util.Collections;
-
 /**
  * Tests for ChooseLockPinPasswordFragment class.
  */
@@ -66,7 +64,7 @@ public class ChooseLockPinPasswordFragmentTest {
     @Before
     public void setUp() {
         mFragmentManager = mActivityTestRule.getActivity().getSupportFragmentManager();
-        when(mMockPasswordHelper.convertErrorCodeToMessages()).thenReturn(Collections.emptyList());
+        when(mMockPasswordHelper.getCredentialValidationErrorMessages()).thenReturn("");
     }
 
     /**
