@@ -16,15 +16,14 @@
 
 package com.android.car.settings.setupservice;
 
-
 import android.app.Service;
 import android.app.admin.DevicePolicyManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.IBinder;
 import android.os.UserHandle;
-import android.text.TextUtils;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.security.PasswordHelper;
 import com.android.car.setupwizardlib.IInitialLockSetupService;
@@ -32,14 +31,12 @@ import com.android.car.setupwizardlib.InitialLockSetupConstants;
 import com.android.car.setupwizardlib.InitialLockSetupConstants.LockTypes;
 import com.android.car.setupwizardlib.InitialLockSetupConstants.SetLockCodes;
 import com.android.car.setupwizardlib.InitialLockSetupConstants.ValidateLockFlags;
-import com.android.car.setupwizardlib.InitialLockSetupHelper;
 import com.android.car.setupwizardlib.LockConfig;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternView;
 import com.android.internal.widget.LockscreenCredential;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
@@ -82,18 +79,6 @@ public class InitialLockSetupService extends Service {
         return mIInitialLockSetupService;
     }
 
-    // Translates the byte[] pattern received into the List<LockPatternView.Cell> that is
-    // recognized by LockPatternUtils.
-    private List<LockPatternView.Cell> toSettingsPattern(byte[] pattern) {
-        List<LockPatternView.Cell> outputList = new ArrayList<>();
-        for (int i = 0; i < pattern.length; i++) {
-            outputList.add(LockPatternView.Cell.of(
-                    InitialLockSetupHelper.getPatternCellRowFromByte(pattern[i]),
-                    InitialLockSetupHelper.getPatternCellColumnFromByte(pattern[i])));
-        }
-        return outputList;
-    }
-
     // Implementation of the service binder interface.
     private class InitialLockSetupServiceImpl extends IInitialLockSetupService.Stub {
 
@@ -117,25 +102,37 @@ public class InitialLockSetupService extends Service {
             return null;
         }
 
+        private LockscreenCredential createLockscreenCredential(
+                @LockTypes int lockType, byte[] password) {
+            switch (lockType) {
+                case LockTypes.PASSWORD:
+                    String passwordStr = new String(password, StandardCharsets.UTF_8);
+                    return LockscreenCredential.createPassword(passwordStr);
+                case LockTypes.PIN:
+                    String pinStr = new String(password, StandardCharsets.UTF_8);
+                    return LockscreenCredential.createPin(pinStr);
+                case LockTypes.PATTERN:
+                    List<LockPatternView.Cell> pattern =
+                            LockPatternUtils.byteArrayToPattern(password);
+                    return LockscreenCredential.createPattern(pattern);
+                default:
+                    LOG.e("Unrecognized lockscreen credential type: " + lockType);
+                    return null;
+            }
+        }
+
         @Override
         @ValidateLockFlags
         public int checkValidLock(@LockTypes int lockType, byte[] password) {
-            PasswordHelper passwordHelper;
-            switch (lockType) {
-                case LockTypes.PASSWORD:
-                    passwordHelper = new PasswordHelper(getApplicationContext(),
-                            /* isPin= */ false, getUserId());
-                    return passwordHelper.validateSetupWizard(password);
-                case LockTypes.PIN:
-                    passwordHelper = new PasswordHelper(getApplicationContext(),
-                            /* isPin= */ true, getUserId());
-                    return passwordHelper.validateSetupWizard(password);
-                case LockTypes.PATTERN:
-                    return password.length >= LockPatternUtils.MIN_LOCK_PATTERN_SIZE
-                            ? 0 : ValidateLockFlags.INVALID_LENGTH;
-                default:
-                    LOG.e("other lock type, returning generic error");
+            try (LockscreenCredential credential = createLockscreenCredential(lockType, password)) {
+                if (credential == null) {
                     return ValidateLockFlags.INVALID_GENERIC;
+                }
+                PasswordHelper helper = new PasswordHelper(getApplicationContext(), getUserId());
+                if (!helper.validateCredential(credential)) {
+                    return ValidateLockFlags.INVALID_GENERIC;
+                }
+                return 0;
             }
         }
 
@@ -147,68 +144,41 @@ public class InitialLockSetupService extends Service {
                     InitialLockSetupService.this.getApplicationContext());
             int currentPassword = lockPatternUtils.getKeyguardStoredPasswordQuality(userId);
             if (currentPassword != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED) {
-                LOG.v("Password already set, rejecting call to setLock");
+                LOG.v("Credential already set, rejecting call to setLock");
                 return SetLockCodes.FAIL_LOCK_EXISTS;
             }
-            String errorMessage = checkValidLockAndReturnError(lockType, password);
-            if (!TextUtils.isEmpty(errorMessage)) {
-                LOG.v("Password is not valid, rejecting call to setLock");
-                return SetLockCodes.FAIL_LOCK_INVALID;
-            }
-
-            boolean success = false;
-            try {
-                switch (lockType) {
-                    case LockTypes.PASSWORD:
-                        // Need to remove setup wizard lib byte array encoding and use the
-                        // LockPatternUtils encoding.
-                        CharSequence passwordStr =
-                                InitialLockSetupHelper.byteArrayToCharSequence(password);
-                        lockPatternUtils.setLockCredential(
-                                LockscreenCredential.createPassword(passwordStr),
-                                /* savedPassword= */ LockscreenCredential.createNone(),
-                                userId);
-                        success = true;
-                        break;
-                    case LockTypes.PIN:
-                        // Need to remove setup wizard lib byte array encoding and use the
-                        // LockPatternUtils encoding.
-                        CharSequence pinStr =
-                                InitialLockSetupHelper.byteArrayToCharSequence(password);
-                        lockPatternUtils.setLockCredential(
-                                LockscreenCredential.createPin(pinStr),
-                                /* savedPassword= */ LockscreenCredential.createNone(),
-                                userId);
-                        success = true;
-                        break;
-                    case LockTypes.PATTERN:
-                        // Need to remove the setup wizard lib pattern encoding and use the
-                        // LockPatternUtils pattern format.
-                        List<LockPatternView.Cell> pattern = toSettingsPattern(password);
-                        lockPatternUtils.setLockCredential(
-                                LockscreenCredential.createPattern(pattern),
-                                /* savedPassword= */ LockscreenCredential.createNone(),
-                                userId);
-                        pattern.clear();
-                        success = true;
-                        break;
-                    default:
-                        LOG.e("Unknown lock type, returning a failure");
+            try (LockscreenCredential credential = createLockscreenCredential(lockType, password)) {
+                if (credential == null) {
+                    return SetLockCodes.FAIL_LOCK_INVALID;
                 }
+                PasswordHelper helper = new PasswordHelper(getApplicationContext(), userId);
+                if (!helper.validateCredential(credential)) {
+                    LOG.v("Credential is not valid, rejecting call to setLock");
+                    return SetLockCodes.FAIL_LOCK_INVALID;
+                }
+                if (!lockPatternUtils.setLockCredential(credential,
+                            /* savedCredential= */ LockscreenCredential.createNone(), userId)) {
+                    return SetLockCodes.FAIL_LOCK_GENERIC;
+                }
+                return SetLockCodes.SUCCESS;
             } catch (Exception e) {
                 LOG.e("Save lock exception", e);
-                success = false;
+                return SetLockCodes.FAIL_LOCK_GENERIC;
             }
-            Arrays.fill(password, (byte) 0);
-            return success ? SetLockCodes.SUCCESS : SetLockCodes.FAIL_LOCK_GENERIC;
         }
 
         @Override
         public String checkValidLockAndReturnError(@LockTypes int lockType,
                 byte[] credentialBytes) {
-            PasswordHelper passwordHelper = new PasswordHelper(getApplicationContext(),
-                    /* isPin= */ lockType == LockTypes.PIN, /* userId */ getUserId());
-            return passwordHelper.validateSetupWizardAndReturnError(lockType, credentialBytes);
+            try (LockscreenCredential credential =
+                    createLockscreenCredential(lockType, credentialBytes)) {
+                if (credential == null) {
+                    return getApplicationContext().getString(R.string.locktype_unavailable);
+                }
+                PasswordHelper helper = new PasswordHelper(getApplicationContext(), getUserId());
+                helper.validateCredential(credential);
+                return helper.getCredentialValidationErrorMessages();
+            }
         }
     }
 }
