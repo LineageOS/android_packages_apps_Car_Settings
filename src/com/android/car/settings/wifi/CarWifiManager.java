@@ -16,7 +16,6 @@
 
 package com.android.car.settings.wifi;
 
-import android.annotation.Nullable;
 import android.content.Context;
 import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiManager;
@@ -114,15 +113,14 @@ public class CarWifiManager implements WifiPickerTracker.WifiPickerTrackerCallba
     }
 
     /**
-     * Returns the currently connected Wi-Fi entry or {@code null} if there is no Wi-Fi
+     * Returns the currently connected Wi-Fi entries or an empty list if there is no Wi-Fi
      * network connected.
      */
-    @Nullable
-    public WifiEntry getConnectedWifiEntry() {
+    public List<WifiEntry> getConnectedWifiEntries() {
         if (mWifiManager.isWifiEnabled()) {
-            return mWifiTracker.getConnectedWifiEntry();
+            return mWifiTracker.getActiveWifiEntries();
         }
-        return null;
+        return new ArrayList<>();
     }
 
     /**

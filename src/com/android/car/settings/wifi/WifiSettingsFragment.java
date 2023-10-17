@@ -31,6 +31,8 @@ import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.wifitrackerlib.WifiEntry;
 
+import java.util.List;
+
 /**
  * Main page to host Wifi related preferences.
  */
@@ -99,9 +101,9 @@ public class WifiSettingsFragment extends SettingsFragment
     public void onWifiEntriesChanged() {
         mProgressBar.setVisible(true);
         getView().postDelayed(() -> mProgressBar.setVisible(false), SEARCHING_DELAY_MILLIS);
-        WifiEntry connectedWifiEntry = mCarWifiManager.getConnectedWifiEntry();
-        if (connectedWifiEntry != null) {
-            String connectedWifiEntryKey = connectedWifiEntry.getKey();
+        List<WifiEntry> connectedWifiEntries = mCarWifiManager.getConnectedWifiEntries();
+        if (!connectedWifiEntries.isEmpty()) {
+            String connectedWifiEntryKey = connectedWifiEntries.get(0).getKey();
             if (!connectedWifiEntryKey.equals(mConnectedWifiEntryKey)) {
                 scrollToPreference(connectedWifiEntryKey);
                 mConnectedWifiEntryKey = connectedWifiEntryKey;
