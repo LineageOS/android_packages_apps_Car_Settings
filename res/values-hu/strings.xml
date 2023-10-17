@@ -580,7 +580,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Egyéb alkalmazások"</string>
     <string name="storage_files" msgid="6382081694781340364">"Fájlok"</string>
     <string name="storage_system" msgid="1271345630248014010">"Rendszer"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"A rendszer az Android <xliff:g id="VERSION">%s</xliff:g> verziójának futtatásához használt fájlokat tartalmaz"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"A rendszer az Android <xliff:g id="VERSION">%s</xliff:g>. verziójának futtatásához használt fájlokat tartalmaz"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Hangfájlok"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Számítás…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Alkalmazás mérete"</string>
@@ -715,7 +715,7 @@
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{# karakternél rövidebbnek kell lennie}other{# karakternél rövidebbnek kell lennie}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{# számjegynél rövidebbnek kell lennie}other{# számjegynél rövidebbnek kell lennie}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Növekvő, csökkenő vagy ismétlődő számsor megadása nem engedélyezett"</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Képernyőzárolási lehetőségek"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"A képernyőzár beállításai"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hitelesítési adatok törlése"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Összes tanúsítvány eltávolítása"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Eltávolítja az összes tartalmat?"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Kilépés a demóból"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ELVETÉS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Vezetés közben nem áll rendelkezésre a funkció"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Kérje meg a sofőrt a beállítás módosítására"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Nem hajthatja végre ezt a műveletet"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Vezetés közben nem lehet profilt hozzáadni"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Keresés"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Segéd és hang"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profil hozzáadása"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"A profil törlése"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profil hozzáadása"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"A profil jelenleg sofőrként van bejelentkezve. Próbálja újra, ha a profil nem sofőrként van használatban."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"A kijelző fényereje"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Eszközei megtekintéséhez kapcsolja be a Bluetootht"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Eszköz párosításához nyissa meg a Bluetooth-beállításokat"</string>

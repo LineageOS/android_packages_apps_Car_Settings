@@ -93,4 +93,14 @@ public class WifiQCUtils {
                 return R.drawable.ic_qc_wifi_level_4;
         }
     }
+
+    /**
+     * Returns if the wifi is changing state between enabled and disabled.
+     */
+    public static boolean isWifiBusy(WifiManager wifiManager) {
+        int state = wifiManager.getWifiState();
+        return state == WifiManager.WIFI_STATE_ENABLING
+            || state == WifiManager.WIFI_STATE_DISABLING;
+    }
+
 }

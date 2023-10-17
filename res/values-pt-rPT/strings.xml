@@ -22,7 +22,7 @@
     <string name="display_settings" msgid="5325515247739279185">"Ecrã"</string>
     <string name="brightness" msgid="2919605130898772866">"Nível de luminosidade"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosidade adaptável"</string>
-    <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajuste o luminosidade do ecrã ao ambiente"</string>
+    <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajuste o brilho do ecrã ao ambiente"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"A Luz noturna está ativada"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rede e Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rede móvel"</string>
@@ -165,8 +165,8 @@
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desligada"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desative a zona Wi-Fi automaticamente"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"A zona Wi‑Fi será desativada se não forem ligados quaisquer dispositivos."</string>
-    <string name="wifi_ask_enable" msgid="4452418245680754578">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> quer ativar o Wi-Fi"</string>
-    <string name="wifi_ask_disable" msgid="2949290055916181553">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> quer desativar o Wi-Fi"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> pretende ativar o Wi-Fi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> pretende desativar o Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erro"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Dispositivo a utilizar com a aplicação <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nenhum dispositivo encontrado. Certifique-se de que os dispositivos estão ativados e disponíveis para ligação."</string>
@@ -194,14 +194,14 @@
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"A ativar o Bluetooth…"</string>
     <string name="bluetooth_turning_off" msgid="1753975097241024061">"A desativar o Bluetooth…"</string>
-    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> quer ativar o Bluetooth"</string>
-    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> quer desativar o Bluetooth"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Uma aplicação quer ativar o Bluetooth"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Uma aplicação quer desativar o Bluetooth"</string>
-    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> quer tornar a sua unidade principal visível para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Uma aplicação quer tornar a sua unidade principal visível para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> quer ativar o Bluetooth e tornar a sua unidade principal visível para outros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Uma aplicação quer ativar o Bluetooth e tornar a sua unidade principal visível para outros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> pretende ativar o Bluetooth"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> pretende desativar o Bluetooth"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Uma aplicação pretende ativar o Bluetooth"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Uma aplicação pretende desativar o Bluetooth"</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> pretende tornar a sua unidade principal visível para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Uma aplicação pretende tornar a sua unidade principal visível para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> pretende ativar o Bluetooth e tornar a sua unidade principal visível para outros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Uma aplicação pretende ativar o Bluetooth e tornar a sua unidade principal visível para outros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Visível como %1$s para os outros dispositivos"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Os meus dispositivos"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Ligados anteriormente"</string>
@@ -498,8 +498,8 @@
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Não é possível repor os eSIMs"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Selecionar rede"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Repor definições"</string>
-    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Quer repor?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Quer repor todas as definições de rede? Não é possível anular esta ação."</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Pretende repor?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Pretende repor todas as definições de rede? Não é possível anular esta ação."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Repor definições"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"As definições de rede foram repostas."</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Repor preferências das apps"</string>
@@ -535,7 +535,7 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Hora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrador"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Sessão iniciada como administrador"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Quer conceder autorizações de administrador?"</string>
+    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Pretende conceder autorizações de administrador?"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Tornar administrador"</string>
     <string name="grant_admin_permissions_message" msgid="5205433947453539566">"O administrador poderá eliminar outros perfis, incluindo de outros administradores, e efetuar uma reposição de fábrica do sistema de infoentretenimento."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Esta ação não é reversível."</string>
@@ -599,7 +599,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar dados automaticamente"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permita que as apps atualizem dados automaticamente"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permitir que as apps atualizem dados automaticamente"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Permitir a sincronização automática dos dados?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Qualquer alteração que faça nas contas a partir da Web será copiada automaticamente para o veículo.\n\nAlgumas contas também podem copiar automaticamente para a Web qualquer alteração que fizer no veículo."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Desativar a sincronização automática dos dados?"</string>
@@ -755,8 +755,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Adicionar um perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eliminar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Adicionar perfil"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Este perfil tem sessão iniciada como condutor. Tente de novo quando o perfil não for usado como condutor."</string>
-    <string name="qc_display_brightness" msgid="2939655289816201170">"Luminosidade do ecrã"</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Brilho do ecrã"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver os seus dispositivos, ative o Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para sincronizar um dispositivo, abra as definições de Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador do sistema de infoentretenimento"</string>
@@ -840,7 +839,7 @@
       <item quantity="other">Apps Telefone</item>
       <item quantity="one">App Telefone</item>
     </plurals>
-    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Quer partilhar o relatório de erro?"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Pretende partilhar o relatório de erro?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"O gestor da organização do veículo solicitou um relatório de erro para ajudar a resolver problemas com este dispositivo. As apps e os dados podem ser partilhados."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"O gestor da organização do veículo solicitou um relatório de erro para ajudar a resolver problemas com este dispositivo. As apps e os dados podem ser partilhados e o dispositivo pode tornar-se temporariamente mais lento."</string>
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Este relatório de erro está a ser partilhado com o gestor da organização deste veículo. Contacte-o para obter mais detalhes."</string>

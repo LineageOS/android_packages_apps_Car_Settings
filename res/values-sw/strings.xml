@@ -392,7 +392,7 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Badilisha mipangilio ya mfumo"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Idhini hii huruhusu programu kubadilisha mipangilio ya mfumo"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Kufikia arifa"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Ungependa kuiruhusu <xliff:g id="SERVICE">%1$s</xliff:g> ifikie arifa?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Je, ungependa kuruhusu ufikiaji wa arifa za <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> itaweza kusoma arifa zote, ikiwa ni pamoja na taarifa binafsi kama vile majina ya anwani na SMS ambazo unapokea. Itaweza pia kuondoa arifa au kusababisha shughuli za vitufe vya vitendo vilivyomo.\n\nHii pia itaipa programu uwezo wa kuwasha au kuzima kipengele cha Usinisumbue na kubadilisha mipangilio inayohusiana nacho."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ukizima ufikiaji wa arifa katika <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, huenda hali hii pia ikazima ufikiaji wa kipengee cha Usinisumbue."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Zima"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Funga Onyesho"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ONDOA"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Kipengele hakipatikani unapoendesha gari"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Mwombe dereva abadilishe mipangilio"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Huwezi kutekeleza kitendo hiki"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Huwezi kuongeza wasifu unapoendesha gari"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Tafuta"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Mratibu na sauti"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Weka wasifu"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Futa wasifu huu"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Weka wasifu"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Kwa sasa, umeingia katika akaunti ya wasifu huu kama dereva. Jaribu tena wakati wasifu hautumiki kama dereva."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ung\'aavu wa skrini"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Ili uone vifaa vyako, washa Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ili uoanishe kifaa, fungua mipangilio ya Bluetooth"</string>

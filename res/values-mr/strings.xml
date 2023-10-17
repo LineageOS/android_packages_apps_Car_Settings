@@ -662,7 +662,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"अनलॉक पॅटर्न रेखांकित करा"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"पूर्ण झाल्यावर बोट काढा"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"पॅटर्न रेकॉर्ड झाला"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"खात्री करण्यासाठी पॅटर्न पुन्हा काढा"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"खात्री करण्यासाठी पॅटर्न पुन्हा रेखांकित करा"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"किमान ४ बिंदू जोडा. पुन्हा प्रयत्न करा."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"चुकीचा पॅटर्न"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलॉक पॅटर्न कसा काढावा"</string>
@@ -690,7 +690,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"साफ करा"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"रद्द करा"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"खात्री करा"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"किमान ४ वर्ण असणे आवश्यक आहे"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"किमान 4 वर्ण असणे आवश्यक आहे"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"या लॉकचा प्रकार उपलब्ध नाही."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"केवळ ०-९ अंक असणे आवश्यक आहे."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"डिव्हाइस प्रशासक अलीकडील पिन वापरण्याची अनुमती देत नाही"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोडमधून बाहेर पडा"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"डिसमिस करा"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ड्राइव्ह करताना वैशिष्ट्य उपलब्ध नाही"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"ड्रायव्हरला सेटिंग बदलण्याची विनंती करा"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"तुम्ही ही कृती करू शकत नाही"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ड्राइव्ह करत असताना प्रोफाइल जोडू शकत नाही"</string>
     <string name="default_search_query" msgid="3137420627428857068">"शोधा"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"असिस्टंट आणि आवाज"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"प्रोफाइल जोडा"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ही प्रोफाइल हटवा"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"प्रोफाइल जोडा"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"या प्रोफाइलमध्ये ड्रायव्हरने साइन इन केले आहे. ड्रायव्हर प्रोफाइल वापरत नसेल तेव्हा पुन्हा प्रयत्न करा."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"डिस्प्लेचा ब्राइटनेस"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"तुमची डिव्हाइस पाहण्यासाठी, ब्लूटूथ सुरू करा"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"डिव्हाइस पेअर करण्यासाठी, ब्लूटूथ सेटिंग्ज उघडा"</string>

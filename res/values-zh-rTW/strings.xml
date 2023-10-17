@@ -305,7 +305,7 @@
     <string name="default_applications" msgid="1558183275638697087">"預設應用程式"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"影響效能的應用程式"</string>
     <string name="app_permissions" msgid="32799922508313948">"應用程式權限"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"控管可存取資料的應用程式"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"控管哪些應用程式可存取你的資料"</string>
     <string name="applications_settings" msgid="794261395191035632">"應用程式資訊"</string>
     <string name="force_stop" msgid="1616958676171167028">"停止應用程式"</string>
     <string name="force_stop_dialog_title" msgid="4481858344628934971">"要停止應用程式嗎？"</string>
@@ -381,7 +381,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"最近開啟的應用程式"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"查看全部 %1$d 個應用程式"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"權限管理員"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"控管可存取資料的應用程式"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"控管哪些應用程式可存取你的資料"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Google 助理和其他應用程式"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# 個應用程式會影響效能}other{# 個應用程式會影響效能}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"系統和其他設定"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"結束示範模式"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"關閉"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"開車時無法使用這項功能"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"請要求駕駛變更設定"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"無法執行這項動作"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"開車時無法新增設定檔"</string>
     <string name="default_search_query" msgid="3137420627428857068">"搜尋"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和語音功能"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"新增設定檔"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"刪除這個設定檔"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"新增設定檔"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"這個設定檔目前已使用駕駛的身分登入。請在設定檔並非以駕駛身分使用時再試一次。"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"螢幕亮度"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"裝置必須開啟藍牙，才會顯示在畫面上"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"如要配對裝置，請開啟藍牙設定"</string>

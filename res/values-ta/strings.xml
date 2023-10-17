@@ -188,7 +188,7 @@
     <string name="bluetooth_name" msgid="2609869978821094114">"வாகனத்தின் பெயர்"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"வாகனத்திற்கு மறுபெயரிடுதல்"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"சாதனத்திற்கு மறுபெயரிடுதல்"</string>
-    <string name="bluetooth_rename_button" msgid="2397892174725986383">"பெயர் மாற்று"</string>
+    <string name="bluetooth_rename_button" msgid="2397892174725986383">"மறுபெயரிடு"</string>
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"இணைப்பிற்குக் கிடைக்கும் சாதனங்கள்"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"புளூடூத் சுயவிவரங்கள்"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"டெமோவிலிருந்து வெளியேறு"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"நிராகரி"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"வாகனம் ஓட்டும்போது இந்த அம்சத்தைப் பயன்படுத்த இயலாது"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"அமைப்பை மாற்றுமாறு ஓட்டுநரிடம் கோருங்கள்"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"இந்தச் செயலைச் செய்ய முடியாது"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"வாகனம் ஓட்டும்போது சுயவிவரத்தைச் சேர்க்க முடியாது"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant &amp; Voice"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"புதிய சுயவிவரத்தைச் சேர்"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"இந்தச் சுயவிவரத்தை நீக்கு"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"சுயவிவரத்தைச் சேர்"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ஓட்டுநராக இந்தச் சுயவிவரம் தற்போது உள்நுழைந்துள்ளது. ஓட்டுநராகச் சுயவிவரம் இல்லாதபோது மீண்டும் முயலவும்."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"திரையின் ஒளிர்வு"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"உங்கள் சாதனங்களைக் காண புளூடூத்தை ஆன் செய்யுங்கள்"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"சாதனத்துடன் இணைக்க புளூடூத் அமைப்புகளைத் திறங்கள்"</string>

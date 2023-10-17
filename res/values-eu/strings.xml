@@ -160,7 +160,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Aukeratu gutxienez banda bat wifi-gunerako:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Wifi-gunea eta konexioa partekatzeko aukera"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Wifi-gunea eta konexioa partekatzea"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Wifi-gunea"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desaktibatuta"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desaktibatu automatikoki wifi-gunea"</string>
@@ -394,7 +394,7 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Jakinarazpenetarako sarbidea"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> zerbitzuari jakinarazpenetarako sarbidea eman nahi diozu?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioak jakinarazpen guztiak irakurri ahal izango ditu, informazio pertsonala (adibidez, kontaktuen izenak eta jasotako testu-mezuak) dutenak barne. Horrez gain, jakinarazpenak baztertu eta haietako ekintza-botoiak abiarazi ahal izango ditu.\n\nGainera, ez molestatzeko modua aktibatzeko eta desaktibatzeko aukera izango du aplikazioak, baita horrekin erlazionatutako ezarpenak aldatzekoa ere."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioari jakinarazpenak erabiltzeko aukera desaktibatzen badiozu, baliteke ez molestatzeko modurako sarbidea era desaktibatzea."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioari jakinarazpenak atzitzeko aukera desaktibatzen badiozu, baliteke ez molestatzeko modurako sarbidea era desaktibatzea."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desaktibatu"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Utzi"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aplikazio hauek sistemaren errendimendua okertzen dute; horregatik, atzeko planoan exekutatzea galarazi zaie.\nAplikazio hauetakoren bat atzeko planoan erabili nahi baduzu, eman iezaiozu lehentasuna, eta zerrenda honetatik kenduko da."</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Irten demo modutik"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BAZTERTU"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Eginbide hau ezin da erabili gidatu bitartean"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Eskatu gidariari ezarpenak aldatzeko"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Ezin duzu gauzatu ekintza hori"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Gidatu bitartean ezin da gehitu profilik"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Bilatu"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Laguntzailea eta ahotsa"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Gehitu profil bat"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Ezabatu profila"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Gehitu profila"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Gidari gisa hasi da saioa profil honekin. Saiatu berriro profila gidari gisa erabiltzen ari ez denean."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Bistaratu distira"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktibatu Bluetootha gailuak ikusteko"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ireki Bluetootharen ezarpenak gailu batekin parekatzeko"</string>

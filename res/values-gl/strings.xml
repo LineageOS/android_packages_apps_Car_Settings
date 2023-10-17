@@ -401,7 +401,7 @@
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Priorizar aplicación"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso ás SMS de tarificación adicional"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"As SMS de tarificación adicional poden implicar cargos engadidos nas facturas do teu operador. Se activas o permiso para unha aplicación, poderás enviar este tipo de mensaxes a través desa aplicación."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Acceso aos datos de uso"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Acceso a datos de uso"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Co acceso aos datos de uso unha aplicación pode realizar un seguimento das demais aplicacións que usas e de con que frecuencia as utilizas, así como do teu operador, da configuración do idioma e doutros detalles."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control da wifi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Co control da wifi, as aplicacións poden activar ou desactivar a wifi, buscar redes wifi, conectarse a elas, engadir ou eliminar redes e iniciar unha zona wifi local."</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Saír da demostración"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORAR"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Esta función non está dispoñible mentres conduces"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Pídelle ao condutor que cambie a configuración"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Non podes realizar esta acción"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Non se poden engadir perfís mentres se conduce"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Busca opcións de configuración"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistente e voz"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Engadir perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eliminar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Engadir perfil"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Este perfil ten a sesión iniciada como condutor. Téntao de novo cando o perfil non estea nese modo."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brillo de pantalla"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver os teus dispositivos, activa o Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para vincular un dispositivo, abre a configuración do Bluetooth"</string>

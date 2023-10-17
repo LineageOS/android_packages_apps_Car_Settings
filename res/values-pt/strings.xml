@@ -138,7 +138,7 @@
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Ativar a \"busca por Wi‑Fi\"?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Ativar"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Busca por Wi‑Fi ativada"</string>
-    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Mudar para dados móveis automaticamente"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Alternar para dados móveis automaticamente"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Usar dados móveis quando o Wi-Fi perder o acesso à Internet. Cobranças de dados podem ser aplicadas."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Encontrar redes Wi-Fi e conectar"</string>
     <string name="learn_more" msgid="8214605928933358604">"Saiba mais"</string>
@@ -660,10 +660,10 @@
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Cancelar"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Seu novo padrão de desbloqueio"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Desenhe um padrão de desbloqueio"</string>
-    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Tire o dedo ao terminar"</string>
+    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Solte o dedo quando terminar."</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Padrão registrado"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Desenhe o padrão de novo para confirmar"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Conecte 4 pontos no mínimo. Tente novamente."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Conecte 4 pontos (mín). Tente novamente."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Padrão incorreto"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Como desenhar um padrão de desbloqueio"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erro ao salvar o padrão"</string>
@@ -721,7 +721,7 @@
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Remover todo o conteúdo?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Armazenamento de credenciais apagado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Armazenamento de credenciais não apagado."</string>
-    <string name="forget" msgid="3971143908183848527">"Esquecer"</string>
+    <string name="forget" msgid="3971143908183848527">"Ignorar"</string>
     <string name="connect" msgid="5861699594602380150">"Conectar"</string>
     <string name="disconnect" msgid="6140789953324820336">"Desconectar"</string>
     <string name="delete_button" msgid="5840500432614610850">"Excluir"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Sair da demonstração"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"DISPENSAR"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Recurso não disponível enquanto você dirige"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Solicitar que o motorista mude a configuração"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Não é possível realizar esta ação"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Não é possível adicionar perfis enquanto você dirige"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Pesquisa"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistente e Voice"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Adicionar um perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Excluir este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Adicionar perfil"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"O perfil foi acessado como motorista. Tente outra vez quando o perfil não estiver nessa função."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brilho da tela"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver seus dispositivos, ative o Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para parear um dispositivo, abra as configurações do Bluetooth"</string>

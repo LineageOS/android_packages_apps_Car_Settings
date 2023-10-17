@@ -409,7 +409,7 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokation"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Anvend lokation"</string>
     <string name="location_toggle_summary" msgid="7977868708102299495">"Giv visse apps adgang til din lokation"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Hvis du deaktiverer dette, fjernes lokationstilladelse for alle apps, bortset fra de apps, der er nødvendige for at bruge førerassistance"</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Hvis du deaktiverer dette, fjernes adgangstilladelsen til lokation for alle apps, bortset fra de apps, der er nødvendige for at bruge førerassistance"</string>
     <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Brug lokation til førerassistance"</string>
     <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Bilens lokation er deaktiveret"</string>
     <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps til førerassistance har ikke lokationsadgang"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Luk demotilstand"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"AFVIS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funktionen er ikke tilgængelig, mens du kører"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Bed føreren om at ændre indstillingen"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Du kan ikke udføre denne handling"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Du kan ikke tilføje brugere, mens du kører"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Søg"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google Assistent og stemmekommandoer"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Tilføj en profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Slet denne profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Tilføj profil"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Denne profil bruges i øjeblikket af bilisten. Prøv igen, når profilen ikke er i brug af bilisten."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Skærmens lysstyrke"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktivér Bluetooth for at se dine enheder"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Åbn Bluetooth-indstillingerne for at parre en enhed"</string>

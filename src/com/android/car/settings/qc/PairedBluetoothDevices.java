@@ -255,8 +255,10 @@ public class PairedBluetoothDevices extends SettingsQCItem {
 
     private QCActionItem createBluetoothButton(CachedBluetoothDevice device, int requestCode) {
         return createBluetoothDeviceToggle(device, requestCode, BLUETOOTH_BUTTON,
-                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth), true,
-                !device.isBusy(), false, device.isConnected());
+                Icon.createWithResource(getContext(), R.drawable.ic_qc_bluetooth),
+                getContext().getString(
+                        R.string.bluetooth_bonded_bluetooth_toggle_content_description),
+                true, !device.isBusy(), false, device.isConnected());
     }
 
     private QCActionItem createPhoneButton(CachedBluetoothDevice device, int requestCode) {
@@ -266,6 +268,7 @@ public class PairedBluetoothDevices extends SettingsQCItem {
                 : R.drawable.ic_qc_bluetooth_phone_unavailable;
         return createBluetoothDeviceToggle(device, requestCode, PHONE_BUTTON,
                 Icon.createWithResource(getContext(), iconRes),
+                getContext().getString(R.string.bluetooth_bonded_phone_toggle_content_description),
                 phoneState.mIsAvailable, phoneState.mIsEnabled,
                 phoneState.mIsClickableWhileDisabled, phoneState.mIsChecked);
     }
@@ -277,12 +280,14 @@ public class PairedBluetoothDevices extends SettingsQCItem {
                 : R.drawable.ic_qc_bluetooth_media_unavailable;
         return createBluetoothDeviceToggle(device, requestCode, MEDIA_BUTTON,
                 Icon.createWithResource(getContext(), iconRes),
+                getContext().getString(R.string.bluetooth_bonded_media_toggle_content_description),
                 mediaState.mIsAvailable, mediaState.mIsEnabled,
                 mediaState.mIsClickableWhileDisabled, mediaState.mIsChecked);
     }
 
     private QCActionItem createBluetoothDeviceToggle(CachedBluetoothDevice device, int requestCode,
-            String buttonType, Icon icon, boolean available, boolean enabled,
+            String buttonType, Icon icon, String contentDescription, boolean available,
+            boolean enabled,
             boolean clickableWhileDisabled, boolean checked) {
         Bundle extras = new Bundle();
         extras.putString(EXTRA_BUTTON_TYPE, buttonType);
@@ -302,6 +307,7 @@ public class PairedBluetoothDevices extends SettingsQCItem {
                 .setAction(action)
                 .setDisabledClickAction(disabledPendingIntent)
                 .setIcon(icon)
+                .setContentDescription(contentDescription)
                 .build();
     }
 
