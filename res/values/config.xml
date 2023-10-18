@@ -165,4 +165,10 @@
         Delay in milliseconds between preference onclick calls
     -->
     <integer name="config_preference_onclick_debounce_ms">200</integer>
+
+    <!-- Whether charging_sounds should be shown or not. -->
+    <bool name="config_show_charging_sounds">false</bool>
+
+    <!-- Whether top_level_battery should be shown or not. -->
+    <bool name="config_show_top_level_battery">false</bool>
 </resources>
