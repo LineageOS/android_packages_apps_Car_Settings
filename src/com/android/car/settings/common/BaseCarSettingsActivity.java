@@ -381,7 +381,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     private void setUpToolbars() {
         View globalToolbarWrappedView = mIsSinglePane ? findViewById(
-                R.id.fragment_container_wrapper) : findViewById(R.id.top_level_menu);
+                R.id.fragment_container_wrapper) : findViewById(R.id.top_level_menu_container);
         mGlobalToolbar = CarUi.installBaseLayoutAround(
                 globalToolbarWrappedView,
                 insets -> globalToolbarWrappedView.setPadding(
