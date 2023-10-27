@@ -15,18 +15,19 @@
     limitations under the License.
 -->
 
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/car_settings_activity_wrapper"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?android:attr/colorBackground">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/top_level_menu_container"
         android:layout_width="@dimen/top_level_menu_width"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/top_level_divider">
 
         <fragment
             class="com.android.car.settings.common.TopLevelMenuFragment"
@@ -39,15 +40,16 @@
         android:id="@+id/top_level_divider"
         android:layout_width="@dimen/top_level_divider_width"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@id/top_level_menu_container"
+        app:layout_constraintStart_toEndOf="@id/top_level_menu_container"
+        app:layout_constraintEnd_toStartOf="@id/top_level_divider"
         style="@style/CarSettingsActivityDividerStyle"/>
 
     <FrameLayout
         android:id="@+id/fragment_container_wrapper"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@id/top_level_divider"
-        android:layout_alignParentRight="true"
+        app:layout_constraintStart_toEndOf="@id/top_level_divider"
+        app:layout_constraintEnd_toEndOf="parent"
         style="@style/CarSettingsFragmentContainerStyle">
 
         <com.android.car.settings.common.rotary.SettingsFocusParkingView
@@ -74,4 +76,4 @@
             android:visibility="gone"/>
 
     </FrameLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
