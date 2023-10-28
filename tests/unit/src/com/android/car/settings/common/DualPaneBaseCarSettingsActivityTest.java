@@ -243,6 +243,7 @@ public class DualPaneBaseCarSettingsActivityTest
             mActivity.launchFragment(fragment);
         });
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+
         assertThat(mActivity.findViewById(R.id.settings_focus_parking_view).isFocused()).isTrue();
     }
 
