@@ -402,10 +402,10 @@ public class ProfileHelper {
 
     /**
      * Returns a list of {@code UserInfo} representing all admin profiles and are
-     * valid to have in the foreground.
+     * valid to have in the foreground.  Note that ephemeral users are excluded from the results.
      */
     public List<UserInfo> getAllAdminProfiles() {
-        return getAllLivingProfiles(UserInfo::isAdmin);
+        return getAllLivingProfiles(userInfo -> (userInfo.isAdmin() && !userInfo.isEphemeral()));
     }
 
     /**
