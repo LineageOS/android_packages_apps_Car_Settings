@@ -24,7 +24,10 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java"
+    ],
 
     static_libs: [
         "androidx.lifecycle_lifecycle-common-java8",
@@ -92,7 +95,10 @@ android_app {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java"
+    ],
 
     libs: [
         "android.car",
@@ -148,7 +154,10 @@ android_library {
 
     manifest: "tests/unit/AndroidManifest.xml",
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java"
+    ],
 
     libs: [
         "android.car",

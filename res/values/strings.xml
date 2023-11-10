@@ -720,6 +720,8 @@
     <string name="not_installed">Not installed for this profile</string>
     <!-- Manage applications, individual application info screen, heading for settings related to the app's permissions. for example, it may list all the permissions the app has. -->
     <string name="permissions_label">Permissions</string>
+    <!-- Label for All Services preference in App info settings [CHAR LIMIT=40] -->
+    <string name="app_info_all_services_label">All Services</string>
     <!-- Label for the toggle that enables/disables an app's notifications. [CHAR LIMIT=20] -->
     <string name="notifications_label">Notifications</string>
     <!-- Label that lead into individual application storage info screen -->
