@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Copyright (C) 2023 The Android Open Source Project
+<!-- Copyright (C) 2024 The Android Open Source Project
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -87,6 +87,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="bool" name="config_show_regulatory_info"/>
       <item type="bool" name="config_show_settings_root_exit_icon"/>
       <item type="bool" name="config_show_system_update_settings"/>
+      <item type="bool" name="config_show_top_level_icon_background"/>
       <item type="bool" name="config_show_wifi_mac_address"/>
       <item type="bool" name="config_top_level_enable_chevrons"/>
       <item type="bool" name="config_top_level_injection_background_always_use_default"/>
@@ -105,6 +106,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="car_grey_400_with_disable"/>
       <item type="color" name="config_progress_background_tint"/>
       <item type="color" name="ic_launcher_settings_background"/>
+      <item type="color" name="ic_toolbar_settings_background"/>
       <item type="color" name="icon_color_default"/>
       <item type="color" name="qc_default_icon_color"/>
       <item type="color" name="text_color_accent_with_disable"/>

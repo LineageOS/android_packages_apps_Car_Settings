@@ -197,10 +197,10 @@
     <!-- Top-level menu -->
     <dimen name="top_level_menu_width">550dp</dimen>
     <dimen name="top_level_divider_width">1dp</dimen>
-    <dimen name="top_level_preference_min_height">80dp</dimen>
-    <dimen name="top_level_preference_corner_radius">40dp</dimen>
+    <dimen name="top_level_preference_min_height">96dp</dimen>
+    <dimen name="top_level_preference_corner_radius">24dp</dimen>
     <dimen name="top_level_recyclerview_margin_right">@*android:dimen/car_padding_2</dimen>
-    <dimen name="top_level_foreground_icon_inset">8dp</dimen>
+    <dimen name="top_level_foreground_icon_inset">0dp</dimen>
 
     <!-- Dimensions for NewUserDisclaimerActivity -->
     <dimen name="user_disclaimer_text_size">@*android:dimen/car_body1_size</dimen>
