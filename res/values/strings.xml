@@ -917,11 +917,6 @@
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
     <string name="location_settings_title">Location</string>
-    <!-- Location settings footer warning text [CHAR LIMIT=NONE] -->
-    <string name="location_settings_footer">
-        Location may use sources like GPS, Wi\u2011Fi, mobile networks, and sensors to help estimate
-        your device\u2019s location.
-    </string>
     <!-- Title of location toggle setting [CHAR LIMIT=40] -->
     <string name="location_toggle_title">Use location</string>
     <!-- Summary of location toggle setting [CHAR LIMIT=NONE] -->
