@@ -62,11 +62,6 @@
         settings:controller="com.android.car.settings.location.LocationServicesPreferenceController"/>
 
     <com.android.car.ui.preference.CarUiFooterPreference
-        android:key="@string/pk_location_footer"
-        android:summary="@string/location_settings_footer"
-        android:icon="@drawable/ic_settings_about"
-        android:selectable="false"/>
-    <com.android.car.ui.preference.CarUiFooterPreference
         android:key="@string/pk_location_access_disclaimer"
         android:summary="@string/location_access_disclaimer_summary"
         android:selectable="false"
