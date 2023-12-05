@@ -326,7 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"停用应用"</string>
     <string name="not_installed" msgid="4163454337822508007">"没有为此个人资料安装该应用"</string>
     <string name="permissions_label" msgid="2701446753515612685">"权限"</string>
-    <string name="app_info_all_services_label" msgid="8609222837219512618">"所有服务"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"所有服务"</string>
     <string name="notifications_label" msgid="6586089149665170731">"通知"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"存储空间和缓存"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"优先保证应用性能"</string>
@@ -412,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"向应用授予“WLAN 控制”权限后，应用就能开启或关闭 WLAN、扫描及连接到 WLAN 网络、添加或移除网络，或启动仅限本地的热点。"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"更多"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"位置信息服务可能会使用 GPS、WLAN、移动网络和传感器等来源协助推测设备所在的位置。"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置信息"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"允许您指定的所有应用获取汽车的位置信息。"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"如果您关闭了此设置，所有应用（驾驶辅助功能所需的应用除外）的位置信息获取权限都将被撤消"</string>
