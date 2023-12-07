@@ -24,6 +24,8 @@ import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
+import com.android.internal.telephony.flags.Flags;
+
 import java.util.List;
 
 /** Provides helpful utilities surrounding network related tasks. */
@@ -64,6 +66,9 @@ public final class NetworkUtils {
                 .createForSubscriptionId(subId);
         SubscriptionManager subscriptionManager = context.getSystemService(
                 SubscriptionManager.class);
+        if (Flags.workProfileApiSplit()) {
+            subscriptionManager = subscriptionManager.createForAllUserProfiles();
+        }
         telephonyManager.setDataEnabled(enabled);
 
         if (disableOtherSubscriptions) {
