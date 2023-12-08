@@ -198,7 +198,7 @@
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"Otetaan Bluetooth käyttöön…"</string>
     <string name="bluetooth_turning_off" msgid="1753975097241024061">"Poistetaan Bluetooth käytöstä…"</string>
-    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> haluaa ottaa Bluetoothin käyttöön"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> haluaa laittaa Bluetoothin päälle"</string>
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> haluaa poistaa Bluetoothin käytöstä"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Sovellus haluaa ottaa Bluetoothin käyttöön"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Sovellus haluaa poistaa Bluetoothin käytöstä"</string>
@@ -326,7 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Poista sovellus käytöstä"</string>
     <string name="not_installed" msgid="4163454337822508007">"Ei asennettu tälle profiilille"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Luvat"</string>
-    <string name="app_info_all_services_label" msgid="8609222837219512618">"Kaikki palvelut"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Kaikki palvelut"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Ilmoitukset"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Tallennustila ja välimuisti"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Priorisoi sovelluksen suorituskykyä"</string>
@@ -412,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-hallinta antaa sovelluksen asettaa Wi-Fi päälle ja pois päältä, hakea Wi-Fi-verkkoja ja yhdistää niihin, lisätä ja poistaa verkkoja ja käynnistää paikallisen hotspotin."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Lisää"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Sijainti"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Sijainti voi käyttää esimerkiksi GPS:ää, Wi‑Fi- ja mobiiliverkkoja sekä antureita laitteesi sijainnin arvioimiseen."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Käytä sijaintia"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Käytä autosi sijaintia millä tahansa haluamallasi sovelluksella."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Jos laitat sijainnin pois päältä, pääsy siihen poistetaan kaikilta sovelluksilta, jotka eivät tarvitse sijaintia ajoavustimeen"</string>

@@ -30,6 +30,7 @@ import androidx.lifecycle.LifecycleOwner;
 
 import com.android.car.settings.common.Logger;
 import com.android.internal.telephony.TelephonyIntents;
+import com.android.internal.telephony.flags.Flags;
 import com.android.internal.util.CollectionUtils;
 
 import java.util.ArrayList;
@@ -68,7 +69,11 @@ public class MobileNetworkUpdateManager implements DefaultLifecycleObserver {
 
     public MobileNetworkUpdateManager(Context context, int subId) {
         mCurSubscriptionId = subId;
-        mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
+        SubscriptionManager sm = context.getSystemService(SubscriptionManager.class);
+        if (Flags.workProfileApiSplit()) {
+            sm = sm.createForAllUserProfiles();
+        }
+        mSubscriptionManager = sm;
         mSubscriptionInfos = mSubscriptionManager.getActiveSubscriptionInfoList();
 
         mPhoneChangeReceiver = new PhoneChangeReceiver(context, () -> {
