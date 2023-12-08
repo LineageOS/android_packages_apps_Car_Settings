@@ -227,7 +227,7 @@
     <string name="language_settings" msgid="2079258598337245546">"Тілдер"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Тілдер және енгізу"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Ұсынылған"</string>
-    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Барлық тіл"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Барлық тілдер"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Пернетақта"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Пернетақтаны басқару"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Мәтінді дыбыстау шығысы"</string>
@@ -329,7 +329,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ешқандай рұқсат берілмеген"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ешқандай рұқсат сұралмаған"</string>
     <string name="unused_apps" msgid="648471933781010395">"Пайдаланылмайтын қолданбалар"</string>
-    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# қолданба пайдаланылмайды}other{# қолданба пайдаланылмайды}}"</string>
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# пайдаланылмайтын қолданба}other{# пайдаланылмайтын қолданба}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Рұқсаттарды өшіру және орын босату"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"Ішкі жад: %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Қолданба өнімділігін басымды ету үшін жүйенің ресурстарын пайдаланады."</string>
@@ -475,7 +475,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"Жүйенің WebView лицензиялары"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Тұсқағаздар"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Satellite сурет провайдерлері:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
-    <string name="model_info" msgid="4966408071657934452">"Моделі"</string>
+    <string name="model_info" msgid="4966408071657934452">"Үлгісі"</string>
     <string name="status_serial_number" msgid="9158889113131907656">"Сериялық нөмірі"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"Жабдық нұсқасы"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
@@ -554,7 +554,7 @@
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Тек бір профиль жасауға болады.}other{# профильге дейін жасауға болады.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Жаңа профиль құру мүмкін болмады"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Бұл профильді жою керек пе?"</string>
-    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Осы профильдегі барлық қолданба мен дерек жойылады."</string>
+    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Осы профильдегі барлық қолданбалар мен деректер жойылады."</string>
     <string name="delete_user_error_title" msgid="287249031795906102">"Профиль жойылмады. Құрылғыны өшіріп қосып, қайталап көріңіз."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Бұл профиль құрылғыны өшіріп қосқан кезде немесе профильдерді ауыстырғанда жойылады."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Қабылдамау"</string>
@@ -663,7 +663,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Салып болғанда саусағыңызды жіберіңіз"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Өрнек сақталды"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Растау үшін өрнекті қайта сызыңыз"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Кемі 4 нүктені қосу қажет. Қайта салып көріңіз."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Кемі 4 нүктені қосу қажет. Қайталаңыз."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Қате өрнек"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Құлыпты ашу өрнегін сызу"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Өрнекті сақтау кезінде қате кетті"</string>
@@ -678,7 +678,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Құпия сөзіңізді енгізіңіз"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Қауіпсіздік үшін PIN кодын орнатыңыз"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN кодын қайта енгізіңіз"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN коды кемінде 4 цифрдан тұруы керек."</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN коды кемінде 4 таңбадан тұруы керек"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN коды жарамсыз: кемінде 4 сан болуы керек."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN кодтары сәйкес емес"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN кодын сақтау кезінде қате кетті"</string>
@@ -690,7 +690,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Өшіру"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Бас тарту"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Растау"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Кемінде 4 таңбадан тұруы керек."</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Ең кемі 4 таңбадан тұруы керек"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"Құлыптаудың бұл түрі қолжетімсіз."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Тек 0-9 арасындағы сандар болуы керек."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Құрылғы әкімшісі жақында пайдаланылған PIN кодын қолдануға рұқсат бермейді"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Деморежимнен шығу"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЖАБУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Көлік жүргізу кезінде бұл функция жұмыс істемейді."</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Жүргізушіден параметрді өзгертуді сұраңыз."</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Сіз бұл әрекетті орындай алмайсыз."</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Көлік жүргізу кезінде профиль қосу мүмкін емес"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Іздеу"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant және Voice"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Профиль қосу"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Бұл профильді жою"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профиль қосу"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Профильге жүргізуші ретінде кіріліп тұр. Профиль жүргізуші атынан пайдаланылмағанда қайталап көріңіз."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Дисплей жарықтығы"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Құрылғыларыңызды көру үшін Bluetooth-ты қосыңыз."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Құрылғыны жұптау үшін Bluetooth параметрлерін ашыңыз."</string>

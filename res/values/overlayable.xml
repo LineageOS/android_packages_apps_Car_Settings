@@ -76,6 +76,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="titleText"/>
       <item type="attr" name="usage"/>
       <item type="attr" name="wifiSignalColor"/>
+      <item type="bool" name="config_allow_adas_location_switch_clickable"/>
       <item type="bool" name="config_always_ignore_ux_restrictions"/>
       <item type="bool" name="config_automatic_brightness_available"/>
       <item type="bool" name="config_enable_home_settings_icon"/>
@@ -206,6 +207,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="entity_header_icon_size"/>
       <item type="dimen" name="entity_header_inner_margin"/>
       <item type="dimen" name="entity_header_margin_bottom"/>
+      <item type="dimen" name="hotspot_qr_code_size"/>
       <item type="dimen" name="icon_size"/>
       <item type="dimen" name="lock_hint_min_height"/>
       <item type="dimen" name="lock_hint_padding"/>
@@ -233,6 +235,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="progress_bar_preference_padding_bottom"/>
       <item type="dimen" name="progress_bar_preference_padding_top"/>
       <item type="dimen" name="progress_bar_preference_progressbar_margin_top"/>
+      <item type="dimen" name="qc_code_preference_margin"/>
+      <item type="dimen" name="rounded_corner_radius"/>
       <item type="dimen" name="secondary_icon_size"/>
       <item type="dimen" name="suggestions_action_bar_height"/>
       <item type="dimen" name="suggestions_corner_radius"/>
@@ -446,6 +450,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="guideline_start"/>
       <item type="id" name="guideline_top"/>
       <item type="id" name="hint_text"/>
+      <item type="id" name="hotspot_qr_code"/>
+      <item type="id" name="hotspot_qr_code_instruction"/>
       <item type="id" name="icon_frame"/>
       <item type="id" name="key0"/>
       <item type="id" name="key1"/>
@@ -576,6 +582,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="layout" name="usage_bytes_threshold_picker"/>
       <item type="layout" name="usage_cycle_reset_day_of_month_picker"/>
       <item type="layout" name="usage_indicator_preference"/>
+      <item type="layout" name="wifi_tether_qr_code_preference"/>
       <item type="plurals" name="default_camera_app_title"/>
       <item type="plurals" name="default_email_app_title"/>
       <item type="plurals" name="default_phone_app_title"/>
@@ -601,7 +608,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="accounts_settings_title"/>
       <item type="string" name="action_not_reversible_message"/>
       <item type="string" name="action_unavailable"/>
-      <item type="string" name="adas_settings_footer"/>
+      <item type="string" name="adas_location_toggle_confirm_label"/>
+      <item type="string" name="adas_location_toggle_off_warning"/>
+      <item type="string" name="adas_location_toggle_popup_summary"/>
+      <item type="string" name="adas_location_toggle_summary"/>
+      <item type="string" name="adas_location_toggle_title"/>
       <item type="string" name="add_a_profile_button_text"/>
       <item type="string" name="add_account_title"/>
       <item type="string" name="add_an_account"/>
@@ -893,8 +904,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="domain_urls_summary_one"/>
       <item type="string" name="domain_urls_summary_some"/>
       <item type="string" name="driver_assistance_label"/>
-      <item type="string" name="driver_assistance_settings_title"/>
-      <item type="string" name="driver_assistance_warning_confirm_label"/>
       <item type="string" name="edit_user_name_title"/>
       <item type="string" name="eight"/>
       <item type="string" name="empty_placeholder"/>
@@ -1037,16 +1046,15 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="license_title"/>
       <item type="string" name="link_speed"/>
       <item type="string" name="loading_wifi_list"/>
-      <item type="string" name="location_driver_assistance_action_text"/>
+      <item type="string" name="location_access_disclaimer_summary"/>
+      <item type="string" name="location_access_settings_summary"/>
+      <item type="string" name="location_access_settings_title"/>
+      <item type="string" name="location_adas_app_info_summary"/>
+      <item type="string" name="location_adas_apps_list_title"/>
       <item type="string" name="location_driver_assistance_privacy_policy_button_text"/>
-      <item type="string" name="location_driver_assistance_privacy_policy_header_content"/>
-      <item type="string" name="location_driver_assistance_toggle_off_summary"/>
-      <item type="string" name="location_driver_assistance_toggle_off_title"/>
-      <item type="string" name="location_driver_assistance_toggle_off_warning"/>
-      <item type="string" name="location_driver_assistance_toggle_summary"/>
-      <item type="string" name="location_driver_assistance_toggle_title"/>
       <item type="string" name="location_no_recent_access"/>
       <item type="string" name="location_recently_accessed"/>
+      <item type="string" name="location_settings_app_permissions_summary"/>
       <item type="string" name="location_settings_app_permissions_title"/>
       <item type="string" name="location_settings_footer"/>
       <item type="string" name="location_settings_recently_accessed_title"/>
@@ -1498,6 +1506,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_hotspot_name_summary_connecting"/>
       <item type="string" name="wifi_hotspot_name_title"/>
       <item type="string" name="wifi_hotspot_password_title"/>
+      <item type="string" name="wifi_hotspot_qr_code_text"/>
       <item type="string" name="wifi_hotspot_security_none"/>
       <item type="string" name="wifi_hotspot_security_title"/>
       <item type="string" name="wifi_hotspot_state_off"/>
@@ -1564,7 +1573,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="accessibility_settings_fragment"/>
       <item type="xml" name="account_details_fragment"/>
       <item type="xml" name="account_sync_details_fragment"/>
-      <item type="xml" name="adas_location_fragment"/>
       <item type="xml" name="add_wifi_fragment"/>
       <item type="xml" name="app_data_usage_fragment"/>
       <item type="xml" name="app_specific_data_usage_fragment"/>
@@ -1610,6 +1618,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="language_picker_fragment"/>
       <item type="xml" name="languages_and_input_fragment"/>
       <item type="xml" name="legal_information_fragment"/>
+      <item type="xml" name="location_access_fragment"/>
       <item type="xml" name="location_recent_accessed_view_all_fragment"/>
       <item type="xml" name="location_settings_fragment"/>
       <item type="xml" name="manage_domain_urls_fragment"/>

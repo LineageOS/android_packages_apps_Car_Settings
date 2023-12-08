@@ -301,7 +301,7 @@
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilomet trên lít"</string>
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Lít trên một trăm kilomet"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Ứng dụng và thông báo"</string>
-    <string name="all_applications" msgid="7798210477486822168">"Hiện tất cả ứng dụng"</string>
+    <string name="all_applications" msgid="7798210477486822168">"Hiển thị tất cả các ứng dụng"</string>
     <string name="default_applications" msgid="1558183275638697087">"Ứng dụng mặc định"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"Ứng dụng ảnh hưởng đến hiệu suất"</string>
     <string name="app_permissions" msgid="32799922508313948">"Quyền ứng dụng"</string>
@@ -678,9 +678,9 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Nhập mật khẩu của bạn"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Để bảo mật, hãy đặt mã PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Nhập lại mã PIN"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Mã PIN phải chứa ít nhất 4 chữ số"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Mã PIN phải có ít nhất 4 chữ số"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Mã PIN không hợp lệ. Mã này phải có ít nhất 4 chữ số."</string>
-    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Mã PIN không khớp"</string>
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Các mã PIN không khớp"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Lỗi khi lưu mã PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Mã PIN sai"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Mật khẩu sai"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Thoát chế độ demo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BỎ QUA"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Bạn không sử dụng được tính năng này khi đang lái xe"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Yêu cầu người lái thay đổi chế độ cài đặt"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Bạn không thực hiện được thao tác này"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Không thể thêm hồ sơ khi đang lái xe"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Tìm kiếm"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Trợ lý và Voice"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Thêm hồ sơ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Xóa hồ sơ này"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Thêm hồ sơ"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Hồ sơ này đang được đăng nhập với tư cách người lái. Hãy thử lại khi không dùng hồ sơ này lúc lái xe."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Độ sáng của màn hình"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Để xem các thiết bị của bạn, hãy bật Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Để ghép nối thiết bị, hãy mở phần cài đặt Bluetooth"</string>

@@ -190,3 +190,9 @@ android_library {
 
     aaptflags: ["--extra-packages com.android.car.settings"],
 }
+
+filegroup {
+    name: "CarSettings_proguard_flags",
+    srcs: ["proguard.flags"],
+}
+

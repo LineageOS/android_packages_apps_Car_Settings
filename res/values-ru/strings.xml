@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Выйти из деморежима"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЗАКРЫТЬ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Эта функция недоступна во время вождения."</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Попросите у водителя изменить параметр"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Это действие вам недоступно"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Невозможно добавить профиль во время вождения."</string>
     <string name="default_search_query" msgid="3137420627428857068">"Поиск"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Ассистент и голосовое управление"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Добавить профиль"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Удалить этот профиль"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Добавить профиль"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Сейчас этот профиль использует водитель. Повторите попытку, когда он выйдет из него."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яркость экрана"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Чтобы посмотреть список своих устройств, включите Bluetooth."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Чтобы подключить устройство, откройте настройки Bluetooth."</string>

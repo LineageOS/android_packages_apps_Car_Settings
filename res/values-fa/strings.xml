@@ -137,7 +137,7 @@
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"در دسترس نیست چون «مکان» خاموش است. "<annotation id="link">"مکان"</annotation>" را روشن کنید."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"اسکن کردن Wi‑Fi روشن شود؟"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"روشن کردن"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"اسکن شبکه‌های Wi-Fi روشن شد"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"اسکن کردن Wi-Fi روشن شد"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"تغییر وضعیت خودکار به داده تلفن همراه"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"وقتی Wi-Fi به اینترنت دسترسی ندارد، از داده تلفن همراه استفاده شود. ممکن است هزینه مصرف داده اعمال شود."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"پیدا کردن شبکه‌های Wi-Fi و اتصال به آن‌ها"</string>
@@ -179,7 +179,7 @@
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"استفاده از بلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"دستگاه بی‌نام"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"دستگاه‌های مرتبط‌شده"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"جفت کردن دستگاه جدید"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"مرتبط‌ کردن دستگاه جدید"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"بلوتوث برای مرتبط شدن روشن خواهد شد"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ارتباط دستگاه قطع شود؟"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"ارتباط خودرو از <xliff:g id="DEVICE_NAME">%1$s</xliff:g> قطع می‌شود."</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"خروج از حالت نمایشی"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"رد کردن"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"این ویژگی هنگام رانندگی در دسترس نیست"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"از راننده بخواهید تنظیم را تغییر دهد"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"نمی‌توانید این کنش را انجام دهید"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"نمی‌توان هنگام رانندگی نمایه اضافه کرد"</string>
     <string name="default_search_query" msgid="3137420627428857068">"جستجو"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"«دستیار» و صدا"</string>
@@ -755,10 +757,9 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"افزودن یک نمایه"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"حذف کردن این نمایه"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"افزودن نمایه"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"فعلاً این نمایه به‌عنوان راننده وارد شده است. وقتی از نمایه به‌عنوان راننده استفاده نمی‌شود امتحان کنید."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"روشنایی نمایشگر"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"برای دیدن دستگاه‌ها، بلوتوث را روشن کنید"</string>
-    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"برای جفت کردن دستگاه، تنظیمات بلوتوث را باز کنید"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"برای مرتبط کردن دستگاه، تنظیمات بلوتوث را باز کنید"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"سرپرست سیستم اطلاعات-سرگرمی"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"برنامه‌های فعال"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"برنامه‌های غیرفعال"</string>

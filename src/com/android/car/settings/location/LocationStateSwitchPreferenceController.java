@@ -37,7 +37,6 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ColoredSwitchPreference;
-import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PowerPolicyListener;
@@ -57,8 +56,7 @@ public class LocationStateSwitchPreferenceController extends
 
     private boolean mIsPowerPolicyOn = true;
 
-    private final Context mContext;
-    private final LocationManager mLocationManager;
+    protected final LocationManager mLocationManager;
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -74,7 +72,6 @@ public class LocationStateSwitchPreferenceController extends
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mContext = context;
         mLocationManager = context.getSystemService(LocationManager.class);
         mPowerPolicyListener = new PowerPolicyListener(context, LOCATION,
                 isOn -> {
@@ -110,15 +107,10 @@ public class LocationStateSwitchPreferenceController extends
     @Override
     protected boolean handlePreferenceChanged(ColoredSwitchPreference preference,
             Object newValue) {
-        boolean locationEnabled = (Boolean) newValue;
-        if (!locationEnabled) {
-            getFragmentController().showDialog(getConfirmationDialog(),
-                    ConfirmationDialogFragment.TAG);
-            return false;
-        }
+        boolean isLocationEnabled = (Boolean) newValue;
         Utils.updateLocationEnabled(
-                mContext,
-                locationEnabled,
+                getContext(),
+                isLocationEnabled,
                 UserHandle.myUserId(),
                 Settings.Secure.LOCATION_CHANGER_SYSTEM_SETTINGS);
         return true;
@@ -131,9 +123,8 @@ public class LocationStateSwitchPreferenceController extends
         setClickableWhileDisabled(getPreference(), /* clickable= */ true, p -> {
             // All the cases here should coincide with the ones in getAvailabilityStatus()
             if (!mIsPowerPolicyOn) {
-                Toast.makeText(getContext(),
-                        getContext().getString(R.string.power_component_disabled),
-                        Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), R.string.power_component_disabled, Toast.LENGTH_LONG)
+                        .show();
                 return;
             }
             if (hasUserRestrictionByDpm(getContext(), DISALLOW_SHARE_LOCATION)) {
@@ -149,7 +140,7 @@ public class LocationStateSwitchPreferenceController extends
 
     @Override
     protected void onStartInternal() {
-        mContext.registerReceiver(mReceiver, INTENT_FILTER_LOCATION_MODE_CHANGED);
+        getContext().registerReceiver(mReceiver, INTENT_FILTER_LOCATION_MODE_CHANGED);
     }
 
     @Override
@@ -159,7 +150,7 @@ public class LocationStateSwitchPreferenceController extends
 
     @Override
     protected void onStopInternal() {
-        mContext.unregisterReceiver(mReceiver);
+        getContext().unregisterReceiver(mReceiver);
     }
 
     @Override
@@ -171,19 +162,6 @@ public class LocationStateSwitchPreferenceController extends
             boolean enabled) {
         preference.setChecked(enabled
                 && !hasUserRestrictionByDpm(getContext(), DISALLOW_SHARE_LOCATION));
-    }
-
-    private ConfirmationDialogFragment getConfirmationDialog() {
-        return new ConfirmationDialogFragment.Builder(getContext())
-                .setMessage(mContext.getString(R.string.location_toggle_off_warning))
-                .setPositiveButton(android.R.string.ok, arguments -> {
-                    Utils.updateLocationEnabled(
-                            mContext,
-                            false,
-                            UserHandle.myUserId(),
-                            Settings.Secure.LOCATION_CHANGER_SYSTEM_SETTINGS);
-                })
-                .build();
     }
 
     private void showActionDisabledByAdminDialog(String restrictionType) {

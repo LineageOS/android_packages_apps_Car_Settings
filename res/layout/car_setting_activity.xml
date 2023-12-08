@@ -20,7 +20,7 @@
     android:id="@+id/car_settings_activity_wrapper"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/car_ui_activity_background">
+    android:background="?android:attr/colorBackground">
 
     <FrameLayout
         android:id="@+id/top_level_menu_container"

@@ -86,6 +86,7 @@ public class HotspotRow extends SettingsQCItem {
                 .setAction(getBroadcastIntent())
                 .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
                 .setDisabledClickAction(disabledPendingIntent)
+                .setContentDescription(getContext(), R.string.hotspot_settings_title)
                 .build();
 
         QCRow hotspotRow = new QCRow.Builder()

@@ -124,6 +124,23 @@ public class BluetoothDevicePreference extends MultiActionPreference {
         notifyHierarchyChanged();
     }
 
+    private CharSequence getConnectionSummary() {
+        CharSequence summary = mCachedDevice.getCarConnectionSummary(/* shortSummary= */ true,
+                mShowDisconnectedStateSubtitle);
+
+        if (mCachedDevice.isConnected()) {
+            Pair<Drawable, String> pair = com.android.settingslib.bluetooth.BluetoothUtils
+                    .getBtClassDrawableWithDescription(getContext(), mCachedDevice);
+            String connectedDeviceType = pair.second;
+
+            if (connectedDeviceType != null && !connectedDeviceType.isEmpty()) {
+                summary += " · " + connectedDeviceType;
+            }
+        }
+
+        return summary;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof BluetoothDevicePreference)) {

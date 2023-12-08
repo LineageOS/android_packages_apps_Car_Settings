@@ -380,7 +380,7 @@
     <string name="apps_settings_title" msgid="3982535942394315336">"التطبيقات"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"التطبيقات التي تم فتحها مؤخرًا"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"عرض جميع التطبيقات الـ ‎%1$d"</string>
-    <string name="apps_permission_manager_title" msgid="8776335943862484131">"إدارة الأذونات"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"مدير الأذونات"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"التحكُّم في وصول التطبيقات إلى بياناتك"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"لعرض تطبيق المساعد وتطبيقات أخرى"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{تطبيق واحد يؤثر في الأداء}zero{# تطبيق تؤثر في الأداء}two{تطبيقان يؤثران في الأداء}few{# تطبيقات تؤثر في الأداء}many{# تطبيقًا تؤثر في الأداء}other{# تطبيق تؤثر في الأداء}}"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"خروج من عرض توضيحي"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"رفض"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"لا تتوفَّر هذه الميزة أثناء القيادة."</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"اطلب من السائق تغيير الإعدادات."</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"لا يمكنك تنفيذ هذا الإجراء."</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"لا يمكن إضافة ملف شخصي أثناء القيادة."</string>
     <string name="default_search_query" msgid="3137420627428857068">"بحث"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"\"مساعد Google\" والصوت"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"إنشاء ملف شخصي"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"حذف هذا الملف الشخصي"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"إضافة ملف شخصي"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"هذا الملف الشخصي مسجّلٌ الدخول حاليًا كسائق. أعِد المحاولة عندما لا يكون الملف الشخصي قيد الاستخدام كسائق"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"سطوع الشاشة"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"لرؤية أجهزتك، يجب تفعيل البلوتوث."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"لإقران جهاز، افتح إعدادات البلوتوث."</string>

@@ -33,6 +33,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -83,6 +84,8 @@ public class NotificationsAppListPreferenceControllerTest {
     private PackageManager mMockPackageManager;
     @Mock
     private NotificationChannel mMockChannel;
+    @Mock
+    private CarUiTwoActionSwitchPreference mMockPreference;
 
     @Before
     @UiThreadTest
@@ -97,7 +100,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceCategory = new PreferenceCategory(mContext);
         screen.addPreference(mPreferenceCategory);
 
-        mPreferenceController = new NotificationsAppListPreferenceController(mContext,
+        mPreferenceController = new TestNotificationsAppListPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceCategory);
 
@@ -130,11 +133,8 @@ public class NotificationsAppListPreferenceControllerTest {
 
         assertThat(mPreferenceCategory.getPreferenceCount()).isEqualTo(1);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.getTitle()).isEqualTo(LABEL);
-        assertThat(preference.getIcon()).isNotNull();
+        verify(mMockPreference).setTitle(LABEL);
+        verify(mMockPreference).setIcon(any(Drawable.class));
     }
 
     @Test
@@ -146,10 +146,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionChecked()).isTrue();
+        verify(mMockPreference).setSecondaryActionChecked(true);
     }
 
     @Test
@@ -161,10 +158,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionChecked()).isFalse();
+        verify(mMockPreference).setSecondaryActionChecked(false);
     }
 
     @Test
@@ -174,10 +168,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionEnabled()).isFalse();
+        verify(mMockPreference).setSecondaryActionEnabled(false);
     }
 
     @Test
@@ -192,10 +183,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionEnabled()).isFalse();
+        verify(mMockPreference).setSecondaryActionEnabled(false);
     }
 
     @Test
@@ -213,10 +201,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionEnabled()).isFalse();
+        verify(mMockPreference).setSecondaryActionEnabled(false);
     }
 
     @Test
@@ -234,10 +219,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionEnabled()).isFalse();
+        verify(mMockPreference).setSecondaryActionEnabled(false);
     }
 
     @Test
@@ -246,10 +228,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionEnabled()).isTrue();
+        verify(mMockPreference).setSecondaryActionEnabled(true);
     }
 
     @Test
@@ -269,10 +248,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionEnabled()).isFalse();
+        verify(mMockPreference).setSecondaryActionEnabled(false);
     }
 
     @Test
@@ -292,10 +268,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionEnabled()).isFalse();
+        verify(mMockPreference).setSecondaryActionEnabled(false);
     }
 
     @Test
@@ -315,10 +288,7 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-
-        assertThat(preference.isSecondaryActionEnabled()).isTrue();
+        verify(mMockPreference).setSecondaryActionEnabled(true);
     }
 
     @Test
@@ -331,10 +301,9 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
+        verify(mMockPreference).setOnSecondaryActionClickListener(any());
 
-        preference.performSecondaryActionClick();
+        mPreferenceController.onSecondaryActionClick(PKG_NAME, UID, /* newValue= */ true);
 
         verify(mMockNotificationManager).setNotificationsEnabledForPackage(PKG_NAME, UID, true);
     }
@@ -349,10 +318,9 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
+        verify(mMockPreference).setOnSecondaryActionClickListener(any());
 
-        preference.performSecondaryActionClick();
+        mPreferenceController.onSecondaryActionClick(PKG_NAME, UID, /* newValue= */ false);
 
         verify(mMockNotificationManager).setNotificationsEnabledForPackage(PKG_NAME, UID, false);
     }
@@ -371,10 +339,9 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
+        verify(mMockPreference).setOnSecondaryActionClickListener(any());
 
-        preference.performSecondaryActionClick();
+        mPreferenceController.onSecondaryActionClick(PKG_NAME, UID, /* newValue= */ true);
 
         verify(mMockNotificationManager)
                 .updateNotificationChannelForPackage(PKG_NAME, UID, mMockChannel);
@@ -387,9 +354,9 @@ public class NotificationsAppListPreferenceControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onDataLoaded(mAppEntryList);
 
-        CarUiTwoActionSwitchPreference preference = (CarUiTwoActionSwitchPreference)
-                mPreferenceCategory.getPreference(0);
-        preference.performClick();
+        verify(mMockPreference).setOnPreferenceClickListener(any());
+
+        mPreferenceController.onPrimaryActionClick(PKG_NAME);
 
         verify(mFragmentController).launchFragment(any(ApplicationDetailsFragment.class));
     }
@@ -404,5 +371,19 @@ public class NotificationsAppListPreferenceControllerTest {
 
         when(mMockPackageManager.getPermissionFlags(eq(Manifest.permission.POST_NOTIFICATIONS),
                 eq(PKG_NAME), any())).thenReturn(0);
+    }
+
+    private class TestNotificationsAppListPreferenceController extends
+            NotificationsAppListPreferenceController {
+
+        TestNotificationsAppListPreferenceController(Context context, String preferenceKey,
+                FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+            super(context, preferenceKey, fragmentController, uxRestrictions);
+        }
+
+        @Override
+        CarUiTwoActionSwitchPreference createPreference() {
+            return mMockPreference;
+        }
     }
 }

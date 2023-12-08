@@ -80,6 +80,7 @@ public class MobileDataRow extends SettingsQCItem {
                 .setEnabled(!hasUmRestrictions && !hasDpmRestrictions && isWritableForZone())
                 .setClickableWhileDisabled(hasDpmRestrictions || isReadOnlyForZone)
                 .setDisabledClickAction(disabledPendingIntent)
+                .setContentDescription(getContext(), R.string.mobile_network_toggle_title)
                 .build();
 
         QCRow dataRow = new QCRow.Builder()

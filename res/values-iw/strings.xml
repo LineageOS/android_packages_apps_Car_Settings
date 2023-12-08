@@ -497,7 +497,7 @@
     <string name="reset_esim_desc" msgid="1437276625485586740">"הפעולה לא תבטל את תוכנית השירות שלך."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"לא ניתן לאתחל את כרטיסי ה-eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"בחירת רשת"</string>
-    <string name="reset_network_button_text" msgid="8374174455632765033">"איפוס ההגדרות"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"איפוס הגדרות"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"לאפס?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"האם לאפס את כל הגדרות הרשת? לא ניתן לבטל את הפעולה!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"איפוס הגדרות"</string>
@@ -678,7 +678,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"הזנת סיסמה"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"לשיפור האבטחה, מומלץ להגדיר קוד גישה"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"יש להזין שוב את קוד הגישה"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"קוד האימות חייב לכלול 4 ספרות לפחות"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"קוד הגישה חייב לכלול 4 ספרות לפחות"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"קוד גישה לא חוקי, צריך להכיל 4 ספרות לפחות."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"קודי הגישה אינם תואמים"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"שגיאה בשמירת קוד הגישה"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"יציאה ממצב הדגמה"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"סגירה"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"התכונה לא זמינה בזמן הנהיגה"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"צריך לבקש מהנהג לשנות את ההגדרה"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"לא ניתן לבצע את הפעולה הזו"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"לא ניתן להוסיף פרופיל בזמן הנהיגה"</string>
     <string name="default_search_query" msgid="3137420627428857068">"חיפוש"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant והקול"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"להוספת פרופיל"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"מחיקת הפרופיל"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"הוספת פרופיל"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"הפרופיל הזה משמש כרגע את החשבון של הנהג. יש לנסות שוב כשהפרופיל לא בשימוש הנהג."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"בהירות התצוגה"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"כדי להציג את המכשירים שלך, צריך להפעיל את Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"כדי להתאים מכשיר, צריך לפתוח את הגדרות Bluetooth"</string>

@@ -246,7 +246,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarme"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Sonnerie du téléphone"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Son de notification par défaut"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Son de l\'alarme par défaut"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Sonnerie par défaut du réveil"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Enregistrer"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Alertes sonores"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Sonnerie, notifications, alarme"</string>
@@ -662,7 +662,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dessinez un schéma de déverrouillage"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Relevez le doigt quand vous avez terminé"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Schéma enregistré"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Tracez de nouveau le schéma pour confirmer"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Redessinez le schéma pour le confirmer"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Reliez au moins 4 points. Réessayez."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Schéma incorrect"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Pour dessiner un schéma de déverrouillage"</string>
@@ -738,8 +738,10 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Quitter la démo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORER"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Fonctionnalité non disponible lorsque vous conduisez"</string>
-    <string name="restricted_for_passenger" msgid="7240117443887727753">"Demandez au conducteur de modifier le paramètre"</string>
-    <string name="restricted_for_driver" msgid="3364388937671526800">"Vous ne pouvez pas effectuer cette action"</string>
+    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
+    <skip />
+    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
+    <skip />
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Impossible d\'ajouter un profil en conduisant"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Rechercher"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant et voix"</string>
@@ -755,7 +757,6 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Ajouter un profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Supprimer ce profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Ajouter un profil"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Le conducteur est connecté avec ce profil. Réessayez lorsqu\'il ne l\'utilisera plus."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Luminosité de l\'affichage"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Pour voir vos appareils, activez le Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Pour associer un appareil, ouvrez les paramètres du Bluetooth"</string>
