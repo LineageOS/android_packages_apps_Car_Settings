@@ -349,6 +349,8 @@
     <string name="wifi_hotspot_auto_off_summary">Wi\u2011Fi hotspot will turn off if no devices are connected</string>
     <!-- Content description for the hotspot state switch. [CHAR LIMIT=NONE] -->
     <string name="wifi_hotspot_state_switch_content_description" translatable="false">Hotspot toggle switch</string>
+    <!-- Text for the hotspot QR code. -->
+    <string name="wifi_hotspot_qr_code_text">Scan this QR code to join</string>
     <!-- This string asks the user whether or not to allow an app to enable WiFi. [CHAR LIMIT=NONE] -->
     <string name="wifi_ask_enable"><xliff:g id="requester" example="FancyApp">%s</xliff:g> wants to turn on Wi-Fi</string>
     <!-- This string asks the user whether or not to allow an app to disable WiFi. [CHAR LIMIT=NONE] -->
@@ -907,40 +909,42 @@
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
     <string name="location_settings_title">Location</string>
+    <!-- Location settings footer warning text [CHAR LIMIT=NONE] -->
+    <string name="location_settings_footer">
+        Location may use sources like GPS, Wi\u2011Fi, mobile networks, and sensors to help estimate
+        your device\u2019s location.
+    </string>
     <!-- Title of location toggle setting [CHAR LIMIT=40] -->
     <string name="location_toggle_title">Use location</string>
-    <!-- Summary of location toggle setting [CHAR LIMIT=40] -->
-    <string name="location_toggle_summary">Allow apps you specify to access your location</string>
+    <!-- Summary of location toggle setting [CHAR LIMIT=NONE] -->
+    <string name="location_toggle_summary">
+        Use your car\u2019s location with any app you\u2019ve specified.
+    </string>
     <!-- Warning message when users try to toggle location off [CHAR LIMIT=NONE] -->
     <string name="location_toggle_off_warning">
         If you turn this off, it will remove location access for all apps except those needed for driver assistance
     </string>
-    <!-- Title of driver assistance toggle setting [CHAR LIMIT=40] -->
-    <string name="location_driver_assistance_toggle_title">
-        Use location for driver assistance
-    </string>
-    <!-- Title of driver assistance text toggle [CHAR LIMIT=40] -->
-    <string name="location_driver_assistance_toggle_off_title">Vehicle location is off</string>
-    <!-- Summary of driver assistance text toggle [CHAR LIMIT=40] -->
-    <string name="location_driver_assistance_toggle_off_summary">
-        Driver assistance apps cannot access your location
-    </string>
-    <!-- -Text of driver assistance text toggle [CHAR LIMIT=40] -->
-    <string name="location_driver_assistance_action_text">
-        Change
-    </string>
-    <!-- Summary of driver assistance toggle setting [CHAR LIMIT=40]-->
-    <string name="location_driver_assistance_toggle_summary">
-        Allow apps that help with driving to access your location
-    </string>
-    <!-- Warning message when users try to toggle driver assistance off [CHAR LIMIT=NONE] -->
-    <string name="location_driver_assistance_toggle_off_warning">
+    <!-- Warning message when users try to toggle adas location switch off [CHAR LIMIT=NONE] -->
+    <string name="adas_location_toggle_off_warning">
         If you turn this off, driver assistance apps that rely on location information will be
         disabled
     </string>
     <!-- Confirm button label for confirmation dialog [CHAR LIMIT=40]-->
-    <string name="driver_assistance_warning_confirm_label">
+    <string name="adas_location_toggle_confirm_label">
         Turn off anyway
+    </string>
+    <!-- Summary of why adas location toggle cannot be disabled [CHAR LIMIT=NONE] -->
+    <string name="adas_location_toggle_popup_summary">
+        This setting can\u2019t be changed and has been disabled by your car manufacturer.
+    </string>
+    <!-- Title of location access toggle setting [CHAR LIMIT=40] -->
+    <string name="adas_location_toggle_title">
+        Features that help you drive
+    </string>
+    <!-- Summary of location access toggle setting [CHAR LIMIT=NONE]-->
+    <string name="adas_location_toggle_summary">
+        Allow built\u2011in features, approved by your car\u2019s manufacturer, to access
+        your car\u2019s location.
     </string>
     <!-- Title of Recent Location Accesses category [CHAR LIMIT=60] -->
     <string name="location_recently_accessed">Recently accessed</string>
@@ -951,32 +955,44 @@
     <!-- Message indicating that no apps have accessed location recently [CHAR LIMIT=60] -->
     <string name="location_no_recent_access">No recent apps</string>
     <!-- Label for driver assistance apps that recently accessed location [CHAR LIMIT=60] -->
-    <string name="driver_assistance_label"><xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver assistance</string>
-    <!-- Content description for privacy policy header [CHAR LIMIT=40] -->
-    <string name="location_driver_assistance_privacy_policy_header_content">
-        Apps with permission to access this vehicle’s location for driver assistance features
+    <string name="driver_assistance_label">
+        <xliff:g id="time" example="1 min. ago">%1$s</xliff:g> \u2022 Driver assistance \u2022
+        Requires access
     </string>
-    <!-- Text policy button of driver assistance app [CHAR LIMIT=40] -->
-    <string name="location_driver_assistance_privacy_policy_button_text">Privacy policy</string>
+    <!-- Title for adas apps list [CHAR LIMIT=40] -->
+    <string name="location_adas_apps_list_title">
+        Features that help you drive
+    </string>
+    <!-- Text policy button of Location access app [CHAR LIMIT=40] -->
+    <string name="location_driver_assistance_privacy_policy_button_text">Policy</string>
     <!-- Title of Location App-level Permissions setting [CHAR LIMIT=60] -->
     <string name="location_settings_app_permissions_title">App-level permissions</string>
+    <!-- Summary of Location App-level Permissions setting [CHAR LIMIT=60] -->
+    <string name="location_settings_app_permissions_summary">
+        Manage individual app permissions
+    </string>
     <!-- Title of Location Services category [CHAR LIMIT=60] -->
     <string name="location_settings_services_title">Location Services</string>
     <!-- Content description for the location state switch. [CHAR LIMIT=NONE] -->
     <string name="location_state_switch_content_description" translatable="false">Location toggle switch</string>
     <!-- Location settings screen, setting option name to enable location tracking [CHAR LIMIT=60] -->
     <string name="location_use_location_title">Use location</string>
-    <!-- Location settings footer warning text [CHAR LIMIT=NONE] -->
-    <string name="location_settings_footer">
-        Location may use sources like GPS, Wi\u2011Fi, mobile networks, and sensors to help estimate
-        your device\u2019s location.
+    <!-- Title of location access page [CHAR LIMIT=40]-->
+    <string name="location_access_settings_title">Location access</string>
+    <!-- Summary of location access page [CHAR LIMIT=NONE]-->
+    <string name="location_access_settings_summary">
+        Choose if apps can access your car\u2019s location
     </string>
-    <!-- Title of Driver assistance page [CHAR LIMIT=40]-->
-    <string name="driver_assistance_settings_title">Driver assistance</string>
-    <!--Driver assistance settings footer warning text [CHAR LIMIT=NONE] -->
-    <string name="adas_settings_footer">
-        Location information sent to driver assistance apps doesn’t contain information that
-        identifies you. It’s stored for a maximum of 2 days before being deleted.
+    <!-- Location access page disclaimer summary [CHAR LIMIT=NONE] -->
+    <string name="location_access_disclaimer_summary">
+        Your car manufacturer may still have access to your car\u2019s location. You can review
+        their policies for more info.
+    </string>
+    <!-- Location access adas app info summary [CHAR LIMIT=NONE] -->
+    <string name="location_adas_app_info_summary">
+        These built\u2011in features require access to your car\u2019s location to assist with
+        driving.\n\nLearn more about how each app uses your Location data by reviewing its Privacy
+        Policy.
     </string>
 
     <!-- Microphone --><skip/>

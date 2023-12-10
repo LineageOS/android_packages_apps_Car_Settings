@@ -36,13 +36,18 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.MultiActionPreference;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
+import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
+
+import java.util.Collections;
 
 @RunWith(AndroidJUnit4.class)
 public class BluetoothDevicePreferenceTest {
@@ -60,13 +65,16 @@ public class BluetoothDevicePreferenceTest {
         return bluetoothClass;
     }
 
-
     @Mock
     private CachedBluetoothDevice mCachedDevice;
+    @Mock
+    private LocalBluetoothProfile mProfile;
+
+    @Rule
+    public final MockitoRule rule = MockitoJUnit.rule();
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
         mPreference = new BluetoothDevicePreference(mContext, mCachedDevice);
     }
 
@@ -116,6 +124,21 @@ public class BluetoothDevicePreferenceTest {
 
         mPreference.onAttached();
 
+        assertThat(mPreference.getSummary()).isEqualTo(summary);
+    }
+
+    @Test
+    public void onAttached_connected_carConnectionSummaryIsNull_setsSummary() {
+        when(mCachedDevice.isConnected()).thenReturn(true);
+
+        String summary = "Summary";
+        when(mCachedDevice.getCarConnectionSummary(anyBoolean(), anyBoolean())).thenReturn(summary);
+        when(mCachedDevice.getProfiles()).thenReturn(Collections.singletonList(mProfile));
+        when(mProfile.getDrawableResource(any()))
+                .thenReturn(com.android.internal.R.drawable.ic_settings_bluetooth);
+        mPreference.onAttached();
+
+        // Null device type descriptions aren't added to the summary when device is connected
         assertThat(mPreference.getSummary()).isEqualTo(summary);
     }
 

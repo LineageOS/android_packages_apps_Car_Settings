@@ -65,7 +65,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Дата скидання циклу використання даних"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Дата кожного місяця:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Налаштувати"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Застереження та ліміт"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Застереження й ліміт"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Цикл використання трафіку додатків"</string>
     <string name="mobile_data_usage" msgid="8171519864391091861">"Використання мобільного Інтернету"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Увімкнути сповіщення про трафік"</string>
@@ -165,6 +165,7 @@
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Вимкнено"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматично вимикати точку доступу"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Якщо немає під’єднаних пристроїв, точка доступу Wi-Fi вимикатиметься"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Зіскануйте цей QR-код, щоб приєднатися"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Додаток <xliff:g id="REQUESTER">%s</xliff:g> хоче ввімкнути Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Додаток <xliff:g id="REQUESTER">%s</xliff:g> хоче вимкнути Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Помилка"</string>
@@ -407,29 +408,30 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Додаток із дозволом на керування Wi-Fi може вмикати й вимикати Wi-Fi, шукати, додавати й вилучати мережі, підключатися до них, а також запускати локальну точку доступу."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Більше"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Геодані"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"Для визначення місцезнаходження вашого пристрою можуть використовуватися дані GPS, Wi-Fi, мобільних мереж і датчиків."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Використовувати геодані"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Дати вибраним додаткам доступ до геоданих"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Усі вказані вами додатки матимуть доступ до геоданих автомобіля."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Якщо вимкнути цю опцію, доступ до геоданих буде скасовано для всіх додатків, крім потрібних для допомоги водію"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Використов. геодані для допомоги водію"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геодані транспортного засобу вимкнено"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Додатки для допомоги водію не мають доступу до геоданих"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Змінити"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Надати додаткам для допомоги водію доступ до геоданих"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Якщо вимкнути цю опцію, додатки для допомоги водію, які використовують геодані, буде вимкнено"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Вимкнути"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Якщо вимкнути цю опцію, додатки для допомоги водію, які використовують геодані, буде вимкнено"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Вимкнути"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Це налаштування не можна змінити. Його вимкнув виробник вашого автомобіля."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функції допомоги водію"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Вбудовані функції, які схвалив виробник автомобіля, матимуть доступ до його геоданих."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Нещодавно використовувалися"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Нещодавно використовувалися"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Показати всі"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Жодний додаток не використовував геодані нещодавно"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Допомога водію"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Додатки з дозволом на доступ до геоданих можуть визначати місцезнаходження цього транспортного засобу для роботи функцій допомоги водію"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Політика конфіденційності"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Допомога водію • Потрібен доступ"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Функції допомоги водію"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Політика"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на рівні додатка"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Керування дозволами для окремих додатків"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Геолокація"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Використовувати геодані"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Для визначення місцезнаходження вашого пристрою можуть використовуватися дані GPS, Wi-Fi, мобільних мереж і датчиків."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Допомога водію"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Геодані, які отримують додатки для допомоги водію, не містять інформації, за якою вас можна ідентифікувати. Вони зберігаються щонайбільше 2 дні, а потім видаляються."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Доступ до геоданих"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Укажіть, чи можуть додатки отримувати доступ до геоданих автомобіля"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Виробник вашого автомобіля може й надалі мати доступ до його геоданих. Щоб дізнатися більше, перегляньте правила виробника."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Ці вбудовані функції вимагають доступу до геоданих автомобіля, щоб допомагати вам у дорозі.\n\nЩоб дізнатися, як конкретний додаток використовує ваші геодані, перегляньте його політику конфіденційності."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Використовувати мікрофон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Надати всім додаткам доступ до мікрофона"</string>

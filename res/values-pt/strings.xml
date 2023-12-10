@@ -165,6 +165,7 @@
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desativado"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desativar ponto de acesso automaticamente"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"O ponto de acesso Wi‑Fi será desativado se nenhum dispositivo for conectado"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Leia o código QR para acessar"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quer ativar o Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> quer desativar o Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erro"</string>
@@ -407,29 +408,30 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"O controle de Wi-Fi permite que um app ative ou desative o Wi-Fi, verifique redes Wi-Fi e se conecte a elas, adicione ou remova redes, ou inicie um ponto de acesso somente local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mais"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Local"</string>
+    <string name="location_settings_footer" msgid="296892848338100051">"A localização pode usar fontes como GPS, Wi-Fi, redes móveis e sensores para ajudar a estimar o local do dispositivo."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar local"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Permitir acesso à localização a apps específicos"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Usar a localização do carro com qualquer app que você especificar."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se você desativar essa configuração, o acesso à localização de todos os apps vai ser removido, exceto nos que são necessários para assistência ao motorista"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Usar localização p/ assist. ao motorista"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"A localização do veículo está desativada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps de assist. s/ acesso à localização"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Alterar"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permitir acesso à localização a apps de assistência ao motorista"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Se você não usar essa configuração, os apps de assistência ao motorista que precisam de informações de localização vão ser desativados"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desativar mesmo assim"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se você não usar essa configuração, os apps de assistência ao motorista que precisam de informações de localização vão ser desativados"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desativar mesmo assim"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Esta configuração foi desativada pelo fabricante do carro e não pode ser mudada."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Recursos que ajudam você a dirigir"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Permita que recursos integrados, aprovados pelo fabricante, acessem a localização do carro."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Acessos recentes"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Acessos recentes"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver tudo"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Nenhum app recente"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Assistência ao motorista"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apps c/ acesso à localização p/ assist."</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Política de Privacidade"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Assistência ao motorista • Exige acesso"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Recursos que ajudam você a dirigir"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Política"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permissões no app"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Gerenciar permissões individuais do app"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Serviços de localização"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usar local"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"A localização pode usar fontes como GPS, Wi-Fi, redes móveis e sensores para ajudar a estimar o local do dispositivo."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistência ao motorista"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"As informações de localização enviadas aos apps de assistência ao motorista não contêm dados que identifiquem você. Elas são armazenadas por no máximo dois dias antes de serem excluídas."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Acesso ao local"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Escolher se os apps podem acessar a localização do carro"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"O fabricante ainda pode ter acesso à localização do seu carro. Para saber mais informações, consulte as políticas dele."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Os recursos integrados exigem acesso à localização do seu carro para ajudar na direção.\n\nRevise a Política de Privacidade dos apps para saber mais sobre como eles usam os dados de localização."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar o microfone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todos os apps acessem seu microfone"</string>
@@ -721,7 +723,7 @@
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Remover todo o conteúdo?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Armazenamento de credenciais apagado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Armazenamento de credenciais não apagado."</string>
-    <string name="forget" msgid="3971143908183848527">"Ignorar"</string>
+    <string name="forget" msgid="3971143908183848527">"Esquecer"</string>
     <string name="connect" msgid="5861699594602380150">"Conectar"</string>
     <string name="disconnect" msgid="6140789953324820336">"Desconectar"</string>
     <string name="delete_button" msgid="5840500432614610850">"Excluir"</string>
