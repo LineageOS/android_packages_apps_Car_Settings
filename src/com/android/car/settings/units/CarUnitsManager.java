@@ -21,7 +21,6 @@ import android.car.CarNotConnectedException;
 import android.car.VehiclePropertyIds;
 import android.car.VehicleUnit;
 import android.car.hardware.CarPropertyConfig;
-import android.car.hardware.property.AreaIdConfig;
 import android.car.hardware.property.CarPropertyManager;
 import android.content.Context;
 import android.util.ArraySet;
@@ -95,10 +94,8 @@ public class CarUnitsManager {
             return null;
         }
 
-        // Checks if the property is read-write property. Checking only one area Id because _UNITS
-        // properties are global properties.
-        List<AreaIdConfig<?>> areaIdConfigs = configs.get(0).getAreaIdConfigs();
-        if (areaIdConfigs.get(0).getAccess()
+        // Checks if the property is read-write property
+        if (configs.get(0).getAccess()
                 != CarPropertyConfig.VEHICLE_PROPERTY_ACCESS_READ_WRITE) {
             return null;
         }
