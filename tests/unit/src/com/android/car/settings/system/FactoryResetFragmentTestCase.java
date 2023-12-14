@@ -29,6 +29,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.FlakyTest;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
@@ -75,6 +76,7 @@ public abstract class FactoryResetFragmentTestCase<T extends BaseCarSettingsTest
     }
 
     @Test
+    @FlakyTest(bugId = 316036256)
     public void processActivityResult_otherResultCode_doesNothing() {
         mFragment.processActivityResult(CHECK_LOCK_REQUEST_CODE, RESULT_CANCELED, /* data= */ null);
 
