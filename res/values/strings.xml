@@ -1845,6 +1845,8 @@
     <string name="qc_bluetooth_off_devices_info">To see your devices, turn on Bluetooth</string>
     <!-- Informational text to be shown when bluetooth devices can't be shown in quick controls because no devices are paired [CHAR LIMIT=75] -->
     <string name="qc_bluetooth_on_no_devices_info">To pair a device, open Bluetooth settings</string>
+    <!-- UI Mode quick control, control name to change display UI mode (auto/day/night) [CHAR LIMIT=40] -->
+    <string name="qc_ui_mode_title">Theme</string>
 
     <!-- Device Policy Management --><skip/>
     <!-- Device admin add activity title -->

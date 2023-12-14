@@ -350,6 +350,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_brightness"/>
       <item type="drawable" name="ic_qc_hotspot"/>
       <item type="drawable" name="ic_qc_mobile_data"/>
+      <item type="drawable" name="ic_qc_ui_mode_auto"/>
+      <item type="drawable" name="ic_qc_ui_mode_day"/>
+      <item type="drawable" name="ic_qc_ui_mode_night"/>
       <item type="drawable" name="ic_qc_wifi_disabled"/>
       <item type="drawable" name="ic_qc_wifi_disconnected"/>
       <item type="drawable" name="ic_qc_wifi_level_0"/>
@@ -1229,6 +1232,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="qc_bluetooth_off_devices_info"/>
       <item type="string" name="qc_bluetooth_on_no_devices_info"/>
       <item type="string" name="qc_display_brightness"/>
+      <item type="string" name="qc_ui_mode_title"/>
       <item type="string" name="really_remove_account_message"/>
       <item type="string" name="really_remove_account_title"/>
       <item type="string" name="regulatory_info_text"/>
