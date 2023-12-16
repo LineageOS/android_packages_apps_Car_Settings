@@ -46,6 +46,8 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.FlakyTest;
+
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
@@ -133,6 +135,7 @@ public class SystemUpdatePreferenceControllerTest {
     }
 
     @Test
+    @FlakyTest(bugId = 316042666)
     public void getAvailabilityStatus_adminUser_available_zoneHidden() {
         when(mMockUserManager.isAdminUser()).thenReturn(true);
         mPreferenceController.setAvailabilityStatusForZone("hidden");
