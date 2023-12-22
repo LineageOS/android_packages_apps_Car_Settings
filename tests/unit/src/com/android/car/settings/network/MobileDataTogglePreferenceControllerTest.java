@@ -92,10 +92,10 @@ public class MobileDataTogglePreferenceControllerTest {
 
         mSession = ExtendedMockito.mockitoSession()
                 .mockStatic(SubscriptionManager.class, withSettings().lenient())
-                .mockStatic(TelephonyManager.class, withSettings().lenient())
                 .startMocking();
 
-        ExtendedMockito.when(TelephonyManager.from(mContext)).thenReturn(mMockTelephonyManager);
+        when(mContext.getSystemService(eq(Context.TELEPHONY_SERVICE)))
+                .thenReturn(mMockTelephonyManager);
         when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mMockTelephonyManager);
         when(mMockTelephonyManager.createForSubscriptionId(SUB_ID))
                 .thenReturn(mMockTelephonyManager);
