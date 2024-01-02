@@ -82,6 +82,7 @@
 
         If empty, all ringtones will default to the default ringtone uri.
     -->
+    <bool name="config_allow_audio_destination_selection">false</bool>
     <string-array name="config_ringtone_uri_map_value" translatable="false">
         <item>content://settings/system/notification_sound</item>
         <item>content://settings/system/alarm_alert</item>
