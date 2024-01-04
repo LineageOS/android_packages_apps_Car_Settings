@@ -114,6 +114,9 @@
         car-ui-lib preferences.
     -->
     <bool name="config_top_level_enable_chevrons">true</bool>
+    <!-- Whether to show top level icon background. When this is set to be true, adjust the value
+         for top_level_foreground_icon_inset accordingly. -->
+    <bool name="config_show_top_level_icon_background">false</bool>
     <!-- The shape for top-level icons: 0=RECTANGLE, 1=OVAL -->
     <integer name="config_top_level_icon_shape" translatable="false">1</integer>
     <!--
