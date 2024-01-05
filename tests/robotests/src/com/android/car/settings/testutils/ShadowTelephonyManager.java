@@ -68,12 +68,12 @@ public class ShadowTelephonyManager extends org.robolectric.shadows.ShadowTeleph
     }
 
     @Implementation
-    protected void setDataEnabled(boolean enable) {
+    public void setDataEnabled(boolean enable) {
         mIsDataEnabled = enable;
     }
 
     @Implementation
-    protected boolean isDataEnabled() {
+    public boolean isDataEnabled() {
         return mIsDataEnabled;
     }
 
