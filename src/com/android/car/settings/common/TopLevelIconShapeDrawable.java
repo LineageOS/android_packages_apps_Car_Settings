@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 
 import android.content.res.Resources;
 import android.content.res.Resources.Theme;
+import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 
@@ -52,5 +53,10 @@ public class TopLevelIconShapeDrawable extends GradientDrawable {
 
     private void init(Resources resources) {
         setShape(resources.getInteger(R.integer.config_top_level_icon_shape));
+
+        boolean showBackground = resources.getBoolean(R.bool.config_show_top_level_icon_background);
+        if (!showBackground) {
+            setColor(Color.TRANSPARENT);
+        }
     }
 }
