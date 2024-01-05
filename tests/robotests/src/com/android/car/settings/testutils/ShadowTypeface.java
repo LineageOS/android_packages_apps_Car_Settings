@@ -24,7 +24,7 @@ import org.robolectric.annotation.Implements;
  * This is to shadow an extra function that old versions of Robolectric don't cover.
  */
 @Implements(value = Typeface.class)
-public class ShadowTypeface extends org.robolectric.shadows.ShadowTypeface {
+public class ShadowTypeface extends org.robolectric.shadows.ShadowLegacyTypeface {
 
     @Implementation
     public static Typeface create(Typeface family, int weight, boolean italic) {
