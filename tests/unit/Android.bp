@@ -10,7 +10,7 @@ android_test {
 
     srcs: [
         "src/**/*.kt",
-        "src/**/*.java"
+        "src/**/*.java",
     ],
 
     libs: [
@@ -48,4 +48,6 @@ android_test {
     ],
 
     compile_multilib: "64",
+    // TODO(b/319708040): re-enable use_resource_processor
+    use_resource_processor: false,
 }
