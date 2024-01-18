@@ -61,6 +61,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -199,7 +200,8 @@ public class WifiEntryListPreferenceControllerTest {
     @UiThreadTest
     public void performClick_activeWifiEntry_showDetailsFragment() {
         when(mMockWifiEntry1.getConnectedState()).thenReturn(WifiEntry.CONNECTED_STATE_CONNECTED);
-        when(mMockCarWifiManager.getConnectedWifiEntry()).thenReturn(mMockWifiEntry1);
+        when(mMockCarWifiManager.getConnectedWifiEntries())
+                .thenReturn(Collections.singletonList(mMockWifiEntry1));
         when(mMockCarWifiManager.getAllWifiEntries()).thenReturn(new ArrayList<>());
         mPreferenceController.onCreate(mLifecycleOwner);
 

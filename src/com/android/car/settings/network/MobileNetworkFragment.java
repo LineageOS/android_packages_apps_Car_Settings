@@ -34,6 +34,7 @@ import com.android.car.settings.datausage.DataUsageSummaryPreferenceController;
 import com.android.car.settings.datausage.DataWarningAndLimitPreferenceController;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.car.ui.toolbar.ToolbarController;
+import com.android.internal.telephony.flags.Flags;
 import com.android.internal.util.CollectionUtils;
 import com.android.settingslib.search.SearchIndexable;
 
@@ -149,7 +150,11 @@ public class MobileNetworkFragment extends SettingsFragment implements
 
     @VisibleForTesting
     SubscriptionManager getSubscriptionManager(Context context) {
-        return context.getSystemService(SubscriptionManager.class);
+        SubscriptionManager sm = context.getSystemService(SubscriptionManager.class);
+        if (Flags.workProfileApiSplit()) {
+            sm = sm.createForAllUserProfiles();
+        }
+        return sm;
     }
 
     @VisibleForTesting

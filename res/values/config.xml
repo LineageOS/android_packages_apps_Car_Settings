@@ -167,4 +167,17 @@
 
     <!-- Whether to allow the ADAS Location Switch to be clickable. -->
     <bool name="config_allow_adas_location_switch_clickable">true</bool>
+
+    <!-- Packages (other than settings and systemui) allowed to enable bluetooth scanning. -->
+    <string-array name="config_allowed_bluetooth_scanning_packages">
+        <item>com.android.car.carlauncher</item>
+    </string-array>
+
+    <!--
+        List of packages whose android.permission.BIND_NOTIFICATION_LISTENER_SERVICE permission
+         shouldn't be changed.
+     -->
+    <string-array name="config_fixed_notification_access_packages">
+        <item>com.android.car.notification</item>
+    </string-array>
 </resources>

@@ -25,7 +25,7 @@
 
     <uses-sdk
         android:minSdkVersion="24"
-        android:targetSdkVersion="32"/>
+        android:targetSdkVersion="33"/>
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -60,6 +60,7 @@
     <uses-permission android:name="android.permission.OBSERVE_SENSOR_PRIVACY"/>
     <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG" />
     <uses-permission android:name="android.permission.READ_DISPLAY_UNITS"/>
     <uses-permission android:name="android.permission.REBOOT"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -67,6 +68,7 @@
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
     <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS"/>
     <uses-permission android:name="android.permission.START_FOREGROUND"/>
+    <uses-permission android:name="android.permission.START_VIEW_APP_FEATURES" />
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
     <uses-permission android:name="android.permission.SUGGEST_MANUAL_TIME_AND_ZONE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>

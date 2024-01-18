@@ -19,6 +19,7 @@ package com.android.car.settings.applications.specialaccess;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -33,6 +34,7 @@ import android.content.DialogInterface;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ServiceInfo;
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.UserHandle;
 
@@ -64,6 +66,7 @@ import java.util.Collections;
 @RunWith(AndroidJUnit4.class)
 public class NotificationAccessPreferenceControllerTest {
 
+    private static final String PACKAGE_NAME = "com.android.test.package";
     private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private LifecycleOwner mLifecycleOwner;
     private PreferenceGroup mPreferenceGroup;
@@ -78,6 +81,8 @@ public class NotificationAccessPreferenceControllerTest {
     private FragmentController mMockFragmentController;
     @Mock
     private PackageManager mMockPackageManager;
+    @Mock
+    private Resources mMockResources;
 
     @Before
     @UiThreadTest
@@ -101,7 +106,7 @@ public class NotificationAccessPreferenceControllerTest {
 
         mListenerServiceInfo = new ServiceInfo();
         mListenerServiceInfo.permission = Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE;
-        mListenerServiceInfo.packageName = "com.android.test.package";
+        mListenerServiceInfo.packageName = PACKAGE_NAME;
         mListenerServiceInfo.name = "SomeListenerService";
         mListenerServiceInfo.nonLocalizedLabel = "label";
         mApplicationInfo = new ApplicationInfo();
@@ -114,10 +119,35 @@ public class NotificationAccessPreferenceControllerTest {
     }
 
     @Test
-    public void onStart_loadsListenerServices() throws PackageManager.NameNotFoundException {
+    public void onStart_loadsListenerServices_preferenceEnabled()
+            throws PackageManager.NameNotFoundException {
         setupPreferenceController(/* permissionGranted= */true, mListenerServiceInfo);
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        TwoStatePreference preference = (TwoStatePreference) mPreferenceGroup.getPreference(0);
+        assertThat(preference.isEnabled()).isTrue();
+    }
+
+    @Test
+    @UiThreadTest
+    public void onStart_loadsFixedPackage_preferenceDisabled()
+            throws PackageManager.NameNotFoundException {
+        String[] fixedPackages = new String[] {PACKAGE_NAME};
+        when(mContext.getResources()).thenReturn(mMockResources);
+        when(mMockResources.getStringArray(anyInt()))
+                .thenReturn(fixedPackages);
+        mPreferenceController = new NotificationAccessPreferenceController(mContext,
+                /* preferenceKey= */ "key", mMockFragmentController,
+                mCarUxRestrictions, mNotificationManager);
+
+        PreferenceControllerTestUtil
+                .assignPreference(mPreferenceController, mPreferenceGroup);
+
+        setupPreferenceController(/* permissionGranted= */ true, mListenerServiceInfo);
+
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        TwoStatePreference preference = (TwoStatePreference) mPreferenceGroup.getPreference(0);
+        assertThat(preference.isEnabled()).isFalse();
     }
 
     @Test

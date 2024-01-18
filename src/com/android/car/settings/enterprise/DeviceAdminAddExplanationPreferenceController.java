@@ -58,7 +58,12 @@ public final class DeviceAdminAddExplanationPreferenceController
     public DeviceAdminAddExplanationPreferenceController setExplanation(
             @Nullable CharSequence explanation) {
         mLogger.d("setExplanation(): " + explanation);
-        mExplanation = explanation;
+        if (explanation != null) {
+            mExplanation = TextUtils.makeSafeForPresentation(
+                    explanation.toString(), /* maxCharactersToConsider= */ 0,
+                    /* ellipsizeDp= */ 0, TextUtils.SAFE_STRING_FLAG_TRIM
+                    | TextUtils.SAFE_STRING_FLAG_FIRST_LINE);
+        }
         return this;
     }
 }

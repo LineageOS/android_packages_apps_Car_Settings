@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertWithMessage;
 import androidx.preference.Preference;
 
 public class PreferenceControllerTestUtil {
+
     /**
      * Associates a PreferenceController with its Preference.
      */
@@ -28,6 +29,12 @@ public class PreferenceControllerTestUtil {
         controller.setPreference(preference);
     }
 
+    /**
+     * Asserts that the test availability status matches the expected result
+     *
+     * @param actualValue availability returned by the test
+     * @param expectedValue expected availability
+     */
     public static void assertAvailability(int actualValue, int expectedValue) {
         assertWithMessage("controller availability (%s=%s, %s=%s)",
                 actualValue, availabilityToString(actualValue),

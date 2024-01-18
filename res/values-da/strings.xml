@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Vælg mindst ét bånd til Wi‑Fi-hotspottet:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot og netdeling"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi-Fi-hotspot"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Brug Wi-Fi-hotspot"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Deaktiveret"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Deaktiver hotspot automatisk"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi-hotspot deaktiveres, hvis der ikke er nogen forbundne enheder"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Scan denne QR-kode for at tilslutte dig \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Adgangskode til hotspot: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker at aktivere Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ønsker at deaktivere Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fejl"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Der blev oprettet forbindelse"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Vis alle"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Søger"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Forbundne enheder"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Brug Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Enhed uden navn"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Deaktiver appen"</string>
     <string name="not_installed" msgid="4163454337822508007">"Ikke installeret for denne profil"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Tilladelser"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Alle tjenester"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notifikationer"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Lagerplads og cache"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Prioriter app-ydeevne"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Mere"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokation"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Anvend lokation"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Giv visse apps adgang til din lokation"</string>
-    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Hvis du deaktiverer dette, fjernes adgangstilladelsen til lokation for alle apps, bortset fra de apps, der er nødvendige for at bruge førerassistance"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Brug lokation til førerassistance"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Bilens lokation er deaktiveret"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps til førerassistance har ikke lokationsadgang"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Skift"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Giv apps, der hjælper under kørsel, adgang til din lokation"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Hvis du deaktiverer dette, deaktiveres apps til førerassistance, som kræver lokationsoplysninger"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Deaktiver alligevel"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Brug bilens lokation med en hvilken som helst app, du har valgt."</string>
+    <string name="location_toggle_off_warning" msgid="5959449346865136081">"Hvis du deaktiverer dette, fjernes lokationstilladelse for alle apps, bortset fra de apps, der er nødvendige for at bruge førerassistance"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Hvis du deaktiverer dette, deaktiveres apps til førerassistance, som kræver lokationsoplysninger"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Deaktiver alligevel"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Denne indstilling kan ikke ændres og er blevet deaktiveret af bilproducenten."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funktioner til bilkørslen"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Tillad, at indbyggede funktioner, som er godkendte af producenten af din bil, kan tilgå bilens lokation."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Tilgået for nylig"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Tilgået for nylig"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Se alle"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ingen apps har haft adgang til lokationen for nylig"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Førerassistance"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apps med adgangstilladelse har adgang til denne bils lokation, når du bruger funktioner til førerassistance"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Privatlivspolitik"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Førerassistance • Adgang er påkrævet"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funktioner til bilkørslen"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Politik"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tilladelser på appniveau"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Administrer individuelle apptilladelser"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Lokationstjenester"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Brug lokation"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Lokation kan anvende kilder som f.eks. GPS, Wi‑Fi, mobilnetværk og sensorer til at anslå din enheds lokation."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Førerassistance"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Lokationsoplysninger, der sendes til apps til førerassistance, indeholder ingen oplysninger, der identificerer dig. De gemmes i højst 2 dage, før de slettes."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Lokationsadgang"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Vælg, om apps kan tilgå bilens lokation"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Bilproducenten har muligvis stadig adgang til bilens lokation. Du kan gennemgå bilproducentens politikker for at få flere oplysninger."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Disse indbyggede funktioner kræver adgang til bilens lokation for at hjælpe dig med bilkørslen.\n\nFå flere oplysninger om, hvordan en app anvender dine lokationsdata, ved at gennemgå dens privatlivspolitik."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Brug mikrofonen"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Giv alle apps adgang til din mikrofon"</string>
@@ -493,9 +498,9 @@
     <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi-netværk og adgangskoder"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobildata"</li></string>
     <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefoner og Bluetooth-enheder"</li></string>
-    <string name="reset_esim_title" msgid="8132107637911831211">"Nulstil alle eSIM-kort til køretøjer"</string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Nulstil alle eSIM til køretøjer"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Dette medfører ikke, at din serviceaftale annulleres."</string>
-    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM-kort kan ikke nulstilles"</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM kan ikke nulstilles"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Vælg netværk"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Nulstil indstillinger"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vil du nulstille?"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Luk demotilstand"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"AFVIS"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funktionen er ikke tilgængelig, mens du kører"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Bed føreren om at ændre indstillingen"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Du kan ikke udføre denne handling"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Du kan ikke tilføje brugere, mens du kører"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Søg"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google Assistent og stemmekommandoer"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Tilføj en profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Slet denne profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Tilføj profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Denne profil bruges i øjeblikket af bilisten. Prøv igen, når profilen ikke er i brug af bilisten."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Skærmens lysstyrke"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktivér Bluetooth for at se dine enheder"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Åbn Bluetooth-indstillingerne for at parre en enhed"</string>
@@ -814,7 +818,7 @@
     <string name="enterprise_privacy_security_logs" msgid="7375479062062113231">"Den seneste sikkerhedslogfil"</string>
     <string name="enterprise_privacy_none" msgid="2566653655908700748">"Ingen"</string>
     <string name="enterprise_privacy_enterprise_installed_packages" msgid="7798942534994638670">"Installerede apps"</string>
-    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Adgangstilladelser til lokation"</string>
+    <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Lokationstilladelser"</string>
     <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Adgangstilladelser til mikrofon"</string>
     <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Adgangstilladelser til kamera"</string>
     <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Standardapps"</string>

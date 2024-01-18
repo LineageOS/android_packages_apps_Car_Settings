@@ -24,7 +24,7 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"自動調整亮度"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"根據環境調整螢幕亮度"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"夜燈模式已開啟"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"網路和網際網路"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"網路與網際網路"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"行動網路"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# 張 SIM 卡}other{# 張 SIM 卡}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"已啟用/SIM 卡"</string>
@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"請至少為 Wi-Fi 無線基地台選擇一個頻帶："</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"無線基地台與網路共用"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi 無線基地台"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"無線基地台"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"使用 Wi‑Fi 無線基地台"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"關閉"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自動關閉無線基地台"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi 無線基地台會在沒有任何裝置連線時關閉"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"掃描這個 QR code 即可加入「%s」"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"無線基地台密碼：%s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求關閉 Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"發生錯誤"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"連線成功"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"全部顯示"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"搜尋中"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"已連結的裝置"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"藍牙"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"使用藍牙"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"未命名的裝置"</string>
@@ -305,7 +309,7 @@
     <string name="default_applications" msgid="1558183275638697087">"預設應用程式"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"影響效能的應用程式"</string>
     <string name="app_permissions" msgid="32799922508313948">"應用程式權限"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"控管哪些應用程式可存取你的資料"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"控管可存取資料的應用程式"</string>
     <string name="applications_settings" msgid="794261395191035632">"應用程式資訊"</string>
     <string name="force_stop" msgid="1616958676171167028">"停止應用程式"</string>
     <string name="force_stop_dialog_title" msgid="4481858344628934971">"要停止應用程式嗎？"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"停用應用程式"</string>
     <string name="not_installed" msgid="4163454337822508007">"這個設定檔並未安裝本應用程式"</string>
     <string name="permissions_label" msgid="2701446753515612685">"權限"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"所有服務"</string>
     <string name="notifications_label" msgid="6586089149665170731">"通知"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"儲存空間和快取"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"應用程式效能優先"</string>
@@ -381,7 +386,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"最近開啟的應用程式"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"查看全部 %1$d 個應用程式"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"權限管理員"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"控管哪些應用程式可存取你的資料"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"控管可存取資料的應用程式"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Google 助理和其他應用程式"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# 個應用程式會影響效能}other{# 個應用程式會影響效能}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"系統和其他設定"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"更多"</string>
     <string name="location_settings_title" msgid="901334356682423679">"定位"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置資訊"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"允許你指定的應用程式存取位置資訊"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"允許你指定的所有應用程式使用車輛位置資訊。"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"如果關閉這項設定，系統會停用所有應用程式的位置存取權，但駕駛輔助功能所需的應用程式除外"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"開啟定位功能以便使用駕駛輔助功能"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"車輛定位功能目前為關閉狀態"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"駕駛輔助應用程式無法存取你的位置資訊"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"變更"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"允許駕駛輔助應用程式存取位置資訊"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"如果關閉這項設定，系統會停用必須用到位置資訊的駕駛輔助應用程式"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"仍要關閉"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"如果關閉位置資訊，系統會停用必須用到這項資訊的駕駛輔助應用程式"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"仍要關閉"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"這項設定已由車輛製造商停用，而且無法變更。"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"駕駛輔助功能"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"允許經車輛製造商核准的內建功能存取車輛位置資訊。"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"近期存取"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"近期存取"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"全部顯示"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"最近沒有存取位置資訊的應用程式"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • 駕駛輔助"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"可存取這輛車的位置資訊，以便提供駕駛輔助功能的應用程式"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"隱私權政策"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • 駕駛輔助 • 需要存取權"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"駕駛輔助功能"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"政策"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"應用程式層級權限"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"管理個別應用程式權限"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"定位服務"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置資訊"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"位置資訊設定可能會使用 GPS、Wi‑Fi、行動網路和感應器等來源，以便推測出裝置的所在位置。"</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"駕駛輔助"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"傳送給駕駛輔助應用程式的位置資訊中不會有你的個人身分識別資訊。這類位置資訊最多保留 2 天，期限一到就會刪除。"</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"位置資訊存取權"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"決定應用程式是否可以存取車輛的位置資訊"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"車輛製造商或許仍可存取車輛位置資訊。如要瞭解詳情，請參閱車輛製造商的政策。"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"必須授予車輛位置資訊存取權，這些內建功能才可提供駕駛輔助服務。\n\n想進一步瞭解各個應用程式使用位置資料的方式，請參閱其《隱私權政策》。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"麥克風"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麥克風"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"允許所有應用程式存取麥克風"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"結束示範模式"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"關閉"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"開車時無法使用這項功能"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"請要求駕駛變更設定"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"無法執行這項動作"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"開車時無法新增設定檔"</string>
     <string name="default_search_query" msgid="3137420627428857068">"搜尋"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和語音功能"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"新增設定檔"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"刪除這個設定檔"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"新增設定檔"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"這個設定檔目前已使用駕駛的身分登入。請在設定檔並非以駕駛身分使用時再試一次。"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"螢幕亮度"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"裝置必須開啟藍牙，才會顯示在畫面上"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"如要配對裝置，請開啟藍牙設定"</string>

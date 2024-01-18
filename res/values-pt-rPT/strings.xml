@@ -22,7 +22,7 @@
     <string name="display_settings" msgid="5325515247739279185">"Ecrã"</string>
     <string name="brightness" msgid="2919605130898772866">"Nível de luminosidade"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosidade adaptável"</string>
-    <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajuste o brilho do ecrã ao ambiente"</string>
+    <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajuste o luminosidade do ecrã ao ambiente"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"A Luz noturna está ativada"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rede e Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rede móvel"</string>
@@ -160,13 +160,16 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Selecione, pelo menos, uma banda para a zona Wi-Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Zona Wi-Fi e ligação via telemóvel"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Zona Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Zona Wi-Fi"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Usar zona Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desligada"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desative a zona Wi-Fi automaticamente"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"A zona Wi‑Fi será desativada se não forem ligados quaisquer dispositivos."</string>
-    <string name="wifi_ask_enable" msgid="4452418245680754578">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> pretende ativar o Wi-Fi"</string>
-    <string name="wifi_ask_disable" msgid="2949290055916181553">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> pretende desativar o Wi-Fi"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Leia este código QR para aderir a \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Palavra-passe da zona Wi-Fi: %s"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> quer ativar o Wi-Fi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> quer desativar o Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erro"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Dispositivo a utilizar com a aplicação <xliff:g id="APPNAME">%1$s</xliff:g>"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Nenhum dispositivo encontrado. Certifique-se de que os dispositivos estão ativados e disponíveis para ligação."</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Ligação estabelecida com êxito"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Mostrar tudo"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"A pesquisar"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Dispositivos ligados"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Usar Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sem nome"</string>
@@ -194,14 +198,14 @@
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"A ativar o Bluetooth…"</string>
     <string name="bluetooth_turning_off" msgid="1753975097241024061">"A desativar o Bluetooth…"</string>
-    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> pretende ativar o Bluetooth"</string>
-    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> pretende desativar o Bluetooth"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Uma aplicação pretende ativar o Bluetooth"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Uma aplicação pretende desativar o Bluetooth"</string>
-    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> pretende tornar a sua unidade principal visível para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Uma aplicação pretende tornar a sua unidade principal visível para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> pretende ativar o Bluetooth e tornar a sua unidade principal visível para outros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Uma aplicação pretende ativar o Bluetooth e tornar a sua unidade principal visível para outros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> quer ativar o Bluetooth"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> quer desativar o Bluetooth"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Uma aplicação quer ativar o Bluetooth"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Uma aplicação quer desativar o Bluetooth"</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> quer tornar a sua unidade principal visível para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Uma aplicação quer tornar a sua unidade principal visível para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"A aplicação <xliff:g id="APP_NAME">%1$s</xliff:g> quer ativar o Bluetooth e tornar a sua unidade principal visível para outros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Uma aplicação quer ativar o Bluetooth e tornar a sua unidade principal visível para outros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Visível como %1$s para os outros dispositivos"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Os meus dispositivos"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Ligados anteriormente"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Desativar aplicação"</string>
     <string name="not_installed" msgid="4163454337822508007">"Não instalada para este perfil"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Autorizações"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Todos os serviços"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificações"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Armazenamento e cache"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Dar prioridade ao desempenho da app"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Mais"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Localização"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localização"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Permita que certas apps acedam à localização"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Use a localização do carro com qualquer app que tenha especificado."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desativar esta opção, remove o acesso à localização para todas as apps, exceto as necessárias para a assistência ao condutor"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Usar localiz. para assist. ao condutor"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"A localização do veículo está desativada"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps de assist. ao condutor não acedem à localiz."</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Alterar"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Permita que apps de assistência à condução acedam à localização"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Se desativar esta opção, as apps de assistência ao condutor que dependem de informações de localização são desativadas"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desativar mesmo assim"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se desativar esta opção, as apps de assistência ao condutor que dependem de informações de localização são desativadas"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desativar mesmo assim"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Esta definição não pode ser alterada e foi desativada pelo fabricante do carro."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcionalidades que ajudam a conduzir"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Permita que as funcionalidades integradas, aprovadas pelo fabricante do carro, acedam à localização deste."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Acedido recentemente"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Acedido recentemente"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver tudo"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Nenhuma app recente"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Assistência ao condutor"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apps c/ autorização p/ aceder à localização do veículo p/ assistência ao condutor"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Política de Privacidade"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Assistência ao condutor • Requer acesso"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funcionalidades que ajudam a conduzir"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Política"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorizações de nível de app"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Faça a gestão das autorizações individuais das apps"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Serviços de localização"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Usar localização"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"A localização pode utilizar fontes como o GPS, o Wi‑Fi, as redes móveis e os sensores para ajudar a calcular a localização do seu dispositivo."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Assistência ao condutor"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"As informações de localização enviadas para as apps de assistência ao condutor não incluem informações de identificação. São armazenadas durante um período máximo de 2 dias antes de serem eliminadas."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Acesso à localização"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Escolha se as apps podem aceder à localização do carro"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"O fabricante do carro ainda pode ter acesso à localização do seu carro. Pode rever as respetivas políticas para ver mais informações."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Estas funcionalidades integradas requerem acesso à localização do seu carro para ajudar na condução.\n\nReveja a política de privacidade de cada app para saber como são usados os seus dados de localização."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfone"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Usar microfone"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Permitir que todas as apps acedam ao microfone"</string>
@@ -498,8 +503,8 @@
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Não é possível repor os eSIMs"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Selecionar rede"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Repor definições"</string>
-    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Pretende repor?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Pretende repor todas as definições de rede? Não é possível anular esta ação."</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Quer repor?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Quer repor todas as definições de rede? Não é possível anular esta ação."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Repor definições"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"As definições de rede foram repostas."</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Repor preferências das apps"</string>
@@ -535,7 +540,7 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Hora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrador"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Sessão iniciada como administrador"</string>
-    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Pretende conceder autorizações de administrador?"</string>
+    <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Quer conceder autorizações de administrador?"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Tornar administrador"</string>
     <string name="grant_admin_permissions_message" msgid="5205433947453539566">"O administrador poderá eliminar outros perfis, incluindo de outros administradores, e efetuar uma reposição de fábrica do sistema de infoentretenimento."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Esta ação não é reversível."</string>
@@ -599,7 +604,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar dados automaticamente"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permitir que as apps atualizem dados automaticamente"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permita que as apps atualizem dados automaticamente"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Permitir a sincronização automática dos dados?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Qualquer alteração que faça nas contas a partir da Web será copiada automaticamente para o veículo.\n\nAlgumas contas também podem copiar automaticamente para a Web qualquer alteração que fizer no veículo."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Desativar a sincronização automática dos dados?"</string>
@@ -755,7 +760,8 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Adicionar um perfil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Eliminar este perfil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Adicionar perfil"</string>
-    <string name="qc_display_brightness" msgid="2939655289816201170">"Brilho do ecrã"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Este perfil tem sessão iniciada como condutor. Tente de novo quando o perfil não for usado como condutor."</string>
+    <string name="qc_display_brightness" msgid="2939655289816201170">"Luminosidade do ecrã"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver os seus dispositivos, ative o Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para sincronizar um dispositivo, abra as definições de Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador do sistema de infoentretenimento"</string>
@@ -839,7 +845,7 @@
       <item quantity="other">Apps Telefone</item>
       <item quantity="one">App Telefone</item>
     </plurals>
-    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Pretende partilhar o relatório de erro?"</string>
+    <string name="share_remote_bugreport_dialog_title" msgid="7268540014481283490">"Quer partilhar o relatório de erro?"</string>
     <string name="share_remote_bugreport_dialog_message_finished" msgid="2976131666427197841">"O gestor da organização do veículo solicitou um relatório de erro para ajudar a resolver problemas com este dispositivo. As apps e os dados podem ser partilhados."</string>
     <string name="share_remote_bugreport_dialog_message" msgid="7884771062689597395">"O gestor da organização do veículo solicitou um relatório de erro para ajudar a resolver problemas com este dispositivo. As apps e os dados podem ser partilhados e o dispositivo pode tornar-se temporariamente mais lento."</string>
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Este relatório de erro está a ser partilhado com o gestor da organização deste veículo. Contacte-o para obter mais detalhes."</string>

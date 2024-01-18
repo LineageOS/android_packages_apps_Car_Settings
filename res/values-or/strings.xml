@@ -145,7 +145,7 @@
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ହଟ୍‌ସ୍ପଟ୍ ନାମ"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ଚାଲୁ ହେଉଛି..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ସହ ଅନ୍ୟ ଡିଭାଇସ୍‌ଗୁଡ଼ିକ ସଂଯୁକ୍ତ ହୋଇପାରିବ"</string>
-    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ହଟସ୍ପଟ୍ ପାସ୍‌ୱାର୍ଡ"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ହଟସ୍ପଟ ପାସୱାର୍ଡ"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ସୁରକ୍ଷା"</string>
     <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
     <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ୱାଇ-ଫାଇ ହଟ୍‌ସ୍ପଟ୍ ପାଇଁ ଅତିକମ୍‌ରେ ଗୋଟିଏ ବ୍ୟାଣ୍ଡ୍ ବାଛନ୍ତୁ:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"ହଟ୍‌ସ୍ପଟ୍ ଏବଂ ଟିଥରିଂ"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"ୱାଇ-ଫାଇ ହଟସ୍ପଟ"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ହଟସ୍ପଟ"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ୱାଇ-ଫାଇ ହଟସ୍ପଟ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ବନ୍ଦ ଅଛି"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ସ୍ୱଚାଳିତ ଭାବେ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ଯଦି କୌଣସି ଡିଭାଇସ୍ ସଂଯୋଗ ନଥାଏ, ତେବେ ୱାଇ-ଫାଇ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ ହୋଇଯିବ"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\"ରେ ଯୋଗ ଦେବା ପାଇଁ ଏହି QR କୋଡ ସ୍କାନ କରନ୍ତୁ"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ହଟସ୍ପଟ ପାସୱାର୍ଡ: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ୱାଇ-ଫାଇ ଚାଲୁ କରିବାକୁ ଚାହୁଁଛନ୍ତି"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ୱାଇ-ଫାଇ ବନ୍ଦ କରିବାକୁ ଚାହୁଁଛନ୍ତି"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ତ୍ରୁଟି"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"ସଫଳତାର ସହ ସଂଯୋଗ ହୋଇଛି"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ସମସ୍ତ ଦେଖାନ୍ତୁ"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ଖୋଜୁଛି..."</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"କନେକ୍ଟେଡ ଡିଭାଇସ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ବ୍ଲୁଟୁଥ୍‌"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ବ୍ଲୁଟୁଥ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ନାମହୀନ ଡିଭାଇସ୍‍"</string>
@@ -243,11 +247,11 @@
     <string name="notification_volume_title" msgid="6749411263197157876">"ବିଜ୍ଞପ୍ତି"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"ମିଡିଆ"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"ମ୍ୟୁଜିକ ଓ ଭିଡିଓଗୁଡ଼ିକ ପାଇଁ ଭଲ୍ୟୁମ ସେଟ କରନ୍ତୁ"</string>
-    <string name="alarm_volume_title" msgid="840384014895796587">"ଆଲାର୍ମ"</string>
+    <string name="alarm_volume_title" msgid="840384014895796587">"ଆଲାରାମ"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"ଫୋନ ରିଂଟୋନ"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ଡିଫଲ୍ଟ ବିଜ୍ଞପ୍ତି ସାଉଣ୍ଡ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ଡିଫଲ୍ଟ ଆଲାରାମ ସାଉଣ୍ଡ"</string>
-    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"ସେଭ୍ କରନ୍ତୁ"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"ସେଭ କରନ୍ତୁ"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"ଆଲର୍ଟ ସାଉଣ୍ଡ"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"ରିଂଟୋନ୍, ବିଜ୍ଞପ୍ତି, ଆଲାରାମ୍"</string>
     <string name="display_brightness" msgid="5718970880488110840">"ଉଜ୍ଜ୍ୱଳତା"</string>
@@ -322,13 +326,14 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ଆପ୍ ଅକ୍ଷମ କରନ୍ତୁ"</string>
     <string name="not_installed" msgid="4163454337822508007">"ଏହି ପ୍ରୋଫାଇଲ୍ ପାଇଁ ଇନଷ୍ଟଲ୍ କରାଯାଇନାହିଁ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ଅନୁମତିଗୁଡ଼ିକ"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"ସମସ୍ତ ସେବା"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକ"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ଷ୍ଟୋରେଜ୍ &amp; କେଚ୍"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"ଆପ ପରଫରମାନ୍ସକୁ ପ୍ରାଥମିକତା ଦିଅନ୍ତୁ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ଭର୍ସନ୍‌: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"କୌଣସି ଅନୁମତି ଦିଆଯାଇ ନାହିଁ"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"କୌଣସି ଅନୁମତିର ଅନୁରୋଧ କରାଯାଇ ନାହିଁ"</string>
-    <string name="unused_apps" msgid="648471933781010395">"ଅବ୍ୟବହୃତ ଆପଗୁଡ଼ିକ"</string>
+    <string name="unused_apps" msgid="648471933781010395">"ଅବ୍ୟବହୃତ ଆପ୍ସ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{#ଟି ଅବ୍ୟବହୃତ ଆପ}other{#ଟି ଅବ୍ୟବହୃତ ଆପ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ଅନୁମତିଗୁଡ଼ିକୁ କାଢ଼ି ସ୍ପେସ୍ ଖାଲି କରନ୍ତୁ"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"ଇଣ୍ଟର୍ନଲ୍ ଷ୍ଟୋରେଜ୍‌ରେ %s ଅଛି"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ଅଧିକ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ଲୋକେସନ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"ଲୋକେସନ ସୂଚନା ଆକ୍ସେସ କରିବାକୁ ଆପଣ ନିର୍ଦ୍ଦିଷ୍ଟ କରିଥିବା ଆପ୍ସକୁ ଅନୁମତି ଦିଅ"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"ଆପଣ ନିର୍ଦ୍ଦିଷ୍ଟ କରିଥିବା ଯେ କୌଣସି ଆପ ସହ ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ବ୍ୟବହାର କରନ୍ତୁ।"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଡ୍ରାଇଭର ସହାୟତା ପାଇଁ ଆବଶ୍ୟକ ଆପ୍ସ ବ୍ୟତୀତ ଏହା ସମସ୍ତ ଆପ୍ସ ପାଇଁ ଲୋକେସନ ଆକ୍ସେସକୁ କାଢ଼ି ଦେବ"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ଡ୍ରାଇଭର ସହାୟତା ପାଇଁ ଲୋକେସନ ସୂଚନା ବ୍ୟବହାର କର"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ଗାଡ଼ିର ଲୋକେସନ ଫିଚର ବନ୍ଦ ଅଛି"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସ ଆପଣଙ୍କ ଲୋକେସନ ସୂଚନା ଆକ୍ସେସ କରିପାରିବ ନାହିଁ"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ବଦଳାନ୍ତୁ"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ଲୋକେସନ ସୂଚନା ଆକ୍ସେସ କରିବାକୁ ଡ୍ରାଇଭିଂରେ ସାହାଯ୍ୟ କରୁଥିବା ଆପ୍ସକୁ ଅନୁମତି ଦିଅ"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସ ଅକ୍ଷମ ହୋଇଯିବ"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ଯେ କୌଣସି ଉପାୟରେ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସ ଅକ୍ଷମ ହୋଇଯିବ"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ଯେ କୌଣସି ଉପାୟରେ ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ଏହି ସେଟିଂକୁ ପରିବର୍ତ୍ତନ କରାଯାଇପାରିବ ନାହିଁ ଏବଂ ଏହାକୁ ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ଦ୍ୱାରା ଅକ୍ଷମ କରାଯାଇଛି।"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"ଡ୍ରାଇଭ କରିବାରେ ସାହାଯ୍ୟ କରୁଥିବା ଫିଚରଗୁଡ଼ିକ"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ଦ୍ୱାରା ଅନୁମୋଦିତ ବିଲ୍ଟ-ଇନ ଫିଚରଗୁଡ଼ିକୁ ଅନୁମତି ଦିଅନ୍ତୁ।"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ସବୁ ଦେଖନ୍ତୁ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ବର୍ତ୍ତମାନର କୌଣସି ଆପ ନାହିଁ"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ଡ୍ରାଇଭର ସହାୟତା ଫିଚର ପାଇଁ ଏହି ଗାଡ଼ିର ଲୋକେସନକୁ ଆକ୍ସେସର ଅନୁମତି ଥିବା ଆପ୍ସ"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"ଗୋପନୀୟତା ନୀତି"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ଡ୍ରାଇଭର ସହାୟତା • ଆକ୍ସେସ ଆବଶ୍ୟକ କରେ"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"ଡ୍ରାଇଭ କରିବାରେ ସାହାଯ୍ୟ କରୁଥିବା ଫିଚରଗୁଡ଼ିକ"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"ନୀତି"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"ବ୍ୟକ୍ତିଗତ ଆପର ଅନୁମତିଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ଲୋକେସନ୍‌ ସମ୍ପର୍କିତ ସେବା"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"ଆପଣଙ୍କ ଡିଭାଇସର ଲୋକେସନ୍ ଅନୁମାନ କରିବାରେ ସାହାଯ୍ୟ କରିବାକୁ GPS, ୱାଇ‑ଫାଇ, ମୋବାଇଲ୍ ନେଟୱାର୍କ ଏବଂ ସେନ୍ସରଗୁଡ଼ିକ ଭଳି ସୋର୍ସଗୁଡ଼ିକୁ ଲୋକେସନ୍ ବ୍ୟବହାର କରିପାରେ।"</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ଡ୍ରାଇଭର୍ ସହାୟତା"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସକୁ ପଠାଯାଇଥିବା ଲୋକେସନ ସୂଚନାରେ ଆପଣଙ୍କୁ ଚିହ୍ନଟ କରୁଥିବା ସୂଚନା ଅନ୍ତର୍ଭୁକ୍ତ ନାହିଁ। ଡିଲିଟ କରାଯିବା ପୂର୍ବରୁ ଏହାକୁ ସର୍ବାଧିକ 2 ଦିନ ପାଇଁ ଷ୍ଟୋର କରାଯାଏ।"</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"ଲୋକେସନ ଆକ୍ସେସ"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"ଆପ୍ସ ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ କରିପାରିବ ନା ନାହିଁ ତାହା ବାଛନ୍ତୁ"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ପାଖରେ ଏବେ ବି ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ ଥାଇପାରେ। ଅଧିକ ସୂଚନା ପାଇଁ ଆପଣ ତା\'ର ନୀତିଗୁଡ଼ିକର ସମୀକ୍ଷା କରିପାରିବେ।"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"ଡ୍ରାଇଭିଂରେ ସହାୟତା କରିବାକୁ ଏହି ବିଲ୍ଟ-ଇନ ଫିଚରଗୁଡ଼ିକ ପାଇଁ ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ ଆବଶ୍ୟକ।\n\nପ୍ରତ୍ୟେକ ଆପର ଗୋପନୀୟତା ନୀତିକୁ ସମୀକ୍ଷା କରି ଏହା ଆପଣଙ୍କ ଲୋକେସନକୁ କିପରି ବ୍ୟବହାର କରେ ସେ ବିଷୟରେ ଅଧିକ ଜାଣନ୍ତୁ।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ମାଇକ୍ରୋଫୋନ୍"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ମାଇକ୍ରୋଫୋନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ଆପଣଙ୍କ ମାଇକ୍ରୋଫୋନକୁ ଆକ୍ସେସ୍ କରିବା ପାଇଁ ସମସ୍ତ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
@@ -474,7 +479,7 @@
     <string name="terms_title" msgid="5201471373602628765">"ନିୟମ ଓ ସର୍ତ୍ତାବଳୀ"</string>
     <string name="webview_license_title" msgid="6442372337052056463">"ସିଷ୍ଟମ୍‍ WebView ଲାଇସେନ୍ସ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ୱାଲପେପର୍‌"</string>
-    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ସ୍ୟାଟେଲାଇଟ୍‌ ଇମେଜେରୀ ପ୍ରଦାତା:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ସେଟେଲାଇଟ ଇମେଜେରୀ ପ୍ରଦାତା:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"ମଡେଲ୍‌"</string>
     <string name="status_serial_number" msgid="9158889113131907656">"କ୍ରମିକ ନମ୍ବର"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"ହାର୍ଡୱେର୍ ସଂସ୍କରଣ"</string>
@@ -575,7 +580,7 @@
     <string name="users_list_title" msgid="770764290290240909">"ୟୁଜର୍"</string>
     <string name="profiles_list_title" msgid="1443396686780460221">"ପ୍ରୋଫାଇଲଗୁଡ଼ିକ"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s ପାଇଁ ଅନୁମତି ଅନୁମୋଦିତ ହୋଇଛି"</string>
-    <string name="storage_settings_title" msgid="8957054192781341797">"ଷ୍ଟୋରେଜ୍"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"ଷ୍ଟୋରେଜ"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"ମ୍ୟୁଜିକ୍‌ ଓ ଅଡିଓ"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"ଅନ୍ୟ ଆପ୍‍"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
@@ -628,7 +633,7 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"ଗୋପନୀୟତା"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ୍ ଡାଟା"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"ଆପଣଙ୍କ ଲୋକେସନକୁ ଆପର ଆକ୍ସେସ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
-    <string name="mute_camera_title" msgid="215494079895460172">"କ୍ୟାମେରା"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"କେମେରା"</string>
     <string name="mute_camera_summary" msgid="1237452064757403042">"ଆପଣଙ୍କ କ୍ୟାମେରାଗୁଡ଼ିକୁ ଆପର ଆକ୍ସେସ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"ମାଇକ୍ରୋଫୋନ୍"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"ମାଇକ୍ରୋଫୋନକୁ ଆପ୍ ଆକ୍ସେସ୍ ନିୟନ୍ତ୍ରଣ କରନ୍ତୁ"</string>
@@ -678,7 +683,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"ନିଜ ପାସ୍‌ୱର୍ଡ ଲେଖନ୍ତୁ"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ସୁରକ୍ଷା ପାଇଁ, ଏକ PIN ସେଟ୍‌ କରନ୍ତୁ"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ନିଜ PIN ପୁଣି ପ୍ରବେଶ କରନ୍ତୁ"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PINରେ ଅତିକମ୍‌ରେ 4ଟିଅଙ୍କ ରହିବା ଦରକାର"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN ଅତିକମରେ 4 ଅଙ୍କ ବିଶିଷ୍ଟ ହେବା ଜରୁରୀ"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin ଅମାନ୍ୟ ଅଟେ, ଅତିକମରେ 4ଟି ସଂଖ୍ୟା ରହିବା ଆବଶ୍ୟକ।"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINଗୁଡ଼ିକ ମେଳ ହେଉନାହିଁ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN ସେଭ୍‌ କରିବାରେ ତ୍ରୁଟି"</string>
@@ -690,7 +695,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"ଖାଲି କରନ୍ତୁ"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ବାତିଲ କରନ୍ତୁ"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ନିଶ୍ଚିତ"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"ଅତିକମ୍‌ରେ 4 ଅକ୍ଷର ରହିବା ଦରକାର"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"ଅତିକମରେ 4ଟି କେରେକ୍ଟର ହେବା ଜରୁରୀ"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"ଏହି ଲକ ପ୍ରକାର ଉପଲବ୍ଧ ନାହିଁ।"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"କେବଳ 0-9 ପର୍ଯ୍ୟନ୍ତ ସଂଖ୍ୟା ରହିବା ଦରକାର"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ଏକ ସାମ୍ପ୍ରତିକ ପିନ୍‌ର ବ୍ୟବହାରକୁ ଡିଭାଇସ୍‌ ଆଡ୍‌ମିନ୍‌ ଅନୁମତି ଦେବନାହିଁ"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ଖାରଜ କରନ୍ତୁ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ଗାଡ଼ି ଚଲାଇବା ସମୟରେ ଫିଚର୍ ଉପଲବ୍ଧ ହେବ ନାହିଁ"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ସେଟିଂ ପରିବର୍ତ୍ତନ କରିବାକୁ ଡ୍ରାଇଭରଙ୍କୁ ଅନୁରୋଧ କରନ୍ତୁ"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"ଆପଣ ଏହି କାର୍ଯ୍ୟ କରିପାରିବେ ନାହିଁ"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ଗାଡ଼ି ଚଲାଇବା ବେଳେ ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରିପାରିବେ ନାହିଁ"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Search"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant ଓ ଭଏସ୍"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ଏକ ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ଏହି ପ୍ରୋଫାଇଲକୁ ଡିଲିଟ୍ କରନ୍ତୁ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ପ୍ରୋଫାଇଲ୍ ଯୋଗ କରନ୍ତୁ"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ପ୍ରୋଫାଇଲକୁ ଏବେ ଡ୍ରାଇଭର ଭାବେ ସାଇନ ଇନ କରାଯାଇଛି। ପ୍ରୋଫାଇଲ ଡ୍ରାଇଭର ଭାବେ ବ୍ୟବହାର ହେଉନଥିବା ବେଳେ ପୁଣି ଚେଷ୍ଟା କର।"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ଡିସପ୍ଲେ ଉଜ୍ଜ୍ୱଳତା"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ଆପଣଙ୍କ ଡିଭାଇସଗୁଡ଼ିକୁ ଦେଖିବା ପାଇଁ, ବ୍ଲୁଟୁଥ ଚାଲୁ କରନ୍ତୁ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ଏକ ଡିଭାଇସକୁ ପେୟାର କରିବା ପାଇଁ, ବ୍ଲୁଟୁଥ ସେଟିଂସ ଖୋଲନ୍ତୁ"</string>
@@ -880,7 +884,7 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g> ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"ବିକଳ୍ପଗୁଡ଼ିକ"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"ସେଟିଂସ"</string>
-    <string name="camera_settings_title" msgid="2837785830355288903">"କ୍ୟାମେରା"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"କେମେରା"</string>
     <string name="camera_toggle_title" msgid="1990732328673068456">"କ୍ୟାମେରା ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"ଆପଣଙ୍କ କ୍ୟାମେରାକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ସମସ୍ତ ଆପକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="camera_manage_permissions" msgid="9005596413781984368">"କ୍ୟାମେରା ଅନୁମତିଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
