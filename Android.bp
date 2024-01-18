@@ -26,7 +26,7 @@ android_library {
 
     srcs: [
         "src/**/*.kt",
-        "src/**/*.java"
+        "src/**/*.java",
     ],
 
     static_libs: [
@@ -54,6 +54,8 @@ android_library {
 
     manifest: "AndroidManifest.xml",
     resource_dirs: ["res"],
+    // TODO(b/319708040): re-enable use_resource_processor
+    use_resource_processor: false,
 }
 
 android_app {
@@ -97,7 +99,7 @@ android_app {
 
     srcs: [
         "src/**/*.kt",
-        "src/**/*.java"
+        "src/**/*.java",
     ],
 
     libs: [
@@ -142,6 +144,8 @@ android_app {
     },
 
     dxflags: ["--multi-dex"],
+    // TODO(b/319708040): re-enable use_resource_processor
+    use_resource_processor: false,
 }
 
 android_library {
@@ -156,7 +160,7 @@ android_library {
 
     srcs: [
         "src/**/*.kt",
-        "src/**/*.java"
+        "src/**/*.java",
     ],
 
     libs: [
@@ -197,10 +201,11 @@ android_library {
     dxflags: ["--multi-dex"],
 
     aaptflags: ["--extra-packages com.android.car.settings"],
+    // TODO(b/319708040): re-enable use_resource_processor
+    use_resource_processor: false,
 }
 
 filegroup {
     name: "CarSettings_proguard_flags",
     srcs: ["proguard.flags"],
 }
-
