@@ -47,6 +47,8 @@ android_library {
         "car-helper-lib",
         "car-qc-lib",
         "com_android_car_settings_flags_lib",
+        "services.core",
+        "car-data-subscription-lib",
     ],
 
     libs: [
@@ -125,6 +127,7 @@ android_app {
         "car-helper-lib",
         "car-qc-lib",
         "com_android_car_settings_flags_lib",
+        "car-data-subscription-lib",
     ],
 
     // Testing only resources must be applied last so they take precedence.
@@ -185,6 +188,7 @@ android_library {
         "car-helper-lib",
         "car-qc-lib",
         "com_android_car_settings_flags_lib",
+        "car-data-subscription-lib",
     ],
 
     // Testing only resources must be applied last so they take precedence.

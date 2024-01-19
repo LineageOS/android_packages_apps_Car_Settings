@@ -16,6 +16,8 @@
 
 package com.android.car.settings.qc;
 
+import android.car.drivingstate.CarUxRestrictions;
+import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
 import android.database.ContentObserver;
 import android.net.Uri;
@@ -27,6 +29,9 @@ import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyCallback;
 import android.telephony.TelephonyManager;
 
+import com.android.car.datasubscription.DataSubscription;
+import com.android.car.settings.common.CarUxRestrictionsHelper;
+
 import java.io.IOException;
 
 /**
@@ -34,11 +39,23 @@ import java.io.IOException;
  * @param <E> The {@link SettingsQCItem} the background worker is associated with.
  */
 public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
-        extends SettingsQCBackgroundWorker<E> {
+        extends SettingsQCBackgroundWorker<E> implements OnUxRestrictionsChangedListener {
 
     private final TelephonyManager mTelephonyManager;
     private final int mSubId;
     private final SignalStrengthsListener mSignalStrengthsListener;
+    private final DataSubscription mSubscription;
+    private CarUxRestrictionsHelper mUxRestrictionsHelper;
+    private final DataSubscription.DataSubscriptionChangeListener mDataSubscriptionChangeListener =
+            new DataSubscription.DataSubscriptionChangeListener() {
+                @Override
+                public void onChange(int value) {
+                    if (getQCItem() != null) {
+                        ((MobileDataRow) getQCItem()).setSubscriptionStatus(value);
+                        notifyQCItemChange();
+                    }
+                }
+            };
     private boolean mCallbacksRegistered;
 
     private final ContentObserver mMobileDataChangeObserver = new ContentObserver(
@@ -55,6 +72,9 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
         mTelephonyManager = context.getSystemService(TelephonyManager.class);
         mSubId = SubscriptionManager.getDefaultDataSubscriptionId();
         mSignalStrengthsListener = new SignalStrengthsListener();
+        mSubscription = new DataSubscription(context);
+        mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ context, /* listener= */
+                this);
     }
 
     @Override
@@ -66,6 +86,9 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
                     /* notifyForDescendants= */ false, mMobileDataChangeObserver);
             mCallbacksRegistered = true;
         }
+        mSubscription.addDataSubscriptionListener(mDataSubscriptionChangeListener);
+        ((MobileDataRow) getQCItem()).setCarUxRestrictions(
+                mUxRestrictionsHelper.getCarUxRestrictions());
     }
 
     @Override
@@ -73,6 +96,7 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
         if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
             unregisterCallbacks();
         }
+        mSubscription.removeDataSubscriptionListener();
     }
 
     @Override
@@ -80,6 +104,7 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
         if (mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
             unregisterCallbacks();
         }
+        mUxRestrictionsHelper.destroy();
     }
 
     private void unregisterCallbacks() {
@@ -103,6 +128,13 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
 
         @Override
         public void onSignalStrengthsChanged(SignalStrength signalStrength) {
+            notifyQCItemChange();
+        }
+    }
+    @Override
+    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
+        if (getQCItem() != null) {
+            ((MobileDataRow) getQCItem()).setCarUxRestrictions(restrictionInfo);
             notifyQCItemChange();
         }
     }

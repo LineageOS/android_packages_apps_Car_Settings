@@ -16,14 +16,15 @@
 
 package com.android.car.settings.qc;
 
+import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 import android.net.Uri;
 
 /**
  * Background worker for the {@link MobileDataRow} QCItem.
  */
-public class MobileDataRowWorker extends MobileDataBaseWorker<MobileDataRow> {
-
+public class MobileDataRowWorker extends MobileDataBaseWorker<MobileDataRow>
+        implements CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
     public MobileDataRowWorker(Context context, Uri uri) {
         super(context, uri);
     }

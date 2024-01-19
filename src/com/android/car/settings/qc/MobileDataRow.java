@@ -23,6 +23,7 @@ import static com.android.car.settings.qc.QCUtils.getAvailabilityStatusForZoneFr
 import static com.android.car.settings.qc.SettingsQCRegistry.MOBILE_DATA_ROW_URI;
 
 import android.app.PendingIntent;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Icon;
@@ -31,7 +32,10 @@ import android.os.UserManager;
 
 import androidx.annotation.VisibleForTesting;
 
+import com.android.car.datasubscription.DataSubscription;
+import com.android.car.datasubscription.DataSubscriptionStatus;
 import com.android.car.qc.QCActionItem;
+import com.android.car.qc.QCCategory;
 import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
@@ -46,21 +50,23 @@ import com.android.settingslib.net.DataUsageController;
  */
 public class MobileDataRow extends SettingsQCItem {
     private final DataUsageController mDataUsageController;
+    private boolean mIsDistractionOptimizationRequired;
+    private int mSubscriptionStatus;
 
     public MobileDataRow(Context context) {
         super(context);
         setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
                 R.xml.network_and_internet_fragment, R.string.pk_mobile_network_settings_entry));
         mDataUsageController = getDataUsageController(context);
+        DataSubscription dataSubscription = new DataSubscription(context);
+        mSubscriptionStatus = dataSubscription.getDataSubscriptionStatus();
     }
-
     @Override
     QCItem getQCItem() {
-        if (!mDataUsageController.isMobileDataSupported() || isHiddenForZone()) {
+        if (isHiddenForZone()) {
             return null;
         }
         boolean dataEnabled = mDataUsageController.isMobileDataEnabled();
-        String subtitle = MobileNetworkQCUtils.getMobileNetworkSummary(getContext(), dataEnabled);
         Icon icon = MobileNetworkQCUtils.getMobileNetworkSignalIcon(getContext());
 
         String userRestriction = UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS;
@@ -85,8 +91,11 @@ public class MobileDataRow extends SettingsQCItem {
 
         QCRow dataRow = new QCRow.Builder()
                 .setTitle(getContext().getString(R.string.mobile_network_settings))
-                .setSubtitle(subtitle)
+                .setSubtitle(getSubtitle(dataEnabled))
+                .setCategory(getCategory())
+                .setActionText(getActionText(dataEnabled))
                 .setIcon(icon)
+                .setPrimaryAction(getPrimaryAction())
                 .addEndItem(dataToggle)
                 .build();
 
@@ -105,6 +114,7 @@ public class MobileDataRow extends SettingsQCItem {
         boolean newState = intent.getBooleanExtra(QC_ACTION_TOGGLE_STATE,
                 !mDataUsageController.isMobileDataEnabled());
         mDataUsageController.setMobileDataEnabled(newState);
+
     }
 
     @Override
@@ -115,5 +125,60 @@ public class MobileDataRow extends SettingsQCItem {
     @VisibleForTesting
     DataUsageController getDataUsageController(Context context) {
         return new DataUsageController(context);
+    }
+
+    String getSubtitle(boolean dataEnabled) {
+        if (dataEnabled && mSubscriptionStatus == DataSubscriptionStatus.INACTIVE) {
+            return getContext().getString(
+                    R.string.connectivity_inactive_prompt);
+        }
+        return MobileNetworkQCUtils.getMobileNetworkSummary(
+                getContext(), dataEnabled);
+    }
+
+    String getActionText(boolean dataEnabled) {
+        if (dataEnabled && mSubscriptionStatus != DataSubscriptionStatus.PAID
+                && !mIsDistractionOptimizationRequired) {
+            return getContext().getString(
+                    R.string.connectivity_inactive_action_text);
+        }
+        return "";
+    }
+
+    int getCategory() {
+        if (mSubscriptionStatus != DataSubscriptionStatus.PAID) {
+            return QCCategory.WARNING;
+        }
+        return QCCategory.NORMAL;
+    }
+
+    void setIsDistractionOptimizationRequired(CarUxRestrictions carUxRestrictions) {
+        if (carUxRestrictions == null) {
+            mIsDistractionOptimizationRequired = false;
+        } else {
+            mIsDistractionOptimizationRequired = carUxRestrictions
+                    .isRequiresDistractionOptimization();
+        }
+    }
+
+    void setCarUxRestrictions(CarUxRestrictions carUxRestrictions) {
+        setIsDistractionOptimizationRequired(carUxRestrictions);
+    }
+
+    void setSubscriptionStatus(int subscriptionStatus) {
+        mSubscriptionStatus = subscriptionStatus;
+    }
+
+    PendingIntent getPrimaryAction() {
+        if (mSubscriptionStatus == DataSubscriptionStatus.PAID
+                || mIsDistractionOptimizationRequired) {
+            return null;
+        }
+        Intent dataSubscriptionIntent = new Intent(getContext().getString(
+                R.string.connectivity_flow_app));
+        dataSubscriptionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        PendingIntent intent = PendingIntent.getActivity(getContext(), /* requestCode= */ 0,
+                dataSubscriptionIntent, PendingIntent.FLAG_IMMUTABLE, null);
+        return intent;
     }
 }
