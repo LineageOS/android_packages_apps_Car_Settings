@@ -91,7 +91,8 @@ public class ChooseLockPatternFragment extends BaseFragment {
                 }
 
                 @Override
-                public void onPatternDetected(List<LockPatternView.Cell> pattern) {
+                public void onPatternDetected(List<LockPatternView.Cell> pattern,
+                        byte patternSize) {
                     switch (mUiStage) {
                         case Introduction:
                         case ChoiceTooShort:

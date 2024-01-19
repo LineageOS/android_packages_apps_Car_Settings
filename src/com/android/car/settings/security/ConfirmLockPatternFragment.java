@@ -158,7 +158,8 @@ public class ConfirmLockPatternFragment extends BaseFragment {
                 public void onPatternCellAdded(List<LockPatternView.Cell> pattern) {
                 }
 
-                public void onPatternDetected(List<LockPatternView.Cell> pattern) {
+                public void onPatternDetected(List<LockPatternView.Cell> pattern,
+                        byte patternSize) {
                     mLockPatternView.setEnabled(false);
 
                     if (mCheckLockWorker == null) {
