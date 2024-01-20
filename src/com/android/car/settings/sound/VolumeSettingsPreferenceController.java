@@ -368,6 +368,10 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
     }
 
     private void updateVolumePreference(CarVolumeGroupInfo groupInfo, int eventTypes) {
+        if (groupInfo == null) {
+            return;
+        }
+
         int groupId = groupInfo.getId();
         for (VolumeSeekBarPreference volumePreference : mVolumePreferences) {
             Bundle extras = volumePreference.getExtras();
