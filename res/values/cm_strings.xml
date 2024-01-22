@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -24,4 +24,7 @@
     <string name="show_dev_on_cm">You have enabled development settings!</string>
     <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
     <string name="show_dev_already_cm">No need, you have already enabled development settings.</string>
+
+    <!-- System settings screen. LineageOS legal. -->
+    <string name="lineagelicense_title">LineageOS legal</string>
 </resources>
