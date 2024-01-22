@@ -21,6 +21,12 @@
     android:title="@string/legal_information"
     android:key="@string/psk_legal_information">
 
+    <!-- LineageOS License information -->
+    <Preference
+        android:key="lineage_license"
+        android:title="@string/lineagelicense_title"
+        settings:controller="com.android.car.settings.system.legal.LineageLicensePreferenceController" />
+
     <!-- Terms and conditions -->
     <Preference
         android:key="terms"
