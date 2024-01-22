@@ -27,4 +27,8 @@
 
     <!-- System settings screen. LineageOS legal. -->
     <string name="lineagelicense_title">LineageOS legal</string>
+
+    <!-- TODO: Remove it once the same entry in SettingsLib is translated. -->
+    <!-- Manage apps, individual app screen, substituted for the application's label when the app's label CAN NOT be determined.-->
+    <string name="unknown">Unknown</string>
 </resources>

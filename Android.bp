@@ -43,6 +43,7 @@ android_library {
         "car-admin-ui-lib",
         "car-helper-lib",
         "car-qc-lib",
+        "org.lineageos.platform.internal",
     ],
 
     libs: [
