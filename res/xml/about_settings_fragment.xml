@@ -31,14 +31,29 @@
         settings:controller="com.android.car.settings.system.FirmwareVersionPreferenceController"
         settings:showChevron="false"/>
     <com.android.car.ui.preference.CarUiPreference
+        android:key="@string/pk_lineage_version"
+        android:title="@*lineageos.platform:string/lineage_version"
+        settings:controller="com.android.car.settings.system.LineageVersionDetailPreferenceController"
+        settings:showChevron="false"/>
+    <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_security_patch"
         android:title="@string/security_patch"
         settings:controller="com.android.car.settings.system.SecurityPatchPreferenceController"
         settings:showChevron="false"/>
     <com.android.car.ui.preference.CarUiPreference
+        android:key="@string/pk_vendor_security_patch"
+        android:title="@*lineageos.platform:string/lineage_vendor_security_patch"
+        settings:controller="com.android.car.settings.system.LineageVendorSecurityPatchPreferenceController"
+        settings:showChevron="false"/>
+    <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_kernel_version"
         android:title="@string/kernel_version"
         settings:controller="com.android.car.settings.system.KernelVersionPreferenceController"
+        settings:showChevron="false"/>
+    <com.android.car.ui.preference.CarUiPreference
+        android:key="@string/pk_build_date"
+        android:title="@*lineageos.platform:string/build_date"
+        settings:controller="com.android.car.settings.system.LineageBuildDatePreferenceController"
         settings:showChevron="false"/>
     <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_build_number"
