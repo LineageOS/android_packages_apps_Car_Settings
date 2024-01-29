@@ -538,6 +538,8 @@
     <string name="sound_alert_sounds">Alert sounds</string>
     <!-- Sound settings screen, setting option description of different alerts that can be changed [CHAR LIMIT=100] -->
     <string name="sound_alert_sounds_summary">Ringtone, notifications, alarm</string>
+    <!-- Title for the audio routes selector. [CHAR LIMIT=40] -->
+    <string name="audio_route_selector_title">Play media on</string>
 
     <!-- Display settings --><skip/>
     <!-- Display settings screen, setting option name to manage display brightness [CHAR LIMIT=60] -->
