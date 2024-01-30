@@ -62,19 +62,28 @@ public class AddProfileHandler implements AddNewProfileTask.AddNewProfileListene
     private final Context mContext;
     private final FragmentController mFragmentController;
     private final PreferenceController mPreferenceController;
-    private final Car mCar;
+    private Car mCar;
     private CarUserManager mCarUserManager;
 
     @VisibleForTesting
     ConfirmationDialogFragment.ConfirmListener mConfirmCreateNewProfileListener;
+    private final Car.CarServiceLifecycleListener mCarServiceLifecycleListener = (car, ready) -> {
+        if (ready) {
+            mCar = car;
+            mCarUserManager = mCar.getCarManager(CarUserManager.class);
+        } else {
+            mCar = null;
+            mCarUserManager = null;
+        }
+    };
 
     public AddProfileHandler(Context context, FragmentController fragmentController,
             PreferenceController preferenceController) {
         mContext = context;
         mFragmentController = fragmentController;
         mPreferenceController = preferenceController;
-        mCar = Car.createCar(context);
-        mCarUserManager = (CarUserManager) mCar.getCarManager(Car.CAR_USER_SERVICE);
+        Car.createCar(context, /* handler= */ null, Car.CAR_WAIT_TIMEOUT_DO_NOT_WAIT,
+                mCarServiceLifecycleListener);
 
         mConfirmCreateNewProfileListener = arguments -> {
             mAddNewProfileTask = new AddNewProfileTask(mContext,
