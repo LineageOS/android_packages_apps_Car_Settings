@@ -79,6 +79,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="usage"/>
       <item type="attr" name="wifiSignalColor"/>
       <item type="bool" name="config_allow_adas_location_switch_clickable"/>
+      <item type="bool" name="config_allow_audio_destination_selection"/>
       <item type="bool" name="config_always_ignore_ux_restrictions"/>
       <item type="bool" name="config_automatic_brightness_available"/>
       <item type="bool" name="config_enable_home_settings_icon"/>
@@ -526,6 +527,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="top_level_recycler_view"/>
       <item type="id" name="up_arrow_container"/>
       <item type="id" name="widget_summary"/>
+      <item type="integer" name="audio_route_selector_usage"/>
       <item type="integer" name="button_max_ems"/>
       <item type="integer" name="clear_content_timeout_ms"/>
       <item type="integer" name="config_networkAvoidBadWifi"/>
@@ -689,6 +691,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="assistant_and_voice_use_text_from_screen_summary"/>
       <item type="string" name="assistant_and_voice_use_text_from_screen_title"/>
       <item type="string" name="assistant_security_warning"/>
+      <item type="string" name="audio_route_selector_title"/>
       <item type="string" name="auto_brightness_summary"/>
       <item type="string" name="auto_brightness_title"/>
       <item type="string" name="auto_launch_disable_text"/>
