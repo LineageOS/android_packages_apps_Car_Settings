@@ -95,21 +95,29 @@ public class VolumeSettingsPreferenceControllerTest {
     private static final int TEST_NEW_VOLUME = NEW_GAIN / STEP_SIZE;
     private static final int TEST_MIN_VOLUME = MIN_GAIN / STEP_SIZE;
     private static final int TEST_MAX_VOLUME = MAX_GAIN / STEP_SIZE;
+    private static final int TEST_MIN_ACTIVATION_VOLUME = TEST_MIN_VOLUME + 1;
+    private static final int TEST_MAX_ACTIVATION_VOLUME = TEST_MAX_VOLUME - 1;
     private static final CarVolumeGroupInfo TEST_PRIMARY_ZONE_DEFAULT_VOLUME_INFO =
             new CarVolumeGroupInfo.Builder("group id " + TEST_PRIMARY_ZONE_GROUP_0,
                     PRIMARY_AUDIO_ZONE, TEST_PRIMARY_ZONE_GROUP_0).setMuted(false)
                     .setMinVolumeGainIndex(TEST_MIN_VOLUME).setMaxVolumeGainIndex(TEST_MAX_VOLUME)
-                    .setVolumeGainIndex(TEST_DEFAULT_VOLUME).build();
+                    .setVolumeGainIndex(TEST_DEFAULT_VOLUME)
+                    .setMinActivationVolumeGainIndex(TEST_MIN_ACTIVATION_VOLUME)
+                    .setMaxActivationVolumeGainIndex(TEST_MAX_ACTIVATION_VOLUME).build();
     private static final CarVolumeGroupInfo TEST_PRIMARY_ZONE_NEW_VOLUME_INFO =
             new CarVolumeGroupInfo.Builder("group id " + TEST_PRIMARY_ZONE_GROUP_0,
                     PRIMARY_AUDIO_ZONE, TEST_PRIMARY_ZONE_GROUP_0).setMuted(false)
                     .setMinVolumeGainIndex(TEST_MIN_VOLUME).setMaxVolumeGainIndex(TEST_MAX_VOLUME)
-                    .setVolumeGainIndex(TEST_NEW_VOLUME).build();
+                    .setVolumeGainIndex(TEST_NEW_VOLUME)
+                    .setMinActivationVolumeGainIndex(TEST_MIN_ACTIVATION_VOLUME)
+                    .setMaxActivationVolumeGainIndex(TEST_MAX_ACTIVATION_VOLUME).build();
     private static final CarVolumeGroupInfo TEST_PRIMARY_ZONE_MUTED_GROUP_INFO =
             new CarVolumeGroupInfo.Builder("group id " + TEST_PRIMARY_ZONE_GROUP_0,
                     PRIMARY_AUDIO_ZONE, TEST_PRIMARY_ZONE_GROUP_0).setMuted(true)
                     .setMinVolumeGainIndex(TEST_MIN_VOLUME).setMaxVolumeGainIndex(TEST_MAX_VOLUME)
-                    .setVolumeGainIndex(TEST_DEFAULT_VOLUME).build();
+                    .setVolumeGainIndex(TEST_DEFAULT_VOLUME)
+                    .setMinActivationVolumeGainIndex(TEST_MIN_ACTIVATION_VOLUME)
+                    .setMaxActivationVolumeGainIndex(TEST_MAX_ACTIVATION_VOLUME).build();
     private static final CarVolumeGroupEvent TEST_CAR_VOLUME_GROUP_EVENT_DEFAULT =
             new CarVolumeGroupEvent.Builder(List.of(TEST_PRIMARY_ZONE_DEFAULT_VOLUME_INFO),
                     CarVolumeGroupEvent.EVENT_TYPE_VOLUME_GAIN_INDEX_CHANGED,
@@ -424,7 +432,9 @@ public class VolumeSettingsPreferenceControllerTest {
                 new CarVolumeGroupInfo.Builder("group id " + 0, 1 /* ZoneId */, 0).setMuted(false)
                         .setMinVolumeGainIndex(TEST_MIN_VOLUME)
                         .setMaxVolumeGainIndex(TEST_MAX_VOLUME)
-                        .setVolumeGainIndex(TEST_DEFAULT_VOLUME).build();
+                        .setVolumeGainIndex(TEST_DEFAULT_VOLUME)
+                        .setMinActivationVolumeGainIndex(TEST_MIN_ACTIVATION_VOLUME)
+                        .setMaxActivationVolumeGainIndex(TEST_MAX_ACTIVATION_VOLUME).build();
         CarVolumeGroupEvent eventWithInvalidGroupInfo =
                 new CarVolumeGroupEvent.Builder(List.of(invalidGroupInfo),
                         CarVolumeGroupEvent.EVENT_TYPE_VOLUME_GAIN_INDEX_CHANGED,
