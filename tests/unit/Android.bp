@@ -33,6 +33,7 @@ android_test {
         "truth",
         "testng",
         "car-helper-lib",
+        "collector-device-lib-platform",
     ],
 
     jni_libs: [
