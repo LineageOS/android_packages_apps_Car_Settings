@@ -46,6 +46,7 @@ android_library {
         "car-admin-ui-lib",
         "car-helper-lib",
         "car-qc-lib",
+        "services.core",
     ],
 
     libs: [

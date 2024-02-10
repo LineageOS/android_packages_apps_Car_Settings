@@ -20,6 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/camera_settings_title"
     android:key="@string/psk_camera_settings">
+    <Preference
+        android:key="@string/pk_camera_access_fragment"
+        android:fragment="com.android.car.settings.privacy.CameraAccessFragment"
+        android:title="@string/camera_access_settings_title"
+        android:summary="@string/camera_access_settings_summary"
+        settings:controller="com.android.car.settings.privacy.CameraAccessPreferenceController"/>
     <com.android.car.settings.common.ColoredSwitchPreference
         android:key="@string/pk_camera_state_switch"
         android:title="@string/camera_toggle_title"

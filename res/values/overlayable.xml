@@ -758,11 +758,31 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="bluetooth_vehicle_mac_address"/>
       <item type="string" name="brightness"/>
       <item type="string" name="build_number"/>
+      <item type="string" name="camera_access_disclaimer_summary"/>
+      <item type="string" name="camera_access_radio_any_app_summary"/>
+      <item type="string" name="camera_access_radio_any_app_title"/>
+      <item type="string" name="camera_access_radio_group_title"/>
+      <item type="string" name="camera_access_radio_helpful_apps_summary"/>
+      <item type="string" name="camera_access_radio_helpful_apps_title"/>
+      <item type="string" name="camera_access_radio_helpful_required_apps_summary"/>
+      <item type="string" name="camera_access_radio_helpful_required_apps_title"/>
+      <item type="string" name="camera_access_radio_no_apps_summary"/>
+      <item type="string" name="camera_access_radio_no_apps_title"/>
+      <item type="string" name="camera_access_radio_required_apps_summary"/>
+      <item type="string" name="camera_access_radio_required_apps_title"/>
+      <item type="string" name="camera_access_settings_summary"/>
+      <item type="string" name="camera_access_settings_title"/>
       <item type="string" name="camera_app_permission_summary_camera_off"/>
       <item type="string" name="camera_app_permission_summary_camera_on"/>
+      <item type="string" name="camera_helpful_apps_list_summary"/>
+      <item type="string" name="camera_helpful_apps_list_title"/>
       <item type="string" name="camera_manage_permissions"/>
       <item type="string" name="camera_no_recent_access"/>
+      <item type="string" name="camera_privacy_policy_button_text"/>
+      <item type="string" name="camera_privacy_policy_info_summary"/>
       <item type="string" name="camera_recently_accessed"/>
+      <item type="string" name="camera_required_apps_list_summary"/>
+      <item type="string" name="camera_required_apps_list_title"/>
       <item type="string" name="camera_settings_loading_app_permission_stats"/>
       <item type="string" name="camera_settings_recent_requests_title"/>
       <item type="string" name="camera_settings_recent_requests_view_all_title"/>
@@ -1603,6 +1623,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="bluetooth_device_picker_fragment"/>
       <item type="xml" name="bluetooth_pairing_selection_fragment"/>
       <item type="xml" name="bluetooth_settings_fragment"/>
+      <item type="xml" name="camera_access_fragment"/>
       <item type="xml" name="camera_recent_requests_view_all_fragment"/>
       <item type="xml" name="captions_settings_fragment"/>
       <item type="xml" name="car_volume_items"/>
