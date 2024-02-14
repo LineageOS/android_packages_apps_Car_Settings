@@ -71,8 +71,6 @@ public class PermissionsPreferenceController extends
                 R.string.create_user_permission_title));
         PERMISSIONS_LIST.add(new ProfilePermission(UserManager.DISALLOW_OUTGOING_CALLS,
                 R.string.outgoing_calls_permission_title));
-        PERMISSIONS_LIST.add(new ProfilePermission(UserManager.DISALLOW_SMS,
-                R.string.sms_messaging_permission_title));
         PERMISSIONS_LIST.add(new ProfilePermission(UserManager.DISALLOW_INSTALL_APPS,
                 R.string.install_apps_permission_title));
         PERMISSIONS_LIST.add(new ProfilePermission(UserManager.DISALLOW_UNINSTALL_APPS,
