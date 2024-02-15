@@ -24,6 +24,7 @@ import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.internal.camera.flags.Flags;
 
 /** Business logic for controlling the mute camera toggle. */
 public class CameraTogglePreferenceController
@@ -84,6 +85,12 @@ public class CameraTogglePreferenceController
     protected int getDefaultAvailabilityStatus() {
         boolean hasFeatureCameraToggle = mSensorPrivacyManager.supportsSensorToggle(
                 SensorPrivacyManager.Sensors.CAMERA);
+        if (Flags.cameraPrivacyAllowlist()) {
+            boolean emptyCameraPrivacyAllowlist =
+                    mSensorPrivacyManager.getCameraPrivacyAllowlist().isEmpty();
+            return hasFeatureCameraToggle && emptyCameraPrivacyAllowlist
+                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        }
         return hasFeatureCameraToggle ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
