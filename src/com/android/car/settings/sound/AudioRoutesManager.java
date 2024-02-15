@@ -107,6 +107,9 @@ public class AudioRoutesManager {
         List<CarAudioZoneConfigInfo> carAudioZoneConfigInfoList =
                 getCarAudioManager().getAudioZoneConfigInfos(mAudioZone);
         for (CarAudioZoneConfigInfo carAudioZoneConfigInfo : carAudioZoneConfigInfoList) {
+            if (!carAudioZoneConfigInfo.isActive()) {
+                continue;
+            }
             List<CarVolumeGroupInfo> carVolumeGroupInfoList =
                     carAudioZoneConfigInfo.getConfigVolumeGroups();
             for (CarVolumeGroupInfo carVolumeGroupInfo : carVolumeGroupInfoList) {
