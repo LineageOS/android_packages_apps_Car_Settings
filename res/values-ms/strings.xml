@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Padamkan profil anda"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Padamkan profil dan akaun anda daripada sistem maklumat hibur"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Tindakan ini tidak tersedia untuk profil anda"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Akses kamera"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Pilih sama ada apl boleh mengakses kamera kereta anda atau tidak"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Gunakan kamera kereta anda dengan:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Mana-mana Apl"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Mana-mana apl yang telah anda berikan akses kepada kamera anda"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Tiada Apl"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Tiada satu pun apl anda"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Apl yang membantu anda memandu"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Apl yang membantu perkara seperti menunjukkan keadaan sekeliling semasa meletak kereta"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Hanya apl yang diperlukan"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Hanya apl yang diperlukan oleh pengilang kereta anda"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Apl yang membantu anda memandu"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Apl yang membantu perkara seperti menunjukkan keadaan sekeliling semasa meletak kereta dan apl yang diperlukan"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Apl yang membantu anda memandu"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Apl ini boleh mengakses kamera anda untuk membantu pemanduan"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Apl yang diperlukan"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Apl ini diperlukan untuk membantu kereta anda berfungsi dengan selamat"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Dasar"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Pengilang kereta anda mungkin masih memiliki akses kepada kamera kereta anda. Anda boleh menyemak dasar mereka untuk mendapatkan maklumat lanjut."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Ketahui lebih lanjut tentang cara setiap apl menggunakan Kamera anda dengan menyemak Dasar Privasi apl."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Keselamatan"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Kunci skrin"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Tiada"</string>

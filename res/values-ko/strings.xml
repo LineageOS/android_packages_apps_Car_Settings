@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"프로필 삭제"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"인포테인먼트 시스템에서 프로필과 계정을 삭제"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"이 프로필에서 사용할 수 없는 작업입니다."</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"카메라 액세스"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"앱의 자동차 카메라 액세스 여부 선택"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"다음으로 자동차의 카메라 사용"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"모든 앱"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"카메라에 액세스하도록 허용한 모든 앱"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"앱 없음"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"해당되는 앱 없음"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"운전 시 유용한 앱"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"주차 시 주변을 보여주는 등 여러 작업을 보조하는 앱"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"필수 앱만"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"자동차 제조업체에서 지정한 필수 앱만 해당"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"운전 시 유용한 앱"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"주차 시 주변을 보여주는 등 여러 작업을 보조하는 앱 및 필수 앱"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"운전 시 유용한 앱"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"이러한 앱에서 운전을 보조하기 위해 카메라에 액세스할 수 있습니다."</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"필수 앱"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"이러한 앱은 자동차가 안전하게 기능하는 것을 돕기 위해 필요합니다."</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"정책"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"자동차 제조업체에서 사용자의 자동차 카메라에 계속 액세스할 수도 있습니다. 자세한 내용은 자동차 제조업체의 정책을 검토하세요."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"앱의 개인정보처리방침을 검토하여 각각의 앱에서 카메라를 사용하는 방식을 자세히 알아보세요."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"보안"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"화면 잠금"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"없음"</string>

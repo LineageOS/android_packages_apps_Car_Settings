@@ -357,7 +357,7 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"نوٹ: ریبوٹ کرنے کے بعد یہ ایپ تب تک شروع نہیں ہو سکتی جب تک آپ اپنی گاڑی غیر مقفل نہ کر لیں۔"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"معاون اور صوتی ان پٹ"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"معاون ایپ"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"سکرین سے متن استعمال کریں"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"اسکرین سے ٹیکسٹ استعمال کریں"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"معاون ایپ کو سکرین مشمولات تک بطور متن رسائی کرنے کی اجازت دیں"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"اسکرین شاٹ استعمال کریں"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"معاون ایپ کو اسکرین کی ایک تصویر تک رسائی کرنے کی اجازت دیں"</string>
@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"اپنی پروفائل حذف کریں"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"معلوماتی انٹرٹینمنٹ سسٹم سے اپنی پروفائل اور اکاؤنٹس مٹائیں"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"یہ کاروائی آپ کی پروفائل کے لیے دستیاب نہیں ہے"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"کیمرا تک رسائی"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"منتخب کریں کہ آیا ایپس آپ کی کار کے کیمروں تک رسائی حاصل کر سکتی ہیں"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"اپنی کار کے کیمروں کو درج ذیل کے ساتھ استعمال کریں:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"کوئی بھی ایپ"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"کوئی بھی ایپ جسے آپ نے اپنے کیمرے تک رسائی کی اجازت دی ہے"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"کوئی ایپ نہیں ہے"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"آپ کی ایپس میں سے کوئی بھی نہیں"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"آپ کو ڈرائیو کرنے میں مدد کرنے والی ایپس"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"ایسی ایپس جو پارکنگ کے وقت اپنے اردگرد کی چیزوں کو دکھانے میں مدد کرتی ہیں"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"صرف مطلوبہ ایپس"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"صرف وہ ایپس جن کی آپ کی کار کے مینوفیکچرر کو ضرورت ہے"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"آپ کو ڈرائیو کرنے میں مدد کرنے والی ایپس"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"ایسی ایپس جو پارکنگ کے وقت اپنے اردگرد کی چیزوں کو دکھانے اور مطلوبہ ایپس جیسی چیزوں میں مدد کرتی ہیں"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"آپ کو ڈرائیو کرنے میں مدد کرنے والی ایپس"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"یہ ایپس ڈرائیونگ میں مدد کے لیے آپ کے کیمرے تک رسائی حاصل کر سکتی ہیں"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"مطلوبہ ایپس"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"آپ کی کار کو محفوظ طریقے سے کام کرنے میں مدد کے لیے ان ایپس کی ضرورت ہے"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"پالیسی"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"آپ کی کار کے مینوفیکچرر کو اب بھی آپ کی کار کے کیمرے تک رسائی حاصل ہو سکتی ہے۔ مزید معلومات کے لیے آپ ان کی پالیسیوں کا جائزہ لے سکتے ہیں۔"</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"اس بارے میں مزید جانیں کہ ہر ایپ اپنی رازداری کی پالیسی کا جائزہ لے کر آپ کے کیمرے کو کس طرح استعمال کرتی ہے۔"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"سیکیورٹی"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"اسکرین لاک"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"کوئی نہیں"</string>
@@ -750,7 +770,7 @@
     <string name="default_search_query" msgid="3137420627428857068">"تلاش کریں"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"اسسٹنٹ اور آواز"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"ڈیجیٹل اسسٹنٹ ایپ"</string>
-    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"اسکرین کے ٹیکسٹ کا استعمال کریں"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"اسکرین سے ٹیکسٹ استعمال کریں"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"اسسٹنٹ کو اسکرین کے مواد تک رسائی حاصل کرنے کی اجازت دیں"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"اسکرین شاٹ کا استعمال کریں"</string>
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"اسسٹنٹ کو اسکرین کی تصویر تک رسائی حاصل کرنے کی اجازت دیں"</string>
