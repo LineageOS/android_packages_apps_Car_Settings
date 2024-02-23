@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Radera profilen"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Radera din profil och dina konton från infotainmentsystemet"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Den här åtgärden är inte tillgänglig för din profil"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Kameraåtkomst"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Välj om appar kan få åtkomst till bilens kamera"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Använd bilens kamera med:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Alla appar"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Alla appar som du har gett åtkomst till kameran"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Inga appar"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Inga av apparna"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Appar som hjälper dig att köra"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Appar som hjälper med sådant som att visa din omgivning när du parkerar"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Endast appar som krävs"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Endast appar som krävs av bilens tillverkare"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Appar som hjälper dig att köra"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Appar som hjälper med sådant som att visa din omgivning när du parkerar och appar som krävs"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Appar som hjälper dig att köra"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Dessa appar kan få åtkomst till din kamera för att hjälpa dig att köra"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Appar som krävs"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Dessa appar behövs för att bilen ska fungera på ett säkert sätt"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Policy"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Bilens tillverkare kan fortfarande ha åtkomst till bilens kamera. Mer information finns i tillverkarens policyer."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Läs mer om hur varje app använder din kamera i appens integritetspolicy."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Säkerhet"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skärmlås"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Inga"</string>

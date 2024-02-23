@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Izbrišite profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Obrišite profil i naloge iz sistema za info-zabavu"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Ova radnja nije dostupna za profil"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Pristup kameri"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Odaberite da li aplikacije mogu da pristupaju kamerama automobila"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Kamere automobila mogu da koriste:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Sve aplikacije"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Sve aplikacije kojima ste dozvolili pristup kameri"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Nijedna aplikacija"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Nijedna aplikacija"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Aplikacije koje vam pomažu u vožnji"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Aplikacije koje vam prikazuju okolinu kada se parkirate"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Samo obavezne aplikacije"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Samo aplikacije koje zahteva proizvođač automobila"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Aplikacije koje vam pomažu u vožnji"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Aplikacije koje vam prikazuju okolinu kada se parkirate, kao i obavezne aplikacije"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Aplikacije koje vam pomažu u vožnji"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Ove aplikacije mogu da pristupaju kameri kako bi vam pomogle u vožnji"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Obavezne aplikacije"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Ove aplikacije su potrebne da bi automobil bezbedno funkcionisao"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Smernice"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Proizvođač automobila može i dalje da ima pristup kameri automobila. Pregledajte njegove smernice da biste videli više informacija."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Pregledajte politiku privatnosti aplikacije da biste saznali više o tome kako ona koristi kameru."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Bezbednost"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Zaključavanje ekrana"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nema"</string>
