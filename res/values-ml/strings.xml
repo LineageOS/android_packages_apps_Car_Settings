@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"നിങ്ങളുടെ പ്രൊഫൈൽ ഇല്ലാതാക്കുക"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"ഇൻഫോറ്റേയിൻമെന്റ് സി‌സ്‌റ്റത്തിൽ നിന്ന് നിങ്ങളുടെ പ്രൊഫൈലും അക്കൗണ്ടുകളും മായ്‌ക്കുക"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ഈ പ്രവർത്തനം നിങ്ങളുടെ പ്രൊഫൈലിൽ ലഭ്യമല്ല"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"ക്യാമറ ആക്‌സസ്"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"ആപ്പുകൾക്ക് നിങ്ങളുടെ കാറിന്റെ ക്യാമറകൾ ആക്‌സസ് ചെയ്യാനാകുമോ എന്ന് തിരഞ്ഞെടുക്കുക"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"നിങ്ങളുടെ കാറിൻ്റെ ക്യാമറകൾ ഇതിനൊപ്പം ഉപയോഗിക്കൂ:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"ഏത് ആപ്പും"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"നിങ്ങളുടെ ക്യാമറ ആക്‌സസ് ചെയ്യാൻ അനുവദിച്ചിട്ടുള്ള ഏത് ആപ്പും"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"ആപ്പുകളൊന്നുമില്ല"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"നിങ്ങളുടെ ആപ്പുകളൊന്നുമില്ല"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"ഡ്രൈവ് ചെയ്യാൻ സഹായിക്കുന്ന ആപ്പുകൾ"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"പാർക്ക് ചെയ്യുമ്പോൾ നിങ്ങളുടെ ചുറ്റുപാടുകൾ കാണിക്കുന്നത് പോലെയുള്ള കാര്യങ്ങളിൽ സഹായിക്കുന്ന ആപ്പുകൾ"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"ആവശ്യപ്പെടുന്ന ആപ്പുകൾ മാത്രം"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"കാറിൻ്റെ നിർമ്മാതാവ് ആവശ്യപ്പെടുന്ന ആപ്പുകൾ മാത്രം"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"ഡ്രൈവ് ചെയ്യാൻ സഹായിക്കുന്ന ആപ്പുകൾ"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"പാർക്ക് ചെയ്യുമ്പോൾ നിങ്ങളുടെ ചുറ്റുപാടുകൾ കാണിക്കുന്നത് പോലെയുള്ള കാര്യങ്ങളിൽ സഹായിക്കുന്ന ആപ്പുകൾ, ആവശ്യമുള്ള ആപ്പുകൾ"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"ഡ്രൈവ് ചെയ്യാൻ സഹായിക്കുന്ന ആപ്പുകൾ"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"ഡ്രൈവിംഗിനെ സഹായിക്കാൻ ഈ ആപ്പുകൾക്ക് നിങ്ങളുടെ ക്യാമറ ആക്സസ് ചെയ്യാൻ കഴിയും"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"ആവശ്യമായ ആപ്പുകൾ"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"നിങ്ങളുടെ കാർ സുരക്ഷിതമായി പ്രവർത്തിക്കാൻ സഹായിക്കുന്നതിന് ഈ ആപ്പുകൾ ആവശ്യമാണ്"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"നയം"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"കാർ നിർമ്മാതാവിന് നിങ്ങളുടെ കാറിന്റെ ക്യാമറയിലേക്ക് തുടർന്നും ആക്‌സസ് ലഭിച്ചേക്കാം. കൂടുതൽ വിവരങ്ങൾക്ക് അവരുടെ നയങ്ങൾ നിങ്ങൾക്ക് അവലോകനം ചെയ്യാം."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"ഓരോ ആപ്പും നിങ്ങളുടെ ക്യാമറ എങ്ങനെ ഉപയോഗിക്കുന്നു എന്നതിനെ കുറിച്ച് അതിൻ്റെ സ്വകാര്യതാ നയം അവലോകനം ചെയ്തുകൊണ്ട് കൂടുതലറിയുക."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"സുരക്ഷ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"സ്ക്രീൻ ലോക്ക്"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ഒന്നുമില്ല"</string>
