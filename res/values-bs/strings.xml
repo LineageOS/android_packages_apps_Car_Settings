@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Izbriši profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Izbrišite profile i račune s informativno-zabavnog sistema"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Ova radnja nije dostupna za vaš profil"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Pristup kameri"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Odaberite mogu li aplikacije pristupati kamerama automobila"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Koristite kamere automobila sa sljedećim:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Bilo koja aplikacija"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Bilo koja aplikacija kojoj ste dozvolili pristup kameri"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Nijedna aplikacija"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Nijedna od vaših aplikacija"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Aplikacije koje vam pomažu prilikom vožnje"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Aplikacije koje vam pomažu za stvari kao što je prikazivanje okruženja prilikom parkiranja"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Samo potrebne aplikacije"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Samo aplikacije koje zahtijeva proizvođač automobila"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Aplikacije koje vam pomažu prilikom vožnje"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Aplikacije koje vam pomažu za stvari kao što je prikazivanje okruženja prilikom parkiranja i potrebne aplikacije"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Aplikacije koje vam pomažu prilikom vožnje"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Ove aplikacije mogu pristupati kameri da vam pomažu prilikom vožnje"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Potrebne aplikacije"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Ove aplikacije su potrebne da pomognu prilikom sigurnog funkcioniranja automobila"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Pravila"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Proizvođač automobila i dalje može imati pristup kameri automobila. Za više informacija možete pregledati njegova pravila."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Saznajte više o načinu na koji svaka aplikacija koristi Kameru pregledanjem njenih Pravila privatnosti."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sigurnost"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Zaključavanje ekrana"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ništa"</string>
@@ -788,7 +808,7 @@
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Kamera nije dostupna u ovom vozilu kojim se upravlja"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Nije moguće praviti snimke ekrana u ovom vozilu kojim se upravlja"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Nije moguće otvoriti ovu aplikaciju u ovom vozilu kojim se upravlja"</string>
-    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokirao vaš dobavljač kredita"</string>
+    <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokirao vaš dobavljač uređaja na kredit"</string>
     <string name="default_admin_support_msg" msgid="2986598061733013282">"Vaša organizacija je ograničila pristup nekim funkcijama.\n\nAko imate pitanja, kontaktirajte upravitelja organizacije."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Aplikacije administratora vozila"</string>

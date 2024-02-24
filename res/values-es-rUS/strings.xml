@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Borrar tu perfil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Borrar tu perfil y tus cuentas del sistema de infoentretenimiento"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Esta acción no está disponible para tu perfil"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Acceso a cámara"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Elige si las apps pueden acceder a las cámaras del vehículo"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Usa las cámaras de tu vehículo con:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Cualquier app"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Cualquier app con permiso para acceder a la cámara"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Ninguna app"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Ninguna de tus apps"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Apps que te ayudan con la conducción"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Apps que brindan asistencia con tareas como mostrarte lo que te rodea cuando estás estacionando"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Solo apps requeridas"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Solo las apps que requiere el fabricante de tu vehículo"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Apps que te ayudan con la conducción"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Apps que brindan asistencia con tareas como mostrarte lo que te rodea cuando estás estacionando, y apps requeridas"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Apps que te ayudan con la conducción"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Estas apps pueden acceder a tu cámara para brindar asistencia mientras conduces"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Apps requeridas"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Para que tu vehículo pueda funcionar de forma segura, se necesitan estas apps"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Política"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Es posible que el fabricante aún tenga acceso a la cámara del vehículo. Consulta sus políticas para obtener más información al respecto."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Revisa la Política de Privacidad de cada app para obtener más información sobre cómo estas usan tu cámara."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguridad"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ninguno"</string>

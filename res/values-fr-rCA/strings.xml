@@ -643,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Supprimer votre profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Effacez votre profil et vos comptes du système d\'infodivertissement"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Cette action n\'est pas proposée pour votre profil"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Accès à la caméra"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Choisissez si les applications peuvent accéder à la caméra de votre voiture"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Applications ayant accès à la caméra de votre voiture :"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"N\'importe quelle application"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"N\'importe quelle application à laquelle vous avez autorisé l\'accès à votre caméra"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Aucune application"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Aucune de vos applications"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Applications qui vous aident à conduire"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Les applications qui vous aident, par exemple, en vous montrant l\'environnement dans lequel vous vous trouvez lors du stationnement"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Uniquement les applications requises"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Seulement les applications requises par le fabricant de votre voiture"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Applications qui vous aident à conduire"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Les applications qui vous aident, par exemple, en vous montrant l\'environnement dans lequel vous vous trouvez lors du stationnement, et les applications requises"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Applications qui vous aident à conduire"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Ces applications peuvent accéder à votre caméra pour vous aider à conduire"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Applications requises"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Ces applications sont requises pour permettre à votre voiture de fonctionner en toute sécurité"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Politique"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Il se peut que le constructeur automobile ait encore accès à la caméra de votre voiture. Vous pouvez consulter ses politiques pour en savoir plus."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Apprenez-en plus sur la manière dont chaque application utilise votre caméra en consultant sa politique de confidentialité."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sécurité"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Verrouill. de l\'écran"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Aucun"</string>
