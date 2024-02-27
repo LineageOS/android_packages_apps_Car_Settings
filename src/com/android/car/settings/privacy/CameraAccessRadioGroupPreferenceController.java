@@ -36,7 +36,6 @@ import com.android.internal.camera.flags.Flags;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @FlaggedApi(Flags.FLAG_CAMERA_PRIVACY_ALLOWLIST)
 public class CameraAccessRadioGroupPreferenceController extends GroupSelectionPreferenceController {
@@ -114,55 +113,17 @@ public class CameraAccessRadioGroupPreferenceController extends GroupSelectionPr
     protected List<TwoStatePreference> getGroupPreferences() {
         List<TwoStatePreference> entries = new ArrayList<>();
 
-        Map<String, Boolean> cameraPrivacyAllowlist =
-                mSensorPrivacyManager.getCameraPrivacyAllowlist();
-        boolean hasHelpfulApps = cameraPrivacyAllowlist.containsValue(Boolean.FALSE);
-        boolean hasRequiredApps = cameraPrivacyAllowlist.containsValue(Boolean.TRUE);
-
         CarUiRadioButtonPreference anyApp = new CarUiRadioButtonPreference(getContext());
         anyApp.setKey(getContext().getString(R.string.pk_camera_access_radio_any_app));
         anyApp.setTitle(R.string.camera_access_radio_any_app_title);
         anyApp.setSummary(R.string.camera_access_radio_any_app_summary);
         entries.add(anyApp);
 
-        if (hasHelpfulApps && hasRequiredApps) {
-            CarUiRadioButtonPreference helpfulAndRequiredApps =
-                    new CarUiRadioButtonPreference(getContext());
-            helpfulAndRequiredApps.setKey(getContext()
-                    .getString(R.string.pk_camera_access_radio_helpful_required_apps));
-            helpfulAndRequiredApps
-                    .setTitle(R.string.camera_access_radio_helpful_required_apps_title);
-            helpfulAndRequiredApps
-                    .setSummary(R.string.camera_access_radio_helpful_required_apps_summary);
-            entries.add(helpfulAndRequiredApps);
-
-            CarUiRadioButtonPreference requiredApps = new CarUiRadioButtonPreference(getContext());
-            requiredApps.setKey(getContext()
-                    .getString(R.string.pk_camera_access_radio_required_apps));
-            requiredApps.setTitle(R.string.camera_access_radio_required_apps_title);
-            requiredApps.setSummary(R.string.camera_access_radio_required_apps_summary);
-            entries.add(requiredApps);
-        } else if (hasHelpfulApps) {
-            CarUiRadioButtonPreference helpfulApps = new CarUiRadioButtonPreference(getContext());
-            helpfulApps.setKey(getContext()
-                    .getString(R.string.pk_camera_access_radio_helpful_apps));
-            helpfulApps.setTitle(R.string.camera_access_radio_helpful_apps_title);
-            helpfulApps.setSummary(R.string.camera_access_radio_helpful_apps_summary);
-            entries.add(helpfulApps);
-
-            CarUiRadioButtonPreference noApps = new CarUiRadioButtonPreference(getContext());
-            noApps.setKey(getContext().getString(R.string.pk_camera_access_radio_no_apps));
-            noApps.setTitle(R.string.camera_access_radio_no_apps_title);
-            noApps.setSummary(R.string.camera_access_radio_no_apps_summary);
-            entries.add(noApps);
-        } else if (hasRequiredApps) {
-            CarUiRadioButtonPreference requiredApps = new CarUiRadioButtonPreference(getContext());
-            requiredApps.setKey(getContext()
-                    .getString(R.string.pk_camera_access_radio_required_apps));
-            requiredApps.setTitle(R.string.camera_access_radio_required_apps_title);
-            requiredApps.setSummary(R.string.camera_access_radio_required_apps_summary);
-            entries.add(requiredApps);
-        }
+        CarUiRadioButtonPreference requiredApps = new CarUiRadioButtonPreference(getContext());
+        requiredApps.setKey(getContext().getString(R.string.pk_camera_access_radio_required_apps));
+        requiredApps.setTitle(R.string.camera_access_radio_required_apps_title);
+        requiredApps.setSummary(R.string.camera_access_radio_required_apps_summary);
+        entries.add(requiredApps);
 
         return entries;
     }
@@ -184,14 +145,8 @@ public class CameraAccessRadioGroupPreferenceController extends GroupSelectionPr
         if (key.equals(getContext().getString(R.string.pk_camera_access_radio_no_apps))) {
             state = SensorPrivacyManager.StateTypes.ENABLED;
         } else if (key.equals(getContext()
-                .getString(R.string.pk_camera_access_radio_helpful_apps))) {
-            state = SensorPrivacyManager.StateTypes.AUTOMOTIVE_DRIVER_ASSISTANCE_HELPFUL_APPS;
-        } else if (key.equals(getContext()
                 .getString(R.string.pk_camera_access_radio_required_apps))) {
-            state = SensorPrivacyManager.StateTypes.AUTOMOTIVE_DRIVER_ASSISTANCE_REQUIRED_APPS;
-        } else if (key.equals(getContext()
-                .getString(R.string.pk_camera_access_radio_helpful_required_apps))) {
-            state = SensorPrivacyManager.StateTypes.AUTOMOTIVE_DRIVER_ASSISTANCE_APPS;
+            state = SensorPrivacyManager.StateTypes.ENABLED_EXCEPT_ALLOWLISTED_APPS;
         }
 
         mSensorPrivacyManager.setSensorPrivacyStateForProfileGroup(
@@ -205,13 +160,8 @@ public class CameraAccessRadioGroupPreferenceController extends GroupSelectionPr
         if (state == SensorPrivacyManager.StateTypes.ENABLED) {
             key = getContext().getString(R.string.pk_camera_access_radio_no_apps);
         } else if (state
-                == SensorPrivacyManager.StateTypes.AUTOMOTIVE_DRIVER_ASSISTANCE_HELPFUL_APPS) {
-            key = getContext().getString(R.string.pk_camera_access_radio_helpful_apps);
-        } else if (state
-                == SensorPrivacyManager.StateTypes.AUTOMOTIVE_DRIVER_ASSISTANCE_REQUIRED_APPS) {
+                == SensorPrivacyManager.StateTypes.ENABLED_EXCEPT_ALLOWLISTED_APPS) {
             key = getContext().getString(R.string.pk_camera_access_radio_required_apps);
-        } else if (state == SensorPrivacyManager.StateTypes.AUTOMOTIVE_DRIVER_ASSISTANCE_APPS) {
-            key = getContext().getString(R.string.pk_camera_access_radio_helpful_required_apps);
         }
 
         return key;
