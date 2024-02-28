@@ -76,7 +76,7 @@ public class WifiTetheringHandlerTest {
         mPreferenceController = new TestWifiTetheringPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         mWifiTetheringHandler = new WifiTetheringHandler(mContext, mCarWifiManager,
-                mTetheringManager, mPreferenceController);
+                mTetheringManager, mPreferenceController, /* monitorRestarts= */ true);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
     }
 

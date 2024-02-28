@@ -72,7 +72,7 @@ public class WifiTetherPreferenceController extends
         mTetheringManager = tetheringManager;
         mHandler = new Handler(Looper.getMainLooper());
         mWifiTetheringHandler = new WifiTetheringHandler(context, mCarWifiManager,
-                mTetheringManager, this);
+                mTetheringManager, this, /* monitorRestarts= */ true);
     }
 
     @Override
