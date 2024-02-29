@@ -196,6 +196,7 @@ public class AudioRoutesManagerTest {
         when(mCarSettingsApplication.getMyAudioZoneId()).thenReturn(TEST_ZONE_ID);
         when(mCarAudioManager.getAudioZoneConfigInfos(TEST_ZONE_ID))
                 .thenReturn(new ArrayList<>(Collections.singleton(mCarAudioZoneConfigInfo)));
+        when(mCarAudioZoneConfigInfo.isActive()).thenReturn(true);
         when(mCarAudioZoneConfigInfo.getConfigVolumeGroups())
                 .thenReturn(new ArrayList<>(Collections.singleton(mCarVolumeGroupInfo)));
         when(mCarVolumeGroupInfo.getAudioAttributes())
