@@ -29,19 +29,6 @@
         android:icon="@drawable/ic_settings_about"
         android:selectable="false"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_camera_helpful_apps_group"
-        settings:controller=
-        "com.android.car.settings.privacy.CameraHelpfulAppsPreferenceController">
-        <com.android.car.settings.common.DividerPreference/>
-        <Preference
-        android:key="@string/pk_camera_helpful_apps_list"
-        android:title="@string/camera_helpful_apps_list_title"
-        android:summary="@string/camera_helpful_apps_list_summary"
-        android:selectable="false"/>
-        <com.android.car.settings.common.LogicalPreferenceGroup
-            android:key="@string/pk_camera_helpful_apps_policy"/>
-    </com.android.car.settings.common.LogicalPreferenceGroup>
-    <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_camera_required_apps_group"
         settings:controller=
         "com.android.car.settings.privacy.CameraRequiredAppsPreferenceController">
