@@ -16,14 +16,13 @@
 package com.android.car.settings.wifi;
 
 import android.content.Context;
-import android.net.ConnectivityManager;
+import android.net.TetheringManager;
 
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.CarSettingActivities.WifiTetherActivity;
 import com.android.car.settings.common.SettingsFragment;
-import com.android.car.settings.network.NetworkUtils;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
@@ -47,8 +46,9 @@ public class WifiTetherFragment extends SettingsFragment {
                     WifiTetherActivity.class) {
                 @Override
                 public boolean isPageSearchEnabled(Context context) {
-                    return NetworkUtils.hasMobileNetwork(
-                            context.getSystemService(ConnectivityManager.class));
+                    TetheringManager tetheringManager =
+                            context.getSystemService(TetheringManager.class);
+                    return tetheringManager.isTetheringSupported();
                 }
             };
 }
