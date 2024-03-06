@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"请为 WLAN 热点至少选择一个频段："</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"热点和网络共享"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"WLAN 热点"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"热点"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"使用 WLAN 热点"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"已关闭"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自动关闭热点"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"如果未连接任何设备，WLAN 热点将关闭"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"扫描此二维码即可加入“%s”"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"热点密码：%s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>请求开启 WLAN"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>请求关闭 WLAN"</string>
     <string name="wifi_error" msgid="3105105447117289410">"错误"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"连接成功"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"全部显示"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"正在搜索"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"已连接的设备"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"蓝牙"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"使用蓝牙"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"未命名的设备"</string>
@@ -322,13 +326,14 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"停用应用"</string>
     <string name="not_installed" msgid="4163454337822508007">"没有为此个人资料安装该应用"</string>
     <string name="permissions_label" msgid="2701446753515612685">"权限"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"所有服务"</string>
     <string name="notifications_label" msgid="6586089149665170731">"通知"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"存储空间和缓存"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"优先保证应用性能"</string>
     <string name="application_version_label" msgid="8556889839783311649">"版本：%1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"未授予任何权限"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"未请求任何权限"</string>
-    <string name="unused_apps" msgid="648471933781010395">"未使用的应用"</string>
+    <string name="unused_apps" msgid="648471933781010395">"闲置应用"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# 个未使用的应用}other{# 个未使用的应用}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"撤消权限并释放空间"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"将使用%s的内部存储空间"</string>
@@ -400,7 +405,7 @@
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"这些应用会对系统性能造成负面影响，已被禁止在后台运行。\n将应用设为优先运行即可允许在后台使用相应应用，并将其从此列表中移出。"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"将应用设为优先运行"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"付费短信权限"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"“付费短信”可能会产生费用，而且相关费用将计入您的运营商帐单。如果您为某个应用启用该权限，那么您将能够使用该应用发送付费短信。"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"“付费短信”可能会产生费用，而且相关费用将计入您的运营商账单。如果您为某个应用启用该权限，那么您将能够使用该应用发送付费短信。"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"使用情况访问权限"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"向应用授予“使用情况访问权限”后，应用即可跟踪您正在使用的其他应用和使用频率，以及您的运营商、语言设置及其他详细信息。"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"WLAN 控制"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"更多"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置信息"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"允许您指定的应用获取您的位置信息"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"允许您指定的所有应用获取汽车的位置信息。"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"如果您关闭了此设置，所有应用（驾驶辅助功能所需的应用除外）的位置信息获取权限都将被撤消"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"使用位置信息提供驾驶辅助功能"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"车辆位置信息服务已关闭"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"驾驶辅助应用无法获取您的位置信息"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"更改"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"允许驾驶辅助应用获取您的位置信息"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"如果您关闭了此设置，需要使用位置信息的驾驶辅助应用将被停用"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"仍然关闭"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"如果您关闭了此设置，需要使用位置信息的驾驶辅助应用将被停用"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"仍然关闭"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"此设置无法更改，已被您汽车的制造商停用。"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"驾驶辅助功能"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"允许汽车制造商批准的内置功能获取您汽车的位置信息。"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"近期获取过"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"近期获取过"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"查看全部"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"最近没有应用获取过位置信息"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • 驾驶辅助"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"具有此权限的应用可以获取该车辆的位置信息，以供驾驶辅助功能使用"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"隐私权政策"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • 驾驶辅助 • 需要访问权限"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"驾驶辅助功能"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"政策"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"应用级权限"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"管理各个应用的权限"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"位置信息服务"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"使用位置信息"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"位置信息服务可能会使用 GPS、WLAN、移动网络和传感器等来源协助推测设备所在的位置。"</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"驾驶辅助"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"发送到驾驶辅助应用的位置信息不包含可识别您身份的信息。这些信息最多存储 2 天，便会被删除。"</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"位置信息访问权限"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"选择应用能否获取您汽车的位置信息"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"您汽车的制造商或许仍可获取您汽车的位置信息。您可参阅其相关政策以了解详情。"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"这些内置功能必须获取您汽车的位置信息才能辅助驾驶。\n\n如需详细了解每款应用如何使用您的位置数据，请查看各应用的隐私权政策。"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"麦克风"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"使用麦克风"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"允许所有应用使用麦克风"</string>
@@ -454,7 +459,7 @@
     <string name="hardware_info_summary" msgid="8262576443254075921">"型号：<xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"基带版本"</string>
     <string name="kernel_version" msgid="7327212934187011508">"内核版本"</string>
-    <string name="build_number" msgid="3997326631001009102">"版本号"</string>
+    <string name="build_number" msgid="3997326631001009102">"Build 号"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"蓝牙地址"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"未提供"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"状态"</string>
@@ -508,12 +513,12 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重置应用偏好设置"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"清除所有数据（恢复出厂设置）"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"清除信息娱乐系统中的所有数据和个人资料"</string>
-    <string name="factory_reset_desc" msgid="2774024747279286354">"如果您选择恢复出厂设置，您车辆上的信息娱乐系统中的所有数据都将被清除，包括：\n\n"<li>"您的帐号和个人资料"</li>\n<li>"系统/应用数据和设置"</li>\n<li>"下载的应用"</li></string>
-    <string name="factory_reset_accounts" msgid="5523956654938834209">"您目前已登录以下帐号："</string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"如果您选择恢复出厂设置，您车辆上的信息娱乐系统中的所有数据都将被清除，包括：\n\n"<li>"您的账号和个人资料"</li>\n<li>"系统/应用数据和设置"</li>\n<li>"下载的应用"</li></string>
+    <string name="factory_reset_accounts" msgid="5523956654938834209">"您目前已登录以下账号："</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"这辆车已设置其他个人资料。"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"清除所有数据"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"要清除所有数据吗？"</string>
-    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"如果您选择重置设备，此信息娱乐系统中您的所有个人资料数据、帐号和下载的应用都将被清除。\n\n这项操作无法撤消。"</string>
+    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"如果您选择重置设备，此信息娱乐系统中您的所有个人资料数据、账号和下载的应用都将被清除。\n\n这项操作无法撤消。"</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"清除所有内容"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"正在清除"</string>
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"请稍候…"</string>
@@ -534,7 +539,7 @@
     <string name="date_picker_title" msgid="1533614225273770178">"日期"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"时间"</string>
     <string name="user_admin" msgid="1535484812908584809">"管理员"</string>
-    <string name="signed_in_admin_user" msgid="1267225622818673274">"目前登录的是管理员帐号"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"目前登录的是管理员账号"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"要授予管理员权限吗？"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"指定为管理员"</string>
     <string name="grant_admin_permissions_message" msgid="5205433947453539566">"管理员将能删除其他个人资料（包括其他管理员的个人资料），并能将信息娱乐系统恢复出厂设置。"</string>
@@ -594,25 +599,25 @@
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"无法清除应用的存储数据。"</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>已安全弹出"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"无法安全弹出<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="accounts_settings_title" msgid="436190037084293471">"帐号"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"添加帐号"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"未添加任何帐号"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>的帐号"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"账号"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"添加账号"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"未添加任何账号"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>的账号"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"自动同步数据"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"让应用自动刷新数据"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"要允许自动同步数据吗？"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"您在网络上对自己的帐号进行的所有更改都会自动同步到您的车辆。\n\n有些帐号可能还会将您在车辆上进行的所有更改自动同步到网络上。"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"您在网络上对自己的账号进行的所有更改都会自动同步到您的车辆。\n\n有些账号可能还会将您在车辆上进行的所有更改自动同步到网络上。"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"要禁止自动同步数据吗？"</string>
-    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"这样可以节省数据流量，但您需要手动同步每个帐号才能获得最新信息，并且在有更新时不会收到通知。"</string>
-    <string name="account_details_title" msgid="7529571432258448573">"帐号信息"</string>
-    <string name="add_account_title" msgid="5988746086885210040">"添加帐号"</string>
-    <string name="add_an_account" msgid="1072285034300995091">"添加帐号"</string>
-    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"受限个人资料无法添加帐号"</string>
-    <string name="remove_account_title" msgid="8840386525787836381">"移除帐号"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"要移除帐号吗？"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"移除该帐号后，设备上的相关消息、联系人和其他数据也将全部删除！"</string>
-    <string name="remove_account_error_title" msgid="8368044943174826635">"无法移除帐号。"</string>
-    <string name="account_sync_title" msgid="6541844336300236915">"帐号同步"</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"这样可以节省数据流量，但您需要手动同步每个账号才能获得最新信息，并且在有更新时不会收到通知。"</string>
+    <string name="account_details_title" msgid="7529571432258448573">"账号信息"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"添加账号"</string>
+    <string name="add_an_account" msgid="1072285034300995091">"添加账号"</string>
+    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"受限个人资料无法添加账号"</string>
+    <string name="remove_account_title" msgid="8840386525787836381">"移除账号"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"要移除账号吗？"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"移除该账号后，设备上的相关消息、联系人和其他数据也将全部删除！"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"无法移除账号。"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"账号同步"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"已开启 <xliff:g id="ID_1">%1$d</xliff:g> 项（共 <xliff:g id="ID_2">%2$d</xliff:g> 项）的同步功能"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"已开启所有项的同步功能"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"已关闭所有项的同步功能"</string>
@@ -635,7 +640,7 @@
     <string name="vehicle_data_title" msgid="935933215161763721">"信息娱乐系统数据"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"管理这辆车中保存的活动和信息"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"删除您的个人资料"</string>
-    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"清除信息娱乐系统中您的个人资料和帐号"</string>
+    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"清除信息娱乐系统中您的个人资料和账号"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"无法对您的个人资料执行此操作"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"屏幕锁定"</string>
@@ -671,7 +676,7 @@
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"图案不支持旋转输入；请使用触控输入"</string>
     <string name="okay" msgid="4589873324439764349">"确定"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"清除屏幕锁定设置"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"这样一来，任何人都能访问您的帐号"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"这样一来，任何人都能访问您的账号"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"个人资料锁定"</string>
     <string name="security_unlock_profile_summary" msgid="6742592419759865631">"设置自动解锁"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"输入您的 PIN 码"</string>
@@ -734,14 +739,12 @@
     <string name="enter_key" msgid="2121394305541579468">"输入密钥"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"退出演示模式"</string>
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"退出演示模式"</string>
-    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"如果您选择退出，演示帐号将被删除，并且系统将恢复出厂设置。所有个人资料数据都将会丢失。"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"如果您选择退出，演示账号将被删除，并且系统将恢复出厂设置。所有个人资料数据都将会丢失。"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"退出演示模式"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"关闭"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"驾车时无法使用此功能"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"需要请驾驶员更改设置"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"您无法执行此操作"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"车辆行驶期间无法添加个人资料"</string>
     <string name="default_search_query" msgid="3137420627428857068">"搜索"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和语音"</string>
@@ -752,11 +755,12 @@
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"允许 Google 助理获取屏幕截图"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"最近发送的通知"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"所有应用"</string>
-    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"个人资料和帐号"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"个人资料和账号"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"管理其他个人资料"</string>
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"添加个人资料"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"删除此个人资料"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"添加个人资料"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"此个人资料目前是以驾驶员的身份登录。请当此资料未以驾驶员身份使用时重试。"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"屏幕亮度"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"要想看到您的设备，请开启蓝牙"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"要想配对设备，请打开蓝牙设置"</string>
@@ -797,7 +801,7 @@
     <string name="enterprise_privacy_header" msgid="4652489109303330306">"若要提供对这部受管理汽车上数据的访问权限，车队管理员可以更改相关设置，以及在信息娱乐系统上安装软件。\n\n如需了解详情，请联系您的车队管理员。"</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"车队管理员可以查看的信息"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"车队管理员所做的更改"</string>
-    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"与您受管理汽车的帐号相关的数据"</li>\n" "<li>"受管理汽车上应用的列表"</li>\n" "<li>"每个应用的使用时长和数据用量"</li></string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"与您受管理汽车的账号相关的数据"</li>\n" "<li>"受管理汽车上应用的列表"</li>\n" "<li>"每个应用的使用时长和数据用量"</li></string>
     <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"您对信息娱乐系统的访问权限"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"车载设备上应用的列表"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"应用数量是估算值，其中可能不包括从 Play 商店以外的来源安装的应用。"</string>

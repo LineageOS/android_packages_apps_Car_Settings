@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Επιλέξτε τουλ. ένα εύρος για το ΣΠ Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Σημείο πρόσβασης Wi-Fi και σύνδεση"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Σημείο πρόσβασης Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Σημείο πρόσβασης Wi-Fi"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Χρήση σημείου πρόσβασης Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Ανενεργό"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Αυτόματη απενεργοποίηση σημείου πρόσβασης Wi-Fi"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Το σημείο πρόσβασης Wi‑Fi θα απενεργοποιηθεί εάν δεν υπάρχουν συνδεδεμένες συσκευές"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Σαρώστε αυτόν τον κωδικό QR για σύνδεση στο \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Κωδικός πρόσβασης του σημείου πρόσβασης Wi-Fi: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να ενεργοποιήσει το Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Η εφαρμογή <xliff:g id="REQUESTER">%s</xliff:g> θέλει να απενεργοποιήσει το Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Σφάλμα"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Η σύνδεση είναι επιτυχής"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Εμφάνιση όλων"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Αναζήτηση"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Συνδεδεμένες συσκευές"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Χρήση Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Ανώνυμη συσκευή"</string>
@@ -318,10 +322,11 @@
     <string name="disable_text" msgid="4358165448648990820">"Απενεργοποίηση"</string>
     <string name="enable_text" msgid="1794971777861881238">"Ενεργοποίηση"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Απεγκατάσταση"</string>
-    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Εάν απενεργοποιήσετε αυτήν την εφαρμογή, η λειτουργία του Android και άλλων εφαρμογών ενδέχεται να μην είναι η αναμενόμενη."</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Εάν απενεργοποιήσετε αυτή την εφαρμογή, η λειτουργία του Android και άλλων εφαρμογών ενδέχεται να μην είναι η αναμενόμενη."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Απενεργοποίηση εφαρμογής"</string>
     <string name="not_installed" msgid="4163454337822508007">"Δεν εγκαταστάθηκε για αυτό το προφίλ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Δικαιώματα"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Όλες οι υπηρεσίες"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Ειδοποιήσεις"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Αποθηκευτικός χώρος και κρυφή μνήμη"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Προτεραιότητα απόδοσης εφαρμογών"</string>
@@ -360,7 +365,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Καμία"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Επιλέχτηκε"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Ο Βοηθός θα μπορεί να διαβάσει πληροφορίες σχετικά με τις εφαρμογές που χρησιμοποιούνται στο σύστημά σας, συμπεριλαμβανομένων πληροφοριών που είναι ορατές στην οθόνη σας ή διαθέσιμες εντός των εφαρμογών."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Βεβαιωθείτε ότι εμπιστεύεστε αυτήν την εφαρμογή&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; χρησιμοποιεί το περιεχόμενο της οθόνης σας για να διαπιστώσει τι μπορεί να συμπληρωθεί αυτόματα."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Βεβαιωθείτε ότι εμπιστεύεστε αυτή την εφαρμογή&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; χρησιμοποιεί το περιεχόμενο της οθόνης σας για να διαπιστώσει τι μπορεί να συμπληρωθεί αυτόματα."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Προσθήκη υπηρεσίας"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Άνοιγμα συνδέσμων"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Εγκατεστημένες εφαρμογές"</string>
@@ -373,9 +378,9 @@
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Επιλέξατε να εκκινείται η εφαρμογή από προεπιλογή για ορισμένες ενέργειες."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Διαγραφή προεπιλογών"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Άνοιγμα υποστηριζόμενων συνδέσμων"</string>
-    <string name="app_link_open_always" msgid="5783167184335545230">"Να ανοίγει σε αυτήν την εφαρμογή"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Να ανοίγει σε αυτή την εφαρμογή"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"Ερώτηση κάθε φορά"</string>
-    <string name="app_link_open_never" msgid="2173174327831792316">"Να μην ανοίγει σε αυτήν την εφαρμογή"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"Να μην ανοίγει σε αυτή την εφαρμογή"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Υποστηριζόμενοι σύνδεσμοι"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"Εφαρμογές"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"Άνοιξε πρόσφατα"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Περισσότερα"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Τοποθεσία"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Χρήση τοποθεσίας"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Να επιτρέπεται στις εφαρμογές που καθορίζετε η πρόσβαση στην τοποθεσία σας."</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Χρησιμοποιήστε την τοποθεσία του αυτοκινήτου σας με οποιαδήποτε εφαρμογή έχετε καθορίσει."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Αν απενεργοποιήσετε αυτήν τη επιλογή, θα καταργηθεί η πρόσβαση στην τοποθεσία για όλες τις εφαρμογές, εκτός από αυτές που απαιτούνται για υποβοήθηση οδηγού"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Χρήση τοποθεσίας για υποβοήθηση οδηγού"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Η τοποθεσία οχήματος είναι ανενεργή"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Η υποβοήθηση οδηγού δεν έχει πρόσβαση στην τοποθεσία"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Αλλαγή"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Να επιτρέπεται στις εφαρμογές υποβοήθησης οδήγησης η πρόσβαση στην τοποθεσία σας."</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι εφαρμογές υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίας θα απενεργοποιηθούν"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Απενεργοποίηση ούτως ή άλλως"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι εφαρμογές υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίας θα απενεργοποιηθούν"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Απενεργοποίηση ούτως ή άλλως"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Δεν είναι δυνατή η αλλαγή αυτής της ρύθμισης και ο κατασκευαστής του αυτοκινήτου σας την έχει απενεργοποιήσει."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Λειτουργίες που βοηθούν στην οδήγηση"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Επιτρέψτε σε ενσωματωμένες λειτουργίες που έχουν εγκριθεί από τον κατασκευαστή του αυτοκινήτου σας να έχουν πρόσβαση στην τοποθεσία του."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Πρόσφατη πρόσβαση"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Πρόσφατη πρόσβαση"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Προβολή όλων"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Καμία πρόσφατη εφαρμογή"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Υποβοήθηση οδηγού"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Εφαρμογές με άδεια πρόσβασης στην τοποθεσία οχήματος για υποβοήθηση οδηγού"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Πολιτική απορρήτου"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Υποβοήθηση οδηγού • Απαιτεί πρόσβαση"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Λειτουργίες που βοηθούν στην οδήγηση"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Πολιτική"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Άδειες επιπέδου εφαρμογής"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Διαχειριστείτε άδειες μεμονωμένων εφαρμογών"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Υπηρεσίες τοποθεσίας"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Χρήση τοποθεσίας"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Η τοποθεσία μπορεί να χρησιμοποιεί πηγές όπως GPS, Wi-Fi, δίκτυα κινητής τηλεφωνίας και αισθητήρες για την εκτίμηση της τοποθεσίας της συσκευής σας."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Υποβοήθηση οδηγού"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Οι πληροφορίες τοποθεσίας που αποστέλλονται στις εφαρμογές υποβοήθησης οδηγού δεν περιέχουν πληροφορίες που προσδιορίζουν την ταυτότητά σας. Παραμένουν αποθηκευμένες έως 2 ημέρες προτού διαγραφούν."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Πρόσβαση στην τοποθεσία"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Επιλέξτε αν οι εφαρμογές θα έχουν πρόσβαση στην τοποθεσία του αυτοκινήτου σας"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Ο κατασκευαστής του αυτοκινήτου ενδέχεται να εξακολουθεί να έχει πρόσβαση στην τοποθεσία του αυτοκινήτου σας. Ελέγξτε τις πολιτικές του κατασκευαστή για περισσότερες πληροφορίες."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Αυτές οι ενσωματωμένες λειτουργίες χρειάζονται πρόσβαση στην τοποθεσία του αυτοκινήτου σας για να σας βοηθήσουν στην οδήγηση.\n\nΕλέγξτε την πολιτική απορρήτου κάθε εφαρμογής για να μάθετε περισσότερα σχετικά με το πώς χρησιμοποιεί τα δεδομένα τοποθεσίας σας."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Μικρόφωνο"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Χρήση μικροφώνου"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Επιτρέψτε σε όλες τις εφαρμογές να έχουν πρόσβαση στο μικρόφωνο"</string>
@@ -494,7 +499,7 @@
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Δεδομένα κινητής τηλεφωνίας"</li></string>
     <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Τηλεφώνων και άλλων συσκευών Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Διαγραφή όλων των eSIM του οχήματος"</string>
-    <string name="reset_esim_desc" msgid="1437276625485586740">"Με αυτήν την ενέργεια, δεν θα ακυρωθεί το πρόγραμμα υπηρεσίας σας."</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"Με αυτή την ενέργεια, δεν θα ακυρωθεί το πρόγραμμα υπηρεσίας σας."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Δεν είναι δυνατή η επαναφορά eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Επιλογή δικτύου"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Επαναφορά ρυθμίσεων"</string>
@@ -503,7 +508,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Επαναφορά ρυθμίσεων"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Έγινε επαναφορά των ρυθμίσεων δικτύου"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Επαναφορά προτιμήσεων εφαρμογών"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Με αυτήν την ενέργεια, θα γίνει επαναφορά όλων των προτιμήσεων για:\n\n"<li>"απενεργοποιημένες εφαρμογές"</li>\n<li>"απενεργοποιημένες ειδοποιήσεις εφαρμογών"</li>\n<li>"προεπιλεγμένες εφαρμογές για ενέργειες"</li>\n<li>"περιορισμούς δεδομένων παρασκηνίου για εφαρμογές"</li>\n<li>"τυχόν περιορισμούς αδειών"</li>\n\n"Δεν θα χάσετε τυχόν δεδομένα εφαρμογών."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Με αυτή την ενέργεια, θα γίνει επαναφορά όλων των προτιμήσεων για:\n\n"<li>"απενεργοποιημένες εφαρμογές"</li>\n<li>"απενεργοποιημένες ειδοποιήσεις εφαρμογών"</li>\n<li>"προεπιλεγμένες εφαρμογές για ενέργειες"</li>\n<li>"περιορισμούς δεδομένων παρασκηνίου για εφαρμογές"</li>\n<li>"τυχόν περιορισμούς αδειών"</li>\n\n"Δεν θα χάσετε τυχόν δεδομένα εφαρμογών."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Επαναφορά εφαρμογών"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Έγινε επαναφορά των προτιμήσεων των εφαρμογών"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Διαγραφή δεδομένων (επαναφ. εργ. ρυθ.)"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Έξοδος από επίδειξη"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ΠΑΡΑΒΛΕΨΗ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Η λειτουργία δεν διατίθεται κατά τη διάρκεια της οδήγησης."</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Ζητήστε από τον οδηγό να αλλάξει τη ρύθμιση"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Δεν μπορείτε να πραγματοποιήσετε αυτή την ενέργεια"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Δεν είναι δυνατή η προσθήκη προφίλ κατά την οδήγηση."</string>
     <string name="default_search_query" msgid="3137420627428857068">"Αναζήτηση"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Βοηθός και φωνή"</string>
@@ -757,20 +760,21 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Προσθέστε ένα προφίλ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Διαγραφή αυτού του προφίλ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Προσθήκη προφίλ"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Ο οδηγός είναι συνδεδεμένος στο προφίλ. Δοκιμάστε ξανά όταν το προφίλ δεν χρησιμοποιείται από τον οδηγό."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Φωτεινότητα οθόνης"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Για εμφάνιση των συσκευών σας, ενεργοποιήστε το Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Για σύζευξη μιας συσκευής, ανοίξτε τις ρυθμίσεις του Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Διαχειριστής συστήματος ενημέρωσης και ψυχαγωγίας"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Ενεργοποιημένες εφαρμογές"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Απενεργοποιημένες εφαρμογές"</string>
-    <string name="device_admin_apps_description" msgid="1371935499168453457">"Οι εφαρμογές με αυτήν την άδεια έχουν πρόσβαση στα δεδομένα αυτού του οχήματος"</string>
+    <string name="device_admin_apps_description" msgid="1371935499168453457">"Οι εφαρμογές με αυτή την άδεια έχουν πρόσβαση στα δεδομένα αυτού του οχήματος"</string>
     <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Δεν υπάρχουν εφαρμογές διαχείρισης οχημάτων"</string>
     <string name="device_admin_status" msgid="4041772636856135168">"Αυτή η εφαρμογή διαχείρισης συστήματος ενημέρωσης και ψυχαγωγίας είναι ενεργοποιημένη και επιτρέπει στην εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> να εκτελεί τις παρακάτω ενέργειες:"</string>
     <string name="device_admin_warning" msgid="8997805999333600901">"Η ενεργοποίηση της εφαρμογής συστήματος ενημέρωσης και ψυχαγωγίας θα επιτρέψει στην εφαρμογή <xliff:g id="APP_NAME">%1$s</xliff:g> να εκτελεί τις παρακάτω λειτουργίες:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Ενεργ. εφαρμ. συστ. ενημέρ. και ψυχαγ.;"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Ενεργοποίηση αυτής της εφαρμογής συστήματος ενημέρωσης και ψυχαγωγίας"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Απενεργοποίηση και απεγκατάσταση"</string>
-    <string name="remove_device_admin" msgid="3595343390502030723">"Απενεργοποιήστε αυτήν την εφαρμογή συστήματος ενημέρωσης και ψυχαγωγίας"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Απενεργοποιήστε αυτή την εφαρμογή συστήματος ενημέρωσης και ψυχαγωγίας"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Ο διαχειριστής οργανισμού μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που σχετίζονται με αυτό το προφίλ, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας του οχήματος."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Ο διαχειριστής οργανισμού μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που συσχετίζονται με αυτό το προφίλ, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας της συσκευής."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Ο διαχειριστής οργανισμού μπορεί να παρακολουθεί και να διαχειρίζεται εφαρμογές και δεδομένα που σχετίζονται με αυτό το σύστημα ενημέρωσης και ψυχαγωγίας, συμπεριλαμβανομένων των ρυθμίσεων, των αδειών, της εταιρικής πρόσβασης, της δραστηριότητας δικτύου και των πληροφοριών τοποθεσίας του οχήματος."</string>

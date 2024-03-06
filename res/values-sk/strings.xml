@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Vyberte aspoň jedno pásmo hotspotu Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot a tethering"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Hotspot Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Použiť hotspot Wi‑Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Vypnuté"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automaticky vypínať"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Ak nebudú pripojené žiadne zariadenia, hotspot Wi‑Fi sa vypne"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Pripojte sa k sieti %s naskenovaním QR kódu"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Heslo hotspotu: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> chce zapnúť Wi‑Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> chce vypnúť Wi‑Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Chyba"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Pripojenie je úspešné"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Zobraziť všetko"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Vyhľadávanie"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Pripojené zariadenia"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Použiť Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Zariadenie bez názvu"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Deaktivovať aplikáciu"</string>
     <string name="not_installed" msgid="4163454337822508007">"Nie je nainštalovaná pre tento profil"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Povolenia"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Všetky služby"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Upozornenia"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Ukladací priestor a vyrovnávacia pamäť"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Priorizovať výkon aplikácie"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Viac"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Poloha"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Použiť polohu"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Povoľte vybr. aplikác. prístup k polohe"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Používať polohu vozidla so všetkými aplikáciami, ktoré ste špecifikovali"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ak túto možnosť vypnete, prístup k polohe stratia všetky aplikácie okrem tých, ktoré sú potrebné na asistenciu pre vodiča"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Používať polohu pre asistencie pre vodiča"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Poloha vozidla je vypnutá"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Asistenčné aplikácie pre vodiča nemajú prístup k polohe"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Zmeniť"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Povoľte prístup k polohe aplikáciám, ktoré pomáhajú pri šoférovaní"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Ak túto možnosť vypnete, asistenčné aplikácie pre vodiča, ktoré fungujú na základe údajov o polohe, sa deaktivujú."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Aj tak vypnúť"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ak túto možnosť vypnete, asistenčné aplikácie pre vodiča, ktoré fungujú na základe údajov o polohe, sa deaktivujú"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Aj tak vypnúť"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Toto nastavenie sa nedá zmeniť a výrobca vášho auta ho deaktivoval."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funkcie, ktoré vám pomáhajú šoférovať"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Povoľte vstavaným funkciám schváleným výrobcom vozidla prístup k polohe vášho vozidla."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Nedávno použité"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedávno použité"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Zobraziť všetko"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Žiadne nedávne aplikácie"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia pre vodiča"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplikácie, ktoré majú povolený prístup k polohe tohto vozidla, aby mohli poskytovať funkcie asistencie pre vodiča"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Pravidlá ochrany súkromia"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Asistencia pre vodiča • Vyžaduje prístup"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funkcie, ktoré vám pomáhajú šoférovať"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Pravidlá"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Povolenia na úrovni aplikácie"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Správa jednotlivých povolení aplikácie"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Služby určovania polohy"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Používať polohu"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Nastavenie Poloha pomáha odhadnúť polohu vášho zariadenia pomocou zdrojov, ako sú GPS, Wi-Fi, mobilné siete a senzory."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Asistencia pre vodiča"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Informácie o polohe odoslané asistenčným aplikáciám pre vodiča neobsahujú údaje, ktoré umožňujú zistenie vašej totožnosti. Uchovávajú sa maximálne dva dni a potom sa odstránia."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Prístup k polohe"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Vyberte, či aplikácie môžu mať prístup k polohe vášho vozidla"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Výrobca vášho auta môže mať stále prístup k jeho polohe. Prečítajte si jeho pravidlá, kde sa dozviete viac."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Tieto vstavané funkcie vyžadujú prístup k polohe vášho auta, aby vám mohli pomáhať pri jazde.\n\nPrečítajte si v jeho pravidlách ochrany súkromia viac o tom, ak jednotlivé aplikácie využívajú vaše údaje o polohe."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofón"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Použiť mikrofón"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Povoliť všetkým aplikáciám prístup k mikrofónu"</string>
@@ -662,7 +667,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Nakreslite bezpečnostný vzor"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Na záver zdvihnite prst z obrazovky"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Vzor bol zaznamenaný"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Znovu nakreslite pre potvrdenie"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Znova nakreslite vzor pre potvrdenie"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Musíte spojiť aspoň 4 body. Skúste to znova."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nesprávny vzor"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ako kresliť bezpečnostný vzor obrazovky"</string>
@@ -755,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Pridať profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Odstrániť tento profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Pridanie profilu"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Tento profil je aktuálne prihlásený ako vodič. Skúste to znova, keď sa profil nebude používať ako vodič."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Jas displeja"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Ak chcete vidieť svoje zariadenia, zapnite Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ak chcete spárovať zariadenie, otvorte nastavenia Bluetooth"</string>

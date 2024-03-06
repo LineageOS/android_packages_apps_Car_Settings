@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wybierz co najmniej jedno pasmo dla hotspota Wi-Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot i tethering"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Hotspot Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Używaj hotspota Wi‑Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Wyłączono"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatycznie wyłącz hotspot"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatycznie wyłączaj hotspot"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspot Wi‑Fi wyłączy się, jeśli nie ma z nim połączonych żadnych urządzeń"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Zeskanuj ten kod QR, aby połączyć się z: \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Hasło hotspota: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> chce włączyć Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> chce wyłączyć Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Błąd"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Połączono"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Pokaż wszystko"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Wyszukiwanie"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Połączone urządzenia"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Użyj Bluetootha"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Urządzenie bez nazwy"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Wyłącz aplikację"</string>
     <string name="not_installed" msgid="4163454337822508007">"Niezainstalowano w tym profilu"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Uprawnienia"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Wszystkie usługi"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Powiadomienia"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Miejsce na dane i pamięć podręczna"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Zwiększona wydajność aplikacji"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Więcej"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokalizacja"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Włącz lokalizację"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Zezwól określonym aplikacjom na dostęp do lokalizacji"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Korzystaj z lokalizacji samochodu w dowolnej wybranej przez siebie aplikacji."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Jeśli to wyłączysz, dostęp do lokalizacji stracą wszystkie aplikacje oprócz tych, które są potrzebne do wspomagania kierowcy"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Funkcje wspomagania kierowcy mogą używać lokalizacji"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Lokalizacja pojazdu jest wyłączona"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Aplikacje wspomagające kierowcę nie mają dostępu do Twojej lokalizacji"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Zmień"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Zezwól aplikacjom wspomagającym kierowcę na dostęp do lokalizacji"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Jeśli to wyłączysz, aplikacje wspomagające kierowcę korzystające z informacji o lokalizacji również zostaną wyłączone"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Wyłącz mimo to"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Jeśli to wyłączysz, aplikacje wspomagania kierowcy korzystające z informacji o lokalizacji również zostaną wyłączone"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Wyłącz mimo to"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Tego ustawienia nie można zmienić. Zostało ono wyłączone przez producenta samochodu."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funkcje ułatwiające prowadzenie pojazdu"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Zezwól wbudowanym funkcjom zatwierdzonym przez producenta samochodu na dostęp do lokalizacji samochodu."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Ostatnie użycie"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Ostatnie użycie"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Wyświetl wszystko"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Brak ostatnich aplikacji"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Funkcje wspomagania kierowcy"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Aplikacje z dostępem do lokalizacji pojazdu na potrzeby funkcji wspomagania kierowcy"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Polityka prywatności"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Funkcje wspomagania kierowcy • Wymaga dostępu"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Funkcje ułatwiające prowadzenie pojazdu"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Zasady"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Uprawnienia na poziomie aplikacji"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Zarządzaj uprawnieniami poszczególnych aplikacji"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usługi lokalizacyjne"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Używaj lokalizacji"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Lokalizacja może używać takich źródeł jak GPS, sieci Wi-Fi i komórkowe oraz czujniki, aby łatwiej określać lokalizację urządzenia."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Funkcje wspomagania kierowcy"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Informacje o lokalizacji wysłane do aplikacji wspomagających kierowcę nie zawierają danych, które pozwalają Cię zidentyfikować. Są one przechowywane maksymalnie przez 2 dni. Potem zostają usunięte."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Dostęp do lokalizacji"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Zdecyduj, czy aplikacje mogą mieć dostęp do lokalizacji Twojego samochodu"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Producent samochodu może nadal mieć dostęp do lokalizacji Twojego samochodu. Więcej informacji znajdziesz w jego regulaminie."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Te wbudowane funkcje wymagają dostępu do lokalizacji samochodu, żeby zapewnić wspomaganie kierowcy.\n\nWięcej o tym, jak poszczególne aplikacje wykorzystują dane o lokalizacji, znajdziesz w ich polityce prywatności."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Używaj mikrofonu"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Pozwól wszystkim aplikacjom na dostęp do mikrofonu"</string>
@@ -472,7 +477,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Prawa autorskie"</string>
     <string name="license_title" msgid="936705938435249965">"Licencja"</string>
     <string name="terms_title" msgid="5201471373602628765">"Warunki i zasady korzystania"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Licencje systemowe WebView"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Licencje na System WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Tapety"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Dostawcy zdjęć satelitarnych:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
@@ -662,8 +667,8 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Narysuj wzór odblokowania"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Gdy skończysz, podnieś palec"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Wzór zapisany"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Narysuj ponownie wzór, by potwierdzić"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Połącz min. 4 kropki. Spróbuj ponownie."</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Narysuj ponownie wzór, aby go potwierdzić"</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Połącz co najmniej 4 kropki. Spróbuj ponownie."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nieprawidłowy wzór"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Jak narysować wzór odblokowania"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Błąd podczas zapisywania wzoru"</string>
@@ -686,11 +691,11 @@
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Nieprawidłowe hasło"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Ze względów bezpieczeństwa ustaw hasło"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Podaj ponownie hasło"</string>
-    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Hasła nie są identyczne"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Hasła nie są takie same"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Wyczyść"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Anuluj"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potwierdź"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Musisz użyć co najmniej czterech znaków"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Musisz użyć co najmniej 4 znaków"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"Ten rodzaj blokady jest niedostępny."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Może zawierać tylko cyfry od 0 do 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator urządzenia nie zezwala na ustawianie niedawno używanego kodu PIN"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Zamknij tryb demo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ZAMKNIJ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funkcja niedostępna podczas jazdy"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Poproś kierowcę o zmianę ustawień"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Nie możesz wykonać tego działania"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Nie można dodawać profilu podczas jazdy"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Szukaj"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asystent i głos"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Dodaj profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Usuń ten profil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Dodaj profil"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Ten profil jest obecnie używany w trybie kierowcy. Spróbuj ponownie, gdy profil nie będzie w tym trybie."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Jasność wyświetlacza"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aby zobaczyć urządzenia, włącz Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Aby sparować urządzenie, otwórz ustawienia Bluetooth"</string>

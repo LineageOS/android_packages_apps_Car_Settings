@@ -501,10 +501,8 @@ public class NetworkRequestDialogFragment extends ObservableDialogFragment imple
          * @return List of matched WifiEntries.
          */
         List<WifiEntry> getWifiEntries() {
-            List<WifiEntry> wifiEntries = new ArrayList<>();
-            if (mWifiPickerTracker.getConnectedWifiEntry() != null) {
-                wifiEntries.add(mWifiPickerTracker.getConnectedWifiEntry());
-            }
+            List<WifiEntry> wifiEntries =
+                    new ArrayList<>(mWifiPickerTracker.getActiveWifiEntries());
             wifiEntries.addAll(mWifiPickerTracker.getWifiEntries());
 
             List<WifiEntry> filteredWifiEntries = new ArrayList<>();

@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"٢٫٤ غيغاهرتز"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 غيغاهرتز"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"اختر نطاقًا واحدًا على الأقل لنقطة اتصال Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطة الاتصال والتوصيل"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"نقطة اتصال Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"نقطة الاتصال"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"استخدام نقطة اتصال Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"غير مفعّلة"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"إيقاف نقطة الاتصال تلقائيًا"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"سيتم إيقاف نقطة اتصال Wi‑Fi في حال عدم اتصال أي أجهزة."</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"امسح رمز الاستجابة السريعة هذا للانضمام إلى \"%s\"."</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"كلمة مرور نقطة الاتصال: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"هناك رغبة من <xliff:g id="REQUESTER">%s</xliff:g> في تفعيل شبكة Wi-Fi."</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"هناك رغبة من <xliff:g id="REQUESTER">%s</xliff:g> في إيقاف شبكة Wi-Fi."</string>
     <string name="wifi_error" msgid="3105105447117289410">"خطأ"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"تمّ الاتصال."</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"عرض الكل"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"البحث"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"الأجهزة المتصلة"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"البلوتوث"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"استخدام البلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"جهاز بدون اسم"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"إيقاف التطبيق"</string>
     <string name="not_installed" msgid="4163454337822508007">"التطبيق غير مثبت لهذا الملف الشخصي"</string>
     <string name="permissions_label" msgid="2701446753515612685">"الأذونات"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"جميع الخدمات"</string>
     <string name="notifications_label" msgid="6586089149665170731">"الإشعارات"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"التخزين وذاكرة التخزين المؤقت"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"منح الأولوية لأداء التطبيق"</string>
@@ -380,7 +385,7 @@
     <string name="apps_settings_title" msgid="3982535942394315336">"التطبيقات"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"التطبيقات التي تم فتحها مؤخرًا"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"عرض جميع التطبيقات الـ ‎%1$d"</string>
-    <string name="apps_permission_manager_title" msgid="8776335943862484131">"مدير الأذونات"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"إدارة الأذونات"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"التحكُّم في وصول التطبيقات إلى بياناتك"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"لعرض تطبيق المساعد وتطبيقات أخرى"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{تطبيق واحد يؤثر في الأداء}zero{# تطبيق تؤثر في الأداء}two{تطبيقان يؤثران في الأداء}few{# تطبيقات تؤثر في الأداء}many{# تطبيقًا تؤثر في الأداء}other{# تطبيق تؤثر في الأداء}}"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"المزيد"</string>
     <string name="location_settings_title" msgid="901334356682423679">"الموقع الجغرافي"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"استخدام الموقع الجغرافي"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"السماح للتطبيقات التي تحددها بالوصول إلى موقعك الجغرافي"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"استخدِم الموقع الجغرافي لسيارتك مع أي تطبيق حددته."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"إذا أوقفت هذا الإعداد، سيؤدي ذلك إلى إزالة إمكانية وصول كل التطبيقات إلى الموقع الجغرافي باستثناء تلك اللازمة لتطبيقات \"مساعد السائق\"."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"استخدام الموقع الجغرافي لميزة \"مساعدة السائق\""</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ميزة الموقع الجغرافي للسيارة غير مفعَّلة"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"يتعذّر على تطبيقات \"مساعدة السائق\" الوصول لموقعك الجغرافي."</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"تغيير"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"السماح للتطبيقات التي تساعدك على القيادة بالوصول إلى موقعك الجغرافي"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"إذا تم إيقاف ميزة \"مساعدة السائق\" هذه، سيتم إيقاف تطبيقات \"مساعدة السائق\" التي تعتمد على معلومات الموقع الجغرافي."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"إيقاف على أي حال"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"إذا تم إيقاف ميزة \"مساعدة السائق\" هذه، سيتم إيقاف تطبيقات \"مساعدة السائق\" التي تعتمد على معلومات الموقع الجغرافي."</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"إيقاف على أي حال"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"لا يمكن تغيير هذا الإعداد وقد أوقفته الشركة المصنّعة لسيارتك."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"ميزات تساعدك في القيادة"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"يمكنك السماح للميزات المدمَجة، المعتمدة من الشركة المصنّعة لسيارتك، بالوصول إلى الموقع الجغرافي لسيارتك."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"عرض الكل"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"لم يَصِل أي تطبيق مؤخرًا إلى الموقع الجغرافي."</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • مساعدة السائق"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"يمكن للتطبيقات التي لديها إذن وصول للموقع الجغرافي لهذه السيارة الحصول على ميزات \"مساعدة السائق\"."</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"سياسة الخصوصية"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • مساعدة السائق • يجب الوصول إلى الموقع الجغرافي"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"ميزات تساعدك في القيادة"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"السياسة"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"الأذونات على مستوى التطبيقات"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"إدارة أذونات التطبيقات الفردية"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات الموقع الجغرافي"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"استخدام الموقع الجغرافي"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"قد تستخدم ميزة الموقع الجغرافي مصادر مثل نظام تحديد المواقع العالمي (GPS) أو شبكة Wi-Fi أو شبكات الجوّال أو أجهزة الاستشعار للمساعدة في تقدير الموقع الجغرافي لجهازك."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"مساعدة السائق"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"لا تحتوي معلومات الموقع الجغرافي التي تم إرسالها إلى تطبيقات \"مساعدة السائق\" على أي معلومات تحدِّد هويتك. ويتم تخزين تلك المعلومات لمدة يومَين كحد أقصى قبل حذفها."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"الوصول إلى الموقع الجغرافي"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"اختَر ما إذا كان يمكن للتطبيقات الوصول إلى الموقع الجغرافي لسيارتك."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"قد تظل الشركة المصنّعة لسيارتك قادرة على الوصول إلى الموقع الجغرافي لسيارتك. يمكنك مراجعة سياساتها لمزيد من المعلومات."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"لاستخدام هذه الميزات المدمجة، يجب الوصول إلى الموقع الجغرافي لسيارتك من أجل المساعدة في القيادة.\n\nمزيد من المعلومات عن الطريقة التي يستخدِم بها كل تطبيق بيانات موقعك الجغرافي من خلال مراجعة سياسة الخصوصية الخاصة بالتطبيق"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"الميكروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"استخدام الميكروفون"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"السماح لجميع التطبيقات باستخدام الميكروفون"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"خروج من عرض توضيحي"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"رفض"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"لا تتوفَّر هذه الميزة أثناء القيادة."</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"اطلب من السائق تغيير الإعدادات."</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"لا يمكنك تنفيذ هذا الإجراء."</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"لا يمكن إضافة ملف شخصي أثناء القيادة."</string>
     <string name="default_search_query" msgid="3137420627428857068">"بحث"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"\"مساعد Google\" والصوت"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"إنشاء ملف شخصي"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"حذف هذا الملف الشخصي"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"إضافة ملف شخصي"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"هذا الملف الشخصي مسجّلٌ الدخول حاليًا كسائق. أعِد المحاولة عندما لا يكون الملف الشخصي قيد الاستخدام كسائق"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"سطوع الشاشة"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"لرؤية أجهزتك، يجب تفعيل البلوتوث."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"لإقران جهاز، افتح إعدادات البلوتوث."</string>

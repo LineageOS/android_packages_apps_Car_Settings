@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"WiFi hotspot bandı seçin:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot ve tethering"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Kablosuz hotspot"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Kablosuz hotspot\'u kullan"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Kapalı"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot\'u otomatik olarak kapat"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Herhangi bir cihaz bağlanmazsa Kablosuz hotspot kapatılır"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" ağına katılmak için bu QR kodunu tarayın"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Hotspot şifresi: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>, Kablosuz özelliğini açmak istiyor"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>, Kablosuz özelliğini kapatmak istiyor"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Hata"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Bağlantı başarılı"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Tümünü göster"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Arıyor"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Bağlı cihazlar"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetooth\'u kullan"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Adsız cihaz"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Uygulamayı devre dışı bırak"</string>
     <string name="not_installed" msgid="4163454337822508007">"Bu profilde yüklenmemiş"</string>
     <string name="permissions_label" msgid="2701446753515612685">"İzinler"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Tüm hizmetler"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Bildirimler"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Depolama alanı ve önbellek"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Uygulama performansı öncelikli"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Daha fazla"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Konum"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Konumu kullan"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Belirttiğiniz uygulamaların konuma erişmesine izin verin"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Belirttiğiniz her uygulamayla arabanızın konumunu kullanın."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Bu ayarı kapatırsanız sürüş yardımı için gerekli olanlar dışında tüm uygulamaların konum erişimi kaldırılır"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Sürüş yardımı için konum kullan"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Araç konumu kapalı"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Sürüş yardımı uygulamaları konumunuza erişemez"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Değiştir"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Sürüşe yardımcı uygulamaların konuma erişmesine izin verin"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Bu özelliği kapatırsanız konum bilgilerine dayanan sürüş yardımı uygulamaları devre dışı bırakılır"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Yine de kapat"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Bu özelliği kapatırsanız konum bilgilerine dayanan sürüş yardımı uygulamaları devre dışı bırakılır"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Yine de kapat"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Bu ayar değiştirilemez ve araba üreticiniz tarafından devre dışı bırakılmış."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Araba kullanmanıza yardımcı özellikler"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Arabanızın üreticisi tarafından onaylanmış yerleşik özelliklerin arabanızın konumuna erişmesine izin verin."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Yakın zamanda erişildi"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yakın zamanda erişildi"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tümünü göster"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Kameraya yakın zamanda erişen uygulama yok"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Sürüş yardımı"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Sürüş yardımı özellikleri için bu aracın konumuna erişim izni olan uygulamalar"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Gizlilik politikası"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Sürüş yardımı • Erişim gerekir"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Araba kullanmanıza yardımcı özellikler"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Politika"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Uygulama düzeyinde izinler"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Uygulama izinlerini ayrı ayrı yönetin"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Konum Hizmetleri"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Konumu kullan"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Konum hizmeti, cihazınızın konumunu tahmin etmesine yardımcı olması için GPS, kablosuz ve mobil ağlar ile sensörler gibi kaynakları kullanabilir."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Sürüş yardımı"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Sürüş yardımı uygulamalarına gönderilen konum bilgilerinde sizi tanımlayan bilgiler yer almaz. Bilgiler silinmeden önce en fazla 2 gün depolanır."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Konum erişimi"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Uygulamaların arabanızın konumuna erişip erişemeyeceğini seçin"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Araba üreticiniz, arabanızın konumuna erişmeye devam edebilir. Daha fazla bilgi için üreticinin politikalarına göz atabilirsiniz."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Bu yerleşik özelliklerin, sürüş yardımı sunmak için arabanızın konumuna erişmesi gerekir.\n\nUygulamaların konum verilerinizi nasıl kullandığı hakkında daha fazla bilgi edinmek için Gizlilik Politikası\'nı inceleyin."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Mikrofonu kullan"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Tüm uygulamaların mikrofonunuza erişmesine izin verin"</string>
@@ -661,7 +666,7 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Yeni kilit açma deseniniz"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Kilit açma deseni çizin"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Bitirdiğinizde parmağınızı kaldırın"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Desen kaydedildi"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Desen kaydedildi."</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Doğrulamak için deseni yeniden çizin"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"En az 4 nokta birleştirip yine deneyin."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Yanlış desen"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan çık"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"KAPAT"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Sürüş sırasında bu özellik kullanılamaz"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Sürücüden ayarı değiştirmesini isteyin"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Bu işlemi gerçekleştiremezsiniz"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Sürüş sırasında kullanıcı eklenemez"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Ara"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistan ve ses"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profil ekle"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Bu profili sil"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profil ekle"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Bu profil şu anda sürücü olarak oturum açtı. Profil sürücü olarak kullanılmadığında tekrar deneyin."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ekran parlaklığı"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Cihazlarınızı görmek için Bluetooth\'u açın"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Cihaz eşlemek için Bluetooth ayarlarını açın"</string>

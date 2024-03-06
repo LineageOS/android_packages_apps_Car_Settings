@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi хотспоты үшін кемінде бір диапазон таңдаңыз."</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Хотспот және тетеринг"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi хотспоты"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Хотспот"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi‑Fi хотспотын пайдалану"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Өшіру"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Хотспотты автоматты өшіру"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Ешқандай құрылғы жалғанбаса, Wi‑Fi хотспоты өшеді"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" хотспотына қосылу үшін QR кодын сканерлеңіз."</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Хотспот құпия сөзі: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi байланысын қосқысы келеді."</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi байланысын өшіргісі келеді."</string>
     <string name="wifi_error" msgid="3105105447117289410">"Қате"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Байланыс орнатылды."</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Барлығын көрсету"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Іздеуде..."</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Жалғанған құрылғылар"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetooth функциясын пайдалану"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Атаусыз құрылғы"</string>
@@ -227,7 +231,7 @@
     <string name="language_settings" msgid="2079258598337245546">"Тілдер"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Тілдер және енгізу"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Ұсынылған"</string>
-    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Барлық тілдер"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Барлық тіл"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Пернетақта"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Пернетақтаны басқару"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Мәтінді дыбыстау шығысы"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Қолданбаны өшіру"</string>
     <string name="not_installed" msgid="4163454337822508007">"Бұл профильге орнатылмаған."</string>
     <string name="permissions_label" msgid="2701446753515612685">"Рұқсаттар"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Барлық қызмет"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Хабарландырулар"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Жад және кэш"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Қолданба өнімділігін басымды ету"</string>
@@ -329,7 +334,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ешқандай рұқсат берілмеген"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ешқандай рұқсат сұралмаған"</string>
     <string name="unused_apps" msgid="648471933781010395">"Пайдаланылмайтын қолданбалар"</string>
-    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# пайдаланылмайтын қолданба}other{# пайдаланылмайтын қолданба}}"</string>
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# қолданба пайдаланылмайды}other{# қолданба пайдаланылмайды}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Рұқсаттарды өшіру және орын босату"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"Ішкі жад: %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Қолданба өнімділігін басымды ету үшін жүйенің ресурстарын пайдаланады."</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Тағы"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Локация"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Локацияны пайдалану"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Көрсетілген қолданбалардың локацияны қолдануына рұқсат ету"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Көрсетілген кез келген қолданбаның көмегімен көлігіңіздің локациясын пайдаланыңыз."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Мұны өшірсеңіз, жүргізушіге көмек қолданбаларынан басқа барлық қолданбаның локацияны қолдану рұқсаты жойылады."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Жүргізушіге көмек функциясы үшін локацияны қолдану"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Көліктің локациясы өшірулі"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Жүргізушіге көмек қолданбалары локацияны қолдана алмайды."</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Өзгерту"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Жүргізуге көмектесетін қолданбалардың локацияңызды қолдануына рұқсат ету"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Мұны өшірсеңіз, локация мәліметіне сүйенетін жүргізушіге көмек қолданбалары өшіріледі."</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Бәрібір өшіру"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Мұны өшірсеңіз, локация мәліметіне сүйенетін жүргізушіге көмек қолданбалары өшіріледі."</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Бәрібір өшіру"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Бұл параметр өзгертілмейді және оны көлік өндірушісі өшірген."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Көлік жүргізуге көмектесетін функциялар"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Көлік өндірушісі мақұлдаған кірістірілген функциялардың көлік локациясын пайдалануына рұқсат беріңіз."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Жақында пайдаланылған"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Жақында пайдаланылған"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Барлығын көру"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Жақында пайдаланған қолданбалар жоқ."</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Жүргізушіге көмек қолданбалары"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Осы көліктің локациясын пайдалану рұқсаты бар қолданбалар жүргізушіге көмектесетін функцияларды қолдана алады."</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Құпиялық саясаты"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Жүргізушіге көмек • Рұқсат қажет"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Көлік жүргізуге көмектесетін функциялар"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Саясат"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Қолданба деңгейіндегі рұқсаттар"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Жеке қолданба рұқсаттарын басқару"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Локация қызметтері"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Локацияны пайдалану"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Құрылғының орналасқан жерін анықтау үшін GPS, Wi-Fi, мобильдік желілер және датчиктер пайдаланылуы мүмкін."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Жүргізушіге көмек функциялары"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Жүргізушіге көмек қолданбаларына жіберілген локация туралы ақпаратта жеке басыңызды анықтайтын мәлімет жоқ. Ақпарат ең көбі 2 күн сақталып, кейін жойылады."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Локацияны пайдалану рұқсаты"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Көлік локациясын пайдалана алатын қолданбаларды таңдаңыз."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Көлік өндірушісі көлігіңіздің локациясын әлі де пайдалануы мүмкін. Толық ақпарат алу үшін оның саясаттарымен таныса аласыз."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Осы кірістірілген функциялар көлікті жүргізуге көмектесу үшін оның локациясын пайдалануы қажет.\n\nҚұпиялық саясатымен танысу арқылы әрбір қолданбаның геодеректерді пайдалану жолы туралы толық ақпарат алыңыз."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Микрофон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Микрофонды пайдалану"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Барлық қолданбаның микрофонды пайдалануына рұқсат беру"</string>
@@ -475,7 +480,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"Жүйенің WebView лицензиялары"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Тұсқағаздар"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Satellite сурет провайдерлері:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
-    <string name="model_info" msgid="4966408071657934452">"Үлгісі"</string>
+    <string name="model_info" msgid="4966408071657934452">"Моделі"</string>
     <string name="status_serial_number" msgid="9158889113131907656">"Сериялық нөмірі"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"Жабдық нұсқасы"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
@@ -506,7 +511,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Келесілердің параметрлері бастапқы күйіне қайтарылады:\n\n"<li>"өшірілген қолданбалар;"</li>\n<li>"қолданбалардың өшірілген хабарландырулары;"</li>\n<li>"әрекеттерге арналған әдепкі қолданбалар;"</li>\n<li>"фондық режимдегі дерек тасымалын шектеу;"</li>\n<li>"барлық рұқсат шектеулері."</li>\n\n"Қолданба деректері жоғалмайды."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Бастапқы күйге қайтару"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Қолданба параметрлері бастапқы күйіне қайтарылды."</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Барлық деректерді өшіру (зауыттық параметрлерге қайтару)"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Барлық деректі өшіру (зауыттық параметрлерге қайтару)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ақпарат және ойын-сауық жүйесінен барлық дерек пен профильдерді өшіру"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"Бұл – көлігіңіздің ақпараттық-сауықтық жүйесінен деректердің барлығын өшіреді, соның ішінде:\n\n"<li>"аккаунттарыңыз бен профильдеріңізді;"</li>\n<li>"жүйе және қолданба деректері мен параметрлерін;"</li>\n<li>"жүктеп алынған қолданбаларды"</li>"."</string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Сіз келесі аккаунттарға кірдіңіз:"</string>
@@ -554,7 +559,7 @@
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Тек бір профиль жасауға болады.}other{# профильге дейін жасауға болады.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Жаңа профиль құру мүмкін болмады"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"Бұл профильді жою керек пе?"</string>
-    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Осы профильдегі барлық қолданбалар мен деректер жойылады."</string>
+    <string name="delete_user_dialog_message" msgid="3916865958419051299">"Осы профильдегі барлық қолданба мен дерек жойылады."</string>
     <string name="delete_user_error_title" msgid="287249031795906102">"Профиль жойылмады. Құрылғыны өшіріп қосып, қайталап көріңіз."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"Бұл профиль құрылғыны өшіріп қосқан кезде немесе профильдерді ауыстырғанда жойылады."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Қабылдамау"</string>
@@ -663,7 +668,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Салып болғанда саусағыңызды жіберіңіз"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Өрнек сақталды"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Растау үшін өрнекті қайта сызыңыз"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Кемі 4 нүктені қосу қажет. Қайталаңыз."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Кемі 4 нүктені қосу қажет. Қайта салып көріңіз."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Қате өрнек"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Құлыпты ашу өрнегін сызу"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Өрнекті сақтау кезінде қате кетті"</string>
@@ -678,7 +683,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Құпия сөзіңізді енгізіңіз"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Қауіпсіздік үшін PIN кодын орнатыңыз"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN кодын қайта енгізіңіз"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN коды кемінде 4 таңбадан тұруы керек"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN коды кемінде 4 цифрдан тұруы керек."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN коды жарамсыз: кемінде 4 сан болуы керек."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN кодтары сәйкес емес"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN кодын сақтау кезінде қате кетті"</string>
@@ -690,7 +695,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Өшіру"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Бас тарту"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Растау"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Ең кемі 4 таңбадан тұруы керек"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Кемінде 4 таңбадан тұруы керек."</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"Құлыптаудың бұл түрі қолжетімсіз."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Тек 0-9 арасындағы сандар болуы керек."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Құрылғы әкімшісі жақында пайдаланылған PIN кодын қолдануға рұқсат бермейді"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Деморежимнен шығу"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЖАБУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Көлік жүргізу кезінде бұл функция жұмыс істемейді."</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Жүргізушіден параметрді өзгертуді сұраңыз."</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Сіз бұл әрекетті орындай алмайсыз."</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Көлік жүргізу кезінде профиль қосу мүмкін емес"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Іздеу"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant және Voice"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Профиль қосу"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Бұл профильді жою"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Профиль қосу"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Профильге жүргізуші ретінде кіріліп тұр. Профиль жүргізуші атынан пайдаланылмағанда қайталап көріңіз."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Дисплей жарықтығы"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Құрылғыларыңызды көру үшін Bluetooth-ты қосыңыз."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Құрылғыны жұптау үшін Bluetooth параметрлерін ашыңыз."</string>

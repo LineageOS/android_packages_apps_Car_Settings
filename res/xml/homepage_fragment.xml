@@ -29,7 +29,7 @@
         android:fragment="com.android.car.settings.bluetooth.BluetoothSettingsFragment"
         android:icon="@drawable/ic_top_level_bluetooth"
         android:key="@string/pk_bluetooth_settings_entry"
-        android:title="@string/bluetooth_settings_title"
+        android:title="@string/connected_settings_title"
         settings:controller="com.android.car.settings.bluetooth.BluetoothEntryPreferenceController"/>
     <com.android.car.settings.common.TopLevelPreference
         android:fragment="com.android.car.settings.network.NetworkAndInternetFragment"

@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Kies minimaal één band voor wifi-hotspot:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot en tethering"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wifi-hotspot"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wifi-hotspot gebruiken"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Uit"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitzetten"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgezet als er geen apparaten verbonden zijn"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Scan deze QR-code om deel te nemen aan %s"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Wachtwoord van hotspot: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi aanzetten"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> wil wifi uitzetten"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fout"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Verbinding gemaakt"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Alles tonen"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Zoeken"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Verbonden apparaten"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetooth gebruiken"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Naamloos apparaat"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App uitzetten"</string>
     <string name="not_installed" msgid="4163454337822508007">"Niet geïnstalleerd voor dit profiel"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Rechten"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Alle services"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Meldingen"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Opslag en cache"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"App-prestaties prioriteren"</string>
@@ -380,7 +385,7 @@
     <string name="apps_settings_title" msgid="3982535942394315336">"Apps"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"Onlangs geopend"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Alle %1$d apps bekijken"</string>
-    <string name="apps_permission_manager_title" msgid="8776335943862484131">"Rechtenbeheer"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"Rechten­beheer"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"App-toegang tot je gegevens beheren"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Voor de Assistent en meer"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# app die de prestaties beïnvloedt}other{# apps die de prestaties beïnvloeden}}"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Meer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Locatie"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Locatie gebruiken"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Apps die je opgeeft toegang tot je locatie geven"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Gebruik de locatie van je auto met elke app die je hebt opgegeven."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Als je dit uitzet, wordt locatietoegang verwijderd voor alle apps, behalve de apps die nodig zijn voor bestuurdersondersteuning."</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Locatie gebruiken voor bestuurdersondersteuning"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Voertuiglocatie staat uit"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Apps voor bestuurdersondersteuning hebben geen toegang tot je locatie"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Wijzigen"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Apps die helpen bij het rijden toegang tot je locatie geven"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Als je dit uitzet, zet je apps voor bestuurdersondersteuning die locatie-informatie nodig hebben ook uit"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Toch uitzetten"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Als je dit uitzet, zet je apps voor bestuurdersondersteuning die locatiegegevens nodig hebben ook uit"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Toch uitzetten"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Deze instelling kan niet worden gewijzigd en is uitgezet door de fabrikant van de auto."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Functies die het autorijden ondersteunen"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Geef ingebouwde functies die zijn goedgekeurd door de fabrikant van je auto toegang tot de locatie van je auto."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Recent gebruikt"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Recent gebruikt"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Alles bekijken"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Geen recente apps"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Bestuurdersondersteuning"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Apps met dit recht hebben toegang tot de locatie van dit voertuig voor functies voor bestuurdersondersteuning"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Privacybeleid"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Bestuurdersondersteuning • Vereist toegang"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Functies die het autorijden ondersteunen"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Beleid"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Rechten op app-niveau"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Individuele app-rechten beheren"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Locatieservices"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Locatie gebruiken"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Voor de schatting van je apparaatlocatie kunnen bronnen worden gebruikt zoals gps, wifi, mobiele netwerken en sensoren."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Bestuurdersondersteuning"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Locatie-informatie die naar apps voor bestuurdersondersteuning wordt gestuurd, bevat geen informatie waarmee je kunt worden geïdentificeerd. De informatie wordt maximaal 2 dagen opgeslagen en daarna verwijderd."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Locatietoegang"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Kies of apps toegang mogen hebben tot de locatie van je auto"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"De fabrikant van je auto heeft misschien nog steeds toegang tot de locatie van je auto. Je kunt hun beleid doornemen voor meer informatie."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Deze ingebouwde functies vereisen toegang tot de locatie van je auto om ondersteuning te bieden bij het rijden.\n\nNeem het Privacybeleid van elke app door voor meer informatie over hoe je locatiegegevens worden gebruikt."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Microfoon"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Microfoon gebruiken"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Alle apps toegang tot je microfoon geven"</string>
@@ -662,7 +667,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Teken een ontgrendelingspatroon"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Laat het scherm los als je klaar bent"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Patroon opgenomen"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Teken patroon nogmaals ter bevestiging"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Teken patroon nog eens ter bevestiging"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Verbind minstens 4 punten. Opnieuw."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Onjuist patroon"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ontgrendelingspatroon tekenen"</string>
@@ -677,7 +682,7 @@
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Je pincode opgeven"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Geef je wachtwoord op"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Stel pincode in voor betere beveiliging"</string>
-    <string name="confirm_your_pin_header" msgid="9096581288537156102">"Geef je pincode opnieuw op"</string>
+    <string name="confirm_your_pin_header" msgid="9096581288537156102">"Voer je pincode opnieuw in"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Pincode moet minimaal 4 tekens bevatten"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pincode ongeldig: moet uit minimaal vier tekens bestaan."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Pincodes komen niet overeen"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demo afsluiten"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"SLUITEN"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Functie niet beschikbaar tijdens het rijden"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Vraag de bestuurder om de instelling te wijzigen"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Je kunt deze actie niet uitvoeren"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Kan geen profiel toevoegen tijdens het rijden"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Zoeken"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent en stem"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Profiel toevoegen"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Dit profiel verwijderen"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Profiel toevoegen"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Dit profiel is nu ingelogd als bestuurder. Probeer het opnieuw als dit profiel is uitgelogd."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Helderheid van het scherm"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Zet bluetooth aan als je je apparaten wilt zien"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Open de bluetooth-instellingen om een apparaat te koppelen"</string>

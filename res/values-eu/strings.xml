@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Aukeratu gutxienez banda bat wifi-gunerako:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Wifi-gunea eta konexioa partekatzea"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wifi-gunea"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Wifi-gunea"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Erabili wifi-gunea"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desaktibatuta"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desaktibatu automatikoki wifi-gunea"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-gunea desaktibatu egingo da ez badauka gailurik konektatuta"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Eskaneatu QR kodea hemen sartzeko: \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Wifi-gunearen pasahitza: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> aplikazioak wifia aktibatu nahi du"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> aplikazioak wifia desaktibatu nahi du"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Errorea"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Konektatu da"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Erakutsi guztiak"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Bilatzen"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Konektatutako gailuak"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetootha"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Erabili Bluetooth bidezko konexioa"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Izenik gabeko gailua"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Desgaitu aplikazioa"</string>
     <string name="not_installed" msgid="4163454337822508007">"Ez dago instalatuta profil honetan"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Baimenak"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Zerbitzu guztiak"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Jakinarazpenak"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Memoria eta cachea"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Lehenetsi aplikazioen errendimendua"</string>
@@ -370,7 +375,7 @@
     <string name="app_launch_title" msgid="3442601467010363057">"Ireki modu lehenetsian"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Beste balio lehenetsi batzuk"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Ez dago balio lehenetsirik ezarrita."</string>
-    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Ekintza batzuk egiterakoan aplikazioa modu lehenetsian abiaraztea aukeratu duzu."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Ekintza batzuk egiterakoan aplikazioa modu lehenetsian exekutatzea aukeratu duzu."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Garbitu balio lehenetsiak"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Ireki esteka bateragarriak"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"Ireki aplikazio honetan"</string>
@@ -394,7 +399,7 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Jakinarazpenetarako sarbidea"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> zerbitzuari jakinarazpenetarako sarbidea eman nahi diozu?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioak jakinarazpen guztiak irakurri ahal izango ditu, informazio pertsonala (adibidez, kontaktuen izenak eta jasotako testu-mezuak) dutenak barne. Horrez gain, jakinarazpenak baztertu eta haietako ekintza-botoiak abiarazi ahal izango ditu.\n\nGainera, ez molestatzeko modua aktibatzeko eta desaktibatzeko aukera izango du aplikazioak, baita horrekin erlazionatutako ezarpenak aldatzekoa ere."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioari jakinarazpenak atzitzeko aukera desaktibatzen badiozu, baliteke ez molestatzeko modurako sarbidea era desaktibatzea."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioari jakinarazpenak erabiltzeko aukera desaktibatzen badiozu, baliteke ez molestatzeko modurako sarbidea era desaktibatzea."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desaktibatu"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Utzi"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aplikazio hauek sistemaren errendimendua okertzen dute; horregatik, atzeko planoan exekutatzea galarazi zaie.\nAplikazio hauetakoren bat atzeko planoan erabili nahi baduzu, eman iezaiozu lehentasuna, eta zerrenda honetatik kenduko da."</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Gehiago"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Kokapena"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Erabili kokapena"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Eman kokapena erabiltzeko baimena zehazten dituzun aplikazioei"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Erabili autoaren kokapena zehaztu duzun edozein aplikaziorekin."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Aukera hau desaktibatuz gero, kokapena erabiltzeko baimena kenduko zaie aplikazio guztiei, gidatzeko laguntza erabiltzeko behar direnei izan ezik"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Gidatzeko laguntza abian denean, erabili kokapena"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Ibilgailuaren kokapena desaktibatuta dago"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Gidatzeko laguntzarekin erlazionatutako aplikazioek ezin dute atzitu kokapena"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Aldatu"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Eman kokapena erabiltzeko baimena gidatzeko laguntza ematen duten aplikazioei"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Aukera hau desaktibatuz gero, kokapenari buruzko informazioa erabiltzen duten gidatzeko laguntzarekin erlazionatutako aplikazioak desgaituko dira"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Desaktibatu, halere"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Aukera hau desaktibatuz gero, kokapenari buruzko informazioa erabiltzen duten gidatzeko laguntza-aplikazioak desgaituko dira"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desaktibatu, halere"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Ezin da aldatu ezarpena, eta autoaren fabrikatzaileak desgaitu egin du."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Gidatzen laguntzen dizuten eginbideak"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Eman autoaren kokapena erabiltzeko baimena autoaren fabrikatzaileak onartutako eginbide integratuei."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Azkenaldian kokapena atzitu dutenak"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Azkenaldian kokapena atzitu dutenak"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ikusi guztiak"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ez dago azkenaldian kokapena atzitu duen aplikaziorik"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Gidatzeko laguntza"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Gidatzeko laguntzarekin erlazionatutako eginbideak erabiltzeko ibilgailuaren kokapena erabiltzeko baimena duten aplikazioak"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Pribatutasun-gidalerroak"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Gidatzeko laguntza • Erabiltzeko baimena behar du"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Gidatzen laguntzen dizuten eginbideak"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Gidalerroak"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Aplikazio-mailako baimenak"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Kudeatu banako aplikazioen baimenak"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Erabili kokapena"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Gailuaren kokapena estimatzeko, GPSa, wifi-sarea, sare mugikorrak, sentsoreak eta antzeko iturburuak erabiltzen ditu kokapenaren eginbideak."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Gidatzeko laguntza"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Gidatzeko laguntzarekin erlazionatutako aplikazioei bidaltzen zaien kokapen-informazioak ez dauka identifikatzen zaituen informaziorik. Gehienez bi egunez gordetzen da. Gero, ezabatu egiten da."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Kokapena erabiltzeko baimena"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Aukeratu aplikazioek autoaren kokapena erabil dezaketen"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"Baliteke autoaren fabrikatzaileak autoaren kokapena erabili ahal izatea oraindik. Informazio gehiago lortzeko, berrikusi haren gidalerroak."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Eginbide integratu horiek autoaren kokapena erabiltzeko baimena behar dute gidatzeko laguntza eskaini ahal izateko.\n\nLortu informazio gehiago aplikazio bakoitzak zure kokapen-datuak erabiltzeko duen moduari buruz aplikazioaren Pribatutasun-gidalerroak berrikusita."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Mikrofonoa"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Erabili mikrofonoa"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Eman mikrofonoa erabiltzeko baimena aplikazio guztiei"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Irten demo modutik"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BAZTERTU"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Eginbide hau ezin da erabili gidatu bitartean"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Eskatu gidariari ezarpenak aldatzeko"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Ezin duzu gauzatu ekintza hori"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Gidatu bitartean ezin da gehitu profilik"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Bilatu"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Laguntzailea eta ahotsa"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Gehitu profil bat"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Ezabatu profila"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Gehitu profila"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Gidari gisa hasi da saioa profil honekin. Saiatu berriro profila gidari gisa erabiltzen ari ez denean."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Bistaratu distira"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktibatu Bluetootha gailuak ikusteko"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ireki Bluetootharen ezarpenak gailu batekin parekatzeko"</string>

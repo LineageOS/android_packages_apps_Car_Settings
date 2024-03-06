@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ਵਾਈ-ਫਾਈ ਹੌਟਸਪੌਟ ਲਈ ਬੈਂਡ ਚੁਣੋ:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"ਹੌਟਸਪੌਟ ਅਤੇ ਟੈਦਰਿੰਗ"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"ਵਾਈ‑ਫਾਈ ਹੌਟਸਪੌਟ"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ਹੌਟਸਪੌਟ"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ਵਾਈ‑ਫਾਈ ਹੌਟਸਪੌਟ ਵਰਤੋ"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ਬੰਦ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ਹੌਟਸਪੌਟ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਬੰਦ ਕਰੋ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ਕਿਸੇ ਵੀ ਡੀਵਾਈਸ ਦੇ ਨਾ ਕਨੈਕਟ ਹੋਣ \'ਤੇ ਵਾਈ-ਫਾਈ ਹੌਟਸਪੌਟ ਬੰਦ ਹੋ ਜਾਵੇਗਾ"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਲਈ ਇਸ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ਹੌਟਸਪੌਟ ਦਾ ਪਾਸਵਰਡ: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ਦੀ ਵਾਈ-ਫਾਈ ਨੂੰ ਚਾਲੂ ਕਰਨ ਦੀ ਇੱਛਾ ਹੈ"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ਦੀ ਵਾਈ-ਫਾਈ ਨੂੰ ਬੰਦ ਕਰਨ ਦੀ ਇੱਛਾ ਹੈ"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ਗੜਬੜ"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"ਕਨੈਕਸ਼ਨ ਸਫਲ ਰਿਹਾ"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ਸਭ ਦਿਖਾਓ"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ਖੋਜ ਰਿਹਾ ਹੈ"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"ਕਨੈਕਟ ਕੀਤੇ ਡੀਵਾਈਸ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ਬਲੂਟੁੱਥ"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ਬਲੂਟੁੱਥ ਵਰਤੋ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ਬੇਨਾਮ ਡੀਵਾਈਸ"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ਐਪ ਨੂੰ ਬੰਦ ਕਰੋ"</string>
     <string name="not_installed" msgid="4163454337822508007">"ਇਸ ਪ੍ਰੋਫਾਈਲ ਲਈ ਸਥਾਪਤ ਨਹੀਂ ਕੀਤੀ ਗਈ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ਇਜਾਜ਼ਤਾਂ"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"ਸਾਰੀਆਂ ਸੇਵਾਵਾਂ"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ਸੂਚਨਾਵਾਂ"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ਸਟੋਰੇਜ ਅਤੇ ਕੈਸ਼ੇ"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"ਐਪ ਦੀ ਕਾਰਗੁਜ਼ਾਰੀ ਨੂੰ ਤਰਜੀਹ ਦੇਣਾ"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ਹੋਰ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ਟਿਕਾਣਾ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ਟਿਕਾਣਾ ਵਰਤੋ"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"ਆਪਣੇ ਵੱਲੋਂ ਨਿਰਧਾਰਿਤ ਐਪਾਂ ਨੂੰ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"ਤੁਹਾਡੇ ਵੱਲੋਂ ਨਿਰਧਾਰਿਤ ਕੀਤੀ ਗਈ ਐਪ ਨਾਲ ਆਪਣੀ ਕਾਰ ਦੇ ਟਿਕਾਣੇ ਦੀ ਵਰਤੋਂ ਕਰੋ।"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ਜੇ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਇਹ ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਲਈ ਲੋੜੀਂਦੀ ਐਪਾਂ ਨੂੰ ਛੱਡ ਕੇ ਬਾਕੀ ਸਾਰੀਆਂ ਐਪਾਂ ਵਾਸਤੇ ਟਿਕਾਣਾ ਪਹੁੰਚ ਨੂੰ ਹਟਾ ਦੇਵੇਗਾ"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਲਈ ਟਿਕਾਣਾ ਵਰਤੋ"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ਵਾਹਨ ਟਿਕਾਣਾ ਬੰਦ ਹੈ"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਐਪਾਂ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਕਰ ਸਕਦੀਆਂ"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ਬਦਲੋ"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ਗੱਡੀ ਚਲਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਨ ਵਾਲੀਆਂ ਐਪਾਂ ਨੂੰ ਆਪਣੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ਜੇ ਤੁਸੀਂ ਇਸਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਉਨ੍ਹਾਂ ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਐਪਾਂ ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ ਜੋ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ \'ਤੇ ਨਿਰਭਰ ਕਰਦੀਆਂ ਹਨ"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"ਕਿਸੇ ਵੇਲੇ ਵੀ ਬੰਦ ਕਰੋ"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ਜੇ ਤੁਸੀਂ ਇਸਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਉਨ੍ਹਾਂ ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਐਪਾਂ ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ ਜੋ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ \'ਤੇ ਨਿਰਭਰ ਕਰਦੀਆਂ ਹਨ"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ਕਿਸੇ ਵੇਲੇ ਵੀ ਬੰਦ ਕਰੋ"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ਇਸ ਸੈਟਿੰਗ ਨੂੰ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਅਤੇ ਇਸਨੂੰ ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਨੇ ਬੰਦ ਕਰ ਦਿੱਤਾ ਹੈ।"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"ਡਰਾਈਵਿੰਗ \'ਚ ਮਦਦ ਕਰਨ ਵਾਲੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਨਿਰਮਾਤਾ ਵੱਲੋਂ ਮਨਜ਼ੂਰਸ਼ੁਦਾ ਬਿਲਟ-ਇਨ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ।"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ਸਭ ਦੇਖੋ"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"ਕੋਈ ਹਾਲੀਆ ਐਪ ਨਹੀਂ"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ਡਰਾਈਵਰ ਸਹਾਇਤਾ"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਲਈ ਇਸ ਵਾਹਨ ਦੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਵਾਸਤੇ ਇਜਾਜ਼ਤ ਵਾਲੀਆਂ ਐਪਾਂ"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"ਪਰਦੇਦਾਰੀ ਨੀਤੀ"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ਡਰਾਈਵਰ ਸਹਾਇਤਾ • ਪਹੁੰਚ ਲੋੜੀਂਦੀ ਹੈ"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"ਡਰਾਈਵਿੰਗ \'ਚ ਮਦਦ ਕਰਨ ਵਾਲੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"ਨੀਤੀ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ਐਪ-ਪੱਧਰ ਇਜਾਜ਼ਤਾਂ"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"ਵਿਅਕਤੀਗਤ ਐਪ ਇਜਾਜ਼ਤਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ਟਿਕਾਣਾ ਵਰਤੋ"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"ਟਿਕਾਣਾ ਸੇਵਾ ਤੁਹਾਡੇ ਡੀਵਾਈਸ ਦੇ ਟਿਕਾਣੇ ਦਾ ਅੰਦਾਜ਼ਾ ਲਗਾਉਣ ਲਈ GPS, ਵਾਈ-ਫਾਈ, ਮੋਬਾਈਲ ਨੈੱਟਵਰਕਾਂ ਅਤੇ ਸੈਂਸਰਾਂ ਵਰਗੇ ਸਰੋਤਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੀ ਹੈ।"</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ਡਰਾਈਵਰ ਸਹਾਇਤਾ"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਐਪਾਂ ਨੂੰ ਭੇਜੀ ਗਈ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਵਿੱਚ ਅਜਿਹੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਨਹੀਂ ਹੁੰਦੀ ਜਿਸ ਨਾਲ ਤੁਹਾਡੀ ਪਛਾਣ ਹੋ ਸਕੇ। ਇਸਨੂੰ ਵੱਧ ਤੋਂ ਵੱਧ 2 ਦਿਨਾਂ ਲਈ ਸਟੋਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਇਸ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।"</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"ਟਿਕਾਣਾ ਪਹੁੰਚ"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"ਚੁਣੋ ਕਿ ਐਪਾਂ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦੀਆਂ ਹਨ ਜਾਂ ਨਹੀਂ"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਕੋਲ ਹਾਲੇ ਵੀ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਹੋ ਸਕਦੀ ਹੈ। ਤੁਸੀਂ ਜ਼ਿਆਦਾ ਜਾਣਕਾਰੀ ਲਈ ਉਨ੍ਹਾਂ ਦੀਆਂ ਨੀਤੀਆਂ ਦੀ ਸਮੀਖਿਆ ਕਰ ਸਕਦੇ ਹੋ।"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"ਡਰਾਈਵਿੰਗ ਵਿੱਚ ਮਦਦ ਲਈ ਇਨ੍ਹਾਂ ਬਿਲਟ-ਇਨ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।\n\nਹਰੇਕ ਐਪ ਵੱਲੋਂ ਤੁਹਾਡੇ ਟਿਕਾਣੇ ਦੇ ਡਾਟੇ ਨੂੰ ਵਰਤਣ ਦੇ ਤਰੀਕੇ ਬਾਰੇ ਹੋਰ ਜਾਣਨ ਲਈ ਉਸਦੀ ਪਰਦੇਦਾਰੀ ਨੀਤੀ ਨੂੰ ਦੇਖੋ।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"ਮਾਈਕ੍ਰੋਫ਼ੋਨ"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਵਰਤੋ"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"ਸਾਰੀਆਂ ਐਪਾਂ ਨੂੰ ਆਪਣੇ ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ਡੈਮੋ ਮੋਡ ਤੋ ਬਾਹਰ ਜਾਓ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ਖਾਰਜ ਕਰੋ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ਚਲਦੀ ਗੱਡੀ ਵਿੱਚ ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ਡਰਾਈਵਰ ਨੂੰ ਸੈਟਿੰਗ ਬਦਲਣ ਲਈ ਬੇਨਤੀ ਕਰੋ"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"ਤੁਸੀਂ ਇਹ ਕਾਰਵਾਈ ਨਹੀਂ ਕਰ ਸਕਦੇ"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ਚਲਦੀ ਗੱਡੀ ਵਿੱਚ ਪ੍ਰੋਫਾਈਲ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ"</string>
     <string name="default_search_query" msgid="3137420627428857068">"ਖੋਜ"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant ਅਤੇ ਅਵਾਜ਼"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ਕੋਈ ਪ੍ਰੋਫਾਈਲ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ਇਹ ਪ੍ਰੋਫਾਈਲ ਮਿਟਾਓ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"ਪ੍ਰੋਫਾਈਲ ਸ਼ਾਮਲ ਕਰੋ"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ਫ਼ਿਲਹਾਲ ਇਹ ਪ੍ਰੋਫਾਈਲ ਡਰਾਈਵਰ ਵਜੋਂ ਸਾਈਨ-ਇਨ ਹੈ। ਪ੍ਰੋਫਾਈਲ ਡਰਾਈਵਰ ਵਜੋਂ ਵਰਤੋਂ ਵਿੱਚ ਨਾ ਹੋਣ \'ਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ਡਿਸਪਲੇ ਚਮਕ"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ਆਪਣੇ ਡੀਵਾਈਸ ਦੇਖਣ ਲਈ, ਬਲੂਟੁੱਥ ਚਾਲੂ ਕਰੋ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ਕਿਸੇ ਡੀਵਾਈਸ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰਨ ਲਈ, ਬਲੂਟੁੱਥ ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ"</string>

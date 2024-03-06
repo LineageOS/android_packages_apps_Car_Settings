@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"សូម​ជ្រើសរើស​កម្រិតបញ្ជូន​យ៉ាង​ហោចណាស់​មួយសម្រាប់​ហតស្ប៉ត Wi‑Fi៖"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"ហតស្ប៉ត និង​ការភ្ជាប់"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"ហតស្ប៉ត Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ហតស្ប៉ត"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ប្រើហតស្ប៉ត Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"បិទ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"បិទ​ហតស្ប៉ត​ដោយ​ស្វ័យប្រវត្តិ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ហតស៉្បត Wi-Fi នឹង​បិទ ​ប្រសិនបើ​​ឧបករណ៍​មិនត្រូវបានភ្ជាប់"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"ស្កេនកូដ QR នេះ ដើម្បីចូលរួម \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ពាក្យ​សម្ងាត់ហតស្ប៉ត៖ %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ចង់បើក Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ចង់បិទ Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"បញ្ហា"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"ការតភ្ជាប់​ទទួលបាន​ជោគជ័យ​ហើយ"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"បង្ហាញ​ទាំងអស់"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ស្វែងរក"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"ឧបករណ៍ដែលបានភ្ជាប់"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ប៊្លូធូស"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ប្រើប៊្លូធូស"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ឧបករណ៍​គ្មានឈ្មោះ"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"បិទកម្មវិធី"</string>
     <string name="not_installed" msgid="4163454337822508007">"មិនបានដំឡើង​សម្រាប់​កម្រងព័ត៌មាន​នេះទេ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ការអនុញ្ញាត"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"សេវាកម្មទាំងអស់"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ការជូនដំណឹង"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ទំហំផ្ទុក និងឃ្លាំងបម្រុង"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"កំណត់អាទិភាពប្រតិបត្តិការ​កម្មវិធី"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"ច្រើន​ទៀត"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ប្រើទីតាំង"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"អនុញ្ញាតឱ្យកម្មវិធីដែលអ្នកបញ្ជាក់ចូលប្រើទីតាំងរបស់អ្នក"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"ប្រើទីតាំងរថយន្តរបស់អ្នកតាមរយៈកម្មវិធីណាមួយដែលអ្នកបានបញ្ជាក់។"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ប្រសិនបើបិទ​ទីតាំងនេះ វានឹងដកសិទ្ធិចូលប្រើទីតាំង​សម្រាប់កម្មវិធីទាំងអស់ លើកលែងតែ​កម្មវិធីដែលត្រូវការ​មុខងារជំនួយអ្នកបើកបរ"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ប្រើទីតាំងសម្រាប់​មុខងារជំនួយ​អ្នកបើកបរ"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"ទីតាំងយានជំនិះត្រូវបានបិទ"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"កម្មវិធីជំនួយអ្នកបើកបរមិនអាចចូលប្រើទីតាំងរបស់អ្នកទេ"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"ផ្លាស់​ប្ដូរ"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"អនុញ្ញាតឱ្យកម្មវិធីដែលផ្ដល់ជំនួយពាក់ព័ន្ធនឹងការបើកបរចូលប្រើទីតាំងរបស់អ្នក"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"មិនអីទេ បិទចុះ"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"មិនអីទេ បិទចុះ"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"មិនអាចផ្លាស់ប្ដូរការកំណត់នេះបានទេ និងត្រូវបានបិទដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នក។"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"មុខងារដែលជួយអ្នកក្នុងការបើកបរ"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"អនុញ្ញាតឱ្យមុខងារដែលមានភ្ជាប់មកជាមួយស្រាប់ ដែលត្រូវបានអនុញ្ញាតដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នក ចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក។"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"មើលទាំងអស់"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"គ្មាន​កម្មវិធី​ថ្មីៗ"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ជំនួយអ្នកបើកបរ"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"កម្មវិធីដែលមានការអនុញ្ញាតចូលប្រើទីតាំងរបស់យានជំនិះនេះសម្រាប់មុខងារជំនួយអ្នកបើកបរ"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"គោលការណ៍ឯកជនភាព"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ជំនួយអ្នកបើកបរ • ត្រូវការសិទ្ធិចូលប្រើប្រាស់"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"មុខងារដែលជួយអ្នកក្នុងការបើកបរ"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"គោលការណ៍"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ការ​អនុញ្ញាត​កម្រិត​កម្មវិធី"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"គ្រប់គ្រងការអនុញ្ញាតកម្មវិធីនីមួយៗ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"សេវាកម្ម​ទីតាំង"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ប្រើទីតាំង"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ជំនួយ​អ្នកបើកបរ"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"ព័ត៌មានទីតាំង​ដែលបានបញ្ជូន​ទៅកម្មវិធី​ជំនួយអ្នកបើកបរ​មិនមាន​ព័ត៌មានដែល​សម្គាល់អ្នកទេ។ ព័ត៌មាននោះ​ត្រូវបានរក្សាទុក​យ៉ាងយូរបំផុត 2 ថ្ងៃ មុនពេល​ត្រូវបានលុប។"</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"ការចូលប្រើប្រាស់ទីតាំង"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"ជ្រើសរើសថាតើកម្មវិធីណាខ្លះអាចមានសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នកអាចនឹងនៅតែមានសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក។ អ្នកអាចមើលគោលការណ៍របស់ពួកគេ ដើម្បីព័ត៌មានបន្ថែម។"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"មុខងារភ្ជាប់មកជាមួយស្រាប់ទាំងនេះត្រូវការសិទ្ធិចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក ដើម្បីផ្ដល់ជំនួយដល់ការបើកបរ។\n\nស្វែងយល់បន្ថែមអំពីរបៀបដែលកម្មវិធីនីមួយៗប្រើប្រាស់ទិន្នន័យ​ទីតាំងរបស់អ្នកដោយពិនិត្យមើលគោលការណ៍ឯកជនភាពរបស់កម្មវិធីនោះ។"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"មីក្រូហ្វូន"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"ប្រើមីក្រូហ្វូន"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"អនុញ្ញាតឱ្យកម្មវិធីទាំងអស់​ចូលប្រើ​មីក្រូហ្វូន​របស់អ្នក"</string>
@@ -755,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"បញ្ចូល​កម្រងព័ត៌មាន"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"លុប​កម្រងព័ត៌មាននេះ"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"បញ្ចូល​កម្រងព័ត៌មាន"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"បច្ចុប្បន្នកម្រងព័ត៌មាននេះត្រូវបានចូលគណនីជាអ្នកបើកបរ។ ព្យាយាមម្តងទៀត នៅពេលកម្រងព័ត៌មាននេះមិនត្រូវបានប្រើជាអ្នកបើកបរ។"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ពន្លឺ​ផ្ទាំងអេក្រង់"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ដើម្បីឃើញ​ឧបករណ៍​របស់អ្នក សូមបើក​ប៊្លូធូស"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ដើម្បីផ្គូផ្គង​ឧបករណ៍ សូមបើក​ការកំណត់​ប៊្លូធូស"</string>

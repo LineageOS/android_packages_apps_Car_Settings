@@ -88,6 +88,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     private boolean mHasNewIntent = true;
     private boolean mHasInitialFocus = false;
+    private boolean mIsInitialFragmentTransaction = true;
 
     private String mTopLevelHeaderKey;
     private boolean mIsSinglePane;
@@ -284,7 +285,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     public void onBackStackChanged() {
         onUxRestrictionsChanged(getCarUxRestrictions());
         if (!mIsSinglePane) {
-            if (mHasInitialFocus) {
+            if (mHasInitialFocus && shouldFocusContentOnBackstackChange()) {
                 requestContentPaneFocus();
             }
             updateMiniToolbarState();
@@ -381,7 +382,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     private void setUpToolbars() {
         View globalToolbarWrappedView = mIsSinglePane ? findViewById(
-                R.id.fragment_container_wrapper) : findViewById(R.id.top_level_menu);
+                R.id.fragment_container_wrapper) : findViewById(R.id.top_level_menu_container);
         mGlobalToolbar = CarUi.installBaseLayoutAround(
                 globalToolbarWrappedView,
                 insets -> globalToolbarWrappedView.setPadding(
@@ -506,6 +507,16 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             }
         };
         fragmentView.getViewTreeObserver().addOnGlobalLayoutListener(mGlobalLayoutListener);
+    }
+
+    private boolean shouldFocusContentOnBackstackChange() {
+        // We don't want to reset mHasInitialFocus when initial fragment is added
+        if (mIsInitialFragmentTransaction && getInitialFragment() != null) {
+            mIsInitialFragmentTransaction = false;
+            return false;
+        }
+
+        return true;
     }
 
     private void removeGlobalLayoutListener() {

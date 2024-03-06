@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Выберыце дыяпазон Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Хот-спот і мадэм"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Хот-спот Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Хот-спот"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Выкарыстоўваць хот-спот Wi‑Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Выключана"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Аўтаматычна выключаць хот-спот"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Хот-спот Wi‑Fi выключыцца, калі прылады непадключаныя"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Каб падключыцца да \"%s\", адсканіруйце гэты QR-код"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Пароль хот-спота: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Уключыце Wi-Fi для праграмы \"<xliff:g id="REQUESTER">%s</xliff:g>\""</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Выключыце Wi-Fi для праграмы \"<xliff:g id="REQUESTER">%s</xliff:g>\""</string>
     <string name="wifi_error" msgid="3105105447117289410">"Памылка"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Падключэнне выканана"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Паказаць усе"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Пошук"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Падключаныя прылады"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Выкарыстоўваць Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Прылада без назвы"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Адключыць праграму"</string>
     <string name="not_installed" msgid="4163454337822508007">"Праграма не ўсталявана для гэтага профілю"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Дазволы"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Усе сэрвісы"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Апавяшчэнні"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Сховішча і кэш"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Прыярытэт прадукцыйнасці праграмы"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"Яшчэ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Месцазнаходжанне"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Выкарыстоўваць месцазнаходжанне"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"Даць доступ да геаданых выбраным праграмам"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"Выкарыстоўваць даныя пра месцазнаходжанне аўтамабіля ў выбраных праграмах."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Калі выключыць гэту наладу, доступ да геаданых будзе выдалены для ўсіх праграм, акрамя тых, якія патрабуюцца для дапамогі вадзіцелю"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"Карыстацца геаданымі для дапамогі вадзіцелю"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"Геалакацыя аўтамабіля выключана"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"Праграмы дапамогі вадзіцелю не маюць доступу да геаданых"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"Змяніць"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"Даць доступ да геаданых праграмам падтрымкі вадзіцеля"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"Калі выключыць гэту наладу, праграмы дапамогі вадзіцелю, для работы якіх патрабуецца інфармацыя аб месцазнаходжанні, будуць выключаны"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"Усё роўна выключыць"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Калі выключыць гэту наладу, праграмы дапамогі вадзіцелю, для работы якіх патрабуецца інфармацыя аб месцазнаходжанні, будуць выключаны"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Усё роўна выключыць"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Гэту наладу нельга змяніць: яна была адключана вытворцам."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функцыі, якія дапамогуць вам падчас язды"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Дазволіць доступ да даных пра месцазнаходжанне аўтамабіля ўбудаваным функцыям, ухваленым яго вытворцам."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Нядаўна быў атрыманы доступ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Нядаўна быў атрыманы доступ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Паказаць усе"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"Ніякія праграмы не атрымлівалі нядаўна доступу да геаданых"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • Дапамога вадзіцелю"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"Праграмы з доступам да даных пра месцазнаходжанне аўтамабіля для дапамогі вадзіцелю"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"Палітыка прыватнасці"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Дапамога вадзіцелю • Патрабуецца доступ"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"Функцыі, якія дапамогуць вам падчас язды"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Палітыка"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дазволы на ўзроўні праграм"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"Кіраванне дазволамі для асобных праграм"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Службы геалакацыі"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"Выкарыстоўваць геалакацыю"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Для вызначэння месцазнаходжання прылады могуць выкарыстоўвацца даныя GPS, Wi-Fi, мабільных сетак і датчыкаў."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"Падтрымка вадзіцеля"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"Звесткі пра месцазнаходжанне, якія адпраўляюцца праграмам дапамогі вадзіцелю, не змяшчаюць інфармацыі, па якой вас можна ідэнтыфікаваць. Яны захоўваюцца не больш за 2 дні, пасля чаго выдаляюцца."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"Доступ да даных геалакацыі"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"Выберыце, ці могуць праграмы атрымліваць доступ да даных пра месцазнаходжанне аўтамабіля"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"У вытворцы аўтамабіля ўсё роўна можа быць доступ да даных пра яго месцазнаходжанне. Каб атрымаць дадатковую інфармацыю, азнаёмцеся з палітыкамі вытворцы."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"Каб атрымліваць дапамогу падчас язды з дапамогай гэтых убудаваных функцый, неабходна даць доступ да даных пра месцазнаходжанне вашага аўтамабіля.\n\nКаб даведацца больш пра тое, як кожная праграма выкарыстоўвае даныя пра ваша месцазнаходжанне, азнаёмцеся з яе Палітыкай прыватнасці."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"Мікрафон"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"Выкарыстоўваць мікрафон"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Даць усім праграмам доступ да мікрафона"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Выйсці з дэма-рэжыму"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"АДХІЛІЦЬ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функцыя недаступная, калі аўтамабіль рухаецца"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"Папрасіце вадзіцеля змяніць наладу"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"Гэта дзеянне для вас недаступнае"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Нельга дадаваць профіль, калі аўтамабіль рухаецца"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Пошук"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Памочнік і Voice"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Дадаць профіль"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Выдаліць гэты профіль"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Дадаць профіль"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Вы ўвайшлі ў профіль як вадзіцель. Паўтарыце спробу пасля выхаду з профілю."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яркасць дысплэя"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Каб пабачыць прылады, уключыце Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Каб спалучыць прыладу, адкрыйце налады Bluetooth"</string>

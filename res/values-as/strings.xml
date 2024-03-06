@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"২.৪ গিগাহাৰ্টজ"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"৫.০ গিগাহাৰ্টজ"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ৱাই-ফাই হটস্পটৰ বাবে কমেও এটা বেণ্ড বাছনি কৰক:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"হ’টস্পট আৰু টেডাৰিং"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"ৱাই-ফাই হটস্পট"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"হটস্পট"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ৱাই-ফাই হটস্পট ব্যৱহাৰ কৰক"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"অফ আছে"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"স্বয়ংক্ৰিয়ভাৱে হটস্পট অফ কৰক"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"যদি কোনো ডিভাইচ সংযোগ হৈ নাথাকে, তেন্তে ৱাই-ফাই হটস্পট অফ হ’ব"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\"ৰ সৈতে সংযোগ কৰিবলৈ এই কিউআৰ ক’ডটো স্কেন কৰক"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"হটস্পটৰ পাছৱৰ্ড: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>এ ৱাই-ফাই অন কৰিব বিচাৰে"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> এ ৱাই-ফাই অফ কৰিব বিচাৰিছে"</string>
     <string name="wifi_error" msgid="3105105447117289410">"আসোঁৱাহ"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"সংযোগ সফল হৈছে"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"সকলো দেখুৱাওক"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"অনুসন্ধান কৰি থকা হৈছে"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"সংযুক্ত ডিভাইচ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ব্লুটুথ ব্যৱহাৰ কৰক"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"নাম নথকা ডিভাইচ"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"এপ্‌টো অক্ষম কৰক"</string>
     <string name="not_installed" msgid="4163454337822508007">"এই প্ৰ’ফাইলটোৰ বাবে ইনষ্টল কৰি থোৱা হোৱা নাই"</string>
     <string name="permissions_label" msgid="2701446753515612685">"অনুমতি"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"আটাইবোৰ সেৱা"</string>
     <string name="notifications_label" msgid="6586089149665170731">"জাননী"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ষ্ট’ৰেজ আৰু কেশ্ব"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"এপৰ কাৰ্যদক্ষতাক অগ্ৰাধিকাৰ দিয়ক"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"অধিক"</string>
     <string name="location_settings_title" msgid="901334356682423679">"অৱস্থান"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"অৱস্থান ব্যৱহাৰ কৰক"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"আপুনি উল্লেখ কৰা এপ্‌সমূহক আপোনাৰ অৱস্থান এক্সেছ কৰিবলৈ দিয়ে"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"আপুনি নিৰ্দিষ্ট কৰা যিকোনো এপৰ সৈতে আপোনাৰ গাড়ীৰ অৱস্থান ব্যৱহাৰ কৰক।"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"আপুনি যদি এইটো অফ কৰে, তেন্তে চালক সাহায্যৰ বাবে আৱশ্যক হোৱা এপৰ বাহিৰে এইটোৱে আটাইবোৰ এপৰ বাবে অৱস্থানৰ এক্সেছ আঁতৰাব"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"চালক সাহায্য সুবিধাৰ বাবে অৱস্থানৰ তথ্য ব্যৱহাৰ কৰক"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"বাহনখনৰ অৱস্থান অফ আছে"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"চালক সাহায্য এপে আপোনাৰ অৱস্থান এক্সেছ কৰিব নোৱাৰে"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"সলনি কৰক"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"গাড়ী চলোৱাত সহায় কৰা এপক আপোনাৰ অৱস্থানৰ তথ্য এক্সেছ কৰিবলৈ দিয়ক"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"আপুনি যদি এইটো অফ কৰে, তেন্তে অৱস্থানৰ তথ্যৰ ওপৰত নিৰ্ভৰশীল চালকৰ সাহায্য এপ্‌সমূহ অক্ষম কৰা হ’ব"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"তথাপি অফ কৰক"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"আপুনি যদি এইটো অফ কৰে, তেন্তে অৱস্থানৰ তথ্যৰ ওপৰত নিৰ্ভৰশীল চালকৰ সাহায্য এপ্‌সমূহ অক্ষম কৰা হ’ব"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"তথাপি অফ কৰক"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"এই ছেটিংটো সলনি কৰিব নোৱাৰি আৰু সেইটো আপোনাৰ কাৰ নিৰ্মাতাই অক্ষম কৰিছে।"</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"আপোনাক গাড়ী চলোৱাত সহায় কৰা সুবিধাসমূহ"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"আপোনাৰ গাড়ী নিৰ্মাতাই অনুমোদন জনোৱা বিল্ট-ইন সুবিধাসমূহক আপোনাৰ গাড়ীৰ অৱস্থান এক্সেছ কৰিবলৈ অনুমতি দিয়ক।"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"আটাইবোৰ চাওক"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"কোনো শেহতীয়া এপ্‌ নাই"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • চালক সাহায্য"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"চালক সাহায্য সুবিধাসমূহৰ বাবে এই বাহনখনৰ অৱস্থান এক্সেছ কৰাৰ অনুমতি থকা এপ্"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"গোপনীয়তা নীতি"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • চালক সাহায্য • এক্সেছৰ আৱশ্যক"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"আপোনাক গাড়ী চলোৱাত সহায় কৰা সুবিধাসমূহ"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"নীতি"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"এপ্‌-স্তৰৰ অনুমতি"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"প্ৰতিটো এপৰ অনুমতি পৰিচালনা কৰক"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"অৱস্থান সেৱা"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"অৱস্থান ব্যৱহাৰ কৰক"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"অৱস্থান সেৱাই আপোনাৰ ডিভাইচৰ অৱস্থান অনুমান কৰাত সহায় কৰিবলৈ জিপিএছ, ৱাই-ফাই, ম’বাইল নেটৱৰ্ক আৰু ছেন্সৰৰ দৰে উৎসসমূহ ব্যৱহাৰ কৰিব পাৰে।"</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"চালক সাহায্য"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"চালক সাহায্য এপলৈ পঠিওৱা অৱস্থানৰ তথ্যত আপোনাক চিনাক্ত কৰা কোনো তথ্য নাথাকে। মচাৰ পূৰ্বে ইয়াক সৰ্বাধিক ২ দিনৰ বাবে ষ্ট’ৰ কৰা হয়।"</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"অৱস্থানৰ এক্সেছ"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"এপ্‌সমূহে আপোনাৰ গাড়ীৰ অৱস্থান এক্সেছ কৰিব পাৰেনে নোৱাৰে সেয়া বাছনি কৰক"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"আপোনাৰ গাড়ীৰ নিৰ্মাতাৰ ওচৰত এতিয়াও আপোনাৰ গাড়ীৰ অৱস্থানৰ এক্সেছ থাকিব পাৰে। অধিক তথ্যৰ বাবে আপুনি তেওঁলোকৰ নীতি পৰ্যালোচনা কৰিব পাৰে।"</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"এই বিল্ট-ইন সুবিধাসমূহে গাড়ী চলোৱাৰ ক্ষেত্ৰত সহায় কৰিবলৈ আপোনাৰ গাড়ীৰ অৱস্থান এক্সেছ কৰাৰ আৱশ্যক।\n\nপ্ৰতিটো এপৰ গোপনীয়তাৰ নীতি পৰ্যালোচনা কৰি সেইসমূহে কিদৰে আপোনাৰ অৱস্থানৰ ডেটা ব্যৱহাৰ কৰে সেই বিষয়ে অধিক জানক।"</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"মাইক্ৰ’ফ’ন"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"মাইক্র’ফ’ন ব্যৱহাৰ কৰক"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"আটাইবোৰ এপক আপোনাৰ মাইক্ৰ’ফ’ন এক্সেছ কৰিবলৈ দিয়ক"</string>
@@ -475,7 +480,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"ছিষ্টেম ৱেবভিউ অনুজ্ঞাপত্ৰ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ৱালপেপাৰ"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"উপগ্ৰহ ছবি যোগানকাৰী:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
-    <string name="model_info" msgid="4966408071657934452">"ম\'ডেল"</string>
+    <string name="model_info" msgid="4966408071657934452">"মডেল"</string>
     <string name="status_serial_number" msgid="9158889113131907656">"ক্ৰমিক নম্বৰ"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"হাৰ্ডৱেৰৰ সংস্কৰণ"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
@@ -483,8 +488,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"অনুজ্ঞাপত্ৰসমূহ ল\'ড কৰাত সমস্যা।"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ল’ড হৈ আছে…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{আপুনি এতিয়া এগৰাকী বিকাশকৰ্তা হোৱাৰ পৰা # টা পদক্ষেপ দূৰত আছে।}one{আপুনি এতিয়া এগৰাকী বিকাশকৰ্তা হোৱাৰ পৰা # টা পদক্ষেপ দূৰত আছে।}other{আপুনি এতিয়া এগৰাকী বিকাশকৰ্তা হোৱাৰ পৰা # টা পদক্ষেপ দূৰত আছে।}}"</string>
-    <string name="show_dev_on" msgid="5339077400040834808">"আপুনি এতিয়া এজন বিকাশকৰ্তা!"</string>
-    <string name="show_dev_already" msgid="1678087328973865736">"কোনো প্ৰয়োজন নাই, আপুনি ইতিমধ্যে এজন বিকাশকৰ্তা।"</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"আপুনি এতিয়া এগৰাকী বিকাশকৰ্তা!"</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"কোনো প্ৰয়োজন নাই, আপুনি ইতিমধ্যে এগৰাকী বিকাশকৰ্তা।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"বিকাশকৰ্তাৰ বিকল্পসমূহ"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"বিকল্পসমূহ ৰিছেট কৰক"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"নেটৱৰ্ক, এপ্‌সমূহ বা ডিভাইচৰ ৰিছেট সম্পৰ্কীয় বিকল্প"</string>
@@ -563,7 +568,7 @@
     <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"যদি আপুনি এই বাহনখনৰ বাকী থকা একমাত্ৰ প্ৰ’ফাইলটো মচে তেন্তে প্ৰ’ফাইলটোৰ সৈতে জড়িত আটাইবোৰ ডেটা, ছেটিং আৰু এপ্‌ মচা হ’ব।"</string>
     <string name="delete_last_user_system_setup_required_message" msgid="726196874941282088">"ৰিছেট কৰাৰ পাছত আপুনি এটা নতুন প্ৰ’ফাইল ছেট আপ কৰিব পাৰে।"</string>
     <string name="choose_new_admin_title" msgid="1915428454917699587">"নতুন প্ৰশাসক বাছনি কৰক"</string>
-    <string name="choose_new_admin_message" msgid="7468286545352043354">"আপোনাক অতি কমেও এজন প্ৰশাসক দৰকাৰ। এইজনক মচিবলৈ হ’লে প্ৰথমে আপুনি এজন বিকল্প প্ৰশাসক নিৰ্বাচন কৰিব লাগিব।"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"আপোনাক অতি কমেও এগৰাকী প্ৰশাসক দৰকাৰ। এইজনক মচিবলৈ হ’লে প্ৰথমে আপুনি এগৰাকী বিকল্প প্ৰশাসক নিৰ্বাচন কৰিব লাগিব।"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"প্ৰশাসক বাছনি কৰক"</string>
     <string name="user_switch" msgid="6544839750534690781">"ছুইচ্চ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"আপুনি (%1$s)"</string>
@@ -738,10 +743,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ডেম\'ৰ পৰা বাহিৰ হওক"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"অগ্ৰাহ্য কৰক"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"গাড়ী চলাই থকা সময়ত এই সুবিধাটো উপলব্ধ নহয়"</string>
-    <!-- no translation found for restricted_for_passenger (7240117443887727753) -->
-    <skip />
-    <!-- no translation found for restricted_for_driver (3364388937671526800) -->
-    <skip />
+    <string name="restricted_for_passenger" msgid="7240117443887727753">"ছেটিং সলনি কৰিবলৈ ড্ৰাইভাৰক অনুৰোধ জনাওক"</string>
+    <string name="restricted_for_driver" msgid="3364388937671526800">"আপুনি এই কাৰ্যটো সম্পাদন কৰিব নোৱাৰে"</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"গাড়ী চলাই থকাৰ সময়ত প্ৰ’ফাইল যোগ দিব নোৱাৰি"</string>
     <string name="default_search_query" msgid="3137420627428857068">"সন্ধান কৰক"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant আৰু কণ্ঠধ্বনি"</string>
@@ -757,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"এটা প্ৰ’ফাইল যোগ দিয়ক"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"এই প্ৰ’ফাইলটো মচক"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"প্ৰ’ফাইল যোগ দিয়ক"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"এই প্ৰ’ফাইলটো বৰ্তমান চালক হিচাপে ছাইন ইন হৈ আছে। প্ৰ’ফাইলটো চালক হিচাপে ব্যৱহাৰ হৈ নথকাৰ সময়ত পুনৰ চেষ্টা কৰক।"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ডিছপ্লে\'ৰ উজ্জ্বলতা"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"আপোনাৰ ডিভাইচসমূহ চাবলৈ ব্লুটুথ অন কৰক"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"কোনো ডিভাইচ পেয়াৰ কৰিবলৈ ব্লুটুথ ছেটিং খোলক"</string>

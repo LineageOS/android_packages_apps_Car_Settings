@@ -160,11 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"വൈഫൈ ഹോട്ട്‌സ്‌പോട്ടിനായി ഒരു ബാൻഡ് എങ്കിലും തിരഞ്ഞെടുക്കൂ:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"ഹോട്ട്‌സ്പോട്ടും ‌ടെതറിംഗും"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട്"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ഹോട്ട്‌സ്‌പോട്ട്"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട് ഉപയോഗിക്കുക"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ഓഫാണ്"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ഹോട്ട്‌സ്‌പോട്ട് സ്വയമേവ ഓഫാക്കുക"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ഉപകരണങ്ങളൊന്നും കണക്‌റ്റ് ചെയ്‌തില്ലെങ്കിൽ വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട് ഓഫാകും"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" എന്നതിൽ ചേരാൻ ഈ QR കോഡ് സ്‌കാൻ ചെയ്യുക"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ഹോട്ട്‌സ്‌പോട്ടിന്റെ പാസ്‌വേഡ്: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>വൈഫൈ ഓണാക്കാൻ ആഗ്രഹിക്കുന്നു"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>വൈഫൈ ഓഫാക്കാൻ ആഗ്രഹിക്കുന്നു"</string>
     <string name="wifi_error" msgid="3105105447117289410">"പിശക്"</string>
@@ -175,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"കണക്ഷൻ വിജയകരം"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"എല്ലാം കാണിക്കുക"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"തിരയുന്നു"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"കണക്‌റ്റ് ചെയ്‌ത ഉപകരണങ്ങൾ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetooth ഉപയോഗിക്കുക"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"പേരിടാത്ത ഉപകരണം"</string>
@@ -322,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ആപ്പ് പ്രവർത്തനരഹിതമാക്കുക"</string>
     <string name="not_installed" msgid="4163454337822508007">"ഈ പ്രൊഫൈലിന് ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല"</string>
     <string name="permissions_label" msgid="2701446753515612685">"അനുമതികൾ"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"എല്ലാ സേവനങ്ങളും"</string>
     <string name="notifications_label" msgid="6586089149665170731">"അറിയിപ്പുകൾ"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"സ്‌റ്റോറേജും കാഷെയും"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"ആപ്പിന്റെ പ്രകടനത്തിന് മുൻഗണന നൽകുക"</string>
@@ -408,28 +413,28 @@
     <string name="more_special_access_title" msgid="166115485446645971">"കൂടുതൽ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
-    <string name="location_toggle_summary" msgid="7977868708102299495">"നിങ്ങൾ വ്യക്തമാക്കുന്ന ആപ്പുകളെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കൂ"</string>
+    <string name="location_toggle_summary" msgid="5651728747635881194">"നിങ്ങൾ പ്രത്യേകം തിരഞ്ഞെടുക്കുന്ന ഏത് ആപ്പിനൊപ്പവും നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷൻ ഉപയോഗിക്കുക."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ഇത് ഓഫാക്കിയാൽ, ഡ്രെെവർ സഹായിക്ക് ആവശ്യമായവ ഒഴികെയുള്ള എല്ലാ ആപ്പുകൾക്കുമുള്ള ലൊക്കേഷൻ ആക്‌സസ് നീക്കം ചെയ്യപ്പെടും"</string>
-    <string name="location_driver_assistance_toggle_title" msgid="3780157378527924932">"ഡ്രൈവർ സഹായിക്ക് ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
-    <string name="location_driver_assistance_toggle_off_title" msgid="2218532550578204718">"വാഹന ലൊക്കേഷൻ ഓഫാണ്"</string>
-    <string name="location_driver_assistance_toggle_off_summary" msgid="6040822988891113026">"ഡ്രൈവർ സഹായി ആപ്പുകൾക്ക് ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാനാകില്ല"</string>
-    <string name="location_driver_assistance_action_text" msgid="1887309495010247883">"മാറ്റുക"</string>
-    <string name="location_driver_assistance_toggle_summary" msgid="2732591196508054649">"ഡ്രെെവിംഗിന് സഹായിക്കുന്ന ആപ്പുകളെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കൂ"</string>
-    <string name="location_driver_assistance_toggle_off_warning" msgid="2733124752598498356">"ഇത് ഓഫാക്കിയാൽ, ലൊക്കേഷൻ വിവരങ്ങളെ ആശ്രയിക്കുന്ന ഡ്രൈവർ സഹായി ആപ്പുകൾ പ്രവർത്തനരഹിതമാകും"</string>
-    <string name="driver_assistance_warning_confirm_label" msgid="2873799611160864931">"എന്തായാലും ഓഫാക്കുക"</string>
+    <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ഇത് ഓഫാക്കിയാൽ, ലൊക്കേഷൻ വിവരങ്ങളെ ആശ്രയിക്കുന്ന ഡ്രൈവർ സഹായി ആപ്പുകൾ പ്രവർത്തനരഹിതമാകും"</string>
+    <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"എന്തായാലും ഓഫാക്കുക"</string>
+    <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ഈ ക്രമീകരണം മാറ്റാനാകില്ല, മാത്രമല്ല അത് നിങ്ങളുടെ കാർ നിർമ്മാതാവ് പ്രവർത്തനരഹിതമാക്കിയിരിക്കുകയാണ്."</string>
+    <string name="adas_location_toggle_title" msgid="6131739109988811006">"ഡ്രെെവ് ചെയ്യാൻ സഹായിക്കുന്ന ഫീച്ചറുകൾ"</string>
+    <string name="adas_location_toggle_summary" msgid="7055141074159770928">"കാറിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യുന്നതിന്, നിങ്ങളുടെ കാർ നിർമ്മാതാവ് അംഗീകരിച്ച ബിൽറ്റ് ഇൻ ഫീച്ചറുകൾ അനുവദിക്കുക."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"എല്ലാം കാണുക"</string>
     <string name="location_no_recent_access" msgid="2859914321242257931">"അടുത്തിടെ ഉപയോഗിച്ച ആപ്പുകളൊന്നുമില്ല"</string>
-    <string name="driver_assistance_label" msgid="9217315205754658940">"<xliff:g id="TIME">%1$s</xliff:g> • ഡ്രൈവർ സഹായി"</string>
-    <string name="location_driver_assistance_privacy_policy_header_content" msgid="8118086439003674350">"ഡ്രൈവർ സഹായി ഫീച്ചറുകൾക്ക്, ഈ വാഹനത്തിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ അനുമതിയുള്ള ആപ്പുകൾ"</string>
-    <string name="location_driver_assistance_privacy_policy_button_text" msgid="669921557502414704">"സ്വകാര്യതാ നയം"</string>
+    <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • ഡ്രൈവർ സഹായി • ആക്‌സസ് ആവശ്യമാണ്"</string>
+    <string name="location_adas_apps_list_title" msgid="482882078448695177">"ഡ്രെെവ് ചെയ്യാൻ സഹായിക്കുന്ന ഫീച്ചറുകൾ"</string>
+    <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"നയം"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ആപ്പ്-തല അനുമതികൾ"</string>
+    <string name="location_settings_app_permissions_summary" msgid="87851720569447224">"വ്യക്തിഗത ആപ്പ് അനുമതികൾ മാനേജ് ചെയ്യുക"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ലൊക്കേഷൻ സേവനങ്ങൾ"</string>
     <string name="location_use_location_title" msgid="117735895374606680">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ ലൊക്കേഷൻ കണക്കാക്കാൻ സഹായിക്കുന്നതിന് GPS, വൈഫൈ, മൊബൈൽ നെറ്റ്‌വർക്കുകൾ, സെൻസറുകൾ പോലുള്ള ഉറവിടങ്ങൾ ലൊക്കേഷൻ ഉപയോഗിച്ചേക്കാം."</string>
-    <string name="driver_assistance_settings_title" msgid="4915804073177128915">"ഡ്രൈവർ സഹായി"</string>
-    <string name="adas_settings_footer" msgid="6697021691244459156">"ഡ്രൈവർ സഹായി ആപ്പുകളിലേക്ക് അയച്ച ലൊക്കേഷൻ വിവരങ്ങളിൽ നിങ്ങളെ തിരിച്ചറിയാൻ സഹായിക്കുന്ന വിവരങ്ങളില്ല. ഇത് ഇല്ലാതാക്കുന്നതിന് മുമ്പ് പരമാവധി 2 ദിവസത്തേക്ക് സംഭരിക്കും."</string>
+    <string name="location_access_settings_title" msgid="2378398106582207440">"ലൊക്കേഷൻ ആക്‌സസ്"</string>
+    <string name="location_access_settings_summary" msgid="7676354917209152932">"ആപ്പുകൾക്ക് നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാനാകുമോ എന്ന് തിരഞ്ഞെടുക്കുക"</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"കാർ നിർമ്മാതാവിന് നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷനിലേക്ക് തുടർന്നും ആക്‌സസ് ലഭിച്ചേക്കാം. കൂടുതൽ വിവരങ്ങൾക്ക് അവരുടെ നയങ്ങൾ നിങ്ങൾക്ക് അവലോകനം ചെയ്യാം."</string>
+    <string name="location_adas_app_info_summary" msgid="7806057735910556609">"ഈ ബിൽറ്റ്-ഇൻ ഫീച്ചറുകൾക്ക്, ഡ്രൈവിംഗുമായി ബന്ധപ്പെട്ട് സഹായിക്കാൻ നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷനിലേക്ക് ആക്‌സസ് ആവശ്യമാണ്.\n\nഓരോ ആപ്പിന്റെയും സ്വകാര്യതാ നയം അവലോകനം ചെയ്യുന്നതിലൂടെ, അവ നിങ്ങളുടെ ലൊക്കേഷൻ ഡാറ്റ ഉപയോഗിക്കുന്നത് എങ്ങനെയാണെന്നതിനെ കുറിച്ച് കൂടുതലറിയുക."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"മൈക്രോഫോൺ"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"മൈക്രോഫോൺ ഉപയോഗിക്കുക"</string>
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"നിങ്ങളുടെ മൈക്രോഫോൺ ആക്‌സസ് ചെയ്യാൻ എല്ലാ ആപ്പുകളെയും അനുവദിക്കുക"</string>
@@ -755,6 +760,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"ഒരു പ്രൊഫൈൽ ചേര്‍ക്കുക"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ഈ പ്രൊ‌ഫൈൽ ഇല്ലാതാക്കുക"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"പ്രൊഫൈൽ ചേർക്കുക"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ഈ പ്രൊഫൈൽ ഡ്രൈവറായി സൈൻ ഇൻ ചെയ്തിരിക്കുന്നു. പ്രൊഫൈൽ, ഡ്രൈവറായി ഉപയോഗിക്കാത്തപ്പോൾ വീണ്ടും ശ്രമിക്കുക."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ഡിസ്പ്ലേ തെളിച്ചം"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"നിങ്ങളുടെ ഉപകരണങ്ങൾ കാണാൻ Bluetooth ഓണാക്കുക"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ഒരു ഉപകരണം ജോടിയാക്കാൻ Bluetooth ക്രമീകരണം തുറക്കുക"</string>

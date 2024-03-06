@@ -22,6 +22,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="animator" name="trans_right_out"/>
       <item type="anim" name="trans_fade_in"/>
       <item type="anim" name="trans_fade_out"/>
+      <item type="array" name="config_allowed_bluetooth_scanning_packages"/>
+      <item type="array" name="config_fixed_notification_access_packages"/>
       <item type="array" name="config_ignore_ux_restrictions"/>
       <item type="array" name="config_ringtone_audio_attribute_usages_map_key"/>
       <item type="array" name="config_ringtone_uri_map_value"/>
@@ -187,6 +189,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="button_fading_edge_length"/>
       <item type="dimen" name="button_min_width"/>
       <item type="dimen" name="button_ripple_radius"/>
+      <item type="dimen" name="card_view_elevation"/>
       <item type="dimen" name="choose_pin_title_text_margin_bottom"/>
       <item type="dimen" name="choose_title_text_margin_bottom"/>
       <item type="dimen" name="circle_ripple_bg_radius"/>
@@ -236,6 +239,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="progress_bar_preference_padding_top"/>
       <item type="dimen" name="progress_bar_preference_progressbar_margin_top"/>
       <item type="dimen" name="qc_code_preference_margin"/>
+      <item type="dimen" name="qr_code_margin"/>
       <item type="dimen" name="rounded_corner_radius"/>
       <item type="dimen" name="secondary_icon_size"/>
       <item type="dimen" name="suggestions_action_bar_height"/>
@@ -346,6 +350,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_brightness"/>
       <item type="drawable" name="ic_qc_hotspot"/>
       <item type="drawable" name="ic_qc_mobile_data"/>
+      <item type="drawable" name="ic_qc_ui_mode_auto"/>
+      <item type="drawable" name="ic_qc_ui_mode_day"/>
+      <item type="drawable" name="ic_qc_ui_mode_night"/>
       <item type="drawable" name="ic_qc_wifi_disabled"/>
       <item type="drawable" name="ic_qc_wifi_disconnected"/>
       <item type="drawable" name="ic_qc_wifi_level_0"/>
@@ -452,6 +459,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="hint_text"/>
       <item type="id" name="hotspot_qr_code"/>
       <item type="id" name="hotspot_qr_code_instruction"/>
+      <item type="id" name="hotspot_qr_code_password"/>
       <item type="id" name="icon_frame"/>
       <item type="id" name="key0"/>
       <item type="id" name="key1"/>
@@ -641,6 +649,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="app_data_usage_usage_history_title"/>
       <item type="string" name="app_disable_dialog_positive"/>
       <item type="string" name="app_disable_dialog_text"/>
+      <item type="string" name="app_info_all_services_label"/>
       <item type="string" name="app_launch_domain_links_title"/>
       <item type="string" name="app_launch_open_domain_urls_title"/>
       <item type="string" name="app_launch_other_defaults_title"/>
@@ -800,6 +809,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="confirm_your_password_header"/>
       <item type="string" name="confirm_your_pin_header"/>
       <item type="string" name="connect"/>
+      <item type="string" name="connected_settings_title"/>
       <item type="string" name="continue_button_text"/>
       <item type="string" name="continue_confirmation"/>
       <item type="string" name="contributors_title"/>
@@ -1056,7 +1066,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="location_recently_accessed"/>
       <item type="string" name="location_settings_app_permissions_summary"/>
       <item type="string" name="location_settings_app_permissions_title"/>
-      <item type="string" name="location_settings_footer"/>
       <item type="string" name="location_settings_recently_accessed_title"/>
       <item type="string" name="location_settings_recently_accessed_view_all_title"/>
       <item type="string" name="location_settings_services_title"/>
@@ -1223,6 +1232,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="qc_bluetooth_off_devices_info"/>
       <item type="string" name="qc_bluetooth_on_no_devices_info"/>
       <item type="string" name="qc_display_brightness"/>
+      <item type="string" name="qc_ui_mode_title"/>
       <item type="string" name="really_remove_account_message"/>
       <item type="string" name="really_remove_account_title"/>
       <item type="string" name="regulatory_info_text"/>
@@ -1506,11 +1516,13 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_hotspot_name_summary_connecting"/>
       <item type="string" name="wifi_hotspot_name_title"/>
       <item type="string" name="wifi_hotspot_password_title"/>
+      <item type="string" name="wifi_hotspot_qr_code_password_text"/>
       <item type="string" name="wifi_hotspot_qr_code_text"/>
       <item type="string" name="wifi_hotspot_security_none"/>
       <item type="string" name="wifi_hotspot_security_title"/>
       <item type="string" name="wifi_hotspot_state_off"/>
       <item type="string" name="wifi_hotspot_state_switch_content_description"/>
+      <item type="string" name="wifi_hotspot_switch_title"/>
       <item type="string" name="wifi_hotspot_wpa2_personal"/>
       <item type="string" name="wifi_hotspot_wpa3_sae"/>
       <item type="string" name="wifi_ip_address"/>

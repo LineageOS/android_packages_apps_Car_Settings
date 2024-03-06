@@ -28,6 +28,12 @@
         android:key="@string/pk_application_details_action_buttons"
         settings:controller="com.android.car.settings.applications.ApplicationActionButtonsPreferenceController"
         settings:searchable="false"/>
+    <Preference
+        android:key="@string/pk_all_services_settings"
+        android:title="@string/app_info_all_services_label"
+        android:summary="@string/summary_placeholder"
+        settings:controller=
+            "com.android.car.settings.applications.appinfo.AppAllServicesPreferenceController" />
     <SwitchPreference
         android:key="@string/pk_application_details_notifications"
         android:title="@string/notifications_label"
