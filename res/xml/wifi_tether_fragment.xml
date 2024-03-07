@@ -48,13 +48,13 @@
         settings:showChevron="false"/>
     <com.android.car.settings.common.DividerPreference/>
     <SwitchPreference
-        android:key="@string/pk_wifi_tether_auto_off"
-        android:title="@string/wifi_hotspot_auto_off_title"
-        android:summary="@string/wifi_hotspot_auto_off_summary"
+        android:key="@string/pk_wifi_tether_keep_on"
+        android:title="@string/wifi_hotspot_keep_on_title"
+        android:summary="@string/wifi_hotspot_keep_on_summary"
         android:persistent="false"
         settings:occupant_front_passenger="read"
         settings:occupant_rear_passenger="read"
-        settings:controller="com.android.car.settings.wifi.WifiTetherAutoOffPreferenceController"/>
+        settings:controller="com.android.car.settings.wifi.WifiTetherPersistentOnPreferenceController"/>
     <ListPreference
         android:key="@string/pk_wifi_tether_security"
         android:title="@string/wifi_hotspot_security_title"

@@ -71,10 +71,12 @@
     <uses-permission android:name="android.permission.START_VIEW_APP_FEATURES" />
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
     <uses-permission android:name="android.permission.SUGGEST_MANUAL_TIME_AND_ZONE"/>
+    <uses-permission android:name="android.permission.UWB_PRIVILEGED"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
     <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_VOLUME"/>
+    <uses-permission android:name="android.car.permission.READ_PERSIST_TETHERING_SETTINGS"/>
 
     <permission android:name="com.android.car.settings.SET_INITIAL_LOCK"
         android:protectionLevel="signature|setup"/>
