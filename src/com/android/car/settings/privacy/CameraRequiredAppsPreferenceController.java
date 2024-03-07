@@ -31,9 +31,7 @@ import com.android.car.ui.preference.CarUiTwoActionTextPreference;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.camera.flags.Flags;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
+import java.util.List;
 
 /**
  * Displays a list of apps which are required for driving with their privacy policy and a
@@ -45,7 +43,7 @@ public final class CameraRequiredAppsPreferenceController
 
     private final PackageManager mPackageManager;
     private final SensorPrivacyManager mSensorPrivacyManager;
-    private Map<String, Boolean> mCameraPrivacyAllowlist;
+    private List<String> mCameraPrivacyAllowlist;
 
     public CameraRequiredAppsPreferenceController(
             Context context,
@@ -80,7 +78,7 @@ public final class CameraRequiredAppsPreferenceController
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        boolean hasRequiredApps = mCameraPrivacyAllowlist.containsValue(Boolean.TRUE);
+        boolean hasRequiredApps = !mCameraPrivacyAllowlist.isEmpty();
         return hasRequiredApps ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 
@@ -94,10 +92,7 @@ public final class CameraRequiredAppsPreferenceController
         LogicalPreferenceGroup requiredappsPref = getPreference().findPreference(getContext()
                 .getString(R.string.pk_camera_required_apps_policy));
 
-        Set<String> requiredApps = mCameraPrivacyAllowlist.entrySet().stream()
-                .filter(x -> (Boolean.TRUE).equals(x.getValue()))
-                .map(Map.Entry::getKey).collect(Collectors.toSet());
-        for (String app : requiredApps) {
+        for (String app : mCameraPrivacyAllowlist) {
             CarUiTwoActionTextPreference preference =
                     CameraPrivacyPolicyUtil.createPrivacyPolicyPreference(
                             getContext(), mPackageManager, app, Process.myUserHandle());
