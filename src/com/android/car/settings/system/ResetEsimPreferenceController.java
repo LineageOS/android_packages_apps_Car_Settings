@@ -51,7 +51,7 @@ public class ResetEsimPreferenceController extends PreferenceController<TwoState
     private boolean showEuiccSettings() {
         EuiccManager euiccManager = (EuiccManager) getContext().getSystemService(
                 Context.EUICC_SERVICE);
-        if (!euiccManager.isEnabled()) {
+        if (euiccManager == null || !euiccManager.isEnabled()) {
             return false;
         }
         ContentResolver resolver = getContext().getContentResolver();
