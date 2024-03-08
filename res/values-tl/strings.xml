@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pumili ng kahit isang band para sa Wi‑Fi hotspot:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot at pag-tether"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi hotspot"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Gamitin ang Wi‑Fi hotspot"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Naka-off"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Awtomatikong i-off ang hotspot"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Mao-off ang Wi‑Fi hotspot kung walang nakakonektang device"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"I-scan ang QR code na ito para sumali"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"I-scan ang QR code na ito para makasali sa \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Password ng hotspot: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Gustong i-on ng <xliff:g id="REQUESTER">%s</xliff:g> ang Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"Gustong i-off ng <xliff:g id="REQUESTER">%s</xliff:g> ang Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Error"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Naikonekta"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Ipakita lahat"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Naghahanap"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Mga nakakonektang device"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Gumamit ng Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Walang pangalang device"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"I-disable ang app"</string>
     <string name="not_installed" msgid="4163454337822508007">"Hindi na-install para sa profile na ito"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Mga Pahintulot"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Lahat ng serbisyo"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Mga Notification"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Storage at cache"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Gawing priyoridad ang performance ng app"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Nagbibigay-daan ang kontrol sa Wi-Fi na i-on o i-off ng isang app ang Wi-Fi, mag-scan ng at kumonekta sa mga Wi-Fi network, magdagdag o mag-alis ng mga network, o magsimula ng panglokal lang na hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Higit pa"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokasyon"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Posibleng gumamit ang mga lokasyon ng mga source na gaya ng GPS, Wi‑Fi, mga mobile network, at sensor para tumulong sa pagtantiya ng lokasyon ng iyong device."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gumamit ng lokasyon"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Gamitin ang lokasyon ng iyong kotse sa anumang app na tinukoy mo."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Kung io-off mo ito, maaalis ang access sa lokasyon para sa lahat ng app maliban sa mga kailangan para sa tulong sa driver"</string>

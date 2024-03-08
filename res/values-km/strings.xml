@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"សូម​ជ្រើសរើស​កម្រិតបញ្ជូន​យ៉ាង​ហោចណាស់​មួយសម្រាប់​ហតស្ប៉ត Wi‑Fi៖"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"ហតស្ប៉ត និង​ការភ្ជាប់"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"ហតស្ប៉ត Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ហតស្ប៉ត"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ប្រើហតស្ប៉ត Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"បិទ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"បិទ​ហតស្ប៉ត​ដោយ​ស្វ័យប្រវត្តិ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ហតស៉្បត Wi-Fi នឹង​បិទ ​ប្រសិនបើ​​ឧបករណ៍​មិនត្រូវបានភ្ជាប់"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"ស្កេនកូដ QR នេះ ដើម្បីចូលរួម"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"ស្កេនកូដ QR នេះ ដើម្បីចូលរួម \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ពាក្យ​សម្ងាត់ហតស្ប៉ត៖ %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ចង់បើក Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ចង់បិទ Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"បញ្ហា"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"ការតភ្ជាប់​ទទួលបាន​ជោគជ័យ​ហើយ"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"បង្ហាញ​ទាំងអស់"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ស្វែងរក"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"ឧបករណ៍ដែលបានភ្ជាប់"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ប៊្លូធូស"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ប្រើប៊្លូធូស"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ឧបករណ៍​គ្មានឈ្មោះ"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"បិទកម្មវិធី"</string>
     <string name="not_installed" msgid="4163454337822508007">"មិនបានដំឡើង​សម្រាប់​កម្រងព័ត៌មាន​នេះទេ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ការអនុញ្ញាត"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"សេវាកម្មទាំងអស់"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ការជូនដំណឹង"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ទំហំផ្ទុក និងឃ្លាំងបម្រុង"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"កំណត់អាទិភាពប្រតិបត្តិការ​កម្មវិធី"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"ការ​គ្រប់គ្រង Wi-Fi អនុញ្ញាតឱ្យ​កម្មវិធីបើក ឬបិទ Wi-Fi ស្កេន និងភ្ជាប់បណ្តាញ Wi-Fi បញ្ចូល ឬលុប​បណ្តាញ ឬចាប់ផ្តើម​តែហតស្ប៉ត​មូលដ្ឋាន​ប៉ុណ្ណោះ។"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ច្រើន​ទៀត"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"ទីតាំង​អាចប្រើប្រាស់​ប្រភព​ផ្សេងៗដូចជា GPS, Wi‑Fi, បណ្ដាញទូរសព្ទចល័ត និងឧបករណ៍​ចាប់សញ្ញា ដើម្បី​ជួយ​ប៉ាន់ស្មាន​ទីតាំង​ឧបករណ៍របស់​អ្នក។"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ប្រើទីតាំង"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ប្រើទីតាំងរថយន្តរបស់អ្នកតាមរយៈកម្មវិធីណាមួយដែលអ្នកបានបញ្ជាក់។"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ប្រសិនបើបិទ​ទីតាំងនេះ វានឹងដកសិទ្ធិចូលប្រើទីតាំង​សម្រាប់កម្មវិធីទាំងអស់ លើកលែងតែ​កម្មវិធីដែលត្រូវការ​មុខងារជំនួយអ្នកបើកបរ"</string>

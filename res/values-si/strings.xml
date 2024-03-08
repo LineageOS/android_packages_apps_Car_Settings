@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi හොට්ස්පොට් සඳහා අවම වශයෙන් එක් කලාපයක් තෝරන්න:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"හොට්ස්පොට් සහ ටෙදරින්"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi-Fi හොට්ස්පොට්"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"හොට්ස්පොට්"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi-Fi හොට්ස්පොට් භාවිත කරන්න"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ක්‍රියාවිරහිතයි"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"හොට්ස්පොට් ස්වයංක්‍රීයව ක්‍රියාවිරහිත කරන්න"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"උපාග සම්බන්ධ කර නැතිනම් Wi‑Fi හොට්ස්පොට් ක්‍රියාවිරහිත වනු ඇත"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"එකතු වීමට මෙම QR කේතය ස්කෑන් කරන්න"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" වෙත එකතු වීමට මෙම QR කේතය ස්කෑන් කරන්න"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"හොට්ස්පොට් මුරපදය: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> හට Wi-Fi සක්‍රීය කිරීමට අවශ්‍යයි"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> හට Wi-Fi අක්‍රිය කිරීමට අවශ්‍ය ය"</string>
     <string name="wifi_error" msgid="3105105447117289410">"දෝෂය"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"සම්බන්ධතාව සාර්ථකයි"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"සියල්ල පෙන්වන්න"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"සොයමින්"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"සම්බන්ධිත උපාංග"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"බ්ලූටූත්"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"බ්ලූටූත් භාවිතා කරන්න"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"නම් නොකළ උපාංගය"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"යෙදුම අබල කරන්න"</string>
     <string name="not_installed" msgid="4163454337822508007">"මෙම පැතිකඩ සඳහා ස්ථාපනය කර නැත"</string>
     <string name="permissions_label" msgid="2701446753515612685">"අවසර"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"සියලු සේවා"</string>
     <string name="notifications_label" msgid="6586089149665170731">"දැනුම්දීම්"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ආචයනය සහ කෑෂය"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"යෙදුම් කාර්යසාධනය ප්‍රමුඛ කිරීම"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi පාලනය යෙදුමකට Wi-Fi ක්‍රියාත්මක හෝ ක්‍රියාවිරහිත කිරීමට, Wi-Fi ජාල ස්කෑන් කර සබැඳීමට, ජාල එක් කිරීමට හෝ ඉවත් කිරීමට, හෝ ස්ථානීය-පමණි හොට්ස්පොටයක් ඇරඹීමට ඉඩ දෙයි."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"තව"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ස්ථානය"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"ස්ථානය ඔබගේ උපාංගයෙහි ස්ථානය තක්සේරු කිරීමට උදවු කිරීමට, GPS, Wi-Fi, ජංගම ජාල සහ සංවේදක වැනි මූලාශ්‍ර භාවිත කළ හැකිය."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ස්ථානය භාවිත කරන්න"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ඔබ සඳහන් කර ඇති ඕනෑම යෙදුමක් සමග ඔබේ මෝටර් රථයේ ස්ථානය භාවිතා කරන්න."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ඔබ මෙය ක්‍රියාවිරහිත කරන්නේ නම්, එය රියැදුරු සහාය සඳහා අවශ්‍ය ඒවා හැර අනෙකුත් සියලු යෙදුම් සඳහා ස්ථාන ප්‍රවේශය ඉවත් කරනු ඇත"</string>

@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Диапазон частот для точек доступа Wi-Fi."</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступа и режим модема"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Точка доступа Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка доступа"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Использовать точку доступа Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Отключено"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматически выключать точку доступа"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Выключать точку доступа Wi‑Fi, если к ней не подключено ни одного устройства"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Чтобы подключиться, отсканируйте QR-код"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Отсканируйте QR-код, чтобы подключиться к \"%s\"."</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Пароль точки доступа: %s."</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> запрашивает включение Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> запрашивает отключение Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Ошибка"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Подключено"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Показать все"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Поиск"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Подключенные устройства"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Использовать Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Устройство без названия"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Отключить приложение"</string>
     <string name="not_installed" msgid="4163454337822508007">"Не установлено в этом профиле."</string>
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Все сервисы"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Уведомления"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Хранилище и кеш"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Приоритизировать производительность приложения"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Эта настройка разрешает приложению сканировать, добавлять и удалять сети Wi-Fi, подключаться к ним, включать и отключать модуль Wi-Fi, а также создавать локальные точки доступа."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Ещё"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Геолокация"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Для определения местоположения устройства могут использоваться данные GPS, Wi-Fi, мобильных сетей и датчиков."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Использовать данные о местоположении"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Использовать данные о местоположении автомобиля в указанных приложениях"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Если вы отключите этот параметр, данные о местоположении будут доступны только приложениям для помощи водителю."</string>

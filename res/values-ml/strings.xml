@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"വൈഫൈ ഹോട്ട്‌സ്‌പോട്ടിനായി ഒരു ബാൻഡ് എങ്കിലും തിരഞ്ഞെടുക്കൂ:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"ഹോട്ട്‌സ്പോട്ടും ‌ടെതറിംഗും"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട്"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ഹോട്ട്‌സ്‌പോട്ട്"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട് ഉപയോഗിക്കുക"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ഓഫാണ്"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ഹോട്ട്‌സ്‌പോട്ട് സ്വയമേവ ഓഫാക്കുക"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ഉപകരണങ്ങളൊന്നും കണക്‌റ്റ് ചെയ്‌തില്ലെങ്കിൽ വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട് ഓഫാകും"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"ചേരുന്നതിന് ഈ QR കോഡ് സ്‌കാൻ ചെയ്യുക"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" എന്നതിൽ ചേരാൻ ഈ QR കോഡ് സ്‌കാൻ ചെയ്യുക"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ഹോട്ട്‌സ്‌പോട്ടിന്റെ പാസ്‌വേഡ്: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>വൈഫൈ ഓണാക്കാൻ ആഗ്രഹിക്കുന്നു"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>വൈഫൈ ഓഫാക്കാൻ ആഗ്രഹിക്കുന്നു"</string>
     <string name="wifi_error" msgid="3105105447117289410">"പിശക്"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"കണക്ഷൻ വിജയകരം"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"എല്ലാം കാണിക്കുക"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"തിരയുന്നു"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"കണക്‌റ്റ് ചെയ്‌ത ഉപകരണങ്ങൾ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetooth ഉപയോഗിക്കുക"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"പേരിടാത്ത ഉപകരണം"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ആപ്പ് പ്രവർത്തനരഹിതമാക്കുക"</string>
     <string name="not_installed" msgid="4163454337822508007">"ഈ പ്രൊഫൈലിന് ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല"</string>
     <string name="permissions_label" msgid="2701446753515612685">"അനുമതികൾ"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"എല്ലാ സേവനങ്ങളും"</string>
     <string name="notifications_label" msgid="6586089149665170731">"അറിയിപ്പുകൾ"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"സ്‌റ്റോറേജും കാഷെയും"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"ആപ്പിന്റെ പ്രകടനത്തിന് മുൻഗണന നൽകുക"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"വൈഫൈ ഓണാക്കാനോ ഓഫാക്കാനോ, സ്‌കാൻ ചെയ്‌ത് വൈഫൈ നെറ്റ്‌വർക്കുകളിലേക്ക് കണക്‌റ്റ് ചെയ്യാനും നെറ്റ്‌വർക്കുകൾ ചേർക്കാനോ നീക്കം ചെയ്യാനോ, ഉപകരണം ഉള്ളിടത്ത് മാത്രം പ്രവർത്തിക്കുന്ന ഹോട്ട്‌സ്‌പോട്ട് ആരംഭിക്കാനോ വൈഫൈ നിയന്ത്രണം ആപ്പിനെ അനുവദിക്കുന്നു."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"കൂടുതൽ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"നിങ്ങളുടെ ഉപകരണത്തിന്റെ ലൊക്കേഷൻ കണക്കാക്കാൻ സഹായിക്കുന്നതിന് GPS, വൈഫൈ, മൊബൈൽ നെറ്റ്‌വർക്കുകൾ, സെൻസറുകൾ പോലുള്ള ഉറവിടങ്ങൾ ലൊക്കേഷൻ ഉപയോഗിച്ചേക്കാം."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"നിങ്ങൾ പ്രത്യേകം തിരഞ്ഞെടുക്കുന്ന ഏത് ആപ്പിനൊപ്പവും നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷൻ ഉപയോഗിക്കുക."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ഇത് ഓഫാക്കിയാൽ, ഡ്രെെവർ സഹായിക്ക് ആവശ്യമായവ ഒഴികെയുള്ള എല്ലാ ആപ്പുകൾക്കുമുള്ള ലൊക്കേഷൻ ആക്‌സസ് നീക്കം ചെയ്യപ്പെടും"</string>

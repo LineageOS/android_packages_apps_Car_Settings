@@ -20,6 +20,7 @@ import android.content.Context;
 import android.text.format.DateUtils;
 
 import androidx.annotation.CallSuper;
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.ListPreference;
 
 import com.android.car.settings.common.FragmentController;
@@ -135,7 +136,8 @@ public abstract class DataUsageCycleBasePreferenceController<T extends NetworkCy
         preference.setValueIndex(0);
     }
 
-    private String formatDate(long startTime, long endTime) {
+    @VisibleForTesting
+    String formatDate(long startTime, long endTime) {
         return DateUtils.formatDateRange(getContext(), startTime, endTime,
                 DateUtils.FORMAT_ABBREV_MONTH | DateUtils.FORMAT_SHOW_DATE);
     }

@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 गीगाहर्ट्ज़"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 गीगाहर्ट्ज़"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"वाई-फ़ाई हॉटस्पॉट से जुड़ने के लिए कम से कम एक बैंड चुनें:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"हॉटस्पॉट और टेदरिंग"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"वाई-फ़ाई हॉटस्पॉट"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"हॉटस्पॉट"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"वाई-फ़ाई हॉटस्पॉट का इस्तेमाल करें"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"बंद है"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"हॉटस्पॉट अपने-आप बंद हो जाए"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कोई डिवाइस कनेक्ट नहीं होने पर वाई-फ़ाई हॉटस्पॉट बंद हो जाएगा"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"जुड़ने के लिए इस क्यूआर कोड को स्कैन करें"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" से जुड़ने के लिए इस क्यूआर कोड को स्कैन करें"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"हॉटस्पॉट का पासवर्ड: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> को वाई-फ़ाई चालू करने की अनुमति चाहिए"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> को वाई-फ़ाई बंद करने की अनुमति चाहिए"</string>
     <string name="wifi_error" msgid="3105105447117289410">"गड़बड़ी"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"कनेक्शन कामयाब रहा"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"सभी दिखाएं"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"खोजना"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"कनेक्ट किए गए डिवाइस"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लूटूथ"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ब्लूटूथ का इस्तेमाल करें"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"बिना नाम वाला डिवाइस"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ऐप्लिकेशन बंद करें"</string>
     <string name="not_installed" msgid="4163454337822508007">"इस प्रोफ़ाइल के लिए इंस्टॉल नहीं किया गया"</string>
     <string name="permissions_label" msgid="2701446753515612685">"अनुमतियां"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"सभी सेवाएं"</string>
     <string name="notifications_label" msgid="6586089149665170731">"सूचनाएं"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"मेमोरी और कैश"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"ऐप्लिकेशन की परफ़ॉर्मेंस को प्राथमिकता दें"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"वाई-फ़ाई का नियंत्रण किसी ऐप्लिकेशन को वाई-फ़ाई चालू या बंद करने, वाई-फ़ाई नेटवर्क ढूंढने और उससे जुड़ने की अनुमति देता है. साथ ही, नेटवर्क जोड़ने या हटाने या सिर्फ़ सीमित दायरे में इस्तेमाल होने वाला हॉटस्पॉट चालू करने की अनुमति देता है."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ज़्यादा सेटिंग"</string>
     <string name="location_settings_title" msgid="901334356682423679">"जगह की जानकारी"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"जगह की जानकारी देने वाली सेवा, आपके डिवाइस की मौजूदा जगह का पता लगाने के लिए, जीपीएस, वाई-फ़ाई, मोबाइल नेटवर्क, और सेंसर जैसे स्रोतों का इस्तेमाल कर सकती है."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"जगह की जानकारी का इस्तेमाल करें"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"अपने चुने हुए किसी ऐप्लिकेशन के साथ कार की जगह की जानकारी का इस्तेमाल करें."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"इसे बंद करने पर, ड्राइवर की सुरक्षा में मदद करने की सुविधाओं वाले ऐप्लिकेशन को छोड़कर, दूसरा कोई भी ऐप्लिकेशन जगह की जानकारी ऐक्सेस नहीं कर पाएगा"</string>

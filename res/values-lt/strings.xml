@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pasir. bent 1 „Wi‑Fi“ vieš. int. prieig. tšk. dažn. juostą:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Vieš. intern. prieig. tašk. ir įreng. kaip modemo naud."</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"„Wi-Fi“ viešosios interneto prieigos taškas"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Viešosios interneto prieigos taškas"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Naudoti „Wi‑Fi“ vieš. intern. prieigos tašką"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Išjungta"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Išjungti viešosios interneto prieigos tašką autom."</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"„Wi‑Fi“ viešosios interneto prieigos taškas bus išjungtas, jei nebus prijungta jokių įrenginių"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Nuskaitykite šį QR kodą, kad prisijungtumėte"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Nuskaitykite šį QR kodą ir prisijunkite prie „%s“"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Viešosios interneto prieigos taško slaptažodis: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> nori įjungti „Wi-Fi“"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> nori išjungti „Wi-Fi“"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Klaida"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Sėkmingai prisijungta"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Rodyti viską"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Ieškoma"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Prijungti įrenginiai"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Naudoti „Bluetooth“"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Įrenginys be pavadinimo"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Išjungti programą"</string>
     <string name="not_installed" msgid="4163454337822508007">"Neįdiegta šiame profilyje"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Leidimai"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Visos paslaugos"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Pranešimai"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Saugykla ir talpykla"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Suteikti prioritetą programos našumui"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"„Wi-Fi“ valdymo funkcija leidžia šiai programai įjungti arba išjungti „Wi-Fi“, nuskaityti „Wi-Fi“ tinklus ir prisijungti prie jų, pridėti ar pašalinti tinklus arba paleisti tik vietinį viešosios interneto prieigos tašką."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Daugiau"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vietovė"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Vietovės paslauga gali naudoti įvairius šaltinius, pvz., GPS, „Wi-Fi“, mobiliojo ryšio tinklus ir jutiklius, kad nustatytų jūsų įrenginio vietovę."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Naudoti vietovę"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Galite naudoti automobilio vietovės informaciją su kiekviena nurodyta programa."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Išjungus šį nustatymą, bus pašalinta visų programų prieiga prie vietovės duomenų, išskyrus tas, kurios reikalingos pagalbos vairuotojui funkcijai"</string>

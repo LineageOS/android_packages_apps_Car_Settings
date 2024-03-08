@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Välj minst ett band för Wi‑Fi-surfzon:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Trådlös surfzon och internetdelning"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wifi-surfzon"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Surfzon"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Använd wifi-surfzon"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Av"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Inaktivera surfzon automatiskt"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-surfzonen inaktiveras om inga enheter är anslutna"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Scanna den här QR-koden för att gå med"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Skanna den här QR-koden för att ansluta till %s"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Lösenord för surfzon: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> vill aktivera wifi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> vill inaktivera wifi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Fel"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Anslutningen har upprättats"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Visa alla"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Söker"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Anslutna enheter"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Använd Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Namnlös enhet"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Inaktivera app"</string>
     <string name="not_installed" msgid="4163454337822508007">"Inte installerat för den här profilen"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Behörigheter"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Alla tjänster"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Aviseringar"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Lagringsutrymme och cacheminne"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Prioritera appars prestanda"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Med wifi-styrning får den här appen behörighet att aktivera eller inaktivera wifi, söka efter och ansluta till wifi-nätverk, lägga till eller ta bort nätverk samt starta en lokal surfzon."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Plats"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"I Platstjänster används källor som GPS, wifi, mobilnätverk och sensorer för att beräkna enhetens plats."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Använd plats"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Använd bilens plats med alla appar du har angett."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Om du stänger av detta tas platsåtkomst bort för alla appar utom de som behövs för förarassistans"</string>

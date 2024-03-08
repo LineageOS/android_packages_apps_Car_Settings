@@ -106,7 +106,8 @@ public class LimitedWifiEntryListPreferenceControllerTest {
     public void connected_oneSavedNetworks_twoWifiEntries() {
         List<WifiEntry> wifiEntryList = new ArrayList<>(Arrays.asList(mMockWifiEntry1));
         when(mMockCarWifiManager.getAllWifiEntries()).thenReturn(wifiEntryList);
-        when(mMockCarWifiManager.getConnectedWifiEntry()).thenReturn(mMockWifiEntry1);
+        when(mMockCarWifiManager.getConnectedWifiEntries())
+                .thenReturn(Collections.singletonList(mMockWifiEntry1));
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -117,7 +118,7 @@ public class LimitedWifiEntryListPreferenceControllerTest {
     public void notConnected_oneSavedNetworks_oneWifiEntry() {
         List<WifiEntry> wifiEntryList = Collections.singletonList(mMockWifiEntry1);
         when(mMockCarWifiManager.getAllWifiEntries()).thenReturn(wifiEntryList);
-        when(mMockCarWifiManager.getConnectedWifiEntry()).thenReturn(null);
+        when(mMockCarWifiManager.getConnectedWifiEntries()).thenReturn(Collections.emptyList());
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -131,7 +132,8 @@ public class LimitedWifiEntryListPreferenceControllerTest {
         List<WifiEntry> wifiEntryList = new ArrayList<>(
                 Arrays.asList(mMockWifiEntry1, mMockWifiEntry2, mMockWifiEntry3));
         when(mMockCarWifiManager.getAllWifiEntries()).thenReturn(wifiEntryList);
-        when(mMockCarWifiManager.getConnectedWifiEntry()).thenReturn(mMockWifiEntry1);
+        when(mMockCarWifiManager.getConnectedWifiEntries())
+                .thenReturn(Collections.singletonList(mMockWifiEntry1));
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -145,7 +147,7 @@ public class LimitedWifiEntryListPreferenceControllerTest {
         List<WifiEntry> wifiEntryList = new ArrayList<>(
                 Arrays.asList(mMockWifiEntry1, mMockWifiEntry2, mMockWifiEntry3, mMockWifiEntry4));
         when(mMockCarWifiManager.getAllWifiEntries()).thenReturn(wifiEntryList);
-        when(mMockCarWifiManager.getConnectedWifiEntry()).thenReturn(null);
+        when(mMockCarWifiManager.getConnectedWifiEntries()).thenReturn(Collections.emptyList());
 
         mPreferenceController.onCreate(mLifecycleOwner);
 

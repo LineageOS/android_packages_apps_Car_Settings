@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Khetha okungenani ibhendi eyodwa ye-Wi‑Fi hotspot:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"I-hotspot nokusebenzisa ifoni njengemodemu"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"I-hotspot ye-Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"I-Hotspot"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Sebenzisa i-hotspot ye-Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Valiwe"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Vala ama-hotspot ngokuzenzakalela"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"I-Wi-Fi hotspot izovaleka uma kungekho amadivayisi axhunyiwe"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Skena le khodi ye-QR ukuze ujoyine"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Skena le khodi ye-QR ukuze ujoyine i-\"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Iphasiwedi ye-hotspot: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"I-<xliff:g id="REQUESTER">%s</xliff:g> ifuna ukuvula i-Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"I-<xliff:g id="REQUESTER">%s</xliff:g> ifuna ukuvala i-Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Iphutha"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Ukuxhumeka kuphumelele"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Bonisa konke"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Iyasesha..."</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Amadivayisi axhunyiwe"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"I-Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Sebenzisa i-Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Idivayisi engenalo igama"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Khubaza uhlelo lokusebenza"</string>
     <string name="not_installed" msgid="4163454337822508007">"Akufakwanga kule phrofayela"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Izimvume"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Amasevisi wonke"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Izaziso"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Isitoreji nenqolobane"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Khuthalela ukusebenza kwe-app"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Isilawuli se-Wi-Fi sivumela uhlelo lokusebenza ukuthi luvule noma luvale i-Wi-Fi, luskene futhi luxhumeke kumanethiwekhi e-Wi-Fi, lungeze noma lususe amanethiwekhi, noma luqale i-hotspot yasendaweni kuphela."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Okuningi"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Indawo"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Indawo ingasebenzisa imithombo enjenge-GPS, i-Wi-Fi, inethiwekhi yeselula, nezinzwa ukusiza ekulinganiseleni indawo yedivaysi yakho."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Sebenzisa indawo"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Sebenzisa indawo yemoto yakho nganoma iyiphi i-app oyicacisile."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Uma uvala lokhu, kuzosusa ukufinyelela kwendawo kuwo wonke ama-app ngaphandle kwalawo adingekayo ukuze uthole usizo lomshayeli"</string>

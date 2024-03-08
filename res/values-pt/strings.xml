@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Escolha pelo menos uma banda para o ponto de acesso Wi-Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Ponto de acesso e tethering"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Ponto de acesso Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Ponto de acesso"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Usar o ponto de acesso Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desativado"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desativar ponto de acesso automaticamente"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"O ponto de acesso Wi‑Fi será desativado se nenhum dispositivo for conectado"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Leia o código QR para acessar"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Leia este código QR para entrar em \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Senha do ponto de acesso: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quer ativar o Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> quer desativar o Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Erro"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Conexão realizada"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Mostrar tudo"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Pesquisar"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Dispositivos conectados"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Usar Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sem nome"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Desativar app"</string>
     <string name="not_installed" msgid="4163454337822508007">"Não instalado neste perfil"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Permissões"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Todos os serviços"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificações"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Armazenamento e cache"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Priorizar o desempenho do app"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"O controle de Wi-Fi permite que um app ative ou desative o Wi-Fi, verifique redes Wi-Fi e se conecte a elas, adicione ou remova redes, ou inicie um ponto de acesso somente local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mais"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Local"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"A localização pode usar fontes como GPS, Wi-Fi, redes móveis e sensores para ajudar a estimar o local do dispositivo."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar local"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Usar a localização do carro com qualquer app que você especificar."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se você desativar essa configuração, o acesso à localização de todos os apps vai ser removido, exceto nos que são necessários para assistência ao motorista"</string>
@@ -759,7 +762,7 @@
     <string name="add_profile_text" msgid="9118410102199116969">"Adicionar perfil"</string>
     <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"O perfil foi acessado como motorista. Tente outra vez quando o perfil não estiver nessa função."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brilho da tela"</string>
-    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver seus dispositivos, ative o Bluetooth"</string>
+    <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para acessar seus dispositivos, ative o Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para parear um dispositivo, abra as configurações do Bluetooth"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador do sistema de infoentretenimento"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Apps ativados"</string>

@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Zgjidh të paktën një brez për zonën e qasjes për internet për Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Zona e qasjes dhe ndarja e internetit"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Zona e qasjes për internet me Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Zona e qasjes për internet"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Përdor zonën e qasjes për internet me Wi‑Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Joaktiv"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Çaktivizo automatikisht zonën e qasjes për internet"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Zona e qasjes për internet e Wi‑Fi do të çaktivizohet nëse nuk është lidhur asnjë pajisje"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Skano këtë kod QR për t\'u bashkuar"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Skano këtë kod QR për t\'iu bashkuar \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Fjalëkalimi i zonës së qasjes për internet: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> kërkon të aktivizojë Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> kërkon të çaktivizojë Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Gabim"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Lidhja ishte e suksesshme"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Shfaq të gjitha"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Po kërkon"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Pajisjet e lidhura"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Përdor Bluetooth-in"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Pajisje e paemërtuar"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Çaktivizo aplikacionin"</string>
     <string name="not_installed" msgid="4163454337822508007">"Nuk është instaluar për këtë profil"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Lejet"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Të gjitha shërbimet"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Njoftime"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Hapësira ruajtëse dhe memoria specifike"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Jepi përparësi performancës së aplikaconit"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontrolli i lidhjes Wi-Fi lejon që një aplikacion të aktivizojë ose të çaktivizojë Wi-Fi, të skanojë dhe të lidhet me rrjetet Wi-Fi, të shtojë ose të heqë rrjetet ose të nisë një zonë qasjeje për internetin vetëm në nivel lokal."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Më shumë"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vendndodhja"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Vendndodhja mund të përdorë burime si GPS, Wi‑Fi, rrjetet celulare dhe sensorët për të ndihmuar me vlerësimin e vendndodhjes së pajisjes sate."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Përdor vendndodhjen"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Përdor vendndodhjen e makinës sate me çdo aplikacion që ke specifikuar."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Nëse e çaktivizon këtë, kjo do të heqë qasjen te vendndodhja për të gjitha aplikacionet, përveç atyre që duhen për ndihmën për drejtuesin e makinës"</string>
@@ -463,7 +466,7 @@
     <string name="device_status" msgid="267298179806290920">"Statusi"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"Statusi i baterisë, rrjeti dhe informacione të tjera"</string>
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"Numri i telefonit, sinjali etj."</string>
-    <string name="about_settings" msgid="4329457966672592345">"Rreth"</string>
+    <string name="about_settings" msgid="4329457966672592345">"Informacione"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"Shiko informacionin ligjor, statusin dhe versionin e softuerit"</string>
     <string name="legal_information" msgid="1838443759229784762">"Informacioni ligjor"</string>

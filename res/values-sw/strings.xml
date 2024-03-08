@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"GHz 2.4"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"GHz 5.0"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Chagua angalau bendi moja ya mtandaopepe wa Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Mtandaopepe na usambazaji wa mitandao"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Mtandao pepe wa Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Mtandaopepe"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Tumia mtandao pepe wa Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Imezimwa"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Zima mtandaopepe kiotomatiki"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Mtandaopepe wa Wi-Fi utazimwa ikiwa hakuna vifaa vilivyounganishwa"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Changanua msimbo huu wa QR ili ujiunge"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Changanua msimbo huu wa QR ili ujiunge kwenye \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Nenosiri la mtandao pepe: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> inataka kuwasha Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> inataka kuzima Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Hitilafu"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Imeunganisha"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Onyesha yote"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Inatafuta"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Vifaa vilivyounganishwa"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Tumia Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Kifaa kisichokuwa na jina"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Zima programu"</string>
     <string name="not_installed" msgid="4163454337822508007">"Haijasakinishwa kwa wasifu huu"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Ruhusa"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Huduma zote"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Arifa"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Nafasi ya hifadhi na akiba"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Kipaumbele cha utendaji wa programu"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Kidhibiti cha Wi-Fi huruhusu programu iwashe au izime Wi-Fi, itafute na iunganishe kwenye mitandao ya Wi-Fi, iongeze au iondoe mitandao au ianzishe mtandaopepe wa eneo mahususi."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Zaidi"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Mahali"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Huenda huduma za mahali zikatumia vyanzo kama vile GPS, Wi‑Fi, mitandao ya simu na vitambuzi ili kubaini mahali kilipo kifaa chako."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Tumia data ya mahali"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Tumia maelezo ya mahali gari lako lipo kwenye programu yoyote uliyobainisha."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ukizima kipengle hiki, ufikiaji wa data ya mahali kwenye programu zote utaondolewa isipokuwa zile zinazohitajika katika usaidizi kwa dereva"</string>

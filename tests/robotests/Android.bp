@@ -26,7 +26,7 @@ android_robolectric_test {
     libs: [
         "Settings-robo-testutils",
         "robolectric_android-all-stub",
-        "truth-prebuilt",
+        "truth",
         "testng",
         "android.car",
         "android.car.test.utils",

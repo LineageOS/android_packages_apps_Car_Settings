@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Odaberite barem jedan pojas za žarišnu točku Wi‑Fija:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Žarišna točka i modemsko povezivanje"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi žarišna točka"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Žarišna točka"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Koristi Wi‑Fi žarišnu točku"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Isključeno"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatski isključi žarišnu točku"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Žarišna točka Wi‑Fija isključit će se ako nije povezan nijedan uređaj"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"Skenirajte QR kôd da biste se pridružili"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Skenirajte QR kôd da biste se pridružili \"%s\""</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Zaporka žarišne točke: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> želi uključiti Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> želi isključiti Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Pogreška"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Povezivanje je uspjelo"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Pokaži sve"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Pretraživanje"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Povezani uređaji"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Koristi Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Uređaj bez naziva"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Onemogući aplikaciju"</string>
     <string name="not_installed" msgid="4163454337822508007">"Nije instalirano za ovaj profil"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Dopuštenja"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"Sve usluge"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Obavijesti"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Pohrana i predmemorija"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Prioritet: izvedba aplikacije"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Upravljanje Wi-Fijem omogućuje aplikaciji da uključuje ili isključuje Wi-Fi, traži Wi-Fi mreže i povezuje se s njima, dodaje ili uklanja mreže te pokreće lokalnu žarišnu točku."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Više"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"Za procjenu lokacije vašeg uređaja mogu se upotrebljavati izvori kao što su GPS, Wi-Fi, mobilne mreže i senzori."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Upotreba lokacije"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Lokacija automobila upotrebljava se sa svim aplikacijama koje ste naveli."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ako isključite tu postavku, uklonit će se pristup lokaciji za sve aplikacije, osim za one koje su potrebne za pomoć u vožnji"</string>
@@ -589,7 +592,7 @@
     <string name="storage_data_size_label" msgid="7986110464268960652">"Podaci profila"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Predmemorija"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Ukupno"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Isprazni pohranu"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Izbriši pohranu"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Izbriši predmemoriju"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Izbrisati podatke aplikacije?"</string>
     <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Podaci aplikacije trajno će se izbrisati. To uključuje datoteke, postavke, baze podataka i druge podatke aplikacije."</string>

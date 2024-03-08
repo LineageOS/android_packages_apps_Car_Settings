@@ -78,7 +78,7 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ಡೇಟಾ ಬಳಕೆ ಮಿತಿಯನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"ಡೇಟಾ ಬಳಕೆಯನ್ನು ನಿಮ್ಮ ಸಾಧನದ ಮೂಲಕ ಅಳೆಯಲಾಗುತ್ತದೆ. ಇದು ನಿಮ್ಮ ಮೊಬೈಲ್ ಕ್ಯಾರಿಯರ್‌ನ ಡೇಟಾದಿಂದ ಬದಲಾಗಿರಬಹುದು."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ಹೊಂದಿಸಿ"</string>
-    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"ಉಳಿಸಿ"</string>
+    <string name="data_usage_warning_save_title" msgid="2900544287239037695">"ಸೇವ್ ಮಾಡಿ"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"OEM ನೆಟ್‌ವರ್ಕ್"</string>
     <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"ವಾಹನದ ಇಂಟರ್ನೆಟ್"</string>
     <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"ವಾಹನದ ಇಂಟರ್ನೆಟ್ ಆಫ್ ಮಾಡುವುದರಿಂದ ಇದು ಕೆಲವು ವಾಹನದ ಫೀಚರ್‌ಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುವುದನ್ನು ತಡೆಯಬಹುದು.\n\nನಿಮ್ಮ ವಾಹನವನ್ನು ನಿರ್ವಹಿಸಲು ಅಗತ್ಯವಿರುವ ನಿರ್ಣಾಯಕ ಡೇಟಾವನ್ನು ವಾಹನ ತಯಾರಕರ ಜೊತೆ ಹಂಚಿಕೊಳ್ಳುವುದನ್ನು ಮುಂದುವರಿಸಲಾಗುತ್ತದೆ."</string>
@@ -160,12 +160,14 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗೆ ಬ್ಯಾಂಡ್ ಆರಿಸಿ:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"ಹಾಟ್‌ಸ್ಪಾಟ್ &amp; ಟೆಥರಿಂಗ್"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ಹಾಟ್‌ಸ್ಪಾಟ್"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್ ಬಳಸಿ"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ಆಫ್ ಮಾಡಿ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಹಾಟ್‌ಸ್ಪಾಟ್ ಅನ್ನು ಆಫ್ ಮಾಡಿ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ಯಾವುದೇ ಸಾಧನಗಳು ಸಂಪರ್ಕಗೊಳ್ಳದೇ ಇರುವಾಗ ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್ ಆಫ್ ಆಗುತ್ತದೆ"</string>
-    <string name="wifi_hotspot_qr_code_text" msgid="8366512548024600385">"ಸೇರಿಕೊಳ್ಳಲು ಈ QR ಕೋಡ್‌ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ"</string>
+    <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" ಗೆ ಸೇರಿಕೊಳ್ಳಲು ಈ QR ಕೋಡ್‌ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ಹಾಟ್‌ಸ್ಪಾಟ್ ಪಾಸ್‌ವರ್ಡ್: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ಗಾಗಿ ವೈ-ಫೈ ಆನ್ ಮಾಡಬೇಕು"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> ಗಾಗಿ ವೈ-ಫೈ ಆನ್ ಮಾಡಬೇಕು"</string>
     <string name="wifi_error" msgid="3105105447117289410">"ದೋಷ"</string>
@@ -176,6 +178,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"ಸಂಪರ್ಕ ಯಶಸ್ವಿಯಾಗಿದೆ"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ಎಲ್ಲವನ್ನೂ ತೋರಿಸಿ"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ಹುಡುಕಲಾಗುತ್ತಿದೆ"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"ಕನೆಕ್ಟ್ ಮಾಡಿರುವ ಸಾಧನಗಳು"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ಬ್ಲೂಟೂತ್‌"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ಬ್ಲೂಟೂತ್ ಬಳಸಿ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ಹೆಸರಿಸದಿರುವ ಸಾಧನ"</string>
@@ -248,7 +251,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ಫೋನ್ ರಿಂಗ್‌ಟೋನ್"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ಡಿಫಾಲ್ಟ್ ನೋಟಿಫಿಕೇಶನ್ ಧ್ವನಿ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ಡೀಫಾಲ್ಟ್ ಅಲಾರಾಂ ಧ್ವನಿ"</string>
-    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"ಉಳಿಸಿ"</string>
+    <string name="ringtone_picker_save_title" msgid="4388137432517227001">"ಸೇವ್ ಮಾಡಿ"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"ಅಲರ್ಟ್ ಧ್ವನಿಗಳು"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"ರಿಂಗ್‌ಟೋನ್, ಅಧಿಸೂಚನೆಗಳು ಮತ್ತು ಅಲಾರಾಂ"</string>
     <string name="display_brightness" msgid="5718970880488110840">"ಪ್ರಖರತೆ"</string>
@@ -323,6 +326,7 @@
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ಆ್ಯಪ್‍‌ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="not_installed" msgid="4163454337822508007">"ಈ ಪ್ರೊಫೈಲ್‌ಗಾಗಿ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲಾಗಿಲ್ಲ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ಅನುಮತಿಗಳು"</string>
+    <string name="app_info_all_services_label" msgid="6495363975322723452">"ಎಲ್ಲಾ ಸೇವೆಗಳು"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ಅಧಿಸೂಚನೆಗಳು"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"ಸಂಗ್ರಹಣೆ ಮತ್ತು ಕ್ಯಾಷ್"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"ಆ್ಯಪ್‌ನ ಕಾರ್ಯಕ್ಷಮತೆಯನ್ನು ಆದ್ಯತೆಗೊಳಿಸಿ"</string>
@@ -408,7 +412,6 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"ವೈ-ಫೈ ನಿಯಂತ್ರಣವು, ವೈ-ಫೈ ಅನ್ನು ಆನ್ ಅಥವಾ ಆಫ್ ಮಾಡಲು, ವೈ-ಫೈ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಮತ್ತು ಸಂಪರ್ಕಿಸಲು, ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಅಥವಾ ತೆಗೆದುಹಾಕಲು ಹಾಗೂ ಸ್ಥಳೀಯವಾದ ಹಾಟ್‌ಸ್ಪಾಟ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ಈ ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ಇನ್ನಷ್ಟು"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ಸ್ಥಳ"</string>
-    <string name="location_settings_footer" msgid="296892848338100051">"ಸ್ಥಳವು ನಿಮ್ಮ ಸಾಧನದ ಸ್ಥಳವನ್ನು ಅಂದಾಜು ಮಾಡಲು ಸಹಾಯ ಮಾಡುವುದಕ್ಕಾಗಿ GPS, ವೈಫೈ, ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳು ಮತ್ತು ಸೆನ್ಸರ್‌ಗಳಂತಹ ಮೂಲಗಳನ್ನು ಬಳಸಬಹುದು."</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ಸ್ಥಳ ಬಳಸಿ"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ನೀವು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಯಾವುದೇ ಆ್ಯಪ್‌ನೊಂದಿಗೆ ನಿಮ್ಮ ಕಾರ್‌ನ ಸ್ಥಳವನ್ನು ಬಳಸಿ."</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ನೀವು ಇದನ್ನು ಆಫ್ ಮಾಡಿದರೆ, ಡ್ರೈವರ್‌ಗೆ ಸಹಾಯದ ಫೀಚರ್‌ಗೆ ಅಗತ್ಯವಿರುವುದನ್ನು ಹೊರತುಪಡಿಸಿ ಇದು ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳಿಗೆ ಸ್ಥಳ ಆ್ಯಕ್ಸೆಸ್ ತೆಗೆದುಹಾಕುತ್ತದೆ"</string>

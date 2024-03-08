@@ -23,28 +23,40 @@
     <SwitchPreference
         android:key="@string/pk_auto_datetime_switch"
         android:title="@string/date_time_auto"
-        settings:controller="com.android.car.settings.datetime.AutoDatetimeTogglePreferenceController"/>
+        settings:controller="com.android.car.settings.datetime.AutoDatetimeTogglePreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"/>
     <SwitchPreference
         android:key="@string/pk_auto_timezone_switch"
         android:title="@string/zone_auto"
-        settings:controller="com.android.car.settings.datetime.AutoTimeZoneTogglePreferenceController"/>
+        settings:controller="com.android.car.settings.datetime.AutoTimeZoneTogglePreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"/>
     <Preference
         android:fragment="com.android.car.settings.datetime.DatePickerFragment"
         android:key="@string/pk_date_picker_entry"
         android:title="@string/date_time_set_date"
-        settings:controller="com.android.car.settings.datetime.DatePickerPreferenceController"/>
+        settings:controller="com.android.car.settings.datetime.DatePickerPreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"/>
     <Preference
         android:fragment="com.android.car.settings.datetime.TimePickerFragment"
         android:key="@string/pk_time_picker_entry"
         android:title="@string/date_time_set_time"
-        settings:controller="com.android.car.settings.datetime.TimePickerPreferenceController"/>
+        settings:controller="com.android.car.settings.datetime.TimePickerPreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"/>
     <Preference
         android:fragment="com.android.car.settings.datetime.TimeZonePickerScreenFragment"
         android:key="@string/pk_timezone_picker_screen_entry"
         android:title="@string/date_time_set_timezone"
-        settings:controller="com.android.car.settings.datetime.TimeZonePickerPreferenceController"/>
+        settings:controller="com.android.car.settings.datetime.TimeZonePickerPreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"/>
     <SwitchPreference
         android:key="@string/pk_use_24hour_switch"
         android:title="@string/date_time_24hour"
-        settings:controller="com.android.car.settings.datetime.TimeFormatTogglePreferenceController"/>
+        settings:controller="com.android.car.settings.datetime.TimeFormatTogglePreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"/>
 </PreferenceScreen>
