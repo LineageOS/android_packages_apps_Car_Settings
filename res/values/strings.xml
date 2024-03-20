@@ -26,6 +26,8 @@
     <string name="auto_brightness_title">Adaptive brightness</string>
     <!-- Sound & display settings screen, setting option summary to enable adaptive brightness [CHAR LIMIT=100] -->
     <string name="auto_brightness_summary">Adjust screen brightness to environment</string>
+    <!-- Display settings screen, settings option name to change the system theme (day/night/auto) [CHAR LIMIT=30] -->
+    <string name="theme_toggle_title">Theme</string>
     <!-- Title of condition that night display is on (renamed "Night Light" with title caps) [CHAR LIMIT=30] -->
     <string name="condition_night_display_title">Night Light is on</string>
     <string name="keywords_display" translatable="false">screen, touchscreen</string>

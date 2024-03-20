@@ -28,6 +28,7 @@ android_test {
         "androidx.test.rules",
         "androidx.test.ext.junit",
         "androidx.test.ext.truth",
+        "flag-junit",
         "mockito-kotlin2",
         "mockito-target-extended-minus-junit4",
         "platform-test-annotations",
