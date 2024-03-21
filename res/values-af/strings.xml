@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"Helderheidvlak"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Aanpasbare helderheid"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Pas skermhelderheid by omgewing aan"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Aandbeligting is aan"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netwerk en internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Selnetwerk"</string>
@@ -87,7 +89,7 @@
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s gebruik tussen %2$s en %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Sluit by ander netwerk aan"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Netwerkvoorkeure"</string>
-    <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
+    <string name="wifi_settings" msgid="7701477685273103841">"Wi-fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Skakel tans Wi-Fi aan …"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Skakel tans Wi-Fi af …"</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Laai tans Wi‑Fi-lys"</string>
@@ -135,7 +137,7 @@
     <string name="wifi_wakeup" msgid="7451825226044542000">"Skakel Wi-Fi outomaties aan"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi aan by gestoorde hoëgehaltenetwerke, soos tuisnetwerk"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Onbeskikbaar omdat ligging af is. Skakel "<annotation id="link">"ligging"</annotation>" aan."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Skakel Wi‑Fi-opsporing aan?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Skakel wi-fi-opsporing aan?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Skakel aan"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi-opsporing is aangeskakel"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Skakel outomaties oor na mobiele data"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Warmkol"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Gebruik wi-fi-warmkol"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Af"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Skakel warmkol outomaties af"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi-Fi-warmkol sal afskakel as geen toestelle gekoppel is nie"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Skandeer hierdie QR-kode om by \"%s\" aan te sluit"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Warmkolwagwoord: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil Wi-Fi aanskakel"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Voorheen gekoppel"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s is gekoppel"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s is ontkoppel"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth-saambindversoek"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Bind saam en koppel"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-saambindkode"</string>

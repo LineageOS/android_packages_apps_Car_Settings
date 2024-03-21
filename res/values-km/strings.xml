@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"កម្រិត​ពន្លឺ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"កម្រិតពន្លឺបត់បែន"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"កែតម្រូវ​ពន្លឺអេក្រង់​ទៅតាមមជ្ឈដ្ឋាន"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"ពន្លឺពេលយប់​បានបើក"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"បណ្តាញ និង​អ៊ីនធឺណិត"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"បណ្ដាញទូរសព្ទចល័ត"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ហតស្ប៉ត"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ប្រើហតស្ប៉ត Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"បិទ"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"បិទ​ហតស្ប៉ត​ដោយ​ស្វ័យប្រវត្តិ"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ហតស៉្បត Wi-Fi នឹង​បិទ ​ប្រសិនបើ​​ឧបករណ៍​មិនត្រូវបានភ្ជាប់"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"ស្កេនកូដ QR នេះ ដើម្បីចូលរួម \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ពាក្យ​សម្ងាត់ហតស្ប៉ត៖ %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ចង់បើក Wi-Fi"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"បាន​ភ្ជាប់​ពីមុន​"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"បានភ្ជាប់ %1$s"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"បានផ្ដាច់ %1$s"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"សំណើ​ផ្គូផ្គង​តាម​ប៊្លូធូស"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ផ្គូផ្គង និងភ្ជាប់"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"លេខកូដផ្គូផ្គងប៊្លូធូស"</string>

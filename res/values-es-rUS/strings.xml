@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"Nivel de brillo"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo automático"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Adaptar el brillo de la pantalla al entorno"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Luz nocturna activada"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Internet y red"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Red móvil"</string>
@@ -149,7 +151,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Seguridad"</string>
     <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
     <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
-    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 Personal"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Ninguno"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda del PA"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Seleccionar banda para PA"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Usar hotspot de Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desactivado"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar hotspot automáticamente"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Si no hay dispositivos conectados, se desactivará el hotspot de Wi‑Fi"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Escanea este código QR para unirte a \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Contraseña del hotspot: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quiere activar la conexión Wi-Fi"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Conectados anteriormente"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Se conectó %1$s"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Se desconectó %1$s"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitud de vinculación mediante Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Vincular y conectar"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de vinculación mediante Bluetooth"</string>

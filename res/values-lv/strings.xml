@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"Spilgtuma līmenis"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptīvs spilgtums"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Pielāgojiet ekrāna spilgtumu videi"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Nakts režīms ir ieslēgts"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Tīkls un internets"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilais tīkls"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Tīklājs"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Izmantot Wi-Fi tīklāju"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Izslēgts"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automātiski izslēgt tīklāju"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi tīklājs tiks izslēgts, ja netiks pievienota neviena ierīce."</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Skenējiet šo kvadrātkodu, lai pievienotos “%s”."</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Tīklāja parole: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Lietotnē <xliff:g id="REQUESTER">%s</xliff:g> tiek mēģināts ieslēgt Wi-Fi savienojumu"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Ierīces, ar kurām iepriekš tika izveidots savienojums"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Savienojums ar %1$s izveidots"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Savienojums ar %1$s pārtraukts"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth pieprasījums savienošanai pārī"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Savienot pārī un izveidot savienojumu"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth kods savienošanai pārī"</string>

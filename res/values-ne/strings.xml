@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"चमकको स्तर"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"अनुकूलनीय चमक"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"वातावरणअनुसार स्क्रिनको चमक समायोजन गर्नुहोस्"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Night Light सक्रिय छ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"नेटवर्क र इन्टरनेट"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"मोबाइल नेटवर्क"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"हटस्पट"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi-Fi हटस्पट प्रयोग गर्नुहोस्"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"अफ छ"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"स्वतः Wi‑Fi हटस्पट अफ गर्नुहोस्"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कुनै पनि यन्त्र नजोडिँदा Wi‑Fi हटस्पट स्वतः निष्क्रिय हुने छ"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" मा कनेक्ट गर्न यो QR कोड स्क्यान गर्नुहोस्"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"हटस्पटको पासवर्ड: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi सक्रिय गर्न चाहन्छ"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"यसअघि कनेक्ट गरिएका यन्त्रहरू"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s कनेक्ट गरिएको छ"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s डिस्कनेक्ट गरिएको छ"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लुटुथसँग जोडा बनाउने अनुरोध"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"जोडा बनाउनुहोस् र कनेक्ट गर्नुहोस्"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लुटुथसँग जोडा बनाउने कोड"</string>
@@ -476,7 +486,7 @@
     <string name="regulatory_labels" msgid="3165587388499646779">"नियामक लेबलहरू"</string>
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"सुरक्षा र नियामकसम्बन्धी म्यानुअल"</string>
     <string name="copyright_title" msgid="4220237202917417876">"प्रतिलिपि अधिकार"</string>
-    <string name="license_title" msgid="936705938435249965">"इजाजतपत्र"</string>
+    <string name="license_title" msgid="936705938435249965">"लाइसेन्स"</string>
     <string name="terms_title" msgid="5201471373602628765">"सेवाका सर्तहरू"</string>
     <string name="webview_license_title" msgid="6442372337052056463">"प्रणालीका WebView इजाजतपत्रहरू"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"वालपेपरहरू"</string>

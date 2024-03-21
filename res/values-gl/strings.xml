@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"Nivel de brillo"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo intelixente"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Axusta o brillo da pantalla ao contorno"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Luz nocturna activada"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rede e Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rede de telefonía móbil"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Zona wifi"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Usar zona wifi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desactivada"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar zona wifi automaticamente"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Desactivarase a zona wifi se non se conecta ningún dispositivo"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Escanea este código QR para unirte a %s"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Contrasinal da zona wifi: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quere activar a wifi"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Conectados anteriormente"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s: conectouse"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s: desconectouse"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitude de sincronización por Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Sincronizar e conectar"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de sincronización por Bluetooth"</string>
@@ -366,7 +376,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ningunha aplicación"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Aplicación seleccionada"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"O asistente poderá ler información sobre as aplicacións en uso no teu sistema, incluídos os datos visibles na túa pantalla ou aos que se pode acceder desde as aplicacións."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Asegúrate de que confías nesta aplicación&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Autocompletar de Google&gt;%1$s&lt;/xliff:g&gt; utiliza o contido da pantalla para determinar o que se pode completar."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Asegúrate de que confías nesta aplicación&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; utiliza o contido da pantalla para determinar o que se pode completar."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Engadir servizo"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Apertura de ligazóns"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Aplicacións instaladas"</string>
