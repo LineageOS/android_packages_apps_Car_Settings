@@ -30,6 +30,13 @@
         android:summary="@string/auto_brightness_summary"
         android:title="@string/auto_brightness_title"
         settings:controller="com.android.car.settings.display.AdaptiveBrightnessTogglePreferenceController"/>
+    <com.android.car.settings.common.MultiActionPreference
+        android:key="@string/pk_theme_toggle"
+        android:title="@string/theme_toggle_title"
+        settings:controller="com.android.car.settings.display.ThemeTogglePreferenceController"
+        settings:action_item_one="toggleButton"
+        settings:action_item_two="toggleButton"
+        settings:action_item_three="toggleButton"/>
     <com.android.car.settings.common.DividerPreference/>
     <Preference
         android:fragment="com.android.car.settings.datetime.DatetimeSettingsFragment"

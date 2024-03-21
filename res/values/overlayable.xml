@@ -111,6 +111,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="icon_color_default"/>
       <item type="color" name="qc_default_icon_color"/>
       <item type="color" name="text_color_accent_with_disable"/>
+      <item type="color" name="theme_toggle_button_background"/>
+      <item type="color" name="theme_toggle_button_foreground"/>
+      <item type="color" name="theme_toggle_button_icon_color_checked"/>
+      <item type="color" name="theme_toggle_button_icon_color_unchecked"/>
+      <item type="color" name="theme_toggle_button_off_background_color"/>
       <item type="color" name="top_level_accessibility_background"/>
       <item type="color" name="top_level_accessibility_icon"/>
       <item type="color" name="top_level_applications_background"/>
@@ -253,6 +258,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="suggestions_text_padding_bottom"/>
       <item type="dimen" name="suggestions_text_padding_top"/>
       <item type="dimen" name="suggestions_top_bottom_margin"/>
+      <item type="dimen" name="theme_toggle_button_foreground_icon_inset"/>
+      <item type="dimen" name="theme_toggle_button_radius"/>
+      <item type="dimen" name="theme_toggle_button_size"/>
       <item type="dimen" name="tile_icon_margin_bottom"/>
       <item type="dimen" name="tile_margin_bottom"/>
       <item type="dimen" name="tile_margin_end"/>
@@ -386,6 +394,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_sync_cancel"/>
       <item type="drawable" name="ic_sync_problem"/>
       <item type="drawable" name="ic_system_update"/>
+      <item type="drawable" name="ic_theme_toggle_auto_button"/>
+      <item type="drawable" name="ic_theme_toggle_day_button"/>
+      <item type="drawable" name="ic_theme_toggle_night_button"/>
       <item type="drawable" name="ic_top_level_accessibility"/>
       <item type="drawable" name="ic_top_level_applications"/>
       <item type="drawable" name="ic_top_level_assistant_and_voice"/>
@@ -419,6 +430,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="profile_add_circle"/>
       <item type="drawable" name="profile_avatar_bg_circle"/>
       <item type="drawable" name="rectangle_ripple_mask"/>
+      <item type="drawable" name="theme_toggle_button_rotary_background"/>
       <item type="drawable" name="top_level_preference_background"/>
       <item type="drawable" name="top_level_preference_highlight"/>
       <item type="drawable" name="user_disclaimer_action_button_background"/>
@@ -909,6 +921,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="device_admin_deactivated_apps"/>
       <item type="string" name="device_admin_status"/>
       <item type="string" name="device_admin_warning"/>
+      <item type="string" name="device_connections_category_title"/>
       <item type="string" name="device_info_not_available"/>
       <item type="string" name="device_status"/>
       <item type="string" name="device_status_activity_title"/>
@@ -1383,6 +1396,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="text_to_speech_current_engine"/>
       <item type="string" name="text_to_speech_preferred_engine_settings"/>
       <item type="string" name="text_to_speech_settings"/>
+      <item type="string" name="theme_toggle_title"/>
       <item type="string" name="three"/>
       <item type="string" name="time_picker_title"/>
       <item type="string" name="tts_pitch"/>
@@ -1494,6 +1508,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="user_summary_not_set_up"/>
       <item type="string" name="user_switch"/>
       <item type="string" name="users_list_title"/>
+      <item type="string" name="uwb_toggle_summary"/>
+      <item type="string" name="uwb_toggle_title"/>
       <item type="string" name="vehicle_data_delete_user_summary"/>
       <item type="string" name="vehicle_data_delete_user_title"/>
       <item type="string" name="vehicle_data_summary"/>
@@ -1529,8 +1545,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_frequency"/>
       <item type="string" name="wifi_gateway"/>
       <item type="string" name="wifi_hotspot_ap_band_title"/>
-      <item type="string" name="wifi_hotspot_auto_off_summary"/>
-      <item type="string" name="wifi_hotspot_auto_off_title"/>
+      <item type="string" name="wifi_hotspot_keep_on_summary"/>
+      <item type="string" name="wifi_hotspot_keep_on_title"/>
       <item type="string" name="wifi_hotspot_name_summary_connected"/>
       <item type="string" name="wifi_hotspot_name_summary_connecting"/>
       <item type="string" name="wifi_hotspot_name_title"/>

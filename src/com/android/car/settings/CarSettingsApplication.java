@@ -26,6 +26,7 @@ import android.car.CarOccupantZoneManager;
 import android.car.CarOccupantZoneManager.OccupantZoneConfigChangeListener;
 import android.car.CarOccupantZoneManager.OccupantZoneInfo;
 import android.car.media.CarAudioManager;
+import android.car.wifi.CarWifiManager;
 import android.view.Display;
 
 import androidx.annotation.GuardedBy;
@@ -39,6 +40,7 @@ public class CarSettingsApplication extends Application {
 
     private final Object mInfoLock = new Object();
     private final Object mCarAudioManagerLock = new Object();
+    private final Object mCarWifiManagerLock = new Object();
 
     @GuardedBy("mInfoLock")
     private int mOccupantZoneDisplayId = Display.DEFAULT_DISPLAY;
@@ -48,6 +50,8 @@ public class CarSettingsApplication extends Application {
     private int mOccupantZoneType = CarOccupantZoneManager.OCCUPANT_TYPE_INVALID;
     @GuardedBy("mCarAudioManagerLock")
     private CarAudioManager mCarAudioManager = null;
+    @GuardedBy("mCarWifiManagerLock")
+    private CarWifiManager mCarWifiManager = null;
 
     /**
      * Listener to monitor any Occupant Zone configuration change.
@@ -67,6 +71,9 @@ public class CarSettingsApplication extends Application {
             synchronized (mCarAudioManagerLock) {
                 mCarAudioManager = null;
             }
+            synchronized (mCarWifiManagerLock) {
+                mCarWifiManager = null;
+            }
             return;
         }
         mCarOccupantZoneManager = (CarOccupantZoneManager) car.getCarManager(
@@ -77,6 +84,9 @@ public class CarSettingsApplication extends Application {
         }
         synchronized (mCarAudioManagerLock) {
             mCarAudioManager = (CarAudioManager) car.getCarManager(Car.AUDIO_SERVICE);
+        }
+        synchronized (mCarWifiManagerLock) {
+            mCarWifiManager = (CarWifiManager) car.getCarManager(Car.CAR_WIFI_SERVICE);
         }
         synchronized (mInfoLock) {
             updateZoneInfoLocked();
@@ -127,6 +137,16 @@ public class CarSettingsApplication extends Application {
     public final CarAudioManager getCarAudioManager() {
         synchronized (mCarAudioManagerLock) {
             return mCarAudioManager;
+        }
+    }
+
+    /**
+     * Returns CarAudioManager instance.
+     */
+    @Nullable
+    public final CarWifiManager getCarWifiManager() {
+        synchronized (mCarWifiManagerLock) {
+            return mCarWifiManager;
         }
     }
 

@@ -26,6 +26,8 @@
     <string name="auto_brightness_title">Adaptive brightness</string>
     <!-- Sound & display settings screen, setting option summary to enable adaptive brightness [CHAR LIMIT=100] -->
     <string name="auto_brightness_summary">Adjust screen brightness to environment</string>
+    <!-- Display settings screen, settings option name to change the system theme (day/night/auto) [CHAR LIMIT=30] -->
+    <string name="theme_toggle_title">Theme</string>
     <!-- Title of condition that night display is on (renamed "Night Light" with title caps) [CHAR LIMIT=30] -->
     <string name="condition_night_display_title">Night Light is on</string>
     <string name="keywords_display" translatable="false">screen, touchscreen</string>
@@ -346,9 +348,9 @@
     <!-- Subtitle for when Wi-Fi hotspot is toggled off [CHAR LIMIT=45] -->
     <string name="wifi_hotspot_state_off">Off</string>
     <!-- Title for the toggle to turn off hotspot automatically [CHAR LIMIT=50]-->
-    <string name="wifi_hotspot_auto_off_title">Turn off hotspot automatically</string>
+    <string name="wifi_hotspot_keep_on_title">Use hotspot for all drives</string>
     <!-- Summary for the toggle to turn off hotspot automatically [CHAR LIMIT=100]-->
-    <string name="wifi_hotspot_auto_off_summary">Wi\u2011Fi hotspot will turn off if no devices are connected</string>
+    <string name="wifi_hotspot_keep_on_summary">Make hotspot available whenever car is on</string>
     <!-- Content description for the hotspot state switch. [CHAR LIMIT=NONE] -->
     <string name="wifi_hotspot_state_switch_content_description" translatable="false">Hotspot toggle switch</string>
     <!-- Text for the hotspot QR code related information. [CHAR LIMIT=50] -->
@@ -445,6 +447,12 @@
     <string name="bluetooth_device_connected_toast">%1$s connected</string>
     <!-- Popup indicating that the user's bluetooth device has been disconnected [CHAR LIMIT=30] -->
     <string name="bluetooth_device_disconnected_toast">%1$s disconnected</string>
+    <!-- Title of device connections category [CHAR LIMIT=40] -->
+    <string name="device_connections_category_title">Device connections with your car</string>
+    <!-- Title of the UWB toggle [CHAR LIMIT=40] -->
+    <string name="uwb_toggle_title">Ultra\u2011Wideband &#40;UWB&#41;</string>
+    <!-- Summary of the UWB toggle [CHAR LIMIT=NONE]-->
+    <string name="uwb_toggle_summary">Helps your car identify the position of UWB devices</string>
 
     <!-- Bluetooth pairing --><skip/>
     <!-- Notification ticker text (shown in the status bar) when a Bluetooth device wants to pair with us -->
