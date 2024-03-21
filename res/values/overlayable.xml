@@ -921,6 +921,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="device_admin_deactivated_apps"/>
       <item type="string" name="device_admin_status"/>
       <item type="string" name="device_admin_warning"/>
+      <item type="string" name="device_connections_category_title"/>
       <item type="string" name="device_info_not_available"/>
       <item type="string" name="device_status"/>
       <item type="string" name="device_status_activity_title"/>
@@ -1507,6 +1508,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="user_summary_not_set_up"/>
       <item type="string" name="user_switch"/>
       <item type="string" name="users_list_title"/>
+      <item type="string" name="uwb_toggle_summary"/>
+      <item type="string" name="uwb_toggle_title"/>
       <item type="string" name="vehicle_data_delete_user_summary"/>
       <item type="string" name="vehicle_data_delete_user_title"/>
       <item type="string" name="vehicle_data_summary"/>
@@ -1542,8 +1545,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="wifi_frequency"/>
       <item type="string" name="wifi_gateway"/>
       <item type="string" name="wifi_hotspot_ap_band_title"/>
-      <item type="string" name="wifi_hotspot_auto_off_summary"/>
-      <item type="string" name="wifi_hotspot_auto_off_title"/>
+      <item type="string" name="wifi_hotspot_keep_on_summary"/>
+      <item type="string" name="wifi_hotspot_keep_on_title"/>
       <item type="string" name="wifi_hotspot_name_summary_connected"/>
       <item type="string" name="wifi_hotspot_name_summary_connecting"/>
       <item type="string" name="wifi_hotspot_name_title"/>
