@@ -18,6 +18,7 @@ package com.android.car.settings.sound;
 
 import static android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP;
 
+import android.bluetooth.BluetoothProfile;
 import android.car.media.AudioZoneConfigurationsChangeCallback;
 import android.car.media.CarAudioManager;
 import android.car.media.CarAudioZoneConfigInfo;
@@ -136,11 +137,17 @@ public class AudioRoutesManager {
         List<CachedBluetoothDevice> bluetoothDevices =
                 mBluetoothManager.getCachedDeviceManager().getCachedDevicesCopy().stream().toList();
         for (CachedBluetoothDevice bluetoothDevice : bluetoothDevices) {
-            if (bluetoothDevice.isConnectedA2dpDevice()
-                    && (!mAudioRouteItemMap.containsKey(bluetoothDevice.getAddress()))) {
-                AudioRouteItem audioRouteItem = new AudioRouteItem(bluetoothDevice);
-                mAddressList.add(audioRouteItem.getAddress());
-                mAudioRouteItemMap.put(audioRouteItem.getAddress(), audioRouteItem);
+            if (bluetoothDevice.isConnectedA2dpDevice()) {
+                if (mAudioRouteItemMap.containsKey(bluetoothDevice.getAddress())) {
+                    mAudioRouteItemMap.get(bluetoothDevice.getAddress())
+                            .setBluetoothDevice(bluetoothDevice);
+                    mAudioRouteItemMap.get(bluetoothDevice.getAddress())
+                            .setAudioRouteType(TYPE_BLUETOOTH_A2DP);
+                } else {
+                    AudioRouteItem audioRouteItem = new AudioRouteItem(bluetoothDevice);
+                    mAddressList.add(audioRouteItem.getAddress());
+                    mAudioRouteItemMap.put(audioRouteItem.getAddress(), audioRouteItem);
+                }
             }
         }
 
@@ -190,7 +197,11 @@ public class AudioRoutesManager {
         AudioRouteItem audioRouteItem = mAudioRouteItemMap.get(address);
         if (audioRouteItem.getAudioRouteType() == TYPE_BLUETOOTH_A2DP) {
             CachedBluetoothDevice bluetoothDevice = audioRouteItem.getBluetoothDevice();
-            bluetoothDevice.setActive();
+            if (bluetoothDevice.isActiveDevice(BluetoothProfile.A2DP)) {
+                setAudioRouteActive();
+            } else {
+                bluetoothDevice.setActive();
+            }
         } else {
             setAudioRouteActive();
         }
