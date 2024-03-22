@@ -361,6 +361,10 @@
             android:name=".common.CarSettingActivities$WifiTetherActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.android.settings.WIFI_TETHER_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_WifiTetherActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
