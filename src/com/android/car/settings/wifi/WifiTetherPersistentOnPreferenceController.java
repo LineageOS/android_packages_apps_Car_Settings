@@ -18,7 +18,6 @@ package com.android.car.settings.wifi;
 
 import static android.car.settings.CarSettings.Global.ENABLE_PERSISTENT_TETHERING;
 
-import android.car.Car;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.feature.Flags;
 import android.car.wifi.CarWifiManager;
@@ -26,6 +25,7 @@ import android.content.Context;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.CarSettingsApplication;
@@ -38,8 +38,10 @@ import com.android.car.settings.common.PreferenceController;
 public class WifiTetherPersistentOnPreferenceController extends
         PreferenceController<TwoStatePreference> {
 
-    private static final String ENABLED = "true";
-    private static final String DISABLED = "false";
+    @VisibleForTesting
+    static final String ENABLED = "true";
+    @VisibleForTesting
+    static final String DISABLED = "false";
 
     public WifiTetherPersistentOnPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
