@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"Ниво на яркостта"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптивна яркост"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Коригиране на яркостта на екрана спрямо околната среда"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Нощно осветление: Включено"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Мрежа и интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобилна мрежа"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка за достъп"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Използване на точка за достъп до Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Изкл."</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматично изключване на точката за достъп"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Точката за достъп до Wi‑Fi ще се изключва, когато няма свързани устройства"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Сканирайте QR кода, за да се присъедините към „%s“"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Парола за точката за достъп: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> иска да включи Wi-Fi"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"По-рано свързвани"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Установена е връзка с(ъс) %1$s"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s – връзката е прекратена"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Заявка за сдвояване чрез Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Сдвояване и свързване"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код за сдвояване с Bluetooth"</string>

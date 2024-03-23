@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"自動調校光暗"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"根據環境調整螢幕亮度"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"已開啟「夜燈模式」"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"網絡和互聯網"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"流動網絡"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"熱點"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"使用 Wi-Fi 熱點"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"關閉"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自動關閉熱點"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"當沒有連接任何裝置時，Wi‑Fi 熱點就會關閉"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"掃瞄此 QR 碼即可加入「%s」"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"熱點密碼：%s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"之前已連接的裝置"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"「%1$s」已連接"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"「%1$s」已解除連接"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"藍牙配對要求"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"配對並連線"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"藍牙配對碼"</string>

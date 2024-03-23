@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"Úroveň jasu"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptivní jas"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Přizpůsobit jas obrazovky okolí"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Noční režim je aktivní"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Síť a internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilní síť"</string>
@@ -124,7 +126,7 @@
     <string name="link_speed" msgid="7868861844075624445">"%1$d Mb/s"</string>
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
-    <string name="wifi_network_detail" msgid="9070182553555487360">"Podrobnosti sítě"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Podrobnosti o síti"</string>
     <string name="wifi_mac_address" msgid="1466178247802349180">"Adresa MAC"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"IP adresa"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"Maska podsítě"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Použít hotspot sítě Wi‑Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Vypnuto"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatické vypnutí hotspotu"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Pokud nebudou připojena žádná zařízení, hotspot Wi-Fi se vypne"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Připojte se k síti %s naskenováním QR kódu"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Heslo hotspotu: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Aplikace <xliff:g id="REQUESTER">%s</xliff:g> chce zapnout Wi-Fi"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Dříve připojeno"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Zařízení %1$s je připojeno"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Zařízení %1$s je odpojeno"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Požadavek na párování zařízení Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Párovat a připojit"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Párovací kód Bluetooth"</string>

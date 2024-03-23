@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"တောက်ပမှု"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"အလိုက်သင့် တောက်ပမှု"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ဖန်သားပြင်တောက်ပမှုကို ပတ်ဝန်းကျင်နှင့် ချိန်ညှိနိုင်သည်"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"\'ညအလင်းရောင်\' ကို ဖွင့်ထားသည်"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ကွန်ရက်နှင့် အင်တာနက်"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"မိုဘိုင်းကွန်ရက်"</string>
@@ -162,10 +164,12 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi ဟော့စပေါ့ လိုင်း-"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi-Fi ဟော့စပေါ့"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ဟော့စပေါ့"</string>
-    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi‑Fi ဟော့စပေါ့ သုံးခြင်း"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi‑Fi ဟော့စပေါ့ သုံးရန်"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ပိတ်"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ဟော့စပေါ့ကို အလိုအလျောက် ပိတ်ခြင်း"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"မည်သည့် စက်ပစ္စည်းကိုမျှ ချိတ်ဆက်ထားခြင်း မရှိလျှင် Wi‑Fi ဟော့စပေါ့ ပိတ်သွားပါမည်"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" သို့ ချိတ်ဆက်ရန် ဤ QR ကုဒ်ကို စကင်ဖတ်ပါ"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ဟော့စပေါ့စကားဝှက်- %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> က Wi-Fi ဖွင့်လိုသည်"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"ယခင်က ချိတ်ဆက်ထားသည်များ"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s ကို ချိတ်ဆက်ထားသည်"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s ကို ချိတ်ဆက်မထားပါ"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ဘလူးတုသ်တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"တွဲချိတ်ပြီးနောက် ချိတ်ဆက်ရန်"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ဘလူးတုသ် တွဲချိတ်ခြင်းကုဒ်"</string>
@@ -890,7 +900,7 @@
     <string name="captions_settings_text_size_large" msgid="5198207220911360512">"ကြီး"</string>
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"အလွန်ကြီး"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"စာတန်းပုံစံ"</string>
-    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"အက်ပ်က သတ်မှတ်ထားသည်"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"အက်ပ်သတ်မှတ်ချက်"</string>
     <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"အမည်းပေါ်အဖြူ"</string>
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"အဖြူပေါ်အမည်း"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"အမည်းပေါ်အဝါ"</string>

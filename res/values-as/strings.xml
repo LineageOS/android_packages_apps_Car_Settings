@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"উজ্জ্বলতাৰ স্তৰ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"অভিযোজিত উজ্জ্বলতা"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"স্ক্ৰীনৰ উজ্জ্বলতা আৰু সামগ্ৰিক অৱস্থা মিলাওক"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"ৰাতিৰ লাইট অন হৈ আছে"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"নেটৱৰ্ক আৰু ইণ্টাৰনেট"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"ম’বাইল নেটৱৰ্ক"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"হটস্পট"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ৱাই-ফাই হটস্পট ব্যৱহাৰ কৰক"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"অফ আছে"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"স্বয়ংক্ৰিয়ভাৱে হটস্পট অফ কৰক"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"যদি কোনো ডিভাইচ সংযোগ হৈ নাথাকে, তেন্তে ৱাই-ফাই হটস্পট অফ হ’ব"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\"ৰ সৈতে সংযোগ কৰিবলৈ এই কিউআৰ ক’ডটো স্কেন কৰক"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"হটস্পটৰ পাছৱৰ্ড: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>এ ৱাই-ফাই অন কৰিব বিচাৰে"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"আগতে সংযোগ কৰা"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s সংযোগ কৰা হ’ল"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$sৰ সংযোগ বিচ্ছিন্ন কৰা হ’ল"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ব্লুটুথ যোৰা লগোৱাৰ অনুৰোধ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"পেয়াৰ আৰু সংযোগ কৰক"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ব্লুটুথ যোৰ লগোৱা ক’ড"</string>
@@ -230,7 +240,7 @@
     <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"মিডিয়া"</string>
     <string name="language_settings" msgid="2079258598337245546">"ভাষা"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ভাষা আৰু ইনপুট"</string>
-    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"প্ৰস্তাৱিত"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"পৰামৰ্শিত"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"সকলো ভাষা"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"কীব’ৰ্ড"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"কীব’ৰ্ড পৰিচালনা কৰক"</string>

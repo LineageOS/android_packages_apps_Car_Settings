@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"רמת בהירות"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"בהירות מותאמת"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"התאמת בהירות המסך לסביבה"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"\'תאורת לילה\' פועלת"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"רשת ואינטרנט"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"רשת סלולרית"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"נקודת אינטרנט"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"שימוש בנקודת Wi-Fi לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"כבויה"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"כיבוי אוטומטי של הנקודה לשיתוף אינטרנט"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"נקודת ה-Wi‑Fi לשיתוף אינטרנט תיכבה כשאין אף מכשיר מחובר"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"אפשר לסרוק את קוד ה-QR הזה כדי להיכנס אל \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"הסיסמה של נקודת האינטרנט: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> רוצה להפעיל את ה-Wi-Fi"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"מכשירים שחוברו בעבר"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s מחובר"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s מנותק"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"בקשה להתאמת Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"התאמה וחיבור"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"קוד התאמת Bluetooth"</string>

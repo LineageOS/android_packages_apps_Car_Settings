@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"Nivel de luminozitate"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Luminozitate adaptivă"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajustează luminozitatea ecranului în funcție de mediu"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Lumina de noapte este activată"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rețea și internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rețea mobilă"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Folosește un hotspot Wi‑Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Dezactivat"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Dezactivează automat hotspotul"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspotul Wi-Fi se va dezactiva dacă nu se conectează niciun dispozitiv"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Scanează acest cod QR pentru a te conecta la %s"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Parola hotspotului: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> încearcă să activeze Wi-Fi"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Conectate anterior"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s s-a conectat"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s s-a deconectat"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitare de conectare prin Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Asociază și conectează"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Cod de conectare prin Bluetooth"</string>

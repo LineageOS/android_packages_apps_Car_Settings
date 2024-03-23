@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"ప్రకాశం స్థాయి"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"పరిసర అనుకూల ప్రకాశం"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"స్క్రీన్ ప్రకాశాన్ని పరిసరాలకు అనుగుణంగా సర్దుబాటు చేయండి"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"రాత్రి కాంతి ఆన్‌లో ఉంది"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"నెట్‌వర్క్ &amp; ఇంటర్నెట్"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"మొబైల్ నెట్‌వర్క్"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"హాట్‌స్పాట్"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi‑Fi హాట్‌స్పాట్‌ను ఉపయోగించండి"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ఆఫ్‌లో ఉంది"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"హాట్‌స్పాట్‌ని ఆటోమేటిక్‌గా ఆఫ్ చేయండి"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"పరికరాలు ఏవీ కనెక్ట్ కాకపోతే Wi‑Fi హాట్‌స్పాట్‌ ఆఫ్ అవుతుంది"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\"లో చేరడానికి ఈ QR కోడ్‌ను స్కాన్ చేయండి"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"హాట్‌స్పాట్ పాస్‌వర్డ్: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fiని ఆన్ చేయాలనుకుంటుంది"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"గతంలో కనెక్ట్ చేయబడినవి"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s కనెక్ట్ చేయబడింది"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s డిస్‌కనెక్ట్ చేయబడింది"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"బ్లూటూత్ జత చేయడానికి రిక్వెస్ట్‌"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"జత చేసి, కనెక్ట్ చేయి"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"బ్లూటూత్ పెయిరింగ్ కోడ్"</string>

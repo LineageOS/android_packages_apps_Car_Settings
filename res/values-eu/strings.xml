@@ -23,6 +23,8 @@
     <string name="brightness" msgid="2919605130898772866">"Distira"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Distira egokitua"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Doitu pantailaren distira ingurunearen arabera"</string>
+    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
+    <skip />
     <string name="condition_night_display_title" msgid="3777509730126972675">"Aktibatuta dago Gaueko argia"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Sareak eta Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Sare mugikorra"</string>
@@ -128,16 +130,16 @@
     <string name="wifi_mac_address" msgid="1466178247802349180">"MAC helbidea"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"IP helbidea"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"Azpisare-maskara"</string>
-    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNSa"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 helbideak"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Atebidea"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wifi-sarearen hobespenak"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Aktibatu wifi-konexioa automatikoki"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Gordetako kalitate handiko sare batetik (adibidez, etxeko saretik) gertu zaudenean aktibatuko da berriro wifi-konexioa"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Ez dago erabilgarri kokapena desaktibatuta dagoelako. Aktibatu "<annotation id="link">"kokapena"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wifi-sareen bilaketa aktibatu nahi al duzu?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wifi-sareak bilatzeko eginbidea aktibatu nahi duzu?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktibatu"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Aktibatu da Wifi-sareen bilaketa"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Aktibatu da Wifi-sareak bilatzea"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Aldatu datu-konexiora automatikoki"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wifi bidez ezin denean, erabili datu-konexioa Internetera konektatzeko. Baliteke zerbait ordaindu behar izatea datuak erabiltzeagatik."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Aurkitu wifi-sareak eta konektatu haietara"</string>
@@ -164,8 +166,10 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Wifi-gunea"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Erabili wifi-gunea"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desaktibatuta"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desaktibatu automatikoki wifi-gunea"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-gunea desaktibatu egingo da ez badauka gailurik konektatuta"</string>
+    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
+    <skip />
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Eskaneatu QR kodea hemen sartzeko: \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Wifi-gunearen pasahitza: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> aplikazioak wifia aktibatu nahi du"</string>
@@ -211,6 +215,12 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Aurretik konektatutakoak"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Konektatu da %1$s"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Deskonektatu da %1$s"</string>
+    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
+    <skip />
+    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth bidez parekatzeko eskaera"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Parekatu eta konektatu"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth bidez parekatzeko kodea"</string>
