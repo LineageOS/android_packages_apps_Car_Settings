@@ -76,4 +76,12 @@ public class AudioRouteItem {
     public AudioDeviceAttributes getAudioDeviceAttributes() {
         return mAudioDeviceAttributes;
     }
+
+    public void setBluetoothDevice(CachedBluetoothDevice bluetoothDevice) {
+        mBluetoothDevice = bluetoothDevice;
+    }
+
+    public void setAudioRouteType(@AudioDeviceInfo.AudioDeviceType int audioRouteType) {
+        mAudioRouteType = audioRouteType;
+    }
 }
