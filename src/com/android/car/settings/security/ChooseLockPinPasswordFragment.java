@@ -284,12 +284,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
             @Override
             public void onBackspaceClick() {
-                LockscreenCredential pin = getEnteredPassword();
-                if (pin.size() > 0) {
-                    mPasswordField.getText().delete(mPasswordField.getSelectionEnd() - 1,
-                            mPasswordField.getSelectionEnd());
+                try (LockscreenCredential pin = getEnteredPassword()) {
+                    if (pin.size() > 0) {
+                        mPasswordField.getText().delete(mPasswordField.getSelectionEnd() - 1,
+                                mPasswordField.getSelectionEnd());
+                    }
                 }
-                pin.zeroize();
             }
 
             @Override
@@ -302,8 +302,10 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     }
 
     private boolean shouldEnableSubmit() {
-        return mPasswordHelper.validateCredential(getEnteredPassword(), mExistingCredential)
+        try (LockscreenCredential enteredCredential = getEnteredPassword()) {
+            return mPasswordHelper.validateCredential(enteredCredential, mExistingCredential)
                 && (mSaveLockWorker == null || mSaveLockWorker.isFinished());
+        }
     }
 
     private void updateSubmitButtonsState() {
@@ -407,7 +409,9 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             mPinPad.setEnterKeyIcon(mUiStage.enterKeyIcon);
         }
 
-        mPasswordHelper.validateCredential(getEnteredPassword(), mExistingCredential);
+        try (LockscreenCredential enteredCredential = getEnteredPassword()) {
+            mPasswordHelper.validateCredential(enteredCredential, mExistingCredential);
+        }
         mHintMessage.setText(mPasswordHelper.getCredentialValidationErrorMessages());
 
         setHintIfNeeded();

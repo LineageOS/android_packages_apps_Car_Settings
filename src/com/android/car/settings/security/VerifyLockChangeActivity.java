@@ -60,7 +60,7 @@ public class VerifyLockChangeActivity extends BaseCarSettingsActivity implements
     @Override
     public void onLockVerified(LockscreenCredential lock) {
         Intent data = new Intent();
-        data.putExtra(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, lock);
+        data.putExtra(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, lock.duplicate());
         data.putExtra(PasswordHelper.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
         setResult(RESULT_OK, data);
         finish();
