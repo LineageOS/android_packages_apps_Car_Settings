@@ -110,6 +110,8 @@
         <item>@string/pk_bluetooth_paired_devices</item>
     </string-array>
 
+    <!-- Whether list and multi-select preference selection changes should propagate instantly -->
+    <bool name="car_ui_preference_list_instant_change_callback">true</bool>
     <!--
         Whether to allow chevrons on top-level preferences when enabled for
         car-ui-lib preferences.

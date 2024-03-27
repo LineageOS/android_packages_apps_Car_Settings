@@ -21,6 +21,7 @@ import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.car.feature.Flags;
+import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.ListPreference;
@@ -41,6 +42,7 @@ public class AudioRouteSelectorController extends PreferenceController<ListPrefe
     private AudioRoutesManager mAudioRoutesManager;
     private AudioRouteItem mAudioRouteItem;
     private int mUsage;
+    private Toast mToast;
     private AudioRoutesManager.AudioZoneConfigUpdateListener mUpdateListener =
             () -> updateState(getPreference());
 
@@ -72,6 +74,7 @@ public class AudioRouteSelectorController extends PreferenceController<ListPrefe
         if (newAddress.equals(activeDeviceAddress)) {
             return true;
         }
+        showToast();
         mAudioRouteItem = mAudioRoutesManager.updateAudioRoute(newAddress);
         return true;
     }
@@ -125,5 +128,15 @@ public class AudioRouteSelectorController extends PreferenceController<ListPrefe
     @VisibleForTesting
     void setAudioRoutesManager(AudioRoutesManager audioRoutesManager) {
         mAudioRoutesManager = audioRoutesManager;
+    }
+
+    private void showToast() {
+        if (mToast != null) {
+            mToast.cancel();
+        }
+        String text = getContext().getString(R.string.audio_route_selector_toast);
+        int duration = getContext().getResources().getInteger(R.integer.audio_route_toast_duration);
+        mToast = Toast.makeText(getContext(), text, duration);
+        mToast.show();
     }
 }

@@ -80,4 +80,8 @@
     <!-- The usage that the audio route selector is for. 1 represents USAGE_MEDIA in
     AudioAttributes. Currently only USAGE_MEDIA is supported for audio routing in the backend. -->
     <integer name="audio_route_selector_usage">1</integer>
+
+    <!-- How long to display the message for the toast of audio route changing.
+     1 for LENGTH_LONG and 0 for LENGTH_SHORT. -->
+    <integer name="audio_route_toast_duration">0</integer>
 </resources>
