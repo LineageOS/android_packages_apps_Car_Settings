@@ -83,7 +83,8 @@ public class AudioRouteSelectorController extends PreferenceController<ListPrefe
         }
         if (getContext().getResources().getBoolean(R.bool.config_allow_audio_destination_selection)
                 && mAudioRoutesManager.getCarAudioManager()
-                .isAudioFeatureEnabled(AUDIO_FEATURE_DYNAMIC_ROUTING)) {
+                .isAudioFeatureEnabled(AUDIO_FEATURE_DYNAMIC_ROUTING)
+                && mAudioRoutesManager.getAudioRouteList().size() > 1) {
             return AVAILABLE;
         }
         return CONDITIONALLY_UNAVAILABLE;
