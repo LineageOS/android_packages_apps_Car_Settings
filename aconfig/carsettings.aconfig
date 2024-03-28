@@ -1,0 +1,9 @@
+package: "com.android.car.settings"
+container: "system"
+
+flag {
+    name: "ui_theme_toggle"
+    namespace: "car_sys_exp"
+    description: "Flag to show the new UI theme toggle within settings and quick controls"
+    bug: "260762437"
+}

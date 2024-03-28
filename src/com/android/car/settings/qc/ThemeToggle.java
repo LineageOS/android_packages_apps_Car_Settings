@@ -21,7 +21,6 @@ import static android.car.settings.CarSettings.Global.FORCED_DAY_NIGHT_MODE;
 import static com.android.car.qc.QCItem.QC_TYPE_ACTION_TOGGLE;
 
 import android.app.PendingIntent;
-import android.car.feature.Flags;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Icon;
@@ -33,6 +32,7 @@ import com.android.car.qc.QCActionItem;
 import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
+import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 
 /**
@@ -50,7 +50,7 @@ public final class ThemeToggle extends SettingsQCItem {
 
     @Override
     QCItem getQCItem() {
-        if (!Flags.carNightGlobalSetting()) {
+        if (!android.car.feature.Flags.carNightGlobalSetting() || !Flags.uiThemeToggle()) {
             return null;
         }
         QCList.Builder listBuilder = new QCList.Builder();
@@ -81,7 +81,7 @@ public final class ThemeToggle extends SettingsQCItem {
 
     @Override
     Class getBackgroundWorkerClass() {
-        if (!Flags.carNightGlobalSetting()) {
+        if (!android.car.feature.Flags.carNightGlobalSetting() || !Flags.uiThemeToggle()) {
             return null;
         }
         return ThemeToggleWorker.class;
