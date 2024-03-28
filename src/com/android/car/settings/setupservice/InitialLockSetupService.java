@@ -113,7 +113,8 @@ public class InitialLockSetupService extends Service {
                     return LockscreenCredential.createPin(pinStr);
                 case LockTypes.PATTERN:
                     List<LockPatternView.Cell> pattern =
-                            LockPatternUtils.byteArrayToPattern(password);
+                            LockPatternUtils.byteArrayToPattern(password,
+                            LockPatternUtils.PATTERN_SIZE_DEFAULT);
                     return LockscreenCredential.createPattern(pattern,
                             LockPatternUtils.PATTERN_SIZE_DEFAULT);
                 default:
