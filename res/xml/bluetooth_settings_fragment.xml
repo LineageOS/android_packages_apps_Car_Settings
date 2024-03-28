@@ -55,6 +55,7 @@
             android:key="@string/pk_uwb_key"
             android:title="@string/uwb_toggle_title"
             android:summary="@string/uwb_toggle_summary"
+            android:icon="@drawable/ic_uwb"
             android:persistent="false"
             settings:occupant_front_passenger="read"
             settings:occupant_rear_passenger="read"
