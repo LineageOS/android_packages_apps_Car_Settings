@@ -19,7 +19,6 @@ package com.android.car.settings.display;
 import static android.car.settings.CarSettings.Global.FORCED_DAY_NIGHT_MODE;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.feature.Flags;
 import android.car.settings.CarSettings;
 import android.content.Context;
 import android.database.ContentObserver;
@@ -31,6 +30,7 @@ import android.provider.Settings;
 
 import androidx.annotation.VisibleForTesting;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseActionItem;
 import com.android.car.settings.common.FragmentController;
@@ -134,7 +134,7 @@ public class ThemeTogglePreferenceController extends PreferenceController<MultiA
 
     @Override
     public int getDefaultAvailabilityStatus() {
-        if (!Flags.carNightGlobalSetting()) {
+        if (!android.car.feature.Flags.carNightGlobalSetting() || !Flags.uiThemeToggle()) {
             return UNSUPPORTED_ON_DEVICE;
         }
         return AVAILABLE;
