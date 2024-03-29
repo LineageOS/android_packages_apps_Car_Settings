@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Úroveň jasu"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Prispôsobivý jas"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Prispôsobenie jasu obrazovky prostrediu"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Motív"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Nočný režim je zapnutý"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Sieť a internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilná sieť"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Použiť hotspot Wi‑Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Vypnuté"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Používať hotspot pre všetky jazdy"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Aktivovať hotspot, keď je auto naštartované"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Pripojte sa k sieti %s naskenovaním QR kódu"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Heslo hotspotu: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> chce zapnúť Wi‑Fi"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Predtým pripojené zariadenia"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Zariadenie %1$s je pripojené"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Zariadenie %1$s je odpojené"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Pripojenia zariadenia k autu"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultra‑Wideband (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Pomáha autu rozpoznať umiestnenie zariadení UWB"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Žiadosť o párovanie zariadenia Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Párovať a pripojiť"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Párovací kód Bluetooth"</string>

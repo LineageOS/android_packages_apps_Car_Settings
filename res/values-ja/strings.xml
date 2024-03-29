@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"明るさのレベル"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"明るさの自動調節"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"環境に合わせて画面の明るさを調節します"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"テーマ"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"夜間モード ON"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ネットワークとインターネット"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"モバイル ネットワーク"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"アクセス ポイント"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi-Fi アクセス ポイントを使用する"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"OFF"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"すべてのドライブでアクセス ポイントを利用する"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"車のエンジンがかかっているときにアクセス ポイントを利用できるようにします"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"%s に参加するには、この QR コードをスキャンします"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"アクセス ポイントのパスワード: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」が Wi-Fi を ON にしようとしています"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"以前に接続したデバイス"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s に接続しました"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s との接続を解除しました"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"デバイスと車との接続"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"超広帯域無線（UWB）"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"UWB デバイスの位置を車が特定できるようにします"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth のペア設定リクエスト"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ペア設定して接続"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth ペア設定コード"</string>

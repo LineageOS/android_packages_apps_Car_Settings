@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Level ng brightness"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptive brightness"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Iangkop ang liwanag ng screen sa kapaligiran"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Tema"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Naka-on ang Night Light"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Network at internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobile network"</string>
@@ -88,7 +87,7 @@
     <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Na-off ang internet sa sasakyan. Posibleng mapigilan nitong gumana ang ilang feature o app ng sasakyan. Patuloy na ibabahagi sa manufacturer ng sasakyan ang kritikal na data na kinakailangan para mapagana ang iyong sasakyan."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s ang nagamit %2$s - %3$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Sumali sa ibang network"</string>
-    <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Mga kagustuhan sa network"</string>
+    <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Mga preference sa network"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Ino-on ang Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Ino-off ang Wi-Fi…"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Gamitin ang Wi‑Fi hotspot"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Naka-off"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Gumamit ng hotspot para sa lahat ng biyahe"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Gawing available ang hotspot tuwing naka-on ang kotse"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"I-scan ang QR code na ito para makasali sa \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Password ng hotspot: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Gustong i-on ng <xliff:g id="REQUESTER">%s</xliff:g> ang Wi-Fi"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Dating nakakonekta"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Nakakonekta ang %1$s"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Nadiskonekta ang %1$s"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Mga koneksyon sa device sa kotse mo"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultra‑Wideband (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Tumutulong sa kotse mo na matukoy ang posisyon ng mga UWB device"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Kahilingan sa pagpapares ng Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Ipares at kumonekta"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Code ng pagpapares ng Bluetooth"</string>

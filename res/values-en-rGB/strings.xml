@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Brightness level"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptive brightness"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Adjust screen brightness to environment"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Theme"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Night Light is on"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Network and Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobile network"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Use Wi‑Fi hotspot"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Off"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Use hotspot for all drives"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Make hotspot available whenever car is on"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Scan this QR code to join \'%s\'"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Hotspot password: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wants to turn on Wi-Fi"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Previously connected"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s connected"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s disconnected"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Device connections with your car"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultra‑wideband (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Helps your car identify the position of UWB devices"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth pairing request"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Pair &amp; connect"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth pairing code"</string>

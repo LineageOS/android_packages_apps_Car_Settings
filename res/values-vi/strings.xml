@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Độ sáng"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Độ sáng thích ứng"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Điều chỉnh độ sáng của màn hình theo môi trường"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Giao diện"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Chế độ ánh sáng đêm đang bật"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Mạng và Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mạng di động"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Điểm phát sóng"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Sử dụng điểm phát sóng Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Tắt"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Sử dụng điểm phát sóng cho tất cả chế độ lái"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Bật điểm phát sóng mỗi khi ô tô khởi động"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Quét mã QR để kết nối \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Mật khẩu điểm phát sóng: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> muốn bật Wi-Fi"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Đã kết nối trước đây"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Đã kết nối %1$s"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Đã ngắt kết nối %1$s"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Kết nối giữa các thiết bị với ô tô"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Băng tần siêu rộng (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Giúp ô tô xác định được vị trí của các thiết bị UWB"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Yêu cầu ghép nối Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Ghép nối và kết nối"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Mã ghép nối Bluetooth"</string>

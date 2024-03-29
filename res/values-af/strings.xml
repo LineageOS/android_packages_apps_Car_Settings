@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Helderheidvlak"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Aanpasbare helderheid"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Pas skermhelderheid by omgewing aan"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Tema"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Aandbeligting is aan"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netwerk en internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Selnetwerk"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Warmkol"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Gebruik wi-fi-warmkol"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Af"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Gebruik warmkol vir alle ritte"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Stel warmkol beskikbaar wanneer die motor ook al aan is"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Skandeer hierdie QR-kode om by \"%s\" aan te sluit"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Warmkolwagwoord: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> wil Wi-Fi aanskakel"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Voorheen gekoppel"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s is gekoppel"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s is ontkoppel"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Toestelverbindings met jou motor"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultrawyeband (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Help jou motor om die posisie van UWB-toestelle te identifiseer"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth-saambindversoek"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Bind saam en koppel"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-saambindkode"</string>
@@ -317,11 +311,11 @@
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Liter per honderd kilometer"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Programme en kennisgewings"</string>
     <string name="all_applications" msgid="7798210477486822168">"Wys alle programme"</string>
-    <string name="default_applications" msgid="1558183275638697087">"Verstekprogramme"</string>
+    <string name="default_applications" msgid="1558183275638697087">"Verstekapps"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"Apps wat werkverrigting beïnvloed"</string>
     <string name="app_permissions" msgid="32799922508313948">"Programtoestemmings"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Beheer apptoegang tot jou data"</string>
-    <string name="applications_settings" msgid="794261395191035632">"Programinligting"</string>
+    <string name="applications_settings" msgid="794261395191035632">"Appinligting"</string>
     <string name="force_stop" msgid="1616958676171167028">"Stop app"</string>
     <string name="force_stop_dialog_title" msgid="4481858344628934971">"Stop app?"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"As jy \'n program dwing om te stop, kan dit wangedra."</string>
@@ -393,7 +387,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Vra elke keer"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Moenie in hierdie program oopmaak nie"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Gesteunde skakels"</string>
-    <string name="apps_settings_title" msgid="3982535942394315336">"Programme"</string>
+    <string name="apps_settings_title" msgid="3982535942394315336">"Apps"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"Onlangs oopgemaak"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Bekyk al %1$d programme"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"Toestemmingbestuurder"</string>
@@ -484,7 +478,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Bydraers"</string>
     <string name="manual" msgid="4819839169843240804">"Handmatig"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Regulatoriese etikette"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Veiligheid- en regulatoriese handleiding"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Regulasie- en veiligheidsgids"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Kopiereg"</string>
     <string name="license_title" msgid="936705938435249965">"Lisensie"</string>
     <string name="terms_title" msgid="5201471373602628765">"Bepalings en voorwaardes"</string>
@@ -773,7 +767,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Kan nie profiel byvoeg terwyl jy bestuur nie"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Soek"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistent en stem"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Digitaleassistentprogram"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Digitaleassistentapp"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Gebruik teks op die skerm"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Gee Assistent toegang tot skerminhoud"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Gebruik skermkiekie"</string>
@@ -847,7 +841,7 @@
     <string name="enterprise_privacy_location_access" msgid="3132799413005627076">"Liggingtoestemmings"</string>
     <string name="enterprise_privacy_microphone_access" msgid="4094467062253345379">"Mikrofoontoestemmings"</string>
     <string name="enterprise_privacy_camera_access" msgid="8895281017339143744">"Kameratoestemmings"</string>
-    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Verstekprogramme"</string>
+    <string name="enterprise_privacy_enterprise_set_default_apps" msgid="3386806357685549519">"Verstekapps"</string>
     <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"Versteksleutelbord"</string>
     <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Stel op <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Globale HTTP-instaanbediener is gestel"</string>
@@ -899,7 +893,7 @@
     <string name="captions_settings_text_size_large" msgid="5198207220911360512">"Groot"</string>
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Baie groot"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"Onderskrifstyl"</string>
-    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Stel volgens program"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Stel volgens app"</string>
     <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Wit op swart"</string>
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Swart op wit"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Geel op swart"</string>

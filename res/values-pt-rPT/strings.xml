@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Nível de luminosidade"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosidade adaptável"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Ajuste o luminosidade do ecrã ao ambiente"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Tema"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"A Luz noturna está ativada"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rede e Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rede móvel"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Zona Wi-Fi"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Usar zona Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desligada"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Usar a zona Wi-Fi em todos os percursos"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Torne a zona Wi-Fi disponível sempre que o carro estiver ligado"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Leia este código QR para aderir a \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Palavra-passe da zona Wi-Fi: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"A aplicação <xliff:g id="REQUESTER">%s</xliff:g> quer ativar o Wi-Fi"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Ligados anteriormente"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s ligado"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s desligado"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Ligações do dispositivo com o carro"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Banda ultralarga (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Ajuda o carro a identificar a posição dos dispositivos de UWB"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Pedido de sincronização de Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Sincronizar e ligar"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de sincronização Bluetooth"</string>

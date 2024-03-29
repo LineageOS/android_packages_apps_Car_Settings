@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"自适应亮度"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"根据环境调节屏幕亮度"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"主题"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"“护眼模式”已开启"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"网络和互联网"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"移动网络"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"热点"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"使用 WLAN 热点"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"已关闭"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"在每次驾车时使用热点"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"让热点在每次驾车时都可供使用"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"扫描此二维码即可加入“%s”"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"热点密码：%s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>请求开启 WLAN"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"之前连接过的设备"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"已连接“%1$s”"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"已断开与“%1$s”的连接"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"设备与您汽车间的连接"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"超宽带 (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"帮助您的汽车识别 UWB 设备的位置"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"蓝牙配对请求"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"配对和连接"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"蓝牙配对码"</string>
