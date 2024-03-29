@@ -20,7 +20,7 @@
     <string name="settings_label" msgid="5147911978211079839">"Postavke"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"Više"</string>
     <string name="display_settings" msgid="5325515247739279185">"Zaslon"</string>
-    <string name="brightness" msgid="2919605130898772866">"Jačina svjetline"</string>
+    <string name="brightness" msgid="2919605130898772866">"Svjetlina zaslona"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Prilagodljiva svjetlina"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Prilagodba svjetline zaslona okruženju"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Noćno je svjetlo uključeno"</string>
@@ -33,7 +33,7 @@
     <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Neaktivno / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Dodajte više"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilni podaci"</string>
-    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Pristupi podacima pomoću mobilne mreže"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Pristupi podacima putem mobilne mreže"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilna mreža"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Koristi mobilne podatke"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Isključeno"</string>
@@ -45,7 +45,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Poveži se s podatkovnim uslugama u roamingu"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Želite li dopustiti roaming podataka?"</string>
-    <string name="roaming_warning" msgid="4908184914868720704">"Možda se naplaćuju dodatne naknade za roaming."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Moguća je naplata dodatnih naknada za roaming."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Potrošnja podataka"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Primarni podaci"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Iskorišteno: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -206,7 +206,7 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Aplikacija želi vašu glavnu jedinicu učiniti vidljivom drugim Bluetooth uređajima na <xliff:g id="TIMEOUT">%1$d</xliff:g> s."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"Aplikacija <xliff:g id="APP_NAME">%1$s</xliff:g> želi uključiti Bluetooth i vašu glavnu jedinicu učiniti vidljivom drugim uređajima na <xliff:g id="TIMEOUT">%2$d</xliff:g> s."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikacija želi uključiti Bluetooth i vašu glavnu jedinicu učiniti vidljivom drugim uređajima na <xliff:g id="TIMEOUT">%1$d</xliff:g> s."</string>
-    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Vidljiv kao %1$s drugim uređajima"</string>
+    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Drugim uređajima vidljivo kao %1$s"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Moji uređaji"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Prethodno povezano"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Povezano: %1$s"</string>

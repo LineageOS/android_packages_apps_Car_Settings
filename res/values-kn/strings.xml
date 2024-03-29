@@ -33,7 +33,7 @@
     <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"ನಿಷ್ಕ್ರಿಯ / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ಇನ್ನಷ್ಟು ಸೇರಿಸಿ"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ಮೊಬೈಲ್ ಡೇಟಾ"</string>
-    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಿ"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸಿ"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"ಆಫ್"</string>
@@ -43,7 +43,7 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"ಮೊಬೈಲ್ ಡೇಟಾಗಾಗಿ ನೀವು <xliff:g id="CARRIER2_0">%2$s</xliff:g> ಬಳಸುತ್ತಿರುವಿರಿ. ನೀವು <xliff:g id="CARRIER1">%1$s</xliff:g> ಗೆ ಬದಲಾಯಿಸಿದರೆ, ಇನ್ನು ಮುಂದೆ <xliff:g id="CARRIER2_1">%2$s</xliff:g> ಅನ್ನು ಮೊಬೈಲ್ ಡೇಟಾಗಾಗಿ ಬಳಸಲಾಗುವುದಿಲ್ಲ."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> ಅನ್ನು ಬಳಸಿ"</string>
     <string name="roaming_title" msgid="6218635014519017734">"ರೋಮಿಂಗ್"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"ರೋಮಿಂಗ್‌ನಲ್ಲಿರುವಾಗ ಡೇಟಾ ಸೇವೆಗಳಿಗೆ ಸಂಪರ್ಕಿಸಿ"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ರೋಮಿಂಗ್‌ನಲ್ಲಿರುವಾಗ ಡೇಟಾ ಸೇವೆಗಳಿಗೆ ಕನೆಕ್ಟ್ ಮಾಡಿ"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"ಡೇಟಾ ರೋಮಿಂಗ್ ಅನುಮತಿಸುವುದೇ?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"ರೋಮಿಂಗ್ ಶುಲ್ಕಗಳು ಅನ್ವಯವಾಗಬಹುದು."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ಡೇಟಾ ಬಳಕೆ"</string>
@@ -539,7 +539,7 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"ಸಮಯ ವಲಯದ ಅನುಸಾರ ವಿಂಗಡಿಸಿ"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"ದಿನಾಂಕ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"ಸಮಯ"</string>
-    <string name="user_admin" msgid="1535484812908584809">"ನಿರ್ವಾಹಕ"</string>
+    <string name="user_admin" msgid="1535484812908584809">"ನಿರ್ವಾಹಕರು"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ನಿರ್ವಾಹಕರಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"ನಿರ್ವಾಹಕರ ಅನುಮತಿಗಳನ್ನು ನೀಡಬೇಕೇ?"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"ನಿರ್ವಹಣೆ ಮಾಡಿ"</string>
