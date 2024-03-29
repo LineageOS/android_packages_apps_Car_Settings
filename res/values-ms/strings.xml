@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Tahap kecerahan"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Kecerahan boleh suai"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Laraskan kecerahan skrin mengikut persekitaran"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Tema"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Cahaya Malam dihidupkan"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rangkaian &amp; Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rangkaian mudah alih"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Tempat liputan"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Gunakan tempat liputan Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Mati"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Gunakan tempat liputan untuk semua pemanduan"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Sediakan tempat liputan pada bila-bila masa kereta dihidupkan"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Imbas kod QR ini untuk sertai \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Kata laluan tempat liputan: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> mahu menghidupkan Wi-Fi"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Disambungkan sebelum ini"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s disambungkan"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s diputuskan sambungan"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Sambungan peranti dengan kereta anda"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Jalur Ultralebar (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Bantu kereta anda mengenal pasti kedudukan peranti UWB"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Permintaan penggandingan Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Gandingkan &amp; sambung"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Kod gandingan Bluetooth"</string>
@@ -900,10 +894,10 @@
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Sangat besar"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"Gaya sari kata"</string>
     <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Ditetapkan oleh apl"</string>
-    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Putih pada hitam"</string>
-    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Hitam pada putih"</string>
-    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Kuning pada hitam"</string>
-    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Kuning pada biru"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Putih berlatar hitam"</string>
+    <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Hitam berlatar putih"</string>
+    <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Kuning berlatar hitam"</string>
+    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Kuning berlatar biru"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Pembaca skrin"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Mati"</string>
     <string name="screen_reader_settings_on" msgid="2168217218643349459">"Tuturkan item pada skrin"</string>

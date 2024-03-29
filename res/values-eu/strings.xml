@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Distira"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Distira egokitua"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Doitu pantailaren distira ingurunearen arabera"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Gaia"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Aktibatuta dago Gaueko argia"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Sareak eta Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Sare mugikorra"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Wifi-gunea"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Erabili wifi-gunea"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Desaktibatuta"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Erabili wifi-gunea bidaia guztietan"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Jarri wifi-gunea erabilgarri autoa aktibatuta dagoenean"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Eskaneatu QR kodea hemen sartzeko: \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Wifi-gunearen pasahitza: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> aplikazioak wifia aktibatu nahi du"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Aurretik konektatutakoak"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Konektatu da %1$s"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Deskonektatu da %1$s"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Autora konektatutako konexioak"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Banda ultrazabala"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Autoari banda ultrazabaleko gailuen posizioa identifikatzen laguntzen dio"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth bidez parekatzeko eskaera"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Parekatu eta konektatu"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth bidez parekatzeko kodea"</string>
@@ -914,11 +908,11 @@
     <string name="camera_toggle_title" msgid="1990732328673068456">"Erabili kamera"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Eman kamera erabiltzeko baimena aplikazio guztiei"</string>
     <string name="camera_manage_permissions" msgid="9005596413781984368">"Kudeatu kamera erabiltzeko baimenak"</string>
-    <string name="camera_recently_accessed" msgid="8084100710444691977">"Berriki atzitu dutenak"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Azkenaldian atzitu dutenak"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Ez dago azkenaldian atzitu duen aplikaziorik"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Ez dago sarbidea duen aplikaziorik"</string>
     <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{#/{total_count} aplikaziok du sarbidea}other{#/{total_count} aplikaziok dute sarbidea}}"</string>
-    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Berriki atzitu dutenak"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Azkenaldian atzitu dutenak"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Ikusi guztiak"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Kargatzen…"</string>
 </resources>

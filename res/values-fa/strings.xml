@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"میزان روشنایی"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"روشنایی تطبیقی"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"تنظیم روشنایی صفحه‌نمایش متناسب با محیط"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"زمینه"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"«نور شب» روشن است"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"شبکه و اینترنت"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"شبکه تلفن همراه"</string>
@@ -81,7 +80,7 @@
     <string name="data_usage_settings_footer" msgid="681881387909678237">"دستگاهتان میزان مصرف داده را اندازه‌گیری می‌کند. این میزان ممکن است با میزانی که شرکت مخابراتی تلفن همراهتان اندازه‌گیری می‌کند متفاوت باشد."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"تنظیم کردن"</string>
     <string name="data_usage_warning_save_title" msgid="2900544287239037695">"ذخیره"</string>
-    <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"شبکه OEM"</string>
+    <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"شبکه سازنده اصلی محصول"</string>
     <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"اینترنت خودرو"</string>
     <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"اگر اینترنت خودرو خاموش شود، ممکن است برخی‌از برنامه‌ها یا ویژگی‌های خودرو کار نکنند.\n\nداده‌های مهمی که برای عملکرد خودرو ضروری هستند همچنان با سازنده خودرو هم‌رسانی خواهند شد."</string>
     <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"درهرصورت خاموش شود"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"نقطه اتصال"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"استفاده از نقطه اتصال Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"خاموش"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"استفاده از نقطه اتصال برای همه سفرها"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"هرزمان خودرو روشن شود، نقطه اتصال دردسترس قرار می‌گیرد"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"برای پیوستن به «%s»، رمزینه پاسخ‌سریع را اسکن کنید"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"گذرواژه نقطه اتصال: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> می‌خواهد Wi-Fi را روشن کند"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"قبلاً متصل‌شده"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s متصل شد"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"اتصال %1$s قطع شد"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"اتصال‌های دستگاه با خودرو"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"باند فوق‌وسیع (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"به خودروتان کمک می‌کند موقعیت دستگاه‌های مجهز به باند فوق‌وسیع را شناسایی کند"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"درخواست مرتبط‌سازی بلوتوث"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"مرتبط‌ کردن و اتصال"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"کد مرتبط‌سازی بلوتوث"</string>

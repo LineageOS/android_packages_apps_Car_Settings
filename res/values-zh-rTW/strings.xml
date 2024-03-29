@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"自動調整亮度"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"根據環境調整螢幕亮度"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"主題"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"夜燈模式已開啟"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"網路與網際網路"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"行動網路"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"無線基地台"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"使用 Wi‑Fi 無線基地台"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"關閉"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"開車時一律使用無線基地台"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"在車輛發動時啟用無線基地台"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"掃描這個 QR code 即可加入「%s」"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"無線基地台密碼：%s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"先前連線的裝置"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"已連線到「%1$s」"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"已中斷與「%1$s」的連線"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"車輛與裝置間的連結"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"超寬頻 (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"協助車輛判斷 UWB 裝置的位置"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"藍牙配對要求"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"配對並連線"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"藍牙配對碼"</string>
@@ -383,7 +377,7 @@
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"不要開啟支援的連結"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"開啟 <xliff:g id="DOMAIN">%s</xliff:g>"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"開啟 <xliff:g id="DOMAIN">%s</xliff:g> 和其他網址"</string>
-    <string name="app_launch_title" msgid="3442601467010363057">"預設為開啟"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"預設開啟"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"其他預設值"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"沒有預設值。"</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"你已預設在執行某些動作時啟動這個應用程式。"</string>
@@ -485,7 +479,7 @@
     <string name="manual" msgid="4819839169843240804">"手動"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"法規標籤"</string>
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"安全性和法規手冊"</string>
-    <string name="copyright_title" msgid="4220237202917417876">"版權"</string>
+    <string name="copyright_title" msgid="4220237202917417876">"著作權"</string>
     <string name="license_title" msgid="936705938435249965">"授權"</string>
     <string name="terms_title" msgid="5201471373602628765">"條款及細則"</string>
     <string name="webview_license_title" msgid="6442372337052056463">"System WebView 授權"</string>
