@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"ஒளிர்வு நிலை"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"சூழலுக்கு ஏற்ற ஒளிர்வு"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"சூழலுக்கேற்றவாறு திரை ஒளிர்வைச் சரிசெய்யும்"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"தீம்"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"நைட் லைட் ஆன் செய்யப்பட்டது"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"நெட்வொர்க் &amp; இணையம்"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"மொபைல் நெட்வொர்க்"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ஹாட்ஸ்பாட்"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"வைஃபை ஹாட்ஸ்பாட்டைப் பயன்படுத்துதல்"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ஆஃப்"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"அனைத்து டிரைவ்களுக்கும் ஹாட்ஸ்பாட் பயன்படுத்துதல்"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"கார் ஆன் செய்யப்பட்டு இருக்கும்போதெல்லாம் ஹாட்ஸ்பாட்டைக் கிடைக்கும்படி செய்யும்"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" இல் இணைவதற்கு இந்த QR குறியீட்டை ஸ்கேன் செய்க"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ஹாட்ஸ்பாட் கடவுச்சொல்: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"வைஃபையை ஆன் செய்ய <xliff:g id="REQUESTER">%s</xliff:g> ஆப்ஸ் விரும்புகிறது"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"ஏற்கெனவே இணைத்தவை"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s இணைக்கப்பட்டது"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s துண்டிக்கப்பட்டது"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"உங்கள் காருடனான சாதன இணைப்புகள்"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"அல்ட்ரா-வைடுபேண்ட் (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"UWB சாதனங்களின் நிலையைக் கண்டறிய உங்கள் காருக்கு உதவும்"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"புளூடூத் இணைப்பிற்கான கோரிக்கை"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ஜோடி சேர்த்து, இணை"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"புளூடூத் இணைத்தல் குறியீடு"</string>

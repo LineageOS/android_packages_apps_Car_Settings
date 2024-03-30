@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Гэрэлтүүлгийн түвшин"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Дасан зохицох боломжтой гэрэлтүүлэг"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Дэлгэцийн гэрэлтүүлгийг орчинтой тохируулах"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Загвар"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Шөнийн гэрэл асаалттай байна"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Сүлжээ &amp; интернэт"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобайл сүлжээ"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Сүлжээний цэг"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi-Fi сүлжээний цэгийг ашиглах"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Унтраалттай байна"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Бүх драйвт сүлжээний цэгийг ашиглах"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Машин асаалттай үед сүлжээний цэгийг боломжтой болгох"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\"-д нэгдэхийн тулд энэ QR кодыг скан хийнэ үү"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Сүлжээний цэгийн нууц үг: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi-г асаах хүсэлтэй байна"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Өмнө нь холбогдсон"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s холбогдсон"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s салсан"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Таны машины төхөөрөмжийн холболтууд"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Хэт өргөн зурвас (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Таны машинд UWB төхөөрөмжүүдийн байрлалыг танихад тусалдаг"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth-г хослуулах хүсэлт"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Хослуулах ба холбох"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-н хослуулах код"</string>

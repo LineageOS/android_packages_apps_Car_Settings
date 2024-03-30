@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Жарык деңгээли"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Ыңгайлашуучу жарык"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Экрандын жарыктыгын айлана-чөйрөгө жараша тууралоо"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Тема"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Түнкү режим күйүк"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Тармак жана Интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобилдик тармак"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Байланыш түйүнү"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi‑Fi байланыш түйүнүн колдонуу"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Өчүк"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Унаа айдаганда хотспот ар дайым колдонулсун"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Унаа от алып турганда хотспот жеткиликтүү болсун"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" түйүнүнө кошулуу үчүн бул QR кодун скандаңыз"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Байланыш түйүнүнүн сырсөзү: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> WiFi\'ды күйгүзгөнү жатат"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Буга чейин туташкан түзмөктөр"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s туташты"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s ажыратылды"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Түзмөктүн унааңыз менен туташуулары"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Өтө кең тилке (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Унааңызга UWB түзмөктөрүн аныктоого жардам берет"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth жупташтыруу өтүнүчү"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Байланыштыруу жана туташтыруу"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth аркылуу байланыштыруу коду"</string>
@@ -881,7 +875,7 @@
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Система баштапкы абалга кайтаруу жана бардык маалыматты өчүрүү сурамын алды. Аны азыр аткарсаңыз болот же унаа кийинки жолу от алганда тутум башкапкы абалга кайтарылат. Андан кийин жаңы профилди жөндөп алсаңыз болот."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Азыр баштапкы абалга келтирүү"</string>
     <string name="factory_reset_later_button" msgid="2653125445148367016">"Кийинчерээк баштапкы абалга келтирүү"</string>
-    <string name="factory_reset_later_text" msgid="6371031843489938419">"Инфозоок тутуму унаа кайра от алганда баштапкы абалга келтирилет."</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Инфозоок тутуму унаа кайра от алганда баштапкы абалга келет."</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"Баштапкы абалга келтирүү үчүн унааны токтотуңуз."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Бул параметрди азыр өзгөртүүгө болбойт"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Атайын мүмкүнчүлүктөр"</string>

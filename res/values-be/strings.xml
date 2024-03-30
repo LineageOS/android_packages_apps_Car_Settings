@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Узровень яркасці"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Адаптыўная яркасць"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Карэкціраваць яркасць экрана з улікам наваколля"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Тэма"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Начная падсветка ўключана"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Сетка і інтэрнэт"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мабільная сетка"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Хот-спот"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Выкарыстоўваць хот-спот Wi‑Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Выключана"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Выкарыстоўваць хот-спот для ўсіх паездак"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Зрабіць хот-спот даступным заўсёды, калі аўтамабіль заведзены"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Каб падключыцца да \"%s\", адсканіруйце гэты QR-код"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Пароль хот-спота: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Уключыце Wi-Fi для праграмы \"<xliff:g id="REQUESTER">%s</xliff:g>\""</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Раней падключаныя"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"Падключана: %1$s"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Адключана: %1$s"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Падключэнні прылад да аўтамабіля"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Звышшырокапалосная сувязь (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Дапамагае аўтамабілю вызначаць месцазнаходжанне прылад UWB"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Запыт спалучэння па Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Спалучэнне i падключэнне"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код спалучэння па Bluetooth"</string>

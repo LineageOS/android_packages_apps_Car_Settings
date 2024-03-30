@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"ระดับความสว่าง"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"ปรับความสว่างอัตโนมัติ"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ปรับความสว่างของหน้าจอตามสภาพแวดล้อม"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"ธีม"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"\"แสงตอนกลางคืน\" เปิดอยู่"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"เครือข่ายและอินเทอร์เน็ต"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"เครือข่ายมือถือ"</string>
@@ -70,7 +69,7 @@
     <string name="data_warning_limit_title" msgid="4950868241810828601">"คำเตือนและขีดจำกัดอินเทอร์เน็ต"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"รอบปริมาณที่แอปใช้อินเทอร์เน็ต"</string>
     <string name="mobile_data_usage" msgid="8171519864391091861">"ปริมาณการใช้อินเทอร์เน็ตมือถือ"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"ตั้งค่าเตือนการใช้อินเทอร์เน็ต"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"ตั้งค่าเตือนปริมาณอินเทอร์เน็ต"</string>
     <string name="data_warning" msgid="116776633806885370">"คำเตือนปริมาณอินเทอร์เน็ต"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"ตั้งขีดจำกัดอินเทอร์เน็ต"</string>
     <string name="data_limit" msgid="227338836292511425">"ขีดจำกัดอินเทอร์เน็ต"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ฮอตสปอต"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ใช้ฮอตสปอต Wi-Fi"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ปิด"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"ใช้ฮอตสปอตสำหรับทุกการขับขี่"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"ทำให้ฮอตสปอตพร้อมใช้งานทุกครั้งที่เปิดรถ"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"สแกนคิวอาร์โค้ดนี้เพื่อเข้าร่วม \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"รหัสผ่านฮอตสปอต: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ต้องการเปิด Wi-Fi"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"อุปกรณ์ที่เคยเชื่อมต่อ"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"เชื่อมต่อ %1$s แล้ว"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"ยกเลิกการเชื่อมต่อ %1$s แล้ว"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"การเชื่อมต่ออุปกรณ์กับรถของคุณ"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"แถบความถี่กว้างยิ่งยวด (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"ช่วยรถของคุณระบุตำแหน่งของอุปกรณ์ UWB"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"คำขอจับคู่อุปกรณ์บลูทูธ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"จับคู่อุปกรณ์และเชื่อมต่อ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"รหัสการจับคู่บลูทูธ"</string>
@@ -484,7 +478,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"ผู้ร่วมให้ข้อมูล"</string>
     <string name="manual" msgid="4819839169843240804">"กำหนดเอง"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"ป้ายกำกับกฎข้อบังคับ"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"คู่มือความปลอดภัยและกฎข้อบังคับ"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"คู่มือความปลอดภัยและกฎระเบียบ"</string>
     <string name="copyright_title" msgid="4220237202917417876">"ลิขสิทธิ์"</string>
     <string name="license_title" msgid="936705938435249965">"ใบอนุญาต"</string>
     <string name="terms_title" msgid="5201471373602628765">"ข้อกำหนดในการให้บริการ"</string>
@@ -892,7 +886,7 @@
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"โปรแกรมอ่านหน้าจอ"</string>
     <string name="show_captions_toggle_title" msgid="710582308974826311">"แสดงคำบรรยายแทนเสียง"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"ขนาดข้อความ"</string>
-    <string name="captions_settings_style_header" msgid="944591388386054372">"ขนาดและรูปแบบของคำบรรยาย"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"ขนาดและรูปแบบของคำบรรยายแทนเสียง"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"เล็กมาก"</string>
     <string name="captions_settings_text_size_small" msgid="1481895299805450566">"เล็ก"</string>
     <string name="captions_settings_text_size_default" msgid="2227802573224038267">"ค่าเริ่มต้น"</string>

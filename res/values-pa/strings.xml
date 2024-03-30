@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"ਚਮਕ ਪੱਧਰ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"ਅਨੁਕੂਲ ਚਮਕ"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ਵਾਤਾਵਰਨ ਮੁਤਾਬਕ ਸਕ੍ਰੀਨ ਦੀ ਚਮਕ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"ਥੀਮ"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"\'ਰਾਤ ਦੀ ਰੋਸ਼ਨੀ\' ਮੋਡ ਚਾਲੂ ਹੈ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ਨੈੱਟਵਰਕ ਅਤੇ ਇੰਟਰਨੈੱਟ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"ਮੋਬਾਈਲ ਨੈੱਟਵਰਕ"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ਹੌਟਸਪੌਟ"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"ਵਾਈ‑ਫਾਈ ਹੌਟਸਪੌਟ ਵਰਤੋ"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"ਬੰਦ"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"ਸਾਰੀਆਂ ਡਰਾਈਵਾਂ ਲਈ ਹੌਟਸਪੌਟ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"ਜਦੋਂ ਵੀ ਕਾਰ ਚਾਲੂ ਹੋਵੇ, ਤਾਂ ਹੌਟਸਪੌਟ ਉਪਲਬਧ ਕਰਵਾਓ"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਲਈ ਇਸ QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"ਹੌਟਸਪੌਟ ਦਾ ਪਾਸਵਰਡ: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> ਦੀ ਵਾਈ-ਫਾਈ ਨੂੰ ਚਾਲੂ ਕਰਨ ਦੀ ਇੱਛਾ ਹੈ"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"ਪਹਿਲਾਂ ਤੋਂ ਕਨੈਕਟ ਕੀਤੇ"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s ਨੂੰ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s ਨੂੰ ਡਿਸਕਨੈਕਟ ਕੀਤਾ ਗਿਆ"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਡੀਵਾਈਸ ਕਨੈਕਸ਼ਨ"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"ਅਲਟ੍ਰਾ-ਵਾਈਡਬੈਂਡ (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"ਇਸ ਨਾਲ ਤੁਹਾਡੀ ਕਾਰ ਨੂੰ UWB ਡੀਵਾਈਸਾਂ ਦੀ ਸਥਿਤੀ ਦੀ ਪਛਾਣ ਕਰਨ ਵਿੱਚ ਮਦਦ ਮਿਲਦੀ ਹੈ"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ਬਲੂਟੁੱਥ ਜੋੜਾਬੱਧ ਕਰਨ ਦੀ ਬੇਨਤੀ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ਜੋੜਾਬੱਧ ਕਰੋ ਅਤੇ ਕਨੈਕਟ ਕਰੋ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ਬਲੂਟੁੱਥ ਜੋੜਾਬੱਧਕਰਨ ਕੋਡ"</string>

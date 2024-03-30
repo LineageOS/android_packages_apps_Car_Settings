@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Պայծառության մակարդակ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Հարմարվող պայծառություն"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Էկրանի պայծառությունը հարմարեցնել միջավայրին"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"Թեմա"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Գիշերային ռեժիմը միացված է"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Ցանց և ինտերնետ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Բջջային ցանց"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Թեժ կետ"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Օգտագործել Wi‑Fi թեժ կետը"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"Անջատված է"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"Օգտագործել թեժ կետը բոլոր կրիչների համար"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"Հասանելի դարձնել թեժ կետը, երբ մեքենան միացված է"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"Սկանավորեք այս QR կոդը՝ «%s» ցանցին միանալու համար"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"Թեժ կետի գաղտնաբառը՝ %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"Թույլտատրե՞լ <xliff:g id="REQUESTER">%s</xliff:g> հավելվածին միացնել Wi-Fi-ը"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Նախկինում միացված սարքեր"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s սարքը միացված է"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s սարքն անջատված է"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"Սարքերի միացումները ձեր մեքենայի հետ"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"Գերլայնաշերտ տեխնոլոգիա (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"Օգնում է ձեր մեքենային պարզել UWB սարքերի դիրքը"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth-ով զուգակցման հարցում"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Զուգակցել և միանալ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-ով զուգակցման կոդ"</string>
@@ -899,11 +893,11 @@
     <string name="captions_settings_text_size_large" msgid="5198207220911360512">"Մեծ"</string>
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Շատ մեծ"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"Ենթագրերի ոճը"</string>
-    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Կարգավորված է հավելվածով"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Ըստ հավելվածի"</string>
     <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Սպիտակ՝ սևի վրա"</string>
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Սև՝ սպիտակի վրա"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Դեղին՝ սևի վրա"</string>
-    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Դեղինը կապույտի վրա"</string>
+    <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Դեղին՝ կապույտի վրա"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Էկրանի ընթերցիչ"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Անջատված է"</string>
     <string name="screen_reader_settings_on" msgid="2168217218643349459">"Հնչեցնել էկրանի տարրերը"</string>

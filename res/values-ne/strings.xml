@@ -23,8 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"चमकको स्तर"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"अनुकूलनीय चमक"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"वातावरणअनुसार स्क्रिनको चमक समायोजन गर्नुहोस्"</string>
-    <!-- no translation found for theme_toggle_title (7091393596274709558) -->
-    <skip />
+    <string name="theme_toggle_title" msgid="7091393596274709558">"थिम"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Night Light सक्रिय छ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"नेटवर्क र इन्टरनेट"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"मोबाइल नेटवर्क"</string>
@@ -33,7 +32,7 @@
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"निष्क्रिय / SIM"</string>
     <string name="mobile_network_active_esim" msgid="5175362818078597096">"सक्रिय / eSIM"</string>
     <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"निष्क्रिय / eSIM"</string>
-    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"अरू थप्नुहोस्"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"अरू हाल्नुहोस्"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क प्रयोग गरी डेटामाथि पहुँच राख्नु…"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"मोबाइल नेटवर्क"</string>
@@ -166,10 +165,8 @@
     <string name="hotspot_settings_title" msgid="8220814387592756713">"हटस्पट"</string>
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"Wi-Fi हटस्पट प्रयोग गर्नुहोस्"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"अफ छ"</string>
-    <!-- no translation found for wifi_hotspot_keep_on_title (2920327805105370804) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_keep_on_summary (7701814310702163462) -->
-    <skip />
+    <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"सबै प्रकारका यात्राहरूका लागि हटस्पट प्रयोग गर्नुहोस्"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"कार अन हुँदा हटस्पट उपलब्ध गराउनुहोस्"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"\"%s\" मा कनेक्ट गर्न यो QR कोड स्क्यान गर्नुहोस्"</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"हटस्पटको पासवर्ड: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi सक्रिय गर्न चाहन्छ"</string>
@@ -215,12 +212,9 @@
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"यसअघि कनेक्ट गरिएका यन्त्रहरू"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s कनेक्ट गरिएको छ"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s डिस्कनेक्ट गरिएको छ"</string>
-    <!-- no translation found for device_connections_category_title (1753729363581927505) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_title (8831695790040626922) -->
-    <skip />
-    <!-- no translation found for uwb_toggle_summary (2206513296288659105) -->
-    <skip />
+    <string name="device_connections_category_title" msgid="1753729363581927505">"तपाईंको कारमा उपलब्ध डिभाइस कनेक्सनहरू"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"अल्ट्रा-वाइडब्यान्ड (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"तपाईंको कारलाई UWB डिभाइसहरूको स्थान पत्ता लगाउन मद्दत गर्छ"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लुटुथसँग जोडा बनाउने अनुरोध"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"जोडा बनाउनुहोस् र कनेक्ट गर्नुहोस्"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लुटुथसँग जोडा बनाउने कोड"</string>
@@ -611,7 +605,7 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तवरले निकालिएको छ"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तवरले निकाल्न सकिएन"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाताहरू"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"खाता थप्नुहोस्"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"खाता हाल्नुहोस्"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"कुनै पनि खाता थपिएन"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> को खाता"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"डेटा स्वतः सिंक गर्नुहोस्"</string>
@@ -621,8 +615,8 @@
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"डेटा स्वतः सिंक गर्न नदिने हो?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"यस कार्यले डेटाको बचत गर्ने छ तर तपाईंले हालसालको जानकारी सङ्कलन गर्न प्रत्येक खातालाई म्यानुअल तरिकाले सिंक गर्नु पर्ने हुन्छ। यसका अतिरिक्त, अद्याविधिक हुँदा तपाईं सूचना प्राप्त गर्नु हुने छैन।"</string>
     <string name="account_details_title" msgid="7529571432258448573">"खातासम्बन्धी जानकारी"</string>
-    <string name="add_account_title" msgid="5988746086885210040">"खाता थप्नुहोस्"</string>
-    <string name="add_an_account" msgid="1072285034300995091">"खाता थप्नुहोस्"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"खाता हाल्नुहोस्"</string>
+    <string name="add_an_account" msgid="1072285034300995091">"खाता हाल्नुहोस्"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"प्रतिबन्धित प्रोफाइलहरूले खाताहरू थप्न सक्दैनन्"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"खाता हटाउनुहोस्"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"खाता हटाउने हो?"</string>
