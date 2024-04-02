@@ -29,7 +29,6 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.feature.Flags;
 import android.car.settings.CarSettings;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -43,6 +42,7 @@ import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.MultiActionPreference;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
@@ -76,7 +76,8 @@ public class ThemeTogglePreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
 
-        mSetFlagsRule.enableFlags(Flags.FLAG_CAR_NIGHT_GLOBAL_SETTING);
+        mSetFlagsRule.enableFlags(android.car.feature.Flags.FLAG_CAR_NIGHT_GLOBAL_SETTING);
+        mSetFlagsRule.enableFlags(Flags.FLAG_UI_THEME_TOGGLE);
         mContext = spy(ApplicationProvider.getApplicationContext());
         mResources = spy(mContext.getResources());
         when(mContext.getResources()).thenReturn(mResources);
