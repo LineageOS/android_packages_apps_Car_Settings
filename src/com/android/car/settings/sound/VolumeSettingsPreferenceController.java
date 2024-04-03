@@ -23,6 +23,7 @@ import static android.car.media.CarVolumeGroupEvent.EVENT_TYPE_MUTE_CHANGED;
 import static android.car.media.CarVolumeGroupEvent.EVENT_TYPE_VOLUME_GAIN_INDEX_CHANGED;
 import static android.car.media.CarVolumeGroupEvent.EVENT_TYPE_VOLUME_MAX_INDEX_CHANGED;
 import static android.car.media.CarVolumeGroupEvent.EVENT_TYPE_VOLUME_MIN_INDEX_CHANGED;
+import static android.car.media.CarVolumeGroupEvent.EVENT_TYPE_ZONE_CONFIGURATION_CHANGED;
 import static android.os.UserManager.DISALLOW_ADJUST_VOLUME;
 
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
@@ -126,6 +127,20 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
         mExecutor = context.getMainExecutor();
 
         CarAudioManager carAudioManager = getCarAudioManager();
+        if (carAudioManager == null) {
+            return;
+        }
+        generateVolumePreferences(carAudioManager);
+        if (carAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_EVENTS)) {
+            carAudioManager.registerCarVolumeGroupEventCallback(mExecutor,
+                    mCarVolumeGroupEventCallback);
+            return;
+        }
+        carAudioManager.registerCarVolumeCallback(mVolumeChangeCallback);
+    }
+
+    private void generateVolumePreferences(CarAudioManager carAudioManager) {
+        LOG.i("generateVolumePreferences");
         if (carAudioManager != null) {
             int zoneId = getMyAudioZoneId();
             int volumeGroupCount = carAudioManager.getVolumeGroupCount(zoneId);
@@ -148,13 +163,6 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
                 });
                 mVolumePreferences.add(volumePreference);
             }
-
-            if (carAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_VOLUME_GROUP_EVENTS)) {
-                carAudioManager.registerCarVolumeGroupEventCallback(mExecutor,
-                        mCarVolumeGroupEventCallback);
-            } else {
-                carAudioManager.registerCarVolumeCallback(mVolumeChangeCallback);
-            }
         }
     }
 
@@ -171,6 +179,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
 
     @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
+        preferenceGroup.removeAll();
         for (SeekBarPreference preference : mVolumePreferences) {
             preferenceGroup.addPreference(preference);
         }
@@ -315,6 +324,14 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
     private void updateVolumeGroupForEvents(List<CarVolumeGroupEvent> volumeGroupEvents) {
         List<CarVolumeGroupEvent> filteredEvents =
                 filterVolumeGroupEventForZoneId(getMyAudioZoneId(), volumeGroupEvents);
+        if (containsConfigChangeEvent(filteredEvents)) {
+            mUiHandler.post(() -> {
+                generateVolumePreferences(getCarAudioManager());
+                refreshUi();
+            });
+            // Preference re-generation will update the volume groups
+            return;
+        }
         for (int index = 0; index < filteredEvents.size(); index++) {
             CarVolumeGroupEvent event = filteredEvents.get(index);
             int eventTypes = event.getEventTypes();
@@ -323,6 +340,15 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
                 updateVolumePreference(infos.get(infoIndex), eventTypes);
             }
         }
+    }
+
+    private boolean containsConfigChangeEvent(List<CarVolumeGroupEvent> events) {
+        for (int c = 0; c < events.size(); c++) {
+            if ((events.get(c).getEventTypes() & EVENT_TYPE_ZONE_CONFIGURATION_CHANGED) != 0) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private List<CarVolumeGroupEvent> filterVolumeGroupEventForZoneId(int zoneId,
