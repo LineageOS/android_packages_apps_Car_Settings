@@ -147,6 +147,31 @@ public class AppStateAppOpsBridgeTest {
     }
 
     @Test
+    public void additionalAppOpPermissionPackagesIncluded() throws RemoteException {
+        String packageName = "test.package";
+        PackageInfo packageInfo = createPackageInfo(packageName, USER_ID1);
+        when(mMockIPackageManager.isPackageAvailable(packageInfo.packageName, USER_ID1))
+                .thenReturn(true);
+        packageInfo.requestedPermissions = new String[]{PERMISSION};
+
+        ApplicationsState.AppEntry entry = createAppEntry(packageInfo);
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
+        assertThat(mPackages.contains(packageInfo)).isFalse();
+        assertThat(entry.extraInfo).isNull();
+
+        when(mMockIPackageManager.getAppOpPermissionPackages(PERMISSION, USER_ID1))
+                .thenReturn(new String[]{packageName});
+        when(mMockIPackageManager.getPackageInfo(
+                eq(packageName),
+                eq((long) PackageManager.GET_PERMISSIONS),
+                eq(USER_ID1)))
+                .thenReturn(packageInfo);
+
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
+        assertThat(entry.extraInfo).isNotNull();
+    }
+
+    @Test
     public void unavailablePackageIgnored() throws RemoteException {
         String packageName = "test.package";
         PackageInfo packageInfo = createPackageInfo(packageName, USER_ID1);
@@ -285,6 +310,7 @@ public class AppStateAppOpsBridgeTest {
         packageInfo.packageName = packageName;
         packageInfo.applicationInfo = applicationInfo;
         packageInfo.requestedPermissions = new String[]{PERMISSION};
+        packageInfo.requestedPermissionsFlags = new int[]{PackageInfo.REQUESTED_PERMISSION_GRANTED};
 
         return packageInfo;
     }
