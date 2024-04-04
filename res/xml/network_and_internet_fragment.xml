@@ -29,10 +29,11 @@
         settings:occupant_front_passenger="read"
         settings:occupant_rear_passenger="read"
         settings:searchable="false"/>
-    <com.android.car.ui.preference.CarUiTwoActionSwitchPreference
+    <com.android.car.settings.common.ColoredTwoActionSwitchPreference
         android:icon="@drawable/ic_settings_cellular"
         android:key="@string/pk_mobile_network_settings_entry"
         android:title="@string/mobile_network_settings"
+        style="@style/ColoredTwoActionSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.network.MobileNetworkEntryPreferenceController"
         settings:searchable="false"/>
     <com.android.car.settings.common.LogicalPreferenceGroup

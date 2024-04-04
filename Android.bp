@@ -49,6 +49,7 @@ android_library {
         "com_android_car_settings_flags_lib",
         "services.core",
         "car-data-subscription-lib",
+        "car-resource-common",
     ],
 
     libs: [

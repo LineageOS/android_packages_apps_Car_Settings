@@ -130,4 +130,10 @@
     <attr name="profileSwitcherAddIconBackgroundColor" format="color"/>
     <attr name="suggestionsPrimaryColor" format="color"/>
     <attr name="suggestionsSecondaryColor" format="color"/>
+
+
+    <declare-styleable name="ColoredTwoActionSwitchPreference">
+        <attr name="warningTextColor" format="color"/>
+        <attr name="normalTextColor" format="color"/>
+    </declare-styleable>
 </resources>
