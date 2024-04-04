@@ -19,8 +19,8 @@ package com.android.car.settings.sound;
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.content.Context;
 import android.car.feature.Flags;
+import android.content.Context;
 import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
@@ -74,7 +74,7 @@ public class AudioRouteSelectorController extends PreferenceController<ListPrefe
         if (newAddress.equals(activeDeviceAddress)) {
             return true;
         }
-        showToast();
+        showToast(mAudioRoutesManager.getDeviceNameForAddress(newAddress));
         mAudioRouteItem = mAudioRoutesManager.updateAudioRoute(newAddress);
         return true;
     }
@@ -99,14 +99,14 @@ public class AudioRouteSelectorController extends PreferenceController<ListPrefe
         List<String> entryValues = mAudioRoutesManager.getAudioRouteList();
         List<String> entries = new ArrayList<>();
         entryValues.stream().forEach(
-                v -> entries.add(mAudioRoutesManager.getAudioRouteItemMap().get(v).getName()));
+                v -> entries.add(mAudioRoutesManager.getDeviceNameForAddress(v)));
 
         getPreference().setTitle(getContext().getString(R.string.audio_route_selector_title));
         getPreference().setEntries(entries.toArray(new CharSequence[entries.size()]));
         getPreference().setEntryValues(entryValues.toArray(new CharSequence[entries.size()]));
         String entryValue = mAudioRoutesManager.getActiveDeviceAddress();
-        CharSequence entry = mAudioRoutesManager.getAudioRouteItemMap().get(
-                mAudioRoutesManager.getActiveDeviceAddress()).getName();
+        CharSequence entry = mAudioRoutesManager.getDeviceNameForAddress(
+                mAudioRoutesManager.getActiveDeviceAddress());
         getPreference().setValue(entryValue);
         getPreference().setSummary(entry);
     }
@@ -130,11 +130,11 @@ public class AudioRouteSelectorController extends PreferenceController<ListPrefe
         mAudioRoutesManager = audioRoutesManager;
     }
 
-    private void showToast() {
+    private void showToast(String address) {
         if (mToast != null) {
             mToast.cancel();
         }
-        String text = getContext().getString(R.string.audio_route_selector_toast);
+        String text = getContext().getString(R.string.audio_route_selector_toast, address);
         int duration = getContext().getResources().getInteger(R.integer.audio_route_toast_duration);
         mToast = Toast.makeText(getContext(), text, duration);
         mToast.show();
