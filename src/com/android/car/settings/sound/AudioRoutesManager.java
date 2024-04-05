@@ -32,6 +32,7 @@ import android.media.AudioDeviceInfo;
 import android.util.ArrayMap;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
 import androidx.core.content.ContextCompat;
 
 import com.android.car.settings.CarSettingsApplication;
@@ -175,7 +176,15 @@ public class AudioRoutesManager {
         return mAddressList;
     }
 
-    public Map<String, AudioRouteItem> getAudioRouteItemMap() {
+    public String getDeviceNameForAddress(String address) {
+        if (mAudioRouteItemMap.containsKey(address)) {
+            return mAudioRouteItemMap.get(address).getName();
+        }
+        return address;
+    }
+
+    @VisibleForTesting
+    Map<String, AudioRouteItem> getAudioRouteItemMap() {
         return mAudioRouteItemMap;
     }
 
