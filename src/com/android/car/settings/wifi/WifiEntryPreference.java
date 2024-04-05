@@ -16,14 +16,17 @@
 
 package com.android.car.settings.wifi;
 
+import static android.net.NetworkCapabilitiesProto.NET_CAPABILITY_NOT_RESTRICTED;
+
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 
 import androidx.annotation.Nullable;
-import androidx.preference.PreferenceViewHolder;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.wifi.details.WifiInfoProvider;
 import com.android.car.ui.preference.CarUiTwoActionIconPreference;
 import com.android.wifitrackerlib.WifiEntry;
 
@@ -36,10 +39,12 @@ public class WifiEntryPreference extends CarUiTwoActionIconPreference
     };
     private static final int[] STATE_NONE = {};
     private static final int[] sWifiSignalAttributes = {com.android.settingslib.R.attr.wifi_signal};
+    private final Drawable mRestrictedSignalDrawable;
 
     private final WifiEntry mWifiEntry;
     @Nullable
     private final StateListDrawable mWifiSld;
+    private final WifiInfoProvider mWifiInfoProvider;
 
     public WifiEntryPreference(Context context, WifiEntry wifiEntry) {
         super(context);
@@ -51,6 +56,8 @@ public class WifiEntryPreference extends CarUiTwoActionIconPreference
         }
         mWifiEntry = wifiEntry;
         mWifiEntry.setListener(this);
+        mRestrictedSignalDrawable = context.getDrawable(R.drawable.restricted_wifi_signal);
+        mWifiInfoProvider = new WifiInfoProvider(context, wifiEntry);
         setKey(wifiEntry.getKey());
         setSecondaryActionVisible(false);
         setShowChevron(false);
@@ -65,12 +72,6 @@ public class WifiEntryPreference extends CarUiTwoActionIconPreference
     }
 
     @Override
-    public void onBindViewHolder(PreferenceViewHolder holder) {
-        super.onBindViewHolder(holder);
-        setIcon(getWifiEntryIcon());
-    }
-
-    @Override
     public void onUpdated() {
         refresh();
     }
@@ -82,6 +83,14 @@ public class WifiEntryPreference extends CarUiTwoActionIconPreference
     }
 
     private Drawable getWifiEntryIcon() {
+        if (mWifiEntry.getConnectedState() == WifiEntry.CONNECTED_STATE_CONNECTED
+                && mWifiInfoProvider.getNetworkCapabilities() != null
+                && !mWifiInfoProvider.getNetworkCapabilities()
+                        .hasCapability(NET_CAPABILITY_NOT_RESTRICTED)) {
+            mRestrictedSignalDrawable.setLevel(mWifiEntry.getLevel());
+            return mRestrictedSignalDrawable;
+        }
+
         if (mWifiSld == null) {
             LOG.w("wifiSld is null.");
             return null;

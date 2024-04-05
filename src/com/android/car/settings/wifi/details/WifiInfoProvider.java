@@ -132,7 +132,7 @@ public class WifiInfoProvider implements DefaultLifecycleObserver, WifiEntry.Wif
         }
     };
 
-    WifiInfoProvider(Context context, WifiEntry wifiEntry) {
+    public WifiInfoProvider(Context context, WifiEntry wifiEntry) {
         mContext = context;
         mWifiEntry = wifiEntry;
         mWifiEntry.setListener(this);

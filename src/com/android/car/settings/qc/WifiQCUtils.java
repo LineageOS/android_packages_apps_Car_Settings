@@ -79,19 +79,22 @@ public class WifiQCUtils {
             return R.drawable.ic_qc_wifi_disconnected;
         }
         int level = wifiManager.calculateSignalLevel(rssi);
-        switch (level) {
-            case 0:
-                return R.drawable.ic_qc_wifi_level_0;
-            case 1:
-                return R.drawable.ic_qc_wifi_level_1;
-            case 2:
-                return R.drawable.ic_qc_wifi_level_2;
-            case 3:
-                return R.drawable.ic_qc_wifi_level_3;
-            case 4:
-            default:
-                return R.drawable.ic_qc_wifi_level_4;
+        if (wifiInfo.isOemPaid() || wifiInfo.isOemPrivate()) {
+            return switch (level) {
+                case 0 -> R.drawable.ic_qc_restricted_wifi_signal_0;
+                case 1 -> R.drawable.ic_qc_restricted_wifi_signal_1;
+                case 2 -> R.drawable.ic_qc_restricted_wifi_signal_2;
+                case 3 -> R.drawable.ic_qc_restricted_wifi_signal_3;
+                default -> R.drawable.ic_qc_restricted_wifi_signal_4;
+            };
         }
+        return switch (level) {
+            case 0 -> R.drawable.ic_qc_wifi_level_0;
+            case 1 -> R.drawable.ic_qc_wifi_level_1;
+            case 2 -> R.drawable.ic_qc_wifi_level_2;
+            case 3 -> R.drawable.ic_qc_wifi_level_3;
+            default -> R.drawable.ic_qc_wifi_level_4;
+        };
     }
 
     /**
