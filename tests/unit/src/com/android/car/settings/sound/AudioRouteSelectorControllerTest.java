@@ -45,8 +45,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 @RunWith(AndroidJUnit4.class)
 public class AudioRouteSelectorControllerTest {
@@ -89,9 +87,6 @@ public class AudioRouteSelectorControllerTest {
                 .thenReturn(true);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
 
-        Map<String, AudioRouteItem> audioRouteItemMap = new HashMap<>();
-        audioRouteItemMap.put(ACTIVE_ADDRESS, mAudioRouteItem1);
-        audioRouteItemMap.put(INACTIVE_ADDRESS, mAudioRouteItem2);
         when(mAudioRouteItem1.getAddress()).thenReturn(ACTIVE_ADDRESS);
         when(mAudioRouteItem1.getName()).thenReturn(ACTIVE_NAME);
         when(mAudioRouteItem2.getAddress()).thenReturn(INACTIVE_ADDRESS);
@@ -99,7 +94,9 @@ public class AudioRouteSelectorControllerTest {
         when(mAudioRoutesManager.getActiveDeviceAddress()).thenReturn(ACTIVE_ADDRESS);
         when(mAudioRoutesManager.getAudioRouteList()).thenReturn(
                 Arrays.asList(ACTIVE_ADDRESS, INACTIVE_ADDRESS));
-        when(mAudioRoutesManager.getAudioRouteItemMap()).thenReturn(audioRouteItemMap);
+        when(mAudioRoutesManager.getDeviceNameForAddress(ACTIVE_ADDRESS)).thenReturn(ACTIVE_NAME);
+        when(mAudioRoutesManager.getDeviceNameForAddress(INACTIVE_ADDRESS))
+                .thenReturn(INACTIVE_NAME);
     }
 
     @After

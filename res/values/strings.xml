@@ -549,7 +549,7 @@
     <!-- Title for the audio routes selector. [CHAR LIMIT=40] -->
     <string name="audio_route_selector_title">Play media on</string>
     <!-- Toast informing the audio route is being changed. [CHAR LIMIT=80] -->
-    <string name="audio_route_selector_toast">Please wait for audio route to be updated</string>
+    <string name="audio_route_selector_toast">Switching media to %1$s</string>
 
     <!-- Display settings --><skip/>
     <!-- Display settings screen, setting option name to manage display brightness [CHAR LIMIT=60] -->
