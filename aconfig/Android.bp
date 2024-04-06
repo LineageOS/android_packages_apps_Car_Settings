@@ -20,6 +20,7 @@ package {
 aconfig_declarations {
     name: "com_android_car_settings_flags",
     package: "com.android.car.settings",
+    container: "system",
     srcs: [
         "*.aconfig",
     ],

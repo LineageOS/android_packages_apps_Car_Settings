@@ -361,6 +361,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_brightness"/>
       <item type="drawable" name="ic_qc_hotspot"/>
       <item type="drawable" name="ic_qc_mobile_data"/>
+      <item type="drawable" name="ic_qc_restricted_wifi_signal_0"/>
+      <item type="drawable" name="ic_qc_restricted_wifi_signal_1"/>
+      <item type="drawable" name="ic_qc_restricted_wifi_signal_2"/>
+      <item type="drawable" name="ic_qc_restricted_wifi_signal_3"/>
+      <item type="drawable" name="ic_qc_restricted_wifi_signal_4"/>
       <item type="drawable" name="ic_qc_ui_mode_auto"/>
       <item type="drawable" name="ic_qc_ui_mode_day"/>
       <item type="drawable" name="ic_qc_ui_mode_night"/>
@@ -373,6 +378,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_wifi_level_4"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
+      <item type="drawable" name="ic_restricted_wifi_signal_0"/>
+      <item type="drawable" name="ic_restricted_wifi_signal_1"/>
+      <item type="drawable" name="ic_restricted_wifi_signal_2"/>
+      <item type="drawable" name="ic_restricted_wifi_signal_3"/>
+      <item type="drawable" name="ic_restricted_wifi_signal_4"/>
       <item type="drawable" name="ic_screen_reader_settings"/>
       <item type="drawable" name="ic_settings_about"/>
       <item type="drawable" name="ic_settings_auto_wifi"/>
@@ -431,6 +441,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="profile_add_circle"/>
       <item type="drawable" name="profile_avatar_bg_circle"/>
       <item type="drawable" name="rectangle_ripple_mask"/>
+      <item type="drawable" name="restricted_wifi_signal"/>
       <item type="drawable" name="theme_toggle_button_rotary_background"/>
       <item type="drawable" name="top_level_preference_background"/>
       <item type="drawable" name="top_level_preference_highlight"/>
