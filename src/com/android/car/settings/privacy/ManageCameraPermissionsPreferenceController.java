@@ -28,9 +28,9 @@ import android.permission.PermissionControllerManager;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.PreferenceController;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.utils.StringUtil;
 
@@ -44,7 +44,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * This controller displays the number of non-system apps that have access to camera.
  */
 public class ManageCameraPermissionsPreferenceController extends
-        PreferenceController<Preference> {
+        CameraPrivacyBasePreferenceController<Preference> {
     private static final Logger LOG = new Logger(
             ManageCameraPermissionsPreferenceController.class);
 
@@ -52,10 +52,7 @@ public class ManageCameraPermissionsPreferenceController extends
     private int mNumTotal = 0;
     private int mNumHasAccess = 0;
 
-    private final SensorPrivacyManager mSensorPrivacyManager;
     private final UserManager mUserManager;
-    private final SensorPrivacyManager.OnSensorPrivacyChangedListener mListener =
-            (sensor, enabled) -> refreshUi();
 
     public ManageCameraPermissionsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -68,8 +65,7 @@ public class ManageCameraPermissionsPreferenceController extends
     ManageCameraPermissionsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions,
             SensorPrivacyManager sensorPrivacyManager, UserManager userManager) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
-        mSensorPrivacyManager = sensorPrivacyManager;
+        super(context, preferenceKey, fragmentController, uxRestrictions, sensorPrivacyManager);
         mUserManager = userManager;
     }
 
@@ -79,21 +75,9 @@ public class ManageCameraPermissionsPreferenceController extends
     }
 
     @Override
-    protected void onStartInternal() {
-        mSensorPrivacyManager.addSensorPrivacyListener(
-                SensorPrivacyManager.Sensors.CAMERA, mListener);
-    }
-
-    @Override
-    protected void onStopInternal() {
-        mSensorPrivacyManager.removeSensorPrivacyListener(SensorPrivacyManager.Sensors.CAMERA,
-                mListener);
-    }
-
-    @Override
     public void updateState(Preference preference) {
         super.updateState(preference);
-        if (mSensorPrivacyManager.isSensorPrivacyEnabled(
+        if (getSensorPrivacyManager().isSensorPrivacyEnabled(
                 SensorPrivacyManager.Sensors.CAMERA)) {
             getPreference().setSummary(getContext().getString(
                     R.string.camera_app_permission_summary_camera_off));

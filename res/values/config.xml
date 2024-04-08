@@ -183,4 +183,7 @@
     <string-array name="config_fixed_notification_access_packages">
         <item>com.android.car.notification</item>
     </string-array>
+
+    <!-- Whether to show the toggle to turn on the sensor privacy for required apps -->
+    <bool name="config_show_camera_required_apps_toggle">false</bool>
 </resources>
