@@ -7,3 +7,10 @@ flag {
     description: "Flag to show the new UI theme toggle within settings and quick controls"
     bug: "260762437"
 }
+
+flag {
+    name: "required_infotainment_apps_settings_page"
+    namespace: "car_sys_exp"
+    description: "Flag to display certain settings pages with required and infotainment apps"
+    bug: "327489942"
+}
