@@ -19,7 +19,6 @@ package com.android.car.settings.location;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
@@ -31,6 +30,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.UserHandle;
 import android.util.ArrayMap;
+import android.util.ArraySet;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
@@ -121,7 +121,7 @@ public class LocationServicesPreferenceControllerTest {
         mPreferenceController.onStart(mLifecycleOwner);
         Map<Integer, List<Preference>> samplePrefs = getSamplePreferences();
         doReturn(samplePrefs).when(mSettingsInjector)
-                .getInjectedSettings(any(Context.class), anyInt());
+                .getInjectedSettings(any(Context.class), any(ArraySet.class));
 
         mPreferenceController.updateState(mPreference);
 
@@ -132,7 +132,7 @@ public class LocationServicesPreferenceControllerTest {
     public void updateState_updatesPreferenceSummary() {
         Map<Integer, List<Preference>> samplePrefs = getSamplePreferences();
         doReturn(samplePrefs).when(mSettingsInjector)
-                .getInjectedSettings(any(Context.class), anyInt());
+                .getInjectedSettings(any(Context.class), any(ArraySet.class));
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
         String summary = "Summary";
@@ -146,7 +146,7 @@ public class LocationServicesPreferenceControllerTest {
     @Test
     public void preferenceCategory_isVisibleIfThereAreInjectedSettings() {
         doReturn(getSamplePreferences()).when(mSettingsInjector)
-                .getInjectedSettings(any(Context.class), anyInt());
+                .getInjectedSettings(any(Context.class), any(ArraySet.class));
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.refreshUi();
 
