@@ -51,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:ems="@integer/data_usage_bytes_threshold_ems"
+            android:textAlignment="viewStart"
             android:inputType="numberDecimal"
             android:minWidth="@dimen/usage_bytes_picker_edit_text_min_width"
             android:textAppearance="?android:attr/textAppearanceLarge"/>

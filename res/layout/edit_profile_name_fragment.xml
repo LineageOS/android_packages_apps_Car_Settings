@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:focusableInTouchMode="true"
             android:hint="@string/user_name_label"
+            android:textAlignment="viewStart"
             android:imeOptions="actionDone|flagNoExtractUi"
             android:inputType="text"
             android:maxLines="1"
