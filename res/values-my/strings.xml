@@ -213,9 +213,9 @@
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"%1$s ကို ချိတ်ဆက်မထားပါ"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ဘလူးတုသ်တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"တွဲချိတ်ပြီးနောက် ချိတ်ဆက်ရန်"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ဘလူးတုသ် တွဲချိတ်ခြင်းကုဒ်"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ဘလူးတုသ် တွဲချိတ်ကုဒ်"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ပင်နံပါတ်တွင် စာလုံး သို့မဟုတ် သင်္ကေတများပါဝင်သည်"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"တွဲချိတ်ရန်ကုဒ်ကို ထည့်ပြီး Return သို့မဟုတ် Enter ကို နှိပ်ပါ"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"တွဲချိတ်ကုဒ်ကို ရိုက်ထည့်ပြီး Return ခလုတ် (သို့) Enter ခလုတ်ကို နှိပ်ပါ"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> နှင့် တွဲချိတ်လိုပါသလား။"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"သင်၏ အဆက်အသွယ်များနှင့် ခေါ်ဆိုမှုမှတ်တမ်းကို <xliff:g id="DEVICE_NAME">%1$s</xliff:g> အား ကြည့်ခွင့်ပြုသည်"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ဤပင်နံပါတ်ကို အခြား စက်ပစ္စည်းတွင်လည်း ထည့်သွင်းရန် လိုအပ်နိုင်သည်။"</string>
@@ -357,7 +357,7 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"မှတ်ချက်- ပြန်လည်စတင်ပြီးနောက် သင့်ယာဉ်ကို လော့ခ်မဖွင့်မချင်း ဤအက်ပ်ကို အသုံးပြု၍မရပါ။"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"အကူနှင့် အသံဖြင့်စာရိုက်ခြင်း"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"အကူအညီ အက်ပ်"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"ဖန်သားပြင်မှ စာသားကိုသုံးခြင်း"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"ဖန်သားပြင်မှ စာသားကိုသုံးရန်"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"ဖန်သားပြင်မှအကြောင်းအရာများကို စာသားအဖြစ်ရယူရန် အကူအညီအက်ပ်ကို ခွင့်ပြုသည်"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ဖန်သားပြင်ဓာတ်ပုံ သုံးခြင်း"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ဖန်သားပြင်၏ပုံ အသုံးပြုရန် အကူအညီအက်ပ်ကို ခွင့်ပြုသည်"</string>
@@ -392,7 +392,7 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant နှင့် အခြားအရာများအတွက်"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{စွမ်းဆောင်ရည်ပေါ် သက်ရောက်သော အက်ပ် # ခု}other{စွမ်းဆောင်ရည်ပေါ် သက်ရောက်သော အက်ပ် # ခု}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"စနစ်နှင့် အခြားဆက်တင်များသို့"</string>
-    <string name="special_access" msgid="5730278220917123811">"အထူးအက်ပ်များ သုံးခွင့်ရှိသည်"</string>
+    <string name="special_access" msgid="5730278220917123811">"အက်ပ် အထူးအသုံးပြုခွင့်"</string>
     <string name="show_system" msgid="4401355756969485287">"စနစ်ကိုပြသရန်"</string>
     <string name="hide_system" msgid="8845453295584638040">"စနစ်ကို ဖျောက်ရန်"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"စနစ်အက်ပ်များ ဖျောက်ထားရန်"</string>

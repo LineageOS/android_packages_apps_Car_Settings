@@ -19,7 +19,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Ezarpenak"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"Gehiago"</string>
-    <string name="display_settings" msgid="5325515247739279185">"Pantaila"</string>
+    <string name="display_settings" msgid="5325515247739279185">"Bistaratzea"</string>
     <string name="brightness" msgid="2919605130898772866">"Distira"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Distira egokitua"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Doitu pantailaren distira ingurunearen arabera"</string>
@@ -213,7 +213,7 @@
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"Deskonektatu da %1$s"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth bidez parekatzeko eskaera"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Parekatu eta konektatu"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth bidez parekatzeko kodea"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth bidez konektatzeko parekatze-kodea"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN kodeak hizkiak edo ikurrak ditu"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Idatzi parekatze-kodea eta sakatu Itzuli edo Sartu"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuarekin parekatu nahi duzu?"</string>
@@ -408,7 +408,7 @@
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium SMSetarako sarbidea"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMSak ordaindu egin behar izan ditzakezu eta, hala bada, operadorearen fakturan gehituko da haien kostua. Aplikazioei baimen hau ematen badiezu, premium SMSak bidaltzeko gai izango dira."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Erabilera-datuetarako sarbidea"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Erabilera-datuek zer beste aplikazio eta zer maiztasunekin erabiltzen dituzun jakiteko baimena ematen die aplikazioei, baita zer operadore duzun, zer hizkuntza-ezarpen dituzun eta beste xehetasun batzuk ere."</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Erabilera-datuek zer beste aplikazio eta zer maiztasunekin erabiltzen dituzun jakiteko baimena ematen diete aplikazioei, baita zer operadore duzun, zer hizkuntza-ezarpen dituzun eta beste xehetasun batzuk ere."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wifi-konexioa kontrolatzea"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wifi-konexioa kontrolatzeko aukerarekin, aplikazioak hauek egin ditzake: wifi-konexioa aktibatu edo desaktibatu, wifi-sareak bilatu eta haietara konektatu, sareak gehitu edo kendu, edota wifi-gune lokalak sortu."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Gehiago"</string>
@@ -473,7 +473,7 @@
     <string name="legal_information" msgid="1838443759229784762">"Lege-informazioa"</string>
     <string name="contributors_title" msgid="7698463793409916113">"Kolaboratzaileak"</string>
     <string name="manual" msgid="4819839169843240804">"Eskuzko ezarpenak"</string>
-    <string name="regulatory_labels" msgid="3165587388499646779">"Arau-etiketak"</string>
+    <string name="regulatory_labels" msgid="3165587388499646779">"Arauzko etiketak"</string>
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Segurtasunaren eta arauen eskuliburua"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Copyrighta"</string>
     <string name="license_title" msgid="936705938435249965">"Lizentzia"</string>

@@ -358,9 +358,9 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"De Assistent en spraakinvoer"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"App voor assistentie"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Tekst van scherm gebruiken"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Toestaan dat de app voor assistentie toegang krijgt tot de scherminhoud als tekst"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Sta toe dat de app voor assistentie toegang krijgt tot de scherminhoud als tekst"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Screenshot gebruiken"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Toestaan dat de app voor assistentie toegang krijgt tot een afbeelding van het scherm"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Sta toe dat de app voor assistentie toegang krijgt tot een afbeelding van het scherm"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Spraakinvoer"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Service voor automatisch invullen"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Geen"</string>
@@ -396,7 +396,7 @@
     <string name="hide_system" msgid="8845453295584638040">"Systeemprocessen verbergen"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Systeem-apps verbergen"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Systeeminstellingen aanpassen"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Met deze rechten kan een app de systeeminstellingen aanpassen."</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Met dit recht kan een app de systeeminstellingen aanpassen."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Toegang tot meldingen"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Toegang tot meldingen toestaan voor <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan alle meldingen lezen, waaronder persoonlijke informatie zoals contactnamen en de tekst van berichten die je ontvangt. De app kan deze meldingen ook sluiten of actieknoppen activeren die ermee samenhangen. \n\nHierdoor kan de app ook \'Niet storen\' aan- of uitzetten en gerelateerde instellingen wijzigen."</string>
@@ -671,7 +671,7 @@
     <string name="security_lock_password" msgid="4420203740048322494">"Wachtwoord"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Vergrendeling kiezen"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"Vergrendelingsopties"</string>
-    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Geef je patroon op"</string>
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Voer je patroon in"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Bevestigen"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Opnieuw tekenen"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Doorgaan"</string>
@@ -716,7 +716,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Wissen"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Annuleren"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Bevestigen"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Moet ten minste vier tekens zijn"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Het moet minstens 4 tekens lang zijn"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"Dit vergrendelingstype is niet beschikbaar."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Mag alleen de cijfers 0-9 bevatten."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Apparaatbeheer staat het gebruik van een recente pincode niet toe"</string>

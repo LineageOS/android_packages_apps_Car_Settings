@@ -407,10 +407,10 @@
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"將應用程式設為優先"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"付費簡訊存取權"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"傳送付費簡訊必須另外付費，相關費用會併入電信費帳單。如果你為某個應用程式啟用權限，即可利用該應用程式傳送付費簡訊。"</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"使用情況存取權"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"取得「使用情況存取權」權限後，應用程式就能追蹤你使用的其他應用程式與頻率，以及你的電信業者、語言設定和其他詳細資料。"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"使用存取權"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"具有使用存取權的應用程式可以追蹤你使用的其他應用程式與頻率，以及你的電信業者、語言設定等詳情。"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi 控制"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"取得「Wi-Fi 控制」權限後，應用程式就能開啟或關閉 Wi-Fi、掃描及連上 Wi-Fi 網路、新增或移除網路，或者啟動僅限本機的無線基地台。"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"取得「Wi-Fi 控制」權限後，應用程式就能開啟或關閉 Wi-Fi、掃描及連上 Wi-Fi 網路、新增或移除網路，或啟動僅限區域網路的無線基地台。"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"更多"</string>
     <string name="location_settings_title" msgid="901334356682423679">"定位"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置資訊"</string>
@@ -509,7 +509,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"重設設定"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"已重設網路設定"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"重設應用程式偏好設定"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"這麼做會重設下列項目的所有偏好設定：\n\n"<li>"已停用的應用程式"</li>\n<li>"已停用的應用程式通知"</li>\n<li>"執行動作的預設應用程式"</li>\n<li>"應用程式背景資料限制"</li>\n<li>"任何權限限制"</li>\n\n"你不會遺失任何應用程式資料。"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"這項操作會重設下列項目的所有偏好設定：\n\n"<li>"已停用的應用程式"</li>\n<li>"已停用的應用程式通知"</li>\n<li>"執行動作的預設應用程式"</li>\n<li>"應用程式背景資料限制"</li>\n<li>"任何權限限制"</li>\n\n"你不會遺失任何應用程式資料。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重設應用程式"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重設應用程式偏好設定"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"清除所有資料 (恢復原廠設定)"</string>
@@ -609,7 +609,7 @@
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"要允許自動同步資料嗎？"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"連上網路時，你對帳戶所做的變更全都會自動複製到你的車輛。\n\n有些帳戶還可能會自動複製你在車輛上所做的每一項變更。"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"不允許自動同步資料嗎？"</string>
-    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"這樣可以節省數據用量，但你必須手動同步處理每個帳戶才能收集最新資訊。此外，系統進行更新時不會通知你。"</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"這樣可以節省數據用量，但你必須手動同步處理每個帳戶才能收集最新資訊。此外，你也不會收到最新動態的通知。"</string>
     <string name="account_details_title" msgid="7529571432258448573">"帳戶資訊"</string>
     <string name="add_account_title" msgid="5988746086885210040">"新增帳戶"</string>
     <string name="add_an_account" msgid="1072285034300995091">"新增帳戶"</string>
