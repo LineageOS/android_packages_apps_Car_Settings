@@ -166,7 +166,7 @@
     <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"שימוש בנקודת Wi-Fi לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"כבויה"</string>
     <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"שימוש בנקודה לשיתוף אינטרנט (Hotspot) בכל הנסיעות"</string>
-    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"הנקודה לשיתוף אינטרנט (Hotspot) תהיה זמינה ברגע שמפעילים את הרכב"</string>
+    <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"הנקודה לשיתוף אינטרנט (Hotspot) תהיה זמינה לאחר הפעלת ההצתה ברכב"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"אפשר לסרוק את קוד ה-QR הזה כדי להיכנס אל \"%s\""</string>
     <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"הסיסמה של נקודת האינטרנט: %s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> רוצה להפעיל את ה-Wi-Fi"</string>
@@ -259,8 +259,7 @@
     <string name="sound_alert_sounds" msgid="6838044721739163867">"צלילי ההתראות"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"רינגטון, התראות, שעון מעורר"</string>
     <string name="audio_route_selector_title" msgid="9137648859313120159">"הפעלה של מדיה ב-"</string>
-    <!-- no translation found for audio_route_selector_toast (7326795415616469871) -->
-    <skip />
+    <string name="audio_route_selector_toast" msgid="338103814096108292">"החלפת המדיה ל-%1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"בהירות"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"התאמת המסך לתאורה חלשה"</string>
     <string name="units_settings" msgid="402325305096925886">"יחידות"</string>
