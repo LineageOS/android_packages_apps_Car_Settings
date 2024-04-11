@@ -219,7 +219,7 @@
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Gandingkan &amp; sambung"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Kod gandingan Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN mengandungi huruf atau simbol"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Taip kod berpasangan kemudian tekan Return atau Enter"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Taip kod gandingan kemudian tekan Return atau Enter"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Gandingkan dengan <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Benarkan <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mengakses kenalan dan sejarah panggilan anda"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Anda juga mungkin perlu menaipkan PIN ini pada peranti satu lagi."</string>
@@ -259,8 +259,7 @@
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Bunyi makluman"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Nada dering, pemberitahuan, penggera"</string>
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Terus mainkan media"</string>
-    <!-- no translation found for audio_route_selector_toast (7326795415616469871) -->
-    <skip />
+    <string name="audio_route_selector_toast" msgid="338103814096108292">"Menukar media kepada %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Kecerahan"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Laraskan skrin untuk cahaya malap"</string>
     <string name="units_settings" msgid="402325305096925886">"Unit"</string>

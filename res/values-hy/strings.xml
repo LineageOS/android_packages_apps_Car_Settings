@@ -219,7 +219,7 @@
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Զուգակցել և միանալ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-ով զուգակցման կոդ"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN կոդը տառեր և նշաններ է պարունակում"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Մուտքագրեք զուգակցման կոդը, ապա սեղմեք Վերադառնալ կամ Մտնել"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Մուտքագրեք զուգակցման կոդը, ապա սեղմեք Return կամ Enter"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Զուգակցե՞լ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ի հետ"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Թույլ տալ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ին օգտագործել ձեր կոնտակտներն ու զանգերի պատմությունը"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Հնարավոր է՝ այս PIN-ը պետք լինի մուտքագրել մյուս սարքում:"</string>
@@ -259,8 +259,7 @@
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Ծանուցումների ձայներ"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Զանգեր, ծանուցումներ, զարթուցիչ"</string>
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Նվագարկել հետևյալ սարքում՝"</string>
-    <!-- no translation found for audio_route_selector_toast (7326795415616469871) -->
-    <skip />
+    <string name="audio_route_selector_toast" msgid="338103814096108292">"Անցում %1$s սարքին՝ մեդիա բովանդակությունը նվագարկելու համար"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Պայծառություն"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Էկրանի պայծառությունը հարմարեցնել թույլ լուսավորության համար"</string>
     <string name="units_settings" msgid="402325305096925886">"Միավորներ"</string>
@@ -518,7 +517,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Հետևյալ կարգավորումները կզրոյանան՝\n\n"<li>"անջատված հավելվածները,"</li>\n<li>"հավելվածների անջատված ծանուցումները,"</li>\n<li>"կանխադրված հավելվածները,"</li>\n<li>"ֆոնային ռեժիմում տվյալների փոխանցման սահմանափակումները,"</li>\n<li>"թույլտվությունների բոլոր սահմանափակումները։"</li>\n\n"Հավելվածների տվյալները կպահպանվեն։"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Զրոյացնել կարգավորումները"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Հավելվածների կարգավորումները զրոյացվեցին"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Ջնջել բոլոր տվյալները (գործ. վերակայում)"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Ջնջել բոլոր տվյալները (գործարանային կարգավորում)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ջնջել բոլոր տվյալներն ու պրոֆիլները տեղեկատվաժամանցային համակարգից"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"Մեքենայի տեղեկատվաժամանցային համակարգից կջնջվեն բոլոր տվյալները, այդ թվում՝\n\n"<li>"ձեր Google հաշիվներն ու պրոֆիլները,"</li>\n<li>"համակարգի և հավելվածների տվյալներն ու կարգավորումները,"</li>\n<li>"ներբեռնված հավելվածները։"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Դուք մտել եք հետևյալ հաշիվներ՝"</string>
