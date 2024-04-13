@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.SettingInjectorService;
 import android.os.UserHandle;
+import android.util.ArraySet;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -90,7 +91,10 @@ public class LocationServicesPreferenceController extends PreferenceController<P
     @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
         getPreference().removeAll();
-        List<Preference> injectedSettings = getSortedInjectedPreferences(UserHandle.USER_CURRENT);
+
+        ArraySet<UserHandle> profiles = new ArraySet<>();
+        profiles.add(UserHandle.of(UserHandle.myUserId()));
+        List<Preference> injectedSettings = getSortedInjectedPreferences(profiles);
         for (Preference preference : injectedSettings) {
             getPreference().addPreference(preference);
         }
@@ -98,10 +102,10 @@ public class LocationServicesPreferenceController extends PreferenceController<P
         preferenceGroup.setVisible(preferenceGroup.getPreferenceCount() > 0);
     }
 
-    private List<Preference> getSortedInjectedPreferences(int profileId) {
+    private List<Preference> getSortedInjectedPreferences(ArraySet<UserHandle> profiles) {
         List<Preference> sortedInjections = new ArrayList<>();
         Map<Integer, List<Preference>> injections =
-                mSettingsInjector.getInjectedSettings(getContext(), profileId);
+                mSettingsInjector.getInjectedSettings(getContext(), profiles);
         for (Map.Entry<Integer, List<Preference>> entry : injections.entrySet()) {
             sortedInjections.addAll(entry.getValue());
         }
