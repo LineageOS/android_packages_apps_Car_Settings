@@ -34,8 +34,10 @@ import com.android.car.settings.common.Logger;
 import com.android.internal.util.ArrayUtils;
 import com.android.settingslib.applications.ApplicationsState.AppEntry;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Bridges {@link AppOpsManager} app operation permission information into {@link
@@ -108,7 +110,7 @@ public class AppStateAppOpsBridge implements AppEntryListManager.ExtraInfoBridge
                                 + isAvailable);
                         continue;
                     }
-                    PermissionState newEntry = new PermissionState();
+                    PermissionState newEntry = getPermissionState(packageInfo);
                     newEntry.mRequestedPermissions = packageInfo.requestedPermissions;
                     entriesForProfile.put(packageInfo.packageName, newEntry);
                 }
@@ -120,10 +122,47 @@ public class AppStateAppOpsBridge implements AppEntryListManager.ExtraInfoBridge
         return entries;
     }
 
+    private PermissionState getPermissionState(PackageInfo packageInfo) {
+        String[] requestedPermissions = packageInfo.requestedPermissions;
+        int[] permissionFlags = packageInfo.requestedPermissionsFlags;
+        if (requestedPermissions != null) {
+            for (int i = 0; i < requestedPermissions.length; i++) {
+                if (requestedPermissions[i].equals(mPermission) &&
+                        (permissionFlags[i] & PackageInfo.REQUESTED_PERMISSION_GRANTED) != 0) {
+                    return new PermissionState(/* isPermissionGranted */ true);
+                }
+            }
+        }
+        return new PermissionState(/* isPermissionGranted */ false);
+    }
+
     @SuppressWarnings("unchecked") // safe by specification.
     private List<PackageInfo> getPackageInfos(int profileId) throws RemoteException {
-        return mIPackageManager.getPackagesHoldingPermissions(new String[]{mPermission},
-                PackageManager.GET_PERMISSIONS, profileId).getList();
+        // apps that has requested, and currently hold the permission.
+        List<PackageInfo> packageInfos =
+                mIPackageManager.getPackagesHoldingPermissions(new String[]{mPermission},
+                        PackageManager.GET_PERMISSIONS, profileId).getList();
+        Set<String> packageNames = getPackageNames(packageInfos);
+        // other apps may have defined the permission in Manifest, but do not currently hold the
+        // permission. (i.e. it was previously revoked).
+        String[] appOpPkgs = mIPackageManager.getAppOpPermissionPackages(mPermission, profileId);
+        appOpPkgs = (appOpPkgs == null) ? new String[0] : appOpPkgs; // result is nullable
+        for (String pkgName : appOpPkgs) {
+            if (!packageNames.contains(pkgName)) {
+                PackageInfo pkgInfo = mIPackageManager.getPackageInfo(pkgName,
+                        PackageManager.GET_PERMISSIONS, profileId);
+                packageInfos.add(pkgInfo);
+            }
+        }
+        return packageInfos;
+    }
+
+    private Set<String> getPackageNames(List<PackageInfo> packageInfos) {
+        Set<String> pkgNames = new HashSet<>();
+        for (PackageInfo info : packageInfos) {
+            pkgNames.add(info.packageName);
+        }
+        return pkgNames;
     }
 
     private boolean shouldIgnorePackage(PackageInfo packageInfo) {
@@ -171,13 +210,18 @@ public class AppStateAppOpsBridge implements AppEntryListManager.ExtraInfoBridge
      */
     public static class PermissionState {
         private String[] mRequestedPermissions;
+        private boolean mIsPermissionGranted;
         private int mAppOpMode = AppOpsManager.MODE_DEFAULT;
+
+        public PermissionState(boolean isPermissionGranted) {
+            mIsPermissionGranted = isPermissionGranted;
+        }
 
         /** Returns {@code true} if the entry's application is allowed to perform the operation. */
         public boolean isPermissible() {
-            // Default behavior is permissible as long as the package requested this permission.
+            // Default behavior is permissible as long as the package requested the permission
             if (mAppOpMode == AppOpsManager.MODE_DEFAULT) {
-                return true;
+                return mIsPermissionGranted;
             }
             return mAppOpMode == AppOpsManager.MODE_ALLOWED;
         }
