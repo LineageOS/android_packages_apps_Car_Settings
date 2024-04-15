@@ -664,6 +664,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="admin_profile_owner_user_message"/>
       <item type="string" name="alarm_ringtone_title"/>
       <item type="string" name="alarm_volume_title"/>
+      <item type="string" name="alarms_and_reminders_title"/>
       <item type="string" name="all_applications"/>
       <item type="string" name="allow"/>
       <item type="string" name="app_data_usage"/>
@@ -1040,6 +1041,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="hk_AboutSettingsActivity"/>
       <item type="string" name="hk_AccessibilitySettingsActivity"/>
       <item type="string" name="hk_AddWifiActivity"/>
+      <item type="string" name="hk_AlarmsAndRemindersActivity"/>
       <item type="string" name="hk_ApplicationsDetailsActivity"/>
       <item type="string" name="hk_ApplicationsSettingsActivity"/>
       <item type="string" name="hk_AppsActivity"/>
@@ -1635,6 +1637,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="account_details_fragment"/>
       <item type="xml" name="account_sync_details_fragment"/>
       <item type="xml" name="add_wifi_fragment"/>
+      <item type="xml" name="alarms_and_reminders_fragment"/>
       <item type="xml" name="app_data_usage_fragment"/>
       <item type="xml" name="app_specific_data_usage_fragment"/>
       <item type="xml" name="app_storage_settings_details_fragment"/>

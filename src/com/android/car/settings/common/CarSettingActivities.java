@@ -35,6 +35,7 @@ import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.AppsFragment;
 import com.android.car.settings.applications.assist.AssistantAndVoiceFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
+import com.android.car.settings.applications.specialaccess.AlarmsAndReminderFragment;
 import com.android.car.settings.applications.specialaccess.ModifySystemSettingsFragment;
 import com.android.car.settings.applications.specialaccess.NotificationAccessFragment;
 import com.android.car.settings.applications.specialaccess.PremiumSmsAccessFragment;
@@ -596,4 +597,14 @@ public class CarSettingActivities {
         }
     }
 
+    /**
+     * Alarms and reminders settings activity.
+     */
+    public static class AlarmsAndRemindersActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            return new AlarmsAndReminderFragment();
+        }
+    }
 }
