@@ -30,6 +30,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.hardware.SensorPrivacyManager;
+import android.hardware.SensorPrivacyManager.OnSensorPrivacyChangedListener;
 import android.os.UserHandle;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -76,8 +77,10 @@ public class CameraRecentAccessesPreferenceControllerTest {
     private RecentAppOpsAccess mRecentCameraAccesses;
     @Mock
     private SensorPrivacyManager mMockSensorPrivacyManager;
+    @Mock
+    private OnSensorPrivacyChangedListener.SensorPrivacyChangedParams mSensorPrivacyChangedParams;
     @Captor
-    private ArgumentCaptor<SensorPrivacyManager.OnSensorPrivacyChangedListener> mListener;
+    private ArgumentCaptor<OnSensorPrivacyChangedListener> mListener;
 
     @Before
     @UiThreadTest
@@ -120,7 +123,7 @@ public class CameraRecentAccessesPreferenceControllerTest {
         initializePreference();
 
         setIsSensorPrivacyEnabled(false);
-        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.CAMERA, false);
+        mListener.getValue().onSensorPrivacyChanged(mSensorPrivacyChangedParams);
 
         assertThat(mPreference.isVisible()).isTrue();
     }
@@ -130,7 +133,7 @@ public class CameraRecentAccessesPreferenceControllerTest {
         initializePreference();
 
         setIsSensorPrivacyEnabled(true);
-        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.CAMERA, true);
+        mListener.getValue().onSensorPrivacyChanged(mSensorPrivacyChangedParams);
 
         assertThat(mPreference.isVisible()).isFalse();
     }

@@ -30,6 +30,8 @@ import static org.mockito.Mockito.when;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.hardware.SensorPrivacyManager;
+import android.hardware.SensorPrivacyManager.OnSensorPrivacyChangedListener;
+import android.platform.test.flag.junit.SetFlagsRule;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.test.annotation.UiThreadTest;
@@ -40,8 +42,10 @@ import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.internal.camera.flags.Flags;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -61,12 +65,18 @@ public class CameraTogglePreferenceControllerTest {
     private FragmentController mFragmentController;
     @Mock
     private SensorPrivacyManager mMockSensorPrivacyManager;
+    @Mock
+    private OnSensorPrivacyChangedListener.SensorPrivacyChangedParams mSensorPrivacyChangedParams;
     @Captor
-    private ArgumentCaptor<SensorPrivacyManager.OnSensorPrivacyChangedListener> mListener;
+    private ArgumentCaptor<OnSensorPrivacyChangedListener> mListener;
+
+    @Rule
+    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
 
     @Before
     @UiThreadTest
     public void setUp() {
+        mSetFlagsRule.disableFlags(Flags.FLAG_CAMERA_PRIVACY_ALLOWLIST);
         mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
         setCameraMuteFeatureAvailable(true);
@@ -178,7 +188,7 @@ public class CameraTogglePreferenceControllerTest {
                 eq(true));
         setIsSensorPrivacyEnabled(true);
 
-        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.CAMERA, true);
+        mListener.getValue().onSensorPrivacyChanged(mSensorPrivacyChangedParams);
 
         assertThat(mSwitchPreference.isChecked()).isFalse();
     }
@@ -195,7 +205,7 @@ public class CameraTogglePreferenceControllerTest {
                 eq(SensorPrivacyManager.Sensors.CAMERA),
                 eq(false));
         setIsSensorPrivacyEnabled(false);
-        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.CAMERA, false);
+        mPreferenceController.refreshUi();
 
         assertThat(mSwitchPreference.isChecked()).isTrue();
     }
@@ -205,7 +215,7 @@ public class CameraTogglePreferenceControllerTest {
         initializePreference(/* isCameraEnabled= */ false);
 
         setIsSensorPrivacyEnabled(false);
-        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.CAMERA, false);
+        mPreferenceController.refreshUi();
 
         assertThat(mSwitchPreference.isChecked()).isTrue();
     }
@@ -215,7 +225,7 @@ public class CameraTogglePreferenceControllerTest {
         initializePreference(/* isCameraEnabled= */ true);
 
         setIsSensorPrivacyEnabled(true);
-        mListener.getValue().onSensorPrivacyChanged(SensorPrivacyManager.Sensors.CAMERA, true);
+        mListener.getValue().onSensorPrivacyChanged(mSensorPrivacyChangedParams);
 
         assertThat(mSwitchPreference.isChecked()).isFalse();
     }
@@ -233,8 +243,10 @@ public class CameraTogglePreferenceControllerTest {
         setIsSensorPrivacyEnabled(!isCameraEnabled);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
-        verify(mMockSensorPrivacyManager).addSensorPrivacyListener(
-                eq(SensorPrivacyManager.Sensors.CAMERA), mListener.capture());
+        if (isCameraEnabled) {
+            verify(mMockSensorPrivacyManager).addSensorPrivacyListener(
+                    eq(SensorPrivacyManager.Sensors.CAMERA), mListener.capture());
+        }
     }
 
     private void setIsSensorPrivacyEnabled(boolean isMuted) {
