@@ -693,7 +693,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"パターンが間違っています"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ロック解除パターンの描き方"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"パターンの保存中にエラーが発生しました"</string>
-    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"間違えた回数が上限を超えました。<xliff:g id="NUMBER">%d</xliff:g> 秒後にもう一度お試しください。"</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"試行回数が上限に達しました。<xliff:g id="NUMBER">%d</xliff:g> 秒後にもう一度お試しください。"</string>
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"パターンは回転に対応してません。タップしてください"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"画面ロックを解除しますか？"</string>
