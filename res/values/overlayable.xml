@@ -84,6 +84,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="bool" name="config_automatic_brightness_available"/>
       <item type="bool" name="config_enable_home_settings_icon"/>
       <item type="bool" name="config_global_force_single_pane"/>
+      <item type="bool" name="config_show_camera_required_apps_toggle"/>
       <item type="bool" name="config_show_premium_sms"/>
       <item type="bool" name="config_show_regulatory_info"/>
       <item type="bool" name="config_show_settings_root_exit_icon"/>
@@ -786,24 +787,18 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="brightness"/>
       <item type="string" name="build_number"/>
       <item type="string" name="camera_access_disclaimer_summary"/>
-      <item type="string" name="camera_access_radio_any_app_summary"/>
-      <item type="string" name="camera_access_radio_any_app_title"/>
-      <item type="string" name="camera_access_radio_group_title"/>
-      <item type="string" name="camera_access_radio_no_apps_summary"/>
-      <item type="string" name="camera_access_radio_no_apps_title"/>
-      <item type="string" name="camera_access_radio_required_apps_summary"/>
-      <item type="string" name="camera_access_radio_required_apps_title"/>
       <item type="string" name="camera_access_settings_summary"/>
       <item type="string" name="camera_access_settings_title"/>
       <item type="string" name="camera_app_permission_summary_camera_off"/>
       <item type="string" name="camera_app_permission_summary_camera_on"/>
+      <item type="string" name="camera_infotainment_apps_toggle_summary"/>
+      <item type="string" name="camera_infotainment_apps_toggle_title"/>
       <item type="string" name="camera_manage_permissions"/>
       <item type="string" name="camera_no_recent_access"/>
       <item type="string" name="camera_privacy_policy_button_text"/>
-      <item type="string" name="camera_privacy_policy_info_summary"/>
       <item type="string" name="camera_recently_accessed"/>
-      <item type="string" name="camera_required_apps_list_summary"/>
-      <item type="string" name="camera_required_apps_list_title"/>
+      <item type="string" name="camera_required_apps_group_summary"/>
+      <item type="string" name="camera_required_apps_group_title"/>
       <item type="string" name="camera_settings_loading_app_permission_stats"/>
       <item type="string" name="camera_settings_recent_requests_title"/>
       <item type="string" name="camera_settings_recent_requests_view_all_title"/>
@@ -1261,6 +1256,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="performance_impacting_apps_button_label"/>
       <item type="string" name="performance_impacting_apps_description"/>
       <item type="string" name="performance_impacting_apps_summary"/>
+      <item type="string" name="permission_grant_always"/>
+      <item type="string" name="permission_grant_ask"/>
+      <item type="string" name="permission_grant_in_use"/>
+      <item type="string" name="permission_grant_never"/>
       <item type="string" name="permissions_label"/>
       <item type="string" name="power_component_disabled"/>
       <item type="string" name="premium_sms_access_description"/>

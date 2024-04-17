@@ -23,8 +23,8 @@ import android.hardware.SensorPrivacyManager;
 import androidx.preference.PreferenceCategory;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.applications.RecentAppOpsAccess;
@@ -38,11 +38,8 @@ import java.util.Set;
  * are displayed.
  */
 public class CameraRecentAccessesPreferenceController extends
-        PreferenceController<PreferenceCategory> {
+        CameraPrivacyBasePreferenceController<PreferenceCategory> {
 
-    private final SensorPrivacyManager mSensorPrivacyManager;
-    private final SensorPrivacyManager.OnSensorPrivacyChangedListener mListener =
-            (sensor, enabled) -> refreshUi();
     private final Set<CarUiPreference> mAddedPreferences = new HashSet<>();
 
     private final RecentAppOpsAccess mRecentCameraAccesses;
@@ -57,16 +54,17 @@ public class CameraRecentAccessesPreferenceController extends
                 SensorPrivacyManager.getInstance(context));
     }
 
+
     @VisibleForTesting
     CameraRecentAccessesPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions,
             RecentAppOpsAccess recentCameraAccesses, int recentAppsMaxCount,
             SensorPrivacyManager sensorPrivacyManager) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
+        super(context, preferenceKey, fragmentController, uxRestrictions, sensorPrivacyManager);
         mRecentCameraAccesses = recentCameraAccesses;
         mRecentAppsMaxCount = recentAppsMaxCount;
-        mSensorPrivacyManager = sensorPrivacyManager;
     }
+
 
     @Override
     protected Class<PreferenceCategory> getPreferenceType() {
@@ -74,21 +72,9 @@ public class CameraRecentAccessesPreferenceController extends
     }
 
     @Override
-    protected void onStartInternal() {
-        mSensorPrivacyManager.addSensorPrivacyListener(
-                SensorPrivacyManager.Sensors.CAMERA, mListener);
-    }
-
-    @Override
-    protected void onStopInternal() {
-        mSensorPrivacyManager.removeSensorPrivacyListener(SensorPrivacyManager.Sensors.CAMERA,
-                mListener);
-    }
-
-    @Override
     public void updateState(PreferenceCategory preference) {
         super.updateState(preference);
-        if (mSensorPrivacyManager.isSensorPrivacyEnabled(
+        if (getSensorPrivacyManager().isSensorPrivacyEnabled(
                 SensorPrivacyManager.Sensors.CAMERA)) {
             getPreference().setVisible(false);
             return;
