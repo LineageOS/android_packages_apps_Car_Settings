@@ -19,34 +19,28 @@ package com.android.car.settings.privacy;
 import android.annotation.FlaggedApi;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.hardware.SensorPrivacyManager;
 
 import androidx.preference.Preference;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.camera.flags.Flags;
 
 /**
- * Controller for displaying camera access page.
+ * Displays a list of apps which are required with their privacy policy and a
+ * link to their camera permission settings.
  */
 @FlaggedApi(Flags.FLAG_CAMERA_PRIVACY_ALLOWLIST)
-public class CameraAccessPreferenceController extends PreferenceController<Preference> {
-    private final SensorPrivacyManager mSensorPrivacyManager;
+public final class CameraRequiredAppsHeaderPreferenceController
+        extends PreferenceController<Preference> {
 
-    public CameraAccessPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
-        this(context, preferenceKey, fragmentController, uxRestrictions,
-                SensorPrivacyManager.getInstance(context));
-    }
-
-    @VisibleForTesting
-    CameraAccessPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
-            SensorPrivacyManager sensorPrivacyManager) {
+    public CameraRequiredAppsHeaderPreferenceController(
+            Context context,
+            String preferenceKey,
+            FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mSensorPrivacyManager = sensorPrivacyManager;
     }
 
     @Override
@@ -56,9 +50,8 @@ public class CameraAccessPreferenceController extends PreferenceController<Prefe
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        boolean hasFeatureCameraToggle = mSensorPrivacyManager.supportsSensorToggle(
-                SensorPrivacyManager.Sensors.CAMERA);
-        return Flags.cameraPrivacyAllowlist() && hasFeatureCameraToggle
-                ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+        boolean showRequiredAppsToggle = getContext().getResources()
+                .getBoolean(R.bool.config_show_camera_required_apps_toggle);
+        return !showRequiredAppsToggle ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 }
