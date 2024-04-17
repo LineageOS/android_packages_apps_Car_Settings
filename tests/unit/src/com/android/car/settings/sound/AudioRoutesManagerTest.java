@@ -16,6 +16,7 @@
 
 package com.android.car.settings.sound;
 
+import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 import static android.media.AudioAttributes.USAGE_MEDIA;
 import static android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP;
 import static android.media.AudioDeviceInfo.TYPE_BUS;
@@ -194,6 +195,8 @@ public class AudioRoutesManagerTest {
         when(mContext.getApplicationContext()).thenReturn(mCarSettingsApplication);
         when(mCarSettingsApplication.getCarAudioManager()).thenReturn(mCarAudioManager);
         when(mCarSettingsApplication.getMyAudioZoneId()).thenReturn(TEST_ZONE_ID);
+        when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_DYNAMIC_ROUTING))
+                .thenReturn(true);
         when(mCarAudioManager.getAudioZoneConfigInfos(TEST_ZONE_ID))
                 .thenReturn(new ArrayList<>(Collections.singleton(mCarAudioZoneConfigInfo)));
         when(mCarAudioZoneConfigInfo.isActive()).thenReturn(true);
