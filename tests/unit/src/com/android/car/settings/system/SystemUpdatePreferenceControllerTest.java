@@ -249,6 +249,8 @@ public class SystemUpdatePreferenceControllerTest {
 
     @Test
     public void preferenceClicked_handledReturnsFalse() {
+        CarrierConfigManager mockConfigManager = mock(CarrierConfigManager.class);
+        when(mContext.getSystemService(CarrierConfigManager.class)).thenReturn(mockConfigManager);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
         assertThat(mPreference.getOnPreferenceClickListener().onPreferenceClick(

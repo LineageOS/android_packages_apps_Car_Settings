@@ -20,12 +20,16 @@ import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.media.CarAudioManager;
 import android.content.Context;
+import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.ListPreference;
@@ -36,6 +40,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
 import org.junit.Before;
@@ -43,6 +48,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.MockitoSession;
+import org.mockito.quality.Strictness;
 
 import java.util.Arrays;
 
@@ -58,6 +65,7 @@ public class AudioRouteSelectorControllerTest {
     private CarUxRestrictions mCarUxRestrictions;
     private AudioRouteSelectorController mPreferenceController;
     private ListPreference mPreference;
+    private MockitoSession mSession;
 
     @Mock
     private FragmentController mFragmentController;
@@ -69,11 +77,19 @@ public class AudioRouteSelectorControllerTest {
     private AudioRouteItem mAudioRouteItem1;
     @Mock
     private AudioRouteItem mAudioRouteItem2;
+    @Mock
+    private Toast mMockToast;
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
+
+        mSession = ExtendedMockito.mockitoSession()
+                .initMocks(this)
+                .mockStatic(Toast.class)
+                .strictness(Strictness.LENIENT)
+                .startMocking();
+        ExtendedMockito.when(Toast.makeText(any(), anyString(), anyInt())).thenReturn(mMockToast);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -91,6 +107,7 @@ public class AudioRouteSelectorControllerTest {
         when(mAudioRouteItem1.getName()).thenReturn(ACTIVE_NAME);
         when(mAudioRouteItem2.getAddress()).thenReturn(INACTIVE_ADDRESS);
         when(mAudioRouteItem2.getName()).thenReturn(INACTIVE_NAME);
+        when(mAudioRoutesManager.isAudioRoutingEnabled()).thenReturn(true);
         when(mAudioRoutesManager.getActiveDeviceAddress()).thenReturn(ACTIVE_ADDRESS);
         when(mAudioRoutesManager.getAudioRouteList()).thenReturn(
                 Arrays.asList(ACTIVE_ADDRESS, INACTIVE_ADDRESS));
@@ -103,6 +120,9 @@ public class AudioRouteSelectorControllerTest {
     public void tearDown() {
         if (mAudioRoutesManager != null) {
             mAudioRoutesManager.tearDown();
+        }
+        if (mSession != null) {
+            mSession.finishMocking();
         }
     }
 
