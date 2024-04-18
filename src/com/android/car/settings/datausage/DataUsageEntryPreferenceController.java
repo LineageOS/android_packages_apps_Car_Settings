@@ -62,7 +62,7 @@ public class DataUsageEntryPreferenceController extends PreferenceController<Pre
     private CharSequence formatUsedData() {
         SubscriptionManager subscriptionManager = getContext().getSystemService(
                 SubscriptionManager.class);
-        int defaultSubId = subscriptionManager.getDefaultSubscriptionId();
+        int defaultSubId = SubscriptionManager.getDefaultSubscriptionId();
         if (defaultSubId == SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
             return null;
         }

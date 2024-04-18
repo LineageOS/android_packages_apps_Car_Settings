@@ -116,8 +116,6 @@ public class DataUsageEntryPreferenceControllerTest {
                 .thenReturn(mMockNetworkCapabilities);
         when(mMockNetworkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR))
                 .thenReturn(true);
-
-        mPreferenceController.onCreate(mLifecycleOwner);
     }
 
     @After
@@ -264,5 +262,7 @@ public class DataUsageEntryPreferenceControllerTest {
             when(mMockSubscriptionManager.getSubscriptionPlans(subscriptionId))
                     .thenReturn(Lists.newArrayList(mMockSubscriptionPlan));
         }
+
+        mPreferenceController.onCreate(mLifecycleOwner);
     }
 }
