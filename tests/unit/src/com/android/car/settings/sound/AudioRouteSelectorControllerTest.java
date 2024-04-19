@@ -27,8 +27,10 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.feature.Flags;
 import android.car.media.CarAudioManager;
 import android.content.Context;
+import android.platform.test.flag.junit.SetFlagsRule;
 import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -44,10 +46,10 @@ import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.MockitoSession;
 import org.mockito.quality.Strictness;
 
@@ -80,8 +82,12 @@ public class AudioRouteSelectorControllerTest {
     @Mock
     private Toast mMockToast;
 
+    @Rule
+    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
+
     @Before
     public void setUp() {
+        mSetFlagsRule.enableFlags(Flags.FLAG_CAR_AUDIO_DYNAMIC_DEVICES);
         mLifecycleOwner = new TestLifecycleOwner();
 
         mSession = ExtendedMockito.mockitoSession()
