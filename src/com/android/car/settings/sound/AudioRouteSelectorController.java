@@ -19,7 +19,6 @@ package com.android.car.settings.sound;
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.feature.Flags;
 import android.content.Context;
 import android.widget.Toast;
 
@@ -81,7 +80,10 @@ public class AudioRouteSelectorController extends PreferenceController<ListPrefe
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (!Flags.carAudioDynamicDevices()) {
+        if (!com.android.car.settings.Flags.allowAudioRoutesSelection()) {
+            return CONDITIONALLY_UNAVAILABLE;
+        }
+        if (!android.car.feature.Flags.carAudioDynamicDevices()) {
             return CONDITIONALLY_UNAVAILABLE;
         }
         if (getContext().getResources().getBoolean(R.bool.config_allow_audio_destination_selection)
