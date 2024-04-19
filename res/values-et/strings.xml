@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"Kuva süsteem"</string>
     <string name="hide_system" msgid="8845453295584638040">"Peida süsteem"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Peida süsteemirakendused"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Alarmid ja meeldetuletused"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Süsteemiseadete muutmine"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"See luba võimaldab rakendusel muuta süsteemiseadeid."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Juurdepääs märguannetele"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"See toiming pole teie profiili puhul saadaval"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Juurdepääs kaamerale"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Valige, kas rakendused pääsevad teie auto kaamerale juurde"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Kasutage oma auto kaameraid:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Mis tahes rakendus"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Mis tahes rakendus, millel olete lubanud oma kaamerale juurde pääseda"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Rakendusi pole"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Mitte ükski teie rakendustest"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Ainult nõutavad rakendused"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Ainult teie auto tootja poolt nõutavad rakendused"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Nõutavad rakendused"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Need rakendused on vajalikud, et aidata teie autol ohutult töötada"</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Eeskirjad"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Teie auto tootjal võib endiselt olla juurdepääs teie auto kaamerale. Lisateabe saamiseks lugege tootja eeskirju."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Vaadake, kuidas iga rakendus kasutab teie kaamerat, lugedes nende privaatsuseeskirju."</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"Turvalisus"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekraanilukk"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Puudub"</string>

@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ocultar sistema"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Ocultar aplicacións do sistema"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Alarmas e recordatorios"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar axustes do sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Con este permiso as aplicacións poden modificar a configuración do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acceso a notificacións"</string>
@@ -650,18 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Esta acción non está dispoñible para o teu perfil"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Acceso á cámara"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Decide se queres que as aplicacións poidan acceder ás cámaras do teu vehículo"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Usar a cámara do vehículo con:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Calquera aplicación"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Calquera aplicación á que lle deas permiso para acceder á cámara"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Ningunha aplicación"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Ningunha das túas aplicacións"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Só aplicacións requiridas"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Só aplicacións requiridas polo fabricante do teu vehículo"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Aplicacións requiridas"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Estas aplicacións son necesarias para que o teu vehículo funcione con seguranza"</string>
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Aplicacións requiridas"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Aplicacións requiridas polo fabricante do teu vehículo"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Política"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Pode que o fabricante do coche siga tendo acceso á localización do vehículo. Nas súas políticas atoparás máis información."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Obtén máis información acerca do modo no que cada aplicación usa a cámara revisando a política de privacidade correspondente"</string>
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"Pode que o fabricante do coche siga tendo acceso á localización do vehículo.\n\nObtén máis información acerca do modo no que cada aplicación usa a cámara revisando a política de privacidade correspondente"</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Aplicacións de información/entretemento"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Permitir que as aplicacións de información e entretemento tiren fotos e graven vídeos"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"Todo o tempo"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Nunca"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"Mentres se están usando"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Preguntar sempre"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguranza"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ningún"</string>
