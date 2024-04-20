@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"시스템 표시"</string>
     <string name="hide_system" msgid="8845453295584638040">"시스템 숨기기"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"시스템 앱 숨기기"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"알람 및 리마인더"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"시스템 설정 수정"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"이 권한은 앱이 시스템 설정을 수정하도록 허용합니다."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"알림 액세스"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"이 프로필에서 사용할 수 없는 작업입니다."</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"카메라 액세스"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"앱의 자동차 카메라 액세스 여부 선택"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"다음으로 자동차의 카메라 사용"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"모든 앱"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"카메라에 액세스하도록 허용한 모든 앱"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"앱 없음"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"해당되는 앱 없음"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"필수 앱만"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"자동차 제조업체에서 지정한 필수 앱만 해당"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"필수 앱"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"이러한 앱은 자동차가 안전하게 기능하는 것을 돕기 위해 필요합니다."</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"정책"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"자동차 제조업체에서 사용자의 자동차 카메라에 계속 액세스할 수도 있습니다. 자세한 내용은 자동차 제조업체의 정책을 검토하세요."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"앱의 개인정보처리방침을 검토하여 각각의 앱에서 카메라를 사용하는 방식을 자세히 알아보세요."</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"보안"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"화면 잠금"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"없음"</string>

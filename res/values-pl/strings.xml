@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"Pokaż systemowe"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ukryj systemowe"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Ukryj aplikacje systemowe"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Alarmy i przypomnienia"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modyfikowanie ustawień systemu"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Te uprawnienia umożliwiają aplikacji modyfikowanie ustawień systemu."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Dostęp do powiadomień"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"W Twoim profilu nie można wykonać tego działania"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Dostęp do kamery"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Zdecyduj, czy aplikacje mogą mieć dostęp kamer samochodu"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Dostęp do kamer samochodu mogą mieć:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Dowolna aplikacja"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Wszystkie aplikacje, które mają dostęp do kamery"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Brak aplikacji"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Żadne z Twoich aplikacji"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Tylko wymagane aplikacje"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Tylko aplikacje wymagane przez producenta samochodu"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Wymagane aplikacje"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Te aplikacje są potrzebne do bezpiecznego korzystania z samochodu"</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Zasady"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Producent samochodu może nadal mieć dostęp do kamery w pojeździe. Więcej informacji znajdziesz w jego regulaminie."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Więcej o tym, jak poszczególne aplikacje korzystają z kamery, znajdziesz w ich polityce prywatności."</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"Zabezpieczenia"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blokada ekranu"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Brak"</string>

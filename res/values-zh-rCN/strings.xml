@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"显示系统应用"</string>
     <string name="hide_system" msgid="8845453295584638040">"隐藏系统程序"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"隐藏系统应用"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"闹钟和提醒"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"修改系统设置"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"此权限可让应用修改系统设置。"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"通知访问权限"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"无法对您的个人资料执行此操作"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"摄像头使用权限"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"选择应用能否使用您汽车的摄像头"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"允许以下应用使用您汽车的摄像头："</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"任何应用"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"允许任何应用使用您汽车的摄像头"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"所有应用均不可使用"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"您的所有应用均不可使用"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"仅限必需的应用"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"仅限汽车制造商要求的应用"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"必需的应用"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"这些应用对于确保行车安全必不可少"</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"政策"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"您汽车的制造商或许仍可使用您汽车的摄像头。您可参阅其相关政策以了解详情。"</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"如需详细了解每款应用如何使用摄像头，请查看各应用的隐私权政策。"</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"安全"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"屏幕锁定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"无"</string>

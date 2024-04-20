@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"სისტემის ჩვენება"</string>
     <string name="hide_system" msgid="8845453295584638040">"სისტემური პროცესების დამალვა"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"სისტემის აპების დამალვა"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"მაღვიძარები და შეხსენებები"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"სისტემის პარამეტრების შეცვლა"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ეს ნებართვა უფლებას აძლევს აპს, შეცვალოს სისტემის პარამეტრები."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"შეტყობინებებზე წვდომა"</string>
@@ -650,18 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"ეს მოქმედება თქვენი პროფილისთვის მიუწვდომელია"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"კამერაზე წვდომა"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"აირჩიეთ, ექნებათ თუ არა აპებს თქვენი მანქანის კამერებზე წვდომა"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"გამოიყენეთ თქვენი მანქანის კამერები:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"ნებისმიერი აპით"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"ნებისმიერი აპი, რომელსაც თქვენს კამერაზე წვდომის უფლება აქვს"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"აპების გარეშე"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"არცერთი თქვენი აპი"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"მხოლოდ სავალდებულო აპები"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"მხოლოდ თქვენი მანქანის მწარმოებლის მიერ მოთხოვნილი აპები"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"სავალდებულო აპები"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"ეს აპები საჭიროა თქვენი მანქანის უსაფრთხოდ ფუნქციონირებისთვის"</string>
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"სავალდებულო აპები"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"თქვენი მანქანის მწარმოებლის მიერ მოთხოვნილი აპები"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"წესები"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"თქვენი მანქანის მწარმოებელს შესაძლოა კვლავაც ჰქონდეს წვდომა თქვენი მანქანის კამერაზე. მეტი ინფორმაციისთვის შეგიძლიათ მათ წესებს გაეცნოთ."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"მიმოიხილეთ კონფიდენციალურობის დებულება, რათა შეიტყოთ, თუ როგორ იყენებს თითოეული აპი თქვენს კამერას."</string>
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"თქვენი მანქანის მწარმოებელს შესაძლოა კვლავ ჰქონდეს წვდომა თქვენი მანქანის კამერაზე.\n\nშეიტყვეთ მეტი, თუ როგორ იყენებს თითოეული აპი თქვენს კამერას მისი კონფიდენციალურობის დებულების მიმოხილვის გზით."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"საინფორმაციო-გასართობი აპები"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"მიეცით გართობის/საინფორმაციო აპებს სურათების გადაღებისა და ვიდეოს ჩაწერის ნებართვა"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"მუდმივად"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"არასოდეს"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"გამოყენებისას"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"შემეკითხე ყოველთვის"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"უსაფრთხოება"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ეკრანის დაბლოკვა"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"არცერთი"</string>

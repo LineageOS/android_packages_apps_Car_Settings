@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"Mostra sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Nascondi sistema"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Nascondi app di sistema"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Sveglie e promemoria"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modifica impostazioni sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Questa autorizzazione consente a un\'app di modificare le impostazioni di sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Accesso alle notifiche"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Questa azione non è disponibile per il tuo profilo"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Accesso alla fotocamera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Scegli se le app possono accedere alle videocamere dell\'auto"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Utilizza le videocamere dell\'auto con:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Qualsiasi app"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Qualsiasi app autorizzata ad accedere alla videocamera"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Nessuna app"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Nessuna delle tue app"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Solo le app obbligatorie"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Solo le app richieste dal produttore dell\'auto"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"App obbligatorie"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Queste app sono necessarie per aiutare la tua auto a funzionare in sicurezza"</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Norme"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Il produttore del veicolo potrebbe avere ancora accesso alla videocamera dell\'auto. Per maggiori informazioni, puoi consultare le relative norme vigenti."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Scopri di più su come ogni app utilizza la tua videocamera esaminando le relative norme sulla privacy."</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"Sicurezza"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blocco schermo"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nessuno"</string>
