@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"ছিষ্টেম দেখুৱাওক"</string>
     <string name="hide_system" msgid="8845453295584638040">"ছিষ্টেম লুকুৱাওক"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"ছিষ্টেম এপ্‌ লুকুৱাওক"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"এলাৰ্ম আৰু ৰিমাইণ্ডাৰ"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"ছিষ্টেমৰ ছেটিংসমূহ সংশোধন কৰক"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"এই অনুমতিটোৱে কোনো এপক ছিষ্টেম ছেটিংসমূহ সংশোধন কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"জাননীৰ এক্সেছ"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"আপোনাৰ প্ৰ’ফাইলত এই কাৰ্যটো উপলব্ধ নহয়"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"কেমেৰাৰ এক্সেছ"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"এপ্‌সমূহে আপোনাৰ গাড়ীৰ কেমেৰা এক্সেছ কৰিব পাৰেনে নোৱাৰে সেয়া বাছনি কৰক"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"আপোনাৰ গাড়ীৰ কেমেৰা ইয়াৰ সৈতে ব্যৱহাৰ কৰক:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"যিকোনো এপ্"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"আপুনি নিজৰ কেমেৰা এক্সেছ কৰিবলৈ অনুমতি দিয়া যিকোনো এপ্"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"কোনো এপ্‌ নাই"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"আপোনাৰ কোনো এপ্ নহয়"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"কেৱল আৱশ্যকীয় এপ্"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"কেৱল আপোনাৰ গাড়ী নিৰ্মাতাৰ বাবে আৱশ্যকীয় এপ্"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"আৱশ্যকীয় এপ্"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"আপোনাৰ গাড়ীখন সুৰক্ষিতভাৱে চলি থাকিবলৈ এই এপ্‌সমূহ আৱশ্যক"</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"নীতি"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"আপোনাৰ গাড়ীৰ নিৰ্মাতাৰ ওচৰত এতিয়াও আপোনাৰ গাড়ীৰ কেমেৰাৰ এক্সেছ থাকিব পাৰে। অধিক তথ্যৰ বাবে আপুনি তেওঁলোকৰ নীতি পৰ্যালোচনা কৰিব পাৰে।"</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"প্ৰতিটো এপৰ গোপনীয়তাৰ নীতি পৰ্যালোচনা কৰি সেইসমূহে কিদৰে আপোনাৰ কেমেৰা ব্যৱহাৰ কৰে সেই বিষয়ে অধিক জানক।"</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"সুৰক্ষা"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্ৰীন লক"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"নাই"</string>

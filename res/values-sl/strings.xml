@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"Prikaz sistemskih procesov"</string>
     <string name="hide_system" msgid="8845453295584638040">"Skrivanje sistemskih procesov"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Skrivanje sistemskih aplikacij"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Alarmi in opomniki"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Spreminjanje sistemskih nastavitev"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"To dovoljenje aplikaciji dovoljuje spreminjanje sistemskih nastavitev."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Dostop do obvestil"</string>
@@ -650,18 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"To dejanje ni na voljo za vaš profil."</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Dostop do kamere"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Izberite, ali aplikacije lahko dostopajo do kamere avtomobila"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Aplikacije, ki lahko uporabljajo kamere avtomobila:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Katera koli aplikacija"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Poljubna aplikacija, ki ste ji dovolili dostop do kamere"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Nobena aplikacija"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Nobena od vaših aplikacij"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Samo obvezne aplikacije"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Samo aplikacije, ki jih zahteva proizvajalec avtomobila"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Obvezne aplikacije"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Te aplikacije so obvezne zaradi zagotavljanja varnega delovanja avtomobila"</string>
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Obvezne aplikacije"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Aplikacije, ki jih zahteva proizvajalec avtomobila"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Pravilnik"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Proizvajalec avtomobila ima morda še vedno dostop do kamere avtomobila. Če želite več informacij, si oglejte njegove pravilnike."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Več o tem, kako posamezna aplikacija uporablja kamero, lahko preberete v njenem pravilniku o zasebnosti."</string>
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"Proizvajalec avtomobila ima morda še vedno dostop do kamere avtomobila.\n\nVeč o tem, kako posamezna aplikacija uporablja kamero, lahko preberete v njenem pravilniku o zasebnosti."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Aplikacije inform.-razvedrilnega sistema"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Omogočanje, da aplikacije informativno-razvedrilnega sistema snemajo fotografije in videoposnetke"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"Ves čas"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Nikoli"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"Med uporabo"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Vedno vprašaj"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Varnost"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Zaklepanje zaslona"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Brez"</string>

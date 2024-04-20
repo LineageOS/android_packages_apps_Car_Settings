@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"Onyesha mfumo"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ficha mfumo"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Ficha programu za mfumo"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Ving\'ora na vikumbusho"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Badilisha mipangilio ya mfumo"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Idhini hii huruhusu programu kubadilisha mipangilio ya mfumo"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Kufikia arifa"</string>
@@ -650,18 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Kitendo hiki hakipatikani kwa wasifu wako"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Ufikiaji wa kamera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Chagua iwapo programu zinaweza kufikia kamera ya gari lako"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Kutumia kamera ya gari lako pamoja na:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Programu Yoyote"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Programu yoyote ambayo umeruhusu ifikie kamera yako"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Hakuna Programu"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Hamna kati ya programu zako"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Programu zinazohitajika pekee"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Programu zinazohitajika na kampuni iliyotengeneza gari lako pekee"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Programu zinazohitajika"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Programu hizi zinahitajika ili kusaidia gari lako kufanya kazi kwa usalama"</string>
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Programu zinazotakiwa kuwepo"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Programu ambazo mtengenezaji wa gari lako anataka ziwepo"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Sera"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Huenda kampuni iliyotengeneza gari lako bado ina uwezo wa kufikia kamera ya gari lako. Unaweza kusoma sera zake ili upate maelezo zaidi."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Pata maelezo zaidi kuhusu jinsi kila programu hutumia Kamera yako kwa kusoma Sera yake ya Faragha."</string>
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"Huenda bado mtengenezaji wa gari lako akawa na uwezo wa kufikia kamera ya gari lako.\n\nPata maelezo zaidi kuhusu jinsi kila programu inavyotumia kamera yako kwa kusoma sera yake ya faragha."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Programu za habari na burudani"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Ruhusu programu za habari na burudani zipige picha na kurekodi video"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"Kila wakati"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Zisiwahi kamwe"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"Zinapotumika kwenye skrini"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Uliza kila wakati"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Usalama"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Kufunga skrini"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Hamna"</string>

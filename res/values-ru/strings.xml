@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"Показать системные"</string>
     <string name="hide_system" msgid="8845453295584638040">"Скрыть системные процессы"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Скрыть системные приложения"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Будильники и напоминания"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Изменение системных настроек"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Приложение сможет изменять системные настройки."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Доступ к уведомлениям"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Это действие недоступно для вашего профиля."</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Доступ к камере"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Настройте доступ приложений к камерам автомобиля."</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Выберите, какие приложения могут использовать камеры в вашем автомобиле"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Любое приложение"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Любое приложение, которому вы предоставили доступ к камере"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Ни одно приложение"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Ни одно из ваших приложений"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Только необходимые приложения"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Приложения, требуемые производителем автомобиля"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Необходимые приложения"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Эти приложения нужны для безопасной работы вашего автомобиля."</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Политика"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"У производителя все равно может быть доступ к камере вашего автомобиля. Чтобы узнать больше, ознакомьтесь с правилами производителя."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Ознакомьтесь с Политикой конфиденциальности приложения, чтобы узнать, как оно использует вашу камеру."</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"Безопасность"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Блокировка экрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Нет"</string>

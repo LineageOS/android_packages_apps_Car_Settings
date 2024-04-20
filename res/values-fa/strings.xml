@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"نمایش سیستم"</string>
     <string name="hide_system" msgid="8845453295584638040">"پنهان کردن سیستم"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"پنهان کردن برنامه‌های سیستم"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"زنگ‌های ساعت و یادآوری‌ها"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"تغییر تنظیمات سیستم"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"این مجوز به برنامه امکان می‌دهد تنظیمات سیستم را تغییر دهد."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"دسترسی به اعلان"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"این کنش برای نمایه‌تان دردسترس نیست"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"دسترسی به دوربین"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"انتخاب کنید برنامه‌ها بتوانند به دوربین خودروتان دسترسی داشته باشند یا نه"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"از دوربین‌های خودروتان به‌همراه موارد زیر استفاده می‌شود:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"همه برنامه‌ها"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"همه برنامه‌هایی که اجازه داده‌اید به دوربینتان دسترسی داشته باشند"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"برنامه‌ای وجود ندارد"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"هیچ کدام از برنامه‌ها"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"فقط برنامه‌های الزامی"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"فقط برنامه‌هایی که سازنده خودرو الزامی کرده است"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"برنامه‌های الزامی"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"این برنامه‌ها لازم هستند تا خودروی شما عملکرد ایمنی داشته باشد"</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"خط‌مشی"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"ممکن است سازنده خودروتان همچنان به دوربین خودروی شما دسترسی داشته باشد. برای کسب اطلاعات بیشتر می‌توانید خط‌مشی‌های سازنده را مرور کنید."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"برای کسب اطلاعات بیشتر درباره نحوه استفاده هر برنامه از «دوربین»، «خط‌مشی رازداری» آن برنامه را مرور کنید."</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"امنیت"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل صفحه"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"هیچ‌کدام"</string>

@@ -385,7 +385,7 @@
     <string name="auto_launch_reset_text" msgid="590439611312092392">"डिफल्ट मानहरू हटाउनुहोस्"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"खोल्न मिल्ने लिंक खोल्न सकियोस्"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"यो एपमा खोल्नुहोस्"</string>
-    <string name="app_link_open_ask" msgid="7242075065136237456">"प्रत्येक पटक सोधियोस्"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"प्रत्येक पटक सोध्नुहोस्"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"यो एपमा नखोल्नुहोस्"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"समर्थित लिंकहरू"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"एपहरू"</string>
@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"सिस्टम देखाउनुहोस्"</string>
     <string name="hide_system" msgid="8845453295584638040">"सिस्टम लुकाउनुहोस्"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"प्रणालीका एप लुकाउनुहोस्"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"अलार्म तथा रिमाइन्डरहरू"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"प्रणालीसम्बन्धी सेटिङ परिमार्जन गर्नुहोस्"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"यस अनुमतिले एपलाई प्रणालीको सेटिङ परिमार्जन गर्न दिन्छ।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"सूचनामाथिको पहुँच"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"तपाईंको प्रोफाइलमा यो कारबाही गर्न मिल्दैन"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"क्यामेरा एक्सेस"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"एपहरूलाई तपाईंको कारको क्यामेरा एक्सेस गर्न दिने कि नदिने भन्ने कुरा छनौट गर्नुहोस्"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"निम्न एपमार्फत आफ्नो कारको क्यामेरा प्रयोग गर्नुहोस्:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"जुनसुकै एप"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"तपाईंले आफ्नो क्यामेरा एक्सेस गर्ने अनुमति दिनुभएका सबै एपहरू"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"कुनै पनि एप होइन"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"तपाईंको कुनै पनि एप होइन"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"अनिवार्य रूपमा इन्स्टल गर्नु पर्ने एपहरू मात्र"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"तपाईंको कारको उत्पादकले व्यवस्था गरेबमोजिम अनिवार्य रूपमा इन्स्टल गर्नु पर्ने एपहरू मात्र"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"अनिवार्य रूपमा इन्स्टल गर्नु पर्ने एपहरू"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"तपाईंको कार सुरक्षित रूपमा चलाउनका निम्ति यी एपहरू चाहिन्छ"</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"नीति"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"तपाईंको कारको उत्पादकसँग अझै पनि तपाईंको कारको क्यामेराको एक्सेस हुन सक्छ। तपाईं उक्त उत्पादकका नीतिहरूको समीक्षा गरेर यस सम्बन्धमा थप जानकारी प्राप्त गर्न सक्नुहुन्छ।"</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"हरेक एपले तपाईंको कारको क्यामेरा कसरी एक्सेस गर्छ भन्ने बारेमा थप जान्न उक्त एपको गोपनीयता नीतिको समीक्षा गर्नुहोस्।"</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रिन लक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कुनै पनि होइन"</string>

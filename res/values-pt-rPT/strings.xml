@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ocultar sistema"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Ocultar apps do sistema"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Alarmes e lembretes"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar definições sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Esta autorização permite que uma aplicação modifique as definições do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
@@ -650,18 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Esta ação está indisponível para o seu perfil"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Acesso à câmara"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Escolha se as apps podem aceder às câmaras do carro"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Use as câmaras do carro com:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Qualquer app"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Qualquer app que tenha autorizado a aceder à sua câmara"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Nenhuma app"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Nenhuma das suas apps"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Apenas apps exigidas"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Apenas apps exigidas pelo fabricante do carro"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Apps necessárias"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Estas apps são necessárias para que o carro funcione em segurança"</string>
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Apps necessárias"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Apps exigidas pelo fabricante do carro"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Política"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"O fabricante do carro ainda pode ter acesso à câmara do seu carro. Pode rever as respetivas políticas para ver mais informações."</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Reveja a Política de Privacidade de cada app para saber como esta usa a sua câmara."</string>
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"O fabricante do carro ainda pode ter acesso à câmara do seu carro.\n\nReveja a Política de Privacidade de cada app para saber como esta usa a sua câmara."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Apps de infoentretenimento"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Permita que as apps de infoentretenimento tirem fotos e gravem vídeos"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"Sempre"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Nunca"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"Durante a utilização"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Perguntar sempre"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Segurança"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueio de ecrã"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nenhum"</string>

@@ -400,6 +400,7 @@
     <string name="show_system" msgid="4401355756969485287">"سسٹم دکھائیں"</string>
     <string name="hide_system" msgid="8845453295584638040">"سسٹم چھپائیں"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"سسٹم ایپس کو چھپائیں"</string>
+    <string name="alarms_and_reminders_title" msgid="5201073616071479075">"الارمز اور یاد دہانیاں"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"سسٹم کی ترتیبات میں ترمیم کریں"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"اس اجازت سے ایپ کو سسٹم کی ترتیبات میں ترمیم کرنے میں سہولت ہوتی ہے۔"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"اطلاع تک رسائی"</string>
@@ -650,18 +651,25 @@
     <string name="action_unavailable" msgid="7087119418684417249">"یہ کاروائی آپ کی پروفائل کے لیے دستیاب نہیں ہے"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"کیمرا تک رسائی"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"منتخب کریں کہ آیا ایپس آپ کی کار کے کیمروں تک رسائی حاصل کر سکتی ہیں"</string>
-    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"اپنی کار کے کیمروں کو درج ذیل کے ساتھ استعمال کریں:"</string>
-    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"کوئی بھی ایپ"</string>
-    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"کوئی بھی ایپ جسے آپ نے اپنے کیمرے تک رسائی کی اجازت دی ہے"</string>
-    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"کوئی ایپ نہیں ہے"</string>
-    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"آپ کی ایپس میں سے کوئی بھی نہیں"</string>
-    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"صرف مطلوبہ ایپس"</string>
-    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"صرف وہ ایپس جن کی آپ کی کار کے مینوفیکچرر کو ضرورت ہے"</string>
-    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"مطلوبہ ایپس"</string>
-    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"آپ کی کار کو محفوظ طریقے سے کام کرنے میں مدد کے لیے ان ایپس کی ضرورت ہے"</string>
+    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
+    <skip />
+    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
+    <skip />
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"پالیسی"</string>
-    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"آپ کی کار کے مینوفیکچرر کو اب بھی آپ کی کار کے کیمرے تک رسائی حاصل ہو سکتی ہے۔ مزید معلومات کے لیے آپ ان کی پالیسیوں کا جائزہ لے سکتے ہیں۔"</string>
-    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"اس بارے میں مزید جانیں کہ ہر ایپ اپنی رازداری کی پالیسی کا جائزہ لے کر آپ کے کیمرے کو کس طرح استعمال کرتی ہے۔"</string>
+    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
+    <skip />
+    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
+    <skip />
+    <!-- no translation found for permission_grant_always (8851460274973784076) -->
+    <skip />
+    <!-- no translation found for permission_grant_never (5725479525867480567) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
+    <skip />
+    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"سیکیورٹی"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"اسکرین لاک"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"کوئی نہیں"</string>
