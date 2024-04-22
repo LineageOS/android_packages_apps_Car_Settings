@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"이 프로필에서 사용할 수 없는 작업입니다."</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"카메라 액세스"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"앱의 자동차 카메라 액세스 여부 선택"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"필수 앱"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"자동차 제조업체에서 지정한 필수 앱"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"정책"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"자동차 제조업체에서 사용자의 자동차 카메라에 계속 액세스할 수도 있습니다.\n\n각 앱이 카메라를 사용하는 방식을 자세히 알아보려면 앱의 개인정보처리방침을 참고하세요."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"인포테인먼트 앱"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"인포테인먼트 앱이 사진을 촬영하고 동영상을 녹화하도록 허용"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"항상"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"다시 알리지 않음"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"사용 시"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"항상 확인"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"보안"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"화면 잠금"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"없음"</string>

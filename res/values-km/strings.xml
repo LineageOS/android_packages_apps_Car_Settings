@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"កម្រងព័ត៌មាន​របស់អ្នក​មិនអាចធ្វើ​សកម្មភាពនេះ​បានទេ"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"សិទ្ធិចូលប្រើ​កាមេរ៉ា"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"ជ្រើសរើសថាតើកម្មវិធីអាចចូលប្រើកាមេរ៉ារថយន្តរបស់អ្នកបានឬអត់"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"កម្មវិធីដែលតម្រូវឱ្យមាន"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"កម្មវិធីដែលតម្រូវឱ្យមានដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នក"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"គោលការណ៍"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"ក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នកអាចនៅតែមានសិទ្ធិចូលប្រើកាមេរ៉ារថយន្តរបស់អ្នក។\n\nស្វែងយល់បន្ថែមអំពីរបៀបដែលកម្មវិធីនីមួយៗប្រើកាមេរ៉ារបស់អ្នក ដោយពិនិត្យមើលគោលការណ៍ឯកជនភាពរបស់កម្មវិធី។"</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"កម្មវិធីព័ត៌មាននិងកម្សាន្ត"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"អនុញ្ញាតឱ្យកម្មវិធីព័ត៌មាននិងកម្សាន្តថតរូបភាព និងថតវីដេអូ"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"គ្រប់ពេល"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"កុំឱ្យសោះ"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"នៅពេល​ប្រើ"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"សួរគ្រប់ពេល"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"សុវត្ថិភាព"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ការចាក់សោអេក្រង់"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"គ្មាន"</string>

@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"W Twoim profilu nie można wykonać tego działania"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Dostęp do kamery"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Zdecyduj, czy aplikacje mogą mieć dostęp kamer samochodu"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Wymagane aplikacje"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Aplikacje wymagane przez producenta samochodu"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Zasady"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"Producent samochodu może nadal mieć dostęp do kamery w pojeździe.\n\nWięcej o tym, jak poszczególne aplikacje korzystają z kamery, znajdziesz w ich polityce prywatności."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Aplikacje informacyjno-rozrywkowe"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Zezwalaj aplikacjom informacyjno-rozrywkowym na robienie zdjęć i nagrywanie filmów"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"Cały czas"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Nigdy"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"Podczas używania"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Zawsze pytaj"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Zabezpieczenia"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blokada ekranu"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Brak"</string>

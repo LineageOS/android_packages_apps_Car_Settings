@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"මෙම ක්‍රියාව ඔබගේ පැතිකඩ සඳහා ලබා ගත නොහැකිය"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"කැමරා ප්‍රවේශය"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"යෙදුම් හට ඔබේ මෝටර් රථයේ කැමරා වෙත ප්‍රවේශ විය හැකි ද යන්න තෝරා ගන්න"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"අවශ්‍ය යෙදුම්"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"ඔබේ මෝටර් රථයේ නිෂ්පාදකයාට අවශ්‍ය යෙදුම්"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"ප්‍රතිපත්තිය"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"ඔබේ මෝටර් රථ නිෂ්පාදකයාට තවමත් ඔබේ මෝටර් රථයේ කැමරාවට ප්‍රවේශය තිබිය හැක.\n\nඑක් එක් යෙදුම එහි පෞද්ගලිකත්ව ප්‍රතිපත්තිය සමාලෝචනය කිරීමෙන් ඔබේ කැමරාව භාවිතා කරන ආකාරය ගැන තව දැන ගන්න."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"තොරතුරු විනෝදාස්වාද යෙදුම්"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ඡායාරූප ගැනීමට සහ වීඩියෝ පටිගත කිරීමට තොරතුරු රසාස්වාදය යෙදුම්වලට ඉඩ දෙන්න"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"සෑම විට ම"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"කිසිදා නොකරන්න"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"භාවිතා කරන විට"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"සෑම වේලාවේම අසන්න"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ආරක්ෂාව"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"තිර අගුල"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"කිසිවක් නැත"</string>

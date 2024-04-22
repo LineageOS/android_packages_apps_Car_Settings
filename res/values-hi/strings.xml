@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"आपकी प्रोफ़ाइल के लिए इस कार्रवाई की सुविधा उपलब्ध नहीं है"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"कैमरे का ऐक्सेस"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"चुनें कि ऐप्लिकेशन आपकी कार के कैमरे ऐक्सेस कर सकते हैं या नहीं"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"ज़रूरी ऐप्लिकेशन"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"कार बनाने वाली कंपनी की ओर से बताए गए ज़रूरी ऐप्लिकेशन"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"नीति"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"शायद आपकी कार बनाने वाली कंपनी के पास, अब भी आपकी कार के कैमरे का ऐक्सेस हो.\n\nकिसी भी ऐप्लिकेशन की निजता नीति पढ़कर जानें कि वह ऐप्लिकेशन, कार के कैमरे को कब और कैसे इस्तेमाल करता है."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"मनोरंजन और जानकारी देने वाले ऐप्लिकेशन"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"फ़ोटो खींचने और वीडियो रिकॉर्ड करने के लिए मनोरंजन की सुविधा और जानकारी देने वाले ऐप्लिकेशन को अनुमति दें"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"हर समय"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"कभी नहीं"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"इस्तेमाल करते समय अनुमति दें"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"हर बार पूछें"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>

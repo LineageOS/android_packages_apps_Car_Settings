@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"This action is unavailable for your profile"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Camera access"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Choose whether apps can access your car\'s cameras"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Required apps"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Apps required by your car\'s manufacturer"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Policy"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"Your car manufacturer may still have access to your car\'s camera.\n\nLearn more about how each app uses your camera by reviewing its privacy policy."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Infotainment apps"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Allow infotainment apps to take pictures and record video"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"All the time"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Never"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"When in use"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Ask every time"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Security"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Screen lock"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"None"</string>
