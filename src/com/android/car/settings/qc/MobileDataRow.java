@@ -66,6 +66,9 @@ public class MobileDataRow extends SettingsQCItem {
         if (isHiddenForZone()) {
             return null;
         }
+        if (!isDataSubscriptionFlagEnable() && !mDataUsageController.isMobileDataSupported()) {
+            return null;
+        }
         boolean dataEnabled = mDataUsageController.isMobileDataEnabled();
         Icon icon = MobileNetworkQCUtils.getMobileNetworkSignalIcon(getContext());
 
@@ -114,7 +117,6 @@ public class MobileDataRow extends SettingsQCItem {
         boolean newState = intent.getBooleanExtra(QC_ACTION_TOGGLE_STATE,
                 !mDataUsageController.isMobileDataEnabled());
         mDataUsageController.setMobileDataEnabled(newState);
-
     }
 
     @Override
@@ -128,7 +130,8 @@ public class MobileDataRow extends SettingsQCItem {
     }
 
     String getSubtitle(boolean dataEnabled) {
-        if (dataEnabled && mSubscriptionStatus == DataSubscriptionStatus.INACTIVE) {
+        if (isDataSubscriptionFlagEnable()
+                && dataEnabled && mSubscriptionStatus == DataSubscriptionStatus.INACTIVE) {
             return getContext().getString(
                     R.string.connectivity_inactive_prompt);
         }
@@ -137,7 +140,8 @@ public class MobileDataRow extends SettingsQCItem {
     }
 
     String getActionText(boolean dataEnabled) {
-        if (dataEnabled && mSubscriptionStatus != DataSubscriptionStatus.PAID
+        if (isDataSubscriptionFlagEnable()
+                && dataEnabled && mSubscriptionStatus != DataSubscriptionStatus.PAID
                 && !mIsDistractionOptimizationRequired) {
             return getContext().getString(
                     R.string.connectivity_inactive_action_text);
@@ -146,7 +150,8 @@ public class MobileDataRow extends SettingsQCItem {
     }
 
     int getCategory() {
-        if (mSubscriptionStatus != DataSubscriptionStatus.PAID) {
+        if (isDataSubscriptionFlagEnable()
+                && mSubscriptionStatus != DataSubscriptionStatus.PAID) {
             return QCCategory.WARNING;
         }
         return QCCategory.NORMAL;
@@ -165,11 +170,15 @@ public class MobileDataRow extends SettingsQCItem {
         setIsDistractionOptimizationRequired(carUxRestrictions);
     }
 
+    @VisibleForTesting
     void setSubscriptionStatus(int subscriptionStatus) {
         mSubscriptionStatus = subscriptionStatus;
     }
 
     PendingIntent getPrimaryAction() {
+        if (!isDataSubscriptionFlagEnable()) {
+            return null;
+        }
         if (mSubscriptionStatus == DataSubscriptionStatus.PAID
                 || mIsDistractionOptimizationRequired) {
             return null;
@@ -180,5 +189,9 @@ public class MobileDataRow extends SettingsQCItem {
         PendingIntent intent = PendingIntent.getActivity(getContext(), /* requestCode= */ 0,
                 dataSubscriptionIntent, PendingIntent.FLAG_IMMUTABLE, null);
         return intent;
+    }
+
+    private boolean isDataSubscriptionFlagEnable() {
+        return com.android.car.datasubscription.Flags.dataSubscriptionPopUp();
     }
 }

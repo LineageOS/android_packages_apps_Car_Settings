@@ -77,7 +77,9 @@ public class MobileNetworkEntryPreferenceController extends
         mConnectivityManager = context.getSystemService(ConnectivityManager.class);
         mTelephonyManager = context.getSystemService(TelephonyManager.class);
         mSubscriptionId = SubscriptionManager.getDefaultDataSubscriptionId();
-        mSubscription = new DataSubscription(context);
+        if (isDataSubscriptionFlagEnable()) {
+            mSubscription = new DataSubscription(context);
+        }
     }
 
     @Override
@@ -108,13 +110,15 @@ public class MobileNetworkEntryPreferenceController extends
             getContext().getContentResolver().registerContentObserver(getObservableUri(
                     mSubscriptionId), /* notifyForDescendants= */ false, mMobileDataChangeObserver);
         }
-        mSubscriptionStatus = mSubscription.getDataSubscriptionStatus();
-        mDataSubscriptionChangeListener =
-                value -> {
-                    mSubscriptionStatus = value;
-                    refreshUi();
-                };
-        mSubscription.addDataSubscriptionListener(mDataSubscriptionChangeListener);
+        if (mSubscription != null) {
+            mSubscriptionStatus = mSubscription.getDataSubscriptionStatus();
+            mDataSubscriptionChangeListener =
+                    value -> {
+                        mSubscriptionStatus = value;
+                        refreshUi();
+                    };
+            mSubscription.addDataSubscriptionListener(mDataSubscriptionChangeListener);
+        }
     }
 
     @Override
@@ -123,7 +127,9 @@ public class MobileNetworkEntryPreferenceController extends
         if (mSubscriptionId != SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
             getContext().getContentResolver().unregisterContentObserver(mMobileDataChangeObserver);
         }
-        mSubscription.removeDataSubscriptionListener();
+        if (mSubscription != null) {
+            mSubscription.removeDataSubscriptionListener();
+        }
     }
 
     @Override
@@ -143,7 +149,8 @@ public class MobileNetworkEntryPreferenceController extends
 
     @Override
     protected boolean handlePreferenceClicked(ColoredTwoActionSwitchPreference preference) {
-        if (mSubscriptionStatus != DataSubscriptionStatus.PAID) {
+        if (isDataSubscriptionFlagEnable()
+                && mSubscriptionStatus != DataSubscriptionStatus.PAID) {
             Intent dataSubscriptionIntent = new Intent(getContext().getString(
                     R.string.connectivity_flow_app));
             dataSubscriptionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -183,7 +190,7 @@ public class MobileNetworkEntryPreferenceController extends
         if (!mTelephonyManager.isDataEnabled()) {
             return getContext().getString(R.string.mobile_network_state_off);
         }
-        if (mSubscriptionStatus != DataSubscriptionStatus.PAID) {
+        if (isDataSubscriptionFlagEnable() && mSubscriptionStatus != DataSubscriptionStatus.PAID) {
             return getContext().getString(R.string.connectivity_inactive_prompt);
         }
         int count = subs.size();
@@ -201,7 +208,7 @@ public class MobileNetworkEntryPreferenceController extends
         if (!mTelephonyManager.isDataEnabled()) {
             return null;
         }
-        if (mSubscriptionStatus != DataSubscriptionStatus.PAID
+        if (isDataSubscriptionFlagEnable() && mSubscriptionStatus != DataSubscriptionStatus.PAID
                 && !getUxRestrictions().isRequiresDistractionOptimization()) {
             getPreference().setIsWarning(true);
             return getContext().getString(R.string.connectivity_inactive_action_text);
@@ -236,5 +243,9 @@ public class MobileNetworkEntryPreferenceController extends
     @VisibleForTesting
     int getSubscriptionStatus() {
         return mSubscriptionStatus;
+    }
+
+    private boolean isDataSubscriptionFlagEnable() {
+        return com.android.car.datasubscription.Flags.dataSubscriptionPopUp();
     }
 }
