@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Den här åtgärden är inte tillgänglig för din profil"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kameraåtkomst"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Välj om appar kan få åtkomst till bilens kamera"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Appar som krävs"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Appar som krävs av bilens tillverkare"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Policy"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"Bilens tillverkare kan fortfarande ha åtkomst till bilens kamera.\n\nLäs mer om hur varje app använder din kamera genom att granska integritetspolicyn."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Infotainment-appar"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Tillåt att infotainment-appar tar bilder och spelar in video"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"Alltid"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Aldrig"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"När appen används"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Fråga varje gång"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Säkerhet"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skärmlås"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Inga"</string>

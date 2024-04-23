@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Гэта дзеянне для вашага профілю недаступнае"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Доступ да камер"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Наладзьце доступ праграм да камер аўтамабіля"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Абавязковыя праграмы"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Праграмы, выкарыстання якіх патрабуе вытворца аўтамабіля"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Палітыка"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"У вытворцы ўсё роўна можа быць доступ да камеры аўтамабіля.\n\nКаб даведацца больш пра тое, як пэўная праграма выкарыстоўвае камеру, азнаёмцеся з палітыкай прыватнасці гэтай праграмы."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Праграмы інфармац.-забаўляльнай сістэмы"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Дазволіць праграмам інфармацыйна-забаўляльнай сістэмы здымаць фота і відэа"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"Заўсёды"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Ніколі"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"Пры карыстанні"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Заўсёды пытацца"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Бяспека"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Блакіроўка экрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Няма"</string>

@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"আপোনাৰ প্ৰ’ফাইলত এই কাৰ্যটো উপলব্ধ নহয়"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"কেমেৰাৰ এক্সেছ"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"এপ্‌সমূহে আপোনাৰ গাড়ীৰ কেমেৰা এক্সেছ কৰিব পাৰেনে নোৱাৰে সেয়া বাছনি কৰক"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"আৱশ্যকীয় এপ্‌সমূহ"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"আপোনাৰ গাড়ী নিৰ্মাতাৰ বাবে আৱশ্যকীয় এপ্‌সমূহ"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"নীতি"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"আপোনাৰ গাড়ীৰ নিৰ্মাতাৰ ওচৰত এতিয়াও আপোনাৰ গাড়ীৰ কেমেৰাৰ এক্সেছ থাকিব পাৰে।\n\nপ্ৰতিটো এপৰ গোপনীয়তাৰ নীতি পৰ্যালোচনা কৰি সেইসমূহে কিদৰে আপোনাৰ কেমেৰা ব্যৱহাৰ কৰে সেই বিষয়ে অধিক জানক।"</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ইনফ’টেইনমেণ্ট এপ্‌সমূহ"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ইনফ’টেইনমেণ্ট এপ্‌সমূহক ফট’ তুলিবলৈ আৰু ভিডিঅ’ ৰেকৰ্ড কৰিবলৈ অনুমতি দিয়ক"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"সকলো সময়তে"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"কেতিয়াও নহয়"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"ব্যৱহাৰ হৈ থাকোঁতে"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"প্ৰতিবাৰতে সোধক"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"সুৰক্ষা"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্ৰীন লক"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"নাই"</string>

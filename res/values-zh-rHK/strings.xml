@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"你的設定檔無法執行此操作"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"相機存取權"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"選擇應用程式是否可存取汽車的相機"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"必要的應用程式"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"汽車製造商所需的必要應用程式"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"政策"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"汽車製造商可能仍可存取汽車的相機。\n\n查看其《私隱權政策》，進一步瞭解每個應用程式如何使用你的相機。"</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"資訊娛樂應用程式"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"允許資訊娛樂應用程式拍照及錄影"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"一律允許"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"永不"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"只有在使用時"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"每次都詢問"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"無"</string>

@@ -651,25 +651,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Дејствово е недостапно за вашиот профил"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Пристап до камерата"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Изберете дали апликациите да може да пристапуваат до камерите на вашиот автомобил"</string>
-    <!-- no translation found for camera_required_apps_group_title (3902768358955524404) -->
-    <skip />
-    <!-- no translation found for camera_required_apps_group_summary (3308062892315253384) -->
-    <skip />
+    <string name="camera_required_apps_group_title" msgid="3902768358955524404">"Задолжителни апликации"</string>
+    <string name="camera_required_apps_group_summary" msgid="3308062892315253384">"Апликации што ги бара производителот на вашиот автомобил"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Правило"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (901846859668942836) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_title (6628966732265022536) -->
-    <skip />
-    <!-- no translation found for camera_infotainment_apps_toggle_summary (2422476957183039039) -->
-    <skip />
-    <!-- no translation found for permission_grant_always (8851460274973784076) -->
-    <skip />
-    <!-- no translation found for permission_grant_never (5725479525867480567) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (7442315008206758926) -->
-    <skip />
-    <!-- no translation found for permission_grant_ask (1613256400438907973) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="901846859668942836">"Производителот на вашиот автомобил можеби сѐ уште има пристап до камерата на вашиот автомобил.\n\nДознајте повеќе за тоа како секоја апликација ја користи вашата камера со прегледување на нејзината „Политика за приватност“."</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Апликации за информации и забава"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Дозволи апликациите за информации и забава да фотографираат и снимаат видео"</string>
+    <string name="permission_grant_always" msgid="8851460274973784076">"Цело време"</string>
+    <string name="permission_grant_never" msgid="5725479525867480567">"Никогаш"</string>
+    <string name="permission_grant_in_use" msgid="7442315008206758926">"Кога се користи"</string>
+    <string name="permission_grant_ask" msgid="1613256400438907973">"Секогаш прашувај"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Безбедност"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Заклучување екран"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Нема"</string>

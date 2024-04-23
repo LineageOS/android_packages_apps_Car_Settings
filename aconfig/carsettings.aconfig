@@ -14,10 +14,3 @@ flag {
     description: "Flag to display certain settings pages with required and infotainment apps"
     bug: "327489942"
 }
-
-flag {
-    name: "allow_audio_routes_selection"
-    namespace: "car_sys_exp"
-    description: "Flag to display the audio routes selecting preference"
-    bug: "335736637"
-}
