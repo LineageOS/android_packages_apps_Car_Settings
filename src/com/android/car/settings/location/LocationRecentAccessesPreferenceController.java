@@ -17,17 +17,12 @@
 package com.android.car.settings.location;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.location.LocationManager;
 
 import androidx.preference.PreferenceCategory;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.applications.RecentAppOpsAccess;
@@ -41,29 +36,7 @@ import java.util.Set;
  * are also included.
  */
 public class LocationRecentAccessesPreferenceController
-        extends PreferenceController<PreferenceCategory> {
-
-    private final LocationManager mLocationManager;
-    private final BroadcastReceiver mAdasReceiver =
-            new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    refreshUi();
-                }
-            };
-    private final BroadcastReceiver mLocationReceiver =
-            new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    refreshUi();
-                }
-            };
-
-    private static final IntentFilter INTENT_FILTER_ADAS_GNSS_ENABLED_CHANGED =
-            new IntentFilter(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED);
-
-    private static final IntentFilter INTENT_FILTER_LOCATION_MODE_CHANGED =
-            new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
+        extends LocationStateListenerBasePreferenceController<PreferenceCategory> {
 
     private final Set<CarUiPreference> mAddedPreferences = new HashSet<>();
 
@@ -81,8 +54,8 @@ public class LocationRecentAccessesPreferenceController
                 fragmentController,
                 uxRestrictions,
                 RecentAppOpsAccess.createForLocation(context),
-                context.getResources().getInteger(R.integer.recent_location_access_apps_list_count),
-                context.getSystemService(LocationManager.class));
+                context.getResources().getInteger(
+                        R.integer.recent_location_access_apps_list_count));
     }
 
     @VisibleForTesting
@@ -92,12 +65,10 @@ public class LocationRecentAccessesPreferenceController
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions,
             RecentAppOpsAccess recentLocationAccesses,
-            int recentAppsMaxCount,
-            LocationManager locationManager) {
+            int recentAppsMaxCount) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mRecentLocationAccesses = recentLocationAccesses;
         mRecentAppsMaxCount = recentAppsMaxCount;
-        mLocationManager = locationManager;
     }
 
     @Override
@@ -106,22 +77,15 @@ public class LocationRecentAccessesPreferenceController
     }
 
     @Override
-    protected void onStartInternal() {
-        getContext().registerReceiver(mAdasReceiver, INTENT_FILTER_ADAS_GNSS_ENABLED_CHANGED,
-                Context.RECEIVER_EXPORTED);
-        getContext().registerReceiver(mLocationReceiver, INTENT_FILTER_LOCATION_MODE_CHANGED,
-                Context.RECEIVER_EXPORTED);
+    protected void onCreateInternal() {
+        if (LocationUtil.isDriverWithAdasApps(getContext())) {
+            addDefaultBypassLocationStateListener();
+        }
+        addDefaultMainLocationStateListener();
     }
 
     @Override
-    protected void onStopInternal() {
-        getContext().unregisterReceiver(mAdasReceiver);
-        getContext().unregisterReceiver(mLocationReceiver);
-    }
-
-    @Override
-    public void updateState(PreferenceCategory preference) {
-        super.updateState(preference);
+    protected void updateState(PreferenceCategory preference) {
         boolean isVisible = getVisibility();
         preference.setVisible(isVisible);
         if (isVisible) {
@@ -130,9 +94,9 @@ public class LocationRecentAccessesPreferenceController
     }
 
     private boolean getVisibility() {
-        boolean isVisible = mLocationManager.isLocationEnabled();
+        boolean isVisible = getLocationManager().isLocationEnabled();
         if (LocationUtil.isDriverWithAdasApps(getContext())) {
-            isVisible = isVisible || mLocationManager.isAdasGnssLocationEnabled();
+            isVisible = isVisible || getLocationManager().isAdasGnssLocationEnabled();
         }
         return isVisible;
     }

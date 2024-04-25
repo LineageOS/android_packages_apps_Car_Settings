@@ -16,14 +16,8 @@
 
 package com.android.car.settings.location;
 
-import static android.car.hardware.power.PowerComponent.LOCATION;
-
 import android.car.drivingstate.CarUxRestrictions;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.location.LocationManager;
 import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
@@ -31,8 +25,6 @@ import androidx.annotation.VisibleForTesting;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PowerPolicyListener;
-import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiSwitchPreference;
 
 /**
@@ -43,48 +35,13 @@ import com.android.car.ui.preference.CarUiSwitchPreference;
  * changing settings that can negatively impact the safety of the driver.
  */
 public class AdasLocationSwitchPreferenceController extends
-        PreferenceController<CarUiSwitchPreference> {
-    private final LocationManager mLocationManager;
-
-    private final BroadcastReceiver mAdasReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            refreshUi();
-        }
-    };
-
-    private final BroadcastReceiver mLocationReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            // Turns Driver assistance on when main location switch is on. Location service don't
-            // support the case where main location switch on and Driver assistance off
-            if (mLocationManager.isLocationEnabled()) {
-                mLocationManager.setAdasGnssLocationEnabled(true);
-            }
-            refreshUi();
-        }
-    };
-
-    private static final IntentFilter INTENT_FILTER_ADAS_GNSS_ENABLED_CHANGED =
-            new IntentFilter(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED);
-
-    private static final IntentFilter INTENT_FILTER_LOCATION_MODE_CHANGED =
-            new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
-    @VisibleForTesting
-    final PowerPolicyListener mPowerPolicyListener;
+        LocationStateListenerBasePreferenceController<CarUiSwitchPreference> {
     @VisibleForTesting
     boolean mIsClickable;
-    private boolean mIsPowerPolicyOn = true;
 
     public AdasLocationSwitchPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mLocationManager = context.getSystemService(LocationManager.class);
-        mPowerPolicyListener = new PowerPolicyListener(context, LOCATION,
-                isOn -> {
-                    mIsPowerPolicyOn = isOn;
-                    refreshUi();
-                });
     }
 
     @Override
@@ -94,31 +51,42 @@ public class AdasLocationSwitchPreferenceController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        return mIsClickable && mIsPowerPolicyOn && !mLocationManager.isLocationEnabled()
+        return mIsClickable && getIsPowerPolicyOn() && !getLocationManager().isLocationEnabled()
                 ? AVAILABLE
                 : AVAILABLE_FOR_VIEWING;
     }
 
     @Override
     protected void updateState(CarUiSwitchPreference preference) {
-        preference.setChecked(mLocationManager.isAdasGnssLocationEnabled());
+        preference.setChecked(getLocationManager().isAdasGnssLocationEnabled());
+    }
+
+    @Override
+    protected boolean handlePreferenceChanged(CarUiSwitchPreference preference, Object newValue) {
+        if (getLocationManager().isAdasGnssLocationEnabled()) {
+            getFragmentController().showDialog(getConfirmationDialog(),
+                    ConfirmationDialogFragment.TAG);
+            return false;
+        } else {
+            getLocationManager().setAdasGnssLocationEnabled((Boolean) newValue);
+        }
+        return true;
     }
 
     @Override
     protected void onCreateInternal() {
-        mIsClickable = getContext().getResources()
-                .getBoolean(R.bool.config_allow_adas_location_switch_clickable);
-
-        getPreference().setOnPreferenceChangeListener((pref, val) -> {
-            if (mLocationManager.isAdasGnssLocationEnabled()) {
-                getFragmentController().showDialog(getConfirmationDialog(),
-                        ConfirmationDialogFragment.TAG);
-                return false;
-            } else {
-                mLocationManager.setAdasGnssLocationEnabled(true);
-                return true;
+        addDefaultBypassLocationStateListener();
+        setMainLocationStateListener((isEnabled) -> {
+            // Turns ADAS location on when main location switch is on. Location service do
+            // not support the case where main location switch on and ADAS location off.
+            if (isEnabled) {
+                getLocationManager().setAdasGnssLocationEnabled(true);
             }
         });
+        addDefaultPowerPolicyListener();
+
+        mIsClickable = getContext().getResources()
+                .getBoolean(R.bool.config_allow_adas_location_switch_clickable);
 
         setClickableWhileDisabled(getPreference(), /* clickable= */true, preference -> {
             if (!mIsClickable) {
@@ -126,35 +94,11 @@ public class AdasLocationSwitchPreferenceController extends
                         ConfirmationDialogFragment.TAG);
                 return;
             }
-            if (!mIsPowerPolicyOn) {
+            if (!getIsPowerPolicyOn()) {
                 Toast.makeText(getContext(), R.string.power_component_disabled, Toast.LENGTH_LONG)
                         .show();
             }
         });
-    }
-
-    @Override
-    protected void onStartInternal() {
-        getContext().registerReceiver(mAdasReceiver, INTENT_FILTER_ADAS_GNSS_ENABLED_CHANGED,
-                Context.RECEIVER_NOT_EXPORTED);
-        getContext().registerReceiver(mLocationReceiver, INTENT_FILTER_LOCATION_MODE_CHANGED,
-                Context.RECEIVER_NOT_EXPORTED);
-    }
-
-    @Override
-    protected void onResumeInternal() {
-        mPowerPolicyListener.handleCurrentPolicy();
-    }
-
-    @Override
-    protected void onStopInternal() {
-        getContext().unregisterReceiver(mAdasReceiver);
-        getContext().unregisterReceiver(mLocationReceiver);
-    }
-
-    @Override
-    protected void onDestroyInternal() {
-        mPowerPolicyListener.release();
     }
 
     /**
@@ -174,8 +118,8 @@ public class AdasLocationSwitchPreferenceController extends
                             // and disables the switch because the power policy is off. This if
                             // statement mitigates this issue by reverifying the power policy
                             // status.
-                            if (mIsPowerPolicyOn) {
-                                mLocationManager.setAdasGnssLocationEnabled(false);
+                            if (getIsPowerPolicyOn()) {
+                                getLocationManager().setAdasGnssLocationEnabled(false);
                             }
                         })
                 .setPositiveButton(android.R.string.cancel, /* confirmListener= */ null)
