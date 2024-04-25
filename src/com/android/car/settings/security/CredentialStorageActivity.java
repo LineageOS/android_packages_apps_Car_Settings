@@ -30,7 +30,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.security.Credentials;
 import android.security.KeyChain;
-import android.security.KeyStore;
+import android.security.keystore.KeyProperties;
 import android.text.TextUtils;
 import android.widget.Toast;
 
@@ -183,13 +183,13 @@ public class CredentialStorageActivity extends FragmentActivity {
             return true;
         }
 
-        int uid = installBundle.getInt(Credentials.EXTRA_INSTALL_AS_UID, KeyStore.UID_SELF);
+        int uid = installBundle.getInt(Credentials.EXTRA_INSTALL_AS_UID, KeyProperties.UID_SELF);
 
         // Checks that the provided uid is none of the following:
-        // 1. KeyStore.UID_SELF
+        // 1. KeyProperties.UID_SELF
         // 2. Current uid process
         // 3. uid running as the system process (if in headless system user mode)
-        if (uid != KeyStore.UID_SELF && !UserHandle.isSameUser(uid, Process.myUid())
+        if (uid != KeyProperties.UID_SELF && !UserHandle.isSameUser(uid, Process.myUid())
                 && !(mUserManager.isHeadlessSystemUserMode()
                 && UserHandle.getUserId(uid) == UserHandle.USER_SYSTEM)) {
             int dstUserId = UserHandle.getUserId(uid);
@@ -338,7 +338,7 @@ public class CredentialStorageActivity extends FragmentActivity {
         sendBroadcast(broadcast);
         setResult(RESULT_OK);
 
-        if (uid == Process.SYSTEM_UID || uid == KeyStore.UID_SELF) {
+        if (uid == Process.SYSTEM_UID || uid == KeyProperties.UID_SELF) {
             new MarkKeyAsUserSelectable(this, alias).execute();
         } else {
             finish();
