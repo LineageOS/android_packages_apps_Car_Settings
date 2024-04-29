@@ -32,7 +32,7 @@ public class CarUxRestrictionsHelper {
 
     // mCar is created in the constructor, but can be null if connection to the car is not
     // successful.
-    @Nullable private final Car mCar;
+    @Nullable private Car mCar;
     @Nullable private CarUxRestrictionsManager mCarUxRestrictionsManager;
 
     private final CarUxRestrictionsManager.OnUxRestrictionsChangedListener mListener;
@@ -43,14 +43,20 @@ public class CarUxRestrictionsHelper {
             throw new IllegalArgumentException("Listener cannot be null.");
         }
         mListener = listener;
-        mCar = Car.createCar(context);
-        mCarUxRestrictionsManager = (CarUxRestrictionsManager)
-                mCar.getCarManager(Car.CAR_UX_RESTRICTION_SERVICE);
-        if (mCarUxRestrictionsManager != null) {
-            mCarUxRestrictionsManager.registerListener(mListener);
-            mListener.onUxRestrictionsChanged(
-                    mCarUxRestrictionsManager.getCurrentCarUxRestrictions());
-        }
+        Car.createCar(context, /* handler= */ null, Car.CAR_WAIT_TIMEOUT_WAIT_FOREVER,
+                (car, ready) -> {
+                    if (!ready) {
+                        return;
+                    }
+                    mCar = car;
+                    mCarUxRestrictionsManager = (CarUxRestrictionsManager) car.getCarManager(
+                            Car.CAR_UX_RESTRICTION_SERVICE);
+                    if (mCarUxRestrictionsManager != null) {
+                        mCarUxRestrictionsManager.registerListener(mListener);
+                        mListener.onUxRestrictionsChanged(
+                                mCarUxRestrictionsManager.getCurrentCarUxRestrictions());
+                    }
+            });
     }
 
     /**
@@ -81,5 +87,15 @@ public class CarUxRestrictionsHelper {
         return (carUxRestrictions.getActiveRestrictions()
                 & CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP)
                 == CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP;
+    }
+
+    /**
+     * Get the current CarUxRestrictions
+     */
+    public CarUxRestrictions getCarUxRestrictions() {
+        if (mCarUxRestrictionsManager == null) {
+            return null;
+        }
+        return mCarUxRestrictionsManager.getCurrentCarUxRestrictions();
     }
 }
