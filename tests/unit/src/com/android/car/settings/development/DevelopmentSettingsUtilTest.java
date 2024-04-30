@@ -50,6 +50,7 @@ public class DevelopmentSettingsUtilTest {
         when(mMockUserManager.hasUserRestriction(
                 UserManager.DISALLOW_DEBUGGING_FEATURES)).thenReturn(false);
         when(mSpiedContext.getSystemService(UserManager.class)).thenReturn(mMockUserManager);
+        when(mSpiedContext.getSystemService(Context.USER_SERVICE)).thenReturn(mMockUserManager);
         when(mSpiedContext.getContentResolver()).thenReturn(mContext.getContentResolver());
     }
 
@@ -59,8 +60,7 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
-                .isFalse();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mSpiedContext)).isFalse();
     }
 
     @Test
@@ -69,8 +69,7 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
-                .isTrue();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mSpiedContext)).isTrue();
     }
 
     @Test
@@ -80,8 +79,7 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
-                .isFalse();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mSpiedContext)).isFalse();
     }
 
     @Test
@@ -94,8 +92,7 @@ public class DevelopmentSettingsUtilTest {
         when(mMockUserManager.hasUserRestriction(
                 UserManager.DISALLOW_DEBUGGING_FEATURES)).thenReturn(true);
 
-        assertThat(DevelopmentSettingsUtil
-                .isDevelopmentSettingsEnabled(mSpiedContext, mMockUserManager)).isFalse();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mSpiedContext)).isFalse();
     }
 
     @Test
@@ -105,8 +102,7 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mMockUserManager))
-                .isTrue();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mSpiedContext)).isTrue();
     }
 
     @Test

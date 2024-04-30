@@ -17,7 +17,6 @@
 package com.android.car.settings.system;
 
 import android.content.Context;
-import android.os.UserManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.CarSettingActivities.SystemSettingsActivity;
@@ -48,8 +47,7 @@ public class SystemSettingsFragment extends SettingsFragment {
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> nonIndexableKeys = super.getNonIndexableKeys(context);
-                    if (!DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(context,
-                            UserManager.get(context))) {
+                    if (!DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(context)) {
                         nonIndexableKeys.add(
                                 context.getString(R.string.pk_developer_options_entry));
                     }

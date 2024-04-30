@@ -19,7 +19,6 @@ package com.android.car.settings.development;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.UserHandle;
 import android.os.UserManager;
@@ -27,6 +26,7 @@ import android.provider.Settings;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
+import com.android.settingslib.development.DevelopmentSettingsEnabler;
 
 /**
  * A utility to set/check development settings mode.
@@ -37,7 +37,7 @@ import com.android.car.settings.common.Logger;
 public class DevelopmentSettingsUtil {
 
     private static final Logger LOG = new Logger(DevelopmentSettingsUtil.class);
-
+    private static final boolean DEBUG = Build.isDebuggable();
     private DevelopmentSettingsUtil() {
     }
 
@@ -46,38 +46,27 @@ public class DevelopmentSettingsUtil {
      * of this change.
      */
     public static void setDevelopmentSettingsEnabled(Context context, boolean enable) {
-        Settings.Global.putInt(context.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, enable ? 1 : 0);
-
-        // Enable developer options module.
-        setDeveloperOptionsEnabledState(context, showDeveloperOptions(context));
+        boolean shouldEnable = showDeveloperOptions(context) && enable;
+        LOG.i("Enabling developer options module: "
+                + getDeveloperOptionsModule(context).flattenToString()
+                + " Currently enabled: " + isDevelopmentSettingsEnabled(context)
+                + " Requested value: " + enable
+                + " Should enable: " + shouldEnable);
+        DevelopmentSettingsEnabler.setDevelopmentSettingsEnabled(context, shouldEnable);
     }
 
     /**
      * Checks that the development settings should be enabled. Returns true if global toggle is set,
      * debugging is allowed for user, and the user is an admin user.
      */
-    public static boolean isDevelopmentSettingsEnabled(Context context, UserManager userManager) {
-        boolean settingEnabled = Settings.Global.getInt(context.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, Build.IS_ENG ? 1 : 0) != 0;
-        boolean hasRestriction = userManager.hasUserRestriction(
-                UserManager.DISALLOW_DEBUGGING_FEATURES);
-        boolean isAdmin = userManager.isAdminUser();
-        return isAdmin && !hasRestriction && settingEnabled;
+    public static boolean isDevelopmentSettingsEnabled(Context context) {
+        return DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(context);
     }
 
     /** Checks whether the device is provisioned or not. */
     public static boolean isDeviceProvisioned(Context context) {
         return Settings.Global.getInt(context.getContentResolver(),
                 Settings.Global.DEVICE_PROVISIONED, 0) != 0;
-    }
-
-    /** Checks whether the developer options module is enabled. */
-    public static boolean isDeveloperOptionsModuleEnabled(Context context) {
-        PackageManager pm = context.getPackageManager();
-        ComponentName component = getDeveloperOptionsModule(context);
-        int state = pm.getComponentEnabledSetting(component);
-        return state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
     }
 
     private static ComponentName getDeveloperOptionsModule(Context context) {
@@ -87,30 +76,18 @@ public class DevelopmentSettingsUtil {
 
     private static boolean showDeveloperOptions(Context context) {
         UserManager userManager = UserManager.get(context);
-        boolean showDev = isDevelopmentSettingsEnabled(context, userManager)
-                && !ActivityManager.isUserAMonkey();
+        boolean showDev = !ActivityManager.isUserAMonkey();
         boolean isAdmin = userManager.isAdminUser();
         if (UserHandle.MU_ENABLED && !isAdmin) {
             showDev = false;
         }
 
+        if (DEBUG) {
+            LOG.d("showDeveloperOptions: " + " isUserAMonkey: " + ActivityManager.isUserAMonkey()
+                    + " isAdmin: " + isAdmin + " UserHandle.MU_ENABLED: " + UserHandle.MU_ENABLED
+                    + " showDev: " + showDev);
+        }
         return showDev;
     }
 
-    private static void setDeveloperOptionsEnabledState(Context context, boolean enabled) {
-        PackageManager pm = context.getPackageManager();
-        ComponentName component = getDeveloperOptionsModule(context);
-        int state = pm.getComponentEnabledSetting(component);
-        boolean isEnabled = isDeveloperOptionsModuleEnabled(context);
-        LOG.i("Enabling developer options module: " + component.flattenToString()
-                + " Current state: " + state
-                + " Currently enabled: " + isEnabled
-                + " Should enable: " + enabled);
-        if (isEnabled != enabled || state == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT) {
-            pm.setComponentEnabledSetting(component, enabled
-                            ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                            : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-                    PackageManager.DONT_KILL_APP);
-        }
-    }
 }
