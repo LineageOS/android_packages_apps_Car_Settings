@@ -30,6 +30,7 @@ import android.telephony.TelephonyManager;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.datasubscription.DataSubscriptionStatus;
 import com.android.car.qc.QCActionItem;
 import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
@@ -59,13 +60,7 @@ public class MobileDataRowTest extends BaseSettingsQCItemTestCase {
         MockitoAnnotations.initMocks(this);
         when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mTelephonyManager);
         mMobileDataRow = new TestMobileDataRow(mContext);
-    }
-
-    @Test
-    public void getQCItem_mobileDataUnsupported_returnsNull() {
-        when(mDataUsageController.isMobileDataSupported()).thenReturn(false);
-        QCItem item = mMobileDataRow.getQCItem();
-        assertThat(item).isNull();
+        mMobileDataRow.setSubscriptionStatus(DataSubscriptionStatus.PAID);
     }
 
     @Test

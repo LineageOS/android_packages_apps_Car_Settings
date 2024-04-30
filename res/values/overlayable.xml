@@ -61,6 +61,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="min"/>
       <item type="attr" name="minLabel"/>
       <item type="attr" name="mute_icon"/>
+      <item type="attr" name="normalTextColor"/>
       <item type="attr" name="occupant_driver"/>
       <item type="attr" name="occupant_front_passenger"/>
       <item type="attr" name="occupant_rear_passenger"/>
@@ -77,6 +78,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="titleColor"/>
       <item type="attr" name="titleText"/>
       <item type="attr" name="usage"/>
+      <item type="attr" name="warningTextColor"/>
       <item type="attr" name="wifiSignalColor"/>
       <item type="bool" name="config_allow_adas_location_switch_clickable"/>
       <item type="bool" name="config_allow_audio_destination_selection"/>
@@ -448,6 +450,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="top_level_preference_highlight"/>
       <item type="drawable" name="user_disclaimer_action_button_background"/>
       <item type="drawable" name="wifi_signal"/>
+      <item type="id" name="action_text"/>
       <item type="id" name="alphanumeric_pin"/>
       <item type="id" name="bottomDivider"/>
       <item type="id" name="button1"/>
@@ -468,6 +471,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="car_settings_activity_wrapper"/>
       <item type="id" name="carrier_info_text"/>
       <item type="id" name="checkbox"/>
+      <item type="id" name="colored_preference_divider"/>
+      <item type="id" name="colored_preference_first_action_container"/>
+      <item type="id" name="colored_preference_second_action_container"/>
+      <item type="id" name="colored_preference_secondary_action"/>
+      <item type="id" name="colored_preference_secondary_action_concrete"/>
       <item type="id" name="current_profile_frame"/>
       <item type="id" name="cycle_reset_day_of_month"/>
       <item type="id" name="data_usage_edit_text"/>
@@ -585,6 +593,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="layout" name="choose_lock_password"/>
       <item type="layout" name="choose_lock_pattern"/>
       <item type="layout" name="choose_lock_pin"/>
+      <item type="layout" name="colored_two_action_switch_preference"/>
       <item type="layout" name="confirm_lock_password"/>
       <item type="layout" name="confirm_lock_pattern"/>
       <item type="layout" name="confirm_lock_pin"/>
@@ -851,6 +860,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="confirm_your_pin_header"/>
       <item type="string" name="connect"/>
       <item type="string" name="connected_settings_title"/>
+      <item type="string" name="connectivity_inactive_action_text"/>
+      <item type="string" name="connectivity_inactive_prompt"/>
       <item type="string" name="continue_button_text"/>
       <item type="string" name="continue_confirmation"/>
       <item type="string" name="contributors_title"/>
@@ -867,6 +878,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="cycle_reset_day_of_month_picker_subtitle"/>
       <item type="string" name="cycle_reset_day_of_month_picker_title"/>
       <item type="string" name="data_limit"/>
+      <item type="string" name="data_subscription_explore_options"/>
       <item type="string" name="data_usage_all_apps_title"/>
       <item type="string" name="data_usage_app_restricted"/>
       <item type="string" name="data_usage_app_summary_title"/>
@@ -1620,6 +1632,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="style" name="CarSettingsPreferenceTheme"/>
       <item type="style" name="ColoredAccentPreferenceStyle"/>
       <item type="style" name="ColoredSwitchPreferenceStyle"/>
+      <item type="style" name="ColoredTwoActionSwitchPreferenceStyle"/>
       <item type="style" name="DataUsageSummaryCarrierInfoTextAppearance"/>
       <item type="style" name="DataUsageSummaryCarrierInfoWarningTextAppearance"/>
       <item type="style" name="FallbackHome"/>
