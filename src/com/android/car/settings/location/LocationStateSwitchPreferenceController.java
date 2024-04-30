@@ -29,17 +29,17 @@ import android.provider.Settings;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.enterprise.EnterpriseUtils;
+import com.android.car.ui.preference.CarUiSwitchPreference;
 import com.android.settingslib.Utils;
 
 /**
  * Enables/disables location state via SwitchPreference.
  */
 public class LocationStateSwitchPreferenceController extends
-        LocationStateListenerBasePreferenceController<ColoredSwitchPreference> {
+        LocationStateListenerBasePreferenceController<CarUiSwitchPreference> {
     private static final Logger LOG = new Logger(
             LocationStateSwitchPreferenceController.class);
 
@@ -61,18 +61,18 @@ public class LocationStateSwitchPreferenceController extends
     }
 
     @Override
-    protected Class<ColoredSwitchPreference> getPreferenceType() {
-        return ColoredSwitchPreference.class;
+    protected Class<CarUiSwitchPreference> getPreferenceType() {
+        return CarUiSwitchPreference.class;
     }
 
     @Override
-    protected void updateState(ColoredSwitchPreference preference) {
+    protected void updateState(CarUiSwitchPreference preference) {
         preference.setChecked(getLocationManager().isLocationEnabled()
                 && !hasUserRestrictionByDpm(getContext(), DISALLOW_SHARE_LOCATION));
     }
 
     @Override
-    protected boolean handlePreferenceChanged(ColoredSwitchPreference preference, Object newValue) {
+    protected boolean handlePreferenceChanged(CarUiSwitchPreference preference, Object newValue) {
         boolean isLocationEnabled = (Boolean) newValue;
         Utils.updateLocationEnabled(
                 getContext(),
@@ -87,8 +87,6 @@ public class LocationStateSwitchPreferenceController extends
         addDefaultMainLocationStateListener();
         addDefaultPowerPolicyListener();
 
-        getPreference().setContentDescription(
-                getContext().getString(R.string.location_state_switch_content_description));
         setClickableWhileDisabled(getPreference(), /* clickable= */ true, p -> {
             // All the cases here should coincide with the ones in getAvailabilityStatus()
             if (!getIsPowerPolicyOn()) {
