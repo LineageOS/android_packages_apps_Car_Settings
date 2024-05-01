@@ -55,8 +55,7 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
     @Override
     protected void onResumeInternal() {
         mDevHitToast = null;
-        mDevHitCountdown =
-                DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(), mUserManager)
+        mDevHitCountdown = DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext())
                         ? -1 : getTapsToBecomeDeveloper();
     }
 
