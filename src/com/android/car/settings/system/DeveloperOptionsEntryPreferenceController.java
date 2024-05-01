@@ -23,7 +23,6 @@ import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestric
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.UserManager;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
@@ -51,8 +50,7 @@ public class DeveloperOptionsEntryPreferenceController
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(),
-                getContext().getSystemService(UserManager.class))) {
+        if (DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext())) {
             return AVAILABLE;
         }
 
@@ -75,19 +73,7 @@ public class DeveloperOptionsEntryPreferenceController
 
     @Override
     protected boolean handlePreferenceClicked(CarUiPreference preference) {
-        // We need to make sure the developer options module is enabled for the following reasons:
-        //  - To enable developer options by default on eng builds
-        //  - To enable developer options for all admin users when any admin user enables it
-        // This is because on first launch per user, the developer options module may be disabled
-        // while the setting is enabled, so we need to enable the module
         LOG.d("handlePreferenceClicked");
-        if (!DevelopmentSettingsUtil.isDeveloperOptionsModuleEnabled(getContext())) {
-            LOG.i("Inconsistent state: developer options enabled, but developer options module "
-                    + "disabled. Enabling module...");
-            DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(getContext(), /* enable= */
-                    true);
-        }
-
         getContext().startActivity(preference.getIntent());
         return true;
     }

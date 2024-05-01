@@ -189,8 +189,7 @@ public class BuildNumberPreferenceControllerTest {
             mPreference.performClick();
             mCountDownLatch.await(mDebounceInterval, TimeUnit.MILLISECONDS);
         }
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mMockUserManager)).isTrue();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext)).isTrue();
     }
 
     @Test
