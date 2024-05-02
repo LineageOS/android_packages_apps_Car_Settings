@@ -990,8 +990,6 @@
     </string>
     <!-- Title of Location Services category [CHAR LIMIT=60] -->
     <string name="location_settings_services_title">Location Services</string>
-    <!-- Content description for the location state switch. [CHAR LIMIT=NONE] -->
-    <string name="location_state_switch_content_description" translatable="false">Location toggle switch</string>
     <!-- Location settings screen, setting option name to enable location tracking [CHAR LIMIT=60] -->
     <string name="location_use_location_title">Use location</string>
     <!-- Title of location access page [CHAR LIMIT=40]-->
@@ -1519,12 +1517,14 @@
     <string name="camera_infotainment_apps_toggle_title">Infotainment apps</string>
     <!-- Summary of infotainment apps accessing camera [CHAR LIMIT=NONE]-->
     <string name="camera_infotainment_apps_toggle_summary">Allow infotainment apps to take pictures and record video</string>
-    <!-- Summary for the apps which have been granted permission all the time [CHAR LIMIT=40]-->
+    <!-- Summary for the apps which have been granted permission [CHAR LIMIT=40] -->
+    <string name="permission_grant_allowed">Allowed</string>
+    <!-- Summary for the apps which have been granted permission in the foreground and the background [CHAR LIMIT=40]-->
     <string name="permission_grant_always">All the time</string>
     <!-- Summary for the apps which have been denied permission [CHAR LIMIT=40]-->
-    <string name="permission_grant_never">Never</string>
+    <string name="permission_grant_never">Not allowed</string>
     <!-- Summary for the apps which have been granted permission only for foreground use [CHAR LIMIT=40]-->
-    <string name="permission_grant_in_use">When in use</string>
+    <string name="permission_grant_in_use">Only while using the app</string>
     <!-- Summary for the apps which have been granted permission for one-time use [CHAR LIMIT=40]-->
     <string name="permission_grant_ask">Ask every time</string>
 

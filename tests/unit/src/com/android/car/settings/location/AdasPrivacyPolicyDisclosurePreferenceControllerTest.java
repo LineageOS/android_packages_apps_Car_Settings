@@ -74,6 +74,9 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
 
+        when(mContext.getSystemService(LocationManager.class)).thenReturn(mLocationManager);
+        when(mContext.getPackageManager()).thenReturn(mPackageManager);
+
         CarUxRestrictions carUxRestrictions =
                 new CarUxRestrictions.Builder(
                                 /* reqOpt= */ true,
@@ -90,9 +93,7 @@ public class AdasPrivacyPolicyDisclosurePreferenceControllerTest {
                         mContext,
                         "key",
                         mFragmentController,
-                        carUxRestrictions,
-                        mPackageManager,
-                        mLocationManager);
+                        carUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         doNothing().when(mContext).startActivity(any());
 

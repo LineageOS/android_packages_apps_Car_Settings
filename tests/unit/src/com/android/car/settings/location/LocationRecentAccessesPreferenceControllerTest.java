@@ -116,8 +116,7 @@ public class LocationRecentAccessesPreferenceControllerTest {
                         mFragmentController,
                         carUxRestrictions,
                         mRecentLocationAccesses,
-                        RECENT_APPS_MAX_COUNT,
-                        mLocationManager);
+                        RECENT_APPS_MAX_COUNT);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         doNothing().when(mContext).startActivity(any());
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -378,9 +377,9 @@ public class LocationRecentAccessesPreferenceControllerTest {
         ArgumentCaptor<IntentFilter> intentFilterCaptor =
                 ArgumentCaptor.forClass(IntentFilter.class);
 
-        verify(mContext, times(2))
+        verify(mContext, times(1))
                 .registerReceiver(broadcastReceiverArgumentCaptor.capture(),
-                        intentFilterCaptor.capture(), eq(Context.RECEIVER_EXPORTED));
+                        intentFilterCaptor.capture(), eq(Context.RECEIVER_NOT_EXPORTED));
     }
 
     private void setUserToDriverWithAdas() {

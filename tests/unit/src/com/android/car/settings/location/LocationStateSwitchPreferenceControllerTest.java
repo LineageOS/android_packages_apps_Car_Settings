@@ -104,7 +104,8 @@ public class LocationStateSwitchPreferenceControllerTest {
         mPreferenceController.onStart(mLifecycleOwner);
         ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
                 BroadcastReceiver.class);
-        verify(mContext).registerReceiver(broadcastReceiverArgumentCaptor.capture(), any());
+        verify(mContext).registerReceiver(broadcastReceiverArgumentCaptor.capture(), any(),
+                eq(Context.RECEIVER_NOT_EXPORTED));
 
         when(mLocationManager.isLocationEnabled()).thenReturn(true);
         broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,

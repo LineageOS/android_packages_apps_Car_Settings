@@ -176,7 +176,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
                 BroadcastReceiver.class);
         ArgumentCaptor<IntentFilter> intentFilterCaptor = ArgumentCaptor.forClass(
                 IntentFilter.class);
-        verify(mContext, times(2))
+        verify(mContext, times(1))
                 .registerReceiver(broadcastReceiverArgumentCaptor.capture(),
                         intentFilterCaptor.capture(), eq(Context.RECEIVER_NOT_EXPORTED));
         List<IntentFilter> actions = intentFilterCaptor.getAllValues();
@@ -187,6 +187,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
                 new Intent(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED));
 
         assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
     }
 
     @Test
@@ -199,17 +200,19 @@ public class AdasLocationSwitchPreferenceControllerTest {
         ArgumentCaptor<IntentFilter> intentFilterCaptor = ArgumentCaptor.forClass(
                 IntentFilter.class);
 
-        verify(mContext, times(2))
+        verify(mContext, times(1))
                 .registerReceiver(broadcastReceiverArgumentCaptor.capture(),
                         intentFilterCaptor.capture(), eq(Context.RECEIVER_NOT_EXPORTED));
         List<IntentFilter> actions = intentFilterCaptor.getAllValues();
-        assertTrue(actions.get(1).hasAction(LocationManager.MODE_CHANGED_ACTION));
+        assertTrue(actions.get(0).hasAction(LocationManager.MODE_CHANGED_ACTION));
 
         when(mLocationManager.isLocationEnabled()).thenReturn(true);
+        when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(true);
         broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
                 new Intent(LocationManager.MODE_CHANGED_ACTION));
 
         assertThat(mSwitchPreference.isEnabled()).isFalse();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
     }
 
     @Test
