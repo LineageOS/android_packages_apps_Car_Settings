@@ -87,6 +87,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="bool" name="config_enable_home_settings_icon"/>
       <item type="bool" name="config_global_force_single_pane"/>
       <item type="bool" name="config_show_camera_required_apps_toggle"/>
+      <item type="bool" name="config_show_location_required_apps_toggle"/>
       <item type="bool" name="config_show_premium_sms"/>
       <item type="bool" name="config_show_regulatory_info"/>
       <item type="bool" name="config_show_settings_root_exit_icon"/>
@@ -1114,8 +1115,12 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="location_adas_app_info_summary"/>
       <item type="string" name="location_adas_apps_list_title"/>
       <item type="string" name="location_driver_assistance_privacy_policy_button_text"/>
+      <item type="string" name="location_infotainment_apps_toggle_summary"/>
+      <item type="string" name="location_infotainment_apps_toggle_title"/>
       <item type="string" name="location_no_recent_access"/>
       <item type="string" name="location_recently_accessed"/>
+      <item type="string" name="location_required_apps_group_summary"/>
+      <item type="string" name="location_required_apps_group_title"/>
       <item type="string" name="location_settings_app_permissions_summary"/>
       <item type="string" name="location_settings_app_permissions_title"/>
       <item type="string" name="location_settings_recently_accessed_title"/>
@@ -1696,8 +1701,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="languages_and_input_fragment"/>
       <item type="xml" name="legal_information_fragment"/>
       <item type="xml" name="location_access_fragment"/>
+      <item type="xml" name="location_access_required_infotainment_fragment"/>
       <item type="xml" name="location_recent_accessed_view_all_fragment"/>
       <item type="xml" name="location_settings_fragment"/>
+      <item type="xml" name="location_settings_required_infotainment_fragment"/>
       <item type="xml" name="manage_domain_urls_fragment"/>
       <item type="xml" name="microphone_recent_requests_view_all_fragment"/>
       <item type="xml" name="mobile_network_fragment"/>

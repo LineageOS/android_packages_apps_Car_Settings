@@ -937,6 +937,12 @@
     <string name="location_toggle_summary">
         Use your car\u2019s location with any app you\u2019ve specified.
     </string>
+    <!-- Title of infotainment apps accessing location [CHAR LIMIT=40] -->
+    <string name="location_infotainment_apps_toggle_title">Infotainment apps</string>
+    <!--  Summary of infotainment apps accessing location [CHAR LIMIT=NONE] -->
+    <string name="location_infotainment_apps_toggle_summary">
+        Allow apps to have access to your location
+    </string>
     <!-- Warning message when users try to toggle location off [CHAR LIMIT=NONE] -->
     <string name="location_toggle_off_warning">
         If you turn this off, it will remove location access for all apps except those needed for driver assistance
@@ -962,6 +968,14 @@
     <string name="adas_location_toggle_summary">
         Allow built\u2011in features, approved by your car\u2019s manufacturer, to access
         your car\u2019s location.
+    </string>
+    <!-- Title of location access required apps [CHAR LIMIT=40] -->
+    <string name="location_required_apps_group_title">
+        Required apps
+    </string>
+    <!-- Summary of location access required apps [CHAR LIMIT=NONE]-->
+    <string name="location_required_apps_group_summary">
+        Apps required by your car\u2019s manufacturer to assist with driving.
     </string>
     <!-- Title of Recent Location Accesses category [CHAR LIMIT=60] -->
     <string name="location_recently_accessed">Recently accessed</string>

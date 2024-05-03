@@ -18,7 +18,6 @@ package com.android.car.settings.privacy;
 
 import static com.android.car.ui.preference.CarUiTwoActionTextPreference.SECONDARY_ACTION_STYLE_BORDERLESS;
 
-import android.annotation.FlaggedApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -37,10 +36,8 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.car.ui.preference.CarUiTwoActionTextPreference;
-import com.android.internal.camera.flags.Flags;
 
 /** Utilities related to preferences with required and infotainment apps. */
-@FlaggedApi(Flags.FLAG_CAMERA_PRIVACY_ALLOWLIST)
 public final class RequiredInfotainmentAppsUtils {
     private static final Logger LOG = new Logger(RequiredInfotainmentAppsUtils.class);
     private static final String PRIVACY_POLICY_KEY = "privacy_policy";
