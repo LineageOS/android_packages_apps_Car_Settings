@@ -804,10 +804,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="camera_infotainment_apps_toggle_title"/>
       <item type="string" name="camera_manage_permissions"/>
       <item type="string" name="camera_no_recent_access"/>
-      <item type="string" name="camera_privacy_policy_button_text"/>
       <item type="string" name="camera_recently_accessed"/>
-      <item type="string" name="required_apps_group_summary"/>
-      <item type="string" name="required_apps_group_title"/>
       <item type="string" name="camera_settings_loading_app_permission_stats"/>
       <item type="string" name="camera_settings_recent_requests_title"/>
       <item type="string" name="camera_settings_recent_requests_view_all_title"/>
@@ -1302,6 +1299,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="remove_device_admin"/>
       <item type="string" name="remove_screen_lock_message"/>
       <item type="string" name="remove_screen_lock_title"/>
+      <item type="string" name="required_apps_group_summary"/>
+      <item type="string" name="required_apps_group_title"/>
+      <item type="string" name="required_apps_privacy_policy_button_text"/>
       <item type="string" name="reset_app_pref_button_text"/>
       <item type="string" name="reset_app_pref_complete_toast"/>
       <item type="string" name="reset_app_pref_desc"/>

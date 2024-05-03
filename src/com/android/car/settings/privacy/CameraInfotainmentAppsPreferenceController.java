@@ -20,15 +20,11 @@ import android.Manifest;
 import android.annotation.FlaggedApi;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.hardware.SensorPrivacyManager;
 import android.os.Process;
 import android.os.UserHandle;
-import android.util.IconDrawableFactory;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
@@ -49,7 +45,6 @@ public final class CameraInfotainmentAppsPreferenceController
         extends CameraPrivacyBasePreferenceController<LogicalPreferenceGroup> {
     private static final Logger LOG = new Logger(CameraInfotainmentAppsPreferenceController.class);
     private final PackageManager mPackageManager;
-    private final Context mContext;
     private List<String> mCameraPrivacyAllowlist;
 
     public CameraInfotainmentAppsPreferenceController(Context context, String preferenceKey,
@@ -65,7 +60,6 @@ public final class CameraInfotainmentAppsPreferenceController
         super(context, preferenceKey, fragmentController, uxRestrictions, sensorPrivacyManager);
         mPackageManager = packageManager;
         mCameraPrivacyAllowlist = sensorPrivacyManager.getCameraPrivacyAllowlist();
-        mContext = context;
     }
 
     @Override
@@ -79,61 +73,31 @@ public final class CameraInfotainmentAppsPreferenceController
     }
 
     private void loadInfotainmentAppsWithCameraPermission() {
-        LogicalPreferenceGroup infotainmentAppsPref = getPreference().findPreference(mContext
+        LogicalPreferenceGroup infotainmentAppsPref = getPreference().findPreference(getContext()
                 .getString(R.string.pk_camera_infotainment_apps_list));
         infotainmentAppsPref.removeAll();
 
         UserHandle userHandle = Process.myUserHandle();
-        int userId = userHandle.getIdentifier();
-        List<PackageInfo> packagesWithPermissions = PermissionUtils.getPackagesWithPermission(
-                mContext, PermissionUtils.CAMERA, userHandle, false);
+        List<PackageInfo> packagesWithPermissions = PermissionUtils.getPackagesWithPermissionGroup(
+                getContext(), Manifest.permission_group.CAMERA, userHandle,
+                /* showSystem= */ false);
+        int sensorPrivacyState = getSensorPrivacyManager().getSensorPrivacyState(
+                SensorPrivacyManager.TOGGLE_TYPE_SOFTWARE,
+                SensorPrivacyManager.Sensors.CAMERA);
 
         for (PackageInfo packageInfo : packagesWithPermissions) {
             if (mCameraPrivacyAllowlist.contains(packageInfo.packageName)) {
                 continue;
             }
 
-            ApplicationInfo appInfo = null;
-            try {
-                appInfo = mPackageManager.getApplicationInfoAsUser(packageInfo.packageName,
-                        PackageManager.GET_META_DATA, userId);
-            } catch (NameNotFoundException ex) {
-                LOG.e("Failed to get application info for " + packageInfo.packageName);
-            }
+            boolean showSummary = sensorPrivacyState == SensorPrivacyManager.StateTypes.DISABLED;
+            CarUiPreference preference =
+                    RequiredInfotainmentAppsUtils.createInfotainmentAppPreference(
+                            getContext(), mPackageManager, packageInfo.packageName, userHandle,
+                            Manifest.permission_group.CAMERA, showSummary);
 
-            if (appInfo != null) {
-                if (!appInfo.enabled) {
-                    continue;
-                }
-                CarUiPreference pref = new CarUiPreference(mContext);
-                IconDrawableFactory drawableFactory = IconDrawableFactory.newInstance(mContext);
-                pref.setIcon(drawableFactory.getBadgedIcon(appInfo, userId));
-
-                CharSequence appLabel = mPackageManager.getApplicationLabel(appInfo);
-                CharSequence badgedAppLabel = mPackageManager.getUserBadgedLabel(appLabel,
-                        userHandle);
-                pref.setTitle(badgedAppLabel);
-                int state = getSensorPrivacyManager().getSensorPrivacyState(
-                        SensorPrivacyManager.TOGGLE_TYPE_SOFTWARE,
-                        SensorPrivacyManager.Sensors.CAMERA);
-                Integer permGrantStatus = PermissionUtils.getPermissionGrantStatus(mContext,
-                        packageInfo, PermissionUtils.CAMERA, userHandle);
-                if (state == SensorPrivacyManager.StateTypes.DISABLED) {
-                    pref.setSummary(permGrantStatus);
-                } else {
-                    pref.setSummary(null);
-                }
-                pref.setOnPreferenceClickListener(
-                        preference -> {
-                            Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSION);
-                            intent.putExtra(Intent.EXTRA_PERMISSION_GROUP_NAME,
-                                    Manifest.permission_group.CAMERA);
-                            intent.putExtra(Intent.EXTRA_PACKAGE_NAME, packageInfo.packageName);
-                            intent.putExtra(Intent.EXTRA_USER, userHandle);
-                            mContext.startActivity(intent);
-                            return true;
-                        });
-                infotainmentAppsPref.addPreference(pref);
+            if (preference != null) {
+                infotainmentAppsPref.addPreference(preference);
             }
         }
     }

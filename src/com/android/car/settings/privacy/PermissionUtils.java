@@ -16,6 +16,7 @@
 
 package com.android.car.settings.privacy;
 
+import android.Manifest;
 import android.annotation.FlaggedApi;
 import android.app.ActivityManager;
 import android.app.AppGlobals;
@@ -34,6 +35,8 @@ import com.android.car.settings.common.Logger;
 import com.android.internal.camera.flags.Flags;
 import com.android.net.module.util.CollectionUtils;
 
+import com.google.common.collect.ImmutableMap;
+
 import java.util.List;
 import java.util.ListIterator;
 
@@ -42,8 +45,11 @@ import java.util.ListIterator;
  */
 @FlaggedApi(Flags.FLAG_CAMERA_PRIVACY_ALLOWLIST)
 public final class PermissionUtils {
-    public static final String CAMERA = "android.permission.CAMERA";
-    public static final String MICROPHONE = "android.permission.RECORD_AUDIO";
+    private static final ImmutableMap<String, String> PERMISSION_GROUP_TO_PERMISSION =
+            ImmutableMap.<String, String>builder()
+                    .put(Manifest.permission_group.CAMERA, Manifest.permission.CAMERA)
+                    .put(Manifest.permission_group.MICROPHONE, Manifest.permission.RECORD_AUDIO)
+                    .build();
     private static final Logger LOG = new Logger(PermissionUtils.class);
 
     private PermissionUtils() {}
@@ -64,14 +70,15 @@ public final class PermissionUtils {
      * Returns a list of the packages holding a specific permission.
      *
      * @param context current context.
-     * @param permissionName permission name for filtering the packages.
+     * @param permissionGroup permission group for filtering the packages.
      * @param userHandle current user handle.
      * @param showSystem whether to return system packages.
      *
-     * @return List List of packages.
+     * @return List of packages.
      */
-    public static List<PackageInfo> getPackagesWithPermission(Context context,
-            String permissionName, UserHandle userHandle, boolean showSystem) {
+    public static List<PackageInfo> getPackagesWithPermissionGroup(Context context,
+            String permissionGroup, UserHandle userHandle, boolean showSystem) {
+        String permissionName = PERMISSION_GROUP_TO_PERMISSION.getOrDefault(permissionGroup, "");
         List<PackageInfo> packages = null;
         try {
             ParceledListSlice list = AppGlobals.getPackageManager()
@@ -161,13 +168,14 @@ public final class PermissionUtils {
      *
      * @param context current context.
      * @param packageInfo package for which to check the grant status
-     * @param permissionName permission name for filtering the packages.
+     * @param permissionGroup permission group for filtering the packages.
      * @param userHandle current user handle.
      *
      * @return Integer permission grant status.
      */
-    public static Integer getPermissionGrantStatus(Context context, PackageInfo packageInfo,
-            String permissionName, UserHandle userHandle) {
+    public static int getPermissionGroupGrantStatus(Context context, PackageInfo packageInfo,
+            String permissionGroup, UserHandle userHandle) {
+        String permissionName = PERMISSION_GROUP_TO_PERMISSION.getOrDefault(permissionGroup, "");
         PermissionState permState = getPermissionState(context, packageInfo, permissionName,
                 userHandle);
         if (permState != null) {
@@ -182,8 +190,9 @@ public final class PermissionUtils {
                     & PackageManager.FLAG_PERMISSION_REVIEW_REQUIRED) != 0);
             boolean hasPermWithBackground =
                     (permState.mPermissionInfo.backgroundPermission != null);
-            boolean shouldShowAsForegroundGroup = permissionName.equals(CAMERA)
-                    || permissionName.equals(MICROPHONE);
+            boolean shouldShowAsForegroundGroup =
+                    Manifest.permission_group.CAMERA.equals(permissionGroup)
+                    || Manifest.permission_group.MICROPHONE.equals(permissionGroup);
 
             if (isAllowed) {
                 if (isOneTime) {
