@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"આ ક્રિયા તમારી પ્રોફાઇલ માટે ઉપલબ્ધ નથી"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"કૅમેરાનો ઍક્સેસ"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"ઍપ તમારી કારના કૅમેરાનો ઍક્સેસ કરી શકશે કે નહીં તે પસંદ કરો"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"આવશ્યક ઍપ"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"ડ્રાઇવિંગમાં આસિસ્ટન્સ માટે, તમારી કારના નિર્માતા માટે આવશ્યક ઍપ"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"પૉલિસી"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"તમારી કારના નિર્માતા હજી પણ તમારી કારના કૅમેરાનો ઍક્સેસ ધરાવતા હોઈ શકે છે"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ઇન્ફોટેન્મેન્ટ ઍપ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ઇન્ફોટેન્મેન્ટ ઍપને ફોટા લેવાની અને વીડિયો રેકોર્ડ કરવાની મંજૂરી આપો"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"હંમેશાં"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"ક્યારેય નહીં"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"ઉપયોગમાં હોય ત્યારે"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"દર વખતે પૂછો"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"સુરક્ષા"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"સ્ક્રીન લૉક"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"તાજેતરમાં ઍક્સેસ કર્યો"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"તમામ જુઓ"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"લોડ કરી રહ્યાં છીએ…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"પ્લાન જુઓ"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"તમારો ઇન્ટરનેટ પ્લાન સમાપ્ત થઈ ગયો છે"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"પ્લાન જુઓ"</string>
 </resources>

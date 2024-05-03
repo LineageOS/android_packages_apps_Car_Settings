@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"මෙම ක්‍රියාව ඔබගේ පැතිකඩ සඳහා ලබා ගත නොහැකිය"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"කැමරා ප්‍රවේශය"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"යෙදුම් හට ඔබේ මෝටර් රථයේ කැමරා වෙත ප්‍රවේශ විය හැකි ද යන්න තෝරා ගන්න"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"අවශ්‍ය යෙදුම්"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"රිය පැදවීමට සහාය වීමට ඔබේ මෝටර් රථයේ නිෂ්පාදකයාට අවශ්‍ය යෙදුම්"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"ප්‍රතිපත්තිය"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ඔබේ මෝටර් රථ නිෂ්පාදකයාට තවමත් ඔබේ මෝටර් රථයේ කැමරාවට ප්‍රවේශය තිබිය හැක"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"තොරතුරු විනෝදාස්වාද යෙදුම්"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ඡායාරූප ගැනීමට සහ වීඩියෝ පටිගත කිරීමට තොරතුරු රසාස්වාදය යෙදුම්වලට ඉඩ දෙන්න"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"සෑම විට ම"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"කිසිදා නොකරන්න"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"භාවිතා කරන විට"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"සෑම වේලාවේම අසන්න"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ආරක්ෂාව"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"තිර අගුල"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"මෑතකදී පිවිසි"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"සියල්ල බලන්න"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"පූරණය වේ…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"සැලසුම් බලන්න"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"ඔබේ අන්තර්ජාල සැලසුම් කල් ඉකුත් විය"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"සැලසුම් බලන්න"</string>
 </resources>

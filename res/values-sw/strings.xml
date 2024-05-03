@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Kitendo hiki hakipatikani kwa wasifu wako"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Ufikiaji wa kamera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Chagua iwapo programu zinaweza kufikia kamera ya gari lako"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"Programu zinazohitajika"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"Programu ambazo mtengenezaji wa gari lako anataka ziwepo ili zikusaidie unapoendesha gari"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Sera"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Huenda mtengenezaji wa gari lako bado ana uwezo wa kufikia kamera ya gari lako"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Programu za habari na burudani"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Ruhusu programu za habari na burudani zipige picha na kurekodi video"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"Kila wakati"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"Zisiwahi kamwe"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"Zinapotumika kwenye skrini"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"Uliza kila wakati"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Usalama"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Kufunga skrini"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Ilifikiwa hivi karibuni"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Angalia zote"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Inapakia…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"Angalia mipango"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Muda wa mipango yako ya intaneti umekwisha"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Angalia mipango"</string>
 </resources>

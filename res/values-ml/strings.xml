@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"ഈ പ്രവർത്തനം നിങ്ങളുടെ പ്രൊഫൈലിൽ ലഭ്യമല്ല"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"ക്യാമറ ആക്‌സസ്"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"ആപ്പുകൾക്ക് നിങ്ങളുടെ കാറിന്റെ ക്യാമറകൾ ആക്‌സസ് ചെയ്യാനാകുമോ എന്ന് തിരഞ്ഞെടുക്കുക"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"ആവശ്യമായ ആപ്പുകൾ"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"ഡ്രൈവിംഗിനെ സഹായിക്കാൻ കാറിന്റെ നിർമ്മാതാവ് ആവശ്യപ്പെടുന്ന ആപ്പുകൾ"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"നയം"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"കാർ നിർമ്മാതാവിന് നിങ്ങളുടെ കാറിന്റെ ക്യാമറയിലേക്ക് തുടർന്നും ആക്‌സസ് ലഭിച്ചേക്കാം"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ഇൻഫോറ്റേയിൻമെന്റ് ആപ്പുകൾ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ചിത്രങ്ങളെടുക്കാനും വീഡിയോ റെക്കോർഡ് ചെയ്യാനും ഇൻഫോറ്റേയിൻമെന്റ് ആപ്പുകളെ അനുവദിക്കുക"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"എല്ലായ്‌പ്പോഴും"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"ഒരിക്കലും വേണ്ട"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"ഉപയോഗിക്കുമ്പോൾ"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"എല്ലായ്‌പ്പോഴും ചോദിക്കുക"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"സുരക്ഷ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"സ്ക്രീൻ ലോക്ക്"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"എല്ലാം കാണുക"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ലോഡ് ചെയ്യുന്നു…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"പ്ലാനുകൾ കാണുക"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"നിങ്ങളുടെ ഇന്റർനെറ്റ് പ്ലാനുകൾ കാലഹരണപ്പെട്ടു"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"പ്ലാനുകൾ കാണുക"</string>
 </resources>
