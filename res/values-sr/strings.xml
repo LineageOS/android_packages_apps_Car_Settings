@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Ова радња није доступна за профил"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Приступ камери"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Одаберите да ли апликације могу да приступају камерама аутомобила"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"Обавезне апликације"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"Апликације за помоћ у вожњи које захтева произвођач аутомобила"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Смернице"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Произвођач аутомобила може и даље да има приступ камери аутомобила"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Апликације за инфо-забаву"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Дозволите апликацијама за инфо-забаву да снимају слике и видео снимке"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"Све време"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"Никад"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"Док се користи"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"Увек питај"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Безбедност"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Откључавање екрана"</string>
@@ -924,4 +925,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Недавно приступано"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Прикажи све"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Учитава се…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"Погледајте пакете"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Интернет пакет је истекао"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Погледајте пакете"</string>
 </resources>

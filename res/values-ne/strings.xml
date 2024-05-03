@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"तपाईंको प्रोफाइलमा यो कारबाही गर्न मिल्दैन"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"क्यामेरा एक्सेस"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"एपहरूलाई तपाईंको कारको क्यामेरा एक्सेस गर्न दिने कि नदिने भन्ने कुरा छनौट गर्नुहोस्"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"अनिवार्य रूपमा इन्स्टल गर्नु पर्ने एपहरू"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"तपाईंको कारको उत्पादकले व्यवस्था गरेबमोजिम गाडी चलाउन मद्दत गर्न अनिवार्य रूपमा इन्स्टल गर्नु पर्ने एपहरू"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"नीति"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"तपाईंको कारको उत्पादकसँग अझै पनि तपाईंको कारको क्यामेराको एक्सेस हुन सक्छ"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"इन्फोटेनमेन्ट एपहरू"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"इन्फोटेनमेन्ट एपहरूलाई फोटो खिच्ने र भिडियो रेकर्ड गर्ने अनुमति दिनुहोस्"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"सधैँ"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"कहिल्यै पनि होइन"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"प्रयोग भएका बेला"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"हरेक पटक सोध्नुहोस्"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रिन लक"</string>
@@ -686,7 +687,7 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"खाली गर्नुहोस्"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"रद्द गर्नुहोस्"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"तपाईंको नयाँ अनलक प्याटर्न"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"अनलक प्याटर्न कोर्नुहोस्"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"अनलक प्याटर्न हाल्नुहोस्"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"सकिएपछि औँला उचाल्नुहोस्"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"प्याटर्न रेकर्ड गरियो"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"पुष्टि गर्न फेरि प्याटर्न हाल्नुहोस्"</string>
@@ -695,7 +696,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलक शैली कोर्ने तरिका"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"प्याटर्न सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"अत्यन्तै धेरै गलत प्रयास गरिए। <xliff:g id="NUMBER">%d</xliff:g> सेकेन्डपछि फेरि प्रयास गर्नुहोस्।"</string>
-    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"रोटरी प्रयोग गरी प्याटर्न कोर्न मिल्दैन, कृपया स्क्रिनमा छोएर प्याटर्न कोर्नुहोस्"</string>
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"रोटरी प्रयोग गरी प्याटर्न कोर्न मिल्दैन, कृपया स्क्रिनमा छोएर प्याटर्न हाल्नुहोस्"</string>
     <string name="okay" msgid="4589873324439764349">"ठिक छ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रिन लक हटाउने हो?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"यस कार्यले जुनसुकै व्यक्तिलाई तपाईंको खाता प्रयोग गर्न दिने छ"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"हालसालै प्रयोग गरिएको"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"सबै हेर्नुहोस्"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"लोड हुँदै छ…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"योजनाहरू हेर्नुहोस्"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"तपाईंको इन्टरनेट योजनाको म्याद सकिएको छ"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"योजनाहरू हेर्नुहोस्"</string>
 </resources>

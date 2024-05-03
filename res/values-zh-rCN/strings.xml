@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"无法对您的个人资料执行此操作"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"摄像头使用权限"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"选择应用能否使用您汽车的摄像头"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"要求的应用"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"您汽车制造商要求的驾驶辅助应用"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"政策"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"您汽车的制造商或许仍可访问汽车摄像头"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"信息娱乐应用"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"允许信息娱乐应用拍照和录视频"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"始终"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"永不"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"在使用时"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"每次都询问"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"屏幕锁定"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"近期使用过"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"查看全部"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"正在加载…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"查看套餐"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"您的互联网套餐已过期"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看套餐"</string>
 </resources>

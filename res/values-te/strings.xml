@@ -651,19 +651,20 @@
     <string name="action_unavailable" msgid="7087119418684417249">"ఈ చర్య మీ ప్రొఫైల్ కోసం అందుబాటులో లేదు"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"కెమెరా యాక్సెస్"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"యాప్‌లు మీ కారు కెమెరాలను యాక్సెస్ చేయగలవో లేదో ఎంచుకోండి"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"అవసరమైన యాప్‌లు"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"డ్రైవింగ్‌లో సహాయం చేయడానికి మీ కారు తయారీదారుకు అవసరమైన యాప్‌లు"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"పాలసీ"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"మీ కారు తయారీదారుకు ఇప్పటికీ మీ కారు కెమెరా‌కు యాక్సెస్ ఉండవచ్చు"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"సమాచారంతో కూడిన వినోదం అందించే యాప్‌లు"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ఫోటోలు తీయడానికి, వీడియోను రికార్డ్ చేయడానికి సమాచారంతో కూడిన వినోదం అందించే యాప్‌లను అనుమతించండి"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"అన్ని సమయాలలో అనుమతించండి"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"ఎప్పుడూ వద్దు"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"వినియోగంలో ఉన్నప్పుడు"</string>
-    <string name="permission_grant_ask" msgid="1613256400438907973">"ప్రతిసారి అడగండి"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
+    <string name="permission_grant_ask" msgid="1613256400438907973">"ప్రతిసారీ అడగండి"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"సెక్యూరిటీ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ఏదీ కాదు"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ఇటీవల యాక్సెస్ చేయబడినవి"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"అన్నీ చూడండి"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"లోడ్ అవుతోంది…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"ప్లాన్‌లను చూడండి"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"మీ ఇంటర్నెట్ ప్లాన్‌ గడువు ముగిసింది"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ప్లాన్‌లను చూడండి"</string>
 </resources>
