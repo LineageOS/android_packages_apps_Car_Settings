@@ -496,8 +496,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"လိုင်စင်များကို ဖွင့်ရာတွင် ပြသနာရှိနေသည်။"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ဖွင့်နေသည်…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{သင် ဆော့ဖ်ဝဲအင်ဂျင်နီယာဖြစ်ရန် ယခုအခါ အဆင့် # ဆင့်သာလိုပါသည်။}other{သင် ဆော့ဖ်ဝဲအင်ဂျင်နီယာဖြစ်ရန် ယခုအခါ အဆင့် # ဆင့်သာလိုပါသည်။}}"</string>
-    <string name="show_dev_on" msgid="5339077400040834808">"သင်သည် ယခု ဆော့ဖ်ဝဲအင်ဂျင်နီယာ တစ်ဦး ဖြစ်နေပါပြီ။"</string>
-    <string name="show_dev_already" msgid="1678087328973865736">"မလိုပါ၊ သင်က ဆော့ဖ်ဝဲအင်ဂျင်နီယာ ဖြစ်ပြီးသားပါ။"</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"သင်သည် ယခု ဆော့ဖ်ဝဲရေးသူ ဖြစ်နေပါပြီ။"</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"မလိုတော့ပါ။ သင်သည် ဆော့ဖ်ဝဲရေးသူ ဖြစ်ပြီးသားပါ။"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ဆော့ဝဲရေးသူ ရွေးစရာများ"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"ပြင်ဆင်သတ်မှတ်ရန် ရွေးစရာများ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ကွန်ရက်၊ အက်ပ်များ (သို့) စက်ပစ္စည်း ပြင်ဆင်သတ်မှတ်ခြင်း"</string>
@@ -652,18 +652,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"ဤလုပ်ဆောင်ချက်ကို သင့်ပရိုဖိုင်အတွက် မရနိုင်ပါ"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"ကင်မရာသုံးခွင့်"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"သင့်ကားတည်နေရာကို အက်ပ်များ ဝင်ကြည့်ခွင့် ရှိ၊ မရှိ ရွေးချယ်ပါ"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"လိုအပ်သော အက်ပ်များ"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"ကားမောင်းရာ၌ ကူညီရန် သင့်ကားထုတ်လုပ်သူက လိုအပ်သည့် အက်ပ်များ"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"မူဝါဒ"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"သင်၏ ကားထုတ်လုပ်သူက ကားကင်မရာကို သုံးခွင့်ရှိနိုင်သေးသည်"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"သတင်းနှင့် ဖျော်ဖြေရေးအက်ပ်များ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"သတင်းနှင့် ဖျော်ဖြေရေးအက်ပ်များအား ဓာတ်ပုံရိုက်ခွင့်နှင့် ဗီဒီယိုမှတ်တမ်းတင်ခွင့်ပေးသည်"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"အချိန်တိုင်း"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"မည်သည့်အခါမှ"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"အသုံးပြုသောအခါ"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"အကြိမ်တိုင်း မေးရန်"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"လုံခြုံရေး"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ဖန်သားပြင်လော့ခ်"</string>
@@ -919,4 +920,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"လတ်တလော သုံးထားသည်များ"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"အားလုံးကြည့်ခြင်း"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ဖွင့်နေသည်…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"အစီအစဉ်များ ကြည့်ရန်"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"သင့်အင်တာနက်အစီအစဉ်များ သက်တမ်းကုန်သွားပါပြီ"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"အစီအစဉ်များ ကြည့်ရန်"</string>
 </resources>

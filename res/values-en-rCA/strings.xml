@@ -657,9 +657,10 @@
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Your car manufacturer may still have access to your car’s camera"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Infotainment apps"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Allow infotainment apps to take pictures and record video"</string>
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Allowed"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"All the time"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"Never"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"When in use"</string>
+    <string name="permission_grant_never" msgid="1357441946890127898">"Not allowed"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Only while using the app"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Ask every time"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Security"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Screen lock"</string>
@@ -915,4 +916,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Recently accessed"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"View all"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Loading…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"See plans"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Your internet plans expired"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"See plans"</string>
 </resources>

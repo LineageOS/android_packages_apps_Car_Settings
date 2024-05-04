@@ -24,7 +24,7 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"ਅਨੁਕੂਲ ਚਮਕ"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ਵਾਤਾਵਰਨ ਮੁਤਾਬਕ ਸਕ੍ਰੀਨ ਦੀ ਚਮਕ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ"</string>
     <string name="theme_toggle_title" msgid="7091393596274709558">"ਥੀਮ"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"\'ਰਾਤ ਦੀ ਰੋਸ਼ਨੀ\' ਮੋਡ ਚਾਲੂ ਹੈ"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"\'ਨਾਈਟ ਲਾਈਟ\' ਮੋਡ ਚਾਲੂ ਹੈ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ਨੈੱਟਵਰਕ ਅਤੇ ਇੰਟਰਨੈੱਟ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"ਮੋਬਾਈਲ ਨੈੱਟਵਰਕ"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# ਸਿਮ}one{# ਸਿਮ}other{# ਸਿਮ}}"</string>
@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"ਇਹ ਕਾਰਵਾਈ ਤੁਹਾਡੇ ਪ੍ਰੋਫਾਈਲ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"ਕੈਮਰਾ ਪਹੁੰਚ"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"ਚੁਣੋ ਕਿ ਐਪਾਂ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਕੈਮਰਿਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦੀਆਂ ਹਨ ਜਾਂ ਨਹੀਂ"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"ਡਰਾਈਵਿੰਗ ਵਿੱਚ ਸਹਾਇਤਾ ਲਈ ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਵੱਲੋਂ ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"ਨੀਤੀ"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਕੋਲ ਹਾਲੇ ਵੀ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਕੈਮਰੇ ਤੱਕ ਪਹੁੰਚ ਹੋ ਸਕਦੀ ਹੈ"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ਵਾਹਨ ਆਡੀਓ ਐਪਾਂ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ਵਾਹਨ ਆਡੀਓ ਐਪਾਂ ਨੂੰ ਤਸਵੀਰ ਖਿੱਚਣ ਅਤੇ ਵੀਡੀਓ ਰਿਕਾਰਡ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"ਹਰ ਸਮੇਂ"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"ਕਦੇ ਵੀ ਨਹੀਂ"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"ਵਰਤੋਂ ਵਿੱਚ ਹੋਣ ਸਮੇਂ"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"ਹਰ ਵਾਰ ਪੁੱਛੋ"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ਸੁਰੱਖਿਆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ਸਕ੍ਰੀਨ ਲਾਕ"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ਸਭ ਦੇਖੋ"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ਲੋਡ ਹੋ ਰਹੀਆਂ ਹਨ…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"ਪਲਾਨ ਦੇਖੋ"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"ਤੁਹਾਡੇ ਇੰਟਰਨੈੱਟ ਪਲਾਨਾਂ ਦੀ ਮਿਆਦ ਲੰਘ ਗਈ ਹੈ"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ਪਲਾਨ ਦੇਖੋ"</string>
 </resources>

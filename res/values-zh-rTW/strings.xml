@@ -413,7 +413,7 @@
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"將應用程式設為優先"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"付費簡訊存取權"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"傳送付費簡訊必須另外付費，相關費用會併入電信費帳單。如果你為某個應用程式啟用權限，即可利用該應用程式傳送付費簡訊。"</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"使用存取權"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"用量資料存取權"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"具有使用存取權的應用程式可以追蹤你使用的其他應用程式與頻率，以及你的電信業者、語言設定等詳情。"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi 控制"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"取得「Wi-Fi 控制」權限後，應用程式就能開啟或關閉 Wi-Fi、掃描及連上 Wi-Fi 網路、新增或移除網路，或啟動僅限區域網路的無線基地台。"</string>
@@ -651,18 +651,19 @@
     <string name="action_unavailable" msgid="7087119418684417249">"你的設定檔不支援這項操作"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"攝影機存取權"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"決定應用程式是否可以存取車輛攝影機"</string>
-    <!-- no translation found for required_apps_group_title (8607608579973985786) -->
-    <skip />
-    <!-- no translation found for required_apps_group_summary (6461075317218666534) -->
-    <skip />
+    <string name="required_apps_group_title" msgid="8607608579973985786">"必要的應用程式"</string>
+    <string name="required_apps_group_summary" msgid="6461075317218666534">"車輛製造商為了提供駕駛輔助服務所需的應用程式"</string>
     <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"政策"</string>
-    <!-- no translation found for camera_access_disclaimer_summary (442467418242962647) -->
-    <skip />
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"車輛製造商或許仍可存取車輛攝影機"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"資訊娛樂系統應用程式"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"允許資訊娛樂系統應用程式拍照及錄影"</string>
+    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
+    <skip />
     <string name="permission_grant_always" msgid="8851460274973784076">"一律允許"</string>
-    <string name="permission_grant_never" msgid="5725479525867480567">"一律不允許"</string>
-    <string name="permission_grant_in_use" msgid="7442315008206758926">"僅限使用期間"</string>
+    <!-- no translation found for permission_grant_never (1357441946890127898) -->
+    <skip />
+    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
+    <skip />
     <string name="permission_grant_ask" msgid="1613256400438907973">"每次都詢問"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>
@@ -918,4 +919,7 @@
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"最近的存取記錄"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"查看全部"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"載入中…"</string>
+    <string name="data_subscription_explore_options" msgid="4089747156447849054">"查看方案"</string>
+    <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"你的網際網路方案已過期"</string>
+    <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看方案"</string>
 </resources>
