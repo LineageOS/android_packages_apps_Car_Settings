@@ -1506,7 +1506,9 @@
     <!-- Title of required apps [CHAR LIMIT=40]-->
     <string name="required_apps_group_title">Required apps</string>
     <!-- Summary of required apps [CHAR LIMIT=NONE]-->
-    <string name="required_apps_group_summary">Apps required by your car\u2019s manufacturer to assist with driving</string>
+    <string name="required_apps_group_summary">
+        Apps that are required by your car\u2019s manufacturer to help you drive
+    </string>
     <!-- Title of privacy policy for the required app [CHAR LIMIT=40]-->
     <string name="camera_privacy_policy_button_text">Policy</string>
     <!-- Camera access page disclaimer summary [CHAR LIMIT=NONE] -->
