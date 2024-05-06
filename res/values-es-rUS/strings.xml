@@ -237,7 +237,7 @@
     <string name="text_to_speech_settings" msgid="811985746199507343">"Salida de texto a voz"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor preferido"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motor actual"</string>
-    <string name="tts_speech_rate" msgid="4512944877291943133">"Velocidad de voz"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"Velocidad de habla"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Tono"</string>
     <string name="tts_reset" msgid="6289481549801844709">"Restablecer"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Sonido"</string>
@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Guardar"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Sonidos de alertas"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Tono, notificaciones, alarma"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Reproduce el contenido multimedia en"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Brillo"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Adaptar la pantalla a entornos con poca luz"</string>
     <string name="units_settings" msgid="402325305096925886">"Unidades"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Borrar tu perfil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Borrar tu perfil y tus cuentas del sistema de infoentretenimiento"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Esta acción no está disponible para tu perfil"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Acceso a cámara"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Elige si las apps pueden acceder a las cámaras del vehículo"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Usa las cámaras de tu vehículo con:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Cualquier app"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Cualquier app con permiso para acceder a la cámara"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Ninguna app"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Ninguna de tus apps"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Apps que te ayudan con la conducción"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Apps que brindan asistencia con tareas como mostrarte lo que te rodea cuando estás estacionando"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Solo apps requeridas"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Solo las apps que requiere el fabricante de tu vehículo"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Apps que te ayudan con la conducción"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Apps que brindan asistencia con tareas como mostrarte lo que te rodea cuando estás estacionando, y apps requeridas"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Apps que te ayudan con la conducción"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Estas apps pueden acceder a tu cámara para brindar asistencia mientras conduces"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Apps requeridas"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Para que tu vehículo pueda funcionar de forma segura, se necesitan estas apps"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Política"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Es posible que el fabricante aún tenga acceso a la cámara del vehículo. Consulta sus políticas para obtener más información al respecto."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Revisa la Política de Privacidad de cada app para obtener más información sobre cómo estas usan tu cámara."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguridad"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ninguno"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Brillo de pantalla"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Para ver tus dispositivos, activa Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Para vincular un dispositivo, abre la configuración de Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador del sistema de infoentretenimiento"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Apps activadas"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Apps desactivadas"</string>

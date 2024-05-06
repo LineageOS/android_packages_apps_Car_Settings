@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"حفظ"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"أصوات المنبه"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"نغمة الرنين والإشعارات والمنبّه"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"تشغيل الوسائط على"</string>
     <string name="display_brightness" msgid="5718970880488110840">"السطوع"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"ضبط الشاشة على وضع \"الإضاءة المنخفضة\""</string>
     <string name="units_settings" msgid="402325305096925886">"وحدات العرض"</string>
@@ -331,7 +332,7 @@
     <string name="storage_application_label" msgid="5911779903670978586">"التخزين وذاكرة التخزين المؤقت"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"منح الأولوية لأداء التطبيق"</string>
     <string name="application_version_label" msgid="8556889839783311649">"الإصدار: %1$s"</string>
-    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"لم يتم منح أي أذونات."</string>
+    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"لم يتم منح أي أذونات"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"لم يتم طلب أي أذونات."</string>
     <string name="unused_apps" msgid="648471933781010395">"التطبيقات غير المستخدمة"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{تطبيق واحد غير مستخدَم}zero{# تطبيق غير مستخدَم}two{تطبيقان غير مستخدَمين}few{# تطبيقات غير مستخدَمة}many{# تطبيقًا غير مستخدَم}other{# تطبيق غير مستخدَم}}"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"حذف ملفك الشخصي"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"محو ملفك الشخصي وحساباتك من \"نظام الترفيه والمعلومات\"."</string>
     <string name="action_unavailable" msgid="7087119418684417249">"هذا الإجراء غير متاح لملفك الشخصي."</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"الوصول إلى الكاميرا"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"اختَر ما إذا كان يمكن للتطبيقات الوصول إلى كاميرا سيارتك"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"استخدام كاميرا سيارتك من خلال التطبيقات التالية:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"أي تطبيق"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"أي تطبيق سمحت له بالوصول إلى الكاميرا"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"عدم وصول أي تطبيقات"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"عدم وصول أي من تطبيقاتك"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"التطبيقات التي تساعدك في القيادة"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"التطبيقات التي تساعد في بعض العمليات، مثل عرض ما يحيط بالسيارة عند ركنها"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"التطبيقات المطلوبة فقط"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"التطبيقات المطلوبة بواسطة الشركة المصنّعة لسيارتك فقط"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"التطبيقات التي تساعدك في القيادة"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"التطبيقات التي تساعد في بعض العمليات، مثل عرض ما يحيط بالسيارة عند ركنها، والتطبيقات المطلوبة"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"التطبيقات التي تساعدك في القيادة"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"يمكن لهذه التطبيقات الوصول إلى الكاميرا لمساعدتك في القيادة"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"التطبيقات المطلوبة"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"هذه التطبيقات ضرورية لمساعدة سيارتك على العمل بأمان"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"السياسة"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"قد تظل الشركة المصنّعة لسيارتك قادرة على الوصول إلى كاميرا سيارتك. يمكنك مراجعة سياساتها لمزيد من المعلومات."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"تعرَّف على مزيد من المعلومات عن كيفية استخدام كل تطبيق للكاميرا من خلال مراجعة سياسة الخصوصية الخاصة به."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"الأمان"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل الشاشة"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"بدون"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"سطوع الشاشة"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"لرؤية أجهزتك، يجب تفعيل البلوتوث."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"لإقران جهاز، افتح إعدادات البلوتوث."</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"المظهر"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"مشرف \"نظام الترفيه والمعلومات\""</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"التطبيقات المفعّلة"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"التطبيقات غير المفعّلة"</string>

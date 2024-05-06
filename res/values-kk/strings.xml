@@ -237,7 +237,7 @@
     <string name="text_to_speech_settings" msgid="811985746199507343">"Мәтінді дыбыстау шығысы"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Таңдалған жүйе"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Ағымдағы жүйе"</string>
-    <string name="tts_speech_rate" msgid="4512944877291943133">"Дыбыстау жылдамдығы"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"Сөйлеу жылдамдығы"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Дауыс тембрі"</string>
     <string name="tts_reset" msgid="6289481549801844709">"Қалпына келтіру"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Дыбыс"</string>
@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Сақтау"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Ескерту дыбыстары"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Рингтон, хабарландырулар, дабыл"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Медиафайл ойнатылатын құрылғы:"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Жарықтық"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Экранды көмескі жарыққа реттеу"</string>
     <string name="units_settings" msgid="402325305096925886">"Өлшем бірліктер"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Профильді жою"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Ақпарат және ойын-сауық жүйесінен профильді және аккаунттарды өшіру"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Профиліңізде бұл әрекетті жасай алмайсыз."</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Камераны пайдалану"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Қолданбалар көлігіңіздің камераларын пайдалана ала ма жоқ па, соны таңдаңыз."</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Көліктің камераларын келесі қолданбалармен бірге пайдаланыңыз:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Кез келген қолданба"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Камераны пайдалануға рұқсат берілген кез келген қолданба"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Ешқандай қолданба жоқ"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Қолданбалардың ешқайсысы"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Көлік жүргізуге көмектесетін қолданбалар"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Тұраққа қою кезінде айналаны көрсету және сол сияқты әрекет орындауға көмектесетін қолданбалар"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Қажетті қолданбалар ғана"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Көлік өндірушісі талап ететін қолданбалар ғана"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Көлік жүргізуге көмектесетін қолданбалар"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Тұраққа қою кезінде айналаны көрсету сияқты және сол сияқты әрекет орындауға көмектесетін қолданбалар және қажетті қолданбалар"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Көлік жүргізуге көмектесетін қолданбалар"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Бұл қолданбалар көлік жүргізуге көмектесу үшін камераңызды пайдалана алады:"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Қажетті қолданбалар"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Бұл қолданбалар көлігіңіздің қауіпсіз жұмыс істеуі үшін қажет:"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Саясат"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Көлік өндірушісі көлігіңіздің камерасын әлі де пайдалануы мүмкін. Толық ақпарат алу үшін оның саясаттарымен таныса аласыз."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Құпиялық саясатын қарап шығып, әрбір қолданба камераңызды қалай пайдаланатыны туралы толық ақпарат алыңыз."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Қауіпсіздік"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Экранды құлыптау"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Жоқ"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Дисплей жарықтығы"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Құрылғыларыңызды көру үшін Bluetooth-ты қосыңыз."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Құрылғыны жұптау үшін Bluetooth параметрлерін ашыңыз."</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Тақырып"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Ақпараттық-сауықтық жүйе әкімшісі"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Қосылған қолданбалар"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Өшірілген қолданбалар"</string>

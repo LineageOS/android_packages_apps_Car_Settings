@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import static android.view.View.GONE;
 import static android.view.ViewGroup.FOCUS_BEFORE_DESCENDANTS;
 import static android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS;
 import static android.view.accessibility.AccessibilityNodeInfo.ACTION_FOCUS;
@@ -165,6 +166,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             requestTopLevelMenuFocus();
         }
         setUpFocusChangeListener(true);
+        hideFocusParkingViewIfNeeded();
     }
 
     @Override
@@ -422,6 +424,12 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             mMiniToolbar.setNavButtonMode(NavButtonMode.BACK);
         } else {
             mMiniToolbar.setNavButtonMode(NavButtonMode.DISABLED);
+        }
+    }
+
+    private void hideFocusParkingViewIfNeeded() {
+        if (mIsSinglePane) {
+            findViewById(R.id.settings_focus_parking_view).setVisibility(GONE);
         }
     }
 

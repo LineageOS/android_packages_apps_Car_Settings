@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Londoloza"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Imisindo yezexwayiso"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Ithoni yokukhala, izaziso, i-alamu"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Dlala imidiya kokuthi"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Ukugqama"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Lungisa isikrini mayelana nokukhanya okuphansi"</string>
     <string name="units_settings" msgid="402325305096925886">"Amayunithi"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Sula iphrofayela yakho"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Sula iphrofayela yakho nama-akhawunti kusukela kusistimu ye-infotainment"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Lesi senzo asitholakaleli iphrofayela yakho"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Ukufinyelela kwekhamera"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Khetha ukuthi ama-app angakwazi yini ukufinyelela amakhamera wemoto yakho"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Sebenzisa amakhamera emoto yakho:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Noma iyiphi i-App"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Noma iyiphi i-app oyivumele ukuthi ifinyelele kukhamera yakho"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Awekho Ama-Aapp"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Ayikho neyodwa i-app yakho"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Ngama-app akusiza ngokushayela"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Ngama-app asiza ngezinto ezifana nokubonisa indawo ekuzungezile lapho upaka"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Ama-app adingekayo kuphela"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Ama-app adingwa umkhiqizi wemoto yakho kuphela"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Ngama-app akusiza ngokushayela"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Ngama-app asiza ngezinto ezifana nokubonisa indawo ekuzungezile lapho upaka, nama-app adingekayo"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Ngama-app akusiza ngokushayela"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"La ma-app angafinyelela ikhamera yakho ukuze asize ngokushayela"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Ama-app adingekayo"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Lawa ma-app ayadingeka ukuze asize imoto yakho isebenze ngokuphephile"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Inqubomgomo"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Umkhiqizi wemoto yakho usengakwazi ukufinyelela ikhamera yemoto yakho. Ungabuyekeza izinqubomgomo zakhe ukuze uthole ulwazi olwengeziwe."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Funda kabanzi mayelana nendlela i-app ngayinye isebenzisa ngayo Ikhamera yakho ngokubuyekeza Inqubomgomo yalo Yobumfihlo."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Ukuvikela"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Isikrini sivaliwe"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Lutho"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Bonisa ukukhanya"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Ukuze ubone amadivayisi akho, vula i-Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Ukuze ubhanqe idivayisi, vula amasethingi e-Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Itimu"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Umphathi wesistimu ye-infotainment"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Ama-app enziwe asebenza"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Ama-app ayekiswe ukusebenza"</string>

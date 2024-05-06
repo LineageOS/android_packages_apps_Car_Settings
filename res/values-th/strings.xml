@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"บันทึก"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"เสียงการแจ้งเตือน"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"เสียงเรียกเข้า การแจ้งเตือน การปลุก"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"เล่นสื่อใน"</string>
     <string name="display_brightness" msgid="5718970880488110840">"ความสว่าง"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"ปรับหน้าจอสำหรับสภาวะแสงน้อย"</string>
     <string name="units_settings" msgid="402325305096925886">"หน่วย"</string>
@@ -499,7 +500,7 @@
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"เน็ตมือถือ"</li></string>
     <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"โทรศัพท์และอุปกรณ์บลูทูธอื่นๆ"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"ลบ eSIM ทั้งหมดของพาหนะ"</string>
-    <string name="reset_esim_desc" msgid="1437276625485586740">"การดำเนินการนี้จะไม่ยกเลิกแผนบริการของคุณ"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"การดำเนินการนี้จะไม่ยกเลิกแพ็กเกจบริการของคุณ"</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"รีเซ็ต eSIM ไม่ได้"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"เลือกเครือข่าย"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"รีเซ็ตการตั้งค่า"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"ลบโปรไฟล์"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"ลบโปรไฟล์และบัญชีออกจากระบบสาระบันเทิง"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"การทำงานนี้ใช้ไม่ได้กับโปรไฟล์ของคุณ"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"สิทธิ์เข้าถึงกล้อง"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"เลือกว่าจะให้แอปต่างๆ เข้าถึงกล้องของรถหรือไม่"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"ใช้กล้องของรถกับแอปต่อไปนี้"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"ทุกแอป"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"ทุกแอปที่คุณอนุญาตให้เข้าถึงกล้อง"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"ไม่มีแอป"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"ไม่มีแอป"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"แอปที่ช่วยในการขับ"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"แอปที่ช่วยในเรื่องต่างๆ อย่างเช่นแสดงพื้นที่โดยรอบเมื่อจอดรถ"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"เฉพาะแอปที่จำเป็น"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"เฉพาะแอปที่จำเป็นจากผู้ผลิตรถยนต์"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"แอปที่ช่วยในการขับ"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"แอปที่ช่วยในเรื่องต่างๆ อย่างเช่นแสดงพื้นที่โดยรอบเมื่อจอดรถ และแอปที่จำเป็น"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"แอปที่ช่วยในการขับ"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"แอปเหล่านี้สามารถเข้าถึงกล้องเพื่อช่วยในการขับ"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"แอปที่จำเป็น"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"ต้องใช้แอปเหล่านี้เพื่อช่วยให้รถทำงานได้อย่างปลอดภัย"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"นโยบาย"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"ผู้ผลิตรถยนต์อาจยังเข้าถึงกล้องของรถได้อยู่ โปรดดูข้อมูลเพิ่มเติมจากนโยบายของผู้ผลิต"</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"ดูข้อมูลเพิ่มเติมเกี่ยวกับวิธีใช้กล้องของแต่ละแอปได้จากนโยบายความเป็นส่วนตัว"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ความปลอดภัย"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ล็อกหน้าจอ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ไม่มี"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"ความสว่างของหน้าจอ"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"เปิดบลูทูธเพื่อดูอุปกรณ์ของคุณ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"เปิดการตั้งค่าบลูทูธเพื่อจับคู่อุปกรณ์"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"ธีม"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ผู้ดูแลระบบสาระบันเทิง"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"แอปที่เปิดใช้งาน"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"แอปที่ปิดใช้งาน"</string>

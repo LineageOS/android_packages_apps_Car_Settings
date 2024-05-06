@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Saqlash"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Signal tovushlari"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Rington, bildirishnoma, signal"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Media ijro qurilmasi"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Yorqinlik"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Ekran yorqinligini past salqin muhitga moslash"</string>
     <string name="units_settings" msgid="402325305096925886">"Birliklar"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Profilimni oʻchirish"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Axborot-hordiq tizimidan profil va hisoblarni oʻchirib tashlash"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Profilingizda bu amal ishlamaydi."</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Kameraga ruxsat"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Ilovalar avtomobilingiz kamerasidan foydalanishi yoki foydalanmasligini tanlang"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Avtomobilingiz kameralardan qaysi ilovalar foydalanishini tanlang"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Har qanday ilova"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Kameradan foydalanish huquqi berilgan har qanday ilova"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Hech qanday ilova"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Hech qaysi ilovangiz"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Mashinani boshqarish uchun ilovalar"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Masalan, avtoturargohda mashina atrofidagi boʻsh joyni koʻrsatuvchi ilovalar"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Faqat kerakli ilovalar"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Faqat avtomobil ishlab chiqaruvchisi ruxsat bergan ilovalar"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Mashinani boshqarish uchun ilovalar"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Avtoturargohda mashina atrofidagi boʻsh joyni koʻrsatuvchi va kerakli ilovalar"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Mashinani boshqarish uchun ilovalar"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Avtomobilda sizga yordam berish uchun ushbu ilovalarga kameralardan foydalanish imkoniyati beriladi."</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Kerakli ilovalar"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Bu ilovalar avtomobilingizning xavfsiz ishlashi uchun kerak."</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Siyosat"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Avtomobil ishlab chiqaruvchisi avtomobil kamerasini hali ham koʻrishi mumkin. Batafsil axborot uchun ularning qoidalari bilan tanishing."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Maxfiylik siyosatini tekshirish orqali har bir ilova kameradan qanday foydalanishi haqida batafsil axborot oling."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Xavfsizlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran qulfi"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Hech qanday"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ekran yorqinligi"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Qurilmalaringizni koʻrish uchun Bluetoothni yoqing"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Qurilmani ulash uchun Bluetooth sozlamalarini oching"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Mavzu"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Axborot-hordiq tizimi boshqaruvi"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Faol ilovalar"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Nofaol ilovalar"</string>

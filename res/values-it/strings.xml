@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Salva"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Suoni di avviso"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Suoneria, notifiche, sveglia"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Riproduci contenuti multimediali su"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Luminosità"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Regola lo schermo per condizioni di scarsa illuminazione"</string>
     <string name="units_settings" msgid="402325305096925886">"Unità"</string>
@@ -502,10 +503,10 @@
     <string name="reset_esim_desc" msgid="1437276625485586740">"Il tuo piano di servizio non verrà annullato."</string>
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Impossibile reimpostare le eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Seleziona rete"</string>
-    <string name="reset_network_button_text" msgid="8374174455632765033">"Reimposta impostazioni"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Ripristina impostazioni"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vuoi reimpostare?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Reimpostare tutte le impostazioni di rete? Questa azione è irreversibile."</string>
-    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Reimposta impostazioni"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Ripristina impostazioni"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Le impostazioni di rete sono state reimpostate"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Reimposta preferenze app"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Verranno reimpostate tutte le preferenze relative a:\n\n"<li>"App disattivate"</li>\n<li>"Notifiche di app disattivate"</li>\n<li>"Applicazioni predefinite per le azioni"</li>\n<li>"Limitazioni di dati in background per le app"</li>\n<li>"Eventuali limitazioni delle autorizzazioni"</li>\n\n"Non perderai i dati delle app."</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Elimina il tuo profilo"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Cancella il tuo profilo e i tuoi account dal sistema di infotainment"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Questa azione non è disponibile per il tuo profilo"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Accesso alla fotocamera"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Scegli se le app possono accedere alle videocamere dell\'auto"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Utilizza le videocamere dell\'auto con:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Qualsiasi app"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Qualsiasi app autorizzata ad accedere alla videocamera"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Nessuna app"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Nessuna delle tue app"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"App che ti aiutano a guidare"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"App che ti aiutano, ad esempio, a mostrare l\'ambiente circostante mentre parcheggi"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Solo le app obbligatorie"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Solo le app richieste dal produttore dell\'auto"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"App che ti aiutano a guidare"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"App che ti aiutano, ad esempio, a mostrare l\'ambiente circostante mentre parcheggi e le app obbligatorie"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"App che ti aiutano a guidare"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Queste app possono accedere alla tua videocamera per aiutarti durante la guida"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"App obbligatorie"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Queste app sono necessarie per aiutare la tua auto a funzionare in sicurezza"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Norme"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Il produttore del veicolo potrebbe avere ancora accesso alla videocamera dell\'auto. Per maggiori informazioni, puoi consultare le relative norme vigenti."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Scopri di più su come ogni app utilizza la tua videocamera esaminando le relative norme sulla privacy."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sicurezza"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blocco schermo"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nessuno"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Luminosità dello schermo"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Per vedere i tuoi dispositivi, attiva il Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Per accoppiare un dispositivo, apri le impostazioni Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Amministratore di sistema di infotainment"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"App attivate"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"App disattivate"</string>

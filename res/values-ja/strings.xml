@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"保存"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"アラート音"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"着信音、通知音、アラーム"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"メディアの再生先"</string>
     <string name="display_brightness" msgid="5718970880488110840">"明るさ"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"暗い場所に合わせて画面を調節します"</string>
     <string name="units_settings" msgid="402325305096925886">"単位"</string>
@@ -385,7 +386,7 @@
     <string name="apps_settings_title" msgid="3982535942394315336">"アプリ"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"最近開いたアプリ"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"%1$d 件のアプリをすべて表示"</string>
-    <string name="apps_permission_manager_title" msgid="8776335943862484131">"権限マネージャー"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"権限マネージャ"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"アプリのデータアクセスを管理します"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"アシストアプリなど"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# 個のアプリがパフォーマンスに影響を与えています}other{# 個のアプリがパフォーマンスに影響を与えています}}"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"プロファイルを削除"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"インフォテインメント システムからプロファイルとアカウントを消去します"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"このプロファイルではこの操作は行えません"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"カメラへのアクセス"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"アプリが車のカメラにアクセスできる場合は選択します"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"カメラの使用を許可:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"すべてのアプリ"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"カメラへのアクセスを許可したアプリ"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"対象アプリなし"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"対象アプリなし"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"運転をサポートするアプリ"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"駐車時の周囲確認などのサポートを行うアプリ"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"必須のアプリのみ"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"車のメーカーが必要とするアプリのみ"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"運転をサポートするアプリ"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"駐車時の周囲確認などのサポートを行うアプリおよび必須のアプリ"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"運転をサポートするアプリ"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"これらのアプリは運転をサポートする目的で車のカメラにアクセスできます"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"必須アプリ"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"車を安全に使用するには、これらのアプリが必要です"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"ポリシー"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"車のメーカーが引き続き車のカメラにアクセスできる場合があります。詳しくは、車のメーカーのポリシーをご覧ください。"</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"各アプリがカメラをどのように利用するかについては、プライバシー ポリシーをご覧ください。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"セキュリティ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"画面ロック"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"なし"</string>
@@ -733,7 +754,7 @@
     <string name="remove_button" msgid="6664656962868194178">"削除"</string>
     <string name="cancel" msgid="750286395700355455">"キャンセル"</string>
     <string name="allow" msgid="7519431342750394402">"許可"</string>
-    <string name="do_not_allow" msgid="3157082400084747525">"有効にしない"</string>
+    <string name="do_not_allow" msgid="3157082400084747525">"許可しない"</string>
     <string name="deny" msgid="340512788979930804">"許可しない"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace キー"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter キー"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"ディスプレイの明るさ"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"デバイスを表示するには、Bluetooth を ON にしてください"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"デバイスをペア設定するには、Bluetooth の設定を開いてください"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"テーマ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"インフォテインメント システム管理"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"有効なアプリ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"無効なアプリ"</string>

@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Išsaugoti"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Įspėjimų garsai"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Skambėjimo tonas, pranešimai, signalas"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"„Leisti mediją“ įjungtas"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Šviesumas"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Koreguokite ekrano šviesumą esant prastam apšvietimui"</string>
     <string name="units_settings" msgid="402325305096925886">"Vienetai"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Ištrinti profilį"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Ištrinkite savo profilį ir paskyras iš informacinės pramoginės sistemos"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Šis veiksmas jūsų paskyroje nepasiekiamas"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Prieiga prie vaizdo kameros"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Pasirinkite, ar programos gali pasiekti automobilio vaizdo kameras"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Naudokite automobilio vaizdo kameras su:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Bet kokia programa"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Bet kokia programa, kuriai leidote pasiekti vaizdo kamerą"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Nėra programų"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Nė viena programa"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Programos, teikiančios pagalbą vairuojant"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Programos, padedančios atlikti tam tikrus veiksmus, pvz., rodančios aplinką parkuojantis"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Tik būtinos programos"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Tik automobilio gamintojo reikalaujamos programos"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Programos, teikiančios pagalbą vairuojant"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Programos, padedančios atlikti tam tikrus veiksmus, pvz., rodančios aplinką parkuojantis, ir būtinos programos"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Programos, teikiančios pagalbą vairuojant"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Šios programos gali pasiekti vaizdo kamerą, kad teiktų pagalbą vairuojant"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Būtinos programos"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Šios programos reikalingos, kad automobilis būtų saugus"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Politika"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Automobilio gamintojui vis dar gali būti suteikta prieiga prie jūsų automobilio vaizdo kameros. Jei reikia daugiau informacijos, žr. jų politiką."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Sužinokite daugiau, kaip kiekviena programa naudoja vaizdo kamerą, peržiūrėję jų privatumo politiką."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sauga"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekrano užraktas"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nėra"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Ekrano šviesumas"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Norėdami matyti savo įrenginius, įjunkite „Bluetooth“"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Norėdami susieti įrenginį, atidarykite „Bluetooth“ nustatymus"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informacinės pramoginės sistemos administratorius"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Suaktyvintos programos"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Išaktyvintos programos"</string>

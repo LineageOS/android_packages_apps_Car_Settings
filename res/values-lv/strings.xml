@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Saglabāt"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Brīdinājumu signāli"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Zvana signāls, paziņojumi, modinātājs"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Atskaņojiet multivides saturu šeit:"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Spilgtums"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Pielāgojiet ekrānu vājam apgaismojumam"</string>
     <string name="units_settings" msgid="402325305096925886">"Mērvien."</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Dzēst jūsu profilu"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Dzēst jūsu profilu un kontus no informatīvi izklaidējošās sistēmas"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Šī darbība nav pieejama jūsu profilam."</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Piekļuve kamerām"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Izvēlieties, vai lietotnes var piekļūt jūsu automašīnas kamerām."</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Kur izmantot automašīnas kameras"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Jebkurā lietotnē"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Jebkurā lietotnē, kam esat atļāvis piekļūt kamerai"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Nevienā lietotnē"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Nevienā no jūsu lietotnēm"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Lietotnēs, kas atvieglo braukšanu"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Lietotnēs, kas nodrošina tādas noderīgas funkcijas kā apkārtnes rādīšana, kamēr novietojat automašīnu stāvēšanai"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Tikai nepieciešamajās lietotnēs"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Tikai lietotnēs, ko automašīnas ražotājs ir noteicis kā nepieciešamas"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Lietotnēs, kas atvieglo braukšanu"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Lietotnēs, kas nodrošina tādas noderīgas funkcijas kā apkārtnes rādīšana, kamēr novietojat automašīnu stāvēšanai, un nepieciešamajās lietotnēs"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Lietotnēs, kas atvieglo braukšanu"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Šīs lietotnes drīkst piekļūt kamerai, lai atvieglotu braukšanu."</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Nepieciešamajās lietotnēs"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Šīs lietotnes ir nepieciešamas, lai automašīna darbotos droši."</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Politika"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Automašīnas ražotājam joprojām var būt piekļuve jūsu automašīnas kamerai. Lai uzzinātu vairāk, varat skatīt ražotāja politikas."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Lai uzzinātu vairāk par to, kā lietotnēs tiek izmantota jūsu kamera, skatiet katras lietotnes konfidencialitātes politiku."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Drošība"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekrāna bloķēšana"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nav"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Displeja spilgtums"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Lai skatītu savas ierīces, ieslēdziet Bluetooth."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Lai savienotu pārī kādu ierīci, atveriet Bluetooth iestatījumus."</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Motīvs"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informatīvi izklaidējošās sistēmas administrators"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivizētās lietotnes"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivizētās lietotnes"</string>

@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Зберегти"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Звуки сповіщень"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Сигнал дзвінка, сповіщення, будильник"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Відтворення медіафайлу на"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Яскравість"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Коригувати параметри екрана для слабкого освітлення"</string>
     <string name="units_settings" msgid="402325305096925886">"Одиниці"</string>
@@ -304,7 +305,7 @@
     <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Милі на галон (Велика Британія)"</string>
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Кілометри на літр"</string>
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Літри на сто кілометрів"</string>
-    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Додатки та сповіщення"</string>
+    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Додатки й сповіщення"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показати всі додатки"</string>
     <string name="default_applications" msgid="1558183275638697087">"Додатки за умовчанням"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"Додатки, що впливають на продуктивність"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Видалити профіль"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Видалити всі дані з профілю та облікові записи з інформаційно-розважальної системи"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Ця дія недоступна для вашого профілю"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Доступ до камери"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Укажіть, чи можуть додатки отримувати доступ до камер автомобіля"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Використовувати камери автомобіля з такими додатками:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Будь-який додаток"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Будь-який додаток, якому ви дозволили доступ до камери"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Жоден із додатків"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Жоден із ваших додатків"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Додатки для допомоги водію"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Додатки, що допомагають водію (наприклад, показують простір навколо автомобіля під час паркування)"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Лише обов’язкові додатки"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Лише додатки, що є обов’язковими згідно з вимогами виробника автомобіля"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Додатки для допомоги водію"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Додатки, що допомагають водію (наприклад, показують простір навколо автомобіля під час паркування), а також обов’язкові додатки"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Додатки для допомоги водію"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Ці додатки можуть отримувати доступ до камери, щоб допомагати вам керувати автомобілем"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Обов’язкові додатки"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Ці додатки потрібні для безпечної роботи автомобіля"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Політика"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Виробник вашого автомобіля може й надалі мати доступ до його камери. Щоб дізнатися більше, перегляньте правила виробника."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Щоб дізнатися, як конкретний додаток використовує вашу камеру, перегляньте його політику конфіденційності."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Безпека"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Блокування екрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Немає"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яскравість дисплея"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Щоб переглянути свої пристрої, увімкніть Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Щоб створити пару з пристроєм, відкрийте налаштування Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Тема"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Адміністратор інформаційно-розважальної системи"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Активовані додатки"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Деактивовані додатки"</string>

@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"保存"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"提示音"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"铃声、通知、闹钟"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"在以下设备上播放媒体内容"</string>
     <string name="display_brightness" msgid="5718970880488110840">"亮度"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"光线较弱时调节屏幕"</string>
     <string name="units_settings" msgid="402325305096925886">"单位"</string>
@@ -357,7 +358,7 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"助手和语音输入"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"辅助应用"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"使用屏幕上的文字内容"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"允许助手应用获取屏幕上的文字内容"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"允许辅助应用获取屏幕上的文字内容"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"使用屏幕截图"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"允许辅助应用使用屏幕截图"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"语音输入"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"删除您的个人资料"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"清除信息娱乐系统中您的个人资料和账号"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"无法对您的个人资料执行此操作"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"摄像头使用权限"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"选择应用能否使用您汽车的摄像头"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"允许以下应用使用您汽车的摄像头："</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"任何应用"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"允许任何应用使用您汽车的摄像头"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"所有应用均不可使用"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"您的所有应用均不可使用"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"提供辅助驾驶功能的应用"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"提供辅助驾驶功能（例如在停车时显示周遭环境影像）的应用"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"仅限必需的应用"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"仅限汽车制造商要求的应用"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"提供辅助驾驶功能的应用"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"提供辅助驾驶功能（例如在停车时显示周遭环境影像）的应用以及必需的应用"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"提供辅助驾驶功能的应用"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"这些应用可以使用摄像头来辅助驾驶"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"必需的应用"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"这些应用对于确保行车安全必不可少"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"政策"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"您汽车的制造商或许仍可使用您汽车的摄像头。您可参阅其相关政策以了解详情。"</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"如需详细了解每款应用如何使用摄像头，请查看各应用的隐私权政策。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"屏幕锁定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"无"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"屏幕亮度"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"要想看到您的设备，请开启蓝牙"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"要想配对设备，请打开蓝牙设置"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"主题"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"信息娱乐系统管理"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"已启用的应用"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"已停用的应用"</string>

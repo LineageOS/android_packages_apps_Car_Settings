@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Tallenna"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Hälytysäänet"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Soittoääni, ilmoitukset, hälytykset"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Median ulostulo:"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Kirkkaus"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Valitse näytölle himmeää valaistus"</string>
     <string name="units_settings" msgid="402325305096925886">"Yksiköt"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Poista profiili"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Poista profiilisi ja tilisi infotainment-järjestelmästä"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Tämä toiminto ei ole mahdollinen profiilillasi"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Pääsy kameraan"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Valitse, onko sovelluksilla pääsy autosi kameraan"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Käytä auton kameraa näiden kanssa:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Mikä tahansa sovellus"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Sovellukset, joilla on pääsy käyttää kameraasi"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Ei sovelluksia"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Ei mikään sovelluksistasi"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Ajamisessa auttavat sovellukset"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Sovellukset, jotka auttavat esimerkiksi ympäristön näyttämisessä pysäköinnin aikana"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Vain vaaditut sovellukset"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Vain autosi valmistajan vaatimat sovellukset"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Ajamisessa auttavat sovellukset"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Sovellukset, jotka auttavat esimerkiksi ympäristön näyttämisessä pysäköinnin aikana, sekä vaadittavat sovellukset"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Ajamisessa auttavat sovellukset"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Nämä sovellukset voivat päästä kameraan ajamisessa auttamista varten"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Vaaditut sovellukset"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Näitä sovelluksia tarvitaan auton turvallista toimintaa varten"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Käytäntö"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Autosi valmistajalla saattaa yhä olla pääsy autosi kameraan. Voit lukea lisää valmistajan käytännöistä."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Lue lisää siitä, miten jokainen sovellus käyttää kameraa tarkistamalla niiden tietosuojakäytäntö."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Tietoturva"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Näytön lukitus"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ei mitään"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Näytön kirkkaus"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Laita Bluetooth päälle, jotta voit nähdä laitteesi"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Avaa Bluetooth-asetukset, jotta voit muodostaa laiteparin"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Teema"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Infotainment-järjestelmän valvoja"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivoidut sovellukset"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Käytöstä poistetut sovellukset"</string>

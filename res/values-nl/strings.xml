@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Opslaan"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Meldingsgeluiden"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Ringtone, meldingen, wekker"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Media afspelen op"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Helderheid"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Scherm aanpassen bij weinig licht"</string>
     <string name="units_settings" msgid="402325305096925886">"Eenheden"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Je profiel verwijderen"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Je profiel en accounts van het infotainmentsysteem wissen"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Deze actie is niet beschikbaar voor je profiel"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Cameratoegang"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Kies of apps toegang mogen hebben tot de camera\'s van je auto"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"De camera\'s van je auto gebruiken met:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Elke app"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Elke app die je toegang tot je camera hebt gegeven"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Geen apps"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Geen van je apps"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Apps die je helpen met rijden"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Apps die je helpen, bijvoorbeeld door je omgeving te tonen als je parkeert"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Alleen vereiste apps"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Alleen apps die zijn vereist door de fabrikant van je auto"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Apps die je helpen met rijden"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Apps die je helpen, bijvoorbeeld door je omgeving te tonen als je parkeert, en vereiste apps"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Apps die je helpen met rijden"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Deze apps hebben toegang tot je camera om te helpen met rijden"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Vereiste apps"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Deze apps zijn nodig om te zorgen dat je auto veilig werkt"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Beleid"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"De fabrikant van je auto heeft misschien nog steeds toegang tot de camera van je auto. Je kunt hun beleid doornemen voor meer informatie."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Neem het Privacybeleid van elke app door voor meer informatie over hoe je camera wordt gebruikt."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Beveiliging"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Schermvergrendeling"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Geen"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Helderheid van het scherm"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Zet bluetooth aan als je je apparaten wilt zien"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Open de bluetooth-instellingen om een apparaat te koppelen"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Thema"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Beheer van infotainmentsysteem"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Geactiveerde apps"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Gedeactiveerde apps"</string>

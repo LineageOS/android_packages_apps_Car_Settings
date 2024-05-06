@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Vista"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Viðvörunarhljóð"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Hringitónn, tilkynningar, viðvörun"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Spila efni í"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Birtustig"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Stilla skjá fyrir litla birtu"</string>
     <string name="units_settings" msgid="402325305096925886">"Mælieining"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Eyða prófílnum þínum"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Eyða prófílnum og reikningum þínum úr upplýsinga- og afþreyingarkerfinu"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Þessi aðgerð er ekki í boði fyrir prófílinn þinn"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Aðgangur að myndavél"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Veldu hvort forrit hafi aðgang að myndavélum bílsins"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Notaðu myndavélar bílsins með:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Hvaða forrit sem er"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Öll forrit sem þú hefur veitt aðgang að myndavélinni"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Engin forrit"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Engin af forritunum þínum"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Forritum sem aðstoða þig við akstur"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Forritum sem aðstoða þig við hluti á borð við að sjá umhverfið þegar þú leggur í stæði"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Aðeins áskilin forrit"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Aðeins forrit sem framleiðandi bílsins áskilur"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Forritum sem aðstoða þig við akstur"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Áskildum forritum og forritum sem aðstoða þig við hluti á borð við að sjá umhverfið þegar þú leggur í stæði"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Forritum sem aðstoða þig við akstur"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Þessi forrit hafa aðgang að myndavélinni til að aðstoða þig við akstur"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Áskilin forrit"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Þessi forrit eru áskilin svo að bíllinn geti starfað á öruggan hátt"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Reglur"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Framleiðandi bílsins hefur hugsanlega enn aðgang að myndavél bílsins. Þú getur skoðað reglur viðkomandi til að fá frekari upplýsingar."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Skoðaðu persónuverndarstefnu forrits til að kynna þér hvernig það notar myndavélina"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Öryggi"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skjálás"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Enginn"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Birtustig skjás"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Kveiktu á Bluetooth til að sjá tækin þín"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Opnaðu stillingar Bluetooth til að para tæki"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Þema"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Stjórnandi upplýsinga- og afþreyingarkerfis"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Virk forrit"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Óvirk forrit"</string>

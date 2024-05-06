@@ -43,6 +43,7 @@ public class WifiTetheringHandler {
     private final TetheringManager mTetheringManager;
     private final WifiTetheringAvailabilityListener mWifiTetheringAvailabilityListener;
     private boolean mRestartBooked = false;
+    private boolean mMonitorRestarts;
 
     private final WifiManager.SoftApCallback mSoftApCallback = new WifiManager.SoftApCallback() {
         @Override
@@ -68,17 +69,25 @@ public class WifiTetheringHandler {
 
     public WifiTetheringHandler(Context context, Lifecycle lifecycle,
             WifiTetheringAvailabilityListener wifiTetherAvailabilityListener) {
+        this(context, lifecycle, wifiTetherAvailabilityListener, /* monitorRestarts= */ true);
+    }
+
+    public WifiTetheringHandler(Context context, Lifecycle lifecycle,
+            WifiTetheringAvailabilityListener wifiTetherAvailabilityListener,
+            boolean monitorRestarts) {
         this(context, new CarWifiManager(context, lifecycle),
-                context.getSystemService(TetheringManager.class), wifiTetherAvailabilityListener);
+                context.getSystemService(TetheringManager.class), wifiTetherAvailabilityListener,
+                /* monitorRestarts= */ monitorRestarts);
     }
 
     public WifiTetheringHandler(Context context, CarWifiManager carWifiManager,
             TetheringManager tetheringManager, WifiTetheringAvailabilityListener
-            wifiTetherAvailabilityListener) {
+            wifiTetherAvailabilityListener, boolean monitorRestarts) {
         mContext = context;
         mCarWifiManager = carWifiManager;
         mTetheringManager = tetheringManager;
         mWifiTetheringAvailabilityListener = wifiTetherAvailabilityListener;
+        mMonitorRestarts = monitorRestarts;
     }
 
     /**
@@ -86,9 +95,11 @@ public class WifiTetheringHandler {
      */
     public void onStartInternal() {
         mCarWifiManager.registerSoftApCallback(mContext.getMainExecutor(), mSoftApCallback);
-        LocalBroadcastManager.getInstance(mContext).registerReceiver(mRestartReceiver,
-                new IntentFilter(
-                        WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING));
+        if (mMonitorRestarts) {
+            LocalBroadcastManager.getInstance(mContext).registerReceiver(mRestartReceiver,
+                    new IntentFilter(
+                            WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING));
+        }
     }
 
     /**
@@ -96,7 +107,9 @@ public class WifiTetheringHandler {
      */
     public void onStopInternal() {
         mCarWifiManager.unregisterSoftApCallback(mSoftApCallback);
-        LocalBroadcastManager.getInstance(mContext).unregisterReceiver(mRestartReceiver);
+        if (mMonitorRestarts) {
+            LocalBroadcastManager.getInstance(mContext).unregisterReceiver(mRestartReceiver);
+        }
     }
 
     /**

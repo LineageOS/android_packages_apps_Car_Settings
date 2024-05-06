@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"సేవ్ చేయండి"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"అలర్ట్ సౌండ్‌లు"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"రింగ్‌టోన్, నోటిఫికేషన్, అలారం"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"ఇందులో మీడియా ప్లే చేయండి"</string>
     <string name="display_brightness" msgid="5718970880488110840">"ప్రకాశం"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"స్క్రీన్‌ను తక్కువ కాంతికి సర్దుబాటు చేయండి"</string>
     <string name="units_settings" msgid="402325305096925886">"యూనిట్‌లు"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"మీ ప్రొఫైల్‌ను తొలగించండి"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మీ ప్రొఫైల్, ఖాతాలను ఫ్యాక్టరీ రీసెట్ చేయండి"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ఈ చర్య మీ ప్రొఫైల్ కోసం అందుబాటులో లేదు"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"కెమెరా యాక్సెస్"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"యాప్‌లు మీ కారు కెమెరాలను యాక్సెస్ చేయగలవో లేదో ఎంచుకోండి"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"దీనితో మీ కారు కెమెరాలను ఉపయోగించండి:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"ఏదైనా యాప్"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"మీ కెమెరాను యాక్సెస్ చేయడానికి మీరు అనుమతించిన ఏదైనా యాప్"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"యాప్‌లు ఏవి లేవు"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"మీ యాప్‌లు ఏవీ లేవు"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"మీరు డ్రైవ్ చేయడంలో సహాయపడే యాప్‌లు"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"పార్కింగ్ చేసేటప్పుడు మీ పరిసరాలను చూపడం వంటి విషయాలలో సహాయపడే యాప్‌లు"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"అవసరమైన యాప్‌లు మాత్రమే"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"మీ కారు తయారీదారుకి అవసరమైన యాప్‌లు మాత్రమే"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"మీరు డ్రైవ్ చేయడంలో సహాయపడే యాప్‌లు"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"పార్కింగ్ చేస్తున్నప్పుడు మీ పరిసరాలను చూపడం, అవసరమైన యాప్‌లు వంటి విషయాలలో సహాయపడే యాప్‌లు"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"మీరు డ్రైవ్ చేయడంలో సహాయపడే యాప్‌లు"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"డ్రైవింగ్ చేసేటప్పుడు సహాయం చేయడానికి ఈ యాప్‌లు మీ కెమెరాను యాక్సెస్ చేయగలవు"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"అవసరమైన యాప్‌లు"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"మీ కారు సురక్షితంగా పనిచేయడానికి ఈ యాప్‌లు అవసరం"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"పాలసీ"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"మీ కారు తయారీదారు ఇప్పటికీ మీ కారు కెమెరా‌కు యాక్సెస్ కలిగి ఉండవచ్చు. మరింత సమాచారం కోసం మీరు వారి పాలసీలను రివ్యూ చేయవచ్చు."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"ప్రతి యాప్ దాని గోప్యతా పాలసీని రివ్యూ చేయడం ద్వారా మీ కెమెరాను ఎలా ఉపయోగిస్తుందనే దాని గురించి మరింత తెలుసుకోండి."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"సెక్యూరిటీ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ఏదీ కాదు"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"డిస్‌ప్లే బ్రైట్‌నెస్"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"మీ పరికరాలను చూడటానికి, బ్లూటూత్‌ను ఆన్ చేయండి"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"పరికరాన్ని పెయిర్ చేయడానికి, బ్లూటూత్ సెట్టింగ్‌లను తెరవండి"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"రూపం"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"సమాచారంతో కూడిన వినోదం సిస్టమ్ అడ్మిన్"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"యాక్టివేట్ చేయబడిన యాప్‌లు"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"యాక్టివేట్ చేయబడని యాప్‌లు"</string>

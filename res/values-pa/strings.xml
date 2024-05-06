@@ -252,8 +252,9 @@
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸੂਚਨਾ ਧੁਨੀ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਅਲਾਰਮ ਧੁਨੀ"</string>
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"ਰੱਖਿਅਤ ਕਰੋ"</string>
-    <string name="sound_alert_sounds" msgid="6838044721739163867">"ਸੁਚੇਤਨਾ ਧੁਨੀਆਂ"</string>
+    <string name="sound_alert_sounds" msgid="6838044721739163867">"ਅਲਰਟ ਧੁਨੀਆਂ"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"ਰਿੰਗਟੋਨ, ਸੂਚਨਾਵਾਂ, ਅਲਾਰਮ"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"ਮੀਡੀਆ ਇੱਥੇ ਚਲਾਓ"</string>
     <string name="display_brightness" msgid="5718970880488110840">"ਚਮਕ"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"ਘੱਟ ਰੋਸ਼ਨੀ ਲਈ ਸਕ੍ਰੀਨ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ"</string>
     <string name="units_settings" msgid="402325305096925886">"ਯੂਨਿਟਾਂਂ"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"ਆਪਣਾ ਪ੍ਰੋਫਾਈਲ ਮਿਟਾਓ"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"ਇਸ ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਵਿੱਚੋਂ ਆਪਣਾ ਪ੍ਰੋਫਾਈਲ ਅਤੇ ਖਾਤਿਆਂ ਨੂੰ ਮਿਟਾਓ"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ਇਹ ਕਾਰਵਾਈ ਤੁਹਾਡੇ ਪ੍ਰੋਫਾਈਲ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"ਕੈਮਰਾ ਪਹੁੰਚ"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"ਚੁਣੋ ਕਿ ਐਪਾਂ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਕੈਮਰਿਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦੀਆਂ ਹਨ ਜਾਂ ਨਹੀਂ"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"ਇਸ ਨਾਲ ਆਪਣੀ ਕਾਰ ਦੇ ਕਮਰਿਆਂ ਦੀ ਵਰਤੋਂ ਕਰੋ:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"ਕੋਈ ਵੀ ਐਪ"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"ਅਜਿਹੀ ਕੋਈ ਵੀ ਐਪ ਜਿਸਨੂੰ ਤੁਸੀਂ ਆਪਣੇ ਕੈਮਰੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੱਤੀ ਹੈ"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"ਕੋਈ ਐਪ ਨਹੀਂ"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"ਤੁਹਾਡੀਆਂ ਐਪਾਂ ਵਿੱਚੋਂ ਕੋਈ ਨਹੀਂ"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"ਗੱਡੀ ਚਲਾਉਣ \'ਚ ਤੁਹਾਡੀ ਮਦਦ ਕਰਨ ਵਾਲੀਆਂ ਐਪਾਂ"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"ਉਹ ਐਪਾਂ ਜੋ ਪਾਰਕ ਕਰਨ ਵੇਲੇ ਤੁਹਾਡੇ ਆਲੇ-ਦੁਆਲੇ ਨੂੰ ਦਿਖਾਉਣ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ ਵਿੱਚ ਸਹਾਇਤਾ ਕਰਦੀਆਂ ਹਨ"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"ਸਿਰਫ਼ ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"ਸਿਰਫ਼ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਨਿਰਮਾਤਾ ਦੀਆਂ ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"ਗੱਡੀ ਚਲਾਉਣ \'ਚ ਤੁਹਾਡੀ ਮਦਦ ਕਰਨ ਵਾਲੀਆਂ ਐਪਾਂ"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"ਉਹ ਐਪਾਂ ਜੋ ਪਾਰਕ ਕਰਨ ਵੇਲੇ ਤੁਹਾਡੇ ਆਲੇ-ਦੁਆਲੇ ਨੂੰ ਦਿਖਾਉਣ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ ਵਿੱਚ ਸਹਾਇਤਾ ਕਰਦੀਆਂ ਹਨ ਅਤੇ ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"ਗੱਡੀ ਚਲਾਉਣ \'ਚ ਤੁਹਾਡੀ ਮਦਦ ਕਰਨ ਵਾਲੀਆਂ ਐਪਾਂ"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"ਇਹ ਐਪਾਂ ਗੱਡੀ ਚਲਾਉਣ ਵਿੱਚ ਸਹਾਇਤਾ ਕਰਨ ਲਈ ਤੁਹਾਡੇ ਕੈਮਰੇ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦੀਆਂ ਹਨ"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"ਤੁਹਾਡੀ ਕਾਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਕੰਮ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਨ ਲਈ ਇਨ੍ਹਾਂ ਐਪਾਂ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"ਨੀਤੀ"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਕੋਲ ਹਾਲੇ ਵੀ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਕੈਮਰੇ ਤੱਕ ਪਹੁੰਚ ਹੋ ਸਕਦੀ ਹੈ। ਤੁਸੀਂ ਜ਼ਿਆਦਾ ਜਾਣਕਾਰੀ ਲਈ ਉਨ੍ਹਾਂ ਦੀਆਂ ਨੀਤੀਆਂ ਦੀ ਸਮੀਖਿਆ ਕਰ ਸਕਦੇ ਹੋ।"</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"ਹਰੇਕ ਐਪ ਵੱਲੋਂ ਤੁਹਾਡੇ ਕੈਮਰੇ ਨੂੰ ਵਰਤਣ ਦੇ ਤਰੀਕੇ ਬਾਰੇ ਹੋਰ ਜਾਣਨ ਲਈ ਇਸ ਦੀ ਪਰਦੇਦਾਰੀ ਨੀਤੀ ਨੂੰ ਦੇਖੋ।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ਸੁਰੱਖਿਆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ਸਕ੍ਰੀਨ ਲਾਕ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ਕੋਈ ਨਹੀਂ"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"ਡਿਸਪਲੇ ਚਮਕ"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ਆਪਣੇ ਡੀਵਾਈਸ ਦੇਖਣ ਲਈ, ਬਲੂਟੁੱਥ ਚਾਲੂ ਕਰੋ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ਕਿਸੇ ਡੀਵਾਈਸ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰਨ ਲਈ, ਬਲੂਟੁੱਥ ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"ਥੀਮ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ਵਾਹਨ ਆਡੀਓ ਸਿਸਟਮ ਪ੍ਰਸ਼ਾਸਕ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ਕਿਰਿਆਸ਼ੀਲ ਕੀਤੀਆਂ ਐਪਾਂ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ਅਕਿਰਿਆਸ਼ੀਲ ਕੀਤੀਆਂ ਐਪਾਂ"</string>

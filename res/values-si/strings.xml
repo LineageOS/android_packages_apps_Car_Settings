@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"සුරකින්න"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"ඇඟවීම් හඬවල්"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"රින්ග්ටෝන්, දැනුම්දීම්, එලාමය"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"මාධ්‍ය වාදනය කරන්නේ"</string>
     <string name="display_brightness" msgid="5718970880488110840">"දීප්තිය"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"අඩු ආලෝකය සඳහා තිරය ගළපන්න"</string>
     <string name="units_settings" msgid="402325305096925886">"ඒකක"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"ඔබගේ පැතිකඩ මකන්න"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"ඔබ‍ගේ පැතිකඩ සහ ගිණුම් විනෝදාස්වාද පද්ධතියෙන් මකන්න"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"මෙම ක්‍රියාව ඔබගේ පැතිකඩ සඳහා ලබා ගත නොහැකිය"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"කැමරා ප්‍රවේශය"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"යෙදුම් හට ඔබේ මෝටර් රථයේ කැමරා වෙත ප්‍රවේශ විය හැකි ද යන්න තෝරා ගන්න"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"ඔබේ මෝටර් රථයේ කැමරා මේ සමග භාවිතා කරන්න:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"ඕනෑම යෙදුමක්"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"ඔබ ඔබේ කැමරාවට ප්‍රවේශ වීමට ඉඩ දී ඇති ඕනෑම යෙදුමක්"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"යෙදුම් නැත"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"ඔබේ යෙදුම් කිසිවක් නොවේ"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"ඔබට ධාවනය කිරීමට උදවු වන යෙදුම්"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"වාහන නැවැත්වීමේ දී ඔබේ වටපිටාව පෙන්වීම වැනි දේවල් සඳහා සහාය වන යෙදුම්"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"අවශ්‍ය යෙදුම් පමණි"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"ඔබේ මෝටර් රථයේ නිෂ්පාදකයාට අවශ්‍ය යෙදුම් පමණි"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"ඔබට ධාවනය කිරීමට උදවු වන යෙදුම්"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"වාහන නැවැත්වීමේ දී ඔබේ වටපිටාව පෙන්වීම, සහ අවශ්‍ය යෙදුම් වැනි දේවල් සඳහා සහාය වන යෙදුම්"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"ඔබට ධාවනය කිරීමට උදවු වන යෙදුම්"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"මෙම යෙදුම් හට රිය පැදවීමට සහාය වීමට ඔබේ කැමරාවට ප්‍රවේශ විය හැක"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"අවශ්‍ය යෙදුම්"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"ඔබේ මෝටර් රථය ආරක්ෂිතව ක්‍රියා කිරීමට උදවු කිරීමට මෙම යෙදුම් අවශ්‍ය වේ"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"ප්‍රතිපත්තිය"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"ඔබේ මෝටර් රථ නිෂ්පාදකයාට තවමත් ඔබේ මෝටර් රථයේ කැමරාවට ප්‍රවේශය තිබිය හැක. ඔබට වැඩිදුර තතු සඳහා ඔවුන්ගේ ප්‍රතිපත්ති සමාලෝචනය කළ හැක."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"එක් එක් යෙදුම එහි රහස්‍යතා ප්‍රතිපත්තිය සමාලෝචනය කිරීමෙන් ඔබේ කැමරාව භාවිත කරන ආකාරය පිළිබඳව තව දැන ගන්න."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ආරක්ෂාව"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"තිර අගුල"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"කිසිවක් නැත"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"සංදර්ශක දීප්තිය"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ඔබගේ උපාංග බැලීමට, බ්ලූටූත් ක්‍රියාත්මක කරන්න"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"උපාංගයක් යුගල කිරීමට, බ්ලූටූත් සැකසීම් විවෘත කරන්න"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"තේමාව"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"තොරතුරු විනෝදාස්වාද පද්ධති පරිපාලක"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"සක්‍රිය කළ යෙදුම්"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"අක්‍රිය කළ යෙදුම්"</string>

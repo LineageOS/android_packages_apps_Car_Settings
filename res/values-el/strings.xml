@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Αποθήκευση"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Ήχοι ειδοποιήσεων"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Ήχος κλήσης, ειδοποιήσεις, ξυπνητήρια"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Αναπαραγωγή μέσων σε"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Φωτεινότητα"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Προσαρμογή οθόνης για χαμηλό φωτισμό"</string>
     <string name="units_settings" msgid="402325305096925886">"Μονάδες"</string>
@@ -335,7 +336,7 @@
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Δεν ζητήθηκαν δικαιώματα"</string>
     <string name="unused_apps" msgid="648471933781010395">"Εφαρμογές που δεν χρησιμοποιούνται"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# εφαρμογή που δεν χρησιμοποιείται}other{# εφαρμογές που δεν χρησιμοποιούνται}}"</string>
-    <string name="unused_apps_switch" msgid="4433958286200341563">"Κατάργηση αδειών και απελευθέρωση χώρου"</string>
+    <string name="unused_apps_switch" msgid="4433958286200341563">"Κατάργηση αδειών και αποδέσμευση χώρου"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s εσωτερικού αποθηκευτικού χώρου"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Χρησιμοποιεί τους πόρους του συστήματος δίνοντας προτεραιότητα στην απόδοση των εφαρμογών."</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Χρήση δεδομένων"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Διαγραφή του προφίλ σας"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Διαγράψτε το προφίλ και τους λογαριασμούς σας από το σύστημα ενημέρωσης και ψυχαγωγίας"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Αυτή η ενέργεια δεν είναι δυνατή για το προφίλ σας"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Πρόσβαση κάμερας"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Επιλέξτε αν οι εφαρμογές θα έχουν πρόσβαση στις κάμερες του αυτοκινήτου σας"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Χρησιμοποιήστε τις κάμερες του αυτοκινήτου:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Με οποιαδήποτε εφαρμογή"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Οποιαδήποτε εφαρμογή στην οποία έχετε επιτρέψει να έχει πρόσβαση στην κάμερα"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Με καμία εφαρμογή"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Καμία από τις εφαρμογές σας"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Με εφαρμογές που βοηθούν στην οδήγηση"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Εφαρμογές που σας βοηθούν με διάφορα πράγματα, όπως αυτές που δείχνουν τον περιβάλλοντα χώρο όταν παρκάρετε"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Με απαιτούμενες εφαρμογές μόνο"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Εφαρμογές που απαιτεί ο κατασκευαστής του αυτοκινήτου και μόνο με αυτές"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Με εφαρμογές που βοηθούν στην οδήγηση"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Εφαρμογές που σας βοηθούν με διάφορα πράγματα, όπως αυτές που δείχνουν τον περιβάλλοντα χώρο όταν παρκάρετε, και με απαιτούμενες εφαρμογές"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Με εφαρμογές που βοηθούν στην οδήγηση"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Αυτές οι εφαρμογές μπορούν να έχουν πρόσβαση στην κάμερά σας για να σας βοηθούν στην οδήγηση"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Απαιτούμενες εφαρμογές"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Αυτές οι εφαρμογές είναι απαραίτητες καθώς συμβάλλουν στην ασφαλή λειτουργία του αυτοκινήτου"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Πολιτική"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Ο κατασκευαστής του αυτοκινήτου ενδέχεται να εξακολουθεί να έχει πρόσβαση στην κάμερα του αυτοκινήτου σας. Ελέγξτε τις πολιτικές του κατασκευαστή για περισσότερες πληροφορίες."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Ανατρέξτε στην Πολιτική απορρήτου κάθε εφαρμογής, για να μάθετε περισσότερα σχετικά με το πώς χρησιμοποιεί την κάμερα."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Ασφάλεια"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Κλείδωμα οθόνης"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Κανένα"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Φωτεινότητα οθόνης"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Για εμφάνιση των συσκευών σας, ενεργοποιήστε το Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Για σύζευξη μιας συσκευής, ανοίξτε τις ρυθμίσεις του Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Θέμα"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Διαχειριστής συστήματος ενημέρωσης και ψυχαγωγίας"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Ενεργοποιημένες εφαρμογές"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Απενεργοποιημένες εφαρμογές"</string>

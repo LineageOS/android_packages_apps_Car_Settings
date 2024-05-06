@@ -27,6 +27,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -173,6 +174,7 @@ public class WifiEntryListPreferenceControllerTest {
 
     @Test
     public void performClick_noSecurityNotConnectedWifiEntry_connect() {
+        when(mMockWifiEntry1.isPrimaryNetwork()).thenReturn(true);
         when(mMockWifiEntry1.getSecurity()).thenReturn(WifiEntry.SECURITY_NONE);
         when(mMockWifiEntry1.isSaved()).thenReturn(false);
         List<WifiEntry> wifiEntryList = Arrays.asList(mMockWifiEntry1);
@@ -185,6 +187,7 @@ public class WifiEntryListPreferenceControllerTest {
 
     @Test
     public void performClick_shouldEditBeforeConnect_launchDialog() {
+        when(mMockWifiEntry1.isPrimaryNetwork()).thenReturn(true);
         when(mMockWifiEntry1.getSecurity()).thenReturn(WifiEntry.SECURITY_PSK);
         when(mMockWifiEntry1.isSaved()).thenReturn(false);
         when(mMockWifiEntry1.shouldEditBeforeConnect()).thenReturn(true);
@@ -200,6 +203,7 @@ public class WifiEntryListPreferenceControllerTest {
     @UiThreadTest
     public void performClick_activeWifiEntry_showDetailsFragment() {
         when(mMockWifiEntry1.getConnectedState()).thenReturn(WifiEntry.CONNECTED_STATE_CONNECTED);
+        when(mMockWifiEntry1.isPrimaryNetwork()).thenReturn(true);
         when(mMockCarWifiManager.getConnectedWifiEntries())
                 .thenReturn(Collections.singletonList(mMockWifiEntry1));
         when(mMockCarWifiManager.getAllWifiEntries()).thenReturn(new ArrayList<>());
@@ -210,8 +214,23 @@ public class WifiEntryListPreferenceControllerTest {
     }
 
     @Test
+    @UiThreadTest
+    public void performClick_secondaryActiveWifiEntry_doesNotShowDetailsFragment() {
+        when(mMockWifiEntry1.getConnectedState()).thenReturn(WifiEntry.CONNECTED_STATE_CONNECTED);
+        when(mMockWifiEntry1.isPrimaryNetwork()).thenReturn(false);
+        when(mMockCarWifiManager.getConnectedWifiEntries())
+                .thenReturn(Collections.singletonList(mMockWifiEntry1));
+        when(mMockCarWifiManager.getAllWifiEntries()).thenReturn(new ArrayList<>());
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        mPreferenceGroup.getPreference(0).performClick();
+        verify(mFragmentController, times(0)).launchFragment(any(WifiDetailsFragment.class));
+    }
+
+    @Test
     public void performClick_savedWifiEntry_connect() {
         when(mMockWifiEntry1.isSaved()).thenReturn(true);
+        when(mMockWifiEntry1.isPrimaryNetwork()).thenReturn(true);
         List<WifiEntry> wifiEntryList = Arrays.asList(mMockWifiEntry1);
         when(mMockCarWifiManager.getAllWifiEntries()).thenReturn(wifiEntryList);
         mPreferenceController.onCreate(mLifecycleOwner);

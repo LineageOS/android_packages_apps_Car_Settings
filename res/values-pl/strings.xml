@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Zapisz"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Dźwięki alertu"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Dzwonek, powiadomienia, alarm"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Odtwarzaj multimedia na:"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Jasność"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Zmniejsz jasność ekranu przy niewielkiej ilości światła"</string>
     <string name="units_settings" msgid="402325305096925886">"Jednostki"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Usuń swój profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Usuń swoje profile i konta z systemu multimedialno-rozrywkowego"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"W Twoim profilu nie można wykonać tego działania"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Dostęp do kamery"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Zdecyduj, czy aplikacje mogą mieć dostęp kamer samochodu"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Dostęp do kamer samochodu mogą mieć:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Dowolna aplikacja"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Wszystkie aplikacje, które mają dostęp do kamery"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Brak aplikacji"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Żadne z Twoich aplikacji"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Aplikacje ułatwiające prowadzenie"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Aplikacje, które wspierają kierowcę, np. pokazując otoczenie samochodu podczas parkowania"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Tylko wymagane aplikacje"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Tylko aplikacje wymagane przez producenta samochodu"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Aplikacje ułatwiające prowadzenie"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Aplikacje, które wspierają kierowcę, np. pokazując otoczenie samochodu podczas parkowania, i wymagane aplikacje"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Aplikacje ułatwiające prowadzenie pojazdu"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Te aplikacje mają dostęp do kamery, żeby zapewnić wspomaganie kierowcy"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Wymagane aplikacje"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Te aplikacje są potrzebne do bezpiecznego korzystania z samochodu"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Zasady"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Producent samochodu może nadal mieć dostęp do kamery w pojeździe. Więcej informacji znajdziesz w jego regulaminie."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Więcej o tym, jak poszczególne aplikacje korzystają z kamery, znajdziesz w ich polityce prywatności."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Zabezpieczenia"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blokada ekranu"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Brak"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Jasność wyświetlacza"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aby zobaczyć urządzenia, włącz Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Aby sparować urządzenie, otwórz ustawienia Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Motyw"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator systemu multimedialno-rozrywkowego"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aplikacje aktywowane"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Aplikacje dezaktywowane"</string>
