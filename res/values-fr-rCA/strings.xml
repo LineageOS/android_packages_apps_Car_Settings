@@ -430,7 +430,7 @@
     <string name="location_recently_accessed" msgid="522888989582110975">"Accès récents"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accès récents"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tout afficher"</string>
-    <string name="location_no_recent_access" msgid="2859914321242257931">"Aucune application récente"</string>
+    <string name="location_no_recent_access" msgid="2859914321242257931">"Aucune appli récente"</string>
     <string name="driver_assistance_label" msgid="5330316311913399041">"<xliff:g id="TIME">%1$s</xliff:g> • Assistance au conducteur • Requiert l\'accès à la position"</string>
     <string name="location_adas_apps_list_title" msgid="482882078448695177">"Fonctionnalités vous aidant à conduire"</string>
     <string name="location_driver_assistance_privacy_policy_button_text" msgid="1092702462617222722">"Politique"</string>
@@ -447,7 +447,7 @@
     <string name="microphone_toggle_summary" msgid="2682653449849128626">"Autoriser toutes les applications à accéder à votre microphone"</string>
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"Gérer les autorisations du microphone"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"Accédé récemment"</string>
-    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Aucune application récente"</string>
+    <string name="microphone_no_recent_access" msgid="6412908936060990649">"Aucune appli récente"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"Aucune application n\'a accès"</string>
     <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{# application sur {total_count} a accès}one{# application sur {total_count} a accès}other{# applications sur {total_count} ont accès}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"Accédé récemment"</string>
@@ -649,21 +649,20 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Supprimer votre profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Effacez votre profil et vos comptes du système d\'infodivertissement"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Cette action n\'est pas proposée pour votre profil"</string>
-    <string name="camera_access_settings_title" msgid="1841809323727456945">"Accès à la caméra"</string>
-    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Choisissez si les applications peuvent accéder à la caméra de votre voiture"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Accès aux caméras"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Choisissez si les applis peuvent accéder aux caméras de votre voiture"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Applications requises"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Applications requises par le constructeur de votre automobile pour faciliter la conduite"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Politique"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Il se peut que le constructeur de votre automobile ait encore accès à la caméra de votre voiture"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Applis d\'infodivertissement"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Autoriser les applis d\'infodivertissement à prendre des photos et à enregistrer des vidéos"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Autorisées"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"En tout temps"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Non autorisées"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Lorsque l\'appli est utilisée seulement"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Toujours demander"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sécurité"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Verrouill. de l\'écran"</string>
@@ -911,11 +910,11 @@
     <string name="camera_settings_title" msgid="2837785830355288903">"Appareil photo"</string>
     <string name="camera_toggle_title" msgid="1990732328673068456">"Utiliser l\'appareil photo"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Autorisez toutes les applications à accéder à votre appareil photo"</string>
-    <string name="camera_manage_permissions" msgid="9005596413781984368">"Gérer les autorisations de l\'appareil photo"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Gérer les autorisations des caméras"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Accès récents"</string>
-    <string name="camera_no_recent_access" msgid="965105023454777859">"Aucune application récente"</string>
+    <string name="camera_no_recent_access" msgid="965105023454777859">"Aucune appli récente"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Aucune application n\'a accès"</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# application sur {total_count} a accès}one{# application sur {total_count} a accès}other{# applications sur {total_count} ont accès}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# appli sur {total_count} a accès}one{# appli sur {total_count} a accès}other{# applis sur {total_count} ont accès}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Accès récents"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Tout afficher"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Chargement en cours…"</string>

@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"ਕੈਮਰਾ ਪਹੁੰਚ"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"ਚੁਣੋ ਕਿ ਐਪਾਂ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਕੈਮਰਿਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦੀਆਂ ਹਨ ਜਾਂ ਨਹੀਂ"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"ਡਰਾਈਵਿੰਗ ਵਿੱਚ ਸਹਾਇਤਾ ਲਈ ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਵੱਲੋਂ ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"ਨੀਤੀ"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਕੋਲ ਹਾਲੇ ਵੀ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਕੈਮਰੇ ਤੱਕ ਪਹੁੰਚ ਹੋ ਸਕਦੀ ਹੈ"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ਵਾਹਨ ਆਡੀਓ ਐਪਾਂ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ਵਾਹਨ ਆਡੀਓ ਐਪਾਂ ਨੂੰ ਤਸਵੀਰ ਖਿੱਚਣ ਅਤੇ ਵੀਡੀਓ ਰਿਕਾਰਡ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"ਆਗਿਆ ਹੈ"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"ਹਰ ਸਮੇਂ"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"ਆਗਿਆ ਨਹੀਂ ਹੈ"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"ਸਿਰਫ਼ ਐਪ ਨੂੰ ਵਰਤਣ ਵੇਲੇ"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"ਹਰ ਵਾਰ ਪੁੱਛੋ"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ਸੁਰੱਖਿਆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ਸਕ੍ਰੀਨ ਲਾਕ"</string>
@@ -915,7 +914,7 @@
     <string name="camera_recently_accessed" msgid="8084100710444691977">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"ਕੋਈ ਹਾਲੀਆ ਐਪ ਨਹੀਂ"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ"</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ}one{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ}other{{total_count} ਵਿੱਚੋਂ # ਐਪਾਂ ਕੋਲ ਪੁਹੰਚ ਹੈ}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪਹੁੰਚ ਹੈ}one{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪਹੁੰਚ ਹੈ}other{{total_count} ਵਿੱਚੋਂ # ਐਪਾਂ ਕੋਲ ਪਹੁੰਚ ਹੈ}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ਸਭ ਦੇਖੋ"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ਲੋਡ ਹੋ ਰਹੀਆਂ ਹਨ…"</string>

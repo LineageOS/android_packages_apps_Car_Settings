@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"कॅमेराचा अ‍ॅक्सेस"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"अ‍ॅप्स तुमच्या कारचे कॅमेरा अ‍ॅक्सेस करू शकतात का हे निवडा"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"आवश्यक अ‍ॅप्स"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"ड्रायव्हिंगमध्ये मदत करण्यासाठी तुमच्या कारच्या निर्मात्याला आवश्यक असलेली अ‍ॅप्स"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"धोरण"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"तुमच्या कारच्या निर्मात्याला अजूनही तुमच्या कारच्या कॅमेराचा अ‍ॅक्सेस असू शकतो"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"इन्फोटेनमेंट अ‍ॅप्स"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"फोटो घेण्यासाठी आणि व्हिडिओ रेकॉर्ड करण्यासाठी इन्फोटेनमेंट अ‍ॅप्सना अनुमती द्या"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"अनुमती असलेली"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"पूर्ण वेळ"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"अनुमती नसलेली"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"फक्त अ‍ॅप वापरताना"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"प्रत्येक वेळी विचारा"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षितता"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
@@ -778,7 +777,7 @@
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"असिस्टंटला स्क्रीन इमेज अ‍ॅक्सेस करण्याची अनुमती द्या"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"अलीकडे पाठवलेले"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"सर्व अ‍ॅप्स"</string>
-    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"प्रोफाइल &amp; खाती"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"प्रोफाइल आणि खाती"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"इतर प्रोफाइल व्यवस्थापित करा"</string>
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"प्रोफाइल जोडा"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"ही प्रोफाइल हटवा"</string>
@@ -915,7 +914,7 @@
     <string name="camera_recently_accessed" msgid="8084100710444691977">"अलीकडे अ‍ॅक्सेस केलेली"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"कोणतीही अलीकडील अ‍ॅप्स नाहीत"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"कोणत्याही अ‍ॅप्सना अ‍ॅक्सेस नाही"</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# पैकी {total_count} ॲपला अ‍ॅक्सेस आहे}other{# पैकी {total_count} ॲप्सना अ‍ॅक्सेस आहे}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ॲपपैकी # ला अ‍ॅक्सेस आहे}other{{total_count} ॲप्सपैकी # ना अ‍ॅक्सेस आहे}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"अलीकडे अ‍ॅक्सेस केलेली"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"सर्व पहा"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"लोड करत आहे…"</string>

@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kameraya giriş"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Tətbiqlərin avtomobil kamerasına girişini idarə edin"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Tələb edilən tətbiqlər"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Avtomobil idarə etməyə kömək üçün avtomobil istehsalçısı tərəfindən tələb edilən tətbiqlər"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Siyasət"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Avtomobil istehsalçısının avtomobil kamerasına girişi ola bilər"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Məlumat-əyləncə tətbiqləri"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Məlumat-əyləncə tətbiqlərinə şəkil və video çəkmək icazəsi verin"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"İcazə verilib"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Hər zaman"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"İcazə verilməyib"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Yalnız tətbiqdən istifadə edərkən"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Hər dəfə soruşulsun"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Güvənlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>
@@ -915,7 +914,7 @@
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Son vaxtlar giriş edilib"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Son tətbiq yoxdur"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 tətbiqin girişi var"</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{#/{total_count} tətbiqin girişi var}other{#/{total_count} tətbiqin girişi var}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# tətbiqdən {total_count} ədədinin girişi var}other{# tətbiqdən {total_count} ədədinin girişi var}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"Son vaxtlar giriş edilib"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"Hamısına baxın"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"Yüklənir…"</string>

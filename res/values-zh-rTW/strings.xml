@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"攝影機存取權"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"決定應用程式是否可以存取車輛攝影機"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"必要的應用程式"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"車輛製造商為了提供駕駛輔助服務所需的應用程式"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"政策"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"車輛製造商或許仍可存取車輛攝影機"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"資訊娛樂系統應用程式"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"允許資訊娛樂系統應用程式拍照及錄影"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"允許"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"一律允許"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"不允許"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"僅限使用應用程式時"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"每次都詢問"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>

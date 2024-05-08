@@ -479,7 +479,7 @@
     <string name="legal_information" msgid="1838443759229784762">"Juridiske oplysninger"</string>
     <string name="contributors_title" msgid="7698463793409916113">"Bidragydere"</string>
     <string name="manual" msgid="4819839169843240804">"Manuel"</string>
-    <string name="regulatory_labels" msgid="3165587388499646779">"Certificeringer"</string>
+    <string name="regulatory_labels" msgid="3165587388499646779">"Regulatorisk mærkning"</string>
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Brugervejledning i sikkerhed og regler"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Ophavsret"</string>
     <string name="license_title" msgid="936705938435249965">"Licens"</string>
@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kameraadgang"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Vælg, om apps kan tilgå bilens kameraer"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Påkrævede apps"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Apps, som bilproducenten kræver til assistance under kørsel"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Politik"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Bilproducenten har muligvis stadig adgang til bilens kamera"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Infotainmentapps"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Tillad, at infotainmentapps kan tage billeder og optage video"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Tilladt"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Hele tiden"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Ikke tilladt"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Kun mens appen bruges"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Spørg hver gang"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sikkerhed"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skærmlås"</string>

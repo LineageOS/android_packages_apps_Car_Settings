@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Access sa camera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Piliin kung puwedeng i-access ng mga app ang camera ng iyong kotse"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Mga kinakailangang app"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Mga app na kinakailangan ng manufacturer ng iyong kotse para tumulong sa pagmamaneho"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Patakaran"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Posibleng may access pa rin ang manufacturer ng iyong kotse sa camera ng kotse mo"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Mga infotainment app"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Payagan ang mga infotainment app na kumuha ng mga larawan at mag-record ng video"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Pinapahintulutan"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Palagi"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Hindi pinapahintulutan"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Habang ginagamit lang ang app"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Tanungin palagi"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguridad"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Lock ng screen"</string>
@@ -778,7 +777,7 @@
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Payagan ang assistant na i-access ang larawan ng screen"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"Naipadala kamakailan"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"Lahat ng app"</string>
-    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Mga profile at account"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Profile at account"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"Pamahalaan ang iba pang profile"</string>
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Magdagdag ng profile"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"I-delete ang profile na ito"</string>
@@ -912,7 +911,7 @@
     <string name="camera_toggle_title" msgid="1990732328673068456">"Gamitin ang camera"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Payagan ang lahat ng app na i-access ang iyong camera"</string>
     <string name="camera_manage_permissions" msgid="9005596413781984368">"Pamahalaan ang mga pahintulot sa camera"</string>
-    <string name="camera_recently_accessed" msgid="8084100710444691977">"Kamakailang na-access"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Kamakailang in-access"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Walang kamakailang app"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 app ang may access"</string>
     <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# sa {total_count} app ang may access}one{# sa {total_count} app ang may access}other{# sa {total_count} na app ang may access}}"</string>

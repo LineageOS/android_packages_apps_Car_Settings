@@ -650,20 +650,19 @@
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Изтриване на потребителския ви профил от информационно-развлекателната система"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Това действие не е налице за потребителския ви профил"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Достъп до камерата"</string>
-    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Изберете дали приложенията да могат да осъществяват достъп до камерата на автомобила ви"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Изберете дали приложенията ще могат да осъществяват достъп до камерите на автомобила ви"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Задължителни приложения"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Приложения, които се изискват от производителя на автомобила ви, за съдействие при шофиране"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Декларация"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Производителят на автомобила ви пак може да има достъп до камерата на колата ви"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Приложения за основното устройство"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Разрешаване на приложенията за основното устройство да правят снимки и да записват видеоклипове"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Разрешено"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"През цялото време"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Не е разрешено"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Само при използване на приложението"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Извеждане на запитване всеки път"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Сигурност"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Заключване на екрана"</string>
@@ -911,7 +910,7 @@
     <string name="camera_settings_title" msgid="2837785830355288903">"Камера"</string>
     <string name="camera_toggle_title" msgid="1990732328673068456">"Използване на камерата"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Разрешаване на всички приложения да осъществяват достъп до камерата ви"</string>
-    <string name="camera_manage_permissions" msgid="9005596413781984368">"Управление на разрешенията за камерата"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Управление на разрешенията за камерите"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Със скорошен достъп"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Няма скорошни приложения"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 приложения имат достъп"</string>
