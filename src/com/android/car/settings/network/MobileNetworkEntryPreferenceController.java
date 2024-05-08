@@ -16,6 +16,8 @@
 
 package com.android.car.settings.network;
 
+import static com.android.car.datasubscription.DataSubscription.DATA_SUBSCRIPTION_ACTION;
+
 import android.annotation.SuppressLint;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
@@ -48,7 +50,6 @@ import java.util.List;
 public class MobileNetworkEntryPreferenceController extends
         PreferenceController<ColoredTwoActionSwitchPreference> implements
         SubscriptionsChangeListener.SubscriptionsChangeAction {
-
     private final UserManager mUserManager;
     private final SubscriptionsChangeListener mChangeListener;
     private final SubscriptionManager mSubscriptionManager;
@@ -151,7 +152,8 @@ public class MobileNetworkEntryPreferenceController extends
     protected boolean handlePreferenceClicked(ColoredTwoActionSwitchPreference preference) {
         if (isDataSubscriptionFlagEnable()
                 && mSubscriptionStatus != DataSubscriptionStatus.PAID) {
-            Intent dataSubscriptionIntent = new Intent(getContext().getString(
+            Intent dataSubscriptionIntent = new Intent(DATA_SUBSCRIPTION_ACTION);
+            dataSubscriptionIntent.setPackage(getContext().getString(
                     R.string.connectivity_flow_app));
             dataSubscriptionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getContext().startActivity(dataSubscriptionIntent);
