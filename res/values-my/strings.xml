@@ -19,7 +19,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"ဆက်တင်များ"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"နောက်ထပ်"</string>
-    <string name="display_settings" msgid="5325515247739279185">"မျက်နှာပြင်ပြသမှု"</string>
+    <string name="display_settings" msgid="5325515247739279185">"ပြကွက်"</string>
     <string name="brightness" msgid="2919605130898772866">"တောက်ပမှု"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"အလိုက်သင့် တောက်ပမှု"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ဖန်သားပြင်တောက်ပမှုကို ပတ်ဝန်းကျင်နှင့် ချိန်ညှိနိုင်သည်"</string>
@@ -632,7 +632,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"ယခု စင့်ခ်လုပ်ရန်"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"စင့်ခ် ပယ်ဖျက်ရန်"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"စင့်ခ်လုပ်ရန် လက်ရှိတွင် ပြဿနာရှိနေပါသည်။ ခဏကြာလျှင် ပြန်လည်ရရှိပါမည်။"</string>
-    <string name="privacy_settings_title" msgid="3150145262029229572">"ကန့်သတ်ဆက်တင်"</string>
+    <string name="privacy_settings_title" msgid="3150145262029229572">"ကိုယ်ရေးအချက်အလက်လုံခြုံမှု"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်ဒေတာ"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"အက်ပ်၏ သင့်တည်နေရာသုံးခွင့်ကို ထိန်းချုပ်မည်"</string>
     <string name="mute_camera_title" msgid="215494079895460172">"ကင်မရာ"</string>
@@ -645,7 +645,7 @@
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်မှ သင့်ပရိုဖိုင်နှင့် အကောင့်များကို ဖျက်မည်"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ဤလုပ်ဆောင်ချက်ကို သင့်ပရိုဖိုင်အတွက် မရနိုင်ပါ"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"ကင်မရာသုံးခွင့်"</string>
-    <string name="camera_access_settings_summary" msgid="8820488359585532496">"သင့်ကားတည်နေရာကို အက်ပ်များ ဝင်ကြည့်ခွင့် ရှိ၊ မရှိ ရွေးချယ်ပါ"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"ကားကင်မရာကို အက်ပ်များ ဝင်ကြည့်ခွင့် ရှိ၊ မရှိ ရွေးချယ်ပါ"</string>
     <string name="camera_access_radio_group_title" msgid="4208620766356391501">"ကားကင်မရာကို ၎င်းဖြင့် သုံးရန်-"</string>
     <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"မည်သည့်အက်ပ်မဆို"</string>
     <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"ကင်မရာကို သင်အသုံးပြုခွင့်ပေးထားသော မည်သည့်အက်ပ်မဆို"</string>

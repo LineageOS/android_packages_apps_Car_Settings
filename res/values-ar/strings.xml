@@ -234,7 +234,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"جميع اللغات"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"لوحة المفاتيح"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"إدارة لوحات المفاتيح"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"الصوت عند تحويل النص إلى كلام"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"الرد الصوتي"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"المحرّك المُفضَّل"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"المحرّك الحالي"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"معدل سرعة الكلام"</string>
@@ -937,7 +937,7 @@
     <string name="camera_recently_accessed" msgid="8084100710444691977">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الكاميرا"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"لم يحصل أي تطبيق مؤخرًا على إذن بالوصول إلى الكاميرا."</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ما مِن تطبيقات لديها إذن بالوصول إلى الكاميرا."</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{لدى تطبيق واحد من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}zero{لدى # تطبيق من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}two{لدى تطبيقين من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}few{لدى # تطبيقات من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}many{لدى # تطبيقًا من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}other{لدى # تطبيق من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: 1 من إجمالي {total_count}.}zero{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: # من إجمالي {total_count}.}two{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: 2 من إجمالي {total_count}.}few{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: # من إجمالي {total_count}.}many{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: # من إجمالي {total_count}.}other{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: # من إجمالي {total_count}.}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الكاميرا"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"عرض الكل"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"جارٍ التحميل…"</string>
