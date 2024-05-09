@@ -16,6 +16,7 @@
 
 package com.android.car.settings.qc;
 
+import static com.android.car.datasubscription.DataSubscription.DATA_SUBSCRIPTION_ACTION;
 import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
 import static com.android.car.qc.QCItem.QC_TYPE_ACTION_SWITCH;
 import static com.android.car.settings.qc.QCUtils.getActionDisabledDialogIntent;
@@ -183,8 +184,9 @@ public class MobileDataRow extends SettingsQCItem {
                 || mIsDistractionOptimizationRequired) {
             return null;
         }
-        Intent dataSubscriptionIntent = new Intent(getContext().getString(
-                R.string.connectivity_flow_app));
+        Intent dataSubscriptionIntent = new Intent(DATA_SUBSCRIPTION_ACTION);
+        dataSubscriptionIntent.setPackage(getContext().getString(
+                        R.string.connectivity_flow_app));
         dataSubscriptionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         PendingIntent intent = PendingIntent.getActivity(getContext(), /* requestCode= */ 0,
                 dataSubscriptionIntent, PendingIntent.FLAG_IMMUTABLE, null);
