@@ -76,7 +76,7 @@
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"محدود کردن مصرف داده"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"وقتی داده تلفن همراهتان به محدودیتی که تنظیم کرده‌اید برسد، سیستم صوتی خودروی شما خاموش خواهد شد.\n\nاز آنجایی‌که سیستم صوتی شما مصرف داد‌ه را محاسبه می‌کند و ممکن است شرکت مخابراتی‌تان مصرف داده را به روش دیگری محاسبه کند، سعی کنید محدودیت محافظه‌کارانه‌ای تنظیم کنید."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"تنظیم هشدار مصرف داده"</string>
-    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"تنظیم حد مصرف داده"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"تنظیم حد استفاده از داده"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"دستگاهتان میزان مصرف داده را اندازه‌گیری می‌کند. این میزان ممکن است با میزانی که شرکت مخابراتی تلفن همراهتان اندازه‌گیری می‌کند متفاوت باشد."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"تنظیم کردن"</string>
     <string name="data_usage_warning_save_title" msgid="2900544287239037695">"ذخیره"</string>
@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"دسترسی به دوربین"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"انتخاب کنید برنامه‌ها بتوانند به دوربین خودروتان دسترسی داشته باشند یا نه"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"برنامه‌های الزامی"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"برنامه‌هایی که سازنده خودرو برای کمک در رانندگی الزامی کرده است"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"خط‌مشی"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ممکن است سازنده خودروتان همچنان به دوربین خودروی شما دسترسی داشته باشد"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"برنامه‌های اطلاعات-سرگرمی"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"اجازه دادن به برنامه‌های اطلاعات-سرگرمی برای گرفتن عکس و ضبط فیلم"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"مجاز"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"همیشه"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"غیرمجاز"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"فقط درحین استفاده از برنامه"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"هربار پرسیده شود"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"امنیت"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل صفحه"</string>

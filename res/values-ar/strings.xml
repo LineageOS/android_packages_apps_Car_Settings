@@ -238,7 +238,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"جميع اللغات"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"لوحة المفاتيح"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"إدارة لوحات المفاتيح"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"الصوت عند تحويل النص إلى كلام"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"الرد الصوتي"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"المحرّك المُفضَّل"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"المحرّك الحالي"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"معدل سرعة الكلام"</string>
@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"الوصول إلى الكاميرا"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"اختَر ما إذا كان يمكن للتطبيقات الوصول إلى كاميرا سيارتك"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"التطبيقات المطلوبة"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"تتطلّب الشركة المصنِّعة لسيارتك استخدام هذه التطبيقات للمساعدة في القيادة"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"السياسة"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"قد تظل الشركة المصنِّعة لسيارتك قادرة على الوصول إلى كاميرا سيارتك"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"تطبيقات نظام الترفيه والمعلومات"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"السماح لتطبيقات نظام الترفيه والمعلومات بالتقاط الصور وتسجيل الفيديوهات"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"التطبيقات المسموح لها"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"طوال الوقت"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"التطبيقات غير المسموح لها"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"أثناء استخدام التطبيق فقط"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"السؤال في كل مرّة"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"الأمان"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل الشاشة"</string>
@@ -939,7 +938,7 @@
     <string name="camera_recently_accessed" msgid="8084100710444691977">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الكاميرا"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"لم يحصل أي تطبيق مؤخرًا على إذن بالوصول إلى الكاميرا."</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ما مِن تطبيقات لديها إذن بالوصول إلى الكاميرا."</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{لدى تطبيق واحد من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}zero{لدى # تطبيق من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}two{لدى تطبيقين من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}few{لدى # تطبيقات من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}many{لدى # تطبيقًا من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}other{لدى # تطبيق من إجمالي {total_count} تطبيق إذن بالوصول إلى الكاميرا.}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: 1 من إجمالي {total_count}.}zero{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: # من إجمالي {total_count}.}two{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: 2 من إجمالي {total_count}.}few{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: # من إجمالي {total_count}.}many{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: # من إجمالي {total_count}.}other{عدد التطبيقات التي لديها إذن بالوصول إلى الكاميرا: # من إجمالي {total_count}.}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"تطبيقات حصلت مؤخرًا على إذن بالوصول إلى الكاميرا"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"عرض الكل"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"جارٍ التحميل…"</string>

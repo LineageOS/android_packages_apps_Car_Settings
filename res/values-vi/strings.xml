@@ -640,7 +640,7 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Quyền riêng tư"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Dữ liệu của hệ thống thông tin giải trí"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kiểm soát quyền truy cập của ứng dụng vào thông tin vị trí của bạn"</string>
-    <string name="mute_camera_title" msgid="215494079895460172">"Máy ảnh"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Camera"</string>
     <string name="mute_camera_summary" msgid="1237452064757403042">"Kiểm soát quyền truy cập của ứng dụng vào dữ liệu máy ảnh"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Micrô"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kiểm soát quyền truy cập của ứng dụng vào micrô"</string>
@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Quyền truy cập vào camera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Chọn xem các ứng dụng có thể truy cập vào camera của ô tô hay không"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Ứng dụng cần thiết"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Ứng dụng do nhà sản xuất ô tô yêu cầu để hỗ trợ quá trình lái"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Chính sách"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Có thể nhà sản xuất ô tô vẫn có quyền truy cập vào camera ô tô của bạn"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Ứng dụng thông tin giải trí"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Cho phép ứng dụng thông tin giải trí chụp ảnh và quay video"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Được phép"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Mọi lúc"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Không được phép"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Chỉ khi dùng ứng dụng"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Luôn hỏi"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Bảo mật"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Phương thức khóa màn hình"</string>
@@ -908,10 +907,10 @@
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Sử dụng <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Tuỳ chọn"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Cài đặt"</string>
-    <string name="camera_settings_title" msgid="2837785830355288903">"Máy ảnh"</string>
+    <string name="camera_settings_title" msgid="2837785830355288903">"Camera"</string>
     <string name="camera_toggle_title" msgid="1990732328673068456">"Sử dụng camera"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Cho phép tất cả ứng dụng truy cập vào dữ liệu máy ảnh"</string>
-    <string name="camera_manage_permissions" msgid="9005596413781984368">"Quản lý quyền truy cập vào dữ liệu máy ảnh"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Quản lý quyền truy cập vào camera"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Mới truy cập gần đây"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Không có ứng dụng nào mới truy cập"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ứng dụng có quyền truy cập"</string>

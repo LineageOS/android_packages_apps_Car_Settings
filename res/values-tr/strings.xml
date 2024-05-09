@@ -650,20 +650,19 @@
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Profilinizi ve hesaplarınızı bilgi-eğlence sisteminden silin"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Bu işlem, profilinizde kullanılamaz"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kamera erişimi"</string>
-    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Uygulamaların arabanızın kamerasının konumuna erişip erişemeyeceğini seçin"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Uygulamaların, arabanızın kameralarına erişip erişemeyeceğini seçin"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Gerekli uygulamalar"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Araba üreticinizin sürüş yardımı için gerekli kıldığı uygulamalar"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Politika"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Araba üreticiniz, arabanızın kamerasının konumuna erişmeye devam edebilir."</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Bilgi-eğlence uygulamaları"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Bilgi-eğlence sistemi uygulamalarının fotoğraf çekmesine ve video kaydetmesine izin verin"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"İzin verilenler"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Her zaman"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"İzin verilmeyenler"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Yalnızca uygulamayı kullanırken"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Her zaman sor"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Güvenlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>

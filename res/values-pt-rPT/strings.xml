@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Acesso à câmara"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Escolha se as apps podem aceder às câmaras do carro"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Apps necessárias"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Apps exigidas pelo fabricante do carro para ajudar na condução"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Política"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"O fabricante do carro ainda pode ter acesso à câmara do seu carro"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Apps de infoentretenimento"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Permita que as apps de infoentretenimento tirem fotos e gravem vídeos"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Permitida"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Sempre"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Não permitida"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Apenas enquanto usa a app"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Perguntar sempre"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Segurança"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueio de ecrã"</string>
@@ -912,7 +911,7 @@
     <string name="camera_toggle_title" msgid="1990732328673068456">"Usar a câmara"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Permita que todas as apps acedam à câmara"</string>
     <string name="camera_manage_permissions" msgid="9005596413781984368">"Gerir autorizações da câmara"</string>
-    <string name="camera_recently_accessed" msgid="8084100710444691977">"Acedido recentemente"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"Acessos recentes"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Nenhuma app recente"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 apps têm acesso"</string>
     <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{# de {total_count} apps tem acesso}other{# de {total_count} apps têm acesso}}"</string>

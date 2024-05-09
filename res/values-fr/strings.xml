@@ -640,7 +640,7 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Confidentialité"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Données du système d\'infoloisirs"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Contrôler l\'accès des applis à votre position"</string>
-    <string name="mute_camera_title" msgid="215494079895460172">"Appareil photo"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Caméra"</string>
     <string name="mute_camera_summary" msgid="1237452064757403042">"Contrôler l\'accès des applis à vos appareils photo"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Micro"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Contrôler l\'accès des applis au micro"</string>
@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Accès à la caméra"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Choisir si les applis ont accès aux caméras de votre voiture"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Applis requises"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Applis requises par le fabricant de votre voiture pour vous aider à conduire"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Règles"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Votre constructeur automobile a peut-être encore accès à la caméra de votre véhicule"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Applis d\'infoloisirs"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Autoriser les applis d\'infoloisirs à prendre des photos et à enregistrer des vidéos"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Autorisées"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Tout le temps"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Non autorisées"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Seulement quand l\'application fonctionne"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Toujours demander"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sécurité"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Verrouillage d\'écran"</string>
@@ -911,7 +910,7 @@
     <string name="camera_settings_title" msgid="2837785830355288903">"Appareil photo"</string>
     <string name="camera_toggle_title" msgid="1990732328673068456">"Utiliser l\'appareil photo"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Autoriser toutes les applis à accéder à votre appareil photo"</string>
-    <string name="camera_manage_permissions" msgid="9005596413781984368">"Gérer les autorisations d\'accès à l\'appareil photo"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Gérer les autorisations d\'accès à la caméra"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Accès récent(s)"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Aucune appli récente"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 appli a accès"</string>

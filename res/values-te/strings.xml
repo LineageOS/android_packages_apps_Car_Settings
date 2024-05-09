@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"కెమెరా యాక్సెస్"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"యాప్‌లు మీ కారు కెమెరాలను యాక్సెస్ చేయగలవో లేదో ఎంచుకోండి"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"అవసరమైన యాప్‌లు"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"డ్రైవింగ్‌లో సహాయం చేయడానికి మీ కారు తయారీదారుకు అవసరమైన యాప్‌లు"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"పాలసీ"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"మీ కారు తయారీదారుకు ఇప్పటికీ మీ కారు కెమెరా‌కు యాక్సెస్ ఉండవచ్చు"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"సమాచారంతో కూడిన వినోదం అందించే యాప్‌లు"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ఫోటోలు తీయడానికి, వీడియోను రికార్డ్ చేయడానికి సమాచారంతో కూడిన వినోదం అందించే యాప్‌లను అనుమతించండి"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"అనుమతించినవి"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"అన్ని సమయాలలో అనుమతించండి"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"అనుమతించనివి"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"యాప్‌ను ఉపయోగిస్తున్నప్పుడు మాత్రమే"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"ప్రతిసారీ అడగండి"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"సెక్యూరిటీ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
@@ -912,11 +911,11 @@
     <string name="camera_toggle_title" msgid="1990732328673068456">"కెమెరాను ఉపయోగించండి"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"మీ కెమెరాను యాక్సెస్ చేయడానికి అన్ని యాప్‌లను అనుమతించండి"</string>
     <string name="camera_manage_permissions" msgid="9005596413781984368">"కెమెరా అనుమతులను మేనేజ్ చేయండి"</string>
-    <string name="camera_recently_accessed" msgid="8084100710444691977">"ఇటీవల యాక్సెస్ చేయబడినవి"</string>
+    <string name="camera_recently_accessed" msgid="8084100710444691977">"ఇటీవల యాక్సెస్ చేసినవి"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"ఇటీవలి యాప్‌లు ఏవీ లేవు"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"ఏ యాప్‌లకు యాక్సెస్ లేదు"</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count}లో # యాప్‌లకు యాక్సెస్ ఉంది}other{{total_count}లో # యాప్‌లకు యాక్సెస్ ఉంది}}"</string>
-    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ఇటీవల యాక్సెస్ చేయబడినవి"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count}లో # యాప్‌నకు యాక్సెస్ ఉంది}other{{total_count}లో # యాప్‌లకు యాక్సెస్ ఉంది}}"</string>
+    <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ఇటీవల యాక్సెస్ చేసినవి"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"అన్నీ చూడండి"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"లోడ్ అవుతోంది…"</string>
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"ప్లాన్‌లను చూడండి"</string>

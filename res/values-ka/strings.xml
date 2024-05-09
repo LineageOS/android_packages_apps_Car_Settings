@@ -652,18 +652,17 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"კამერაზე წვდომა"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"აირჩიეთ, ექნებათ თუ არა აპებს თქვენი მანქანის კამერებზე წვდომა"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"სავალდებულო აპები"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"თქვენი მანქანის მწარმოებლის მიერ მოთხოვნილი, მართვაში დასახმარებლად სავალდებულო აპები"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"წესები"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"თქვენი მანქანის მწარმოებელს შესაძლოა კვლავაც ჰქონდეს წვდომა თქვენი მანქანის კამერაზე."</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"საინფორმაციო-გასართობი აპები"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"მიეცით გართობის/საინფორმაციო აპებს სურათების გადაღებისა და ვიდეოს ჩაწერის ნებართვა"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"დაშვებულია"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"მუდმივად"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"არ არის დაშვებული"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"მხოლოდ ამ აპის გამოყენებისას"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"შემეკითხე ყოველთვის"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"უსაფრთხოება"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ეკრანის დაბლოკვა"</string>

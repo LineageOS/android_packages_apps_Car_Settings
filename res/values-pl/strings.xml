@@ -640,7 +640,7 @@
     <string name="privacy_settings_title" msgid="3150145262029229572">"Prywatność"</string>
     <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Dane systemu multimedialno-rozrywkowego"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontroluj dostęp aplikacji do lokalizacji"</string>
-    <string name="mute_camera_title" msgid="215494079895460172">"Aparat"</string>
+    <string name="mute_camera_title" msgid="215494079895460172">"Kamery"</string>
     <string name="mute_camera_summary" msgid="1237452064757403042">"Zarządzaj dostępem aplikacji do aparatu"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontroluj dostęp aplikacji do mikrofonu"</string>
@@ -649,21 +649,20 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Usuń swój profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Usuń swoje profile i konta z systemu multimedialno-rozrywkowego"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"W Twoim profilu nie można wykonać tego działania"</string>
-    <string name="camera_access_settings_title" msgid="1841809323727456945">"Dostęp do kamery"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Dostęp do kamer"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Zdecyduj, czy aplikacje mogą mieć dostęp kamer samochodu"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Wymagane aplikacje"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Aplikacje wymagane przez producenta Twojego samochodu, które ułatwiają prowadzenie pojazdu"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Zasady"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Producent samochodu może nadal mieć dostęp do kamery w pojeździe"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Aplikacje informacyjno-rozrywkowe"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Zezwalaj aplikacjom informacyjno-rozrywkowym na robienie zdjęć i nagrywanie filmów"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Mają dostęp"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Cały czas"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Nie mają dostępu"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Tylko podczas używania aplikacji"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Zawsze pytaj"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Zabezpieczenia"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blokada ekranu"</string>
@@ -923,7 +922,7 @@
     <string name="camera_settings_title" msgid="2837785830355288903">"Aparat"</string>
     <string name="camera_toggle_title" msgid="1990732328673068456">"Dostęp do aparatu"</string>
     <string name="camera_toggle_summary" msgid="5751159996822627567">"Pozwól wszystkim aplikacjom na dostęp do aparatu"</string>
-    <string name="camera_manage_permissions" msgid="9005596413781984368">"Zarządzaj dostępem do aparatu"</string>
+    <string name="camera_manage_permissions" msgid="9005596413781984368">"Zarządzaj dostępem do kamer"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"Ostatnio używane"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"Brak ostatnio uruchomionych aplikacji"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"Żadna aplikacja nie ma dostępu"</string>

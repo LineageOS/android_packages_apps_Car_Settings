@@ -650,20 +650,19 @@
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Borra o teu perfil e as túas contas do sistema de información e entretemento"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Esta acción non está dispoñible para o teu perfil"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Acceso á cámara"</string>
-    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Decide se queres que as aplicacións poidan acceder ás cámaras do teu vehículo"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Decide se as aplicacións poden acceder ás cámaras do coche"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Aplicacións requiridas"</string>
-    <string name="required_apps_group_summary" msgid="6461075317218666534">"Aplicacións requiridas polo fabricante do teu coche como axuda para a condución"</string>
-    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Política"</string>
+    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
+    <skip />
+    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
+    <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"O fabricante do coche pode seguir tendo acceso á cámara do vehículo"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Aplicacións de información/entretemento"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Permitir que as aplicacións de información e entretemento tiren fotos e graven vídeos"</string>
-    <!-- no translation found for permission_grant_allowed (4844649705788049638) -->
-    <skip />
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"Permiso concedido"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Todo o tempo"</string>
-    <!-- no translation found for permission_grant_never (1357441946890127898) -->
-    <skip />
-    <!-- no translation found for permission_grant_in_use (2314262542396732455) -->
-    <skip />
+    <string name="permission_grant_never" msgid="1357441946890127898">"Permiso denegado"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Permiso só mentres se usa a aplicación"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Preguntar sempre"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguranza"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
