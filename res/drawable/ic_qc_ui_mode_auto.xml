@@ -18,9 +18,38 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="@dimen/icon_size"
     android:height="@dimen/icon_size"
-    android:viewportHeight="48.0"
-    android:viewportWidth="48.0">
+    android:viewportHeight="40"
+    android:viewportWidth="40">
     <path
+        android:pathData="M21.038,29.957L21.037,29.957C18.142,30.151 15.215,29.12 13.091,26.884C10.971,24.66 10.135,21.715 10.521,18.888C10.665,17.854 9.598,17.109 8.657,17.514C1.331,20.656 -0.137,30.458 6.315,35.414C11.457,39.369 19.201,37.749 22.301,31.891C22.792,30.977 22.069,29.894 21.038,29.957ZM6.8,32.67C3.415,29.108 4.024,23.381 8.072,20.528C8.144,23.46 9.282,26.313 11.361,28.5C13.439,30.686 16.252,32.005 19.227,32.276C16.029,36.048 10.175,36.235 6.8,32.67Z"
         android:fillColor="@color/qc_default_icon_color"
-        android:pathData="M15.5,32.75H18.25L20.1,27.3H28.05L29.95,32.75H32.6L25.25,13.15H22.85ZM20.85,24.9 L23.9,16.75H24.15L27.25,24.9ZM24.05,46.55 L17.3,40H8V30.7L1.3,24L8,17.3V8H17.3L24.05,1.3L30.7,8H40V17.3L46.7,24L40,30.7V40H30.7ZM24.05,23.95ZM24.05,42.35 L29.45,37H37V29.45L42.45,24L37,18.55V11H29.45L24.05,5.55L18.55,11H11V18.55L5.55,24L11,29.45V37H18.5Z"/>
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M15.701,1.087L17.464,5.702L15.023,6.618L13.277,1.965L15.701,1.087Z"
+        android:fillColor="@color/qc_default_icon_color"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M23.789,0.393L26.333,0.786L25.575,5.688L23.031,5.295L23.789,0.393Z"
+        android:fillColor="@color/qc_default_icon_color"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M33.399,4.347L35.243,6.148L31.729,9.662L29.885,7.819L33.399,4.347Z"
+        android:fillColor="@color/qc_default_icon_color"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M39,13.299L39.647,15.791L34.846,17.038L34.199,14.547L39,13.299Z"
+        android:fillColor="@color/qc_default_icon_color"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M39.181,23.69L38.258,26.097L33.639,24.264L34.6,21.841L39.181,23.69Z"
+        android:fillColor="@color/qc_default_icon_color"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M16.792,8.79C18.089,8.227 19.519,7.916 21.021,7.916C26.895,7.916 31.656,12.677 31.656,18.55C31.656,20.053 31.344,21.483 30.782,22.779C30.435,23.58 29.408,23.686 28.807,23.084C28.392,22.67 28.312,22.042 28.522,21.507C28.883,20.592 29.082,19.594 29.082,18.55C29.082,14.099 25.473,10.49 21.021,10.49C19.978,10.49 18.98,10.688 18.065,11.049C17.53,11.26 16.902,11.179 16.487,10.765C15.886,10.163 15.992,9.137 16.792,8.79Z"
+        android:fillColor="@color/qc_default_icon_color"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M4.996,5.371C5.55,4.816 6.449,4.816 7.004,5.371L35.647,34.015C36.202,34.569 36.202,35.468 35.647,36.022C35.093,36.577 34.194,36.577 33.64,36.022L4.996,7.378C4.442,6.824 4.442,5.925 4.996,5.371Z"
+        android:fillColor="@color/qc_default_icon_color"
+        android:fillType="evenOdd"/>
 </vector>
