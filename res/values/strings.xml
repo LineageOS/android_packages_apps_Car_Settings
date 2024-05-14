@@ -1513,6 +1513,14 @@
     <string name="vehicle_data_delete_user_summary">Erase your profile and accounts from the infotainment system</string>
     <!-- Privacy settings screen, text that shows when a user tries to take an action that is unavailable to the current user. [CHAR LIMIT=60] -->
     <string name="action_unavailable">This action is unavailable for your profile</string>
+    <!-- Title of microphone access page [CHAR LIMIT=40]-->
+    <string name="microphone_access_settings_title">Microphone access</string>
+    <!-- Summary of microphone access page [CHAR LIMIT=NONE]-->
+    <string name="microphone_access_settings_summary">Choose if apps can access your car\u2019s microphones</string>
+    <!-- Title of infotainment apps accessing microphone [CHAR LIMIT=40]-->
+    <string name="microphone_infotainment_apps_toggle_title">Infotainment apps</string>
+    <!-- Summary of infotainment apps accessing microphone [CHAR LIMIT=NONE]-->
+    <string name="microphone_infotainment_apps_toggle_summary">Allow infotainment apps to record audio</string>
     <!-- Title of camera access page [CHAR LIMIT=40]-->
     <string name="camera_access_settings_title">Camera access</string>
     <!-- Summary of camera access page [CHAR LIMIT=NONE]-->
