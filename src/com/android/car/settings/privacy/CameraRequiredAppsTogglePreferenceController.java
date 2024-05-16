@@ -16,13 +16,17 @@
 
 package com.android.car.settings.privacy;
 
+import static com.android.car.settings.enterprise.EnterpriseUtils.getAvailabilityStatusRestricted;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
+import static com.android.car.settings.enterprise.EnterpriseUtils.onClickWhileDisabled;
+
 import android.annotation.FlaggedApi;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.hardware.SensorPrivacyManager;
+import android.os.UserManager;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.ui.preference.CarUiSwitchPreference;
 import com.android.internal.annotations.VisibleForTesting;
@@ -61,7 +65,12 @@ public final class CameraRequiredAppsTogglePreferenceController
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        return mRequiredAppsToggleAvailable ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+        if (!mRequiredAppsToggleAvailable) {
+            return CONDITIONALLY_UNAVAILABLE;
+        } else {
+            return getAvailabilityStatusRestricted(getContext(),
+                    UserManager.DISALLOW_CAMERA_TOGGLE);
+        }
     }
 
     @Override
@@ -99,6 +108,11 @@ public final class CameraRequiredAppsTogglePreferenceController
             getPreference().setEnabled(false);
         } else {
             getPreference().setEnabled(true);
+        }
+        if (hasUserRestrictionByDpm(getContext(), UserManager.DISALLOW_CAMERA_TOGGLE)) {
+            setClickableWhileDisabled(preference, /* clickable= */ true, p ->
+                    onClickWhileDisabled(getContext(), getFragmentController(),
+                            UserManager.DISALLOW_CAMERA_TOGGLE));
         }
     }
 }

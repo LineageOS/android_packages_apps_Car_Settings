@@ -16,12 +16,16 @@
 
 package com.android.car.settings.privacy;
 
+import static com.android.car.settings.enterprise.EnterpriseUtils.getAvailabilityStatusRestricted;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
+import static com.android.car.settings.enterprise.EnterpriseUtils.onClickWhileDisabled;
+
 import android.annotation.FlaggedApi;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.hardware.SensorPrivacyManager;
+import android.os.UserManager;
 
-import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.ui.preference.CarUiSwitchPreference;
 import com.android.internal.annotations.VisibleForTesting;
@@ -83,5 +87,15 @@ public class CameraInfotainmentAppsTogglePreferenceController
     @Override
     protected void updateState(CarUiSwitchPreference preference) {
         preference.setChecked(!isCameraMutedForInfotainmentApps());
+        if (hasUserRestrictionByDpm(getContext(), UserManager.DISALLOW_CAMERA_TOGGLE)) {
+            setClickableWhileDisabled(preference, /* clickable= */ true, p ->
+                    onClickWhileDisabled(getContext(), getFragmentController(),
+                            UserManager.DISALLOW_CAMERA_TOGGLE));
+        }
+    }
+
+    @Override
+    protected int getDefaultAvailabilityStatus() {
+        return getAvailabilityStatusRestricted(getContext(), UserManager.DISALLOW_CAMERA_TOGGLE);
     }
 }

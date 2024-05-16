@@ -28,7 +28,6 @@ import android.permission.PermissionControllerManager;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.internal.annotations.VisibleForTesting;

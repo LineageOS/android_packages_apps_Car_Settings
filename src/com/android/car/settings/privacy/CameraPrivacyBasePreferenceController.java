@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.common;
+package com.android.car.settings.privacy;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.hardware.SensorPrivacyManager;
 
 import androidx.preference.Preference;
+
+import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Abstract PreferenceController that listens to OnSensorPrivacyChangedListener

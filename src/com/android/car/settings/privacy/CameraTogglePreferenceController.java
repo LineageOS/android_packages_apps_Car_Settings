@@ -16,11 +16,15 @@
 
 package com.android.car.settings.privacy;
 
+import static com.android.car.settings.enterprise.EnterpriseUtils.getAvailabilityStatusRestricted;
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
+import static com.android.car.settings.enterprise.EnterpriseUtils.onClickWhileDisabled;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.hardware.SensorPrivacyManager;
+import android.os.UserManager;
 
-import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.internal.annotations.VisibleForTesting;
@@ -66,15 +70,24 @@ public class CameraTogglePreferenceController
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        boolean hasFeatureCameraToggle = getSensorPrivacyManager().supportsSensorToggle(
-                SensorPrivacyManager.Sensors.CAMERA);
-        return (!Flags.cameraPrivacyAllowlist() && hasFeatureCameraToggle)
-                ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        if (Flags.cameraPrivacyAllowlist() || !getSensorPrivacyManager()
+                .supportsSensorToggle(SensorPrivacyManager.Sensors.CAMERA)) {
+            // Hide preference if feature flag is enabled or system doesn't have a camera
+            return UNSUPPORTED_ON_DEVICE;
+        } else {
+            return getAvailabilityStatusRestricted(getContext(),
+                    UserManager.DISALLOW_CAMERA_TOGGLE);
+        }
     }
 
     @Override
     protected void updateState(ColoredSwitchPreference preference) {
         preference.setChecked(!getSensorPrivacyManager().isSensorPrivacyEnabled(
                 SensorPrivacyManager.Sensors.CAMERA));
+        if (hasUserRestrictionByDpm(getContext(), UserManager.DISALLOW_CAMERA_TOGGLE)) {
+            setClickableWhileDisabled(preference, /* clickable= */ true, p ->
+                    onClickWhileDisabled(getContext(), getFragmentController(),
+                            UserManager.DISALLOW_CAMERA_TOGGLE));
+        }
     }
 }

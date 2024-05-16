@@ -23,7 +23,6 @@ import android.hardware.SensorPrivacyManager;
 import androidx.preference.PreferenceCategory;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.internal.annotations.VisibleForTesting;

@@ -18,6 +18,8 @@ package com.android.car.settings.bluetooth;
 
 import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
 
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
+
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.car.drivingstate.CarUxRestrictions;
@@ -32,6 +34,7 @@ import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.MultiActionPreference;
 import com.android.car.settings.common.ToggleButtonActionItem;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 import com.android.settingslib.bluetooth.A2dpProfile;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -237,9 +240,10 @@ public class BluetoothBondedDevicesPreferenceController extends
             updatePhoneActionItemAvailability(preference, /* isAvailable= */ true);
             boolean phoneEnabled = phoneProfile.isEnabled(cachedDevice.getDevice());
 
-            if (hasDisallowConfigRestriction()) {
-                phoneItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
-                        .onClickWhileDisabled(getContext(), getFragmentController()));
+            if (hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_BLUETOOTH)) {
+                phoneItem.setOnClickWhileDisabledListener(p -> EnterpriseUtils
+                        .onClickWhileDisabled(getContext(), getFragmentController(),
+                                DISALLOW_CONFIG_BLUETOOTH));
             }
             phoneItem.setOnClickListener(isChecked ->
                     finalPhoneProfile.setEnabled(cachedDevice.getDevice(), isChecked));
@@ -255,9 +259,10 @@ public class BluetoothBondedDevicesPreferenceController extends
             updateMediaActionItemAvailability(preference, /* isAvailable= */ true);
             boolean mediaEnabled = mediaProfile.isEnabled(cachedDevice.getDevice());
 
-            if (hasDisallowConfigRestriction()) {
-                mediaItem.setOnClickWhileDisabledListener(p -> BluetoothUtils
-                        .onClickWhileDisabled(getContext(), getFragmentController()));
+            if (hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_BLUETOOTH)) {
+                mediaItem.setOnClickWhileDisabledListener(p -> EnterpriseUtils
+                        .onClickWhileDisabled(getContext(), getFragmentController(),
+                                DISALLOW_CONFIG_BLUETOOTH));
             }
             mediaItem.setOnClickListener(isChecked ->
                     finalMediaProfile.setEnabled(cachedDevice.getDevice(), isChecked));
