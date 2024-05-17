@@ -18,10 +18,12 @@ package com.android.car.settings.location;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.res.Resources;
 import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
@@ -36,8 +38,15 @@ import com.android.car.ui.preference.CarUiSwitchPreference;
  */
 public class AdasLocationSwitchPreferenceController extends
         LocationStateListenerBasePreferenceController<CarUiSwitchPreference> {
+    private static final String AUTOMOTIVE_LOCATION_BYPASS_RESOURCE_NAME =
+            "config_defaultAdasGnssLocationEnabled";
+    private static final String AUTOMOTIVE_LOCATION_BYPASS_RESOURCE_TYPE = "bool";
+    private static final String AUTOMOTIVE_LOCATION_BYPASS_RESOURCE_PACKAGE = "android";
+
     @VisibleForTesting
     boolean mIsClickable;
+    @VisibleForTesting
+    boolean mIsVisible;
 
     public AdasLocationSwitchPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -51,9 +60,19 @@ public class AdasLocationSwitchPreferenceController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        return mIsClickable && getIsPowerPolicyOn() && !getLocationManager().isLocationEnabled()
-                ? AVAILABLE
-                : AVAILABLE_FOR_VIEWING;
+        if (Flags.requiredInfotainmentAppsSettingsPage()) {
+            if (!mIsVisible) {
+                return CONDITIONALLY_UNAVAILABLE;
+            }
+            if (!getIsPowerPolicyOn() || getLocationManager().isLocationEnabled()) {
+                return AVAILABLE_FOR_VIEWING;
+            }
+            return AVAILABLE;
+        } else {
+            return mIsClickable && getIsPowerPolicyOn() && !getLocationManager().isLocationEnabled()
+                    ? AVAILABLE
+                    : AVAILABLE_FOR_VIEWING;
+        }
     }
 
     @Override
@@ -63,14 +82,19 @@ public class AdasLocationSwitchPreferenceController extends
 
     @Override
     protected boolean handlePreferenceChanged(CarUiSwitchPreference preference, Object newValue) {
-        if (getLocationManager().isAdasGnssLocationEnabled()) {
-            getFragmentController().showDialog(getConfirmationDialog(),
-                    ConfirmationDialogFragment.TAG);
-            return false;
-        } else {
+        if (Flags.requiredInfotainmentAppsSettingsPage()) {
             getLocationManager().setAdasGnssLocationEnabled((Boolean) newValue);
+            return true;
+        } else {
+            if (getLocationManager().isAdasGnssLocationEnabled()) {
+                getFragmentController().showDialog(getConfirmationDialog(),
+                        ConfirmationDialogFragment.TAG);
+                return false;
+            } else {
+                getLocationManager().setAdasGnssLocationEnabled((Boolean) newValue);
+            }
+            return true;
         }
-        return true;
     }
 
     @Override
@@ -85,18 +109,41 @@ public class AdasLocationSwitchPreferenceController extends
         });
         addDefaultPowerPolicyListener();
 
-        mIsClickable = getContext().getResources()
-                .getBoolean(R.bool.config_allow_adas_location_switch_clickable);
+        if (Flags.requiredInfotainmentAppsSettingsPage()) {
+            Resources res = Resources.getSystem();
+            int resId = res.getIdentifier(
+                    AUTOMOTIVE_LOCATION_BYPASS_RESOURCE_NAME,
+                    AUTOMOTIVE_LOCATION_BYPASS_RESOURCE_TYPE,
+                    AUTOMOTIVE_LOCATION_BYPASS_RESOURCE_PACKAGE);
+            boolean defaultLocationBypassEnabled = res.getBoolean(resId);
+            // If by default automotive location bypass is on, then
+            // config_show_location_required_apps_toggle will dictate the visibility.
+            // Otherwise the toggle must be visible.
+            mIsVisible = defaultLocationBypassEnabled
+                    ? getContext().getResources().getBoolean(
+                            R.bool.config_show_location_required_apps_toggle)
+                    : true;
+        } else {
+            mIsClickable = getContext().getResources()
+                    .getBoolean(R.bool.config_allow_adas_location_switch_clickable);
+        }
 
         setClickableWhileDisabled(getPreference(), /* clickable= */true, preference -> {
-            if (!mIsClickable) {
-                getFragmentController().showDialog(getToggleDisabledDialog(),
-                        ConfirmationDialogFragment.TAG);
-                return;
-            }
-            if (!getIsPowerPolicyOn()) {
-                Toast.makeText(getContext(), R.string.power_component_disabled, Toast.LENGTH_LONG)
-                        .show();
+            if (Flags.requiredInfotainmentAppsSettingsPage()) {
+                if (!getIsPowerPolicyOn()) {
+                    Toast.makeText(getContext(), R.string.power_component_disabled,
+                            Toast.LENGTH_LONG).show();
+                }
+            } else {
+                if (!mIsClickable) {
+                    getFragmentController().showDialog(getToggleDisabledDialog(),
+                            ConfirmationDialogFragment.TAG);
+                    return;
+                }
+                if (!getIsPowerPolicyOn()) {
+                    Toast.makeText(getContext(), R.string.power_component_disabled,
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

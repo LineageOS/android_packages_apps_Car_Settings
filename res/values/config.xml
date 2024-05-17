@@ -171,6 +171,13 @@
     <!-- Whether to allow the ADAS Location Switch to be clickable. -->
     <bool name="config_allow_adas_location_switch_clickable">true</bool>
 
+    <!--
+        Whether to show the automotive location bypass toggle for required apps.
+        If by default automotive location bypass is off, then the toggle will always
+        be shown.
+    -->
+    <bool name="config_show_location_required_apps_toggle">false</bool>
+
     <!-- Packages (other than settings and systemui) allowed to enable bluetooth scanning. -->
     <string-array name="config_allowed_bluetooth_scanning_packages">
         <item>com.android.car.carlauncher</item>

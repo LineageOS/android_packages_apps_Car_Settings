@@ -16,6 +16,9 @@
 
 package com.android.car.settings.location;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assert.assertTrue;
@@ -38,6 +41,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
+import android.platform.test.annotations.DisableFlags;
+import android.platform.test.annotations.EnableFlags;
+import android.platform.test.flag.junit.SetFlagsRule;
 import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -46,6 +52,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
@@ -89,6 +96,9 @@ public class AdasLocationSwitchPreferenceControllerTest {
     public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
             new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
 
+    @Rule
+    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
+
     @Before
     public void setUp() {
         mLifecycleOwner = new TestLifecycleOwner();
@@ -111,18 +121,40 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void unclickable_switchDisabled() throws Throwable {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
-                /* isClickable= */false);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsClickable(false);
 
         assertThat(mSwitchPreference.isEnabled()).isFalse();
         assertThat(mSwitchPreference.isChecked()).isTrue();
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void notVisible_switchHidden() throws Throwable {
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsVisible(false);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void isVisible_switchShown() throws Throwable {
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsVisible(true);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE);
+    }
+
+    @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void unclickable_onPreferenceClicked_noChange_showToggleDisabledDialog() {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
-                /* isClickable= */false);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsClickable(false);
 
         mSwitchPreference.performClick();
 
@@ -135,9 +167,10 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void unclickable_powerPolicyOff_onPreferenceClicked_showToggleDisabledDialog() {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
-                /* isClickable= */false);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsClickable(false);
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ false);
 
@@ -150,6 +183,7 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void powerPolicyOff_onPreferenceClicked_showCorrectToast() throws Throwable {
         int correctToastId = R.string.power_component_disabled;
         mActivityTestRule.runOnUiThread(() -> {
@@ -157,8 +191,8 @@ public class AdasLocationSwitchPreferenceControllerTest {
                     .thenReturn(mToast);
         });
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsClickable(true);
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ false);
 
@@ -168,9 +202,29 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void powerPolicyOff_onPreferenceClicked_showCorrectToast_flagReq() throws Throwable {
+        int correctToastId = R.string.power_component_disabled;
+        mActivityTestRule.runOnUiThread(() -> {
+            ExtendedMockito.when(Toast.makeText(any(), eq(correctToastId), anyInt()))
+                    .thenReturn(mToast);
+        });
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsVisible(true);
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ false);
+
+        mSwitchPreference.performClick();
+
+        verify(mToast).show();
+    }
+
+    @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onAdasIntentReceived_updateUi() {
-        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
+        setIsClickable(true);
 
         ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
                 BroadcastReceiver.class);
@@ -191,9 +245,34 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void onAdasIntentReceived_updateUi_flagReq() {
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
+        setIsVisible(true);
+
+        ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
+                BroadcastReceiver.class);
+        ArgumentCaptor<IntentFilter> intentFilterCaptor = ArgumentCaptor.forClass(
+                IntentFilter.class);
+        verify(mContext, times(1))
+                .registerReceiver(broadcastReceiverArgumentCaptor.capture(),
+                        intentFilterCaptor.capture(), eq(Context.RECEIVER_NOT_EXPORTED));
+        List<IntentFilter> actions = intentFilterCaptor.getAllValues();
+        assertTrue(actions.get(0).hasAction(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED));
+
+        when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(true);
+        broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
+                new Intent(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED));
+
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
+    }
+
+    @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onLocationIntentReceived_updateUi() {
-        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
+        setIsClickable(true);
 
         ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
                 BroadcastReceiver.class);
@@ -216,9 +295,36 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void onLocationIntentReceived_updateUi_flagReq() {
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
+        setIsVisible(true);
+
+        ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
+                BroadcastReceiver.class);
+        ArgumentCaptor<IntentFilter> intentFilterCaptor = ArgumentCaptor.forClass(
+                IntentFilter.class);
+
+        verify(mContext, times(1))
+                .registerReceiver(broadcastReceiverArgumentCaptor.capture(),
+                        intentFilterCaptor.capture(), eq(Context.RECEIVER_NOT_EXPORTED));
+        List<IntentFilter> actions = intentFilterCaptor.getAllValues();
+        assertTrue(actions.get(0).hasAction(LocationManager.MODE_CHANGED_ACTION));
+
+        when(mLocationManager.isLocationEnabled()).thenReturn(true);
+        when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(true);
+        broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
+                new Intent(LocationManager.MODE_CHANGED_ACTION));
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
+    }
+
+    @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onPreferenceClicked_adasDisabled_shouldEnable_notShowDialog() {
-        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
+        setIsClickable(true);
 
         mSwitchPreference.performClick();
 
@@ -230,9 +336,23 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void onPreferenceClicked_adasDisabled_shouldEnable() {
+        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
+        setIsVisible(true);
+
+        mSwitchPreference.performClick();
+
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isChecked()).isTrue();
+        verify(mLocationManager).setAdasGnssLocationEnabled(true);
+    }
+
+    @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onPreferenceClicked_adasEnabled_shouldStayEnable_showDialog() {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsClickable(true);
 
         mSwitchPreference.performClick();
 
@@ -245,9 +365,23 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void onPreferenceClicked_adasEnabled_shouldDisable_flagReq() {
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsVisible(true);
+
+        mSwitchPreference.performClick();
+
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+        assertThat(mSwitchPreference.isChecked()).isFalse();
+        verify(mLocationManager).setAdasGnssLocationEnabled(false);
+    }
+
+    @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void confirmDialog_turnOffDriverAssistance() throws Throwable {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsClickable(true);
 
         mSwitchPreference.performClick();
 
@@ -272,9 +406,10 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onPowerPolicyChange_isEnabledChanges() {
-        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ false,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ false);
+        setIsClickable(true);
 
         mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
                 .handlePolicyChange(/* isOn= */ false);
@@ -288,9 +423,27 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void onPowerPolicyChange_isEnabledChanges_flagReq() {
+        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ false);
+        setIsVisible(true);
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ false);
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
+
+        assertThat(mSwitchPreference.isEnabled()).isTrue();
+    }
+
+    @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onPowerPolicyChange_enabled_locationEnabled_switchStaysDisabled() {
-        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ true,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ true);
+        setIsClickable(true);
 
         assertThat(mSwitchPreference.isEnabled()).isFalse();
 
@@ -301,9 +454,24 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
+    public void onPowerPolicyChange_enabled_locationEnabled_switchStaysDisabled_flagReq() {
+        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ true);
+        setIsVisible(true);
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+
+        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
+                .handlePolicyChange(/* isOn= */ true);
+
+        assertThat(mSwitchPreference.isEnabled()).isFalse();
+    }
+
+    @Test
+    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void cancelDialog_DriverAssistanceStaysOn() throws Throwable {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false,
-                /* isClickable= */true);
+        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
+        setIsClickable(true);
 
         mSwitchPreference.performClick();
 
@@ -327,15 +495,24 @@ public class AdasLocationSwitchPreferenceControllerTest {
         verify(mLocationManager, never()).setAdasGnssLocationEnabled(false);
     }
 
-    private void initializePreference(boolean isAdasLocationEnabled, boolean isMainLocationEnabled,
-            boolean isClickable) {
+    private void initializePreference(
+            boolean isAdasLocationEnabled, boolean isMainLocationEnabled) {
         when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(isAdasLocationEnabled);
         when(mLocationManager.isLocationEnabled()).thenReturn(isMainLocationEnabled);
         mPreferenceController = new AdasLocationSwitchPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mSwitchPreference);
+    }
+
+    private void setIsClickable(boolean isClickable) {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.mIsClickable = isClickable;
+        mPreferenceController.onStart(mLifecycleOwner);
+    }
+
+    private void setIsVisible(boolean isVisible) {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.mIsVisible = isVisible;
         mPreferenceController.onStart(mLifecycleOwner);
     }
 

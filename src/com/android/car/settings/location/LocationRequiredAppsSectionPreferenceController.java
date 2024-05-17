@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,35 +19,31 @@ package com.android.car.settings.location;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import androidx.preference.Preference;
-
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceController;
 
-/**
- * Controller for displaying location access page.
- */
-public class LocationAccessPreferenceController extends PreferenceController<Preference> {
+/** Required apps section preference controller. */
+public final class LocationRequiredAppsSectionPreferenceController extends
+        PreferenceController<LogicalPreferenceGroup> {
 
-    public LocationAccessPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+    public LocationRequiredAppsSectionPreferenceController(
+            Context context,
+            String preferenceKey,
+            FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    protected Class<Preference> getPreferenceType() {
-        return Preference.class;
+    protected Class<LogicalPreferenceGroup> getPreferenceType() {
+        return LogicalPreferenceGroup.class;
     }
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (Flags.requiredInfotainmentAppsSettingsPage()) {
-            return AVAILABLE;
-        } else {
-            return LocationUtil.isDriverWithAdasApps(getContext())
-                    ? AVAILABLE
-                    : CONDITIONALLY_UNAVAILABLE;
-        }
+        return LocationUtil.isDriverWithAdasApps(getContext())
+                ? AVAILABLE
+                : CONDITIONALLY_UNAVAILABLE;
     }
 }
