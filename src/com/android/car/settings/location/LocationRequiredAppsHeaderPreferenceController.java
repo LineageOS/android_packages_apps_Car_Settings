@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,19 +19,24 @@ package com.android.car.settings.location;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
-import com.android.car.settings.Flags;
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
-/**
- * Controller for displaying location access page.
- */
-public class LocationAccessPreferenceController extends PreferenceController<Preference> {
+/** Required apps header without toggle preference controller. */
+public final class LocationRequiredAppsHeaderPreferenceController extends
+        PreferenceController<Preference> {
+    @VisibleForTesting
+    boolean mIsToggleVisible;
 
-    public LocationAccessPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+    public LocationRequiredAppsHeaderPreferenceController(
+            Context context,
+            String preferenceKey,
+            FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
@@ -42,12 +47,12 @@ public class LocationAccessPreferenceController extends PreferenceController<Pre
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (Flags.requiredInfotainmentAppsSettingsPage()) {
-            return AVAILABLE;
-        } else {
-            return LocationUtil.isDriverWithAdasApps(getContext())
-                    ? AVAILABLE
-                    : CONDITIONALLY_UNAVAILABLE;
-        }
+        return mIsToggleVisible ? CONDITIONALLY_UNAVAILABLE : AVAILABLE;
+    }
+
+    @Override
+    protected void onCreateInternal() {
+        mIsToggleVisible = getContext().getResources()
+                .getBoolean(R.bool.config_show_location_required_apps_toggle);
     }
 }
