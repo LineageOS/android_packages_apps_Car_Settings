@@ -193,7 +193,7 @@ public class PairNewDevicePreferenceControllerTest {
         getShadowUserManager().setUserRestriction(
                 UserHandle.of(UserHandle.myUserId()), DISALLOW_CONFIG_BLUETOOTH, true);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
     }
 
     @Test
@@ -204,7 +204,7 @@ public class PairNewDevicePreferenceControllerTest {
         getShadowUserManager().setUserRestriction(
                 UserHandle.of(UserHandle.myUserId()), DISALLOW_CONFIG_BLUETOOTH, true);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
     }
 
     @Test
@@ -215,7 +215,7 @@ public class PairNewDevicePreferenceControllerTest {
         getShadowUserManager().setUserRestriction(
                 UserHandle.of(UserHandle.myUserId()), DISALLOW_CONFIG_BLUETOOTH, true);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE_FOR_VIEWING);
     }
 
     @Test
@@ -226,7 +226,7 @@ public class PairNewDevicePreferenceControllerTest {
         getShadowUserManager().setUserRestriction(
                 UserHandle.of(UserHandle.myUserId()), DISALLOW_CONFIG_BLUETOOTH, true);
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_PROFILE);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
