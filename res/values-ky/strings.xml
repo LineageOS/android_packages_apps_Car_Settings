@@ -33,7 +33,7 @@
     <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Активдүү эмес/eSIM-карта"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Дагы кошуу"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобилдик Интернет"</string>
-    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Интернетке мобилдик тармак аркылуу чыгуу"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Интернетке мобилдик тармак аркылуу чыгасыз"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобилдик тармак"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Мобилдик трафикти колдонуу"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Өчүк"</string>
@@ -398,7 +398,7 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Системанын параметрлерин өзгөртүү"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо системанын параметрлерин өзгөртө алат."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Билдирмелерди угуу"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> кызматына билдирмелерди угууга уруксат берилсинби?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> кызматына билдирмелерди угууга уруксат бересизби?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> колдонмосу эскертмелердин баарын, ошону менен катар байланыштардын аты-жөнү жана кабыл алынган билдирүүлөр сыяктуу жеке маалыматты окуй алат. Мындан тышкары, ал билдирмелерди жок кылып же алардагы баскычтарды баса алат.\n\nУшуну менен колдонмо \"Тынчымды алба\" режимин иштетүү же өчүрүү, ошондой эле анын параметрлерин өзгөртүү мүмкүнчүлүгүнө ээ болот."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Эгер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үчүн билдирмени угуу уруксатын өчүрсөңүз, анын \"Тынчымды алба\" режимине да уруксаты жок болуп калышы мүмкүн."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өчүрүү"</string>

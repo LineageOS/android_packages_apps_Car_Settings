@@ -451,8 +451,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ažuriranja sistema"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Napredno"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Osnovni podaci, pravne informacije, resetovanje i drugo"</string>
-    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Restartuj sistem za info-zabavu"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Restartovanje sistema za info-zabavu može da potraje par minuta. Želite da nastavite?"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Restartuj sistem za informacije i zabavu"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Restartovanje sistema za informacije i zabavu može da potraje par minuta. Želite da nastavite?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Nastavi"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Verzija Android-a"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nivo bezbednosne zakrpe za Android"</string>
@@ -513,13 +513,13 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Resetuj aplikacije"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Podešavanja aplikacija su resetovana"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Obriši sve podatke (fabrička podešavanja)"</string>
-    <string name="factory_reset_summary" msgid="854815182943504327">"Obriši sve podatke i profile iz sistema za info-zabavu"</string>
-    <string name="factory_reset_desc" msgid="2774024747279286354">"Ovim brišete sve podatke iz sistema za info-zabavu vozila, uključujući:\n\n"<li>"vaše naloge i profile"</li>\n<li>"podatke i podešavanja sistema i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
+    <string name="factory_reset_summary" msgid="854815182943504327">"Obriši sve podatke i profile iz sistema za informacije i zabavu"</string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Ovim brišete sve podatke iz sistema za informacije i zabavu vozila, uključujući:\n\n"<li>"vaše naloge i profile"</li>\n<li>"podatke i podešavanja sistema i aplikacija"</li>\n<li>"preuzete aplikacije"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Trenutno ste prijavljeni na sledeće naloge:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Za ovo vozilo su podešeni drugi profili."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Obriši sve podatke"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Obrisaćete sve podatke?"</string>
-    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ovim brišete sve podatke ličnog profila, naloge i preuzete aplikacije u ovom sistemu za info-zabavu.\n\nOva radnja ne može da se opozove."</string>
+    <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Ovim brišete sve podatke ličnog profila, naloge i preuzete aplikacije u ovom sistemu za informacije i zabavu.\n\nOva radnja ne može da se opozove."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Obriši sve"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Briše se"</string>
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Sačekajte…"</string>
@@ -543,7 +543,7 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Prijavljeni ste kao administrator"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Želite da dodelite dozvole za administratora?"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Postavi za administratora"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Administrator će moći da briše druge profile, uključujući profile drugih administratora, kao i da resetuje sistem za info-zabavu na fabrička podešavanja."</string>
+    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"Administrator će moći da briše druge profile, uključujući profile drugih administratora, kao i da resetuje sistem za informacije i zabavu na fabrička podešavanja."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Ova radnja ne može da se opozove."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"Da, postavi za administatora"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"Pravi nove profile"</string>
@@ -632,16 +632,16 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Otkaži sinhronizaciju"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Sinhronizacija trenutno ima problema. Uskoro će se nastaviti."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Privatnost"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Podaci sistema za info-zabavu"</string>
+    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Podaci sistema za informacije i zabavu"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Kontrolišite pristup aplikacija lokaciji"</string>
     <string name="mute_camera_title" msgid="215494079895460172">"Kamera"</string>
     <string name="mute_camera_summary" msgid="1237452064757403042">"Kontrolišite pristup aplikacija kamerama"</string>
     <string name="mute_mic_title" msgid="2813215197799569553">"Mikrofon"</string>
     <string name="mute_mic_summary" msgid="5426953935775303904">"Kontroliše pristup aplikacija mikrofonu"</string>
-    <string name="vehicle_data_title" msgid="935933215161763721">"Podaci sistema za info-zabavu"</string>
+    <string name="vehicle_data_title" msgid="935933215161763721">"Podaci sistema za informacije i zabavu"</string>
     <string name="vehicle_data_summary" msgid="9204836361819386115">"Upravljajte aktivnostima i informacijama sačuvanim u ovom vozilu"</string>
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Izbrišite profil"</string>
-    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Obrišite profil i naloge iz sistema za info-zabavu"</string>
+    <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Obrišite profil i naloge iz sistema za informacije i zabavu"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Ova radnja nije dostupna za profil"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Pristup kameri"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Odaberite da li aplikacije mogu da pristupaju kamerama automobila"</string>
@@ -786,21 +786,21 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Da biste videli uređaje, uključite Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Da biste uparili uređaj, otvorite Bluetooth podešavanja"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
-    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator sistema za info-zabavu"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator sistema za informacije i zabavu"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivirane aplikacije"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivirane aplikacije"</string>
     <string name="device_admin_apps_description" msgid="1371935499168453457">"Aplikacije sa ovom dozvolom imaju pristup podacima o ovom vozilu"</string>
     <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Nema aplikacija za administratora automobila"</string>
-    <string name="device_admin_status" msgid="4041772636856135168">"Ova aplikacija administratora sistema za info-zabavu je aktivna i omogućava aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da obavlja sledeće operacije:"</string>
-    <string name="device_admin_warning" msgid="8997805999333600901">"Aktiviranjem ove aplikacije sistema za info-zabavu omogućava se aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da obavlja sledeće operacije:"</string>
-    <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktiviraćete aplikaciju za info-zabavu?"</string>
-    <string name="add_device_admin" msgid="7674707256074840333">"Aktiviraj ovu aplikaciju sistema za info-zabavu"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Ova aplikacija administratora sistema za informacije i zabavu je aktivna i omogućava aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da obavlja sledeće operacije:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Aktiviranjem ove aplikacije sistema za informacije i zabavu omogućava se aplikaciji <xliff:g id="APP_NAME">%1$s</xliff:g> da obavlja sledeće operacije:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktiviraćete aplikaciju za informacije i zabavu?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Aktiviraj ovu aplikaciju sistema za informacije i zabavu"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Deaktiviraj i deinstaliraj"</string>
-    <string name="remove_device_admin" msgid="3595343390502030723">"Deaktiviraj ovu aplikaciju sistema za info-zabavu"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Deaktiviraj ovu aplikaciju sistema za informacije i zabavu"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Menadžer organizacije može da nadgleda aplikacije i podatke povezane sa ovim profilom, uključujući podešavanja, dozvole, korporativni pristup, mrežnu aktivnost i informacije o lokaciji vozila, kao i da upravlja njima."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Menadžer organizacije može da nadgleda aplikacije i podatke povezane sa ovim profilom, uključujući podešavanja, dozvole, korporativni pristup, mrežnu aktivnost i informacije o lokaciji uređaja, kao i da upravlja njima."</string>
-    <string name="admin_device_owner_message" msgid="896530502350904835">"Menadžer organizacije može da nadgleda aplikacije i podatke povezane sa ovim sistemom za info-zabavu, uključujući podešavanja, dozvole, korporativni pristup, aktivnosti na mreži i informacije o lokaciji uređaja, kao i da upravlja njima."</string>
-    <string name="admin_financed_message" msgid="7357397436233684082">"Menadžer organizacije će možda moći da pristupa podacima povezanim sa ovim sistemom za info-zabavu, da upravlja aplikacijama i da menja podešavanja ovog vozila."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"Menadžer organizacije može da nadgleda aplikacije i podatke povezane sa ovim sistemom za informacije i zabavu, uključujući podešavanja, dozvole, korporativni pristup, aktivnosti na mreži i informacije o lokaciji uređaja, kao i da upravlja njima."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"Menadžer organizacije će možda moći da pristupa podacima povezanim sa ovim sistemom za informacije i zabavu, da upravlja aplikacijama i da menja podešavanja ovog vozila."</string>
     <string name="disabled_by_policy_title" msgid="1121694702115232518">"To je nedostupno"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Ne možete da promenite jačinu zvuka u ovom vozilu kojim se upravlja"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Ne možete da upućujete pozive u ovom vozilu kojim se upravlja"</string>
@@ -820,11 +820,11 @@
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Saznajte više o: <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Informacije o vozilu kojim se upravlja"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Podešavanja kojim upravlja administrator grupe"</string>
-    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Da bi omogućio pristup podacima o ovom vozilu kojim se upravlja, administrator grupe može da promeni podešavanja i instalira softver na sistemu za info-zabavu.\n\nViše detalja potražite od adminsitratora grupe."</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Da bi omogućio pristup podacima o ovom vozilu kojim se upravlja, administrator grupe može da promeni podešavanja i instalira softver na sistemu za informacije i zabavu.\n\nViše detalja potražite od adminsitratora grupe."</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Informacije koje administartor grupe može da vidi"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Promene koje je uneo administrator grupe"</string>
     <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Podaci povezani sa nalogom vozila kojim se upravlja"</li>\n" "<li>"Lista aplikacija u vozilu kojim se upravlja"</li>\n" "<li>"Vreme i podaci potrošeni u svakoj aplikaciji"</li></string>
-    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Pristup sistemu za info-zabavu"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Pristup sistemu za informacije i zabavu"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Lista aplikacija u vozilu"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Broj aplikacija predstavlja procenu. Možda ne obuhvata aplikacije instalirane izvan Play prodavnice."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
@@ -850,8 +850,8 @@
     <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Podešeno je na <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Globalni HTTP proksi je podešen"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Pouzdani akreditivi na ličnom profilu"</string>
-    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Administrator može da zaključa sistem za info-zabavu i resetuje lozinku"</li>\n" "<li>"Administrator može da izbriše podatke o sistemu za info-zabavu"</li></string>
-    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Neuspeli pokušaji unosa lozinke pre brisanja svih podataka sa sistema za info-zabavu"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Administrator može da zaključa sistem za informacije i zabavu i resetuje lozinku"</li>\n" "<li>"Administrator može da izbriše podatke o sistemu za informacije i zabavu"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Neuspeli pokušaji unosa lozinke pre brisanja svih podataka sa sistema za informacije i zabavu"</string>
     <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Neuspeli pokušaji unosa lozinke pre brisanja podataka sa profila"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> pokušaj</item>
@@ -879,11 +879,11 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"Ovaj izveštaj o grešci se deli sa menadžerom organizacije za ovo vozilo. Obratite mu se za više detalja."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"Deli"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"Odbij"</string>
-    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Resetujte sistem za info-zabavu"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"Resetujte sistem za informacije i zabavu"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"Sistem je primio zahtev da se resetuje na fabrička podešavanja i obriše sve podatke. Možete da ga resetujete odmah ili će se resetovati kada sledeći put upalite kola. Tada možete da podesite novi profil."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"Resetuj"</string>
     <string name="factory_reset_later_button" msgid="2653125445148367016">"Resetuj kasnije"</string>
-    <string name="factory_reset_later_text" msgid="6371031843489938419">"Sis. za info-zab. se reset. kada opet upal. kola."</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"Sistem za informacije i zabavu će se resetovati kada opet upalite kola."</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"Morate da parkirate kola za početak resetovanja."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"Trenutno ne možete da promenite ovo podešavanje"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"Pristupačnost"</string>
