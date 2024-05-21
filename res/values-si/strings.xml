@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"අවලංගු කරන්න"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"මෙම යෙදුම් පද්ධතියේ ක්‍රියාකාරිත්වයට සෘණාත්මකව බලපාන අතර පසුබිමේ ක්‍රියාත්මක වීම වළක්වා ඇත.\nපසුබිම් භාවිතයට ඉඩ දීමට සහ මෙම ලැයිස්තුවෙන් එය ඉවත් කිරීමට යෙදුමට ප්‍රමුඛත්වය දෙන්න."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"යෙදුම ප්‍රමුඛ කරන්න"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"පාරිතෝෂික කෙටිපණිවුඩ ප්‍රවේශය"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"ප්‍රිමියම් SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"පාරිතෝෂික කෙටිපණිවුඩ ඔබෙන් මුදල් අය කළ හැකි අතර ඔබේ වාහක බිල්පත්වලට එක් කරනු ඇත. ඔබ යෙදුමක් සඳහා අවසරය සබල කරන්නේ නම්, ඔබට එම යෙදුම භාවිතයෙන් පාරිතෝෂික කෙටිපණිවුඩ යැවීමට හැකි වනු ඇත."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"පරිශීලන ප්‍රවේශය"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ඔබ භාවිත කරන වෙනත් යෙදුම් මොනවාද යන්න සහ ඒවා කොතරම් භාවිත කරන්නේද යන්න මෙන්ම, ඔබේ වාහකය, භාෂා සැකසීම්, සහ වෙනත් විස්තර පිළිබඳව හඹා යාමට පරිශීලන ප්‍රවේශය යෙදුමකට ඉඩ දෙයි."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"ස්ථානය"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ස්ථානය භාවිත කරන්න"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ඔබ සඳහන් කර ඇති ඕනෑම යෙදුමක් සමග ඔබේ මෝටර් රථයේ ස්ථානය භාවිතා කරන්න."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ඔබ මෙය ක්‍රියාවිරහිත කරන්නේ නම්, එය රියැදුරු සහාය සඳහා අවශ්‍ය ඒවා හැර අනෙකුත් සියලු යෙදුම් සඳහා ස්ථාන ප්‍රවේශය ඉවත් කරනු ඇත"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ඔබ මෙය ක්‍රියාවිරහිත කරන්නේ නම්, ස්ථාන තොරතුරු මත යැපෙන රියැදුරු සහායක යෙදුම් අබල කරනු ඇත"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"කෙසේ වෙතත් ක්‍රියාවිරහිත කරන්න"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"මෙම සැකසීම වෙනස් කළ නොහැකි අතර ඔබේ මෝටර් රථ නිෂ්පාදකයා විසින් අබල කර ඇත."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ඔබට ධාවනය කිරීමට උදවු වන විශේෂාංග"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ඔබේ මෝටර් රථයේ ස්ථානයට ප්‍රවේශ වීමට, ඔබේ මෝටර් රථයේ නිෂ්පාදකයා විසින් අනුමත කරන ලද, එක්ව තැනූ විශේෂාංගවලට ඉඩ දෙන්න."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"මෑතක දී ප්‍රවේශ වූ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"මෑතක දී ප්‍රවේශ වූ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"සියල්ල බලන්න"</string>

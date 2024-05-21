@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द गर्नुहोस्"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"यी एपहरूले सिस्टमको पर्फर्मेन्समा नकरात्मक प्रभाव पार्छन् र यी एपहरूलाई ब्याकग्राउन्डमा चल्ने अनुमति दिइएको छैन।\nतपाईं एपलाई ब्याकग्राउन्डमा चल्ने अनुमति दिन चाहनुहुन्छ भने यसलाई प्राथमिकता दिनुहोस् र सूचीबाट हटाउनुहोस्।"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"एपलाई प्राथमिकता दिनुहोस्"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रिमियम SMS सुविधामाथिको पहुँच"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"प्रिमियम SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रिमियम SMS सुविधा सक्रिय गर्नाले तपाईंलाई पैसा लाग्न सक्छ र उक्त लागत तपाईंको सेवा प्रदायकलाई तिर्नु पर्ने बिलमा जोडिने छ। तपाईंले एपका लागि अनुमति सक्षम पार्नुभएका खण्डमा तपाईं त्यस एपको प्रयोग गरेर प्रिमियम SMS पठाउन सक्नु हुने छ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"प्रयोग गर्ने अनुमति"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"प्रयोगको पहुँचले एपलाई तपाईंले आफ्नो सेवा प्रदायक, भाषासम्बन्धी सेटिङ र अन्य विवरणहरूसहित अन्य कुन कुन एपहरू गरिरहनुभएको छ र कत्तिको प्रयोग गर्नुहुन्छ भन्ने कुरा ट्र्याक गर्न दिन्छ।"</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"लोकेसन प्रयोग गर्नुहोस्"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"तपाईंले तोकेको जुनसुकै एपका सहायताले आफ्नो कारको लोकेसन प्रयोग गर्नुहोस्।"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"तपाईंले लोकेसन अफ गर्नुभयो भने चालकलाई अझ सुरक्षित पार्ने प्रविधिका निम्ति आवश्यक पर्ने एपबाहेक अन्य कुनै पनि एपले लोकेसन प्रयोग गर्न पाउने छैन"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"तपाईंले यो प्रविधि अफ गर्नुभयो भने लोकेसनसम्बन्धी जानकारीमा निर्भर हुने चालकलाई अझ सुरक्षित पार्ने प्रविधिसँग सम्बन्धित एपहरू अफ गरिने छन्"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"जे भए पनि अफ गर्नुहोस्"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"तपाईंको कारको उत्पादकले यो सेटिङ अफ गरेको हुनाले यसलाई परिवर्तन गर्न मिल्दैन।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"तपाईंलाई ड्राइभ गर्न सघाउने सुविधाहरू"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"तपाईंको कारका निर्माताले अनुमोदन गरेका अन्तर्निर्मित सुविधाहरूलाई तपाईंको कारको लोकेसन प्रयोग गर्ने अनुमति दिनुहोस्।"</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"हालसालै लोकेसन प्रयोग गरेका एपहरू"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"हालसालै लोकेसन प्रयोग गरेका एपहरू"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"सबै हेर्नुहोस्"</string>

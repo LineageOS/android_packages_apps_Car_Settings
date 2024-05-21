@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ยกเลิก"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"แอปเหล่านี้ส่งผลเสียต่อประสิทธิภาพของระบบและถูกป้องกันไม่ให้ทำงานในเบื้องหลัง\nตั้งแอปเป็นแอปสำคัญเพื่ออนุญาตการใช้งานในเบื้องหลังและนำแอปดังกล่าวออกจากรายการนี้"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ตั้งเป็นแอปสำคัญ"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"การเข้าถึง SMS แบบพรีเมียม"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS แบบพรีเมียม"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS แบบพรีเมียมอาจมีค่าใช้จ่ายและจะเพิ่มเข้าไปในใบเรียกเก็บเงินจากผู้ให้บริการ หากคุณให้สิทธิ์แอปหนึ่งๆ คุณจะใช้แอปนั้นส่ง SMS แบบพรีเมียมได้"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"การเข้าถึงการใช้งาน"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"การเข้าถึงการใช้งานทำให้แอปติดตามได้ว่าคุณกำลังใช้แอปอื่นใดอยู่บ้างในความถี่มากน้อยเท่าใด ตลอดจนทราบข้อมูลผู้ให้บริการ การตั้งค่าภาษา และรายละเอียดอื่นๆ"</string>
@@ -421,12 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"ตำแหน่ง"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ใช้ตำแหน่ง"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ใช้ตำแหน่งของรถกับแอปที่คุณระบุไว้"</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"แอปสาระบันเทิง"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"อนุญาตให้แอปเข้าถึงตำแหน่งของคุณ"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"หากคุณปิดการตั้งค่านี้ ระบบจะนำสิทธิ์เข้าถึงตำแหน่งของทุกแอปออกยกเว้นที่ต้องใช้สำหรับตัวช่วยของผู้ขับ"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"หากคุณปิดการตั้งค่านี้ ระบบจะปิดใช้แอปตัวช่วยของผู้ขับที่ใช้ข้อมูลตำแหน่ง"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ปิดเลย"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"การตั้งค่านี้เปลี่ยนแปลงไม่ได้และปิดใช้ไว้โดยผู้ผลิตรถยนต์"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ฟีเจอร์ที่ช่วยในการขับรถ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"อนุญาตให้ฟีเจอร์ในตัวที่ผู้ผลิตรถอนุมัติเข้าถึงตำแหน่งของรถ"</string>
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"แอปที่จำเป็น"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"แอปที่ผู้ผลิตรถยนต์จำเป็นต้องใช้เพื่อช่วยในการขับขี่"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"เข้าถึงล่าสุด"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"เข้าถึงล่าสุด"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ดูทั้งหมด"</string>

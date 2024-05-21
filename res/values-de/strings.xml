@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Abbrechen"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Diese Apps wirken sich negativ auf die Systemleistung aus. Deshalb wird ihre Ausführung im Hintergrund verhindert.\nWenn du möchtest, dass eine dieser Apps im Hintergrund ausgeführt und aus der Liste entfernt wird, musst du die App priorisieren."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"App priorisieren"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Zugriff auf Premium-SMS"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium-SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Bei Premium-SMS können Kosten entstehen, die über den Mobilfunkanbieter abgerechnet werden. Wenn du für eine App Premium-SMS zulässt, kannst du aus ihr Premium-SMS versenden."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Zugriff auf Nutzungsdaten"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Der Zugriff auf die Nutzungsdaten ermöglicht es einer App, verschiedene Informationen zu erfassen – welche anderen Apps du wie oft verwendest, welchen Mobilfunkanbieter du nutzt, welche Spracheinstellungen du festgelegt hast usw."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Standort"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Standort verwenden"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Du kannst den Standort deines Autos mit den von dir ausgewählten Apps verwenden."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Wenn du diese Funktion deaktivierst, wird der Standortzugriff für alle Apps entfernt, außer für diejenigen, die für das Fahrassistenzsystem benötigt werden"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Wenn du diese Funktion deaktivierst, werden Fahrassistenzsystem-Apps deaktiviert, die Standortinformationen benötigen"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Trotzdem deaktivieren"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Diese Einstellung kann nicht geändert werden und wurde von deinem Fahrzeughersteller deaktiviert."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funktionen des Fahrassistenzsystems"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Dadurch erlaubst du integrierten Funktionen, die vom Fahrzeughersteller genehmigt wurden, auf den Standort deines Autos zuzugreifen."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Vor Kurzem zugegriffen"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Vor Kurzem zugegriffen"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Alle ansehen"</string>

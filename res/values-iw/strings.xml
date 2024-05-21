@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ביטול"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"האפליקציות האלה משפיעות לרעה על ביצועי המערכת ולכן הן נחסמו להפעלה ברקע.\nכדי לאפשר לאפליקציה לפעול ברקע יש לקבוע לה עדיפות ולהסיר אותה מהרשימה הזו."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"עדיפות לאפליקציה"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"שליחת הודעות SMS בתשלום"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"‫SMS פרימיום"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"החיובים תמורת שליחה של הודעות SMS בתשלום, אם יהיו, יצורפו לחשבונות הספק שלך. לאחר שמפעילים את ההרשאה לאפליקציה כלשהי, ניתן לשלוח באמצעותה הודעות SMS בתשלום."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"גישה לנתוני השימוש"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"גישה לנתוני השימוש מאפשרת לאפליקציה לעקוב אחר האפליקציות האחרות שנעשה בהן שימוש ואחר תדירות השימוש בהן. המידע כולל גם את זהות הספק, הגדרות השפה ופרטים אחרים."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"מיקום"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"שימוש במיקום"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"האפליקציות שציינת יכולות להשתמש במיקום הרכב."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"אם משביתים את האפשרות הזו, מסירים את הגישה למיקום עבור כל האפליקציות מלבד אלה שדרושות לעזרה לנהג"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"אם משביתים את האפשרות הזו, משביתים את אפליקציות העזרה לנהג שמתבססות על פרטי המיקום"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"השבתה בכל זאת"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"יצרן הרכב השבית את ההגדרה הזו ברכב שלך ולא ניתן לשנות אותה."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"תכונות שעוזרות בנהיגה"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"מתן הרשאה לתכונות מובנות, שאושרו על ידי יצרן הרכב, לגשת למיקום הרכב."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"בקשות הגישה האחרונות"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"בקשות הגישה האחרונות"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"הצגת הכול"</string>

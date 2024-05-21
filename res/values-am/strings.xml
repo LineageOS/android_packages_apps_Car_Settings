@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ተወው"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"እነዚህ መተግበሪያዎች በሥርዓት አፈጻጸም ላይ አሉታዊ ተጽዕኖ ያደርጋሉ እና በዳራ ከመሄድ የተከለከሉ ናቸው።\n የዳራ አጠቃቀምን ለመፍቀድ እና ከዚህ ዝርዝር እሱን ለማስወገድ ለመተግበሪያው ቅድሚያ ይስጡ።"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ለመተግበሪያ ቅድሚያ ስጥ"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"የፕሪሚየም ኤስኤምኤስ መዳረሻ"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"ፕሪሚየም ኤስኤምኤስ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ፕሪሚየም ኤስኤምኤስ ውድ ገንዘብ ሊያስወጣዎት ይችላል፣ እና በአገልግሎት አቅራቢ ክፍያዎ ላይ ሒሳብ ያስጨምርብዎታል። ለመተግበሪያ ፈቃድን ካነቁ ያንን መተግበሪያ በመጠቀም ፕሪሚየም ኤስኤምኤስ መላክ ይችላሉ።"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"የአጠቃቀም መዳረሻ"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"የአጠቃቀም መዳረሻ አንድ መተግበሪያ የሚጠቀሟቸውን ሌሎች መተግበሪያዎች እና ምን ያህል ጊዜ እንደሚጠቀሙባቸው፣ እንዲሁም የአገልግሎት አቅራቢዎን፣ የቋንቋ ቅንብሮችዎን እና ሌሎች ዝርዝሮችዎን እንዲከታተል ያስችለዋል።"</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"አካባቢ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"አካባቢን ተጠቀም"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"የመኪናዎን አካባቢ በጠቀሱት ማንኛውም መተግበሪያ ይጠቀሙ።"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ይህን ካጠፉት ለአሽከርካሪ ረዳት ከሚያስፈልጉት በስተቀር ለሁሉም መተግበሪያዎች የአካባቢ መዳረሻን ያስወግዳል"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ይህን ካጠፉት በአካባቢ መረጃ ላይ የሚተማመኑ የአሽከርካሪ ረዳት መተግበሪያዎች ይሰናከላሉ"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ለማንኛውም አጥፋ"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ይህ ቅንብር ሊለወጥ አይችልም እና በእርስዎ የመኪና አምራች ተሰናክሏል።"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"እንዲያሽከረክሩ የሚያግዙዎት ባህሪያት"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"የመኪናዎን አካባቢ ለመድረስ በመኪናዎ አምራች የጸደቁ አብሮ ገነብ ባህሪያትን ይፍቀዱ።"</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"በቅርብ ጊዜ የተደረሰበት"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"በቅርብ ጊዜ የተደረሰበት"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ሁሉንም ይመልከቱ"</string>

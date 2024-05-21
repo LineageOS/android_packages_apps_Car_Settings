@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ਰੱਦ ਕਰੋ"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ਇਹ ਐਪਾਂ ਸਿਸਟਮ ਦੀ ਕਾਰਗੁਜ਼ਾਰੀ ਨੂੰ ਨਕਾਰਾਤਮਕ ਤਰੀਕੇ ਨਾਲ ਪ੍ਰਭਾਵਿਤ ਕਰਦੀਆਂ ਹਨ ਅਤੇ ਐਪ ਨੂੰ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਚੱਲਣ ਤੋਂ ਰੋਕਿਆ ਗਿਆ ਹੈ।\nਬੈਕਗ੍ਰਾਊਂਡ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਣ ਲਈ ਐਪ ਨੂੰ ਤਰਜੀਹ ਦਿਓ ਅਤੇ ਇਸਨੂੰ ਇਸ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾਓ।"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ਐਪ ਨੂੰ ਤਰਜੀਹ ਦਿਓ"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"ਪ੍ਰੀਮੀਅਮ SMS ਤੱਕ ਪਹੁੰਚ"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"ਪ੍ਰੀਮੀਅਮ SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ਪ੍ਰੀਮੀਅਮ SMS ਦਾ ਤੁਹਾਡੇ ਤੋਂ ਖਰਚਾ ਲਿਆ ਜਾ ਸਕਦਾ ਹੈ ਅਤੇ ਇਸ ਨਾਲ ਤੁਹਾਡੇ ਕੈਰੀਅਰ ਬਿੱਲਾਂ ਵਿੱਚ ਵਾਧਾ ਹੋ ਜਾਵੇਗਾ। ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਐਪ ਨੂੰ ਇਜਾਜ਼ਤ ਦਿੰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਉਸ ਐਪ ਦੀ ਵਰਤੋਂ ਨਾਲ ਪ੍ਰੀਮੀਅਮ SMS ਭੇਜਣ ਦੇ ਯੋਗ ਹੋ ਜਾਵੋਗੇ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ਵਰਤੋਂ ਪਹੁੰਚ"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ਵਰਤੋਂ ਪਹੁੰਚ ਕਿਸੇ ਐਪ ਨੂੰ ਇਹ ਨਜ਼ਰ ਰੱਖਣ ਦਿੰਦਾ ਹੈ ਕਿ ਤੁਸੀਂ ਕਿਹੜੀਆਂ ਐਪਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹੋ ਅਤੇ ਕਿੰਨੀ ਵਾਰੀ, ਜਿਵੇਂ ਕਿ ਤੁਹਾਡਾ ਕੈਰੀਅਰ, ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ, ਅਤੇ ਹੋਰ ਵੇਰਵੇ।"</string>
@@ -421,12 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"ਟਿਕਾਣਾ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ਟਿਕਾਣਾ ਵਰਤੋ"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ਤੁਹਾਡੇ ਵੱਲੋਂ ਨਿਰਧਾਰਿਤ ਕੀਤੀ ਗਈ ਐਪ ਨਾਲ ਆਪਣੀ ਕਾਰ ਦੇ ਟਿਕਾਣੇ ਦੀ ਵਰਤੋਂ ਕਰੋ।"</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"ਵਾਹਨ ਆਡੀਓ ਐਪਾਂ"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"ਆਪਣੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਐਪਾਂ ਨੂੰ ਆਗਿਆ ਦਿਓ"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ਜੇ ਤੁਸੀਂ ਇਸ ਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਇਹ ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਲਈ ਲੋੜੀਂਦੀ ਐਪਾਂ ਨੂੰ ਛੱਡ ਕੇ ਬਾਕੀ ਸਾਰੀਆਂ ਐਪਾਂ ਵਾਸਤੇ ਟਿਕਾਣਾ ਪਹੁੰਚ ਨੂੰ ਹਟਾ ਦੇਵੇਗਾ"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ਜੇ ਤੁਸੀਂ ਇਸਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਉਨ੍ਹਾਂ ਡਰਾਈਵਰ ਸਹਾਇਤਾ ਐਪਾਂ ਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ ਜੋ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ \'ਤੇ ਨਿਰਭਰ ਕਰਦੀਆਂ ਹਨ"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ਕਿਸੇ ਵੇਲੇ ਵੀ ਬੰਦ ਕਰੋ"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ਇਸ ਸੈਟਿੰਗ ਨੂੰ ਬਦਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਅਤੇ ਇਸਨੂੰ ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਨੇ ਬੰਦ ਕਰ ਦਿੱਤਾ ਹੈ।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ਡਰਾਈਵਿੰਗ \'ਚ ਮਦਦ ਕਰਨ ਵਾਲੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਨਿਰਮਾਤਾ ਵੱਲੋਂ ਮਨਜ਼ੂਰਸ਼ੁਦਾ ਬਿਲਟ-ਇਨ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨੂੰ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ।"</string>
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"ਡਰਾਈਵਿੰਗ ਵਿੱਚ ਸਹਾਇਤਾ ਲਈ ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਵੱਲੋਂ ਲੋੜੀਂਦੀਆਂ ਐਪਾਂ।"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ਸਭ ਦੇਖੋ"</string>

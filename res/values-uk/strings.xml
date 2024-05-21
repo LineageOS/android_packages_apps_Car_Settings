@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Скасувати"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ці додатки негативно впливають на продуктивність системи, тому їх роботу у фоновому режимі заблоковано.\nНадайте додатку пріоритет, щоб дозволити його використання у фоновому режимі й вилучити з цього списку."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Надати пріоритет"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Доступ до платних SMS"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Платні SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Кошти за платні SMS стягує оператор. Ви зможете надсилати платні SMS у додатку, якому надасте такий дозвіл."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Доступ до історії використання"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Завдяки доступу до історії використання додаток може відстежувати, які інші додатки ви використовуєте і як часто, а також визначати назву вашого оператора, налаштування мови й інші відомості."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Геодані"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Використовувати геодані"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Усі вказані вами додатки матимуть доступ до геоданих автомобіля."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Якщо вимкнути цю опцію, доступ до геоданих буде скасовано для всіх додатків, крім потрібних для допомоги водію"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Якщо вимкнути цю опцію, додатки для допомоги водію, які використовують геодані, буде вимкнено"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Вимкнути"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Це налаштування не можна змінити. Його вимкнув виробник вашого автомобіля."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функції допомоги водію"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Вбудовані функції, які схвалив виробник автомобіля, матимуть доступ до його геоданих."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Нещодавно використовувалися"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Нещодавно використовувалися"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Показати всі"</string>

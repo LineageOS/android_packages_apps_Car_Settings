@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Batal"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aplikasi ini berdampak negatif pada performa sistem dan telah dihentikan agar tidak berjalan di latar belakang.\nPrioritaskan aplikasi untuk mengizinkan penggunaan di latar belakang dan menghapusnya dari daftar ini."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritaskan apl"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Akses SMS Premium"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS Premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS Premium mungkin memerlukan biaya dan akan menambah tagihan operator. Jika izin aplikasi diaktifkan, Anda dapat mengirim SMS premium menggunakan aplikasi tersebut."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Akses penggunaan"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Akses penggunaan memungkinkan aplikasi melacak aplikasi lain yang Anda gunakan dan frekuensi penggunaannya, serta operator, setelan bahasa, dan detail lainnya."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokasi"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gunakan lokasi"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Gunakan lokasi mobil Anda di aplikasi yang Anda tentukan."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Jika Anda menonaktifkannya, fitur ini akan menghapus akses lokasi untuk semua aplikasi kecuali aplikasi yang diperlukan untuk bantuan bagi pengemudi"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Jika Anda menonaktifkannya, aplikasi bantuan bagi pengemudi yang mengandalkan informasi lokasi akan dinonaktifkan"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Tetap nonaktifkan"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Setelan ini tidak dapat diubah dan telah dinonaktifkan oleh produsen mobil Anda."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Fitur yang membantu Anda mengemudi"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Izinkan fitur bawaan, yang disetujui oleh produsen mobil Anda, untuk mengakses lokasi mobil Anda."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Diakses baru-baru ini"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Diakses baru-baru ini"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Lihat semua"</string>

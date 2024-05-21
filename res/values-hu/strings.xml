@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Mégse"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ezek az alkalmazások negatív hatással vannak a rendszer teljesítményére, ezért a rendszer megakadályozta, hogy a háttérben fussanak.\nAz alkalmazás priorizálásával engedélyezheti a háttérbeli használatot, és eltávolíthatja az appot erről a listáról."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"App priorizálása"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Emelt díjas SMS küldése"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Emelt díjas SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"A Prémium SMS-ek használata pénzbe kerülhet Önnek, és a szolgáltatója által kiállított számlák végösszegét növeli. Ha engedélyt ad valamelyik alkalmazásnak, akkor azzal lehetősége lesz prémium SMS-eket küldeni."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Használati hozzáférés"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"A használati hozzáférés lehetővé teszi az alkalmazás számára a következők nyomon követését: Ön milyen más alkalmazásokat használ, milyen gyakran használja őket, valamint szolgáltatóit, nyelvi beállításit és egyéb részleteket."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Hely"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Hely használata"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Az autó helyadatainak használata az Ön által megadott alkalmazásokkal."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"A beállítás kikapcsolásával megszünteti a helyadatokhoz való hozzáférést is az összes alkalmazás esetében; kivéve azoknál, amelyek szükségesek a sofőrtámogatáshoz."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ha kikapcsolja ezt a beállítást, letiltja a helyadatokra támaszkodó sofőrtámogató alkalmazásokat is."</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Kikapcsolás mindenképp"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Ez a beállítás nem módosítható, az autó gyártója pedig letiltotta."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Vezetésben segítő funkciók"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Engedélyezi az autó gyártója által jóváhagyott beépített funkciók számára az autó helyadataihoz való hozzáférést."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"A közelmúltban hozzáférő alkalmazások"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"A közelmúltban hozzáférő alkalmazások"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Összes megtekintése"</string>

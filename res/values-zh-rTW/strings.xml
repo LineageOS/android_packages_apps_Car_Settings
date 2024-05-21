@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"這些應用程式會對系統效能造成負面影響，目前已禁止在背景執行。\n你可以將特定應用程式設為優先，允許該應用程式在背景執行，並將其從這份清單中移除。"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"將應用程式設為優先"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"付費簡訊存取權"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"付費簡訊"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"傳送付費簡訊必須另外付費，相關費用會併入電信費帳單。如果你為某個應用程式啟用權限，即可利用該應用程式傳送付費簡訊。"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"用量資料存取權"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"具有使用存取權的應用程式可以追蹤你使用的其他應用程式與頻率，以及你的電信業者、語言設定等詳情。"</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"定位"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置資訊"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"允許你指定的所有應用程式使用車輛位置資訊。"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"如果關閉這項設定，系統會停用所有應用程式的位置存取權，但駕駛輔助功能所需的應用程式除外"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"如果關閉位置資訊，系統會停用必須用到這項資訊的駕駛輔助應用程式"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"仍要關閉"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"這項設定已由車輛製造商停用，而且無法變更。"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"駕駛輔助功能"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"允許經車輛製造商核准的內建功能存取車輛位置資訊。"</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"近期存取"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"近期存取"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"全部顯示"</string>
