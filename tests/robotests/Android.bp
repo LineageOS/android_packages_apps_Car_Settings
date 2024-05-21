@@ -25,7 +25,6 @@ android_robolectric_test {
     ],
 
     libs: [
-        "Settings-robo-testutils",
         "truth",
         "testng",
         "android.car",

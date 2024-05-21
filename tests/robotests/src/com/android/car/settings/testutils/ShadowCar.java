@@ -21,9 +21,11 @@ import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 
 import android.car.Car;
+import android.car.Car.CarServiceLifecycleListener;
 import android.car.CarNotConnectedException;
 import android.content.Context;
 import android.content.ServiceConnection;
+import android.os.Handler;
 
 import org.mockito.stubbing.Answer;
 import org.robolectric.annotation.Implementation;
@@ -67,6 +69,17 @@ public class ShadowCar {
             }
         }
         return sMockCar;
+    }
+
+    /**
+     * Returns a mocked version of a {@link Car} object.
+     */
+    @Implementation
+    public static Car createCar(Context context,
+                                Handler handler,
+                                long waitTimeoutMs,
+                                CarServiceLifecycleListener statusChangeListener) {
+        return createCar(context, null);
     }
 
     /**

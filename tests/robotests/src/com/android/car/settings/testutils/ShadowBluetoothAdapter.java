@@ -26,7 +26,7 @@ import android.os.ParcelUuid;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
-import org.robolectric.shadows.ShadowApplication;
+import org.robolectric.shadow.api.Shadow;
 
 import java.util.Collections;
 import java.util.List;
@@ -34,6 +34,7 @@ import java.util.List;
 @Implements(BluetoothAdapter.class)
 public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBluetoothAdapter {
 
+    private static BluetoothAdapter sInstanceForTest;
     private static int sResetCalledCount = 0;
     private String mName;
     private int mScanMode;
@@ -50,7 +51,10 @@ public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBlueto
 
     @Implementation
     protected static synchronized BluetoothAdapter getDefaultAdapter() {
-        return (BluetoothAdapter) ShadowApplication.getInstance().getBluetoothAdapter();
+        if (sInstanceForTest == null) {
+            sInstanceForTest = Shadow.newInstanceOf(BluetoothAdapter.class);
+        }
+        return sInstanceForTest;
     }
 
     @Implementation
