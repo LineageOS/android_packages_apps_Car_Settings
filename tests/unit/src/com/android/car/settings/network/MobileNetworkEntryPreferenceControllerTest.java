@@ -56,7 +56,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.android.car.datasubscription.DataSubscription;
-import com.android.car.datasubscription.DataSubscriptionStatus;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ColoredTwoActionSwitchPreference;
 import com.android.car.settings.common.FragmentController;
@@ -138,7 +137,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
         when(mCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)).thenReturn(true);
         when(mConnectivityManager.getNetworkCapabilities(network)).thenReturn(mCapabilities);
         when(mConnectivityManager.getAllNetworks()).thenReturn(new Network[]{network});
-        when(mDataSubscription.getDataSubscriptionStatus()).thenReturn(DataSubscriptionStatus.PAID);
+        when(mDataSubscription.isDataSubscriptionInactiveOrTrial()).thenReturn(false);
 
         when(mUserManager.isAdminUser()).thenReturn(true);
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS))
@@ -151,7 +150,6 @@ public class MobileNetworkEntryPreferenceControllerTest {
                 "key", mFragmentController, mCarUxRestrictions);
 
         mPreferenceController.setSubscription(mDataSubscription);
-        mPreferenceController.setSubscriptionStatus(DataSubscriptionStatus.PAID);
 
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mMockPreference);
     }

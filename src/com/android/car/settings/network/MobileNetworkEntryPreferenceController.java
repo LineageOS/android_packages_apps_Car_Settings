@@ -37,7 +37,6 @@ import androidx.annotation.CallSuper;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.datasubscription.DataSubscription;
-import com.android.car.datasubscription.DataSubscriptionStatus;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ColoredTwoActionSwitchPreference;
 import com.android.car.settings.common.FragmentController;
@@ -49,7 +48,8 @@ import java.util.List;
 /** Controls the preference for accessing mobile network settings. */
 public class MobileNetworkEntryPreferenceController extends
         PreferenceController<ColoredTwoActionSwitchPreference> implements
-        SubscriptionsChangeListener.SubscriptionsChangeAction {
+        SubscriptionsChangeListener.SubscriptionsChangeAction,
+        DataSubscription.DataSubscriptionChangeListener {
     private final UserManager mUserManager;
     private final SubscriptionsChangeListener mChangeListener;
     private final SubscriptionManager mSubscriptionManager;
@@ -65,8 +65,6 @@ public class MobileNetworkEntryPreferenceController extends
         }
     };
     private DataSubscription mSubscription;
-    private int mSubscriptionStatus;
-    private DataSubscription.DataSubscriptionChangeListener mDataSubscriptionChangeListener;
 
     @SuppressLint("MissingPermission")
     public MobileNetworkEntryPreferenceController(Context context, String preferenceKey,
@@ -112,13 +110,7 @@ public class MobileNetworkEntryPreferenceController extends
                     mSubscriptionId), /* notifyForDescendants= */ false, mMobileDataChangeObserver);
         }
         if (mSubscription != null) {
-            mSubscriptionStatus = mSubscription.getDataSubscriptionStatus();
-            mDataSubscriptionChangeListener =
-                    value -> {
-                        mSubscriptionStatus = value;
-                        refreshUi();
-                    };
-            mSubscription.addDataSubscriptionListener(mDataSubscriptionChangeListener);
+            mSubscription.addDataSubscriptionListener(this);
         }
     }
 
@@ -151,7 +143,7 @@ public class MobileNetworkEntryPreferenceController extends
     @Override
     protected boolean handlePreferenceClicked(ColoredTwoActionSwitchPreference preference) {
         if (isDataSubscriptionFlagEnable()
-                && mSubscriptionStatus != DataSubscriptionStatus.PAID) {
+                && mSubscription.isDataSubscriptionInactiveOrTrial()) {
             Intent dataSubscriptionIntent = new Intent(DATA_SUBSCRIPTION_ACTION);
             dataSubscriptionIntent.setPackage(getContext().getString(
                     R.string.connectivity_flow_app));
@@ -192,7 +184,8 @@ public class MobileNetworkEntryPreferenceController extends
         if (!mTelephonyManager.isDataEnabled()) {
             return getContext().getString(R.string.mobile_network_state_off);
         }
-        if (isDataSubscriptionFlagEnable() && mSubscriptionStatus != DataSubscriptionStatus.PAID) {
+        if (isDataSubscriptionFlagEnable()
+                && mSubscription.isDataSubscriptionInactiveOrTrial()) {
             return getContext().getString(R.string.connectivity_inactive_prompt);
         }
         int count = subs.size();
@@ -210,7 +203,8 @@ public class MobileNetworkEntryPreferenceController extends
         if (!mTelephonyManager.isDataEnabled()) {
             return null;
         }
-        if (isDataSubscriptionFlagEnable() && mSubscriptionStatus != DataSubscriptionStatus.PAID
+        if (isDataSubscriptionFlagEnable()
+                && mSubscription.isDataSubscriptionInactiveOrTrial()
                 && !getUxRestrictions().isRequiresDistractionOptimization()) {
             getPreference().setIsWarning(true);
             return getContext().getString(R.string.connectivity_inactive_action_text);
@@ -237,17 +231,12 @@ public class MobileNetworkEntryPreferenceController extends
         mSubscription = subscription;
     }
 
-    @VisibleForTesting
-    void setSubscriptionStatus(int status) {
-        mSubscriptionStatus = status;
-    }
-
-    @VisibleForTesting
-    int getSubscriptionStatus() {
-        return mSubscriptionStatus;
-    }
-
     private boolean isDataSubscriptionFlagEnable() {
         return com.android.car.datasubscription.Flags.dataSubscriptionPopUp();
+    }
+
+    @Override
+    public void onChange(int value) {
+        refreshUi();
     }
 }

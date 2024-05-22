@@ -34,7 +34,6 @@ import android.os.UserManager;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.datasubscription.DataSubscription;
-import com.android.car.datasubscription.DataSubscriptionStatus;
 import com.android.car.qc.QCActionItem;
 import com.android.car.qc.QCCategory;
 import com.android.car.qc.QCItem;
@@ -52,15 +51,14 @@ import com.android.settingslib.net.DataUsageController;
 public class MobileDataRow extends SettingsQCItem {
     private final DataUsageController mDataUsageController;
     private boolean mIsDistractionOptimizationRequired;
-    private int mSubscriptionStatus;
+    private DataSubscription mSubscription;
 
     public MobileDataRow(Context context) {
         super(context);
         setAvailabilityStatusForZone(getAvailabilityStatusForZoneFromXml(context,
                 R.xml.network_and_internet_fragment, R.string.pk_mobile_network_settings_entry));
         mDataUsageController = getDataUsageController(context);
-        DataSubscription dataSubscription = new DataSubscription(context);
-        mSubscriptionStatus = dataSubscription.getDataSubscriptionStatus();
+        mSubscription = new DataSubscription(context);
     }
     @Override
     QCItem getQCItem() {
@@ -132,7 +130,8 @@ public class MobileDataRow extends SettingsQCItem {
 
     String getSubtitle(boolean dataEnabled) {
         if (isDataSubscriptionFlagEnable()
-                && dataEnabled && mSubscriptionStatus == DataSubscriptionStatus.INACTIVE) {
+                && dataEnabled
+                && mSubscription.isDataSubscriptionInactiveOrTrial()) {
             return getContext().getString(
                     R.string.connectivity_inactive_prompt);
         }
@@ -142,7 +141,8 @@ public class MobileDataRow extends SettingsQCItem {
 
     String getActionText(boolean dataEnabled) {
         if (isDataSubscriptionFlagEnable()
-                && dataEnabled && mSubscriptionStatus != DataSubscriptionStatus.PAID
+                && dataEnabled
+                && mSubscription.isDataSubscriptionInactiveOrTrial()
                 && !mIsDistractionOptimizationRequired) {
             return getContext().getString(
                     R.string.connectivity_inactive_action_text);
@@ -152,7 +152,7 @@ public class MobileDataRow extends SettingsQCItem {
 
     int getCategory() {
         if (isDataSubscriptionFlagEnable()
-                && mSubscriptionStatus != DataSubscriptionStatus.PAID) {
+                && mSubscription.isDataSubscriptionInactiveOrTrial()) {
             return QCCategory.WARNING;
         }
         return QCCategory.NORMAL;
@@ -171,16 +171,11 @@ public class MobileDataRow extends SettingsQCItem {
         setIsDistractionOptimizationRequired(carUxRestrictions);
     }
 
-    @VisibleForTesting
-    void setSubscriptionStatus(int subscriptionStatus) {
-        mSubscriptionStatus = subscriptionStatus;
-    }
-
     PendingIntent getPrimaryAction() {
         if (!isDataSubscriptionFlagEnable()) {
             return null;
         }
-        if (mSubscriptionStatus == DataSubscriptionStatus.PAID
+        if (!mSubscription.isDataSubscriptionInactiveOrTrial()
                 || mIsDistractionOptimizationRequired) {
             return null;
         }
@@ -195,5 +190,10 @@ public class MobileDataRow extends SettingsQCItem {
 
     private boolean isDataSubscriptionFlagEnable() {
         return com.android.car.datasubscription.Flags.dataSubscriptionPopUp();
+    }
+
+    @VisibleForTesting
+    public void setSubscription(DataSubscription dataSubscription) {
+        mSubscription = dataSubscription;
     }
 }

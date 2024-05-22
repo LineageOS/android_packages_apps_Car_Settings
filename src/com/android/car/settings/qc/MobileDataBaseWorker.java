@@ -39,23 +39,14 @@ import java.io.IOException;
  * @param <E> The {@link SettingsQCItem} the background worker is associated with.
  */
 public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
-        extends SettingsQCBackgroundWorker<E> implements OnUxRestrictionsChangedListener {
+        extends SettingsQCBackgroundWorker<E> implements OnUxRestrictionsChangedListener,
+        DataSubscription.DataSubscriptionChangeListener {
 
     private final TelephonyManager mTelephonyManager;
     private final int mSubId;
     private final SignalStrengthsListener mSignalStrengthsListener;
-    private final DataSubscription mSubscription;
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
-    private final DataSubscription.DataSubscriptionChangeListener mDataSubscriptionChangeListener =
-            new DataSubscription.DataSubscriptionChangeListener() {
-                @Override
-                public void onChange(int value) {
-                    if (getQCItem() != null) {
-                        ((MobileDataRow) getQCItem()).setSubscriptionStatus(value);
-                        notifyQCItemChange();
-                    }
-                }
-            };
+    private DataSubscription mSubscription;
     private boolean mCallbacksRegistered;
 
     private final ContentObserver mMobileDataChangeObserver = new ContentObserver(
@@ -86,7 +77,7 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
                     /* notifyForDescendants= */ false, mMobileDataChangeObserver);
             mCallbacksRegistered = true;
         }
-        mSubscription.addDataSubscriptionListener(mDataSubscriptionChangeListener);
+        mSubscription.addDataSubscriptionListener(this);
         ((MobileDataRow) getQCItem()).setCarUxRestrictions(
                 mUxRestrictionsHelper.getCarUxRestrictions());
     }
@@ -135,6 +126,13 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
     public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
         if (getQCItem() != null) {
             ((MobileDataRow) getQCItem()).setCarUxRestrictions(restrictionInfo);
+            notifyQCItemChange();
+        }
+    }
+
+    @Override
+    public void onChange(int value) {
+        if (getQCItem() != null) {
             notifyQCItemChange();
         }
     }
