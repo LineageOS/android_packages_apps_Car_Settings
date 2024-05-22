@@ -223,7 +223,7 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Զուգակցե՞լ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ի հետ"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Թույլ տալ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ին օգտագործել ձեր կոնտակտներն ու զանգերի պատմությունը"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Հնարավոր է՝ այս PIN-ը պետք լինի մուտքագրել մյուս սարքում:"</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Հնարավոր է՝ այս անցաբառը պետք լինի մուտքագրել մյուս սարքում:"</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Հնարավոր է՝ այս մուտքի բանալին պետք լինի մուտքագրել մյուս սարքում:"</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Պետք է պարունակի 16 թվանշան"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Սովորաբար 0000 կամ 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Զուգակցման հարցում"</string>
@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Չեղարկել"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Այս հավելվածները բացասաբար են անդրադառնում համակարգի արտադրողականության վրա, ուստի դրանց աշխատանքը ֆոնային ռեժիմում արգելափակվել է։\nԱռաջնահերթություն տվեք հավելվածին, որպեսզի թույլատրվի ֆոնային օգտագործումը, և հեռացրեք հավելվածն այս ցանկից։"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Դարձնել առաջնահերթ"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Վճարովի SMS-ների հասանելիություն"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Վճարովի SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Վճարովի SMS-ները կարող են լրացուցիչ գանձումներ առաջացնել: Հավելվածին թույլտվություն տալու դեպքում կկարողանաք դրա միջոցով վճարովի SMS-ներ ուղարկել։"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Օգտագ. տվյալների հասանելիութ."</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Օգտագործման մասին տվյալների հասանելիությունը հնարավորություն է տալիս հավելվածներին հավաքել տարբեր տեղեկություններ, օրինակ, այն մասին, թե ուրիշ ինչ հավելվածներ եք օգտագործում և ինչ հաճախականությամբ, որ օպերատորից եք օգտվում, լեզվի ինչ կարգավորումներ եք սահմանել և այլն:"</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Օգտագործել տեղորոշումը"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Օգտագործեք մեքենայի տեղադրության տվյալները ձեր նշած ցանկացած հավելվածի հետ։"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Եթե անջատեք այս կարգավորումը, տեղադրության հասանելիությունը կչեղարկվի բոլոր հավելվածների համար՝ բացառությամբ այն հավելվածների, որոնք անհրաժեշտ են վարորդին օգնելու համար"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Եթե անջատեք կարգավորումը, վարորդին օգնող հավելվածները, որոնք օգտագործում են տեղադրության տվյալները, չեն աշխատի"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Միևնույն է անջատել"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Այս կարգավորումը հնարավոր չէ փոխել, և ձեր մեքենայի արտադրողն անջատել է այն։"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Գործառույթներ, որոնք օգնում են ձեզ վարել"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Ձեր մեքենայի տեղադրության տվյալները հասանելի դարձնեք ներկառուցված հավելվածներին, որոնք հաստատվել են մեքենան արտադրողի կողմից։"</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Տեղադրության տվյալների օգտագործման վերջին հարցումները"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Տեղադրության տվյալների օգտագործման վերջին հարցումները"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Դիտել բոլորը"</string>

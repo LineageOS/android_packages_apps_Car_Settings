@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"لغو"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"این برنامه‌ها تأثیری منفی بر عملکرد سیستم دارند و اجرای آن‌ها در پس‌زمینه متوقف شده است.\nبرای اینکه به برنامه اجازه دهید در پس‌زمینه اجرا شود آن را در اولویت قرار دهید و از این فهرست بردارید."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"اولویت‌بندی برنامه"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"دسترسی پیامک ممتاز"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"پیامک ویژه"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ممکن است استفاده از «پیامک ممتاز» برای شما هزینه داشته باشد و مبلغ صورت‌حساب‌های شرکت مخابراتی‌تان را افزایش دهد. اگر مجوز را برای برنامه‌ای فعال کنید، می‌توانید با استفاده از آن برنامه پیامک ممتاز ارسال کنید."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"دسترسی به داده‌های مصرف"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"دسترسی به داده‌های مصرف، امکان ردیابی اینکه از چه برنامه‌های دیگری و چند وقت یک‌بار استفاده می‌کنید و همچنین شرکت مخابراتی‌تان، تنظیمات زبان و سایر جزئیات را به برنامه می‌دهد."</string>
@@ -421,12 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"مکان"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"استفاده از مکان"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"در هر برنامه‌ای که مشخص کرده‌اید از مکان خودروتان استفاده می‌شود."</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"برنامه‌های اطلاعات-سرگرمی"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"به برنامه‌ها اجازه می‌دهد به مکان شما دسترسی داشته باشند"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"اگر این تنظیم را خاموش کنید، دسترسی به مکان برای همه برنامه‌ها حذف خواهد شد، به‌جز برنامه‌هایی که برای «دستیار راننده» موردنیاز هستند"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"اگر این تنظیم را خاموش کنید، برنامه‌های «دستیار راننده» که بر اطلاعات مکان متکی‌اند غیرفعال خواهد شد"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"درهرصورت خاموش شود"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"این تنظیم را نمی‌توان تغییر داد و ازسوی سازنده خودرو غیرفعال شده است."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ویژگی‌هایی که در رانندگی به شما کمک می‌کند"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"به ویژگی‌های داخلی که توسط سازنده خودرو تأیید شده است اجازه می‌دهد به مکان خودروتان دسترسی داشته باشد."</string>
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"برنامه‌های الزامی"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"برنامه‌هایی که سازنده خودرو برای کمک در رانندگی الزامی کرده است."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"برنامه‌هایی که اخیراً دسترسی داشته‌اند"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"مشاهده همه برنامه‌ها"</string>

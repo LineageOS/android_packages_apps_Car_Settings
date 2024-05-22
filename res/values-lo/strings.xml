@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ຍົກເລີກ"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ແອັບເຫຼົ່ານີ້ສົ່ງຜົນເສຍຕໍ່ປະສິດທິພາບຂອງລະບົບ ແລະ ຖືກປ້ອງກັນບໍ່ໃຫ້ເອີ້ນໃຊ້ໃນພື້ນຫຼັງ.\nກະລຸນາໃຫ້ຄວາມສຳຄັນແອັບເພື່ອເຮັດໃຫ້ໃຊ້ໃນພື້ນຫຼັງໄດ້ ແລະ ລຶບມັນອອກຈາກລາຍຊື່ນີ້."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ໃຫ້ຄວາມສຳຄັນແອັບ"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"ການເຂົ້າເຖິງ SMS ແບບພຣີມຽມ"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS ພຣີມຽມ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS ແບບພຣີມຽມອາດຈະເຮັດໃຫ້ທ່ານເສຍເງິນ ແລະ ຈະເພີ່ມໃສ່ໃບບິນຜູ້ໃຫ້ບໍລິການຂອງທ່ານ. ຖ້າທ່ານເປີດໃຊ້ການອະນຸຍາດສຳລັບແອັບໃດໜຶ່ງ, ທ່ານຈະສາມາດສົ່ງ SMS ແບບພຣີມຽມໂດຍໃຊ້ແອັບນັ້ນໄດ້."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ການເຂົ້າເຖິງການນຳໃຊ້"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ການເຂົ້າເຖິງການນຳໃຊ້ອະນຸຍາດໃຫ້ແອັບຕິດຕາມເບິ່ງວ່າທ່ານກຳລັງໃຊ້ແອັບອື່ນໃດແດ່ ແລະ ໃຊ້ເລື້ອຍໆສໍ່າໃດ, ເຊັ່ນດຽວກັນກັບຜູ້ໃຫ້ບໍລິການ, ການຕັ້ງຄ່າພາສາ ແລະ ລາຍລະອຽດອື່ນໆຂອງທ່ານ."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"ສະຖານທີ່"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ໃຊ້ສະຖານທີ່"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ໃຊ້ສະຖານທີ່ຂອງລົດຂອງທ່ານກັບແອັບໃດກໍໄດ້ທີ່ທ່ານໄດ້ລະບຸໄວ້."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ຖ້າທ່ານປິດສິ່ງນີ້, ມັນຈະລຶບສິດເຂົ້າເຖິງສະຖານທີ່ຂອງແອັບທັງໝົດອອກ ຍົກເວັ້ນສິດເຂົ້າເຖິງທີ່ຈຳເປັນສຳລັບຕົວຊ່ວຍຜູ້ຂັບ"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ຫາກທ່ານປິດການຕັ້ງຄ່ານີ້, ລະບົບຈະປິດການນຳໃຊ້ແອັບຕົວຊ່ວຍຜູ້ຂັບທີ່ໃຊ້ຂໍ້ມູນສະຖານທີ່"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ຢືນຢັນການປິດ"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ການຕັ້ງຄ່ານີ້ບໍ່ສາມາດປ່ຽນແປງໄດ້ ແລະ ຖືກປິດການນຳໃຊ້ໂດຍຜູ້ຜະລິດລົດຂອງທ່ານ."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ຄຸນສົມບັດທີ່ຊ່ວຍທ່ານໃນການຂັບລົດ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ອະນຸຍາດໃຫ້ຄຸນສົມບັດໃນຕົວ, ເຊິ່ງໄດ້ຮັບອະນຸມັດຈາກຜູ້ຜະລິດລົດຂອງທ່ານ, ເຂົ້າເຖິງສະຖານທີ່ຂອງລົດຂອງທ່ານ."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"ເຂົ້າເຖິງຫຼ້າສຸດ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ເຂົ້າເຖິງຫຼ້າສຸດ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ເບິ່ງທັງໝົດ"</string>

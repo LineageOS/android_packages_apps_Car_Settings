@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"បោះបង់"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"កម្មវិធីទាំងនេះប៉ះពាល់ជាអវិជ្ជមានដល់ប្រតិបត្តិការរបស់ប្រព័ន្ធ និងត្រូវបានទប់ស្កាត់មិនឱ្យដំណើរការនៅផ្ទៃខាងក្រោយ។\nសូមកំណត់អាទិភាពកម្មវិធី ដើម្បីអាចឱ្យមានការប្រើប្រាស់នៅផ្ទៃខាងក្រោយ និងដកកម្មវិធីនោះចេញពីបញ្ជីនេះ។"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"កំណត់អាទិភាពកម្មវិធី"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"ការចូលប្រើ SMS បង់ប្រាក់"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS លំដាប់ខ្ពស់"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"សេវាកម្ម SMS បង់ប្រាក់​អាចនឹងគិតថ្លៃពីអ្នក ហើយបញ្ចូលតម្លៃនោះ​ទៅក្នុងការគិតថ្លៃតាម​ក្រុមហ៊ុនសេវាទូរសព្ទ​របស់អ្នក។ ប្រសិនបើ​អ្នកបើកការអនុញ្ញាតសម្រាប់កម្មវិធី នោះអ្នកនឹង​អាចផ្ញើសេវាកម្ម SMS បង់ប្រាក់​ដោយប្រើកម្មវិធីនោះ។"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ការចូល​ប្រើប្រាស់"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ការចូល​ប្រើប្រាស់​អនុញ្ញាតឱ្យ​កម្មវិធី​តាមដាន​កម្មវិធី​ផ្សេងទៀត​ដែលអ្នកកំពុងប្រើ និងប្រើប្រាស់​ញឹកញាប់​កម្រិតណា ហើយ​វា​ក៏តាមដាន​ក្រុមហ៊ុនសេវាទូរសព្ទ ការកំណត់ភាសា និងព័ត៌មាន​លម្អិត​ផ្សេងទៀត​របស់អ្នក​ផងដែរ។"</string>
@@ -421,12 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ប្រើទីតាំង"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ប្រើទីតាំងរថយន្តរបស់អ្នកតាមរយៈកម្មវិធីណាមួយដែលអ្នកបានបញ្ជាក់។"</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"កម្មវិធីព័ត៌មាននិងកម្សាន្ត"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"អនុញ្ញាតឱ្យកម្មវិធីមានសិទ្ធិចូលប្រើទីតាំងរបស់អ្នក"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ប្រសិនបើបិទ​ទីតាំងនេះ វានឹងដកសិទ្ធិចូលប្រើទីតាំង​សម្រាប់កម្មវិធីទាំងអស់ លើកលែងតែ​កម្មវិធីដែលត្រូវការ​មុខងារជំនួយអ្នកបើកបរ"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ប្រសិនបើអ្នក​បិទមុខងារនេះ កម្មវិធីជំនួយ​អ្នកបើកបរ​ដែលផ្អែកលើ​ព័ត៌មានទីតាំងនឹង​ត្រូវបានបិទ"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"មិនអីទេ បិទចុះ"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"មិនអាចផ្លាស់ប្ដូរការកំណត់នេះបានទេ និងត្រូវបានបិទដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នក។"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"មុខងារដែលជួយអ្នកក្នុងការបើកបរ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"អនុញ្ញាតឱ្យមុខងារដែលមានភ្ជាប់មកជាមួយស្រាប់ ដែលត្រូវបានអនុញ្ញាតដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នក ចូលប្រើប្រាស់ទីតាំងរថយន្តរបស់អ្នក។"</string>
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"កម្មវិធីដែលតម្រូវឱ្យមាន"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"កម្មវិធីដែលតម្រូវឱ្យមានដោយក្រុមហ៊ុនផលិតរថយន្តរបស់អ្នក ដើម្បីជួយពាក់ព័ន្ធនឹងការបើកបរ។"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"បានចូលប្រើ​កាលពីថ្មីៗនេះ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"មើលទាំងអស់"</string>

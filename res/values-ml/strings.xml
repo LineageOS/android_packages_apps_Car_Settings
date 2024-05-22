@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"റദ്ദാക്കുക"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ഈ ആപ്പുകൾ സിസ്റ്റത്തിന്റെ പ്രകടനത്തെ പ്രതികൂലമായി ബാധിക്കുന്നതിനാൽ അവ പശ്ചാത്തലത്തിൽ റൺ ചെയ്യുന്നത് തടഞ്ഞു.\nപശ്ചാത്തല ഉപയോഗം അനുവദിക്കേണ്ട ആപ്പിന് മുൻഗണന നൽകാൻ അതിനെ ലിസ്റ്റിൽ നിന്ന് നീക്കം ചെയ്യുക."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ആപ്പിന് മുൻഗണന നൽകുക"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"പ്രീമിയം SMS ആക്‌സസ്"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"പ്രീമിയം SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"പ്രീമിയം SMS-ന് നിങ്ങൾ പണം നൽകേണ്ടി വന്നേക്കാം, സേവനദാതാവിന്റെ ബില്ലിലേക്ക് ഈ തുക ചേർക്കുന്നതാണ്. നിങ്ങളൊരു ആപ്പിന് അനുമതി പ്രവർത്തനക്ഷമമാക്കുന്നുവെങ്കിൽ, ആ ആപ്പ് ഉപയോഗിച്ച് പ്രീമിയം SMS അയയ്ക്കാനാകും."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ഉപയോഗ ആക്‌സസ്"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"നിങ്ങൾ മറ്റ് ഏതെല്ലാം ആപ്പുകൾ ഉപയോഗിക്കുന്നുണ്ടെന്നും അവ എത്ര തവണ ഉപയോഗിക്കുന്നുണ്ടെന്നും നിങ്ങളുടെ സേവനദാതാവ്, ഭാഷാ ക്രമീകരണം എന്നിവയും മറ്റ് വിശദാംശങ്ങളും ട്രാക്ക് ചെയ്യാനും ഉപയോഗ ആക്‌സസ് ആപ്പിനെ അനുവദിക്കുന്നു."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"നിങ്ങൾ പ്രത്യേകം തിരഞ്ഞെടുക്കുന്ന ഏത് ആപ്പിനൊപ്പവും നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷൻ ഉപയോഗിക്കുക."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ഇത് ഓഫാക്കിയാൽ, ഡ്രെെവർ സഹായിക്ക് ആവശ്യമായവ ഒഴികെയുള്ള എല്ലാ ആപ്പുകൾക്കുമുള്ള ലൊക്കേഷൻ ആക്‌സസ് നീക്കം ചെയ്യപ്പെടും"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ഇത് ഓഫാക്കിയാൽ, ലൊക്കേഷൻ വിവരങ്ങളെ ആശ്രയിക്കുന്ന ഡ്രൈവർ സഹായി ആപ്പുകൾ പ്രവർത്തനരഹിതമാകും"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"എന്തായാലും ഓഫാക്കുക"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ഈ ക്രമീകരണം മാറ്റാനാകില്ല, മാത്രമല്ല അത് നിങ്ങളുടെ കാർ നിർമ്മാതാവ് പ്രവർത്തനരഹിതമാക്കിയിരിക്കുകയാണ്."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ഡ്രെെവ് ചെയ്യാൻ സഹായിക്കുന്ന ഫീച്ചറുകൾ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"കാറിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യുന്നതിന്, നിങ്ങളുടെ കാർ നിർമ്മാതാവ് അംഗീകരിച്ച ബിൽറ്റ് ഇൻ ഫീച്ചറുകൾ അനുവദിക്കുക."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"എല്ലാം കാണുക"</string>

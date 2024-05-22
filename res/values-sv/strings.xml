@@ -322,7 +322,7 @@
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Om du tvingar appen att avsluta kanske den inte fungerar som den ska."</string>
     <string name="force_stop_success_toast_text" msgid="2986272849275894254">"<xliff:g id="APP_NAME">%1$s</xliff:g> har avslutats."</string>
     <string name="prioritize_app_performance_dialog_title" msgid="3205297520523665568">"Vill du prioritera appars prestanda?"</string>
-    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Detta kan göra att systemet blir instabilt, och det kan påverka maskinvaran långsiktigt. Vill du fortsätta?"</string>
+    <string name="prioritize_app_performance_dialog_text" msgid="4321564728229192878">"Detta kan göra att systemet blir instabilt, och det kan påverka hårdvaran långsiktigt. Vill du fortsätta?"</string>
     <string name="prioritize_app_performance_dialog_action_on" msgid="3556735049873419163">"Ja"</string>
     <string name="prioritize_app_performance_dialog_action_off" msgid="2813324718753199319">"Nej tack"</string>
     <string name="disable_text" msgid="4358165448648990820">"Inaktivera"</string>
@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Avbryt"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Dessa appar påverkar systemprestandan negativt och förhindras från att köras i bakgrunden.\nPrioritera appar för att ta bort dem från den här listan och tillåta att de körs i bakgrunden."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritera app"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Åtkomst till premium-sms"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium-sms"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Det kan hända att premium-sms kostar pengar och läggs till på dina fakturor från operatören. Om du ger en app åtkomst kan du skicka premium-sms med den appen."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Åtkomst till användningsdata"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Med åtkomst till användningsdata kan en app spåra vilka andra appar du använder och hur ofta, samt vilken operatör du har, språkinställningar och andra uppgifter."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Plats"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Använd plats"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Använd bilens plats med alla appar du har angett."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Om du stänger av detta tas platsåtkomst bort för alla appar utom de som behövs för förarassistans"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Om du stänger av detta inaktiveras förarassistansappar som behöver platsinformation"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Inaktivera ändå"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Den här inställningen kan inte ändras och har inaktiverats av bilens tillverkare."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funktioner som hjälper till medan du kör"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Tillåt att inbyggda funktioner som godkänts av bilens tillverkare får åtkomst till bilens plats."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Har nyligen haft åtkomst"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Har nyligen haft åtkomst"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Visa alla"</string>
@@ -462,7 +470,7 @@
     <string name="continue_confirmation" msgid="1598892163951467191">"Fortsätt"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-version"</string>
     <string name="security_patch" msgid="4794276590178386903">"Korrigeringsnivå för Android"</string>
-    <string name="hardware_info" msgid="3973165746261507658">"Modell och maskinvara"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Modell och hårdvara"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Modell: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Basbandsversion"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel-version"</string>
@@ -821,7 +829,7 @@
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"Läs mer om <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Information om hanterat fordon"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Inställningar som hanteras av vagnparksadministratören"</string>
-    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Vagnparksadministratören kan ändra inställningar och installera programvara i infotainmentsystemet för att tillhandahålla åtkomst till data på det hanterade fordonet.\n\nKontakta vagnparksadministratören om du vill veta mer."</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Vagnparksadministratören kan ändra inställningar och installera mjukvara i infotainmentsystemet för att tillhandahålla åtkomst till data på det hanterade fordonet.\n\nKontakta vagnparksadministratören om du vill veta mer."</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Information som vagnparksadministratören kan se"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Ändringar som gjorts av vagnparksadministratören"</string>
     <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Data som är kopplad till kontot för det hanterade fordonet"</li>\n" "<li>"Lista över appar på det hanterade fordonet"</li>\n" "<li>"Tids- och dataförbrukning för var och en av apparna"</li>"v"</string>

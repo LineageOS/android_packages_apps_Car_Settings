@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"منسوخ کریں"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"یہ ایپس سسٹم کی کارکردگی پر منفی اثر ڈالتی ہیں اور انہیں پس منظر میں چلنے سے روک دیا گیا ہے۔\nپس منظر کے استعمال کی اجازت دینے کے لیے ایپ کو ترجیح دیں اور اسے اس فہرست سے ہٹائیں۔"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ایپ کو ترجیح دیں"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"پریمیم SMS رسائی"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"پریمیم SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ہو سکتا ہے آپ کو پریمیم SMS کے پیسے ادا کرنا پڑیں اور یہ آپ کے کیرئیر بلز میں شامل ہو جائیں گے۔ اگر آپ ایک ایپ کیلئے اجازت فعال کرتے ہیں تو آپ اس ایپ کو استعمال کرکے آپ پریمیم SMS بھیج پائیں گے۔"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"استعمال تک رسائی"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"استعمال تک رسائی کسی ایپ کو آپ کا کیریئر، زبان کی ترتیبات اور دیگر تفصیلات سمیت یہ ٹریک کرنے کی اجازت دیتی ہے کہ آپ کن دیگر ایپس کو اور کتنی بار استعمال کر رہے ہیں۔"</string>
@@ -421,12 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"مقام"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"مقام استعمال کریں"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"آپ کی بتائی ہوئی کسی بھی ایپ کے ساتھ اپنی کار کا مقام استعمال کریں۔"</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"انٹرٹینمنٹ ایپس"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"اپنے مقام تک ایپس کو رسائی کی اجازت دیں"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"اگر آپ اسے آف کر دیتے ہیں تو یہ ڈرائیور کی مدد کے لیے درکار ایپس کے علاوہ تمام ایپس کے لیے مقام تک رسائی کو ہٹا دے گا"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"اگر آپ اسے آف کرتے ہیں تو مقام کی معلومات پر مبنی ڈرائیور کی مدد کی ایپس غیر فعال ہو جائیں گی"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"بہر حال آف کریں"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"اس ترتیب کو تبدیل نہیں کیا جا سکتا اور آپ کی کار کے مینوفیکچرر نے اسے غیر فعال کر دیا ہے۔"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"خصوصیات جو ڈرائیو میں آپ کی مدد کرتی ہیں"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"اپنی کار کے مقام تک رسائی حاصل کرنے کیلئے، آپ کی کار کے مینوفیکچرر کے ذریعے منظور شدہ پہلے سے شامل خصوصیات کی اجازت دیں۔"</string>
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"مطلوبہ ایپس"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"ڈرائیونگ میں مدد کرنے کے لیے آپ کی کار کے مینوفیکچرر کو درکار ایپس۔"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"حال ہی میں رسائی حاصل کردہ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"حال ہی میں رسائی حاصل کردہ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"سبھی دیکھیں"</string>

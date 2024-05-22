@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Отказ"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Тези приложения се отразяват отрицателно на ефективността на системата и работата им на заден план е спряна.\nПриоритизирайте приложението, за да разрешите използването му на заден план, и го премахнете от този списък."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Прил.: Приоритизир."</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Достъп до SMS, за които получателят заплаща"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS с допълнителна такса"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS съобщенията, за които се таксува получателят, може да ви въвлекат в разходи и ще увеличат сметката към оператора ви. Ако дадете разрешението на дадено приложение, ще можете да изпращате такива съобщения чрез него."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Достъп до данни за ползването"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Достъпът до данните за ползването разрешава на приложението да проследява какви други приложения използвате и колко често, както и оператора ви, настройките ви за езика и други подробности."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Местоположение"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Използване на местоположението"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Използване на местоположението на автомобила ви с всяко приложение, което сте посочили."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ако изключите тази настройка, достъпът до местоположението ще бъде премахнат за всички приложения освен за тези, които са нужни за помощ за шофьорите"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ако изключите тази настройка, приложенията за помощ за шофьорите, които разчитат на данните за местоположението, ще бъдат деактивирани"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Изключване въпреки това"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Тази настройка не може да бъде променена и е деактивирана от производителя на автомобила ви."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функции, които ви помагат да шофирате"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Разрешаване на вградените функции, одобрени от производителя на автомобила ви, да осъществяват достъп до местоположението на колата ви."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Със скорошен достъп"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Със скорошен достъп"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Преглед на всички"</string>

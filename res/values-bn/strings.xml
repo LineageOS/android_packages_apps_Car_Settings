@@ -413,7 +413,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল করুন"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"এইসব অ্যাপ সিস্টেম পারফর্ম্যান্সের উপরে নেতিবাচক প্রভাব ফেলে এবং ব্যাকগ্রাউন্ডে রান করা থেকে এগুলিকে আটকানো হয়েছে।\nব্যাকগ্রাউন্ডে চলার জন্য অ্যাপকে অগ্রাধিকার দিন ও এই তালিকা থেকে সেটি সরিয়ে দিন।"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"অ্যাপকে অগ্রাধিকার দিন"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"প্রিমিয়াম এসএমএস অ্যাক্সেস"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"প্রিমিয়াম এসএমএস"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"প্রিমিয়াম এসএমএসের জন্য অর্থ খরচ হতে পারে এবং আপনার পরিষেবা প্রদানকারীর বিলে যোগ করা হবে৷ আপনি যদি কোনও অ্যাপের জন্য অনুমতি চালু করেন তাহলে আপনি সেই অ্যাপ ব্যবহার করে প্রিমিয়াম এসএমএস পাঠাতে পারবেন।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ব্যবহারের তথ্যে অ্যাক্সেস"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ব্যবহার অ্যাক্সেস ফিচারের মাধ্যমে কোনও অ্যাপ, আপনি কী কী অ্যাপ ব্যবহার করছেন এবং কত ঘন ঘন ব্যবহার করছেন তা ট্র্যাক করতে পারে, এর পাশাপাশি আপনার পরিষেবা প্রদানকারী, ভাষা সেটিংস, এবং অন্যান্য বিষয়ে বিবরণ দেখতে পারে।"</string>
@@ -423,12 +423,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"লোকেশন ব্যবহার করুন"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"আপনার নির্দিষ্ট করা যেকোনও অ্যাপ দিয়ে আপনার গাড়ির লোকেশন ব্যবহার করুন।"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"আপনি এটি বন্ধ করলে, \'ড্রাইভার অ্যাসিস্ট্যান্স\'-এর জন্য প্রয়োজনীয় অ্যাপ বাদে বাকি সব অ্যাপের ক্ষেত্রে লোকেশন অ্যাক্সেস সংক্রান্ত অনুমতি এটি সরিয়ে দেবে"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"আপনি এটি বন্ধ করলে, লোকেশন সংক্রান্ত তথ্যের উপরে নির্ভর করে কাজ করা ড্রাইভার অ্যাসিস্ট্যান্স অ্যাপ বন্ধ হয়ে যাবে"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"যাইহোক বন্ধ করুন"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"এই সেটিং পরিবর্তন করা যাবে না এবং আপনার গাড়ি প্রস্তুতকারীর মাধ্যমে বন্ধ করা হয়েছে।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"আপনার গাড়ি চালানোর সহায়ক ফিচার"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"আপনার গাড়ির লোকেশন অ্যাক্সেস করতে আপনার গাড়ি উৎপাদনকারী অনুমোদিত বিল্ট-ইন ফিচারে অনুমতি দিন।"</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"সব দেখুন"</string>

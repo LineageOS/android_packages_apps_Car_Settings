@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hủy"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Những ứng dụng này ảnh hưởng tiêu cực đến hiệu suất của hệ thống và đã bị ngăn chạy ở chế độ nền.\nHãy thiết lập chế độ ưu tiên cho ứng dụng để cho phép sử dụng chế độ nền và xoá ứng dụng đó khỏi danh sách này."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Ưu tiên ứng dụng"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Quyền truy cập vào Tin nhắn dịch vụ"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Tin nhắn dịch vụ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Tin nhắn dịch vụ có thể làm bạn mất tiền và sẽ cộng thêm vào hóa đơn nhà mạng của bạn. Nếu cấp quyền cho một ứng dụng, thì bạn có thể gửi Tin nhắn dịch vụ bằng ứng dụng đó."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Quyền truy cập dữ liệu sử dụng"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Quyền truy cập vào dữ liệu sử dụng cho phép một ứng dụng theo dõi các ứng dụng khác mà bạn đang dùng và tần suất sử dụng, cũng như thông tin nhà mạng, các tùy chọn cài đặt ngôn ngữ và thông tin chi tiết khác."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Dùng thông tin vị trí"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Cho ứng dụng mà bạn chỉ định được phép sử dụng thông tin vị trí của ô tô"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Thao tác tắt tính năng này sẽ xoá quyền truy cập thông tin vị trí của mọi ứng dụng, ngoại trừ các ứng dụng cần thiết để hỗ trợ người lái xe."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Thao tác tắt chế độ này cũng sẽ vô hiệu hoá các ứng dụng hỗ trợ người lái xe cần đến thông tin vị trí."</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Vẫn tắt"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Chế độ cài đặt này không thay đổi được và đã bị nhà sản xuất ô tô của bạn tắt."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Các tính năng trợ giúp bạn lái xe"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Cho các tính năng tích hợp sẵn mà nhà sản xuất ô tô phê duyệt được phép truy cập vào thông tin vị trí của ô tô."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Xem tất cả"</string>

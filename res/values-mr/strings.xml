@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द करा"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ही अ‍ॅप्स सिस्टीमच्या परफॉर्मन्सवर नकारात्मक परिणाम करतात आणि त्यांना बॅकग्राउंडमध्ये रन करण्यापासून प्रतिबंधित केले आहे.\nबॅकग्राउंडचा वापर सुरू ठेवण्यासाठी ते या सूचीमधून काढून टाकण्यासाठी अ‍ॅपला प्राधान्य द्या."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ॲपला प्राधान्य द्या"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रीमियम SMS ॲक्सेस"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"प्रीमियम एसएमएस"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रीमियम SMS मुळे तुम्हाला कदाचित शुल्क लागू होतील आणि तुमच्या कॅरियर बिलमध्ये जोडले जातील. तुम्ही अ‍ॅपसाठी परवानगी सुरू केल्यास, तुम्ही ते अ‍ॅप वापरून प्रीमियम SMS पाठवू शकता."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"वापर अ‍ॅक्सेस"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"तुम्ही इतर अ‍ॅप्स किती वारंवार वापरत आहात, तसेच तुमचे वाहक, भाषा सेटिंग्ज आणि इतर तपशील यांचा मागोवा घेण्‍याची वापर अ‍ॅक्सेस अ‍ॅपला अनुमती देतो."</string>
@@ -421,12 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"स्थान वापरा"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"तुम्ही नमूद केलेल्या कोणत्याही अ‍ॅपसह तुमच्या कारचे स्थान वापरा."</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"इन्फोटेनमेंट अ‍ॅप्स"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"ॲप्सना तुमचे स्थान अ‍ॅक्सेस करण्याची अनुमती द्या"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"तुम्ही हे बंद केल्यास, ड्रायव्हर साहाय्यसाठी आवश्यक असलेली अ‍ॅप्स वगळता सर्व ॲप्सचा स्थान अ‍ॅक्सेस काढून टाकला जाईल"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"तुम्ही हे बंद केल्यास, स्थान माहितीवर अवलंबून असलेली ड्रायव्हर साहाय्य ॲप्स बंद केली जातील"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"तरीही बंद करा"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"हे सेटिंग बदलले जाऊ शकत नाही आणि ते तुमच्या कार निर्मात्याने बंद केले आहे."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ड्राइव्हमध्ये मदत करणारी वैशिष्‍ट्ये"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"तुमच्या कारचे स्थान अ‍ॅक्सेस करण्यासाठी, तुमच्या कारच्या निर्मात्याने मंजुरी दिलेल्या बिल्ट-इन वैशिष्‍ट्यांना अनुमती द्या."</string>
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"आवश्यक अ‍ॅप्स"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"ड्रायव्हिंगमध्ये मदत करण्यासाठी तुमच्या कारच्या निर्मात्याला आवश्यक असलेली अ‍ॅप्स."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"अलीकडे अ‍ॅक्सेस केलेले"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"अलीकडे अ‍ॅक्सेस केलेले"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"सर्व पहा"</string>

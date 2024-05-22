@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"这些应用会对系统性能造成负面影响，已被禁止在后台运行。\n将应用设为优先运行即可允许在后台使用相应应用，并将其从此列表中移出。"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"将应用设为优先运行"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"付费短信权限"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"付费短信"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"“付费短信”可能会产生费用，而且相关费用将计入您的运营商账单。如果您为某个应用启用该权限，那么您将能够使用该应用发送付费短信。"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"使用情况访问权限"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"向应用授予“使用情况访问权限”后，应用即可跟踪您正在使用的其他应用和使用频率，以及您的运营商、语言设置及其他详细信息。"</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置信息"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"允许您指定的所有应用获取汽车的位置信息。"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"如果您关闭了此设置，所有应用（驾驶辅助功能所需的应用除外）的位置信息获取权限都将被撤消"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"如果您关闭了此设置，需要使用位置信息的驾驶辅助应用将被停用"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"仍然关闭"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"此设置无法更改，已被您汽车的制造商停用。"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"驾驶辅助功能"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"允许汽车制造商批准的内置功能获取您汽车的位置信息。"</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"近期获取过"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"近期获取过"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"查看全部"</string>

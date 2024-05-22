@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Batal"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Apl ini memberikan kesan negatif pada prestasi sistem dan telah dihalang daripada berjalan di latar.\nUtamakan apl untuk membenarkan penggunaan apl di latar dan alih keluar apl daripada senarai ini."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Utamakan apl"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Akses SMS Premium"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS Premium bukan percuma dan cajnya akan ditambahkan pada bil pembawa anda. Jika anda mendayakan kebenaran untuk apl, anda akan dapat menghantar SMS premium menggunakan apl itu."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Akses penggunaan"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Akses penggunaan membenarkan apl mengesan apl lain yang anda gunakan dan kekerapan penggunaan tersebut serta pembawa, tetapan bahasa dan butiran anda yang lain."</string>
@@ -421,12 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lokasi"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gunakan lokasi"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Gunakan lokasi kereta anda dengan mana-mana apl yang telah anda tentukan."</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Apl maklumat hibur"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Benarkan apl mengakses lokasi anda"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Jika anda mematikan ciri ini, akses lokasi akan dialih keluar untuk semua apl kecuali apl yang diperlukan untuk bantuan pemandu"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Jika anda mematikan ciri ini, apl bantuan pemandu yang bergantung pada maklumat lokasi akan dilumpuhkan"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Matikan juga"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Tetapan ini tidak dapat ditukar dan telah dilumpuhkan oleh pengilang kereta anda."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Ciri yang membantu anda memandu"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Benarkan ciri terbina dalam yang diluluskan oleh pengilang kereta anda untuk mengakses lokasi kereta anda."</string>
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Apl yang diperlukan"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Apl yang diperlukan oleh pengilang kereta anda untuk membantu anda memandu."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Diakses baru-baru ini"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Diakses baru-baru ini"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Lihat semua"</string>

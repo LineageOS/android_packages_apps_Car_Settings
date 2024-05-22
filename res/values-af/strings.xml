@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Kanselleer"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Hierdie apps het stelselwerkverrigting negatief beïnvloed en is verhoed om op die agtergrond te loop.\nPrioritiseer app om agtergrondgebruik toe te laat en verwyder dit van hierdie lys."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritiseer app"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Toegang tot premium-SMS\'e"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium-SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS\'e kan jou geld kos en die koste sal by jou diensverskafferfakture gevoeg word. As jy toestemming vir \'n program aktiveer, sal jy premium-SMS\'e met daardie program kan stuur."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Gebruiktoegang"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Gebruiktoegang laat \'n app toe om na te spoor watter ander apps jy gebruik en hoe gereeld, asook jou diensverskaffer, taalinstellings en ander besonderhede."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Ligging"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gebruik ligging"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Gebruik jou motor se ligging met enige app wat jy gespesifiseer het."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"As jy dit afskakel, sal liggingtoegang vir alle apps, behalwe dié wat vir bestuurderbysrand benodig word, afgeskakel word."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"As jy dit afskakel, sal bestuurderbystandkenmerke wat op ligginginligting staatmaak, gedeaktiveer word."</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Skakel in elk geval af"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Hierdie instelling kan nie verander word nie en is deur jou motorvervaardiger gedeaktiveer."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Kenmerke wat jou help bestuur"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Laat ingeboude kenmerke, wat deur jou motor se vervaardiger goedgekeur is, toe om toegang tot jou motor se ligging te kry."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Onlangs gebruik"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Onlangs gebruik"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Bekyk alles"</string>

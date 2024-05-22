@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"إلغاء"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"تؤثر هذه التطبيقات سلبًا في أداء النظام وقد تم منع استخدامها في الخلفية.\nعليك منح الأولوية للتطبيق للسماح باستخدامه في الخلفية وإزالته من هذه القائمة."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"منح أولوية للتطبيق"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"إمكانية إرسال رسائل قصيرة SMS مميزة"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"الرسائل القصيرة برسوم إضافية"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"يمكن أن تكلفك الرسائل القصيرة SMS المميزة بعض الرسوم، وستتم إضافة هذه الرسوم إلى فواتير مشغِّل شبكة الجوّال. وفي حال تفعيل الإذن لأحد التطبيقات، ستتمكن من إرسال رسائل قصيرة SMS مميزة باستخدام هذا التطبيق."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"الوصول إلى بيانات الاستخدام"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"يتيح الدخول إلى بيانات الاستخدام للتطبيق إمكانية تتبُّع التطبيقات الأخرى التي تستخدمها ومدى تكرار استخدامها ومشغّل شبكة الجوّال وإعدادات اللغة وغيرها من التفاصيل."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"الموقع الجغرافي"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"استخدام الموقع الجغرافي"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"استخدِم الموقع الجغرافي لسيارتك مع أي تطبيق حددته."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"إذا أوقفت هذا الإعداد، سيؤدي ذلك إلى إزالة إمكانية وصول كل التطبيقات إلى الموقع الجغرافي باستثناء تلك اللازمة لتطبيقات \"مساعد السائق\"."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"إذا تم إيقاف ميزة \"مساعدة السائق\" هذه، سيتم إيقاف تطبيقات \"مساعدة السائق\" التي تعتمد على معلومات الموقع الجغرافي."</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"إيقاف على أي حال"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"لا يمكن تغيير هذا الإعداد وقد أوقفته الشركة المصنّعة لسيارتك."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ميزات تساعدك في القيادة"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"يمكنك السماح للميزات المدمَجة، المعتمدة من الشركة المصنّعة لسيارتك، بالوصول إلى الموقع الجغرافي لسيارتك."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"عرض الكل"</string>

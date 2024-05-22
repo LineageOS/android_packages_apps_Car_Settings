@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"வேண்டாம்"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"சிஸ்டம் செயல்திறனை இந்த ஆப்ஸ் பாதிப்பதால் பின்னணியில் இயங்குவதிலிருந்து தடுக்கப்பட்டுள்ளன.\nபின்னணி உபயோகத்தை அனுமதிக்க ஆப்ஸுக்கு முன்னுரிமையளித்து அதைப் பட்டியலில் இருந்து அகற்றுங்கள்."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"முன்னுரிமையளி"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"பிரீமிய SMS அணுகல்"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"பிரீமியம் SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"பிரீமிய SMSஸுக்குக் கட்டணம் விதிக்கப்படலாம், அது மொபைல் நிறுவன பில்களில் சேர்க்கப்படும். ஆப்ஸுக்கான அனுமதியை இயக்கினால் அதன் மூலம் பிரீமிய SMSஸை அனுப்ப இயலும்."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"உபயோக அணுகல்"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"’உபயோக அணுகல்’ மூலம் நீங்கள் வேறு எந்தெந்த ஆப்ஸை எவ்வளவு அடிக்கடி பயன்படுத்துகிறீர்கள் என்பதை அறிந்துகொள்ளும் அனுமதியை ஆப்ஸிற்கு வழங்கலாம். உங்கள் மொபைல் நிறுவனம், மொழி அமைப்புகள் மற்றும் பிற விவரங்களையும் அறிந்து கொள்ளும் அனுமதியும் இதில் அடங்கும்."</string>
@@ -421,12 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"இருப்பிடத்தைப் பயன்படுத்துதல்"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"நீங்கள் குறிப்பட்ட எந்த ஆப்ஸுடனும் உங்கள் காரின் இருப்பிடத்தைப் பயன்படுத்தலாம்."</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"இன்ஃபோடெயின்மென்ட் ஆப்ஸ்"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"உங்கள் இருப்பிடத்தை அணுக ஆப்ஸை அனுமதியுங்கள்"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"இதை முடக்கினால், ஓட்டுநர் உதவி அம்சத்திற்குத் தேவையான ஆப்ஸைத் தவிர, மற்ற ஆப்ஸ் அனைத்துக்கும் இருப்பிட அணுகல் அகற்றப்படும்."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"இதை முடக்கினால், இருப்பிடத் தகவல்களைச் சார்ந்துள்ள ஓட்டுநர் உதவி ஆப்ஸ் முடக்கப்படும்"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"பரவாயில்லை, முடக்கு"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"இந்த அமைப்பை மாற்ற முடியாது. ஏனெனில், உங்கள் கார் தயாரிப்பாளரால் இது முடக்கப்பட்டுள்ளது."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"வாகனம் ஓட்ட உதவும் அம்சங்கள்"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"உங்கள் காரின் உற்பத்தியாளர் அனுமதித்துள்ள, உள்ளமைக்கப்பட்ட அம்சங்களுக்குக் காரின் இருப்பிட அணுகலை வழங்கும்."</string>
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"தேவைப்படும் ஆப்ஸ்"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"கார் ஓட்டுவதற்கு உதவ, உங்கள் காரின் உற்பத்தியாளருக்குத் தேவைப்படும் ஆப்ஸ்."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"சமீபத்தில் அணுகியவை"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"சமீபத்தில் அணுகியவை"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"அனைத்தையும் காட்டுதல்"</string>
