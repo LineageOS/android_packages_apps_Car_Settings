@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,21 +16,20 @@
 
 package com.android.car.settings.privacy;
 
+import android.annotation.FlaggedApi;
+
 import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 
 /**
- * Main page that hosts privacy-related Microphone preferences.
+ * Microphone access page.
  */
-public class MicrophoneSettingsFragment extends SettingsFragment {
+@FlaggedApi(Flags.FLAG_MICROPHONE_PRIVACY_UPDATES)
+public class MicrophoneAccessFragment  extends SettingsFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        // TODO(b/340636015): Update the name of the xml file when the flag is removed.
-        if (Flags.microphonePrivacyUpdates()) {
-            return R.xml.privacy_microphone_settings_fragment_updated;
-        }
-        return R.xml.privacy_microphone_settings_fragment;
+        return R.xml.microphone_access_fragment;
     }
 }
