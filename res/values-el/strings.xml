@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Ακύρωση"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Αυτές οι εφαρμογές επηρεάζουν αρνητικά την απόδοση του συστήματος και η εκτέλεσή τους στο παρασκήνιο έχει αποτραπεί.\nΔώστε προτεραιότητα στην εφαρμογή για να επιτρέψετε τη χρήση στο παρασκήνιο και καταργήστε την από τη λίστα."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Προτερ. εφαρμογής"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Πρόσβαση σε SMS επιπλέον χρέωσης"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS με επιπλέον χρέωση"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Τα SMS επιπλέον χρέωσης ενδέχεται να κοστίζουν χρήματα και θα αυξήσουν το συνολικό ποσό των λογαριασμών της εταιρείας κινητής τηλεφωνίας. Εάν ενεργοποιήσετε την πρόσβαση για μια εφαρμογή, θα μπορείτε να στέλνετε SMS επιπλέον χρέωσης χρησιμοποιώντας τη συγκεκριμένη εφαρμογή."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Πρόσβαση χρήσης"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Η πρόσβαση χρήσης επιτρέπει σε μια εφαρμογή να παρακολουθεί τις άλλες εφαρμογές που χρησιμοποιείτε, τη συχνότητα χρήσης τους, καθώς και την εταιρεία κινητής τηλεφωνίας σας, τις ρυθμίσεις γλώσσας και άλλες λεπτομέρειες."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Τοποθεσία"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Χρήση τοποθεσίας"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Χρησιμοποιήστε την τοποθεσία του αυτοκινήτου σας με οποιαδήποτε εφαρμογή έχετε καθορίσει."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Αν απενεργοποιήσετε αυτήν τη επιλογή, θα καταργηθεί η πρόσβαση στην τοποθεσία για όλες τις εφαρμογές, εκτός από αυτές που απαιτούνται για υποβοήθηση οδηγού"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Αν απενεργοποιήσετε αυτήν τη επιλογή, οι εφαρμογές υποβοήθησης οδηγού που βασίζονται στις πληροφορίες τοποθεσίας θα απενεργοποιηθούν"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Απενεργοποίηση ούτως ή άλλως"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Δεν είναι δυνατή η αλλαγή αυτής της ρύθμισης και ο κατασκευαστής του αυτοκινήτου σας την έχει απενεργοποιήσει."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Λειτουργίες που βοηθούν στην οδήγηση"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Επιτρέψτε σε ενσωματωμένες λειτουργίες που έχουν εγκριθεί από τον κατασκευαστή του αυτοκινήτου σας να έχουν πρόσβαση στην τοποθεσία του."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Πρόσφατη πρόσβαση"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Πρόσφατη πρόσβαση"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Προβολή όλων"</string>

@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancel·la"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aquestes aplicacions tenen un impacte negatiu en el rendiment del sistema i no es poden executar en segon pla.\nPrioritza l\'aplicació per permetre\'n l\'ús en segon pla i suprimir-la d\'aquesta llista."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritza l\'aplicació"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Accés a SMS prèmium"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS prèmium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Els SMS prèmium et poden costar diners, i aquest import s\'afegirà a la facturació de l\'operador. Si actives el permís en una aplicació, podràs enviar SMS prèmium utilitzant-la."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Accés d\'ús"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"L\'accés a dades d\'ús permet que una aplicació pugui fer un seguiment de les altres aplicacions que utilitzes i la freqüència amb què ho fas, així com del teu operador de telefonia mòbil i de la configuració d\'idioma, entre d\'altres."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Ubicació"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Utilitza la ubicació"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Utilitza la ubicació del cotxe amb qualsevol aplicació que hagis especificat."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Si desactives aquesta opció, se suprimirà l\'accés a la ubicació per a totes les aplicacions excepte les que es necessitin per a l\'assistència al conductor"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Si desactives aquesta opció, les aplicacions d\'assistència al conductor que depenen de la informació d\'ubicació es desactivaran"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desactiva igualment"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Aquesta opció de configuració no es pot canviar i el fabricant del cotxe l\'ha desactivat."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcions que t\'ajuden a conduir"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Permet que les funcions integrades, aprovades pel fabricant del cotxe, accedeixin a la ubicació del cotxe."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"S\'hi ha accedit fa poc"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"S\'hi ha accedit fa poc"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Mostra-ho tot"</string>
@@ -773,7 +781,7 @@
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Aplicació d\'assistent digital"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Ús del text de la pantalla"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Permet que l\'Assistent accedeixi al contingut de la pantalla"</string>
-    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Ús de captures de pantalla"</string>
+    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Utilitza una captura de pantalla"</string>
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Permet que l\'Assistent accedeixi a la imatge de la pantalla"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"Enviades fa poc"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"Totes les aplicacions"</string>

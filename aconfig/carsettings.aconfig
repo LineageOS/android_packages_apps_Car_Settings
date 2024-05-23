@@ -14,3 +14,10 @@ flag {
     description: "Flag to display certain settings pages with required and infotainment apps"
     bug: "327489942"
 }
+
+flag {
+    name: "microphone_privacy_updates"
+    namespace: "car_sys_exp"
+    description: "Flag to display an updated privacy page for the microphone."
+    bug: "340636015"
+}

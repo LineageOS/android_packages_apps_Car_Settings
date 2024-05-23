@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"రద్దు చేయండి"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ఈ యాప్‌లు సిస్టమ్ పనితీరును ప్రతికూలంగా ప్రభావితం చేస్తాయి, అలాగే బ్యాక్‌గ్రౌండ్‌లో రన్ అవ్వకుండా నిరోధించబడ్డాయి.\nబ్యాక్‌గ్రౌండ్ వినియోగాన్ని అనుమతించడానికి యాప్‌నకు ప్రాధాన్యత ఇవ్వండి, అలాగే ఈ జాబితా నుండి దాన్ని తీసివేయండి."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"యాప్‌నకు ప్రాధాన్యత"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"ప్రీమియం SMS యాక్సెస్"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"ప్రీమియం SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ప్రీమియం SMSతో మీకు డబ్బు ఖర్చు కావచ్చు, ఈ ఛార్జీ మీ క్యారియర్ బిల్లులలో విధించబడుతుంది. మీరు ఒక యాప్‌కు అనుమతిని ఇస్తే, ఆ యాప్‌ను ఉపయోగించి మీరు ప్రీమియం SMSను పంపగలరు."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"వినియోగ యాక్సెస్"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"\'వినియోగ యాక్సెస్\' ద్వారా యాప్, మీరు ఏయే ఇతర యాప్‌లను ఉపయోగిస్తున్నారో, వాటిని ఎంత తరచుగా ఉపయోగిస్తున్నారో, అలాగే మీ క్యారియర్, భాష సెట్టింగ్‌లు, ఇతర వివరాలను ట్రాక్ చేయగలదు."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"లొకేషన్"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"మీరు పేర్కొన్న ఏదైనా యాప్‌తో మీ కారు లొకేషన్‌ను ఉపయోగించండి."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"మీరు దీన్ని ఆఫ్ చేస్తే, డ్రైవర్ సహాయం కోసం అవసరమైన యాప్‌లు మినహా అన్ని యాప్‌ల కోసం ఇది లొకేషన్ యాక్సెస్‌ను తీసివేస్తుంది"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"మీరు దీన్ని ఆఫ్ చేస్తే, లొకేషన్ సమాచారంపై ఆధారపడే డ్రైవర్ సహాయ యాప్‌లు డిజేబుల్ చేయబడతాయి"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ఏదేమైనా ఆఫ్ చేయండి"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ఈ సెట్టింగ్‌ను మార్చడం సాధ్యం కాదు, మీ కారు తయారీదారుచే డిజేబుల్ చేయబడింది."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"మీరు డ్రైవ్ చేయడంలో సహాయపడే ఫీచర్‌లు"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"మీ కారు లొకేషన్‌ను యాక్సెస్ చేయడానికి, కారు తయారీదారుచే ఆమోదించబడిన బిల్ట్-ఇన్ ఫీచర్‌లను అనుమతించండి."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"ఇటీవల యాక్సెస్ చేసినవి"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ఇటీవల యాక్సెస్ చేసినవి"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"అన్నింటినీ చూడండి"</string>
@@ -498,7 +506,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"మీరు ఇప్పుడు డెవలపర్!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"అవసరం లేదు, మీరు ఇప్పటికే డెవలపర్‌గా ఉన్నారు."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"డెవలపర్ ఎంపికలు"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"రీసెట్ ఎంపికలు"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"రీసెట్ ఆప్షన్లు"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"నెట్‌వర్క్, యాప్‌లు లేదా పరికరాన్ని రీసెట్ చేయండి"</string>
     <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi, బ్లూటూత్‌ని రీసెట్ చేయండి"</string>
     <string name="reset_network_desc" msgid="3332203703135823033">"ఇది Wi‑Fi, బ్లూటూత్ సెట్టింగ్‌లను రీసెట్ చేస్తుంది, గతంలో కనెక్ట్ చేయబడిన మెమరీని తీసివేస్తుంది:"</string>

@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Estas aplicacións teñen un impacto negativo no rendemento do sistema e bloqueouse a súa execución en segundo plano.\nDálle prioridade á aplicación para que poida usarse en segundo plano e quitala desta lista."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Priorizar aplicación"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso ás SMS de tarificación adicional"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS de tarificación adicional"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"As SMS de tarificación adicional poden implicar cargos engadidos nas facturas do teu operador. Se activas o permiso para unha aplicación, poderás enviar este tipo de mensaxes a través desa aplicación."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acceso aos datos de uso"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Co acceso aos datos de uso unha aplicación pode realizar un seguimento das demais aplicacións que usas e de con que frecuencia as utilizas, así como do teu operador, da configuración do idioma e doutros detalles."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Localización"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localización"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Usa a localización do teu coche con calquera das aplicacións que especificases."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desactivas esta opción, quitarase o permiso de localización en todas as aplicacións excepto nas que sexa necesario por mor da asistencia para a condución"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se desactivas esta opción, deshabilitaranse as aplicacións de asistencia para a condución que utilizan a información de localización"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desactivar de todos os xeitos"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"O fabricante do coche desactivou esta opción de configuración, que non pode cambiarse."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcións que che axudan a conducir"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Dálles permiso ás funcións integradas (autorizadas polo fabricante do teu coche) para que accedan á localización do coche."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Accesos recentes"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesos recentes"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todo"</string>

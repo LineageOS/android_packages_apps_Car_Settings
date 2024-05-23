@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Zrušiť"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Tieto aplikácie negatívne ovplyvňujú výkon systému, a preto bolo zablokované ich spúšťanie na pozadí.\nUprednostnením aplikácie povolíte jej používanie na pozadí a odstránite ju tak z tohto zoznamu."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Uprednostniť aplikáciu"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Prístup k prémiovým správam SMS"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Prémiová SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Za prémiové správy SMS sa môžu účtovať poplatky, ktoré sa naúčtujú na faktúru operátora. Ak aktivujete toto povolenie pre aplikáciu, budete môcť pomocou nej posielať prémiové správy SMS."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Prístup k údajom o používaní"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Prístup k údajom o používaní umožňuje aplikácii sledovať, aké ďalšie aplikácie používate, ako často ich používate, ako aj nastavenia jazyka, operátora a ďalšie podrobnosti."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Poloha"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Použiť polohu"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Používať polohu vozidla so všetkými aplikáciami, ktoré ste špecifikovali"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ak túto možnosť vypnete, prístup k polohe stratia všetky aplikácie okrem tých, ktoré sú potrebné na asistenciu pre vodiča"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ak túto možnosť vypnete, asistenčné aplikácie pre vodiča, ktoré fungujú na základe údajov o polohe, sa deaktivujú"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Aj tak vypnúť"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Toto nastavenie sa nedá zmeniť a výrobca vášho auta ho deaktivoval."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funkcie, ktoré vám pomáhajú šoférovať"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Povoľte vstavaným funkciám schváleným výrobcom vozidla prístup k polohe vášho vozidla."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Nedávno použité"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedávno použité"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Zobraziť všetko"</string>

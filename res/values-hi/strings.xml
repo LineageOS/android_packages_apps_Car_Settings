@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द करें"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ये ऐप्लिकेशन, सिस्टम की परफ़ॉर्मेंस पर बुरा असर डालते हैं. इसलिए, इन्हें बैकग्राउंड में चलने की अनुमति नहीं है.\nकिसी ऐप्लिकेशन को बैकग्राउंड में चलने की अनुमति देने के लिए, उसे प्राथमिकता दें और परफ़ॉर्मेंस पर असर डालने वाले ऐप्लिकेशन की सूची से हटा दें."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ऐप को प्राथमिकता दें"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रीमियम मैसेज (एसएमएस) का ऐक्सेस"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"प्रीमियम एसएमएस भेजने की सुविधा वाले ऐप्लिकेशन"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रीमियम मैसेज (एसएमएस) के लिए आपको पैसे चुकाने पड़ सकते हैं जिसे आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी आपके बिल में जोड़ देगी. अगर आप किसी ऐप्लिकेशन के लिए यह अनुमति देते हैं, तो आप उस ऐप्लिकेशन का इस्तेमाल करके प्रीमियम मैसेज (एसएमएस) भेज सकते हैं."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"इस्तेमाल का ऐक्‍सेस"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"\'डेटा खर्च\' देखने की मंज़ूरी से कोई ऐप्लिकेशन इस बात पर नज़र रख पाता है कि आप कौनसे ऐप्लिकेशन चला रहे हैं और उन्हें कितनी बार इस्तेमाल करते हैं. साथ ही, ऐप्लिकेशन आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी, भाषा सेटिंग और दूसरी जानकारी देख पाता है."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"जगह की जानकारी"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"जगह की जानकारी का इस्तेमाल करें"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"अपने चुने हुए किसी ऐप्लिकेशन के साथ कार की जगह की जानकारी का इस्तेमाल करें."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"इसे बंद करने पर, ड्राइवर की सुरक्षा में मदद करने की सुविधाओं वाले ऐप्लिकेशन को छोड़कर, दूसरा कोई भी ऐप्लिकेशन जगह की जानकारी ऐक्सेस नहीं कर पाएगा"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"इसे बंद करने पर, ड्राइवर की सुरक्षा में मदद करने की सुविधाओं वाले वे ऐप्लिकेशन बंद हो जाएंगे जो जगह की जानकारी का इस्तेमाल करते हैं"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"फिर भी बंद करें"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"इस सेटिंग को बदला नहीं जा सकता. इसे कार बनाने वाली कंपनी ने बंद कर रखा है."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ड्राइव करने में मदद करने वाली सुविधाएं"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"कार की जगह की जानकारी का ऐक्सेस देने के लिए, कार मैन्युफ़ैक्चरर से मंज़ूरी मिली पहले से मौजूद सुविधाओं को अनुमति दें."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"हाल ही में, जगह की जानकारी ऐक्सेस करने वाले ऐप्लिकेशन"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"हाल ही में, जगह की जानकारी ऐक्सेस करने वाले ऐप्लिकेशन"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"सभी ऐप्लिकेशन देखें"</string>

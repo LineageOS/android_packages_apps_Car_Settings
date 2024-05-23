@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল কৰক"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"এই এপ্‌সমূহে ছিষ্টেমৰ কাৰ্যদক্ষতাত ঋণাত্মক প্ৰভাৱ পেলায় আৰু এইবোৰক নেপথ্যত চলাত বাধা দিয়া হৈছে।\nনেপথ্যত ব্যৱহাৰৰ অনুমতি দিবলৈ আৰু ইয়াক সূচীখনৰ পৰা আঁতৰাবলৈ এপক অগ্ৰাধিকাৰ দিয়ক।"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"এপক অগ্ৰাধিকাৰ দিয়ক"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"প্ৰিমিয়াম এছএমএছৰ এক্সেছ"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"প্ৰিমিয়াম এছএমএছ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"প্ৰিমিয়াম এছএমএছৰ কাৰণে আপুনি খৰচ বহন কৰিবলগীয়া হ’ব পাৰে যাৰ বাবে বাহকে আপোনালৈ পঠিওৱা বিলত দেয়ৰ পৰিমাণ বাঢ়িব পাৰে। আপুনি যদি কোনো এপক অনুমতি দিয়ে, তেন্তে আপুনি সেই এপ্‌টো ব্যৱহাৰ কৰি প্ৰিমিয়াম এছএমএছ পঠাব পাৰিব।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ব্যৱহাৰৰ এক্সেছ"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ব্যৱহাৰৰ এক্সেছ সুবিধাই এটা এপক আপুনি আন কি এপ্ ব্যৱহাৰ কৰে আৰু সেইবোৰ কিমান সঘনাই ব্যৱহাৰ কৰে, লগতে আপোনাৰ বাহক, ভাষাৰ ছেটিংসমূহ আৰু অন্যান্য সবিশেষ ট্ৰেক কৰিবলৈ অনুমতি দিয়ে।"</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"অৱস্থান"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"অৱস্থান ব্যৱহাৰ কৰক"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"আপুনি নিৰ্দিষ্ট কৰা যিকোনো এপৰ সৈতে আপোনাৰ গাড়ীৰ অৱস্থান ব্যৱহাৰ কৰক।"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"আপুনি যদি এইটো অফ কৰে, তেন্তে চালক সাহায্যৰ বাবে আৱশ্যক হোৱা এপৰ বাহিৰে এইটোৱে আটাইবোৰ এপৰ বাবে অৱস্থানৰ এক্সেছ আঁতৰাব"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"আপুনি যদি এইটো অফ কৰে, তেন্তে অৱস্থানৰ তথ্যৰ ওপৰত নিৰ্ভৰশীল চালকৰ সাহায্য এপ্‌সমূহ অক্ষম কৰা হ’ব"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"তথাপি অফ কৰক"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"এই ছেটিংটো সলনি কৰিব নোৱাৰি আৰু সেইটো আপোনাৰ কাৰ নিৰ্মাতাই অক্ষম কৰিছে।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"আপোনাক গাড়ী চলোৱাত সহায় কৰা সুবিধাসমূহ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"আপোনাৰ গাড়ী নিৰ্মাতাই অনুমোদন জনোৱা বিল্ট-ইন সুবিধাসমূহক আপোনাৰ গাড়ীৰ অৱস্থান এক্সেছ কৰিবলৈ অনুমতি দিয়ক।"</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"শেহতীয়াকৈ এক্সেছ কৰা"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"আটাইবোৰ চাওক"</string>

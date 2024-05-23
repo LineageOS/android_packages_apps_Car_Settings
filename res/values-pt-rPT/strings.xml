@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Estas apps afetam negativamente o desempenho do sistema e foram impedidas de funcionar em segundo plano.\nDê prioridade à app para permitir a utilização em segundo plano e remova-a da lista."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Dar prioridade à app"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acesso a SMS premium"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"O serviço de SMS premium pode custar dinheiro e, nesse caso, será adicionado às faturas do seu operador. Se ativar a autorização para uma aplicação, poderá enviar SMS premium através da mesma."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acesso de utilização"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"O acesso de utilização permite a uma aplicação monitorizar que outras aplicações está a utilizar e com que frequência, bem como o operador e as definições de idioma, entre outros detalhes."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Localização"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localização"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Use a localização do carro com qualquer app que tenha especificado."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desativar esta opção, remove o acesso à localização para todas as apps, exceto as necessárias para a assistência ao condutor"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se desativar esta opção, as apps de assistência ao condutor que dependem de informações de localização são desativadas"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desativar mesmo assim"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Esta definição não pode ser alterada e foi desativada pelo fabricante do carro."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcionalidades que ajudam a conduzir"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Permita que as funcionalidades integradas, aprovadas pelo fabricante do carro, acedam à localização deste."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Acedido recentemente"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Acedido recentemente"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver tudo"</string>

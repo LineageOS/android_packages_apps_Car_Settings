@@ -34,7 +34,7 @@
     <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Активдүү эмес/eSIM-карта"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Дагы кошуу"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобилдик Интернет"</string>
-    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Интернетке мобилдик тармак аркылуу чыгуу"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Интернетке мобилдик тармак аркылуу чыгасыз"</string>
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобилдик тармак"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Мобилдик трафикти колдонуу"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Өчүк"</string>
@@ -404,14 +404,14 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Системанын параметрлерин өзгөртүү"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо системанын параметрлерин өзгөртө алат."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Билдирмелерди угуу"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> кызматына билдирмелерди угууга уруксат берилсинби?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> кызматына билдирмелерди угууга уруксат бересизби?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> колдонмосу эскертмелердин баарын, ошону менен катар байланыштардын аты-жөнү жана кабыл алынган билдирүүлөр сыяктуу жеке маалыматты окуй алат. Мындан тышкары, ал билдирмелерди жок кылып же алардагы баскычтарды баса алат.\n\nУшуну менен колдонмо \"Тынчымды алба\" режимин иштетүү же өчүрүү, ошондой эле анын параметрлерин өзгөртүү мүмкүнчүлүгүнө ээ болот."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Эгер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үчүн билдирмени угуу уруксатын өчүрсөңүз, анын \"Тынчымды алба\" режимине да уруксаты жок болуп калышы мүмкүн."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өчүрүү"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Жок"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Бул колдонмолор системанын майнаптуулугуна терс таасирин тийгизгендиктен, фондо иштетилбей калышты.\nКолдонмону фондо иштетүү үчүн ага арткычылык берип, бул тизмеден өчүрүңүз."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Колдонмого артыкчылык берүү"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Акы алынуучу SMS жөнөтүүгө уруксат"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Акы алынуучу SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Акы алынуучу SMS үчүн сизден акы алынып, ал операторуңуздун эсептерине кошулушу мүмкүн. Эгер кайсы бир колдонмого уруксат берсеңиз, ошол колдонмо аркылуу акы алынуучу SMS жөнөтө аласыз."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Колдонуу таржымалын көрүү"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Колдонуу таржымалы аркылуу кайсы колдонмолор канчалык көп колдонула турганын, ошондой эле байланыш операторуңузду, тил параметрлерин жана башка параметрлерди көрө аласыз."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Жайгашкан жер"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Жайгашкан жерди колдонуу"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Сиз көрсөткөн колдонмолор унааңыздын жүргөн жерин аныктай алат."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Бул функцияны өчүрсөңүз, айдоочуларга арналган колдонмолор гана жүргөн жерди аныктай алышат"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Эгер өчүрсөңүз, кайда жүргөнүңүздү аныктаган айдоочулардын колдонмолору өчүрүлөт"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Баары бир өчүрүү"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Бул параметрди өзгөртүүгө болбойт. Аны унаанын өндүрүүчүсү өчүрүп койгон."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Унаа айдоого жардам берүүчү функциялар"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Унааңыздын өндүрүүчүсү ырастаган алдын ала орнотулган функцияларга унааңыздын жүргөн жерин көрүүгө уруксат бериңиз."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Жакында пайдалангандар"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Жакында пайдалангандар"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Баарын көрүү"</string>

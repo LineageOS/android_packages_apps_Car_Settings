@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ବାତିଲ କରନ୍ତୁ"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ଏହି ଆପ୍ସ ସିଷ୍ଟମ ପରଫରମାନ୍ସ ଉପରେ ନକାରାତ୍ମକ ପ୍ରଭାବ ପକାଏ ଏବଂ ପୃଷ୍ଠପଟରେ ଚାଲିବାରୁ ସେଗୁଡ଼ିକୁ ପ୍ରତିରୋଧ କରାଯାଇଛି।\nପୃଷ୍ଠପଟରେ ଚାଲିବା ପାଇଁ ଆପକୁ ପ୍ରାଥମିକତା ଦିଅନ୍ତୁ ଏବଂ ଏହି ତାଲିକାରୁ ଏହାକୁ କାଢ଼ି ଦିଅନ୍ତୁ।"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ଆପକୁ ପ୍ରାଥମିକତା ଦିଅ"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"ପ୍ରିମିୟମ୍ SMS ଆକ୍ସେସ୍"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"ପ୍ରିମିୟମ SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ପ୍ରିମିୟମ୍ SMSରେ ଆପଣଙ୍କୁ ଖର୍ଚ୍ଚ କରିବାକୁ ପଡ଼ିପାରେ ଏବଂ ତାହା ଆପଣଙ୍କର ମୋବାଇଲ୍ କମ୍ପାନୀର ବିଲ୍‌ରେ ଯୋଗ ହୋଇଯିବ। ଯଦି ଆପଣ ଏକ ଆପ୍ ପାଇଁ ଅନୁମତି ଦେଇଛନ୍ତି, ତେବେ ସେହି ଆପ୍ ବ୍ୟବହାର କରି ଆପଣ ପ୍ରିମିୟମ୍ SMS ପଠାଇ ପାରିବେ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ବ୍ୟବହାର ଆକସେସ୍"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ଆପଣ କେଉଁ ଅନ୍ୟ ଆପ୍ସ କେତେ ଥର ବ୍ୟବହାର କରୁଛନ୍ତି, ତଥା ଆପଣଙ୍କ ମୋବାଇଲ କମ୍ପାନୀ, ଭାଷା ସେଟିଂସ୍ ଏବଂ ଅନ୍ୟ ବିବରଣୀକୁ ଟ୍ରାକ୍ କରିବା ପାଇଁ, ବ୍ୟବହାରର ଆକସେସ୍‍ ଏକ ଆପ୍‌କୁ ଅନୁମତି ଦେଇଥାଏ।"</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"ଲୋକେସନ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ଲୋକେସନ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"ଆପଣ ନିର୍ଦ୍ଦିଷ୍ଟ କରିଥିବା ଯେ କୌଣସି ଆପ ସହ ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ବ୍ୟବହାର କରନ୍ତୁ।"</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଡ୍ରାଇଭର ସହାୟତା ପାଇଁ ଆବଶ୍ୟକ ଆପ୍ସ ବ୍ୟତୀତ ଏହା ସମସ୍ତ ଆପ୍ସ ପାଇଁ ଲୋକେସନ ଆକ୍ସେସକୁ କାଢ଼ି ଦେବ"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ଯଦି ଆପଣ ଏହାକୁ ବନ୍ଦ କରନ୍ତି, ତେବେ ଲୋକେସନ ସୂଚନା ଉପରେ ନିର୍ଭର କରୁଥିବା ଡ୍ରାଇଭର ସହାୟତା ଆପ୍ସ ଅକ୍ଷମ ହୋଇଯିବ"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ଯେ କୌଣସି ଉପାୟରେ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ଏହି ସେଟିଂକୁ ପରିବର୍ତ୍ତନ କରାଯାଇପାରିବ ନାହିଁ ଏବଂ ଏହାକୁ ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ଦ୍ୱାରା ଅକ୍ଷମ କରାଯାଇଛି।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ଡ୍ରାଇଭ କରିବାରେ ସାହାଯ୍ୟ କରୁଥିବା ଫିଚରଗୁଡ଼ିକ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"ଆପଣଙ୍କ କାରର ଲୋକେସନକୁ ଆକ୍ସେସ କରିବା ପାଇଁ ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ଦ୍ୱାରା ଅନୁମୋଦିତ ବିଲ୍ଟ-ଇନ ଫିଚରଗୁଡ଼ିକୁ ଅନୁମତି ଦିଅନ୍ତୁ।"</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ବର୍ତ୍ତମାନ ଆକ୍ସେସ କରାଯାଇଛି"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"ସବୁ ଦେଖନ୍ତୁ"</string>

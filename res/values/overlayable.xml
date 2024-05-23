@@ -1189,8 +1189,12 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="media_volume_summary"/>
       <item type="string" name="media_volume_title"/>
       <item type="string" name="memory_calculating_size"/>
+      <item type="string" name="microphone_access_settings_summary"/>
+      <item type="string" name="microphone_access_settings_title"/>
       <item type="string" name="microphone_app_permission_summary_microphone_off"/>
       <item type="string" name="microphone_app_permission_summary_microphone_on"/>
+      <item type="string" name="microphone_infotainment_apps_toggle_summary"/>
+      <item type="string" name="microphone_infotainment_apps_toggle_title"/>
       <item type="string" name="microphone_manage_permissions"/>
       <item type="string" name="microphone_no_recent_access"/>
       <item type="string" name="microphone_recently_accessed"/>
@@ -1706,6 +1710,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="location_settings_fragment"/>
       <item type="xml" name="location_settings_required_infotainment_fragment"/>
       <item type="xml" name="manage_domain_urls_fragment"/>
+      <item type="xml" name="microphone_access_fragment"/>
       <item type="xml" name="microphone_recent_requests_view_all_fragment"/>
       <item type="xml" name="mobile_network_fragment"/>
       <item type="xml" name="mobile_network_list_fragment"/>
@@ -1718,6 +1723,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="premium_sms_access_fragment"/>
       <item type="xml" name="privacy_camera_settings_fragment"/>
       <item type="xml" name="privacy_microphone_settings_fragment"/>
+      <item type="xml" name="privacy_microphone_settings_fragment_updated"/>
       <item type="xml" name="privacy_settings_fragment"/>
       <item type="xml" name="profile_details_fragment"/>
       <item type="xml" name="profile_details_permissions_fragment"/>

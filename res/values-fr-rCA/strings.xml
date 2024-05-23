@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ces applications altèrent la performance du système, et leur exécution en arrière-plan a été bloquée.\nPriorisez l\'application pour permettre l\'utilisation en arrière-plan et retirez-là de cette liste."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioriser l\'appli"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"Accès aux messages texte payants"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Message texte payant"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Les messages texte de cette catégorie peuvent être payants et s\'ajouter aux factures mensuelles de votre fournisseur de services. Si vous activez l\'autorisation pour une application, vous serez en mesure d\'envoyer des messages texte payants à l\'aide de cette dernière."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Accès aux données utilisation"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"L\'accès aux données d\'utilisation permet à une application d\'effectuer le suivi des applications que vous utilisez, de la fréquence d\'utilisation, du fournisseur de services, des paramètres de langue et d\'autres détails."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Utiliser ma position"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Utilisez la localisation de votre voiture avec n\'importe quelle application que vous avez spécifiée."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Si vous désactivez ce paramètre, vous retirerez l\'accès de toutes les applications à votre position, à l\'exception de celles requises pour l\'assistance au conducteur"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Si vous désactivez cette option, les applications d\'assistance au conducteur qui dépendent des données de localisation seront désactivées"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Désactiver quand même"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Ce paramètre ne peut pas être modifié et a été désactivé par le constructeur automobile."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Fonctionnalités vous aidant à conduire"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Autorisez les fonctionnalités intégrées, approuvées par le fabricant de votre voiture, à accéder à la localisation de votre voiture."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"Accès récents"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accès récents"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tout afficher"</string>
@@ -770,7 +778,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Impossible d\'ajouter un profil durant la conduite"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Recherche"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant et voix"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Application d\'assistant numérique"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Appli d\'assistant numérique"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Utiliser le texte affiché à l\'écran"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Autorisez l\'assistant à accéder au contenu de l\'écran"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Utiliser la capture d\'écran"</string>

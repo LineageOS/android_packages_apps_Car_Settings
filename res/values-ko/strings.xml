@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"취소"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"시스템 성능에 부정적인 영향을 미쳐 백그라운드 실행이 차단된 앱입니다.\n앱 우선순위를 지정하여 백그라운드 사용을 허용하고 이 목록에서 삭제하세요."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"앱 우선순위 지정"</string>
-    <string name="premium_sms_access_title" msgid="1409118461646148686">"프리미엄 SMS 액세스"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"프리미엄 SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"프리미엄 SMS는 요금이 부과될 수 있으며 이는 이동통신사 요금에 추가됩니다. 앱에 권한을 부여하면 해당 앱을 사용하여 프리미엄 SMS를 사용할 수 있게 됩니다."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"사용 기록에 액세스"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"앱에서 사용 기록에 액세스하도록 허용하면 사용 중인 다른 앱의 종류와 사용 빈도, 이동통신사, 언어 설정, 기타 세부정보를 추적할 수 있게 됩니다."</string>
@@ -421,12 +421,20 @@
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"위치 사용"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"지정한 앱에서 자동차 위치 정보를 사용합니다."</string>
+    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
+    <skip />
+    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
+    <skip />
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"이 기능을 끄면 운전자 지원을 위해 필요한 경우를 제외하고 모든 앱에서 위치 액세스 권한이 삭제됩니다."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"기능을 끄면 위치 정보를 사용하는 운전자 지원 앱이 사용 중지됩니다."</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"무시하고 사용 중지"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"이 설정은 변경할 수 없으며, 자동차 제조업체에 의해 중지되었습니다."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"운전을 도와주는 기능"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"자동차 제조업체에서 승인한 기본 내장 기능이 자동차의 위치 정보에 액세스할 수 있도록 허용합니다."</string>
+    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
+    <skip />
+    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
+    <skip />
     <string name="location_recently_accessed" msgid="522888989582110975">"최근 액세스함"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"최근 액세스함"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"모두 보기"</string>
