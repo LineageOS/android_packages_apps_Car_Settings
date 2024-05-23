@@ -16,10 +16,6 @@
 
 package com.android.car.settings.bluetooth;
 
-import static com.android.car.settings.common.PreferenceController.AVAILABLE;
-import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
-
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -33,8 +29,6 @@ import android.os.UserManager;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.testutils.EnterpriseTestUtils;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,9 +37,6 @@ import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
 public final class BluetoothUtilsTest {
-
-    private static final String TEST_RESTRICTION =
-            android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
     private static final String SYSTEM_UI_PACKAGE_NAME = "com.package.systemui";
     private static final String SYSTEM_UI_COMPONENT_NAME = "com.package.systemui/testclass";
     private static final String ALLOWED_PACKAGE_NAME = "com.allowed.package";
@@ -68,39 +59,6 @@ public final class BluetoothUtilsTest {
         String[] allowedPackages = new String[1];
         allowedPackages[0] = ALLOWED_PACKAGE_NAME;
         when(mMockResources.getStringArray(anyInt())).thenReturn(allowedPackages);
-    }
-
-    @Test
-    public void testGetAvailabilityStatusRestricted_unrestricted_available() {
-        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mMockUserManager, TEST_RESTRICTION, false);
-        EnterpriseTestUtils.mockUserRestrictionSetByUm(mMockUserManager, TEST_RESTRICTION, false);
-
-        assertThat(BluetoothUtils.getAvailabilityStatusRestricted(mContext)).isEqualTo(AVAILABLE);
-    }
-
-    @Test
-    public void testGetAvailabilityStatusRestricted_restrictedByUm_disabled() {
-        EnterpriseTestUtils.mockUserRestrictionSetByUm(mMockUserManager, TEST_RESTRICTION, true);
-
-        assertThat(BluetoothUtils.getAvailabilityStatusRestricted(mContext))
-                .isEqualTo(DISABLED_FOR_PROFILE);
-    }
-
-    @Test
-    public void testGetAvailabilityStatusRestricted_restrictedByDpm_viewing() {
-        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mMockUserManager, TEST_RESTRICTION, true);
-
-        assertThat(BluetoothUtils.getAvailabilityStatusRestricted(mContext))
-                .isEqualTo(AVAILABLE_FOR_VIEWING);
-    }
-
-    @Test
-    public void testGetAvailabilityStatusRestricted_restrictedByBothUmAndDpm_disabled() {
-        EnterpriseTestUtils.mockUserRestrictionSetByDpm(mMockUserManager, TEST_RESTRICTION, true);
-        EnterpriseTestUtils.mockUserRestrictionSetByUm(mMockUserManager, TEST_RESTRICTION, true);
-
-        assertThat(BluetoothUtils.getAvailabilityStatusRestricted(mContext))
-                .isEqualTo(DISABLED_FOR_PROFILE);
     }
 
     @Test

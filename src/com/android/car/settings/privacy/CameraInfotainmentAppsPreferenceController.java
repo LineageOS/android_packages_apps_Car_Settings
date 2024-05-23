@@ -27,7 +27,6 @@ import android.os.Process;
 import android.os.UserHandle;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CameraPrivacyBasePreferenceController;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.LogicalPreferenceGroup;

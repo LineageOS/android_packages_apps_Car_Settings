@@ -18,6 +18,9 @@ package com.android.car.settings.bluetooth;
 
 import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
 
+import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
+import static com.android.car.settings.enterprise.EnterpriseUtils.onClickWhileDisabled;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.UserManager;
@@ -75,10 +78,10 @@ public class BluetoothDeviceProfilesPreferenceController extends
                 profilePref = new BluetoothDeviceProfilePreference(getContext(), profile,
                         getCachedDevice());
                 profilePref.setOnPreferenceChangeListener(mProfileChangeListener);
-                if (hasDisallowConfigRestriction()) {
+                if (hasUserRestrictionByDpm(getContext(), DISALLOW_CONFIG_BLUETOOTH)) {
                     setClickableWhileDisabled(profilePref, /* clickable= */ true, p ->
-                            BluetoothUtils.onClickWhileDisabled(getContext(),
-                                    getFragmentController()));
+                            onClickWhileDisabled(getContext(),
+                                    getFragmentController(), DISALLOW_CONFIG_BLUETOOTH));
                 }
                 preferenceGroup.addPreference(profilePref);
             }
@@ -90,9 +93,5 @@ public class BluetoothDeviceProfilesPreferenceController extends
             }
         }
         preferenceGroup.setVisible(preferenceGroup.getPreferenceCount() > 0);
-    }
-
-    private boolean hasDisallowConfigRestriction() {
-        return getUserManager().hasUserRestriction(DISALLOW_CONFIG_BLUETOOTH);
     }
 }

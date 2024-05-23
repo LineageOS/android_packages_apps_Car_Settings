@@ -22,7 +22,6 @@ import static org.junit.Assume.assumeTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -70,7 +69,7 @@ import java.util.Collections;
 public class BluetoothDeviceProfilesPreferenceControllerTest {
 
     private LifecycleOwner mLifecycleOwner;
-    private Context mContext = ApplicationProvider.getApplicationContext();
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private PreferenceGroup mPreferenceGroup;
     private BluetoothDeviceProfilesPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
@@ -97,6 +96,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
                 .strictness(Strictness.LENIENT)
                 .startMocking();
         ExtendedMockito.when(Toast.makeText(any(), anyString(), anyInt())).thenReturn(mMockToast);
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
 
         mLifecycleOwner = new TestLifecycleOwner();
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
@@ -270,7 +270,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
     }
 
     @Test
-    public void profileDisabled_showsToast() {
+    public void profileDisabled_showsDialog() {
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH))
                 .thenReturn(true);
         when(mBondedCachedDevice.isBusy()).thenReturn(true);
@@ -291,9 +291,6 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
         profilePreference.refreshUi();
         profilePreference.performClick();
 
-        String toastText = mContext.getResources().getString(R.string.action_unavailable);
-
-        ExtendedMockito.verify(() -> Toast.makeText(any(), eq(toastText), anyInt()));
-        verify(mMockToast).show();
+        verify(mFragmentController).showDialog(any(), any());
     }
 }

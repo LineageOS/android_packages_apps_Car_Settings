@@ -15,6 +15,11 @@
  */
 package com.android.car.settings.enterprise;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
+import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+
 import android.Manifest;
 import android.annotation.Nullable;
 import android.annotation.UserIdInt;
@@ -28,7 +33,10 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.widget.Toast;
 
+import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 import com.android.settingslib.RestrictedLockUtilsInternal;
@@ -115,6 +123,17 @@ public final class EnterpriseUtils {
         return getUserManager(context).isAdminUser();
     }
 
+    /** Returns the default availability status when a user is restricted by a given restriction */
+    public static int getAvailabilityStatusRestricted(Context context, String restriction) {
+        if (hasUserRestrictionByUm(context, restriction)) {
+            return DISABLED_FOR_PROFILE;
+        }
+        if (hasUserRestrictionByDpm(context, restriction)) {
+            return AVAILABLE_FOR_VIEWING;
+        }
+        return AVAILABLE;
+    }
+
     /**
      * Checks whether the restriction is set on the current user by device owner / profile owners
      * but not by {@link UserManager}.
@@ -136,6 +155,29 @@ public final class EnterpriseUtils {
     public static boolean hasUserRestrictionByUm(Context context, String restriction) {
         return getUserManager(context)
                 .hasBaseUserRestriction(restriction, UserHandle.of(context.getUserId()));
+    }
+
+    /** Handles onClick() behavior for a disabled preference that has been user restricted */
+    public static void onClickWhileDisabled(Context context, FragmentController fragmentController,
+            String restriction) {
+        if (hasUserRestrictionByDpm(context, restriction)) {
+            showActionDisabledByAdminDialog(context, fragmentController, restriction);
+        } else {
+            showActionUnavailableToast(context);
+        }
+    }
+
+    private static void showActionDisabledByAdminDialog(Context context,
+            FragmentController fragmentController, String restriction) {
+        fragmentController.showDialog(
+                EnterpriseUtils.getActionDisabledByAdminDialog(context, restriction),
+                DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
+    }
+
+    private static void showActionUnavailableToast(Context context) {
+        Toast.makeText(context, context.getString(R.string.action_unavailable),
+                Toast.LENGTH_LONG).show();
+        LOG.d(context.getString(R.string.action_unavailable));
     }
 
     /**

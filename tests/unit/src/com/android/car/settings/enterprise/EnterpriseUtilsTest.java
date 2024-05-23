@@ -15,13 +15,19 @@
  */
 package com.android.car.settings.enterprise;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.enterprise.EnterpriseUtils.getAdminWithinPackage;
+import static com.android.car.settings.enterprise.EnterpriseUtils.getAvailabilityStatusRestricted;
 import static com.android.car.settings.enterprise.EnterpriseUtils.getDeviceAdminInfo;
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasDeviceOwner;
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByUm;
 import static com.android.car.settings.enterprise.EnterpriseUtils.isAdminUser;
 import static com.android.car.settings.enterprise.EnterpriseUtils.isDemoUser;
+import static com.android.car.settings.testutils.EnterpriseTestUtils.mockUserRestrictionSetByDpm;
+import static com.android.car.settings.testutils.EnterpriseTestUtils.mockUserRestrictionSetByUm;
 
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
@@ -167,5 +173,39 @@ public final class EnterpriseUtilsTest extends BaseEnterpriseTestCase {
                 .thenReturn(new ComponentName("testPackage", "testClass"));
 
         assertThat(hasDeviceOwner(mSpiedContext)).isTrue();
+    }
+
+    @Test
+    public void testGetAvailabilityStatusRestricted_unrestricted_available() {
+        mockUserRestrictionSetByDpm(mUm, TEST_RESTRICTION, false);
+        mockUserRestrictionSetByUm(mUm, TEST_RESTRICTION, false);
+
+        assertThat(getAvailabilityStatusRestricted(mSpiedContext, TEST_RESTRICTION))
+                .isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatusRestricted_restrictedByUm_disabled() {
+        mockUserRestrictionSetByUm(mUm, TEST_RESTRICTION, true);
+
+        assertThat(getAvailabilityStatusRestricted(mSpiedContext, TEST_RESTRICTION))
+                .isEqualTo(DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatusRestricted_restrictedByDpm_viewing() {
+        mockUserRestrictionSetByDpm(mUm, TEST_RESTRICTION, true);
+
+        assertThat(getAvailabilityStatusRestricted(mSpiedContext, TEST_RESTRICTION))
+                .isEqualTo(AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void testGetAvailabilityStatusRestricted_restrictedByBothUmAndDpm_disabled() {
+        mockUserRestrictionSetByDpm(mUm, TEST_RESTRICTION, true);
+        mockUserRestrictionSetByUm(mUm, TEST_RESTRICTION, true);
+
+        assertThat(getAvailabilityStatusRestricted(mSpiedContext, TEST_RESTRICTION))
+                .isEqualTo(DISABLED_FOR_PROFILE);
     }
 }

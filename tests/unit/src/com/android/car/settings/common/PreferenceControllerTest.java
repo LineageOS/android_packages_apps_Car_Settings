@@ -19,6 +19,11 @@ package com.android.car.settings.common;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
+import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
+import static com.android.car.settings.common.PreferenceXmlParser.PREF_AVAILABILITY_STATUS_HIDDEN;
+import static com.android.car.settings.common.PreferenceXmlParser.PREF_AVAILABILITY_STATUS_READ;
+import static com.android.car.settings.common.PreferenceXmlParser.PREF_AVAILABILITY_STATUS_WRITE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -291,9 +296,9 @@ public class PreferenceControllerTest {
     }
 
     @Test
-    public void testGetAvailabilityStatus_unrestricted_available_zoneWrite() {
+    public void testGetAvailabilityStatus_available_zoneWrite() {
         mPreferenceController.setPreference(mPreference);
-        mPreferenceController.setAvailabilityStatusForZone("write");
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_WRITE);
         mPreferenceController.onCreate(mLifecycleOwner);
 
         PreferenceControllerTestUtil.assertAvailability(
@@ -302,19 +307,153 @@ public class PreferenceControllerTest {
     }
 
     @Test
-    public void testGetAvailabilityStatus_unrestricted_available_zoneRead() {
+    public void testGetAvailabilityStatus_available_zoneRead() {
         mPreferenceController.setPreference(mPreference);
-        mPreferenceController.setAvailabilityStatusForZone("read");
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_READ);
         mPreferenceController.onCreate(mLifecycleOwner);
 
         PreferenceControllerTestUtil.assertAvailability(
                 mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
         verify(mPreference).setEnabled(false);
     }
+
     @Test
-    public void testGetAvailabilityStatus_unrestricted_available_zoneHidden() {
+    public void testGetAvailabilityStatus_available_zoneHidden() {
         mPreferenceController.setPreference(mPreference);
-        mPreferenceController.setAvailabilityStatusForZone("hidden");
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_HIDDEN);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_availableForViewing_zoneWrite() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(AVAILABLE_FOR_VIEWING);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_WRITE);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_availableForViewing_zoneRead() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(AVAILABLE_FOR_VIEWING);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_READ);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
+        verify(mPreference).setEnabled(false);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_availableForViewing_zoneHidden() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(AVAILABLE_FOR_VIEWING);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_HIDDEN);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_disabledForProfile_zoneWrite() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(DISABLED_FOR_PROFILE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_WRITE);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_disabledForProfile_zoneRead() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(DISABLED_FOR_PROFILE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_READ);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_disabledForProfile_zoneHidden() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(DISABLED_FOR_PROFILE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_HIDDEN);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unsupportedOnDevice_zoneWrite() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(UNSUPPORTED_ON_DEVICE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_WRITE);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unsupportedOnDevice_zoneRead() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(UNSUPPORTED_ON_DEVICE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_READ);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_unsupportedOnDevice_zoneHidden() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(UNSUPPORTED_ON_DEVICE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_HIDDEN);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_conditionallyUnavailable_zoneWrite() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(CONDITIONALLY_UNAVAILABLE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_WRITE);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_conditionallyUnavailable_zoneRead() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(CONDITIONALLY_UNAVAILABLE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_READ);
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_conditionallyUnavailable_zoneHidden() {
+        mPreferenceController.setPreference(mPreference);
+        mPreferenceController.setAvailabilityStatus(CONDITIONALLY_UNAVAILABLE);
+        mPreferenceController.setAvailabilityStatusForZone(PREF_AVAILABILITY_STATUS_HIDDEN);
         mPreferenceController.onCreate(mLifecycleOwner);
 
         PreferenceControllerTestUtil.assertAvailability(
