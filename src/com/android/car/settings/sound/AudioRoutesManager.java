@@ -30,12 +30,14 @@ import android.media.AudioAttributes;
 import android.media.AudioDeviceAttributes;
 import android.media.AudioDeviceInfo;
 import android.util.ArrayMap;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.content.ContextCompat;
 
 import com.android.car.settings.CarSettingsApplication;
+import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -59,6 +61,7 @@ public class AudioRoutesManager {
     private AudioZoneConfigUpdateListener mUpdateListener;
     private List<String> mAddressList;
     private Map<String, AudioRouteItem> mAudioRouteItemMap;
+    private Toast mToast;
 
     /**
      * A listener for when the AudioZoneConfig is updated.
@@ -84,7 +87,9 @@ public class AudioRoutesManager {
             (zoneConfig, isSuccessful) -> {
                 if (isSuccessful) {
                     mActiveDeviceAddress = mFutureActiveDeviceAddress;
-                    mUpdateListener.onAudioZoneConfigUpdated();
+                    if (mUpdateListener != null) {
+                        mUpdateListener.onAudioZoneConfigUpdated();
+                    }
                 } else {
                     LOG.d("Switch audio zone failed.");
                 }
@@ -214,6 +219,7 @@ public class AudioRoutesManager {
      * Update to a new audio destination of the provided address.
      */
     public AudioRouteItem updateAudioRoute(String address) {
+        showToast(address);
         mFutureActiveDeviceAddress = address;
         AudioRouteItem audioRouteItem = mAudioRouteItemMap.get(address);
         if (audioRouteItem.getAudioRouteType() == TYPE_BLUETOOTH_A2DP) {
@@ -260,5 +266,16 @@ public class AudioRoutesManager {
                 }
             }
         }
+    }
+
+    private void showToast(String address) {
+        if (mToast != null) {
+            mToast.cancel();
+        }
+        String deviceName = getDeviceNameForAddress(address);
+        String text = mContext.getString(R.string.audio_route_selector_toast, deviceName);
+        int duration = mContext.getResources().getInteger(R.integer.audio_route_toast_duration);
+        mToast = Toast.makeText(mContext, text, duration);
+        mToast.show();
     }
 }
