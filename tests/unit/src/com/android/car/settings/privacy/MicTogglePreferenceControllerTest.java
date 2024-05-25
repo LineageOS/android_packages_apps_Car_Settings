@@ -18,18 +18,21 @@ package com.android.car.settings.privacy;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
-import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.hardware.SensorPrivacyManager;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.test.annotation.UiThreadTest;
@@ -52,15 +55,18 @@ import org.mockito.MockitoAnnotations;
 @RunWith(AndroidJUnit4.class)
 public class MicTogglePreferenceControllerTest {
     private LifecycleOwner mLifecycleOwner;
-    private Context mContext = ApplicationProvider.getApplicationContext();
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private ColoredSwitchPreference mSwitchPreference;
     private MicTogglePreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
+    private UserHandle mUserHandle;
 
     @Mock
     private FragmentController mFragmentController;
     @Mock
     private SensorPrivacyManager mMockSensorPrivacyManager;
+    @Mock
+    private UserManager mMockUserManager;
     @Captor
     private ArgumentCaptor<SensorPrivacyManager.OnSensorPrivacyChangedListener> mListener;
 
@@ -69,6 +75,8 @@ public class MicTogglePreferenceControllerTest {
     public void setUp() {
         mLifecycleOwner = new TestLifecycleOwner();
         MockitoAnnotations.initMocks(this);
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mMockUserManager);
+        mUserHandle = mContext.getUser();
         setMicMuteFeatureAvailable(true);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
@@ -91,39 +99,6 @@ public class MicTogglePreferenceControllerTest {
     }
 
     @Test
-    public void micMuteUnavailable_preferenceIsHidden_zoneWrite() {
-        setMicMuteFeatureAvailable(false);
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.onStart(mLifecycleOwner);
-        mPreferenceController.setAvailabilityStatusForZone("write");
-
-        PreferenceControllerTestUtil.assertAvailability(
-                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
-    }
-
-    @Test
-    public void micMuteUnavailable_preferenceIsHidden_zoneRead() {
-        setMicMuteFeatureAvailable(false);
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.onStart(mLifecycleOwner);
-        mPreferenceController.setAvailabilityStatusForZone("read");
-
-        PreferenceControllerTestUtil.assertAvailability(
-                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
-    }
-
-    @Test
-    public void micMuteUnavailable_preferenceIsHidden_zoneHidden() {
-        setMicMuteFeatureAvailable(false);
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.onStart(mLifecycleOwner);
-        mPreferenceController.setAvailabilityStatusForZone("hidden");
-
-        PreferenceControllerTestUtil.assertAvailability(
-                mPreferenceController.getAvailabilityStatus(), UNSUPPORTED_ON_DEVICE);
-    }
-
-    @Test
     public void micMuteAvailable_preferenceIsShown() {
         setMicMuteFeatureAvailable(true);
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -133,36 +108,33 @@ public class MicTogglePreferenceControllerTest {
     }
 
     @Test
-    public void micMuteAvailable_preferenceIsShown_zoneWrite() {
-        setMicMuteFeatureAvailable(true);
+    public void baseUserRestricted_preferenceIsDisabled() {
+        when(mMockSensorPrivacyManager
+                .supportsSensorToggle(eq(SensorPrivacyManager.Sensors.MICROPHONE)))
+                .thenReturn(true);
+        when(mMockUserManager.hasBaseUserRestriction(eq(UserManager.DISALLOW_MICROPHONE_TOGGLE),
+                eq(mUserHandle))).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
-        mPreferenceController.setAvailabilityStatusForZone("write");
 
         PreferenceControllerTestUtil.assertAvailability(
-                mPreferenceController.getAvailabilityStatus(), AVAILABLE);
+                mPreferenceController.getAvailabilityStatus(), DISABLED_FOR_PROFILE);
     }
 
     @Test
-    public void micMuteAvailable_preferenceIsShown_zoneRead() {
-        setMicMuteFeatureAvailable(true);
+    public void userRestricted_availableForViewing() {
+        when(mMockSensorPrivacyManager
+                .supportsSensorToggle(eq(SensorPrivacyManager.Sensors.MICROPHONE)))
+                .thenReturn(true);
+        when(mMockUserManager.hasBaseUserRestriction(eq(UserManager.DISALLOW_MICROPHONE_TOGGLE),
+                eq(mUserHandle))).thenReturn(false);
+        when(mMockUserManager.hasUserRestriction(eq(UserManager.DISALLOW_MICROPHONE_TOGGLE)))
+                .thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
-        mPreferenceController.setAvailabilityStatusForZone("read");
 
         PreferenceControllerTestUtil.assertAvailability(
                 mPreferenceController.getAvailabilityStatus(), AVAILABLE_FOR_VIEWING);
-    }
-
-    @Test
-    public void micMuteAvailable_preferenceIsShown_zoneHidden() {
-        setMicMuteFeatureAvailable(true);
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.onStart(mLifecycleOwner);
-        mPreferenceController.setAvailabilityStatusForZone("hidden");
-
-        PreferenceControllerTestUtil.assertAvailability(
-                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
@@ -246,5 +218,9 @@ public class MicTogglePreferenceControllerTest {
         when(mMockSensorPrivacyManager
                 .supportsSensorToggle(eq(SensorPrivacyManager.Sensors.MICROPHONE)))
                 .thenReturn(isAvailable);
+        when(mMockUserManager.hasBaseUserRestriction(eq(UserManager.DISALLOW_MICROPHONE_TOGGLE),
+                eq(mUserHandle))).thenReturn(!isAvailable);
+        when(mMockUserManager.hasUserRestriction(eq(UserManager.DISALLOW_MICROPHONE_TOGGLE)))
+                .thenReturn(!isAvailable);
     }
 }

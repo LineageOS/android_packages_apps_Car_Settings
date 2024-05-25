@@ -18,6 +18,9 @@ package com.android.car.settings.bluetooth;
 
 import static android.car.hardware.power.PowerComponent.BLUETOOTH;
 import static android.os.UserManager.DISALLOW_BLUETOOTH;
+import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
+
+import static com.android.car.settings.enterprise.EnterpriseUtils.getAvailabilityStatusRestricted;
 
 import android.bluetooth.BluetoothAdapter;
 import android.car.drivingstate.CarUxRestrictions;
@@ -36,6 +39,7 @@ import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PowerPolicyListener;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.enterprise.EnterpriseUtils;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 /**
@@ -124,7 +128,8 @@ public class BluetoothStateSwitchPreferenceController extends
                         getContext().getString(R.string.power_component_disabled),
                         Toast.LENGTH_LONG).show();
             } else if (getAvailabilityStatus() == AVAILABLE_FOR_VIEWING) {
-                BluetoothUtils.onClickWhileDisabled(mContext, getFragmentController());
+                EnterpriseUtils.onClickWhileDisabled(mContext, getFragmentController(),
+                        DISALLOW_CONFIG_BLUETOOTH);
             }
         });
     }
@@ -134,7 +139,7 @@ public class BluetoothStateSwitchPreferenceController extends
         if (!mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
             return UNSUPPORTED_ON_DEVICE;
         }
-        return BluetoothUtils.getAvailabilityStatusRestricted(mContext);
+        return getAvailabilityStatusRestricted(mContext, DISALLOW_CONFIG_BLUETOOTH);
     }
 
     @Override

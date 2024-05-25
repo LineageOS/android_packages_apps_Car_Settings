@@ -144,6 +144,8 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         when(mLocalBluetoothManager.getBluetoothAdapter()).thenReturn(mLocalBluetoothAdapter);
         when(mLocalBluetoothAdapter.getBondedDevices()).thenReturn(Set.of(mBondedDevice));
 
+        when(mSpiedContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
+
         PreferenceManager preferenceManager = new PreferenceManager(mSpiedContext);
         PreferenceScreen screen = preferenceManager.createPreferenceScreen(mSpiedContext);
         mPreferenceGroup = new LogicalPreferenceGroup(mSpiedContext);
@@ -404,7 +406,7 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
     }
 
     @Test
-    public void onUxRestrictionsDisallowConfigBluetooth_phoneItemClicked_showsToast() {
+    public void onUxRestrictionsDisallowConfigBluetooth_phoneItemClicked_showsDialog() {
         when(mBondedCachedDevice.isConnected()).thenReturn(true);
         when(mUserManager.hasUserRestriction(TEST_RESTRICTION)).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -418,12 +420,11 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
 
         devicePreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM2).onClick();
 
-        ExtendedMockito.verify(() -> Toast.makeText(any(), eq(toastText), anyInt()));
-        verify(mMockToast).show();
+        verify(mFragmentController).showDialog(any(), any());
     }
 
     @Test
-    public void onUxRestrictionsDisallowConfigBluetooth_mediaItemClicked_showsToast() {
+    public void onUxRestrictionsDisallowConfigBluetooth_mediaItemClicked_showsDialog() {
         when(mBondedCachedDevice.isConnected()).thenReturn(true);
         when(mUserManager.hasUserRestriction(TEST_RESTRICTION)).thenReturn(true);
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -437,7 +438,6 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
 
         devicePreference.getActionItem(MultiActionPreference.ActionItem.ACTION_ITEM3).onClick();
 
-        ExtendedMockito.verify(() -> Toast.makeText(any(), eq(toastText), anyInt()));
-        verify(mMockToast).show();
+        verify(mFragmentController).showDialog(any(), any());
     }
 }
