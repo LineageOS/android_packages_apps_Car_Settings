@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Користи локацију"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Локација аутомобила се користи на свим апликацијама које сте навели."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Апликације за информације и забаву"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Дозволите апликацијама приступ локацији"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ако искључите ово, уклониће приступ локацији за све апликације осим оних које су потребне за помоћ за возаче"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ако искључите ово, апликације помоћи за возаче које се ослањају на информације о локацији ће се онемогућити"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Ипак искључи"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Ово подешавање не може да се промени и онемогућио га је произвођач аутомобила."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функције које вам помажу у вожњи"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Дозволи уграђене функције које је одобрио произвођач аутомобила да приступају локацији аутомобила"</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Обавезне апликације"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Апликације за помоћ у вожњи које захтева произвођач аутомобила."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Недавно приступано"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Недавно приступано"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Прикажи све"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Избришите профил"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Обришите профил и налоге из система за информације и забаву"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Ова радња није доступна за профил"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Приступ микрофону"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Одаберите да ли апликације могу да приступају микрофонима аутомобила"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Апликације за информације и забаву"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Дозволите апликацијама за информације и забаву да снимају звук"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Приступ камери"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Одаберите да ли апликације могу да приступају камерама аутомобила"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Обавезне апликације"</string>

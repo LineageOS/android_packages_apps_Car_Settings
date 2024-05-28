@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Localização"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localização"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Use a localização do carro com qualquer app que tenha especificado."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Apps de infoentretenimento"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Permita que as apps tenham acesso à sua localização"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desativar esta opção, remove o acesso à localização para todas as apps, exceto as necessárias para a assistência ao condutor"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se desativar esta opção, as apps de assistência ao condutor que dependem de informações de localização são desativadas"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desativar mesmo assim"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Esta definição não pode ser alterada e foi desativada pelo fabricante do carro."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcionalidades que ajudam a conduzir"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Permita que as funcionalidades integradas, aprovadas pelo fabricante do carro, acedam à localização deste."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Apps necessárias"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Apps exigidas pelo fabricante do carro para ajudar na condução."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Acedido recentemente"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Acedido recentemente"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver tudo"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Eliminar perfil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Apague o seu perfil e contas do sistema de infoentretenimento"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Esta ação está indisponível para o seu perfil"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Acesso ao microfone"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Escolha se as apps podem aceder aos microfones do carro"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Apps de infoentretenimento"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Permita que as apps de infoentretenimento gravem áudio"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Acesso à câmara"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Escolha se as apps podem aceder às câmaras do carro"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Apps necessárias"</string>

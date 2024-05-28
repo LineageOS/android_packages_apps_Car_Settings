@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Konum"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Konumu kullan"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Belirttiğiniz her uygulamayla arabanızın konumunu kullanın."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Bilgi-eğlence uygulamaları"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Uygulamaların konumunuza erişmesine izin verin"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Bu ayarı kapatırsanız sürüş yardımı için gerekli olanlar dışında tüm uygulamaların konum erişimi kaldırılır"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Bu özelliği kapatırsanız konum bilgilerine dayanan sürüş yardımı uygulamaları devre dışı bırakılır"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Yine de kapat"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Bu ayar değiştirilemez ve araba üreticiniz tarafından devre dışı bırakılmış."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Araba kullanmanıza yardımcı özellikler"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Arabanızın üreticisi tarafından onaylanmış yerleşik özelliklerin arabanızın konumuna erişmesine izin verin."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Gerekli uygulamalar"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Araba üreticinizin sürüş yardımı için gerekli kıldığı uygulamalar."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Yakın zamanda erişildi"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yakın zamanda erişildi"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tümünü göster"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Profilimi sil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Profilinizi ve hesaplarınızı bilgi-eğlence sisteminden silin"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Bu işlem, profilinizde kullanılamaz"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Mikrofon erişimi"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Uygulamaların arabanızın mikrofonuna erişip erişemeyeceğini seçin"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Bilgi-eğlence uygulamaları"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Bilgi-eğlence uygulamalarının ses kaydetmesine izin verin"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kamera erişimi"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Uygulamaların, arabanızın kameralarına erişip erişemeyeceğini seçin"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Gerekli uygulamalar"</string>
@@ -664,9 +664,9 @@
     <skip />
     <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
     <skip />
-    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Araba üreticiniz, arabanızın kamerasının konumuna erişmeye devam edebilir."</string>
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Araba üreticinizin, yine de araba kamerasına erişimi olabilir."</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Bilgi-eğlence uygulamaları"</string>
-    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Bilgi-eğlence sistemi uygulamalarının fotoğraf çekmesine ve video kaydetmesine izin verin"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Bilgi-eğlence uygulamalarının fotoğraf çekmesine ve video kaydetmesine izin verin"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"İzin verilenler"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Her zaman"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"İzin verilmeyenler"</string>

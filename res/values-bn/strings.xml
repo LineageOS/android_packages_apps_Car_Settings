@@ -423,20 +423,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"লোকেশন ব্যবহার করুন"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"আপনার নির্দিষ্ট করা যেকোনও অ্যাপ দিয়ে আপনার গাড়ির লোকেশন ব্যবহার করুন।"</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"ইনফোটেইনমেন্ট অ্যাপ"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"অ্যাপকে আপনার লোকেশন অ্যাক্সেস করার অনুমতি দিন"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"আপনি এটি বন্ধ করলে, \'ড্রাইভার অ্যাসিস্ট্যান্স\'-এর জন্য প্রয়োজনীয় অ্যাপ বাদে বাকি সব অ্যাপের ক্ষেত্রে লোকেশন অ্যাক্সেস সংক্রান্ত অনুমতি এটি সরিয়ে দেবে"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"আপনি এটি বন্ধ করলে, লোকেশন সংক্রান্ত তথ্যের উপরে নির্ভর করে কাজ করা ড্রাইভার অ্যাসিস্ট্যান্স অ্যাপ বন্ধ হয়ে যাবে"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"যাইহোক বন্ধ করুন"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"এই সেটিং পরিবর্তন করা যাবে না এবং আপনার গাড়ি প্রস্তুতকারীর মাধ্যমে বন্ধ করা হয়েছে।"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"আপনার গাড়ি চালানোর সহায়ক ফিচার"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"আপনার গাড়ির লোকেশন অ্যাক্সেস করতে আপনার গাড়ি উৎপাদনকারী অনুমোদিত বিল্ট-ইন ফিচারে অনুমতি দিন।"</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"প্রয়োজনীয় অ্যাপ"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"ড্রাইভিংয়ে সহায়তা করতে, আপনার গাড়ির প্রস্তুতকারকের জন্য প্রয়োজনীয় অ্যাপ।"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"সম্প্রতি অ্যাক্সেস করা হয়েছে"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"সব দেখুন"</string>
@@ -659,6 +655,14 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"আপনার প্রোফাইল মুছুন"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"ইনফোটেইনমেন্ট সিস্টেম থেকে আপনার প্রোফাইল এবং অ্যাকাউন্ট মুছুন"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"আপনার প্রোফাইলে অ্যাকশনটি উপলভ্য নেই"</string>
+    <!-- no translation found for microphone_access_settings_title (6748613084403267254) -->
+    <skip />
+    <!-- no translation found for microphone_access_settings_summary (3531690421673836538) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_title (6625559365680936672) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_summary (5967713909533492475) -->
+    <skip />
     <string name="camera_access_settings_title" msgid="1841809323727456945">"ক্যামেরা অ্যাক্সেস"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"কোনও অ্যাপ আপনার গাড়ির ক্যামেরা অ্যাক্সেস করতে পারবে কিনা তা বেছে নিন"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"প্রয়োজনীয় অ্যাপ"</string>

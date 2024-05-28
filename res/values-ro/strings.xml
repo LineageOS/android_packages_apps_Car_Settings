@@ -238,7 +238,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Toate limbile"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastatură"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Gestionează tastaturile"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"Rezultatul redării vocale a textului"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Setări pentru redarea vocală a textului"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor preferat"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motor actual"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Ritmul vorbirii"</string>
@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Locație"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Folosește locația"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Folosește locația mașinii pentru toate aplicațiile selectate."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Aplicațiile de infotainment"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Permite-le aplicațiilor acces la locația ta"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Dacă dezactivezi opțiunea, permisiunea de acces la locație va fi eliminată pentru toate aplicațiile, cu excepția celor necesare în asistența pentru șofer."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Dacă dezactivezi opțiunea, aplicațiile de asistență pentru șofer care se bazează pe informațiile despre locație se vor dezactiva"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Dezactivează oricum"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Setarea nu poate fi modificată și a fost dezactivată de producătorul mașinii."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcții care te ajută să conduci"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Permite accesul funcțiilor încorporate, aprobate de producătorul mașinii, la locația mașinii."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Aplicațiile necesare"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Aplicațiile solicitate de producătorul mașinii pentru asistență la condus."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Accesate recent"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesate recent"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Afișează-le pe toate"</string>
@@ -657,6 +653,14 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Șterge profilul"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Șterge profilul și conturile de pe sistemul de infotainment"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Acțiunea nu este disponibilă pentru profilul tău"</string>
+    <!-- no translation found for microphone_access_settings_title (6748613084403267254) -->
+    <skip />
+    <!-- no translation found for microphone_access_settings_summary (3531690421673836538) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_title (6625559365680936672) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_summary (5967713909533492475) -->
+    <skip />
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Acces la camere"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Alege dacă aplicațiile pot accesa camerele mașinii"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Aplicațiile necesare"</string>

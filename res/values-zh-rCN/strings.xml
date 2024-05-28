@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"使用位置信息"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"允许您指定的所有应用获取汽车的位置信息。"</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"信息娱乐应用"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"允许应用获取您的位置信息"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"如果您关闭了此设置，所有应用（驾驶辅助功能所需的应用除外）的位置信息获取权限都将被撤消"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"如果您关闭了此设置，需要使用位置信息的驾驶辅助应用将被停用"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"仍然关闭"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"此设置无法更改，已被您汽车的制造商停用。"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"驾驶辅助功能"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"允许汽车制造商批准的内置功能获取您汽车的位置信息。"</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"必需的应用"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"您的汽车制造商要求使用的驾驶辅助应用。"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"近期获取过"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"近期获取过"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"查看全部"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"删除您的个人资料"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"清除信息娱乐系统中您的个人资料和账号"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"无法对您的个人资料执行此操作"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"麦克风使用权限"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"选择应用能否使用您汽车的麦克风"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"信息娱乐应用"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"允许信息娱乐应用录音"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"摄像头使用权限"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"选择应用能否使用您汽车的摄像头"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"要求的应用"</string>

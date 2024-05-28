@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"સ્થાન"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"સ્થાનનો ઉપયોગ કરો"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"તમે ઉલ્લેખિત કરેલી કોઈપણ ઍપ સાથે તમારી કારના લોકેશનનો ઉપયોગ કરો."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"ઇન્ફોટેનમેન્ટ ઍપ"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"બધી ઍપને તમારા લોકેશનનો ઍક્સેસ આપો"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"જો તમે આને બંધ કરશો, તો તે \'ડ્રાઇવર માટે સહાયતા\' માટે જરૂરી હોય તે સિવાયની તમામ ઍપ માટે સ્થાનનો ઍક્સેસ કાઢી નાખશે"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"જો તમે આને બંધ કરશો તો લોકેશનની માહિતી પર નિર્ભર કરતી, ડ્રાઇવર માટે સહાયતા માટેની ઍપ બંધ કરવામાં આવશે"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"કોઈપણ રીતે બંધ કરો"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"આ સેટિંગમાં ફેરફાર કરી શકાતો નથી અને તમારી કારના નિર્માતાએ તેને બંધ કર્યું છે."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"તમને ડ્રાઇવ કરવામાં સહાયતા કરતી સુવિધાઓ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"તમારી કારના લોકેશનને ઍક્સેસ કરવા માટે તમારા કારના નિર્માતા દ્વારા મંજૂર કરવામાં આવેલી બિલ્ટ-ઇન સુવિધાઓને મંજૂરી આપો."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"આવશ્યક ઍપ"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"ડ્રાઇવિંગમાં આસિસ્ટન્સ માટે, તમારી કારના નિર્માતા માટે આવશ્યક ઍપ."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"તાજેતરમાં ઍક્સેસ કર્યો હોય એવી ઍપ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"તાજેતરમાં ઍક્સેસ કર્યો હોય એવી ઍપ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"બધી જુઓ"</string>
@@ -657,6 +653,14 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"તમારી પ્રોફાઇલ ડિલીટ કરો"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"ઇન્ફોટેનમેન્ટ સિસ્ટમમાંથી તમારી પ્રોફાઇલ અને એકાઉન્ટ કાઢી નાખો"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"આ ક્રિયા તમારી પ્રોફાઇલ માટે ઉપલબ્ધ નથી"</string>
+    <!-- no translation found for microphone_access_settings_title (6748613084403267254) -->
+    <skip />
+    <!-- no translation found for microphone_access_settings_summary (3531690421673836538) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_title (6625559365680936672) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_summary (5967713909533492475) -->
+    <skip />
     <string name="camera_access_settings_title" msgid="1841809323727456945">"કૅમેરાનો ઍક્સેસ"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"ઍપ તમારી કારના કૅમેરાનો ઍક્સેસ કરી શકશે કે નહીં તે પસંદ કરો"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"આવશ્યક ઍપ"</string>
@@ -665,8 +669,8 @@
     <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
     <skip />
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"તમારી કારના નિર્માતા હજી પણ તમારી કારના કૅમેરાનો ઍક્સેસ ધરાવતા હોઈ શકે છે"</string>
-    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ઇન્ફોટેન્મેન્ટ ઍપ"</string>
-    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ઇન્ફોટેન્મેન્ટ ઍપને ફોટા લેવાની અને વીડિયો રેકોર્ડ કરવાની મંજૂરી આપો"</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ઇન્ફોટેનમેન્ટ ઍપ"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ઇન્ફોટેનમેન્ટ ઍપને ફોટા લેવાની અને વીડિયો રેકોર્ડ કરવાની મંજૂરી આપો"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"મંજૂરી છે"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"હંમેશાં"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"મંજૂરી નથી"</string>

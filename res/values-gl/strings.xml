@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Localización"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usar localización"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Usa a localización do teu coche con calquera das aplicacións que especificases."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Aplicacións de información/entretemento"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Permite que as aplicacións accedan á túa localización"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se desactivas esta opción, quitarase o permiso de localización en todas as aplicacións excepto nas que sexa necesario por mor da asistencia para a condución"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se desactivas esta opción, deshabilitaranse as aplicacións de asistencia para a condución que utilizan a información de localización"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desactivar de todos os xeitos"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"O fabricante do coche desactivou esta opción de configuración, que non pode cambiarse."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funcións que che axudan a conducir"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Dálles permiso ás funcións integradas (autorizadas polo fabricante do teu coche) para que accedan á localización do coche."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Aplicacións requiridas"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Aplicacións requiridas polo fabricante do teu coche como axuda para a condución."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Accesos recentes"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Accesos recentes"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ver todo"</string>
@@ -657,6 +653,14 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Eliminar o teu perfil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Borra o teu perfil e as túas contas do sistema de información e entretemento"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Esta acción non está dispoñible para o teu perfil"</string>
+    <!-- no translation found for microphone_access_settings_title (6748613084403267254) -->
+    <skip />
+    <!-- no translation found for microphone_access_settings_summary (3531690421673836538) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_title (6625559365680936672) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_summary (5967713909533492475) -->
+    <skip />
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Acceso á cámara"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Decide se as aplicacións poden acceder ás cámaras do coche"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Aplicacións requiridas"</string>

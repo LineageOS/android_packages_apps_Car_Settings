@@ -213,15 +213,15 @@
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s متصل شد"</string>
     <string name="bluetooth_device_disconnected_toast" msgid="8889122688851623920">"اتصال %1$s قطع شد"</string>
     <string name="device_connections_category_title" msgid="1753729363581927505">"اتصال‌های دستگاه با خودرو"</string>
-    <string name="uwb_toggle_title" msgid="8831695790040626922">"باند فوق‌وسیع (UWB)"</string>
-    <string name="uwb_toggle_summary" msgid="2206513296288659105">"به خودروتان کمک می‌کند موقعیت دستگاه‌های مجهز به باند فوق‌وسیع را شناسایی کند"</string>
+    <string name="uwb_toggle_title" msgid="8831695790040626922">"«فراپهن‌باند» (UWB)"</string>
+    <string name="uwb_toggle_summary" msgid="2206513296288659105">"به خودروتان کمک می‌کند موقعیت دستگاه‌های مجهز به «فراپهن‌باند» را شناسایی کند"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"درخواست مرتبط‌سازی بلوتوث"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"مرتبط‌ کردن و اتصال"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"کد مرتبط‌سازی بلوتوث"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"پین شامل حروف یا نماد است"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"کد مرتبط‌سازی را وارد کنید سپس بازگشت یا Enter را فشار دهید"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"‏<xliff:g id="DEVICE_NAME">%1$s</xliff:g> مرتبط‌سازی شود؟"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"به <xliff:g id="DEVICE_NAME">%1$s</xliff:g> اجازه داده شود به مخاطبین و سابقه تماس شما دسترسی داشته باشد"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"به <xliff:g id="DEVICE_NAME">%1$s</xliff:g> اجازه دسترسی به مخاطبین و سابقه تماستان را می‌دهید"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ممکن است لازم باشد که این پین را در دستگاه دیگر وارد کنید."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ممکن است لازم باشد این گذرکلید را در دستگاه دیگر هم وارد کنید."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"باید ۱۶ رقم باشد"</string>
@@ -653,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"حذف کردن نمایه"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"پاک کردن نمایه و حساب‌ها از سیستم اطلاعات-سرگرمی"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"این کنش برای نمایه‌تان دردسترس نیست"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"دسترسی به میکروفون"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"انتخاب کنید برنامه‌ها بتوانند به میکروفون‌های خودروتان دسترسی داشته باشند یا نه"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"برنامه‌های اطلاعات-سرگرمی"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"اجازه دادن به برنامه‌های اطلاعات-سرگرمی برای ضبط صدا"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"دسترسی به دوربین"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"انتخاب کنید برنامه‌ها بتوانند به دوربین خودروتان دسترسی داشته باشند یا نه"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"برنامه‌های الزامی"</string>

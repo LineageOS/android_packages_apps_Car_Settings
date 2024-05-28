@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Месцазнаходжанне"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Выкарыстоўваць месцазнаходжанне"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Выкарыстоўваць даныя пра месцазнаходжанне аўтамабіля ў выбраных праграмах."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Праграмы інфармац.-забаўляльнай сістэмы"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Дазваляць праграмам доступ да геаданых"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Калі выключыць гэту наладу, доступ да геаданых будзе выдалены для ўсіх праграм, акрамя тых, якія патрабуюцца для дапамогі вадзіцелю"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Калі выключыць гэту наладу, праграмы дапамогі вадзіцелю, для работы якіх патрабуецца інфармацыя аб месцазнаходжанні, будуць выключаны"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Усё роўна выключыць"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Гэту наладу нельга змяніць: яна была адключана вытворцам."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функцыі, якія дапамогуць вам падчас язды"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Дазволіць доступ да даных пра месцазнаходжанне аўтамабіля ўбудаваным функцыям, ухваленым яго вытворцам."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Абавязковыя праграмы"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Праграмы для дапамогі падчас язды, выкарыстання якіх патрабуе вытворца аўтамабіля."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Нядаўна быў атрыманы доступ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Нядаўна быў атрыманы доступ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Паказаць усе"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Выдаліць профіль"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Выдаліць ваш профіль і ўліковыя запісы з інфармацыйна-забаўляльнай сістэмы"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Гэта дзеянне для вашага профілю недаступнае"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Доступ да мікрафона"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Наладзьце доступ праграм да мікрафонаў аўтамабіля"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Праграмы інфармац.-забаўляльнай сістэмы"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Дазволіць праграмам інфармацыйна-забаўляльнай сістэмы запісваць аўдыя"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Доступ да камер"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Наладзьце доступ праграм да камер аўтамабіля"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Абавязковыя праграмы"</string>

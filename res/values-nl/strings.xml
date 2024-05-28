@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Locatie"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Locatie gebruiken"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Gebruik de locatie van je auto met elke app die je hebt opgegeven."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Infotainment-apps"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Geef apps toegang tot je locatie"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Als je dit uitzet, wordt locatietoegang verwijderd voor alle apps, behalve de apps die nodig zijn voor bestuurdersondersteuning."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Als je dit uitzet, zet je apps voor bestuurdersondersteuning die locatiegegevens nodig hebben ook uit"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Toch uitzetten"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Deze instelling kan niet worden gewijzigd en is uitgezet door de fabrikant van de auto."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Functies die het autorijden ondersteunen"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Geef ingebouwde functies die zijn goedgekeurd door de fabrikant van je auto toegang tot de locatie van je auto."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Vereiste apps"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Apps die zijn vereist door de fabrikant van je auto voor ondersteuning bij het rijden."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Recent gebruikt"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Recent gebruikt"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Alles bekijken"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Je profiel verwijderen"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Je profiel en accounts van het infotainmentsysteem wissen"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Deze actie is niet beschikbaar voor je profiel"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Microfoontoegang"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Kies of apps toegang mogen hebben tot de microfoons van je auto"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Infotainment-apps"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Sta infotainment-apps toe om audio op te nemen"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Cameratoegang"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Kies of apps toegang mogen hebben tot de camera\'s van je auto"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Vereiste apps"</string>
@@ -670,7 +670,7 @@
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Toegestaan"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Altijd"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"Niet toegestaan"</string>
-    <string name="permission_grant_in_use" msgid="2314262542396732455">"Alleen tijdens gebruik van de app"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Alleen tijdens gebruik van app"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Altijd vragen"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Beveiliging"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Schermvergrendeling"</string>

@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"ലൊക്കേഷൻ ഉപയോഗിക്കുക"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"നിങ്ങൾ പ്രത്യേകം തിരഞ്ഞെടുക്കുന്ന ഏത് ആപ്പിനൊപ്പവും നിങ്ങളുടെ കാറിന്റെ ലൊക്കേഷൻ ഉപയോഗിക്കുക."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"ഇൻഫോറ്റേയിൻമെന്റ് ആപ്പുകൾ"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"നിങ്ങളുടെ ലൊക്കേഷൻ ആക്സസ് ചെയ്യാൻ ആപ്പുകളെ അനുവദിക്കുക"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ഇത് ഓഫാക്കിയാൽ, ഡ്രെെവർ സഹായിക്ക് ആവശ്യമായവ ഒഴികെയുള്ള എല്ലാ ആപ്പുകൾക്കുമുള്ള ലൊക്കേഷൻ ആക്‌സസ് നീക്കം ചെയ്യപ്പെടും"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ഇത് ഓഫാക്കിയാൽ, ലൊക്കേഷൻ വിവരങ്ങളെ ആശ്രയിക്കുന്ന ഡ്രൈവർ സഹായി ആപ്പുകൾ പ്രവർത്തനരഹിതമാകും"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"എന്തായാലും ഓഫാക്കുക"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ഈ ക്രമീകരണം മാറ്റാനാകില്ല, മാത്രമല്ല അത് നിങ്ങളുടെ കാർ നിർമ്മാതാവ് പ്രവർത്തനരഹിതമാക്കിയിരിക്കുകയാണ്."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ഡ്രെെവ് ചെയ്യാൻ സഹായിക്കുന്ന ഫീച്ചറുകൾ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"കാറിന്റെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യുന്നതിന്, നിങ്ങളുടെ കാർ നിർമ്മാതാവ് അംഗീകരിച്ച ബിൽറ്റ് ഇൻ ഫീച്ചറുകൾ അനുവദിക്കുക."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"ആവശ്യമായ ആപ്പുകൾ"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"ഡ്രൈവിംഗിനെ സഹായിക്കാൻ കാറിന്റെ നിർമ്മാതാവ് ആവശ്യപ്പെടുന്ന ആപ്പുകൾ."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"അടുത്തിടെ ആക്‌സസ് ചെയ്‌തവ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"എല്ലാം കാണുക"</string>
@@ -657,6 +653,14 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"നിങ്ങളുടെ പ്രൊഫൈൽ ഇല്ലാതാക്കുക"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"ഇൻഫോറ്റേയിൻമെന്റ് സി‌സ്‌റ്റത്തിൽ നിന്ന് നിങ്ങളുടെ പ്രൊഫൈലും അക്കൗണ്ടുകളും മായ്‌ക്കുക"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ഈ പ്രവർത്തനം നിങ്ങളുടെ പ്രൊഫൈലിൽ ലഭ്യമല്ല"</string>
+    <!-- no translation found for microphone_access_settings_title (6748613084403267254) -->
+    <skip />
+    <!-- no translation found for microphone_access_settings_summary (3531690421673836538) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_title (6625559365680936672) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_summary (5967713909533492475) -->
+    <skip />
     <string name="camera_access_settings_title" msgid="1841809323727456945">"ക്യാമറ ആക്‌സസ്"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"ആപ്പുകൾക്ക് നിങ്ങളുടെ കാറിന്റെ ക്യാമറകൾ ആക്‌സസ് ചെയ്യാനാകുമോ എന്ന് തിരഞ്ഞെടുക്കുക"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"ആവശ്യമായ ആപ്പുകൾ"</string>

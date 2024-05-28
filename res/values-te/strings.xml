@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"లొకేషన్"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"లొకేషన్‌ను ఉపయోగించండి"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"మీరు పేర్కొన్న ఏదైనా యాప్‌తో మీ కారు లొకేషన్‌ను ఉపయోగించండి."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"సమాచారంతో కూడిన వినోదం అందించే యాప్‌లు"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"మీ లొకేషన్‌కు సంబంధించిన యాక్సెస్‌ను పొందటానికి యాప్‌లను అనుమతించండి"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"మీరు దీన్ని ఆఫ్ చేస్తే, డ్రైవర్ సహాయం కోసం అవసరమైన యాప్‌లు మినహా అన్ని యాప్‌ల కోసం ఇది లొకేషన్ యాక్సెస్‌ను తీసివేస్తుంది"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"మీరు దీన్ని ఆఫ్ చేస్తే, లొకేషన్ సమాచారంపై ఆధారపడే డ్రైవర్ సహాయ యాప్‌లు డిజేబుల్ చేయబడతాయి"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"ఏదేమైనా ఆఫ్ చేయండి"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ఈ సెట్టింగ్‌ను మార్చడం సాధ్యం కాదు, మీ కారు తయారీదారుచే డిజేబుల్ చేయబడింది."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"మీరు డ్రైవ్ చేయడంలో సహాయపడే ఫీచర్‌లు"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"మీ కారు లొకేషన్‌ను యాక్సెస్ చేయడానికి, కారు తయారీదారుచే ఆమోదించబడిన బిల్ట్-ఇన్ ఫీచర్‌లను అనుమతించండి."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"అవసరమైన యాప్‌లు"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"డ్రైవింగ్‌లో సహాయం చేయడానికి మీ కారు తయారీదారుకు అవసరమైన యాప్‌లు."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"ఇటీవల యాక్సెస్ చేసినవి"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"ఇటీవల యాక్సెస్ చేసినవి"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"అన్నింటినీ చూడండి"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"మీ ప్రొఫైల్‌ను తొలగించండి"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"సమాచారంతో కూడిన వినోదం సిస్టమ్ నుండి మీ ప్రొఫైల్, ఖాతాలను ఫ్యాక్టరీ రీసెట్ చేయండి"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ఈ చర్య మీ ప్రొఫైల్ కోసం అందుబాటులో లేదు"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"మైక్రోఫోన్ యాక్సెస్"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"యాప్‌లు మీ కారు మైక్రోఫోన్‌లను యాక్సెస్ చేయగలవో లేదో ఎంచుకోండి"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"సమాచారంతో కూడిన వినోదం అందించే యాప్‌లు"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"ఆడియోను రికార్డ్ చేయడానికి సమాచారంతో కూడిన వినోదం అందించే యాప్‌లను అనుమతించండి"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"కెమెరా యాక్సెస్"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"యాప్‌లు మీ కారు కెమెరాలను యాక్సెస్ చేయగలవో లేదో ఎంచుకోండి"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"అవసరమైన యాప్‌లు"</string>

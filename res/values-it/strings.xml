@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Posizione"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Usa posizione"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Utilizza la posizione dell\'auto con tutte le app indicate."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"App di infotainment"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Consenti alle app di accedere alla tua posizione"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Se disattivi questa impostazione, verrà rimosso l\'accesso alla posizione per tutte le app ad eccezione di quelle che lo richiedono per l\'assistenza alla guida"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Se disattivi questa impostazione, verranno disattivate le app di assistenza alla guida che si basano sui dati sulla posizione"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Disattiva comunque"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Questa impostazione non può essere modificata ed è stata disattivata dal produttore del veicolo."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funzionalità di assistenza alla guida"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Consenti alle funzionalità integrate, approvate dal produttore del veicolo, di accedere alla posizione dell\'auto."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"App obbligatorie"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"App richieste dal produttore dell\'auto per aiutarti durante la guida"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Usi recenti"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Usi recenti"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Mostra tutte"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Elimina il tuo profilo"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Cancella il tuo profilo e i tuoi account dal sistema di infotainment"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Questa azione non è disponibile per il tuo profilo"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Accesso al microfono"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Scegli se le app possono accedere ai microfoni dell\'auto"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"App di infotainment"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Consenti alle app di infotainment di registrare audio"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Accesso alla videocamera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Scegli se le app possono accedere alle videocamere dell\'auto"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"App obbligatorie"</string>
