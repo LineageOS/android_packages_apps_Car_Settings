@@ -181,7 +181,7 @@
     <string name="progress_scanning" msgid="7191583064717479795">"Otsimine"</string>
     <string name="connected_settings_title" msgid="8868738903280658151">"Ühendatud seadmed"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Bluetoothi kasutamine"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Kasuta Bluetoothi"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Nimetu seade"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Seotud seadmed"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Uue seadme sidumine"</string>
@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Asukoht"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Asukoha kasutamine"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Lubage määratud rakendustel teie auto asukohta kasutada."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Meelelahutussüsteemi rakendused"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Rakendustele teie asukohale juurdepääsu lubamine"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Kui selle välja lülitate, eemaldatakse juurdepääs asukohale kõigi rakenduste jaoks (v.a need, mida on vaja juhiabifunktsioonide jaoks)"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Kui selle välja lülitate, keelatakse juhiabirakendused, mis kasutavad asukohateavet"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Lülita ikkagi välja"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Seda seadet ei saa muuta ja teie auto tootja on selle keelanud."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funktsioonid, mis teil sõita aitavad"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Lubage sisseehitatud funktsioonidel, mille teie auto tootja on heaks kiitnud, teie auto asukohale juurde pääseda."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Nõutavad rakendused"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Sõidu ajal abistavad rakendused, mida nõuab teie auto tootja."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Hiljuti juurde pääsetud"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Hiljuti juurde pääsetud"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Kuva kõik"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Kustuta minu profiil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Kustutage oma profiil ning kontod teabe ja meelelahutuse süsteemist"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"See toiming pole teie profiili puhul saadaval"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Juurdepääs mikrofonile"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Valige, kas rakendused pääsevad teie auto mikrofonidele juurde"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Meelelahutussüsteemi rakendused"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Lubage meelelahutussüsteemi rakendustel heli jäädvustada"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Juurdepääs kaamerale"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Valige, kas rakendused pääsevad teie auto kaamerale juurde"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Nõutavad rakendused"</string>

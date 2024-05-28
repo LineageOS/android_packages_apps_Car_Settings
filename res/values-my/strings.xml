@@ -422,20 +422,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"တည်နေရာ"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"တည်နေရာကို သုံးရန်"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"သင်သတ်မှတ်ထားသော အက်ပ်များတွင် ကားတည်နေရာကို သုံးနိုင်သည်။"</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"သတင်းနှင့် ဖျော်ဖြေရေးအက်ပ်များ"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"အက်ပ်များအား သင့်တည်နေရာကို သုံးခွင့်ပြုနိုင်သည်"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"ပိတ်လိုက်ပါက ယာဉ်မောင်းသူ အထောက်အကူကို လိုအပ်သောအက်ပ်များမှအပ အက်ပ်အားလုံးအတွက် တည်နေရာသုံးခွင့်ကို ဖယ်ရှားပါမည်"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"ပိတ်လိုက်ပါက တည်နေရာအချက်အလက်အပေါ် အားထားရသော ယာဉ်မောင်းသူအထောက်အကူပြုအက်ပ်များ ပိတ်သွားပါမည်"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"မည်သို့ဖြစ်စေ ပိတ်ရန်"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"ဤဆက်တင်ကို ပြောင်း၍မရပါ။ ၎င်းကို ကားထုတ်လုပ်သူက ပိတ်ထားသည်။"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"မောင်းနှင်မှုကို ကူညီသော အင်္ဂါရပ်များ"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"သင့်ကားတည်နေရာကို ရယူရန် ကားထုတ်လုပ်သူက အတည်ပြုထားသော အသင့်ပါပြီး အင်္ဂါရပ်များကို ခွင့်ပြုပါ။"</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"လိုအပ်သော အက်ပ်များ"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"ကားမောင်းရာတွင် အထောက်အကူဖြစ်စေရန် သင့်ကားထုတ်လုပ်သူက လိုအပ်သော အက်ပ်များ။"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"လတ်တလော သုံးထားသည်များ"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"လတ်တလော သုံးထားသည်များ"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"အားလုံးကြည့်ရန်"</string>
@@ -658,6 +654,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"သင့်ပရိုဖိုင်ကို ဖျက်ရန်"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်မှ သင့်ပရိုဖိုင်နှင့် အကောင့်များကို ဖျက်မည်"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ဤလုပ်ဆောင်ချက်ကို သင့်ပရိုဖိုင်အတွက် မရနိုင်ပါ"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"မိုက်ခရိုဖုန်းသုံးခွင့်"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"အက်ပ်များက သင့်ကားမိုက်ခရိုဖုန်းကို သုံးခွင့် ရှိ၊ မရှိ ရွေးချယ်ပါ"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"သတင်းနှင့် ဖျော်ဖြေရေးအက်ပ်များ"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"သတင်းနှင့် ဖျော်ဖြေရေးအက်ပ်များအား အသံဖမ်းခွင့်ပြုသည်"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"ကင်မရာသုံးခွင့်"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"ကားကင်မရာကို အက်ပ်များ ဝင်ကြည့်ခွင့် ရှိ၊ မရှိ ရွေးချယ်ပါ"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"လိုအပ်သော အက်ပ်များ"</string>

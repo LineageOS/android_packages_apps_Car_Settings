@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Kokapena"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Erabili kokapena"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Erabili autoaren kokapena zehaztu duzun edozein aplikaziorekin."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Informazio- eta aisia-aplikazioak"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Eman zure kokapena erabiltzeko baimena aplikazioei"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Aukera hau desaktibatuz gero, kokapena erabiltzeko baimena kenduko zaie aplikazio guztiei, gidatzeko laguntza erabiltzeko behar direnei izan ezik"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Aukera hau desaktibatuz gero, kokapenari buruzko informazioa erabiltzen duten gidatzeko laguntza-aplikazioak desgaituko dira"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Desaktibatu, halere"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Ezin da aldatu ezarpena, eta autoaren fabrikatzaileak desgaitu egin du."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Gidatzen laguntzen dizuten eginbideak"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Eman autoaren kokapena erabiltzeko baimena autoaren fabrikatzaileak onartutako eginbide integratuei."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Beharrezko aplikazioak"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Autoaren fabrikatzaileak gidatzen laguntzeko eskatzen dituen aplikazioak."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Azkenaldian kokapena atzitu dutenak"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Azkenaldian kokapena atzitu dutenak"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Ikusi guztiak"</string>
@@ -657,6 +653,14 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Ezabatu profila"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Ezabatu profila eta kontuak informazio- eta aisia-sistematik"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Profil honek ezin du egin hori"</string>
+    <!-- no translation found for microphone_access_settings_title (6748613084403267254) -->
+    <skip />
+    <!-- no translation found for microphone_access_settings_summary (3531690421673836538) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_title (6625559365680936672) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_summary (5967713909533492475) -->
+    <skip />
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kamera erabiltzeko baimena"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Aukeratu ea aplikazioek autoaren kamerak erabil ditzaketen"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Beharrezko aplikazioak"</string>

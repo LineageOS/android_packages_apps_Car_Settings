@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Dùng thông tin vị trí"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Cho ứng dụng mà bạn chỉ định được phép sử dụng thông tin vị trí của ô tô"</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Ứng dụng thông tin giải trí"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Cho phép ứng dụng truy cập vào thông tin vị trí của bạn"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Thao tác tắt tính năng này sẽ xoá quyền truy cập thông tin vị trí của mọi ứng dụng, ngoại trừ các ứng dụng cần thiết để hỗ trợ người lái xe."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Thao tác tắt chế độ này cũng sẽ vô hiệu hoá các ứng dụng hỗ trợ người lái xe cần đến thông tin vị trí."</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Vẫn tắt"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Chế độ cài đặt này không thay đổi được và đã bị nhà sản xuất ô tô của bạn tắt."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Các tính năng trợ giúp bạn lái xe"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Cho các tính năng tích hợp sẵn mà nhà sản xuất ô tô phê duyệt được phép truy cập vào thông tin vị trí của ô tô."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Ứng dụng cần thiết"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Ứng dụng do nhà sản xuất ô tô yêu cầu để hỗ trợ quá trình lái."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Xem tất cả"</string>
@@ -657,6 +653,14 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Xóa hồ sơ của bạn"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Xóa hồ sơ và tài khoản của bạn khỏi hệ thống thông tin giải trí này"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Bạn không thực hiện được thao tác này cho hồ sơ của mình"</string>
+    <!-- no translation found for microphone_access_settings_title (6748613084403267254) -->
+    <skip />
+    <!-- no translation found for microphone_access_settings_summary (3531690421673836538) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_title (6625559365680936672) -->
+    <skip />
+    <!-- no translation found for microphone_infotainment_apps_toggle_summary (5967713909533492475) -->
+    <skip />
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Quyền truy cập vào camera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Chọn xem các ứng dụng có thể truy cập vào camera của ô tô hay không"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Ứng dụng cần thiết"</string>

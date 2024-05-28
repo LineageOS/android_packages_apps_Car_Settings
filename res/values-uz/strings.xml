@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Joylashuv"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Geolokatsiyani yoqish"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Siz belgilagan har qanday ilova yordamida avtomobilingiz joylashuvidan foydalaning."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Axborot-hordiq ilovalari"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Ilovalarga joylashuvingizga kirish uchun ruxsat bering"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Bu parametrni faolsizlantirsangiz, barcha ilovalar uchun joylashuvdan foydalanish bekor qilinadi, faqat haydovchiga yordam uchun zarurlari faolsizlantirilmaydi"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Bu parametrni faolsizlantirsangiz, joylashuv axborotini talab qiladigan haydovchiga yordam funksiyalari oʻchiriladi"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Baribir oʻchirilsin"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Bu sozlama oʻzgartirilmaydi va avtomobil ishlab chiqaruvchisi tomonidan faolsizlantirilgan."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Avtomobil haydashga yordamchi funksiyalar"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Avtomobilingiz ishlab chiqaruvchisi tomonidan tasdiqlangan ichki funksiyalarga avtomobilingiz joylashuviga kirishga ruxsat bering."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Kerakli ilovalar"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Haydashda yordam beradigan avtomobil ishlab chiqaruvchisi talab qiladigan ilovalar."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Yaqinda kirilgan"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yaqinda kirilgan"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Hammasini ochish"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Profilimni oʻchirish"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Axborot-hordiq tizimidan profil va hisoblarni oʻchirib tashlash"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Profilingizda bu amal ishlamaydi."</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Mikrofonga ruxsat"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Ilovalar avtomobilingiz mikrofonidan foydalanishi yoki foydalanmasligini tanlang"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Axborot-hordiq ilovalari"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Axborot-hordiq ilovalari audio yozib olishiga ruxsat berish"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kameraga ruxsat"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Ilovalar avtomobilingiz kamerasidan foydalanishi yoki foydalanmasligini tanlang"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Kerakli ilovalar"</string>

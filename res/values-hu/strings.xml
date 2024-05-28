@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Hely"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Hely használata"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Az autó helyadatainak használata az Ön által megadott alkalmazásokkal."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Infotainmentappok"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Hozzáférés engedélyezése a helyadatokhoz az alkalmazások számára"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"A beállítás kikapcsolásával megszünteti a helyadatokhoz való hozzáférést is az összes alkalmazás esetében; kivéve azoknál, amelyek szükségesek a sofőrtámogatáshoz."</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ha kikapcsolja ezt a beállítást, letiltja a helyadatokra támaszkodó sofőrtámogató alkalmazásokat is."</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Kikapcsolás mindenképp"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Ez a beállítás nem módosítható, az autó gyártója pedig letiltotta."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Vezetésben segítő funkciók"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Engedélyezi az autó gyártója által jóváhagyott beépített funkciók számára az autó helyadataihoz való hozzáférést."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Szükséges alkalmazások"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"A gyártó által a vezetéshez való segítségnyújtáshoz megkövetelt alkalmazások."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"A közelmúltban hozzáférő alkalmazások"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"A közelmúltban hozzáférő alkalmazások"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Összes megtekintése"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Profil törlése"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Profil és fiókok törlése az infotainmentrendszerről"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Ez a művelet nem végezhető el az Ön profiljával"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Hozzáférés a mikrofonhoz"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Válassza ki, hogy az alkalmazások hozzáférhetnek-e az autó mikrofonjaihoz"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Infotainment típusú appok"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Infotainment típusú appok engedélyezése hangrögzítéshez"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Hozzáférés a kamerákhoz"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Válassza ki, hogy az alkalmazások hozzáférhetnek-e az autó kameráihoz."</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Szükséges alkalmazások"</string>

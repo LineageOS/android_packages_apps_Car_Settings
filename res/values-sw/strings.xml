@@ -185,7 +185,7 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"Kifaa kisichokuwa na jina"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Vifaa vilivyooanishwa"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Unganisha kifaa kipya"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth itawaka ili ioanishe"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth itawaka ili iunganishe"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Ungependa kuondoa kifaa?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Gari lako litatenganishwa na <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Anwani ya Bluetooth ya gari: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -421,20 +421,16 @@
     <string name="location_settings_title" msgid="901334356682423679">"Mahali"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Tumia data ya mahali"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Tumia maelezo ya mahali gari lako lipo kwenye programu yoyote uliyobainisha."</string>
-    <!-- no translation found for location_infotainment_apps_toggle_title (2083924249183557387) -->
-    <skip />
-    <!-- no translation found for location_infotainment_apps_toggle_summary (6657657826985915806) -->
-    <skip />
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Programu za habari na burudani"</string>
+    <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Ruhusu programu zifikie maelezo ya mahali ulipo"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Ukizima kipengle hiki, ufikiaji wa data ya mahali kwenye programu zote utaondolewa isipokuwa zile zinazohitajika katika usaidizi kwa dereva"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Ukizima kipengele hiki, programu za usaidizi kwa dereva zinazotegemea taarifa za mahali zitazimwa"</string>
     <string name="adas_location_toggle_confirm_label" msgid="7500504328355834995">"Zima licha ya hayo"</string>
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Mipangilio hii haiwezi kubadilishwa na imezimwa na kampuni iliyotengeneza gari lako."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Vipengele vinavyokusaidia uendeshe gari"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Ruhusu vipengele vilivyojumuishwa ambavyo vimeidhinishwa na kampuni iliyotengeneza gari lako vifikie maelezo ya mahali gari lako lipo."</string>
-    <!-- no translation found for location_required_apps_group_title (5672632286858280618) -->
-    <skip />
-    <!-- no translation found for location_required_apps_group_summary (5760731893677945737) -->
-    <skip />
+    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Programu zinazohitajika"</string>
+    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Programu zinazohitajika na mtengenezaji wa gari lako ili zikusaidie unapoendesha gari."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Yaliyofikiwa hivi karibuni"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yaliyofikiwa hivi karibuni"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Angalia zote"</string>
@@ -657,6 +653,10 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Futa wasifu wako"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Futa wasifu na akaunti zako kwenye mfumo wa burudani na habari"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Kitendo hiki hakipatikani kwa wasifu wako"</string>
+    <string name="microphone_access_settings_title" msgid="6748613084403267254">"Ufikiaji wa maikrofoni"</string>
+    <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Chagua iwapo programu zinaweza kufikia maikrofoni za gari lako"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Programu za habari na burudani"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Ruhusu programu za habari na burudani zirekodi sauti"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Ufikiaji wa kamera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Chagua iwapo programu zinaweza kufikia kamera ya gari lako"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Programu zinazohitajika"</string>
@@ -670,7 +670,7 @@
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Zilizoruhusiwa"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Kila wakati"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"Zisizoruhusiwa"</string>
-    <string name="permission_grant_in_use" msgid="2314262542396732455">"Unapotumia tu programu"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Unapotumia programu tu"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Uliza kila wakati"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Usalama"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Kufunga skrini"</string>
