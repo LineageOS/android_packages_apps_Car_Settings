@@ -23,13 +23,13 @@
         settings:controller="com.android.car.settings.location.LocationRequiredAppsSectionPreferenceController">
         <Preference
             android:key="@string/pk_location_adas_apps_list"
-            android:title="@string/location_required_apps_group_title"
-            android:summary="@string/location_required_apps_group_summary"
+            android:title="@string/required_apps_group_title"
+            android:summary="@string/required_apps_group_summary"
             settings:controller="com.android.car.settings.location.LocationRequiredAppsHeaderPreferenceController"/>
         <com.android.car.ui.preference.CarUiSwitchPreference
             android:key="@string/pk_adas_location_state_switch"
-            android:title="@string/location_required_apps_group_title"
-            android:summary="@string/location_required_apps_group_summary"
+            android:title="@string/required_apps_group_title"
+            android:summary="@string/required_apps_group_summary"
             settings:controller="com.android.car.settings.location.AdasLocationSwitchPreferenceController"
             settings:searchable="true"/>
         <com.android.car.settings.common.LogicalPreferenceGroup
