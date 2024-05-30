@@ -89,6 +89,7 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
                 .startMocking();
         when(UserManager.get(mContext)).thenReturn(mMockUserManager);
         when(mContext.getSystemService(UserManager.class)).thenReturn(mMockUserManager);
+        when(mContext.getSystemService(Context.USER_SERVICE)).thenReturn(mMockUserManager);;
         when(mMockUserManager.isAdminUser()).thenReturn(true);
         doNothing().when(mContext).startActivity(any());
 
@@ -271,8 +272,6 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
     }
 
     private void setDeveloperOptionsEnabled(boolean enabled) {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, enabled ? 1 : 0);
         DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(mContext, enabled);
     }
 
