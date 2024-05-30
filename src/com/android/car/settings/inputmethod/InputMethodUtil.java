@@ -124,7 +124,11 @@ public final class InputMethodUtil {
      */
     public static boolean isInputMethodEnabled(ContentResolver resolver,
             InputMethodInfo inputMethodInfo) {
-        sInputMethodSplitter.setString(getEnabledInputMethodsConcatenatedIds(resolver));
+        String enabledImes = getEnabledInputMethodsConcatenatedIds(resolver);
+        if (TextUtils.isEmpty(enabledImes)) {
+            return false;
+        }
+        sInputMethodSplitter.setString(enabledImes);
         while (sInputMethodSplitter.hasNext()) {
             String inputMethodId = sInputMethodSplitter.next();
             if (inputMethodId.equals(inputMethodInfo.getId())) {
