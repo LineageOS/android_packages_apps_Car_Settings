@@ -131,7 +131,7 @@ public class MobileDataRow extends SettingsQCItem {
     String getSubtitle(boolean dataEnabled) {
         if (isDataSubscriptionFlagEnable()
                 && dataEnabled
-                && mSubscription.isDataSubscriptionInactiveOrTrial()) {
+                && mSubscription.isDataSubscriptionInactive()) {
             return getContext().getString(
                     R.string.connectivity_inactive_prompt);
         }
@@ -142,7 +142,7 @@ public class MobileDataRow extends SettingsQCItem {
     String getActionText(boolean dataEnabled) {
         if (isDataSubscriptionFlagEnable()
                 && dataEnabled
-                && mSubscription.isDataSubscriptionInactiveOrTrial()
+                && mSubscription.isDataSubscriptionInactive()
                 && !mIsDistractionOptimizationRequired) {
             return getContext().getString(
                     R.string.connectivity_inactive_action_text);
@@ -152,7 +152,7 @@ public class MobileDataRow extends SettingsQCItem {
 
     int getCategory() {
         if (isDataSubscriptionFlagEnable()
-                && mSubscription.isDataSubscriptionInactiveOrTrial()) {
+                && mSubscription.isDataSubscriptionInactive()) {
             return QCCategory.WARNING;
         }
         return QCCategory.NORMAL;
@@ -175,7 +175,7 @@ public class MobileDataRow extends SettingsQCItem {
         if (!isDataSubscriptionFlagEnable()) {
             return null;
         }
-        if (!mSubscription.isDataSubscriptionInactiveOrTrial()
+        if (!mSubscription.isDataSubscriptionInactive()
                 || mIsDistractionOptimizationRequired) {
             return null;
         }

@@ -137,7 +137,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
         when(mCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)).thenReturn(true);
         when(mConnectivityManager.getNetworkCapabilities(network)).thenReturn(mCapabilities);
         when(mConnectivityManager.getAllNetworks()).thenReturn(new Network[]{network});
-        when(mDataSubscription.isDataSubscriptionInactiveOrTrial()).thenReturn(false);
+        when(mDataSubscription.isDataSubscriptionInactive()).thenReturn(false);
 
         when(mUserManager.isAdminUser()).thenReturn(true);
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS))

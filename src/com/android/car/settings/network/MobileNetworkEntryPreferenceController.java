@@ -143,7 +143,7 @@ public class MobileNetworkEntryPreferenceController extends
     @Override
     protected boolean handlePreferenceClicked(ColoredTwoActionSwitchPreference preference) {
         if (isDataSubscriptionFlagEnable()
-                && mSubscription.isDataSubscriptionInactiveOrTrial()) {
+                && mSubscription.isDataSubscriptionInactive()) {
             Intent dataSubscriptionIntent = new Intent(DATA_SUBSCRIPTION_ACTION);
             dataSubscriptionIntent.setPackage(getContext().getString(
                     R.string.connectivity_flow_app));
@@ -185,7 +185,7 @@ public class MobileNetworkEntryPreferenceController extends
             return getContext().getString(R.string.mobile_network_state_off);
         }
         if (isDataSubscriptionFlagEnable()
-                && mSubscription.isDataSubscriptionInactiveOrTrial()) {
+                && mSubscription.isDataSubscriptionInactive()) {
             return getContext().getString(R.string.connectivity_inactive_prompt);
         }
         int count = subs.size();
@@ -204,7 +204,7 @@ public class MobileNetworkEntryPreferenceController extends
             return null;
         }
         if (isDataSubscriptionFlagEnable()
-                && mSubscription.isDataSubscriptionInactiveOrTrial()
+                && mSubscription.isDataSubscriptionInactive()
                 && !getUxRestrictions().isRequiresDistractionOptimization()) {
             getPreference().setIsWarning(true);
             return getContext().getString(R.string.connectivity_inactive_action_text);
