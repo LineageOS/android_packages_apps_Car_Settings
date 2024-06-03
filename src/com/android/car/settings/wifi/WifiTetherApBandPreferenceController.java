@@ -26,6 +26,7 @@ import androidx.preference.ListPreference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.internal.annotations.VisibleForTesting;
 
 /**
  * Controls WiFi Hotspot AP Band configuration.
@@ -40,7 +41,15 @@ public class WifiTetherApBandPreferenceController extends
 
     public WifiTetherApBandPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
+        this(context, preferenceKey, fragmentController, uxRestrictions,
+                new CarWifiManager(context, fragmentController.getSettingsLifecycle()));
+    }
+
+    @VisibleForTesting
+    WifiTetherApBandPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            CarWifiManager carWifiManager) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, carWifiManager);
     }
 
     @Override

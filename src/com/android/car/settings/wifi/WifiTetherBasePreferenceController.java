@@ -28,6 +28,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.internal.annotations.VisibleForTesting;
 
 /**
  * Shared business logic for preference controllers related to Wifi Tethering
@@ -45,18 +46,26 @@ public abstract class WifiTetherBasePreferenceController<V extends Preference> e
     public static final String ACTION_RESTART_WIFI_TETHERING =
             "com.android.car.settings.wifi.ACTION_RESTART_WIFI_TETHERING";
 
-    private CarWifiManager mCarWifiManager;
+    private final CarWifiManager mCarWifiManager;
 
     public WifiTetherBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        this(context, preferenceKey, fragmentController, uxRestrictions, new CarWifiManager(context,
+                fragmentController.getSettingsLifecycle()));
+    }
+
+    @VisibleForTesting
+    WifiTetherBasePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            CarWifiManager carWifiManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+
+        mCarWifiManager = carWifiManager;
     }
 
     @Override
     @CallSuper
     protected void onCreateInternal() {
-        mCarWifiManager = new CarWifiManager(getContext(),
-                getFragmentController().getSettingsLifecycle());
         // ActionDisabledByAdminDialog will be shown if DISALLOW_CONFIG_WIFI
         // is set by a device admin; otherwise, a default Toast will be shown
         setClickableWhileDisabled(getPreference(), /* clickable= */ true, p ->
