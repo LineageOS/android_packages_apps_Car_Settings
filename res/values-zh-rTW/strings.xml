@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"這項設定已由車輛製造商停用，而且無法變更。"</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"駕駛輔助功能"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"允許經車輛製造商核准的內建功能存取車輛位置資訊。"</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"必要的應用程式"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"車輛製造商為了提供駕駛輔助服務所需的應用程式。"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"近期存取"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"近期存取"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"全部顯示"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"攝影機存取權"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"決定應用程式是否可以存取車輛攝影機"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"必要的應用程式"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"車輛製造商為提供駕駛輔助服務所需的應用程式"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"政策"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"車輛製造商或許仍可存取車輛攝影機"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"資訊娛樂系統應用程式"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"允許資訊娛樂系統應用程式拍照及錄影"</string>

@@ -181,7 +181,7 @@
     <string name="progress_scanning" msgid="7191583064717479795">"Iyasesha..."</string>
     <string name="connected_settings_title" msgid="8868738903280658151">"Amadivayisi axhunyiwe"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"I-Bluetooth"</string>
-    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Sebenzisa i-Bluetooth"</string>
+    <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Sebenzisa iBluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Idivayisi engenalo igama"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Amadivaysi abhanqene"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Bhangqa idivayisi entsha"</string>
@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Khansela"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Lama-app anomthelela ongemuhle ekusebenzeni kwesistimu futhi avinjiwe ukuthi asebenze ngemuva.\nBeka kuqala i-app ukuze uvumele ukusebenza kwangemuva futhi uyisuse kulolu hlu."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Yenza kubaluleke i-app"</string>
-    <string name="premium_sms_access_title" msgid="4290463862145052004">"I-Premium SMS"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"IPremium SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"I-Premium SMS ingakwenzela izindleko zemali futhi izongeza kumabhili enkampani yenethiwekhi. Uma unika amandla imvume yohlelo lokusebenza, uzokwazi ukuthumela i-premium SMS usebenzisa lolo hlelo lokusebenza."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Ukufinyelela ukusebenzisa"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Ukufinyelela kokusebenzisa kuvumela i-app ilandelele ukuthi ngamaphi ama-app owasebenzisayo nokuthi maningi kangakanani, kanye nenkampani yakho yenethiwekhi, amasethingi olimi neminye imininingwane."</string>
@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Le sethingi ayikwazi ukushintshwa futhi ikhutshazwe ngumkhiqizi wemoto yakho."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Izakhi ezikusiza ukuthi ushayele"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Vumela izakhi ezakhelwe ngaphakathi, ezigunyazwe umkhiqizi wemoto yakho, ukuze ufinyelele indawo yemoto yakho."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Ama-app adingekayo"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Ama-app adingwa umkhiqizi wemoto yakho ukusiza ngokushayela."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Okufinyelelwe muva nje"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Okufinyelelwe muva nje"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Buka konke"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Ukufinyelela kwekhamera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Khetha ukuthi ama-app angakwazi yini ukufinyelela amakhamera wemoto yakho"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Ama-app adingekayo"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Ama-app adingwa umkhiqizi wemoto yakho ukukusiza ukuba ushayele"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Inqubomgomo"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Umkhiqizi wemoto yakho usengakwazi ukufinyelela ikhamera yemoto yakho"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Ama-app we-Infotainment"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Vumela ama-app we-infotainment ukuthi athathe izithombe futhi arekhode ividiyo"</string>

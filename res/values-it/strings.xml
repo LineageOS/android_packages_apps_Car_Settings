@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Questa impostazione non può essere modificata ed è stata disattivata dal produttore del veicolo."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funzionalità di assistenza alla guida"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Consenti alle funzionalità integrate, approvate dal produttore del veicolo, di accedere alla posizione dell\'auto."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"App obbligatorie"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"App richieste dal produttore dell\'auto per aiutarti durante la guida"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Usi recenti"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Usi recenti"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Mostra tutte"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Accesso alla videocamera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Scegli se le app possono accedere alle videocamere dell\'auto"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"App obbligatorie"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"App richieste dal produttore della tua auto per aiutarti a guidare"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Norme"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Il produttore del veicolo potrebbe avere ancora accesso alla videocamera dell\'auto"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"App di infotainment"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Consenti alle app di infotainment di scattare foto e registrare video"</string>
