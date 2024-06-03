@@ -19,6 +19,9 @@ package com.android.car.settings.wifi;
 import static android.net.wifi.SoftApConfiguration.BAND_2GHZ;
 import static android.net.wifi.SoftApConfiguration.BAND_5GHZ;
 
+import static com.android.car.settings.wifi.WifiTetherApBandPreferenceController.BAND_2GHZ_5GHZ;
+import static com.android.car.settings.wifi.WifiTetherApBandPreferenceController.DUAL_BANDS;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.verify;
@@ -27,6 +30,8 @@ import static org.mockito.Mockito.when;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.wifi.SoftApConfiguration;
+import android.platform.test.annotations.EnableFlags;
+import android.platform.test.flag.junit.SetFlagsRule;
 import android.util.SparseIntArray;
 
 import androidx.lifecycle.Lifecycle;
@@ -35,12 +40,14 @@ import androidx.preference.ListPreference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -49,6 +56,8 @@ import org.mockito.MockitoAnnotations;
 
 @RunWith(AndroidJUnit4.class)
 public class WifiTetherApBandPreferenceControllerTest {
+    @Rule
+    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
     private Context mContext = ApplicationProvider.getApplicationContext();
     private ListPreference mPreference;
     private LifecycleOwner mLifecycleOwner;
@@ -93,6 +102,24 @@ public class WifiTetherApBandPreferenceControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_HOTSPOT_UI_SPEED_UPDATE)
+    public void onStart_dualBandNotSupported_defaultTo2Ghz() {
+        when(mCarWifiManager.is5GhzBandSupported()).thenReturn(true);
+        when(mCarWifiManager.isDualBandSupported()).thenReturn(false);
+        when(mCarWifiManager.getSoftApConfig()).thenReturn(
+                new SoftApConfiguration.Builder().setBands(DUAL_BANDS).build());
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(mPreference.isEnabled()).isTrue();
+        assertThat(mPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.wifi_ap_choose_2G));
+        assertThat(mPreference.getValue()).isEqualTo(
+                Integer.toString(SoftApConfiguration.BAND_2GHZ));
+    }
+
+    @Test
     public void onStart_wifiConfigApBandSetTo5Ghz_valueIsSetTo5Ghz() {
         when(mCarWifiManager.is5GhzBandSupported()).thenReturn(true);
         when(mCarWifiManager.getSoftApConfig()).thenReturn(
@@ -106,6 +133,24 @@ public class WifiTetherApBandPreferenceControllerTest {
                 mContext.getString(R.string.wifi_ap_prefer_5G));
         assertThat(mPreference.getValue()).isEqualTo(
                 Integer.toString(SoftApConfiguration.BAND_5GHZ));
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_HOTSPOT_UI_SPEED_UPDATE)
+    public void onStart_wifiConfigDualApBand_valueIsSetToDualBand() {
+        when(mCarWifiManager.is5GhzBandSupported()).thenReturn(true);
+        when(mCarWifiManager.isDualBandSupported()).thenReturn(true);
+        when(mCarWifiManager.getSoftApConfig()).thenReturn(
+                new SoftApConfiguration.Builder().setBands(DUAL_BANDS).build());
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+
+        assertThat(mPreference.isEnabled()).isTrue();
+        assertThat(mPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.wifi_ap_2G_5G));
+        assertThat(mPreference.getValue()).isEqualTo(
+                Integer.toString(BAND_2GHZ_5GHZ));
     }
 
     @Test
@@ -133,7 +178,7 @@ public class WifiTetherApBandPreferenceControllerTest {
                 Integer.toString(SoftApConfiguration.BAND_5GHZ));
 
         SoftApConfiguration actualConfig = getSoftApConfig();
-        assertThat(getBandFromConfig(actualConfig)).isEqualTo(BAND_2GHZ | BAND_5GHZ);
+        assertThat(getBandFromConfig(actualConfig)).isEqualTo(BAND_2GHZ_5GHZ);
         assertThat(actualConfig.getChannels().size()).isEqualTo(1);
     }
 
@@ -150,6 +195,24 @@ public class WifiTetherApBandPreferenceControllerTest {
         SoftApConfiguration actualConfig = getSoftApConfig();
         assertThat(getBandFromConfig(actualConfig)).isEqualTo(BAND_2GHZ);
         assertThat(actualConfig.getChannels().size()).isEqualTo(1);
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_HOTSPOT_UI_SPEED_UPDATE)
+    public void onPreferenceChangedToDualBand_updatesApBandConfigToDualBand() {
+        when(mCarWifiManager.is5GhzBandSupported()).thenReturn(true);
+        when(mCarWifiManager.isDualBandSupported()).thenReturn(true);
+        when(mCarWifiManager.getSoftApConfig()).thenReturn(
+                new SoftApConfiguration.Builder().setBand(BAND_2GHZ).build());
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+        mPreferenceController.handlePreferenceChanged(mPreference,
+                Integer.toString(BAND_2GHZ_5GHZ));
+
+        SoftApConfiguration actualConfig = getSoftApConfig();
+        assertThat(getBandFromConfig(actualConfig)).isEqualTo(BAND_2GHZ_5GHZ);
+        assertThat(actualConfig.getChannels().size()).isEqualTo(2);
     }
 
     private SoftApConfiguration getSoftApConfig() {
