@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Denne indstilling kan ikke ændres og er blevet deaktiveret af bilproducenten."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Funktioner til bilkørslen"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Tillad, at indbyggede funktioner, som er godkendte af producenten af din bil, kan tilgå bilens lokation."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Påkrævede apps"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Apps, som bilproducenten kræver til assistance under kørsel."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Tilgået for nylig"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Tilgået for nylig"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Se alle"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kameraadgang"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Vælg, om apps kan tilgå bilens kameraer"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Påkrævede apps"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Apps, som producenten af din bil påkræver til kørselshjælp"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Politik"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Bilproducenten har muligvis stadig adgang til bilens kamera"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Infotainmentapps"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Tillad, at infotainmentapps kan tage billeder og optage video"</string>

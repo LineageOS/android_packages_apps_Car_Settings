@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Этот параметр нельзя изменить – он был отключен производителем автомобиля."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Функции, которые помогают водителю"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Разрешить доступ к данным о местоположении автомобиля встроенным функциям, одобренным его производителем"</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Необходимые приложения"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Приложения для помощи во время вождения, требуемые производителем вашего автомобиля"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Недавно просмотренные местоположения"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Недавно просмотренные местоположения"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Показать все"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Доступ к камере"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Настройте доступ приложений к камерам автомобиля"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Необходимые приложения"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Приложения для водителей, наличия которых требует производитель вашего автомобиля"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Политика конфиденциальности"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"У производителя автомобиля все ещё может быть доступ к камере вашего автомобиля."</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Информационно-\\nразвлекательная система"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Разрешить информационно-развлекательным приложениям снимать фото и видео"</string>
