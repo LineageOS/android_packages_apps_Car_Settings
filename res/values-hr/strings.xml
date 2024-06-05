@@ -411,7 +411,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Odustani"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ove aplikacije negativno utječu na izvedbu sustava i onemogućeno im je izvođenje u pozadini.\nDajte aplikaciji prednost da biste omogućili njezinu upotrebu u pozadini i uklonili je s ovog popisa."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prednost aplikaciji"</string>
-    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS s dodatnom naplatom"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS-ovi s dodatnom naplatom"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS-ovi s dodatnom naplatom mogu se dodatno naplaćivati i povećat će vaš račun. Ako nekoj aplikaciji date to dopuštenje, moći ćete slati SMS-ove s dodatnom naplatom pomoću te aplikacije."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Pristup upotrebi"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Pristup podacima o upotrebi omogućuje aplikaciji praćenje drugih aplikacija koje upotrebljavate i učestalosti njihove upotrebe, kao i praćenje mobilnog operatera, postavki jezika i ostalih pojedinosti."</string>
@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Ovu postavku nije moguće promijeniti i proizvođač automobila ju je onemogućio."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Značajke za pomoć u vožnji"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Ugrađenim značajkama, koje odobrava proizvođač vašeg automobila, dopustite pristup lokaciji automobila."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Obavezne aplikacije"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Aplikacije koje zahtijeva proizvođač vašeg automobila i koje vam pomažu prilikom vožnje."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Nedavno pristupano"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Nedavno pristupano"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Prikaži sve"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Pristup kameri"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Odaberite mogu li aplikacije pristupati kamerama automobila"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Obavezne aplikacije"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Aplikacije koje zahtijeva proizvođač vašeg automobila i koje vam pomažu prilikom vožnje"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Pravila"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Vaš proizvođač automobila možda i dalje ima pristup kameri automobila"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Aplikacije za informiranje i zabavu"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Dopustite aplikacijama za informiranje i zabavu da snimaju fotografije i videozapise"</string>

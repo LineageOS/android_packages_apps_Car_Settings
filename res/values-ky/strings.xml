@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Бул параметрди өзгөртүүгө болбойт. Аны унаанын өндүрүүчүсү өчүрүп койгон."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Унаа айдоого жардам берүүчү функциялар"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Унааңыздын өндүрүүчүсү ырастаган алдын ала орнотулган функцияларга унааңыздын жүргөн жерин көрүүгө уруксат бериңиз."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Талап кылынган колдонмолор"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Айдоого көмөктөшүү үчүн унааны өндүрүүчү талап кылган колдонмолор."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Жакында пайдалангандар"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Жакында пайдалангандар"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Баарын көрүү"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Камераны колдонуу"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Колдонмолор унааңыздын жүргөн жерин көрүп же көрбөй турганын тууралаңыз"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Талап кылынган колдонмолор"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Унаа айдоого жардам берүүчү унааны өндүрүүчү тарабынан талап кылынган колдонмолор"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Эрежелер"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Өндүрүүчү унааңыздын камерасын колдоно бериши мүмкүн"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Инфозоок колдонмолору"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Инфозоок колдонмолоруна сүрөттөр менен видеолорду тартканга уруксат бериңиз"</string>

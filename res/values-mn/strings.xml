@@ -26,7 +26,7 @@
     <string name="theme_toggle_title" msgid="7091393596274709558">"Загвар"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Шөнийн гэрэл асаалттай байна"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Сүлжээ &amp; интернэт"</string>
-    <string name="mobile_network_settings" msgid="1708621113321368597">"Мобайл сүлжээ"</string>
+    <string name="mobile_network_settings" msgid="1708621113321368597">"Хөдөлгөөнт холбооны сүлжээ"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM}other{# SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Идэвхтэй / SIM"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Идэвхгүй / SIM"</string>
@@ -34,8 +34,8 @@
     <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Идэвхгүй / eSIM"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Бусдыг нэмэх"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобайл дата"</string>
-    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Мобайл сүлжээг ашиглан датад хандах"</string>
-    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Мобайл сүлжээ"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Хөдөлгөөнт холбооны сүлжээг ашиглан датад хандах"</string>
+    <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Хөдөлгөөнт холбооны сүлжээ"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Мобайл датаг ашиглах"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Унтраалттай"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Мобайл датаг унтраах уу?"</string>
@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Энэ тохиргоог өөрчлөх боломжгүй бөгөөд таны автомашин үйлдвэрлэгч идэвхгүй болгосон."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Танд жолоодоход туслах онцлогууд"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Таны автомашин үйлдвэрлэгчийн зөвшөөрсөн бүрэлдэхүүн онцлогуудыг таны автомашины байршилд хандахыг зөвшөөрнө үү."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Шаардлагатай аппууд"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Машин үйлдвэрлэгчээс шаарддаг, жолоо барихад туслах аппууд."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Саяхан хандсан"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Саяхан хандсан"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Бүгдийг харах"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Камерын хандалт"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Аппууд таны машины камеруудад хандаж болох эсэхийг сонгоно уу"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Шаардлагатай аппууд"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Таны машин үйлдвэрлэгчээс шаарддаг, жолоо барихад тань туслах аппууд"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Бодлого"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Таны машин үйлдвэрлэгч машины тань камерт хандах эрхтэй хэвээр байж магадгүй"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Инфотэйнментийн аппууд"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Инфотэйнментийн аппуудад зураг авч, видео бичихийг зөвшөөрнө үү"</string>

@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"لا يمكن تغيير هذا الإعداد وقد أوقفته الشركة المصنّعة لسيارتك."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"ميزات تساعدك في القيادة"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"يمكنك السماح للميزات المدمَجة، المعتمدة من الشركة المصنّعة لسيارتك، بالوصول إلى الموقع الجغرافي لسيارتك."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"التطبيقات المطلوبة"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"تتطلّب الشركة المصنِّعة لسيارتك استخدام هذه التطبيقات للمساعدة في القيادة"</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"المواقع الجغرافية التي تم الوصول إليها مؤخرًا"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"عرض الكل"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"الوصول إلى الكاميرا"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"اختَر ما إذا كان يمكن للتطبيقات الوصول إلى كاميرا سيارتك"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"التطبيقات المطلوبة"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"التطبيقات التي تطلبها الشركة المصنّعة لسيارتك من أجل مساعدتك في القيادة"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"السياسة"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"قد تظل الشركة المصنِّعة لسيارتك قادرة على الوصول إلى كاميرا سيارتك"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"تطبيقات نظام الترفيه والمعلومات"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"السماح لتطبيقات نظام الترفيه والمعلومات بالتقاط الصور وتسجيل الفيديوهات"</string>

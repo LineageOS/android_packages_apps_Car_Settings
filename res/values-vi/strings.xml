@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Chế độ cài đặt này không thay đổi được và đã bị nhà sản xuất ô tô của bạn tắt."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Các tính năng trợ giúp bạn lái xe"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Cho các tính năng tích hợp sẵn mà nhà sản xuất ô tô phê duyệt được phép truy cập vào thông tin vị trí của ô tô."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Ứng dụng cần thiết"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Ứng dụng do nhà sản xuất ô tô yêu cầu để hỗ trợ quá trình lái."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Mới truy cập gần đây"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Xem tất cả"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Quyền truy cập vào camera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Chọn xem các ứng dụng có thể truy cập vào camera của ô tô hay không"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Ứng dụng cần thiết"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Ứng dụng do nhà sản xuất ô tô yêu cầu để hỗ trợ bạn lái xe"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Chính sách"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Có thể nhà sản xuất ô tô vẫn có quyền truy cập vào camera ô tô của bạn"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Ứng dụng thông tin giải trí"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Cho phép ứng dụng thông tin giải trí chụp ảnh và quay video"</string>

@@ -63,7 +63,7 @@ public class MobileDataRowTest extends BaseSettingsQCItemTestCase {
         when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mTelephonyManager);
         mMobileDataRow = new TestMobileDataRow(mContext);
         mMobileDataRow.setSubscription(mDataSubscription);
-        when(mDataSubscription.isDataSubscriptionInactiveOrTrial()).thenReturn(false);
+        when(mDataSubscription.isDataSubscriptionInactive()).thenReturn(false);
     }
 
     @Test

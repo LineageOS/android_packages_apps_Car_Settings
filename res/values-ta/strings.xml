@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"இந்த அமைப்பை மாற்ற முடியாது. ஏனெனில், உங்கள் கார் தயாரிப்பாளரால் இது முடக்கப்பட்டுள்ளது."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"வாகனம் ஓட்ட உதவும் அம்சங்கள்"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"உங்கள் காரின் உற்பத்தியாளர் அனுமதித்துள்ள, உள்ளமைக்கப்பட்ட அம்சங்களுக்குக் காரின் இருப்பிட அணுகலை வழங்கும்."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"தேவைப்படும் ஆப்ஸ்"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"கார் ஓட்டுவதற்கு உதவ, உங்கள் காரின் உற்பத்தியாளருக்குத் தேவைப்படும் ஆப்ஸ்."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"சமீபத்தில் அணுகியவை"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"சமீபத்தில் அணுகியவை"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"அனைத்தையும் காட்டுதல்"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"கேமரா அணுகல்"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"உங்கள் காரின் கேமராவை ஆப்ஸ் அணுகலாமா என்பதைத் தேர்வுசெய்யலாம்"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"தேவைப்படும் ஆப்ஸ்"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"கார் ஓட்ட உங்களுக்கு உதவுவதற்காக உங்கள் கார் உற்பத்தியாளருக்குத் தேவைப்படுகின்ற ஆப்ஸ்"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"கொள்கை"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"உங்கள் காரின் கேமராவிற்கான அணுகலை இப்போதும் உங்கள் கார் தயாரிப்பாளர் கொண்டிருக்கக்கூடும்"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"இன்ஃபோடெயின்மென்ட் ஆப்ஸ்"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"படங்களை எடுக்கவும் வீடியோவை ரெக்கார்டு செய்யவும் இன்ஃபோடெயின்மென்ட் ஆப்ஸை அனுமதிக்கலாம்"</string>

@@ -429,8 +429,6 @@
     <string name="adas_location_toggle_popup_summary" msgid="4918613528063160563">"Bu ayar değiştirilemez ve araba üreticiniz tarafından devre dışı bırakılmış."</string>
     <string name="adas_location_toggle_title" msgid="6131739109988811006">"Araba kullanmanıza yardımcı özellikler"</string>
     <string name="adas_location_toggle_summary" msgid="7055141074159770928">"Arabanızın üreticisi tarafından onaylanmış yerleşik özelliklerin arabanızın konumuna erişmesine izin verin."</string>
-    <string name="location_required_apps_group_title" msgid="5672632286858280618">"Gerekli uygulamalar"</string>
-    <string name="location_required_apps_group_summary" msgid="5760731893677945737">"Araba üreticinizin sürüş yardımı için gerekli kıldığı uygulamalar."</string>
     <string name="location_recently_accessed" msgid="522888989582110975">"Yakın zamanda erişildi"</string>
     <string name="location_settings_recently_accessed_title" msgid="6016264778609426382">"Yakın zamanda erişildi"</string>
     <string name="location_settings_recently_accessed_view_all_title" msgid="6344830628885781448">"Tümünü göster"</string>
@@ -660,10 +658,8 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Kamera erişimi"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Uygulamaların, arabanızın kameralarına erişip erişemeyeceğini seçin"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Gerekli uygulamalar"</string>
-    <!-- no translation found for required_apps_group_summary (5026442309718220831) -->
-    <skip />
-    <!-- no translation found for required_apps_privacy_policy_button_text (960364076891996263) -->
-    <skip />
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Sürüşünüze yardımcı olması için araba üreticiniz tarafından gerekli olduğu belirtilen uygulamalar"</string>
+    <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Politika"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Araba üreticinizin, yine de araba kamerasına erişimi olabilir."</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Bilgi-eğlence uygulamaları"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Bilgi-eğlence uygulamalarının fotoğraf çekmesine ve video kaydetmesine izin verin"</string>
