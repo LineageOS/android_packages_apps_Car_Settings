@@ -38,7 +38,7 @@
     <string name="mobile_network_mobile_network_toggle_title" msgid="3087288149339116597">"Mobilna mreža"</string>
     <string name="mobile_network_mobile_network_toggle_summary" msgid="1679917666306941420">"Koristi mobilne podatke"</string>
     <string name="mobile_network_state_off" msgid="471795861420831748">"Isključeno"</string>
-    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Isključiti mobilne podatke?"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Želite li isključiti mobilne podatke?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Odabir je obvezan"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Koristiti <xliff:g id="CARRIER">%1$s</xliff:g> za mobilne podatke?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Koristite usluge mobilnog operatera <xliff:g id="CARRIER2_0">%2$s</xliff:g> za mobilne podatke. Ako prijeđete na mobilnog operatera <xliff:g id="CARRIER1">%1$s</xliff:g>, operater<xliff:g id="CARRIER2_1">%2$s</xliff:g> više se neće koristiti za mobilne podatke."</string>
@@ -745,7 +745,7 @@
     <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Mora sadržavati najmanje # znamenku}one{Mora sadržavati najmanje # znamenku}few{Mora sadržavati najmanje # znamenke}other{Mora sadržavati najmanje # znamenki}}"</string>
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Mora sadržavati manje od # znaka}one{Mora sadržavati manje od # znaka}few{Mora sadržavati manje od # znaka}other{Mora sadržavati manje od # znakova}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Mora sadržavati manje od # znamenke}one{Mora sadržavati manje od # znamenke}few{Mora sadržavati manje od # znamenke}other{Mora sadržavati manje od # znamenki}}"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Uzastopno rastući ili padajući slijed brojeva ili ponavljanje brojeva nije dopušteno"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Rastući, padajući ili ponavljajući slijed brojeva nije dopušten"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcije zaključavanja zaslona"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Izbriši vjerodajnice"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Ukloni sve certifikate"</string>
