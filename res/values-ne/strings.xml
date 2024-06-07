@@ -740,7 +740,7 @@
     <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि # अङ्क समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि # वटा अङ्क समावेश हुनु पर्छ}}"</string>
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{अनिवार्य रूपमा # भन्दा कम वर्ण हुनु पर्छ}other{अनिवार्य रूपमा # भन्दा कम वर्ण हुनु पर्छ}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{अनिवार्य रूपमा # भन्दा कम अङ्क हुनु पर्छ}other{अनिवार्य रूपमा # भन्दा कम अङ्क हुनु पर्छ}}"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"बढ्दो, घट्दो वा दोहोरिएका अङ्कहरूको अनुक्रमलाई निषेध गरिएको छ"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"बढ्दो, घट्दो क्रममा वा दोहोरिएका अङ्क हाल्न मिल्दैन"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रिन लकका विकल्पहरू"</string>
     <string name="credentials_reset" msgid="873900550885788639">"प्रमाणहरू मेट्नुहोस्"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"सबै प्रमाणहरू हटाउनुहोस्"</string>
