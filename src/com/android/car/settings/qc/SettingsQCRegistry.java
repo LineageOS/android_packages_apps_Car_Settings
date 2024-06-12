@@ -109,6 +109,12 @@ public class SettingsQCRegistry {
             .appendPath("theme_toggle")
             .build();
 
+    public static final Uri MEDIA_AUDIO_SELECTOR_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("media_audio_selector")
+            .build();
+
     public static final Uri MEDIA_VOLUME_SLIDER_URI = new Uri.Builder()
             .scheme(ContentResolver.SCHEME_CONTENT)
             .authority(AUTHORITY)
@@ -153,6 +159,7 @@ public class SettingsQCRegistry {
         map.put(BRIGHTNESS_SLIDER_WITH_ICON_URI, BrightnessSliderWithIcon.class);
         map.put(ADAPTIVE_BRIGHTNESS_SWITCH_URI, AdaptiveBrightnessSwitch.class);
         map.put(THEME_TOGGLE_URI, ThemeToggle.class);
+        map.put(MEDIA_AUDIO_SELECTOR_URI, MediaAudioSelectorRow.class);
         map.put(MEDIA_VOLUME_SLIDER_URI, MediaVolumeSlider.class);
         map.put(MEDIA_VOLUME_SLIDER_WITHOUT_ICON_URI, MediaVolumeSliderWithoutIcon.class);
         map.put(CALL_VOLUME_SLIDER_URI, CallVolumeSlider.class);
