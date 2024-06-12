@@ -16,16 +16,23 @@
 
 package com.android.car.settings.wifi;
 
+import static android.net.wifi.SoftApConfiguration.BAND_2GHZ;
+import static android.net.wifi.SoftApConfiguration.BAND_5GHZ;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.res.Resources;
 import android.net.wifi.SoftApConfiguration;
-import android.util.Log;
+import android.util.SparseIntArray;
 
 import androidx.preference.ListPreference;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.internal.annotations.VisibleForTesting;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Controls WiFi Hotspot AP Band configuration.
@@ -34,13 +41,39 @@ public class WifiTetherApBandPreferenceController extends
         WifiTetherBasePreferenceController<ListPreference> {
     private static final String TAG = "CarWifiTetherApBandPref";
 
-    private String[] mBandEntries;
-    private String[] mBandSummaries;
+    /** Wi-Fi hotspot band 2.4GHz and 5GHz. */
+    @VisibleForTesting
+    static final int BAND_2GHZ_5GHZ = BAND_2GHZ | BAND_5GHZ;
+
+    /** Wi-Fi hotspot dual band for 2.4GHz and 5GHz. */
+    @VisibleForTesting
+    static final int[] DUAL_BANDS = new int[] {
+            BAND_2GHZ,
+            BAND_2GHZ_5GHZ };
+
+    private final Map<Integer, String> mHotspotBandMap = new LinkedHashMap<>();
+
     private int mBand;
 
     public WifiTetherApBandPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
-        super(context, preferenceKey, fragmentController, uxRestrictions);
+        this(context, preferenceKey, fragmentController, uxRestrictions,
+                new CarWifiManager(context, fragmentController.getSettingsLifecycle()));
+    }
+
+    @VisibleForTesting
+    WifiTetherApBandPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions,
+            CarWifiManager carWifiManager) {
+        super(context, preferenceKey, fragmentController, uxRestrictions, carWifiManager);
+
+        String[] bandNames = getContext().getResources().getStringArray(
+                R.array.wifi_ap_band_summary);
+        String[] bandValues = getContext().getResources().getStringArray(
+                R.array.wifi_ap_band);
+        for (int i = 0; i < bandNames.length; i++) {
+            mHotspotBandMap.put(Integer.parseInt(bandValues[i]), bandNames[i]);
+        }
     }
 
     @Override
@@ -52,8 +85,6 @@ public class WifiTetherApBandPreferenceController extends
     protected void onCreateInternal() {
         super.onCreateInternal();
         updatePreferenceEntries();
-        getPreference().setEntries(mBandSummaries);
-        getPreference().setEntryValues(mBandEntries);
     }
 
     @Override
@@ -61,44 +92,32 @@ public class WifiTetherApBandPreferenceController extends
         super.updateState(preference);
 
         SoftApConfiguration config = getCarSoftApConfig();
+        int configBand = getBandFromConfig();
         if (config == null) {
-            mBand = SoftApConfiguration.BAND_2GHZ;
-        } else if (!is5GhzBandSupported() && config.getBand() == SoftApConfiguration.BAND_5GHZ) {
+            mBand = BAND_2GHZ;
+        } else if (!is5GhzBandSupported() && configBand > BAND_2GHZ) {
             SoftApConfiguration newConfig = new SoftApConfiguration.Builder(config)
-                    .setBand(SoftApConfiguration.BAND_2GHZ)
+                    .setBand(BAND_2GHZ)
                     .build();
             setCarSoftApConfig(newConfig);
-            mBand = newConfig.getBand();
+            mBand = BAND_2GHZ;
         } else {
-            mBand = validateSelection(config.getBand());
+            mBand = validateSelection(configBand);
         }
 
         if (!is5GhzBandSupported()) {
             preference.setEnabled(false);
             preference.setSummary(R.string.wifi_ap_choose_2G);
         } else {
-            preference.setValue(Integer.toString(config.getBand()));
+            preference.setValue(Integer.toString(mBand));
             preference.setSummary(getSummary());
         }
-
     }
 
     @Override
     protected String getSummary() {
-        if (!is5GhzBandSupported()) {
-            return getContext().getString(R.string.wifi_ap_choose_2G);
-        }
-        switch (mBand) {
-            case SoftApConfiguration.BAND_2GHZ | SoftApConfiguration.BAND_5GHZ:
-                return getContext().getString(R.string.wifi_ap_prefer_5G);
-            case SoftApConfiguration.BAND_2GHZ:
-                return mBandSummaries[0];
-            case SoftApConfiguration.BAND_5GHZ:
-                return mBandSummaries[1];
-            default:
-                Log.e(TAG, "Unknown band: " + mBand);
-                return getContext().getString(R.string.wifi_ap_prefer_5G);
-        }
+        return mHotspotBandMap.getOrDefault(mBand,
+                getContext().getString(R.string.wifi_ap_prefer_5G));
     }
 
     @Override
@@ -114,50 +133,76 @@ public class WifiTetherApBandPreferenceController extends
         return true;
     }
 
-    private int validateSelection(int band) {
-        // unsupported states:
-        // 1: BAND_5GHZ only - include 2GHZ since some of countries doesn't support 5G hotspot
-        // 2: no 5 GHZ support means we can't have BAND_5GHZ - default to 2GHZ
-        if (SoftApConfiguration.BAND_5GHZ == band) {
-            if (!is5GhzBandSupported()) {
-                return SoftApConfiguration.BAND_2GHZ;
-            }
-            return SoftApConfiguration.BAND_5GHZ | SoftApConfiguration.BAND_2GHZ;
+    private void updatePreferenceEntries() {
+        // If 5 GHz is not supported, default to 2 GHz
+        if (!is5GhzBandSupported()) {
+            mHotspotBandMap.keySet().removeIf(key -> key > BAND_2GHZ);
         }
+
+        if (!isDualBandSupported()) {
+            mHotspotBandMap.keySet().removeIf(key -> key == BAND_2GHZ_5GHZ);
+        }
+
+        // If dual band is supported then there is no need to allow users to select
+        // between 2.4 GHz and 5 GHz since both bands will be available to connect to.
+        if (isDualBandSupported()) {
+            mHotspotBandMap.keySet().removeIf(key -> key < BAND_2GHZ_5GHZ);
+        }
+
+        getPreference().setEntries(mHotspotBandMap.values().toArray(CharSequence[]::new));
+        getPreference().setEntryValues(
+                mHotspotBandMap.keySet().stream().map(Object::toString).toArray(
+                        CharSequence[]::new));
+
+        mBand = validateSelection(getBandFromConfig());
+        getPreference().setValue(Integer.toString(mBand));
+    }
+
+    private int getBandFromConfig() {
+        int band = 0;
+
+        SparseIntArray channels = getCarSoftApConfig().getChannels();
+        for (int i = 0; i < channels.size(); i++) {
+            band |= channels.keyAt(i);
+        }
+
+        if (band == BAND_2GHZ_5GHZ && channels.size() == 1) {
+            // band should be set to BAND_5GHZ to differentiate between dual band which would also
+            // be BAND_2GHZ_5GHZ.
+            band = BAND_5GHZ;
+        }
+
         return band;
     }
 
-    private void updatePreferenceEntries() {
-        Resources res = getContext().getResources();
-        int entriesRes = R.array.wifi_ap_band;
-        int summariesRes = R.array.wifi_ap_band_summary;
-        mBandEntries = res.getStringArray(entriesRes);
-        mBandSummaries = res.getStringArray(summariesRes);
+    private int validateSelection(int band) {
+        return mHotspotBandMap.containsKey(band) ? band : BAND_2GHZ;
     }
 
     private void updateApBand() {
-        SoftApConfiguration config = new SoftApConfiguration.Builder(getCarSoftApConfig())
-                .setBand(mBand)
-                .build();
-        setCarSoftApConfig(config);
-        getPreference().setValue(getBandEntry());
-    }
+        SoftApConfiguration.Builder configBuilder = new SoftApConfiguration.Builder(
+                getCarSoftApConfig());
 
-    private String getBandEntry() {
-        switch (mBand) {
-            case SoftApConfiguration.BAND_2GHZ | SoftApConfiguration.BAND_5GHZ:
-            case SoftApConfiguration.BAND_2GHZ:
-                return mBandEntries[0];
-            case SoftApConfiguration.BAND_5GHZ:
-                return mBandEntries[1];
-            default:
-                Log.e(TAG, "Unknown band: " + mBand + ", defaulting to 2GHz");
-                return mBandEntries[0];
+        if (mBand == BAND_5GHZ) {
+            // Only BAND_5GHZ is not supported, must include BAND_2GHZ since some of countries
+            // don't support 5G
+            configBuilder.setBand(BAND_2GHZ_5GHZ);
+        } else if (Flags.hotspotUiSpeedUpdate() && mBand == BAND_2GHZ_5GHZ) {
+            configBuilder.setBands(DUAL_BANDS);
+        } else {
+            configBuilder.setBand(BAND_2GHZ);
         }
+
+        setCarSoftApConfig(configBuilder.build());
+        getPreference().setValue(Integer.toString(mBand));
     }
 
     private boolean is5GhzBandSupported() {
         String countryCode = getCarWifiManager().getCountryCode();
         return getCarWifiManager().is5GhzBandSupported() && countryCode != null;
+    }
+
+    private boolean isDualBandSupported() {
+        return Flags.hotspotUiSpeedUpdate() && getCarWifiManager().isDualBandSupported();
     }
 }

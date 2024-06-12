@@ -21,3 +21,10 @@ flag {
     description: "Flag to display an updated privacy page for the microphone."
     bug: "340636015"
 }
+
+flag {
+    name: "hotspot_ui_speed_update"
+    namespace: "car_sys_exp"
+    description: "Flag to update hotspot band page with dual band support"
+    bug: "193605871"
+}

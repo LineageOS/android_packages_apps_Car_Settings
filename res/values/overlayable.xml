@@ -370,6 +370,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_restricted_wifi_signal_2"/>
       <item type="drawable" name="ic_qc_restricted_wifi_signal_3"/>
       <item type="drawable" name="ic_qc_restricted_wifi_signal_4"/>
+      <item type="drawable" name="ic_qc_speaker_group"/>
       <item type="drawable" name="ic_qc_ui_mode_auto"/>
       <item type="drawable" name="ic_qc_ui_mode_day"/>
       <item type="drawable" name="ic_qc_ui_mode_night"/>
@@ -728,6 +729,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="assistant_and_voice_use_text_from_screen_summary"/>
       <item type="string" name="assistant_and_voice_use_text_from_screen_title"/>
       <item type="string" name="assistant_security_warning"/>
+      <item type="string" name="audio_route_dialog_neutral_button_text"/>
       <item type="string" name="audio_route_selector_title"/>
       <item type="string" name="audio_route_selector_toast"/>
       <item type="string" name="auto_brightness_summary"/>
@@ -1553,6 +1555,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="wallpaper_attributions_values"/>
       <item type="string" name="webview_license_title"/>
       <item type="string" name="wifi_ap_2G"/>
+      <item type="string" name="wifi_ap_2G_5G"/>
       <item type="string" name="wifi_ap_5G"/>
       <item type="string" name="wifi_ap_band_config"/>
       <item type="string" name="wifi_ap_band_select_one"/>
@@ -1632,6 +1635,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="zone_list_menu_sort_alphabetically"/>
       <item type="string" name="zone_list_menu_sort_by_timezone"/>
       <item type="style" name="ActionDialogTheme"/>
+      <item type="style" name="AlertDialogTheme"/>
       <item type="style" name="CarSettingTheme"/>
       <item type="style" name="CarSettingsActivityDividerStyle"/>
       <item type="style" name="CarSettingsFragmentContainerStyle"/>

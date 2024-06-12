@@ -980,7 +980,23 @@
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
-        <service android:name=".bluetooth.BluetoothPairingService" />
+        <activity
+            android:name=".sound.AudioRouteSelectionActivity"
+            android:theme="@style/AlertDialogTheme"
+            android:permission="android.car.permission.CAR_CONTROL_AUDIO_SETTINGS"
+            android:clearTaskOnLaunch="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="com.android.car.settings.AUDIO_ROUTE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+    <service android:name=".bluetooth.BluetoothPairingService" />
 
         <service android:name=".setupservice.InitialLockSetupService"
                  android:exported="true"

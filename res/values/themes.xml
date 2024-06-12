@@ -57,6 +57,15 @@
         <item name="android:windowIsFloating">true</item>
     </style>
 
+    <style name="AlertDialogTheme" parent="@style/Theme.CarUi">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
     <style name="CarSettingsPreferenceTheme" parent="@style/CarUiPreferenceTheme">
         <item name="preferenceFragmentCompatStyle">@style/CarSettingsPreferenceFragment</item>
         <item name="preferenceFragmentStyle">@style/CarSettingsPreferenceFragment</item>

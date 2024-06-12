@@ -16,6 +16,7 @@
 
 package com.android.car.settings.wifi;
 
+import android.annotation.FlaggedApi;
 import android.content.Context;
 import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiManager;
@@ -28,6 +29,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 
+import com.android.car.settings.Flags;
 import com.android.wifitrackerlib.WifiEntry;
 import com.android.wifitrackerlib.WifiPickerTracker;
 
@@ -217,6 +219,14 @@ public class CarWifiManager implements WifiPickerTracker.WifiPickerTrackerCallba
     /** Removes callback for Soft AP */
     public void unregisterSoftApCallback(WifiManager.SoftApCallback callback) {
         mWifiManager.unregisterSoftApCallback(callback);
+    }
+
+    /**
+     * Returns whether Wi-Fi Dual Band is supported or not.
+     */
+    @FlaggedApi(Flags.FLAG_HOTSPOT_UI_SPEED_UPDATE)
+    public boolean isDualBandSupported() {
+        return mWifiManager.isBridgedApConcurrencySupported();
     }
 
     @Override

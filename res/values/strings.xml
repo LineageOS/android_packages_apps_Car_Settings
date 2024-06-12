@@ -337,6 +337,8 @@
     <string name="wifi_ap_2G">2.4 GHz</string>
     <!-- Label for adding to the list of selected bands when 5.0 GHz is selected [CHAR LIMIT=15]-->
     <string name="wifi_ap_5G">5.0 GHz</string>
+    <!-- Label for adding to the list of selected bands when 2.4 and 5.0 GHz is selected [CHAR LIMIT=15]-->
+    <string name="wifi_ap_2G_5G">2.4 and 5.0 GHz</string>
     <!-- Label that is shown as a dialog summary informing users they must pick at LEAST one band for their hotspot [CHAR LIMIT=25]-->
     <string name="wifi_ap_band_select_one">Choose at least one band for Wi\u2011Fi hotspot:</string>
     <!-- Tethering controls, item title to go into the tethering settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
@@ -2235,4 +2237,6 @@
     <string name="data_subscription_explore_options">See plans</string>
     <string name="connectivity_inactive_prompt">Your internet plans expired</string>
     <string name="connectivity_inactive_action_text">See plans</string>
+
+    <string name="audio_route_dialog_neutral_button_text">Done</string>
 </resources>

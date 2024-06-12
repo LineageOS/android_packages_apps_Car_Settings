@@ -46,12 +46,14 @@
 
     <string-array translatable="false" name="wifi_ap_band">
         <item>1</item>
+        <item>2</item>
         <item>3</item>
     </string-array>
 
     <string-array translatable="false" name="wifi_ap_band_summary">
         <item>@string/wifi_ap_choose_2G</item>
         <item>@string/wifi_ap_prefer_5G</item>
+        <item>@string/wifi_ap_2G_5G</item>
     </string-array>
 
     <string-array translatable="false" name="wifi_ap_band_config_2G_only">
@@ -67,5 +69,8 @@
         <item>com.android.systemui</item>
         <item>com.android.providers.calendar</item>
         <item>com.android.providers.media</item>
+        <item>com.google.android.cellbroadcastreceiver</item>
+        <item>com.google.android.cellbroadcast</item>
+        <item>com.android.cellbroadcastreceiver</item>
     </string-array>
 </resources>
