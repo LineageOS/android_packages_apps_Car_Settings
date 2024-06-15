@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"சேமி"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"விழிப்பூட்டல் ஒலிகள்"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"ரிங்டோன், அறிவிப்புகள், அலாரம்"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"மீடியாவை இதில் பிளே செய்:"</string>
     <string name="display_brightness" msgid="5718970880488110840">"ஒளிர்வு"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"வெளிச்சத்திற்கேற்றவாறு திரை ஒளிர்வைச் சரிசெய்யும்"</string>
     <string name="units_settings" msgid="402325305096925886">"அலகுகள்"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"எனது சுயவிவரத்தை நீக்கு"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"இன்ஃபோடெயின்மென்ட் சிஸ்டத்தில் உள்ள உங்கள் சுயவிவரத்தையும் கணக்குகளையும் அழிக்கும்"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"உங்கள் சுயவிவரத்தில் இந்தச் செயலைச் செய்ய முடியாது"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"கேமரா அணுகல்"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"உங்கள் காரின் கேமராவை ஆப்ஸ் அணுகலாமா என்பதைத் தேர்வுசெய்யலாம்"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"உங்கள் கார் கேமராக்களை இவற்றுடன் பயன்படுத்துங்கள்:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"எந்த ஆப்ஸும்"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"உங்கள் கேமராவை அணுக நீங்கள் அனுமதித்துள்ள எந்த ஆப்ஸும்"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"ஆப்ஸ் எதுவுமில்லை"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"உங்கள் ஆப்ஸ் எதுவும் இல்லை"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"வாகனம் ஓட்டுவதற்கு உதவும் ஆப்ஸ்"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"பார்க்கிங் செய்யும்போது உங்களைச் சுற்றியுள்ளவற்றைக் காட்டுவது போன்ற விஷயங்களுக்கு உதவும் ஆப்ஸ்"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"தேவைப்படும் ஆப்ஸ் மட்டும்"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"உங்கள் காரின் உற்பத்தியாளருக்குத் தேவைப்படும் ஆப்ஸ் மட்டும்"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"வாகனம் ஓட்டுவதற்கு உதவும் ஆப்ஸ்"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"பார்க்கிங் செய்யும்போது உங்களைச் சுற்றியுள்ளவற்றைக் காட்டுவது போன்ற விஷயங்களுக்கு உதவும் ஆப்ஸ் மற்றும் தேவைப்படும் ஆப்ஸ்"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"வாகனம் ஓட்டுவதற்கு உதவும் ஆப்ஸ்"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"கார் ஓட்டுவதற்கு உதவ, இந்த ஆப்ஸ் உங்கள் கேமராவை அணுகலாம்"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"தேவைப்படும் ஆப்ஸ்"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"உங்கள் காரைப் பாதுகாப்பாக ஓட்டுவதற்கு இந்த ஆப்ஸ் அவசியம்"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"கொள்கை"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"உங்கள் காரின் கேமராவிற்கான அணுகலை இப்போதும் உங்கள் கார் தயாரிப்பாளர் கொண்டிருக்கக்கூடும். கூடுதல் தகவல்களுக்கு அவர்களின் கொள்கைகளை நீங்கள் பார்க்கலாம்."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"ஒவ்வொரு ஆப்ஸும் உங்கள் கேமராவை எப்படிப் பயன்படுத்துகிறது என்பதை அறிய அதன் தனியுரிமைக் கொள்கையைப் பாருங்கள்."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"பாதுகாப்பு"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"திரைப் பூட்டு"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"எதுவுமில்லை"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"திரையின் ஒளிர்வு"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"உங்கள் சாதனங்களைக் காண புளூடூத்தை ஆன் செய்யுங்கள்"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"சாதனத்துடன் இணைக்க புளூடூத் அமைப்புகளைத் திறங்கள்"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"தீம்"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"செயல்படுத்தப்பட்ட ஆப்ஸ்"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"முடக்கப்பட்ட ஆப்ஸ்"</string>

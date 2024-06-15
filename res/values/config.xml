@@ -82,6 +82,7 @@
 
         If empty, all ringtones will default to the default ringtone uri.
     -->
+    <bool name="config_allow_audio_destination_selection">true</bool>
     <string-array name="config_ringtone_uri_map_value" translatable="false">
         <item>content://settings/system/notification_sound</item>
         <item>content://settings/system/alarm_alert</item>
@@ -114,6 +115,9 @@
         car-ui-lib preferences.
     -->
     <bool name="config_top_level_enable_chevrons">true</bool>
+    <!-- Whether to show top level icon background. When this is set to be true, adjust the value
+         for top_level_foreground_icon_inset accordingly. -->
+    <bool name="config_show_top_level_icon_background">false</bool>
     <!-- The shape for top-level icons: 0=RECTANGLE, 1=OVAL -->
     <integer name="config_top_level_icon_shape" translatable="false">1</integer>
     <!--

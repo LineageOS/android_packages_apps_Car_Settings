@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"ذخیره"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"صداهای هشدار"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"آهنگ زنگ، اعلان‌ها، هشدار"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"پخش رسانه در"</string>
     <string name="display_brightness" msgid="5718970880488110840">"روشنایی"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"تنظیم صفحه‌نمایش برای نور کم"</string>
     <string name="units_settings" msgid="402325305096925886">"واحدها"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"حذف کردن نمایه"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"پاک کردن نمایه و حساب‌ها از سیستم اطلاعات-سرگرمی"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"این کنش برای نمایه‌تان دردسترس نیست"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"دسترسی به دوربین"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"انتخاب کنید برنامه‌ها بتوانند به دوربین خودروتان دسترسی داشته باشند یا نه"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"از دوربین‌های خودروتان به‌همراه موارد زیر استفاده می‌شود:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"همه برنامه‌ها"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"همه برنامه‌هایی که اجازه داده‌اید به دوربینتان دسترسی داشته باشند"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"برنامه‌ای وجود ندارد"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"هیچ کدام از برنامه‌ها"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"برنامه‌هایی که در رانندگی کمک می‌کنند"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"برنامه‌هایی که در کارهایی مثل نشان دادن محیط اطراف هنگام پارک کردن کمک می‌کنند"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"فقط برنامه‌های الزامی"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"فقط برنامه‌هایی که سازنده خودرو الزامی کرده است"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"برنامه‌هایی که در رانندگی کمک می‌کنند"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"برنامه‌هایی که در کارهایی مثل نشان دادن محیط اطراف هنگام پارک کردن کمک می‌کنند، و برنامه‌های الزامی"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"برنامه‌هایی که در رانندگی کمک می‌کنند"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"این برنامه‌ها می‌توانند برای کمک در رانندگی به دوربین شما دسترسی داشته باشند"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"برنامه‌های الزامی"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"این برنامه‌ها لازم هستند تا خودروی شما عملکرد ایمنی داشته باشد"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"خط‌مشی"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"ممکن است سازنده خودروتان همچنان به دوربین خودروی شما دسترسی داشته باشد. برای کسب اطلاعات بیشتر می‌توانید خط‌مشی‌های سازنده را مرور کنید."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"برای کسب اطلاعات بیشتر درباره نحوه استفاده هر برنامه از «دوربین»، «خط‌مشی رازداری» آن برنامه را مرور کنید."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"امنیت"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل صفحه"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"هیچ‌کدام"</string>
@@ -673,7 +694,7 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"نحوه ترسیم الگوی بازگشایی قفل"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"خطای ذخیره الگو"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"تلاش‌های نادرست زیادی انجام شده است. <xliff:g id="NUMBER">%d</xliff:g> ثانیه دیگر دوباره امتحان کنید."</string>
-    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"الگو از چرخش پشتیبانی نمی‌کند، لطفاً از لمس کردن استفاده کنید"</string>
+    <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"الگو حالت چرخشی ندارد، لمسی است"</string>
     <string name="okay" msgid="4589873324439764349">"تأیید"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"قفل صفحه برداشته شود؟"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"این کار به همه افراد اجازه می‌دهد به حسابتان دسترسی پیدا کنند"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"روشنایی نمایشگر"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"برای دیدن دستگاه‌ها، بلوتوث را روشن کنید"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"برای جفت کردن دستگاه، تنظیمات بلوتوث را باز کنید"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"زمینه"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"سرپرست سیستم اطلاعات-سرگرمی"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"برنامه‌های فعال"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"برنامه‌های غیرفعال"</string>

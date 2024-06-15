@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Хадгалах"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Сэрэмжлүүлгийн дуу"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Хонхны ая, мэдэгдэл, сэрүүлэг"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Медиаг дараах дээр тоглуулах"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Гэрэлтүүлэг"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Дэлгэцийг бүдэг гэрэлд тохируулах"</string>
     <string name="units_settings" msgid="402325305096925886">"Нэгж"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Профайлаа устгах"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Профайл, бүртгэлээ инфотэйнмент системээс устгах"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Энэ үйлдэл таны профайлд боломжгүй"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Камерын хандалт"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Аппууд таны машины камеруудад хандаж болох эсэхийг сонгоно уу"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Машиныхаа камеруудыг дараахтай ашиглана уу:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Дурын апп"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Таны камертаа хандахыг зөвшөөрсөн дурын апп"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Ямар ч апп байхгүй"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Таны аппуудын аль нь ч биш"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Танд жолоо барихад туслах аппууд"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Зогсоолд тавих үед таны эргэн тойрныг харуулах зэрэг зүйлсэд туслах аппууд"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Зөвхөн шаардлагатай аппууд"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Зөвхөн танай машин үйлдвэрлэгчээс шаарддаг аппууд"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Танд жолоо барихад туслах аппууд"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Зогсоолд тавих үед таны эргэн тойрныг харуулах зэрэг зүйлсэд туслах апп болон шаардлагатай аппууд"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Танд жолоо барихад туслах аппууд"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Эдгээр апп жолоо барихад туслахын тулд таны камерт хандах боломжтой"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Шаардлагатай аппууд"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Эдгээр апп таны машиныг аюулгүй ажиллахад туслахад шаардлагатай"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Бодлого"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Таны машин үйлдвэрлэгч машины тань камерт хандах эрхтэй хэвээр байж магадгүй. Та дэлгэрэнгүй мэдээлэл авах бол түүний бодлогыг шалгах боломжтой."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Апп бүрийн нууцлалын бодлогыг шалгаснаар тус бүр нь таны Камерыг хэрхэн ашигладаг талаар нэмэлт мэдээлэл авна уу."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Нууцлал"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Дэлгэцийн түгжээ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Байхгүй"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Дэлгэцийн гэрэлтүүлэг"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Төхөөрөмжүүдээ харахын тулд Bluetooth-г асаана уу"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Төхөөрөмжийг хослуулахын тулд Bluetooth тохиргоог нээнэ үү"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Загвар"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Инфотэйнмент системийн админ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Аппуудыг идэвхжүүлсэн"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Аппуудыг идэхгүй болгосон"</string>

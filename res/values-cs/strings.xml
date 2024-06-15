@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Uložit"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Zvuky upozornění"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Vyzvánění, oznámení, budík"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Přehrávat média na"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Jas"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Přizpůsobit obrazovku slabému světlu"</string>
     <string name="units_settings" msgid="402325305096925886">"Jednotky"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Vymazat profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Vymazat profil a účty z informačního a zábavního systému"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Tato akce ve vašem profilu není dostupná"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Přístup ke kamerám"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Určete, zda mají aplikace přístup ke kamerám auta"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Používat kamery auta s těmito aplikacemi:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Kterákoliv aplikace"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Kterákoliv aplikace, které jste povolili přístup ke kameře"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Žádné aplikace"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Žádné z vašich aplikací"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Aplikace, které pomáhají s řízením"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Aplikace, které pomáhají s věcmi, jako je zobrazení okolí při parkování"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Pouze povinné aplikace"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Pouze aplikace vyžadované výrobcem auta"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Aplikace, které pomáhají s řízením"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Aplikace, které pomáhají s věcmi, jako je zobrazení okolí při parkování, a povinné aplikace"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Aplikace, které pomáhají s řízením"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Tyto aplikace mají přístup k vaší kameře, aby vám mohly pomáhat s řízením"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Povinné aplikace"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Tyto aplikace jsou potřeba k bezpečnému fungování auta"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Zásady"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Výrobce auta může mít k jeho kameře přístup i nadále. Další informace najdete v jeho zásadách."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Další informace o tom, jak jednotlivé aplikace vaši kameru využívají, najdete v jejich zásadách ochrany soukromí."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Zabezpečení"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Zámek obrazovky"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Žádný zámek"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Jas displeje"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Pokud chcete zobrazit svá zařízení, zapněte Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Pokud spárovat zařízení, zapněte nastavení Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Motiv"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrátor informačního a zábavního systému"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivované aplikace"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivované aplikace"</string>

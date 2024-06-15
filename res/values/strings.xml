@@ -538,6 +538,8 @@
     <string name="sound_alert_sounds">Alert sounds</string>
     <!-- Sound settings screen, setting option description of different alerts that can be changed [CHAR LIMIT=100] -->
     <string name="sound_alert_sounds_summary">Ringtone, notifications, alarm</string>
+    <!-- Title for the audio routes selector. [CHAR LIMIT=40] -->
+    <string name="audio_route_selector_title">Play media on</string>
 
     <!-- Display settings --><skip/>
     <!-- Display settings screen, setting option name to manage display brightness [CHAR LIMIT=60] -->
@@ -1487,6 +1489,50 @@
     <string name="vehicle_data_delete_user_summary">Erase your profile and accounts from the infotainment system</string>
     <!-- Privacy settings screen, text that shows when a user tries to take an action that is unavailable to the current user. [CHAR LIMIT=60] -->
     <string name="action_unavailable">This action is unavailable for your profile</string>
+    <!-- Title of camera access page [CHAR LIMIT=40]-->
+    <string name="camera_access_settings_title">Camera access</string>
+    <!-- Summary of camera access page [CHAR LIMIT=NONE]-->
+    <string name="camera_access_settings_summary">Choose if apps can access your car\u2019s cameras</string>
+    <!-- Title of camera access radio group [CHAR LIMIT=NONE]-->
+    <string name="camera_access_radio_group_title">Use your car\u2019s cameras with:</string>
+    <!-- Title of camera access radio button any app [CHAR LIMIT=40]-->
+    <string name="camera_access_radio_any_app_title">Any App</string>
+    <!-- Summary of camera access radio button any app [CHAR LIMIT=NONE]-->
+    <string name="camera_access_radio_any_app_summary">Any app you\u2019ve allowed to access your camera</string>
+     <!-- Title of camera access radio button no apps [CHAR LIMIT=40]-->
+    <string name="camera_access_radio_no_apps_title">No Apps</string>
+    <!-- Summary of camera access radio button no apps [CHAR LIMIT=NONE]-->
+    <string name="camera_access_radio_no_apps_summary">None of your apps</string>
+     <!-- Title of camera access radio button helpful apps [CHAR LIMIT=40]-->
+    <string name="camera_access_radio_helpful_apps_title">Apps that help you drive</string>
+    <!-- Summary of camera access radio button helpful apps [CHAR LIMIT=NONE]-->
+    <string name="camera_access_radio_helpful_apps_summary">Apps that assist with things like showing your surroundings when parking</string>
+    <!-- Title of camera access radio button required apps [CHAR LIMIT=40]-->
+    <string name="camera_access_radio_required_apps_title">Only required apps</string>
+    <!-- Summary of camera access radio button required apps [CHAR LIMIT=NONE]-->
+    <string name="camera_access_radio_required_apps_summary">Only apps required by your car\u2019s manufacturer</string>
+     <!-- Title of camera access radio button helpful and required apps [CHAR LIMIT=40]-->
+    <string name="camera_access_radio_helpful_required_apps_title">Apps that help you drive</string>
+    <!-- Summary of camera access radio button helpful and required apps [CHAR LIMIT=NONE]-->
+    <string name="camera_access_radio_helpful_required_apps_summary">Apps that assist with things like showing your surroundings when parking, and required apps</string>
+    <!-- Title of helpful apps accessing camera-->
+    <string name="camera_helpful_apps_list_title">Apps that help you drive</string>
+    <!-- Summary of helpful apps accessing camera-->
+    <string name="camera_helpful_apps_list_summary">These apps can access your camera to assist with driving</string>
+    <!-- Title of required apps accessing camera-->
+    <string name="camera_required_apps_list_title">Required apps</string>
+    <!-- Summary of required apps accessing camera-->
+    <string name="camera_required_apps_list_summary">These apps are needed to help your car function safely</string>
+    <string name="camera_privacy_policy_button_text">Policy</string>
+    <!-- Camera access page disclaimer summary [CHAR LIMIT=NONE] -->
+    <string name="camera_access_disclaimer_summary">
+        Your car manufacturer may still have access to your car\u2019s camera. You can review
+        their policies for more info.
+    </string>
+     <!-- Camera access privacy policy info summary [CHAR LIMIT=NONE] -->
+    <string name="camera_privacy_policy_info_summary">
+        Learn more about how each app uses your Camera by reviewing its Privacy Policy.
+    </string>
 
     <!-- security lock --><skip/>
     <!-- Title for security settings [CHAR LIMIT=20] -->

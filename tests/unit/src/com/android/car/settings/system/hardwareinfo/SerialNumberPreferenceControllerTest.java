@@ -26,6 +26,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.FlakyTest;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
@@ -62,6 +63,7 @@ public class SerialNumberPreferenceControllerTest {
     }
 
     @Test
+    @FlakyTest(bugId = 316036256)
     public void onCreate_setsSummary() {
         mPreferenceController.onCreate(mLifecycleOwner);
         assertThat(mPreference.getSummary()).isEqualTo(Build.getSerial());

@@ -315,6 +315,50 @@
     <string name="pk_mute_mic_switch" translatable="false">privacy_mute_mic</string>
     <string name="pk_vehicle_data" translatable="false">vehicle_data</string>
     <string name="pk_vehicle_data_delete_profile" translatable="false">vehicle_data_delete_profile</string>
+    <string name="pk_camera_access" translatable="false">camera_access</string>
+    <string name="pk_camera_access_fragment" translatable="false">camera_access_fragment</string>
+    <string name="pk_camera_access_radio_any_app" translatable="false">
+        camera_access_radio_any_app
+    </string>
+    <string name="pk_camera_access_radio_no_apps" translatable="false">
+        camera_access_radio_no_apps
+    </string>
+    <string name="pk_camera_access_radio_helpful_apps" translatable="false">
+        camera_access_radio_helpful_apps
+    </string>
+    <string name="pk_camera_access_radio_required_apps" translatable="false">
+        camera_access_radio_required_apps
+    </string>
+    <string name="pk_camera_access_radio_helpful_required_apps" translatable="false">
+        camera_access_radio_helpful_required_apps
+    </string>
+    <string name="pk_camera_access_radio_group" translatable="false">
+        camera_access_radio_group
+    </string>
+    <string name="pk_camera_helpful_apps_list" translatable="false">
+        camera_helpful_apps_list
+    </string>
+    <string name="pk_camera_helpful_apps_group" translatable="false">
+        camera_helpful_apps_group
+    </string>
+    <string name="pk_camera_helpful_apps_policy" translatable="false">
+        camera_helpful_apps_policy
+    </string>
+    <string name="pk_camera_required_apps_list" translatable="false">
+        camera_required_apps_list
+    </string>
+    <string name="pk_camera_required_apps_group" translatable="false">
+        camera_required_apps_group
+    </string>
+    <string name="pk_camera_required_apps_policy" translatable="false">
+        camera_required_apps_policy
+    </string>
+    <string name="pk_camera_access_disclaimer" translatable="false">
+        camera_access_disclaimer
+    </string>
+    <string name="pk_camera_privacy_policy_info" translatable="false">
+        camera_privacy_policy_info
+    </string>
 
     <!-- Storage -->
     <string name="pk_storage_music_audio" translatable="false">storage_music_audio</string>
@@ -367,6 +411,7 @@
     <string name="pk_timezone_picker_screen" translatable="false">timezone_picker_screen</string>
 
     <!-- Sound Settings -->
+    <string name="pk_audio_destination" translatable="false">audio_destination</string>
     <string name="pk_volume_settings" translatable="false">volume_settings</string>
     <string name="pk_default_ringtone" translatable="false">default_ringtone</string>
     <string name="pk_default_notification" translatable="false">default_notification</string>

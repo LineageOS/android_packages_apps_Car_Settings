@@ -134,7 +134,7 @@
     <string name="wifi_preferences_title" msgid="772788844257225510">"Préférences Wi-Fi"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Activer automatiquement le Wi‑Fi"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Le Wi‑Fi se réactive à proximité des réseaux haute qualité enregistrés, comme votre réseau domestique"</string>
-    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Indisponible, car "<annotation id="link">"localisation"</annotation>" désactivée. Activez-la."</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Indisponible, car la "<annotation id="link">"localisation"</annotation>" est désactivée. Activez-la."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Activer la recherche de réseaux Wi-Fi ?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Activer"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Recherche Wi-Fi activée"</string>
@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Enregistrer"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Alertes sonores"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Sonnerie, notifications, alarme"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Lire le contenu multimédia"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Luminosité"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Adapter l\'affichage en cas de faible luminosité"</string>
     <string name="units_settings" msgid="402325305096925886">"Unités"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Supprimer votre profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Effacer votre profil et vos comptes du système d\'infoloisirs"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Cette action n\'est pas disponible pour votre profil"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Accès à la caméra"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Choisir si les applis ont accès aux caméras de votre voiture"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Utilisez les caméras de votre voiture avec :"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"N\'importe quelle application"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Toutes les applis que vous avez autorisées à accéder à votre caméra"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Aucune appli"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Aucune de vos applis"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Applis qui vous aident à conduire"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Applis permettant d\'afficher l\'environnement dans lequel vous vous trouvez lorsque vous vous garez"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Uniquement les applis requises"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Uniquement les applis requises par le fabricant de votre voiture"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Applis qui vous aident à conduire"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Applis permettant d\'afficher l\'environnement dans lequel vous vous trouvez lorsque vous vous garez, et applis requises"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Applis qui vous aident à conduire"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Ces applis peuvent accéder à votre caméra pour vous aider à conduire."</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Applis requises"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Ces applis sont requises pour que votre voiture fonctionne en toute sécurité"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Règles"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Votre constructeur automobile a peut-être encore accès à la caméra de votre véhicule. Consultez son règlement pour en savoir plus."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Pour en savoir plus sur la façon dont chaque application utilise votre caméra, consultez ses règles de confidentialité."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sécurité"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Verrouillage d\'écran"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Aucun"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Luminosité de l\'affichage"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Pour voir vos appareils, activez le Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Pour associer un appareil, ouvrez les paramètres du Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Thème"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administration du système d\'infoloisirs"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Applis activées"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Applis désactivées"</string>

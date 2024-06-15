@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Spremi"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Zvukovi upozorenja"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Melodija zvona, obavijesti, alarm"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Reprod. medijskih sadržaja je uključena"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Svjetlina"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Prilagodba zaslona slabom osvjetljenju"</string>
     <string name="units_settings" msgid="402325305096925886">"Jedinice"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Izbrišite svoj profil"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Brisanje profila i računa iz sustava za informiranje i zabavu"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Ta radnja nije dostupna za vaš profil"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Pristup kameri"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Odaberite mogu li aplikacije pristupati kamerama automobila"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Kamere automobila koristite sa sljedećim:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Bilo koja aplikacija"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Sve aplikacije kojima ste dopustili pristup kameri"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Bez aplikacija"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Niti jedna vaša aplikacija"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Aplikacije koje vam pomažu pri vožnji"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Aplikacije koje pomažu u prikazivanju okruženja pri parkiranju"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Samo obavezne aplikacijew"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Samo aplikacije koje zahtijeva proizvođač vašeg automobila"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Aplikacije koje vam pomažu pri vožnji"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Aplikacije koje vam pomažu u prikazivanju okruženja pri parkiranju i obavezne aplikacije"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Aplikacije koje vam pomažu pri vožnji"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Te aplikacije mogu pristupati vašoj kameri radi pomoći pri vožnji"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Obavezne aplikacije"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Te su aplikacije potrebne radi funkcionalne sigurnosti vašeg automobila"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Pravila"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Vaš proizvođač automobila možda i dalje ima pristup kameri automobila. Više informacija potražite u njihovim pravilima."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Saznajte više o tome kako svaka aplikacija koristi vašu kameru tako što ćete pregledati njena pravila o privatnosti."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sigurnost"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Zaključavanje zaslona"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ništa"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Svjetlina zaslona"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Da biste vidjeli svoje uređaje, uključite Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Da biste uparili uređaj, otvorite postavke Bluetootha"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator sustava za informiranje i zabavu"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivirane aplikacije"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivirane aplikacije"</string>

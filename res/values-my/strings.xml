@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"သိမ်းရန်"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"သတိပေးချက် အသံများ"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"ဖုန်းမြည်သံ၊ အကြောင်းကြားချက်များ၊ နှိုးစက်"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"မီဒီယာကို ဖွင့်ထားရန်"</string>
     <string name="display_brightness" msgid="5718970880488110840">"တောက်ပမှု"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"အလင်းရောင်နည်းချိန်အတွက် ဖန်သားပြင်ကို ချိန်ညှိနိုင်သည်"</string>
     <string name="units_settings" msgid="402325305096925886">"ယူနစ်များ"</string>
@@ -643,6 +644,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"သင့်ပရိုဖိုင်ကို ဖျက်ရန်"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ်မှ သင့်ပရိုဖိုင်နှင့် အကောင့်များကို ဖျက်မည်"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"ဤလုပ်ဆောင်ချက်ကို သင့်ပရိုဖိုင်အတွက် မရနိုင်ပါ"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"ကင်မရာသုံးခွင့်"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"သင့်ကားတည်နေရာကို အက်ပ်များ ဝင်ကြည့်ခွင့် ရှိ၊ မရှိ ရွေးချယ်ပါ"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"ကားကင်မရာကို ၎င်းဖြင့် သုံးရန်-"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"မည်သည့်အက်ပ်မဆို"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"ကင်မရာကို သင်အသုံးပြုခွင့်ပေးထားသော မည်သည့်အက်ပ်မဆို"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"အက်ပ်မရှိပါ"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"မည်သည့်အက်ပ်ကိုမျှ"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"ကားမောင်းရာတွင် ကူညီသော အက်ပ်များ"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"ယာဉ်ရပ်နားသည့်အခါ ပတ်ဝန်းကျင်ကို ပြခြင်း စသည်တို့အတွက် ကူညီသောအက်ပ်များ"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"လိုအပ်သော အက်ပ်များသာ"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"သင့်ကားထုတ်လုပ်သူက သတ်မှတ်ထားသော အက်ပ်များသာ"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"ကားမောင်းရာတွင် ကူညီသော အက်ပ်များ"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"ကားရပ်သည့်အခါ ပတ်ဝန်းကျင်ကို ပြခြင်း စသည်တို့အတွက် ကူညီသောအက်ပ်များနှင့် လိုအပ်သောအက်ပ်များ"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"ကားမောင်းရာတွင် ကူညီသော အက်ပ်များ"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"ဤအက်ပ်များသည် ယာဉ်မောင်းရာတွင် ကူညီရန် သင့်ကင်မရာကို သုံးနိုင်သည်"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"လိုအပ်သော အက်ပ်များ"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"ဤအက်ပ်များသည် သင့်ကား ဘေးကင်းစွာ မောင်းနှင်နိုင်ရန် လိုအပ်သည်"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"မူဝါဒ"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"သင်၏ ကားထုတ်လုပ်သူက ကားကင်မရာကို သုံးခွင့်ရှိနိုင်သေးသည်။ အသေးစိတ်အချက်များအတွက် ၎င်းတို့၏မူဝါဒများကို ဖတ်ရှုနိုင်ပါသည်။"</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"အက်ပ်တစ်ခုစီ၏ ‘ကိုယ်ရေးအချက်အလက်လုံခြုံမှုဆိုင်ရာ မူဝါဒ’ ကို ဖတ်ရှုခြင်းဖြင့် ၎င်းက သင်၏ကင်မရာကို မည်သို့အသုံးပြုကြောင်း ပိုမိုလေ့လာပါ။"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"လုံခြုံရေး"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ဖန်သားပြင်လော့ခ်"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"မရှိ"</string>
@@ -749,7 +770,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"ကားမောင်းနေစဉ် ပရိုဖိုင်ကို ထည့်၍မရပါ"</string>
     <string name="default_search_query" msgid="3137420627428857068">"ရှာရန်"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant နှင့် Voice"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"ဒစ်ဂျစ်တယ် Assistant အက်ပ်"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"ဒစ်ဂျစ်တယ်အထောက်အကူ အက်ပ်"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"ဖန်သားပြင်မှ စာသားကိုသုံးရန်"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"ဖန်သားပြင်အကြောင်းအရာများ သုံးရန် assistant ကို ခွင့်ပြုပါ"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"ဖန်သားပြင်ဓာတ်ပုံ သုံးရန်"</string>
@@ -765,6 +786,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"မျက်နှာပြင် တောက်ပမှု"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"သင့်စက်များကို တွေ့နိုင်ရန် ဘလူးတုသ်ဖွင့်ပါ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"စက်နှင့်တွဲချိတ်ရန် ဘလူးတုသ် ဆက်တင်များကို ဖွင့်ပါ"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"အပြင်အဆင်"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ် စီမံခန့်ခွဲသူ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ဖွင့်ထားသောအက်ပ်များ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ပိတ်ထားသောအက်ပ်များ"</string>

@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Сохранить"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Звуки оповещений"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Рингтон, будильник и уведомления"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Выберите устройство для воспроизведения"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Яркость"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Настроить яркость экрана для использования при слабом освещении"</string>
     <string name="units_settings" msgid="402325305096925886">"Единицы"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Удалить профиль"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Удалить все профили и аккаунты из информационно-развлекательной системы"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Это действие недоступно для вашего профиля."</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Доступ к камере"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Настройте доступ приложений к камерам автомобиля."</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Выберите, какие приложения могут использовать камеры в вашем автомобиле"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Любое приложение"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Любое приложение, которому вы предоставили доступ к камере"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Ни одно приложение"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Ни одно из ваших приложений"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Приложения для вождения"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Приложения, которые, например, показывают пространство вокруг автомобиля во время парковки"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Только необходимые приложения"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Приложения, требуемые производителем автомобиля"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Приложения для вождения"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Необходимые приложения и те, которые, например, показывают пространство вокруг автомобиля во время парковки"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Приложения для вождения"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Этим приложениям предоставляется доступ к камерам, чтобы помогать вам во время вождения."</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Необходимые приложения"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Эти приложения нужны для безопасной работы вашего автомобиля."</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Политика"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"У производителя все равно может быть доступ к камере вашего автомобиля. Чтобы узнать больше, ознакомьтесь с правилами производителя."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Ознакомьтесь с Политикой конфиденциальности приложения, чтобы узнать, как оно использует вашу камеру."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Безопасность"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Блокировка экрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Нет"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яркость экрана"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Чтобы посмотреть список своих устройств, включите Bluetooth."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Чтобы подключить устройство, откройте настройки Bluetooth."</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Тема"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Администратор информационно-развлекательной системы"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Активные приложения"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Отключенные приложения"</string>

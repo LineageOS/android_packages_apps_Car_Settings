@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"儲存"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"警示音效"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"鈴聲、通知和鬧鐘"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"選擇媒體輸出裝置"</string>
     <string name="display_brightness" msgid="5718970880488110840">"亮度"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"將螢幕調整為適合在低光源環境中查看的亮度"</string>
     <string name="units_settings" msgid="402325305096925886">"單位"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"刪除你的設定檔"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"清除資訊娛樂系統的設定檔和帳戶"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"你的設定檔不支援這項操作"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"攝影機存取權"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"決定應用程式是否可以存取車輛攝影機"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"以下應用程式可以使用車輛攝影機："</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"所有應用程式"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"將攝影機存取權授予所有應用程式"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"不要授予任何應用程式"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"任何應用程式都無法使用車輛攝影機"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"可輔助駕駛的應用程式"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"能夠輔助駕駛 (例如在你停車時顯示周遭環境影像) 的應用程式"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"僅限必要的應用程式"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"僅限車輛製造商所需的應用程式"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"可輔助駕駛的應用程式"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"能夠輔助駕駛 (例如在你停車時顯示周遭環境影像) 的應用程式以及必要的應用程式"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"可輔助駕駛的應用程式"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"這些應用程式可存取車輛攝影機以便輔助駕駛"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"必要的應用程式"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"必須要有這些應用程式才能確保行車安全"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"政策"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"車輛製造商或許仍可存取車輛攝影機。如要瞭解詳情，請參閱車輛製造商的政策。"</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"想進一步瞭解各個應用程式使用攝影機的方式，請參閱該應用程式的《隱私權政策》。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"無"</string>
@@ -738,7 +759,7 @@
     <string name="backspace_key" msgid="1545590866688979099">"Backspace 鍵"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter 鍵"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"結束示範模式"</string>
-    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"結束示範模式"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"結束展示模式"</string>
     <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"這麼做會刪除展示帳戶並將系統恢復原廠設定，屆時所有設定檔資料都將遺失。"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"結束示範模式"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"關閉"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"螢幕亮度"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"裝置必須開啟藍牙，才會顯示在畫面上"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"如要配對裝置，請開啟藍牙設定"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"主題"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"資訊娛樂系統管理員"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"已啟用的應用程式"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"已停用的應用程式"</string>

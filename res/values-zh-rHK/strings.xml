@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"儲存"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"警示音效"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"鈴聲、通知、鬧鐘"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"透過以下裝置播放媒體："</string>
     <string name="display_brightness" msgid="5718970880488110840">"亮度"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"在光線不足時調查螢幕"</string>
     <string name="units_settings" msgid="402325305096925886">"單位"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"刪除你的設定檔"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"清除資訊娛樂系統的設定檔和帳戶"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"你的設定檔無法執行此操作"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"相機存取權"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"選擇應用程式是否可存取汽車的相機"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"以下應用程式可以使用汽車相機："</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"任何應用程式"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"經你允許存取相機的任何應用程式"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"沒有應用程式"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"沒有應用程式"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"協助你駕駛的應用程式"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"提供如在泊車時顯示四周環境等協助的應用程式"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"只限必要應用程式"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"只限汽車製造商所需的必要應用程式"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"協助你駕駛的應用程式"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"提供如在泊車時顯示四周環境等協助的應用程式和必要應用程式"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"協助你駕駛的應用程式"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"這些應用程式可存取你的相機以協助駕駛"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"必要的應用程式"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"系統需要這些應用程式，以協助維持汽車的安全運作"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"政策"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"汽車製造商可能仍可存取汽車的相機。你可查看其政策以瞭解詳情。"</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"查看其《私隱權政策》，進一步瞭解每個應用程式如何使用你的相機。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"無"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"顯示亮度"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"如要查看你的裝置，請開啟藍牙"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"如要配對裝置，請開啟藍牙設定"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"主題"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"資訊娛樂系統管理員"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"已啟用的應用程式"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"已停用的應用程式"</string>

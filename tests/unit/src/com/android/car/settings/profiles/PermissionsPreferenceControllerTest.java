@@ -56,6 +56,9 @@ public class PermissionsPreferenceControllerTest {
     private static final UserInfo TEST_USER = new UserInfo(/* id= */ 10,
             "TEST_USER_NAME", /* flags= */ 0);
 
+    // Keep in sync with the number of elements in the list in PermissionsPreferenceController
+    private static final int NUM_PERMISSIONS = 4;
+
     private Context mContext = ApplicationProvider.getApplicationContext();
     private LifecycleOwner mLifecycleOwner;
     private CarUxRestrictions mCarUxRestrictions;
@@ -106,14 +109,14 @@ public class PermissionsPreferenceControllerTest {
     @Test
     public void testRefreshUi_populatesGroup() {
         mPreferenceController.refreshUi();
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(5);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(NUM_PERMISSIONS);
     }
 
     @Test
     public void testRefreshUi_callingTwice_noDuplicates() {
         mPreferenceController.refreshUi();
         mPreferenceController.refreshUi();
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(5);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(NUM_PERMISSIONS);
     }
 
     @Test

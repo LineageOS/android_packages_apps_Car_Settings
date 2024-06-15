@@ -92,7 +92,7 @@
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi өчүрүлүүдө…"</string>
     <string name="loading_wifi_list" msgid="8584901433195876465">"Wi‑Fi тизмеси жүктөлүүдө"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi өчүрүлдү"</string>
-    <string name="wifi_failed_forget_message" msgid="121732682699377206">"Тармак өчүрүлгөн жок"</string>
+    <string name="wifi_failed_forget_message" msgid="121732682699377206">"Тармак өчкөн жок"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Тармакка туташпай калды"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Тармак кошуу"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Туташуу"</string>
@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"Сактоо"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Эскертүүлөрдүн үндөрү"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Рингтон, билдирмелер, ойготкуч"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"Медианы төмөнкүдө ойнотуу:"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Жарыктыгы"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Экрандын жарыктыгын күңүрт жерге жараша тууралоо"</string>
     <string name="units_settings" msgid="402325305096925886">"Бирдиктер"</string>
@@ -616,7 +617,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Аккаунтту өчүрүү"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Аккаунтту өчүрөсүзбү?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Түзмөктөн ушул аккаунтка байланыштуу бардык билдирүүлөр, байланыштар жана башка нерселер өчүрүлөт"</string>
-    <string name="remove_account_error_title" msgid="8368044943174826635">"Аккаунт өчүрүлгөн жок."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Аккаунт өчкөн жок."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Аккаунтту шайкештирүү"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Шайкештирүү <xliff:g id="ID_2">%2$d</xliff:g> нерсенин ичинен <xliff:g id="ID_1">%1$d</xliff:g> үчүн күйүк"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Шайкештирүү бардык нерселер үчүн күйүк"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"Профилди жок кылуу"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"Инфозоок тутумундагы бардык профилдерди жана аккаунттарды өчүрүү"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"Бул аракет профилиңизде жеткиликсиз"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"Камераны колдонуу"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"Колдонмолор унааңыздын камерасын колдонуп же колдоно албай турганын тандаңыз"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"Унаанын камерасын төмөнкүлөр менен колдонуу:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"Бардык колдонмолор"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"Камераңызга кире алган бардык колдонмолор"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"Бир да колдонмо жок"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"Бир да колдонмо жок"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"Унаа айдоого көмөктөшкөн колдонмолор"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"Унааны токтотуп жатканда айлананы көрсөтүп көмөктөшкөн колдонмолор"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"Талап кылынган колдонмолор гана"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"Унааны өндүрүүчүгө талап кылынган колдонмолор гана"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"Унаа айдоого көмөктөшкөн колдонмолор"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"Унааны токтотуп жатканда айлананы көрсөтүп көмөктөшкөн жана талап кылынган колдонмолор"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"Унаа айдоого көмөктөшкөн колдонмолор"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"Бул колдонмолор унаа айдоого көмөктөшүү үчүн камераңызды колдонушат"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"Талап кылынган колдонмолор"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"Бул колдонмолор унааңыздын коопсуз иштеши үчүн талап кылынат"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"Эрежелер"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"Өндүрүүчү унааңыздын камерасын колдоно бериши мүмкүн. Кеңири маалымат алуу үчүн анын эрежелерин карап чыгыңыз."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"Купуялык эрежелерин карап чыгып, ар бир колдонмо Камераны кантип колдонору тууралуу маалымат алыңыз."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Коопсуздук"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Экран кулпусу"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Жок"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"Экрандын жарыктыгы"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Түзмөктөрдү көрүү үчүн Bluetooth\'ду күйгүзүңүз"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Түзмөктү жупташтыруу үчүн Bluetooth\'дун параметрлерин ачыңыз"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"Тема"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Инфозоок тутумунун администратору"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Иштетилген колдонмолор"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Өчүрүлгөн колдонмолор"</string>
@@ -801,7 +823,7 @@
     <string name="enterprise_privacy_header" msgid="4652489109303330306">"Бул башкарылган унаадагы маалыматка кирүү мүмкүнчүлүгүн берүү үчүн автопарктын администратору параметрлерди өзгөртүп, инфозоок системасына программа орното алат.\n\nТолук маалымат алуу үчүн автопарктын администраторуна кайрылыңыз."</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Автопарктын администратору көргөн маалымат"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Автопарктын администратору киргизген өзгөртүүлөр"</string>
-    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Унаанын башкарылган аккаунту менен байланыштырылган маалымат"</li>\n" "<li>"Башкарылган унаадагы колдонмолордун тизмеси"</li>\n" "<li>"Ар бир колдонмодо өткөрүлгөн убакыт жана сарпталган трафик"</li></string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Унаанын башкарылган аккаунтуна байланышкан маалымат"</li>\n" "<li>"Башкарылган унаадагы колдонмолордун тизмеси"</li>\n" "<li>"Ар бир колдонмодо өткөрүлгөн убакыт жана сарпталган трафик"</li></string>
     <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Инфозоок системасына кирүү мүмкүнчүлүгүңүз"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Унааңыздагы колдонмолордун тизмеси"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Колдонмолордун саны болжол менен көрсөтүлгөн. Play Дүкөндөн тышкары булактардан орнотулган колдонмолор бул жерге кошулбайт."</string>

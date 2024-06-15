@@ -254,6 +254,7 @@
     <string name="ringtone_picker_save_title" msgid="4388137432517227001">"שמירה"</string>
     <string name="sound_alert_sounds" msgid="6838044721739163867">"צלילי ההתראות"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"רינגטון, התראות, שעון מעורר"</string>
+    <string name="audio_route_selector_title" msgid="9137648859313120159">"הפעלה של מדיה ב-"</string>
     <string name="display_brightness" msgid="5718970880488110840">"בהירות"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"התאמת המסך לתאורה חלשה"</string>
     <string name="units_settings" msgid="402325305096925886">"יחידות"</string>
@@ -642,6 +643,26 @@
     <string name="vehicle_data_delete_user_title" msgid="9132472153739085346">"מחיקת הפרופיל שלך"</string>
     <string name="vehicle_data_delete_user_summary" msgid="5900205773710111394">"מחיקת כל הפרופילים והחשבונות ממערכת המידע והבידור"</string>
     <string name="action_unavailable" msgid="7087119418684417249">"הפעולה הזו לא זמינה לפרופיל שלך"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"גישה למצלמה"</string>
+    <string name="camera_access_settings_summary" msgid="8820488359585532496">"אפשר לבחור אם לאפליקציות תהיה גישה למצלמה של הרכב"</string>
+    <string name="camera_access_radio_group_title" msgid="4208620766356391501">"אפשר להשתמש במצלמה של הרכב עם:"</string>
+    <string name="camera_access_radio_any_app_title" msgid="8324331670738824005">"אפליקציה כלשהי"</string>
+    <string name="camera_access_radio_any_app_summary" msgid="8542924833172200812">"כל אפליקציה שנתת לה גישה למצלמה"</string>
+    <string name="camera_access_radio_no_apps_title" msgid="3619351327217493913">"אף אפליקציה"</string>
+    <string name="camera_access_radio_no_apps_summary" msgid="6249258388767284908">"אף אחת מהאפליקציות"</string>
+    <string name="camera_access_radio_helpful_apps_title" msgid="2798745588985580019">"אפליקציות שעוזרות בנהיגה"</string>
+    <string name="camera_access_radio_helpful_apps_summary" msgid="2152605965038188293">"אפליקציות שעוזרות בדברים כמו הצגת הסביבה בזמן חנייה"</string>
+    <string name="camera_access_radio_required_apps_title" msgid="6742441427451523208">"רק אפליקציות נדרשות"</string>
+    <string name="camera_access_radio_required_apps_summary" msgid="6514325511542932602">"רק אפליקציות שנדרשות על ידי יצרן הרכב"</string>
+    <string name="camera_access_radio_helpful_required_apps_title" msgid="631591123648468495">"אפליקציות שעוזרות בנהיגה"</string>
+    <string name="camera_access_radio_helpful_required_apps_summary" msgid="1388997613007479738">"אפליקציות שעוזרות בדברים כמו הצגת הסביבה בזמן חנייה, ואפליקציות נדרשות"</string>
+    <string name="camera_helpful_apps_list_title" msgid="3384154135315115240">"אפליקציות שעוזרות בנהיגה"</string>
+    <string name="camera_helpful_apps_list_summary" msgid="4070939811052295258">"האפליקציות האלה יכולות לגשת למצלמה ולעזור לך בנהיגה"</string>
+    <string name="camera_required_apps_list_title" msgid="4751978669779838763">"אפליקציות נדרשות"</string>
+    <string name="camera_required_apps_list_summary" msgid="7445661688832040704">"האפליקציות האלה דרושות כדי לעזור לרכב לתפקד בצורה בטיחותית"</string>
+    <string name="camera_privacy_policy_button_text" msgid="6845099817069101132">"מדיניות"</string>
+    <string name="camera_access_disclaimer_summary" msgid="6648007542393315155">"יכול להיות שליצרן הרכב עדיין יש גישה למצלמה של הרכב. לקבלת מידע נוסף, אפשר לעיין במדיניות של היצרן."</string>
+    <string name="camera_privacy_policy_info_summary" msgid="5036268531646886906">"למידע נוסף על האופן שבו כל אפליקציה משתמשת במצלמה, כדאי לעיין במדיניות הפרטיות שלה."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"אבטחה"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"נעילת מסך"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ללא"</string>
@@ -764,6 +785,7 @@
     <string name="qc_display_brightness" msgid="2939655289816201170">"בהירות התצוגה"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"כדי להציג את המכשירים שלך, צריך להפעיל את Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"כדי להתאים מכשיר, צריך לפתוח את הגדרות Bluetooth"</string>
+    <string name="qc_ui_mode_title" msgid="2425571805732530923">"עיצוב"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"המנהל של מערכת המידע והבידור"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"אפליקציות מופעלות"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"אפליקציות מושבתות"</string>

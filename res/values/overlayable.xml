@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Copyright (C) 2023 The Android Open Source Project
+<!-- Copyright (C) 2024 The Android Open Source Project
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -79,6 +79,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="usage"/>
       <item type="attr" name="wifiSignalColor"/>
       <item type="bool" name="config_allow_adas_location_switch_clickable"/>
+      <item type="bool" name="config_allow_audio_destination_selection"/>
       <item type="bool" name="config_always_ignore_ux_restrictions"/>
       <item type="bool" name="config_automatic_brightness_available"/>
       <item type="bool" name="config_enable_home_settings_icon"/>
@@ -87,6 +88,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="bool" name="config_show_regulatory_info"/>
       <item type="bool" name="config_show_settings_root_exit_icon"/>
       <item type="bool" name="config_show_system_update_settings"/>
+      <item type="bool" name="config_show_top_level_icon_background"/>
       <item type="bool" name="config_show_wifi_mac_address"/>
       <item type="bool" name="config_top_level_enable_chevrons"/>
       <item type="bool" name="config_top_level_injection_background_always_use_default"/>
@@ -105,6 +107,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="car_grey_400_with_disable"/>
       <item type="color" name="config_progress_background_tint"/>
       <item type="color" name="ic_launcher_settings_background"/>
+      <item type="color" name="ic_toolbar_settings_background"/>
       <item type="color" name="icon_color_default"/>
       <item type="color" name="qc_default_icon_color"/>
       <item type="color" name="text_color_accent_with_disable"/>
@@ -524,6 +527,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="top_level_recycler_view"/>
       <item type="id" name="up_arrow_container"/>
       <item type="id" name="widget_summary"/>
+      <item type="integer" name="audio_route_selector_usage"/>
       <item type="integer" name="button_max_ems"/>
       <item type="integer" name="clear_content_timeout_ms"/>
       <item type="integer" name="config_networkAvoidBadWifi"/>
@@ -687,6 +691,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="assistant_and_voice_use_text_from_screen_summary"/>
       <item type="string" name="assistant_and_voice_use_text_from_screen_title"/>
       <item type="string" name="assistant_security_warning"/>
+      <item type="string" name="audio_route_selector_title"/>
       <item type="string" name="auto_brightness_summary"/>
       <item type="string" name="auto_brightness_title"/>
       <item type="string" name="auto_launch_disable_text"/>
@@ -753,11 +758,31 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="bluetooth_vehicle_mac_address"/>
       <item type="string" name="brightness"/>
       <item type="string" name="build_number"/>
+      <item type="string" name="camera_access_disclaimer_summary"/>
+      <item type="string" name="camera_access_radio_any_app_summary"/>
+      <item type="string" name="camera_access_radio_any_app_title"/>
+      <item type="string" name="camera_access_radio_group_title"/>
+      <item type="string" name="camera_access_radio_helpful_apps_summary"/>
+      <item type="string" name="camera_access_radio_helpful_apps_title"/>
+      <item type="string" name="camera_access_radio_helpful_required_apps_summary"/>
+      <item type="string" name="camera_access_radio_helpful_required_apps_title"/>
+      <item type="string" name="camera_access_radio_no_apps_summary"/>
+      <item type="string" name="camera_access_radio_no_apps_title"/>
+      <item type="string" name="camera_access_radio_required_apps_summary"/>
+      <item type="string" name="camera_access_radio_required_apps_title"/>
+      <item type="string" name="camera_access_settings_summary"/>
+      <item type="string" name="camera_access_settings_title"/>
       <item type="string" name="camera_app_permission_summary_camera_off"/>
       <item type="string" name="camera_app_permission_summary_camera_on"/>
+      <item type="string" name="camera_helpful_apps_list_summary"/>
+      <item type="string" name="camera_helpful_apps_list_title"/>
       <item type="string" name="camera_manage_permissions"/>
       <item type="string" name="camera_no_recent_access"/>
+      <item type="string" name="camera_privacy_policy_button_text"/>
+      <item type="string" name="camera_privacy_policy_info_summary"/>
       <item type="string" name="camera_recently_accessed"/>
+      <item type="string" name="camera_required_apps_list_summary"/>
+      <item type="string" name="camera_required_apps_list_title"/>
       <item type="string" name="camera_settings_loading_app_permission_stats"/>
       <item type="string" name="camera_settings_recent_requests_title"/>
       <item type="string" name="camera_settings_recent_requests_view_all_title"/>
@@ -1598,6 +1623,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="bluetooth_device_picker_fragment"/>
       <item type="xml" name="bluetooth_pairing_selection_fragment"/>
       <item type="xml" name="bluetooth_settings_fragment"/>
+      <item type="xml" name="camera_access_fragment"/>
       <item type="xml" name="camera_recent_requests_view_all_fragment"/>
       <item type="xml" name="captions_settings_fragment"/>
       <item type="xml" name="car_volume_items"/>
