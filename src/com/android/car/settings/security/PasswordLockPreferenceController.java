@@ -45,4 +45,9 @@ public class PasswordLockPreferenceController extends LockTypeBasePreferenceCont
     protected int[] allowedPasswordQualities() {
         return ALLOWED_PASSWORD_QUALITIES;
     }
+
+    @Override
+    protected boolean isSecureLockType() {
+        return true;
+    }
 }

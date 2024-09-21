@@ -27,19 +27,13 @@
     <Preference
         android:key="@string/pk_pattern_lock"
         android:title="@string/security_lock_pattern"
-        settings:controller="com.android.car.settings.security.PatternLockPreferenceController"
-        settings:occupant_front_passenger="hidden"
-        settings:occupant_rear_passenger="hidden"/>
+        settings:controller="com.android.car.settings.security.PatternLockPreferenceController"/>
     <Preference
         android:key="@string/pk_pin_lock"
         android:title="@string/security_lock_pin"
-        settings:controller="com.android.car.settings.security.PinLockPreferenceController"
-        settings:occupant_front_passenger="hidden"
-        settings:occupant_rear_passenger="hidden"/>
+        settings:controller="com.android.car.settings.security.PinLockPreferenceController"/>
     <Preference
         android:key="@string/pk_password_lock"
         android:title="@string/security_lock_password"
-        settings:controller="com.android.car.settings.security.PasswordLockPreferenceController"
-        settings:occupant_front_passenger="hidden"
-        settings:occupant_rear_passenger="hidden"/>
+        settings:controller="com.android.car.settings.security.PasswordLockPreferenceController"/>
 </PreferenceScreen>
