@@ -1921,6 +1921,8 @@
     <string name="qc_bluetooth_on_no_devices_info">To pair a device, open Bluetooth settings</string>
     <!-- UI Mode quick control, control name to change display UI mode (auto/day/night) [CHAR LIMIT=40] -->
     <string name="qc_ui_mode_title">Theme</string>
+    <!-- A quick control entry to control whether to turn on the drive mode [CHAR LIMIT=40] -->
+    <string name="driving_mode_title">Set driving</string>
     <!-- A quick control entry to control whether to show the layout bounds [CHAR LIMIT=40] -->
     <string name="show_layout_bounds_title">Show layout bounds</string>
 

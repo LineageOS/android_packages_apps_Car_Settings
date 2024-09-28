@@ -138,7 +138,11 @@ public class SettingsQCRegistry {
             .authority(AUTHORITY)
             .appendPath("navigation_volume_slider")
             .build();
-
+    public static final Uri DEBUG_DRIVING_MODE_URI = new Uri.Builder()
+            .scheme(ContentResolver.SCHEME_CONTENT)
+            .authority(AUTHORITY)
+            .appendPath("debug_driving_mode_toggle")
+            .build();
     public static final Uri DEBUG_LAYOUT_BOUNDS_URI = new Uri.Builder()
             .scheme(ContentResolver.SCHEME_CONTENT)
             .authority(AUTHORITY)
@@ -171,6 +175,7 @@ public class SettingsQCRegistry {
         map.put(MEDIA_VOLUME_SLIDER_WITHOUT_ICON_URI, MediaVolumeSliderWithoutIcon.class);
         map.put(CALL_VOLUME_SLIDER_URI, CallVolumeSlider.class);
         map.put(NAVIGATION_VOLUME_SLIDER_URI, NavigationVolumeSlider.class);
+        map.put(DEBUG_DRIVING_MODE_URI, DebugDriveModeRow.class);
         map.put(DEBUG_LAYOUT_BOUNDS_URI, DebugLayoutBoundsRow.class);
 
         return map;

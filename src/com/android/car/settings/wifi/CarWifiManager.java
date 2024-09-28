@@ -50,8 +50,8 @@ public class CarWifiManager implements WifiPickerTracker.WifiPickerTrackerCallba
     private final List<Listener> mListeners = new ArrayList<>();
 
     private HandlerThread mWorkerThread;
-    private WifiPickerTracker mWifiTracker;
-    private WifiManager mWifiManager;
+    @Nullable private WifiPickerTracker mWifiTracker;
+    @Nullable private WifiManager mWifiManager;
 
     public interface Listener {
         /**
@@ -84,9 +84,11 @@ public class CarWifiManager implements WifiPickerTracker.WifiPickerTrackerCallba
                 + "{" + Integer.toHexString(System.identityHashCode(this)) + "}",
                 android.os.Process.THREAD_PRIORITY_BACKGROUND);
         mWorkerThread.start();
-        mWifiTracker = WifiUtil.createWifiPickerTracker(lifecycle, context,
-                new Handler(Looper.getMainLooper()), mWorkerThread.getThreadHandler(),
-                /* listener= */ this);
+        if (mWifiManager != null) {
+            mWifiTracker = WifiUtil.createWifiPickerTracker(lifecycle, context,
+                    new Handler(Looper.getMainLooper()), mWorkerThread.getThreadHandler(),
+                    /* listener= */ this);
+        }
     }
 
     /**
@@ -120,7 +122,7 @@ public class CarWifiManager implements WifiPickerTracker.WifiPickerTrackerCallba
      * network connected.
      */
     public List<WifiEntry> getConnectedWifiEntries() {
-        if (mWifiManager != null && mWifiManager.isWifiEnabled()) {
+        if (mWifiManager != null && mWifiManager.isWifiEnabled() && mWifiTracker != null) {
             return mWifiTracker.getActiveWifiEntries();
         }
         return new ArrayList<>();
@@ -142,7 +144,7 @@ public class CarWifiManager implements WifiPickerTracker.WifiPickerTrackerCallba
 
     private List<WifiEntry> getWifiEntries(boolean onlySaved) {
         List<WifiEntry> wifiEntries = new ArrayList<WifiEntry>();
-        if (mWifiManager.isWifiEnabled()) {
+        if (mWifiManager != null && mWifiManager.isWifiEnabled() && mWifiTracker != null) {
             for (WifiEntry wifiEntry : mWifiTracker.getWifiEntries()) {
                 // ignore out of reach Wi-Fi entries.
                 if (shouldIncludeWifiEntry(wifiEntry, onlySaved)) {
@@ -279,9 +281,11 @@ public class CarWifiManager implements WifiPickerTracker.WifiPickerTrackerCallba
 
     @Override
     public void onWifiStateChanged() {
-        int state = mWifiTracker.getWifiState();
-        for (Listener listener : mListeners) {
-            listener.onWifiStateChanged(state);
+        if (mWifiTracker != null) {
+            int state = mWifiTracker.getWifiState();
+            for (Listener listener : mListeners) {
+                listener.onWifiStateChanged(state);
+            }
         }
     }
 }
