@@ -168,8 +168,10 @@ public class RecentAppsItemManager implements Comparator<UsageStats> {
             return false;
         }
 
-        if (AppUtils.isHiddenSystemModule(mContext, pkgName)) {
-            return false;
+        if (!android.content.pm.Flags.removeHiddenModuleUsage()) {
+            if (AppUtils.isHiddenSystemModule(mContext, pkgName)) {
+                return false;
+            }
         }
 
         Intent launchIntent = new Intent().addCategory(Intent.CATEGORY_LAUNCHER)
