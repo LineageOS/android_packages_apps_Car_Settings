@@ -119,8 +119,6 @@ android_app {
 
     static_libs: [
         "CarSettings-core",
-        // TODO: b/353758891 - REMOVE once prebuilt w/ fix is dropped into main.
-        "car-ui-lib-oem-apis",
     ],
 
     // Testing only resources must be applied last so they take precedence.
