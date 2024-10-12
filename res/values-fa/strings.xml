@@ -605,10 +605,10 @@
     <string name="memory_calculating_size" msgid="1672238502950390033">"در حال محاسبه…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"حجم برنامه"</string>
     <string name="storage_data_size_label" msgid="7986110464268960652">"داده‌های نمایه"</string>
-    <string name="storage_cache_size_label" msgid="6361308766707419555">"حافظهٔ پنهان"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"حافظه نهان"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"جمع"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"پاک کردن فضای ذخیره‌سازی"</string>
-    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"پاک کردن حافظهٔ پنهان"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"پاک کردن حافظه نهان"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"داده‌های برنامه حذف شود؟"</string>
     <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"داده‌های این برنامه به‌طور دائم حذف خواهد شد. این شامل فایل‌ها، تنظیمات، پایگاه‌های داده، و دیگر داده‌های برنامه می‌شود."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"فضای ذخیره‌سازی برای برنامه پاک نشد."</string>
@@ -628,7 +628,7 @@
     <string name="add_account_title" msgid="5988746086885210040">"افزودن حساب"</string>
     <string name="add_an_account" msgid="1072285034300995091">"افزودن حساب"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"نمایه‌های محدود نمی‌توانند حسابی را اضافه کنند"</string>
-    <string name="remove_account_title" msgid="8840386525787836381">"حذف حساب"</string>
+    <string name="remove_account_title" msgid="8840386525787836381">"برداشتن حساب"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"حساب برداشته شود؟"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"با پاک کردن این حساب، همه پیام‌ها، مخاطبین و داده‌های دیگر از دستگاه حذف خواهد شد!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"حساب برداشته نشد."</string>
@@ -797,7 +797,9 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"برای دیدن دستگاه‌ها، بلوتوث را روشن کنید"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"برای جفت کردن دستگاه، تنظیمات بلوتوث را باز کنید"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"زمینه"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"تنظیم کردن حالت رانندگی"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"نمایش محدوده‌های چیدمان"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"اجبار جهت چیدمان راست به چپ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"سرپرست سیستم اطلاعات-سرگرمی"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"برنامه‌های فعال"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"برنامه‌های غیرفعال"</string>

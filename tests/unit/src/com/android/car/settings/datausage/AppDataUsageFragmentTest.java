@@ -18,9 +18,14 @@ package com.android.car.settings.datausage;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.when;
+
+import android.content.Context;
+import android.net.NetworkTemplate;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -28,14 +33,17 @@ import androidx.test.rule.ActivityTestRule;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseCarSettingsTestActivity;
+import com.android.settingslib.net.DataUsageController;
 import com.android.settingslib.net.NetworkCycleChartData;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,6 +56,13 @@ public class AppDataUsageFragmentTest {
     private TestAppDataUsageFragment mFragment;
     private FragmentManager mFragmentManager;
 
+    @Mock
+    private NetworkTemplate mNetworkTemplate;
+    @Mock
+    private DataUsageController.DataUsageInfo mDataUsageInfo;
+    @Mock
+    private DataUsageCycleManager mDataUsageCycleManager;
+
     @Rule
     public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
             new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
@@ -56,6 +71,8 @@ public class AppDataUsageFragmentTest {
     public void setUp() throws Throwable {
         MockitoAnnotations.initMocks(this);
         mFragmentManager = mActivityTestRule.getActivity().getSupportFragmentManager();
+
+        when(mNetworkTemplate.getWifiNetworkKeys()).thenReturn(Collections.emptySet());
     }
 
     @Test
@@ -101,7 +118,8 @@ public class AppDataUsageFragmentTest {
         mActivityTestRule.runOnUiThread(() -> {
             mFragmentManager.beginTransaction()
                     .replace(R.id.fragment_container,
-                            TestAppDataUsageFragment.newInstance(hasDataCycles),
+                            TestAppDataUsageFragment.newInstance(hasDataCycles, mNetworkTemplate,
+                                    mDataUsageInfo, mDataUsageCycleManager),
                             appDataUsageFragmentTag)
                     .commitNow();
         });
@@ -114,10 +132,19 @@ public class AppDataUsageFragmentTest {
 
         // Ensure onDataCyclePicked() isn't called on test devices with data plans
         private boolean mHasDataCycles;
+        private NetworkTemplate mNetworkTemplate;
+        private DataUsageController.DataUsageInfo mDataUsageInfo;
+        private DataUsageCycleManager mDataUsageCycleManager;
 
-        public static TestAppDataUsageFragment newInstance(boolean hasDataCycles) {
+        /** Creates a TestAppDataUsageFragment with the substituted values */
+        public static TestAppDataUsageFragment newInstance(boolean hasDataCycles,
+                NetworkTemplate networkTemplate, DataUsageController.DataUsageInfo dataUsageInfo,
+                DataUsageCycleManager dataUsageCycleManager) {
             TestAppDataUsageFragment fragment = new TestAppDataUsageFragment();
             fragment.mHasDataCycles = hasDataCycles;
+            fragment.mNetworkTemplate = networkTemplate;
+            fragment.mDataUsageInfo = dataUsageInfo;
+            fragment.mDataUsageCycleManager = dataUsageCycleManager;
             return fragment;
         }
 
@@ -128,6 +155,22 @@ public class AppDataUsageFragmentTest {
                 return;
             }
             super.onDataCyclePicked(cycle, usages);
+        }
+
+        @Override
+        NetworkTemplate getNetworkTemplate(Context context, int subId) {
+            return mNetworkTemplate;
+        }
+
+        @Override
+        DataUsageController.DataUsageInfo getDataUsageInfo(
+                @NonNull NetworkTemplate networkTemplate) {
+            return mDataUsageInfo;
+        }
+
+        @Override
+        DataUsageCycleManager getDataUsageCycleManager(@NonNull NetworkTemplate networkTemplate) {
+            return mDataUsageCycleManager;
         }
     }
 }
