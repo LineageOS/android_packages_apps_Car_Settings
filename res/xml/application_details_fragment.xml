@@ -61,4 +61,8 @@
         android:key="@string/pk_application_details_version"
         settings:controller="com.android.car.settings.applications.VersionPreferenceController"
         settings:showChevron="false"/>
+    <Preference
+        android:key="@string/pk_application_aspect_ratio"
+        android:title="@string/aspect_ratio_label"
+        settings:controller="com.android.car.settings.applications.appinfo.AppAspectRatioPreferenceController"/>
 </PreferenceScreen>

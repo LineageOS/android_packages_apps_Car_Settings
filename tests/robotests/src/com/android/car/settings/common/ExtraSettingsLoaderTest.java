@@ -17,7 +17,6 @@
 package com.android.car.settings.common;
 
 import static com.android.settingslib.drawer.CategoryKey.CATEGORY_DEVICE;
-import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
@@ -121,7 +120,6 @@ public class ExtraSettingsLoaderTest {
             assertThat(b.getString(META_DATA_PREFERENCE_TITLE)).isEqualTo(FAKE_TITLE);
             assertThat(b.getString(META_DATA_PREFERENCE_SUMMARY)).isEqualTo(FAKE_SUMMARY);
             assertThat(b.getString(META_DATA_PREFERENCE_CATEGORY)).isEqualTo(FAKE_CATEGORY);
-            assertThat(b.getInt(META_DATA_PREFERENCE_ICON)).isNotNull();
         }
     }
 
