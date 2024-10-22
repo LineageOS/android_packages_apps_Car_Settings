@@ -16,6 +16,23 @@
       "message": "Was this compile tested?",
       "revId": "a7c82babe3eaba454462a83dc87f84b8afb59ec0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0bcc53b_36d3022e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-10-22T21:09:55Z",
+      "side": 1,
+      "message": "it was some time ago, but after all the merges - today I get APNs conf override errors - don\u0027t want to bother merging this if it doesn\u0027t get to build start anyway.",
+      "revId": "a7c82babe3eaba454462a83dc87f84b8afb59ec0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
