@@ -27,6 +27,7 @@ import android.app.PendingIntent;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.UserManager;
@@ -41,6 +42,7 @@ import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 import com.android.car.settings.enterprise.EnterpriseUtils;
 import com.android.settingslib.net.DataUsageController;
 
@@ -50,6 +52,8 @@ import com.android.settingslib.net.DataUsageController;
  * to enable/disable mobile data.
  */
 public class MobileDataRow extends SettingsQCItem {
+    private static final String TAG = MobileDataRow.class.getSimpleName();
+    private static final Logger LOG = new Logger(MobileDataRow.class);
     private final DataUsageController mDataUsageController;
     private boolean mIsDistractionOptimizationRequired;
     private DataSubscription mSubscription;
@@ -100,6 +104,14 @@ public class MobileDataRow extends SettingsQCItem {
                 .addEndItem(dataToggle)
                 .build();
 
+        try {
+            dataRow.setPackageUid(getContext()
+                    .getPackageManager()
+                    .getApplicationInfo(getContext().getPackageName(), 0).uid);
+            dataRow.setTag(TAG);
+        } catch (PackageManager.NameNotFoundException e) {
+            LOG.w("Can't find application info for package " + e);
+        }
         return new QCList.Builder()
                 .addRow(dataRow)
                 .build();

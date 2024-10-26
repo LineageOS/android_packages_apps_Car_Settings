@@ -343,8 +343,7 @@
     <string name="unused_apps" msgid="648471933781010395">"Aplicacions no utilitzades"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# aplicació no utilitzada}other{# aplicacions no utilitzades}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Suprimeix els permisos i allibera espai"</string>
-    <!-- no translation found for aspect_ratio_label (7298654990273812425) -->
-    <skip />
+    <string name="aspect_ratio_label" msgid="7298654990273812425">"Relació d\'aspecte (experimental)"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s a l\'emmagatzematge intern"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Utilitza recursos del sistema per prioritzar el rendiment de l\'aplicació"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Ús de dades"</string>
@@ -497,7 +496,7 @@
     <string name="hardware_revision" msgid="5713759927934872874">"Versió del maquinari"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Llicències de tercers"</string>
-    <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"S\'ha produït un problema en carregar les llicències."</string>
+    <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Hi ha hagut un problema en carregar les llicències."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"S\'està carregant…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Ara ja només et queda # pas per convertir-te en desenvolupador.}other{Ara ja només et queden # passos per convertir-te en desenvolupador.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Ara ja ets desenvolupador!"</string>
@@ -705,7 +704,7 @@
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Connecta 4 punts com a mínim. Torna-ho a provar."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"El patró no és correcte"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Com es dibuixa un patró de desbloqueig"</string>
-    <string name="error_saving_lockpattern" msgid="2933512812768570130">"S\'ha produït un error en desar el patró"</string>
+    <string name="error_saving_lockpattern" msgid="2933512812768570130">"Hi ha hagut un error en desar el patró"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Has superat el nombre d\'intents incorrectes permesos. Torna-ho a provar d\'aquí a <xliff:g id="NUMBER">%d</xliff:g> segons."</string>
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Patró de rotació no admès; utilitza un tàctil"</string>
     <string name="okay" msgid="4589873324439764349">"D\'acord"</string>
@@ -720,7 +719,7 @@
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"El PIN ha de tenir 4 dígits com a mínim"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"El PIN no és vàlid. Ha de tenir com a mínim 4 dígits."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Els PIN no coincideixen"</string>
-    <string name="error_saving_lockpin" msgid="9011960139736000393">"S\'ha produït un error en desar el PIN"</string>
+    <string name="error_saving_lockpin" msgid="9011960139736000393">"Hi ha hagut un error en desar el PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"El PIN no és correcte"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"La contrasenya no és correcta"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Per seguretat, defineix una contrasenya"</string>

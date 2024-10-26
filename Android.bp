@@ -16,6 +16,20 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+genrule {
+    name: "statslog-carsettings-java-gen",
+    tools: ["stats-log-api-gen"],
+    cmd: "$(location stats-log-api-gen) --java $(out) --module carsettings" +
+        " --javaPackage com.android.car.settings --javaClass CarSettingsStatsLog",
+    out: ["com/android/car/settings/CarSettingsStatsLog.java"],
+}
+
+carsettings_srcs = [
+    "src/**/*.kt",
+    "src/**/*.java",
+    ":statslog-carsettings-java-gen",
+]
+
 android_library {
     name: "CarSettings-core",
     platform_apis: true,
@@ -24,10 +38,7 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: [
-        "src/**/*.kt",
-        "src/**/*.java",
-    ],
+    srcs: carsettings_srcs,
 
     static_libs: [
         "androidx.lifecycle_lifecycle-common-java8",
@@ -108,10 +119,7 @@ android_app {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: [
-        "src/**/*.kt",
-        "src/**/*.java",
-    ],
+    srcs: carsettings_srcs,
 
     libs: [
         "android.car",
@@ -159,10 +167,7 @@ android_library {
 
     manifest: "tests/unit/AndroidManifest.xml",
 
-    srcs: [
-        "src/**/*.kt",
-        "src/**/*.java",
-    ],
+    srcs: carsettings_srcs,
 
     libs: [
         "android.car",
