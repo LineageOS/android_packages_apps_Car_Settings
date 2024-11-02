@@ -194,7 +194,7 @@
     <string name="bluetooth_name" msgid="2609869978821094114">"Naziv vozila"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"Promijena naziva vozila"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"Promijena naziva uređaja"</string>
-    <string name="bluetooth_rename_button" msgid="2397892174725986383">"Promijeni naziv"</string>
+    <string name="bluetooth_rename_button" msgid="2397892174725986383">"Promijenite naziv"</string>
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"Dostupni uređaji"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Profili"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
@@ -238,7 +238,7 @@
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Predloženo"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Svi jezici"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastatura"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"Upravljanje tastaturama"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Upravljajte tastaturama"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Pretvaranje teksta u govor"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Željeni alat"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Trenutni program"</string>
@@ -566,7 +566,7 @@
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Poruke putem mobilnih podataka auta"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"Instalirajte nove aplikacije"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Deinstalirajte aplikacije"</string>
-    <string name="user_add_user_menu" msgid="4125869008006021799">"Dodaj profil"</string>
+    <string name="user_add_user_menu" msgid="4125869008006021799">"Dodajte profil"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Novi profil"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Dodati novi profil?"</string>
     <string name="user_add_user_message_setup" msgid="812616230454605159">"Kada kreirate novi profil, korisnik ga treba samostalno prilagoditi."</string>
@@ -616,7 +616,7 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> je sigurno izbačena"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> se ne može sigurno izbaciti"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Računi"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj račun"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"Dodajte račun"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nije dodan nijedan račun"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Računi za korisnika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Automatsko sinhroniziranje podataka"</string>
@@ -790,9 +790,9 @@
     <string name="notifications_all_apps" msgid="3557079551048958846">"Sve aplikacije"</string>
     <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Profili i računi"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"Upravljajte drugim profilima"</string>
-    <string name="add_a_profile_button_text" msgid="8027395095117925114">"Dodaj profil"</string>
+    <string name="add_a_profile_button_text" msgid="8027395095117925114">"Dodajte profil"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Izbriši ovaj profil"</string>
-    <string name="add_profile_text" msgid="9118410102199116969">"Dodaj profil"</string>
+    <string name="add_profile_text" msgid="9118410102199116969">"Dodajte profil"</string>
     <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Profil je trenutno prijavljen kao vozač. Pokušajte ponovo kada profil ne bude korišten kao vozač."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Osvjetljenje ekrana"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Da vidite svoje uređaje, uključite Bluetooth"</string>

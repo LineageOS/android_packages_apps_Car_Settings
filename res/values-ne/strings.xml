@@ -208,7 +208,7 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"एउटा एप अन्य ब्लुटुथ यन्त्रहरूले <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकेन्डसम्म तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ब्लुटुथ सक्रिय गर्न र <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकेन्डसम्म अन्य यन्त्रहरूले तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"एउटा एप ब्लुटुथ सक्रिय गर्न र <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकेन्डसम्म अन्य यन्त्रहरूले तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
-    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"अन्य यन्त्रमा %1$s का रूपमा देखिन्छ"</string>
+    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"अन्य डिभाइसमा %1$s का रूपमा देखिन्छ"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"मेरा यन्त्रहरू"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"यसअघि कनेक्ट गरिएका डिभाइसहरू"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s कनेक्ट गरिएको छ"</string>
@@ -216,12 +216,12 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"तपाईंको कारमा उपलब्ध डिभाइस कनेक्सनहरू"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"अल्ट्रा-वाइडब्यान्ड (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"तपाईंको कारलाई UWB डिभाइसहरूको स्थान पत्ता लगाउन मद्दत गर्छ"</string>
-    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लुटुथसँग जोडा बनाउने अनुरोध"</string>
+    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लुटुथसँग कनेक्ट गर्ने अनुरोध"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"जोडा बनाउनुहोस् र कनेक्ट गर्नुहोस्"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लुटुथसँग जोडा बनाउने कोड"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लुटुथसँग कनेक्ट गर्ने कोड"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN मा अक्षर वा प्रतीकहरू समाविष्ट हुन्छन्"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"जोडा मिलाउने कोड टाइप गर्नुहोस् त्यसपछि फिर्ता गर्नुहोस् वा प्रविष्टि गर्नुहोस् नामक बटन थिच्नुहोस्"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सँग जोडा बनाउने हो?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सँग कनेक्ट गर्ने हो?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>लाई तपाईंका कन्ट्याक्टहरू र फोन सम्पर्कको इतिहासमाथि पहुँच गर्ने अनुमति दिनुहोस्"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"तपाईंले अर्को यन्त्रमा पनि यो PIN टाइप गर्नु पर्ने हुन सक्छ।"</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"तपाईंले अर्को यन्त्रमा यो पासकुञ्जी पनि टाइप गर्नु पर्ने हुन सक्छ।"</string>
@@ -568,8 +568,8 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"एप स्थापना रद्द गर्नुहोस्"</string>
     <string name="user_add_user_menu" msgid="4125869008006021799">"प्रोफाइल थप्नुहोस्"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"नयाँ प्रोफाइल"</string>
-    <string name="user_add_user_title" msgid="6296827596015729982">"नयाँ प्रोफाइल थप्ने हो?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"तपाईंले नयाँ प्रोफाइल बनाइसकेपछि सम्बन्धित व्यक्तिले उक्त प्रोफाइल आफ्नो आवश्यकता अनुकूल बनाउनु पर्छ।"</string>
+    <string name="user_add_user_title" msgid="6296827596015729982">"नयाँ प्रोफाइल हाल्ने हो?"</string>
+    <string name="user_add_user_message_setup" msgid="812616230454605159">"तपाईंले नयाँ प्रोफाइल बनाइसकेपछि सम्बन्धित व्यक्तिले उक्त प्रोफाइल कस्टमाइज गर्नु पर्छ।"</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"एपहरू अन्य सबै प्रोफाइलमा प्रयोग गर्न सकिने गरी जुनसुकै प्रोफाइलबाट अपडेट गर्न सकिन्छ।"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"योभन्दा बढी प्रोफाइल थप्न मिल्दैन"</string>
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{तपाईं एउटा मात्र प्रोफाइल सिर्जना गर्न सक्नुहुन्छ।}other{तपाईं बढीमा # वटा प्रोफाइल सिर्जना गर्न सक्नुहुन्छ।}}"</string>
@@ -617,10 +617,10 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तवरले निकाल्न सकिएन"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाताहरू"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाता हाल्नुहोस्"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"कुनै पनि खाता थपिएन"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"कुनै पनि खाता हालिएको छैन"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> को खाता"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"डेटा स्वतः सिंक गर्नुहोस्"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"एपहरूलाई डेटा स्वतः पुनः ताजा गर्न दिनुहोस्"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"एपहरूलाई डेटा स्वतः रिफ्रेस गर्न दिनुहोस्"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"डेटा स्वतः सिंक गर्न दिने हो?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"तपाईंले इन्टरनेटमार्फत आफ्ना खाताहरूमा कुनै परिवर्तन गर्नुभयो भने उक्त परिवर्तन तपाईंको गाडीमा स्वतः कपी गरिने छ।\n\nकेही खाताहरूका हकमा भने तपाईंले गाडीमार्फत गरेका परिवर्तनहरू पनि इन्टरनेटमा स्वतः कपी गरिन्छ।"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"डेटा स्वतः सिंक गर्न नदिने हो?"</string>

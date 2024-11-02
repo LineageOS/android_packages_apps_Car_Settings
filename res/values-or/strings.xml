@@ -239,7 +239,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"ସମସ୍ତ ଭାଷା"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"କୀବୋର୍ଡ"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"କୀବୋର୍ଡଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ୍‍-ଟୁ-ସ୍ପିଚ୍‍ ଆଉଟ୍‍ପୁଟ୍"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ-ଟୁ-ସ୍ପିଚ ଆଉଟପୁଟ"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ଅଗ୍ରାଧିକାର ଦିଆଯାଇଥିବା ଇଞ୍ଜିନ୍"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"ସାମ୍ପ୍ରତିକ ଇଞ୍ଜିନ୍"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"ସ୍ପୀଚ୍‌ ହାର"</string>
@@ -369,7 +369,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ସ୍କ୍ରିନସଟ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ସ୍କ୍ରିନ୍‌ର ଇମେଜକୁ ଆକ୍ସେସ୍‌ କରିବାକୁ ସହାୟକ ଆପ୍‌କୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"ଭଏସ୍‌ ଇନ୍‌ପୁଟ୍"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"ସ୍ୱତଃପୂରଣ ସେବା"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"ଅଟୋଫିଲ ସେବା"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"କୌଣସିଟି ନୁହେଁ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ଚୟନିତ"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ଏହି ସହାୟକ, ସ୍କ୍ରିନ୍‌ରେ ଦେଖାଦେଉଥିବା କିମ୍ୱା ଆପ୍‌ଗୁଡ଼ିକ ମଧ୍ୟରେ ଆକ୍ସେସ୍ ହୋଇପାରିବା ଭଳି ସୂଚନା ସମେତ ଆପଣଙ୍କ ସିଷ୍ଟମ୍‌ରେ ଥିବା ଆପ୍‌ଗୁଡ଼ିକ ବିଷୟରେ ସୂଚନା ପଢ଼ିପାରିବ।"</string>
@@ -616,11 +616,11 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>କୁ ସୁରକ୍ଷିତ ଭାବେ ବାହାର କରିଦିଆଯାଇଛି"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>କୁ ସୁରକ୍ଷିତ ଭାବେ ବାହାର କରିହେଲା ନାହିଁ"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ଆକାଉଣ୍ଟ"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"ଆକାଉଣ୍ଟ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"କୌଣସି ଆକାଉଣ୍ଟ ଯୋଗ କରାଯାଇନାହିଁ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ପାଇଁ ଆକାଉଣ୍ଟ"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ସ୍ୱଚାଳିତ ଭାବେ ଡାଟା ସିଙ୍କ ହେଉ"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ଆପ୍‌କୁ ସ୍ୱଚାଳିତ ଭାବେ ଡାଟା ସତେଜ କରିବାକୁ ଦିଅନ୍ତୁ"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ଆପ୍ସକୁ ସ୍ୱତଃ ଡାଟା ରିଫ୍ରେସ କରିବାକୁ ଦିଅନ୍ତୁ"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ସ୍ୱଚାଳିତ ଡାଟା ସିଙ୍କ କରିବାର ଅନୁମତି ଦେବେ କି?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ଆପଣ ୱେବ ମାଧ୍ୟମରେ ଆପଣଙ୍କ ଆକାଉଣ୍ଟଗୁଡ଼ିକରେ କରିଥିବା ଯେ କୌଣସି ପରିବର୍ତ୍ତନ ସ୍ୱଚାଳିତ ଭାବେ ଆପଣଙ୍କ ଗାଡ଼ିକୁ କପି କରାଯିବ।\n\nଆପଣ ଗାଡ଼ିରେ କରିଥିବା ଯେ କୌଣସି ପରିବର୍ତ୍ତନକୁ କିଛି ଆକାଉଣ୍ଟ ସ୍ୱଚାଳିତ ଭାବେ ୱେବକୁ ମଧ୍ୟ କପି କରିପାରେ।"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ସ୍ୱଚାଳିତ ଡାଟା ସିଙ୍କ କରିବାର ଅନୁମତିକୁ ବାତିଲ କରିବେ?"</string>

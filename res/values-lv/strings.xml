@@ -238,7 +238,7 @@
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Ieteiktās"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Visas valodas"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastatūra"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"Tastatūru pārvaldība"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Pārvaldīt tastatūras"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Teksta pārvēršanas runā izvade"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Vēlamā programma"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Pašreizējā programma"</string>
@@ -569,8 +569,8 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Pievienot profilu"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Jauns profils"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Vai pievienot jaunu profilu?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Kad jūs esat izveidojis jaunu profilu, profila īpašniekam tas patstāvīgi jāpielāgo."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"No jebkura profila var atjaunināt lietotnes, lai izmantotu tās visos pārējos profilos."</string>
+    <string name="user_add_user_message_setup" msgid="812616230454605159">"Pēc jauna profila izveides attiecīgais lietotājs varēs to pielāgot."</string>
+    <string name="user_add_user_message_update" msgid="3836353291078729240">"Jebkurā profilā var atjaunināt lietotnes, kas tiek izmantotas arī visos pārējos profilos."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Sasniegts profilu ierobežojums"</string>
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Var izveidot tikai vienu profilu.}zero{Var izveidot ne vairāk kā # profilus.}one{Var izveidot ne vairāk kā # profilu.}other{Var izveidot ne vairāk kā # profilus.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Nevarēja izveidot jaunu profilu"</string>
@@ -780,7 +780,7 @@
     <string name="restricted_for_driver" msgid="3364388937671526800">"Jūs nevarat veikt šo darbību."</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Nevar pievienot profilu braukšanas laikā."</string>
     <string name="default_search_query" msgid="3137420627428857068">"Meklēt"</string>
-    <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistents un balss vadība"</string>
+    <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistents un balss"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Digitālā asistenta lietotne"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Izmantot ekrānā redzamo tekstu"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Atļaujiet Asistentam piekļūt ekrāna saturam"</string>

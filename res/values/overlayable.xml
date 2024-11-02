@@ -23,6 +23,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="anim" name="trans_fade_in"/>
       <item type="anim" name="trans_fade_out"/>
       <item type="array" name="config_allowed_bluetooth_scanning_packages"/>
+      <item type="array" name="config_debug_support_devices"/>
+      <item type="array" name="config_debug_support_devices_exclude_car"/>
       <item type="array" name="config_fixed_notification_access_packages"/>
       <item type="array" name="config_ignore_ux_restrictions"/>
       <item type="array" name="config_ringtone_audio_attribute_usages_map_key"/>
@@ -1393,6 +1395,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="sharing_remote_bugreport_dialog_message"/>
       <item type="string" name="show_captions_toggle_title"/>
       <item type="string" name="show_dev_already"/>
+      <item type="string" name="show_customization_overlay_title"/>
       <item type="string" name="show_dev_countdown"/>
       <item type="string" name="show_dev_on"/>
       <item type="string" name="show_force_rtl_title"/>

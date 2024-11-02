@@ -74,7 +74,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"تنظیم محدودیت داده"</string>
     <string name="data_limit" msgid="227338836292511425">"محدودیت داده"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"محدود کردن مصرف داده"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"وقتی داده تلفن همراهتان به محدودیتی که تنظیم کرده‌اید برسد، سیستم صوتی خودروی شما خاموش خواهد شد.\n\nاز آنجایی‌که سیستم صوتی شما مصرف داد‌ه را محاسبه می‌کند و ممکن است شرکت مخابراتی‌تان مصرف داده را به روش دیگری محاسبه کند، سعی کنید محدودیت محافظه‌کارانه‌ای تنظیم کنید."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"وقتی داده تلفن همراهتان به محدودیتی که تنظیم کرده‌اید برسد، سیستم صوتی خودرو شما خاموش خواهد شد.\n\nاز آنجایی‌که سیستم صوتی شما مصرف داد‌ه را محاسبه می‌کند و ممکن است شرکت مخابراتی‌تان مصرف داده را به روش دیگری محاسبه کند، سعی کنید محدودیت محافظه‌کارانه‌ای تنظیم کنید."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"تنظیم هشدار مصرف داده"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"تنظیم حد استفاده از داده"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"دستگاهتان میزان مصرف داده را اندازه‌گیری می‌کند. این میزان ممکن است با میزانی که شرکت مخابراتی تلفن همراهتان اندازه‌گیری می‌کند متفاوت باشد."</string>
@@ -208,7 +208,7 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"برنامه‌ای می‌خواهد سیستم صوتی شما را برای سایر دستگاه‌های بلوتوث به‌مدت <xliff:g id="TIMEOUT">%1$d</xliff:g> ثانیه قابل‌مشاهده کند."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد بلوتوث را روشن کند و سیستم صوتی شما را برای سایر دستگاه‌ها به‌مدت <xliff:g id="TIMEOUT">%2$d</xliff:g> ثانیه قابل‌مشاهده کند."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"برنامه‌ای می‌خواهد بلوتوث را روشن کند و سیستم صوتی شما را برای سایر دستگاه‌ها به مدت <xliff:g id="TIMEOUT">%1$d</xliff:g> ثانیه قابل‌مشاهده کند."</string>
-    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"برای دستگاه‌های دیگر به‌صورت %1$s قابل مشاهده است"</string>
+    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"برای دستگاه‌های دیگر با اسم %1$s قابل مشاهده است"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"دستگاه‌های من"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"قبلاً متصل‌شده"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s متصل شد"</string>
@@ -444,7 +444,7 @@
     <string name="location_use_location_title" msgid="117735895374606680">"استفاده از مکان"</string>
     <string name="location_access_settings_title" msgid="2378398106582207440">"دسترسی به مکان"</string>
     <string name="location_access_settings_summary" msgid="7676354917209152932">"انتخاب کنید برنامه‌ها بتوانند به مکان خودروتان دسترسی داشته باشند یا نه"</string>
-    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ممکن است سازنده خودروتان همچنان به مکان خودروی شما دسترسی داشته باشد. برای کسب اطلاعات بیشتر می‌توانید خط‌مشی‌های سازنده را مرور کنید."</string>
+    <string name="location_access_disclaimer_summary" msgid="914984622682562036">"ممکن است سازنده خودروتان همچنان به مکان خودرو شما دسترسی داشته باشد. برای کسب اطلاعات بیشتر می‌توانید خط‌مشی‌های سازنده را مرور کنید."</string>
     <string name="location_adas_app_info_summary" msgid="7806057735910556609">"این ویژگی‌های داخلی برای کمک در رانندگی باید به مکان خودروتان دسترسی داشته باشند.\n\nبرای کسب اطلاعات بیشتر درباره اینکه هر برنامه چگونه از «داده‌های مکان» شما استفاده می‌کند، «خط‌مشی رازداری» برنامه موردنظر را مرور کنید."</string>
     <string name="microphone_settings_title" msgid="7125554350537136922">"میکروفون"</string>
     <string name="microphone_toggle_title" msgid="911586035332827275">"استفاده از میکروفون"</string>
@@ -590,7 +590,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"شما (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"نام"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"تنظیم نشده"</string>
-    <string name="edit_user_name_title" msgid="1118500707473139995">"ویرایش محل نمایه"</string>
+    <string name="edit_user_name_title" msgid="1118500707473139995">"ویرایش نام نمایه"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"این فیلد نمی‌تواند خالی باشد."</string>
     <string name="name_input_invalid_error" msgid="4355625213535164704">"نام نمایه واردشده نامعتبر است."</string>
     <string name="users_list_title" msgid="770764290290240909">"کاربران"</string>
@@ -622,7 +622,7 @@
     <string name="account_auto_sync_title" msgid="3238816995364191432">"همگام‌سازی خودکار داده‌ها"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"اجازه دادن به برنامه‌ها برای بازآوری خودکار داده‌ها"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"همگام‌سازی خودکار داده‌ها مجاز شود؟"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"هر تغییری که در حساب‌هایتان در وب ایجاد می‌کنید به‌صورت خودکار در خودروی شما کپی می‌شود.\n\nبرخی‌از حساب‌ها نیز ممکن است هر تغییری را که در خودرو ایجاد می‌کنید به‌طور خودکار در وب کپی کنند."</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"هر تغییری که در حساب‌هایتان در وب ایجاد می‌کنید به‌صورت خودکار در خودرو شما کپی می‌شود.\n\nبرخی‌از حساب‌ها نیز ممکن است هر تغییری را که در خودرو ایجاد می‌کنید به‌طور خودکار در وب کپی کنند."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"همگام‌سازی خودکار داده‌ها غیرمجاز شود؟"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"با این کار از داده‌ها محافظت می‌شود، اما برای جمع‌آوری اطلاعات اخیر باید همه حساب‌ها را به‌طور دستی همگام‌سازی کنید. درصورت به‌روزرسانی نیز اعلان دریافت نمی‌کنید."</string>
     <string name="account_details_title" msgid="7529571432258448573">"اطلاعات حساب"</string>
@@ -667,7 +667,7 @@
     <string name="required_apps_group_title" msgid="8607608579973985786">"برنامه‌های الزامی"</string>
     <string name="required_apps_group_summary" msgid="5026442309718220831">"برنامه‌هایی که سازنده خودرو برای کمک در رانندگی الزامی کرده است"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"خط‌مشی"</string>
-    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ممکن است سازنده خودروتان همچنان به دوربین خودروی شما دسترسی داشته باشد"</string>
+    <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ممکن است سازنده خودروتان همچنان به دوربین خودرو شما دسترسی داشته باشد"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"برنامه‌های اطلاعات-سرگرمی"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"اجازه دادن به برنامه‌های اطلاعات-سرگرمی برای گرفتن عکس و ضبط فیلم"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"مجاز"</string>
@@ -817,12 +817,12 @@
     <string name="admin_device_owner_message" msgid="896530502350904835">"مدیر سازمان می‌تواند بر برنامه‌ها و داده‌های مرتبط با این سیستم اطلاعات-سرگرمی، ازجمله تنظیمات، اجازه‌ها، دسترسی شرکتی، فعالیت شبکه، و اطلاعات مکان خودرو نظارت داشته باشد و آن‌ها را مدیریت کند."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"مدیر سازمان ممکن است بتواند به داده‌های مرتبط با این سیستم اطلاعات-سرگرمی دسترسی داشته باشد، برنامه‌ها را مدیریت کند، و تنظیمات این خودرو را تغییر دهد."</string>
     <string name="disabled_by_policy_title" msgid="1121694702115232518">"دردسترس نیست"</string>
-    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"نمی‌توانید میزان صدا را در این خودروی تحت‌مدیریت تغییر دهید"</string>
-    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"نمی‌توانید در این خودروی تحت‌مدیریت تماس برقرار کنید"</string>
-    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"پیامک در این خودروی تحت‌مدیریت مجاز نیست"</string>
-    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"دوربین در این خودروی تحت‌مدیریت دردسترس نیست"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"در این خودروی تحت‌مدیریت نمی‌توانید نماگرفت بگیرید"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"نمی‌توانید این برنامه را در این خودروی تحت‌مدیریت باز کنید"</string>
+    <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"نمی‌توانید میزان صدا را در این خودرو تحت‌مدیریت تغییر دهید"</string>
+    <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"نمی‌توانید در این خودرو تحت‌مدیریت تماس برقرار کنید"</string>
+    <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"پیامک در این خودرو تحت‌مدیریت مجاز نیست"</string>
+    <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"دوربین در این خودرو تحت‌مدیریت دردسترس نیست"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"در این خودرو تحت‌مدیریت نمی‌توانید نماگرفت بگیرید"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"نمی‌توانید این برنامه را در این خودرو تحت‌مدیریت باز کنید"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"ارائه‌دهنده اعتبارتان آن را مسدود کرده است"</string>
     <string name="default_admin_support_msg" msgid="2986598061733013282">"سازمانتان دسترسی به برخی‌از ویژگی‌ها را محدود کرده است.\n\nاگر سؤالی دارید، با مدیر سازمان تماس بگیرید."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
@@ -833,14 +833,14 @@
     <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"خط‌مشی وسیله نقلیه"</string>
     <string name="work_policy_privacy_settings_summary" msgid="5321618399949880194">"تنظیمات تحت‌کنترل مدیر سازمان"</string>
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"درباره <xliff:g id="SERVICE">%1$s</xliff:g> بیشتر بدانید"</string>
-    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"اطلاعات خودروی مدیریت‌شده"</string>
+    <string name="enterprise_privacy_settings" msgid="6496900796150572727">"اطلاعات خودرو مدیریت‌شده"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"تنظیمات تحت‌مدیریت سرپرست ناوگان"</string>
-    <string name="enterprise_privacy_header" msgid="4652489109303330306">"برای ارائه دسترسی به داده‌ها در این خودروی مدیریت‌شده، سرپرست ناوگان ممکن است تنظیمات را تغییر دهد و نرم‌افزاری در سیستم اطلاعات-سرگرمی نصب کند.\n\nبرای جزئیات بیشتر، با سرپرست ناوگانتان تماس بگیرید."</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"برای ارائه دسترسی به داده‌ها در این خودرو مدیریت‌شده، سرپرست ناوگان ممکن است تنظیمات را تغییر دهد و نرم‌افزاری در سیستم اطلاعات-سرگرمی نصب کند.\n\nبرای جزئیات بیشتر، با سرپرست ناوگانتان تماس بگیرید."</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"اطلاعاتی که سرپرست ناوگان شما می‌تواند ببیند"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"تغییراتی که سرپرست ناوگان شما اعمال کرده است"</string>
-    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"داده‌های مرتبط با حساب خودروی مدیریت‌شده شما"</li>\n" "<li>"فهرست برنامه‌ها در خودروی مدیریت‌شده شما"</li>\n" "<li>"میزان مصرف زمان و داده هر برنامه"</li></string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"داده‌های مرتبط با حساب خودرو مدیریت‌شده شما"</li>\n" "<li>"فهرست برنامه‌ها در خودرو مدیریت‌شده شما"</li>\n" "<li>"میزان مصرف زمان و داده هر برنامه"</li></string>
     <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"دسترسی شما به سیستم اطلاعات-سرگرمی"</string>
-    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"فهرست برنامه‌ها در خودروی شما"</string>
+    <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"فهرست برنامه‌ها در خودرو شما"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"تعداد برنامه‌ها تخمینی است و ممکن است شامل برنامه‌های نصب‌شده از خارج از «فروشگاه Play» نباشد."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
       <item quantity="one">حداقل <xliff:g id="COUNT_1">%d</xliff:g> برنامه</item>

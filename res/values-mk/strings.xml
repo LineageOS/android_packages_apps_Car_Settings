@@ -194,7 +194,7 @@
     <string name="bluetooth_name" msgid="2609869978821094114">"Име на возилото"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"Преименувајте го возилово"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"Преименувајте го уредот"</string>
-    <string name="bluetooth_rename_button" msgid="2397892174725986383">"Преименувај"</string>
+    <string name="bluetooth_rename_button" msgid="2397892174725986383">"Преименувајте"</string>
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"Достапни уреди"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Профили"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
@@ -221,7 +221,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код за спарување преку Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN-от содржи букви или симболи"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Внесете го кодот за спарување, а потоа притиснете Врати или Внеси"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Дали да се спари со <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Да се спари со <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Дозволете <xliff:g id="DEVICE_NAME">%1$s</xliff:g> да пристапува до контактите и историјата на повици."</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Можеби ќе треба да го внесе овој PIN и на другиот уред."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Може ќе треба да ја внесете лозинката и на другиот уред."</string>
@@ -238,7 +238,7 @@
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Предложен"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Сите јазици"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Тастатура"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"Управување со тастатури"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Управувајте со тастатурите"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Претворање текст во говор"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Претпочитан софтвер"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Тековен софтвер"</string>
@@ -618,9 +618,9 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"Сметки"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Додајте сметка"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Нема додадени сметки"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"Сметки за <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"Сметки за: <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Автоматска синхронизација на податоци"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Дозволи апликациите автоматски да ги освежуваат податоците"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Дозволи им на апликациите автоматски да ги освежуваат податоците"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Да се дозволи автоматско синхронизирање податоци?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Сите промени што ќе ги извршите на вашите сметки во прелистувачот ќе се ископираат автоматски и во возилото.\n\nКај некои сметки, сите извршени промени преку возилото може да се ископираат автоматски и во прелистувачот."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Да се забрани автоматско синхронизирање податоци?"</string>
@@ -790,7 +790,7 @@
     <string name="notifications_all_apps" msgid="3557079551048958846">"Сите апликации"</string>
     <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Профили и сметки"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"Управувајте со други профили"</string>
-    <string name="add_a_profile_button_text" msgid="8027395095117925114">"Додај профил"</string>
+    <string name="add_a_profile_button_text" msgid="8027395095117925114">"Додајте профил"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"Избриши го профилов"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Додај профил"</string>
     <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Во моментов, профилов е најавен како возач. Обидете се пак кога профилот нема да се користи како возач."</string>

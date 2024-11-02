@@ -22,11 +22,11 @@ import android.net.Uri;
 import java.io.IOException;
 
 /**
- * Worker for {@link DebugForceRTLRow}.
+ * Default Worker for Quick Control items.
  */
-public class DebugForceRTLRowWorker extends SettingsQCBackgroundWorker<DebugForceRTLRow> {
+public class DefaultQCBackgroundWorker extends SettingsQCBackgroundWorker<SettingsQCItem> {
 
-    public DebugForceRTLRowWorker(Context context, Uri uri) {
+    public DefaultQCBackgroundWorker(Context context, Uri uri) {
         super(context, uri);
     }
 

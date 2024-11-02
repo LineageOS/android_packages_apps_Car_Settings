@@ -26,13 +26,13 @@ import android.car.drivingstate.CarDrivingStateManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 
 import com.android.car.qc.QCActionItem;
 import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
+import com.android.car.settings.common.BuildInfoUtil;
 import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 
@@ -55,7 +55,7 @@ public class DebugDriveModeRow extends SettingsQCItem {
 
     @Override
     protected QCItem getQCItem() {
-        if (!(Build.IS_USERDEBUG || Build.IS_ENG)
+        if (!BuildInfoUtil.isDevTesting(getContext())
                 || !DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(getContext())
                 || mDrivingStateManager == null) {
             return null;

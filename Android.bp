@@ -110,9 +110,11 @@ android_app {
     use_resource_processor: false,
 }
 
-// Duplicate of CarSettings which includes testing only resources for Robolectric
+// Testing app (not lib) is required for deviceless testing (Robolectric) to
+// include testing only resources.This is an app and not a library due to
+// resource processing differences.
 android_app {
-    name: "CarSettingsForTesting",
+    name: "CarSettingsAppForTesting",
     platform_apis: true,
     defaults: [
         "SettingsLibDefaults",
@@ -221,4 +223,9 @@ android_library {
 filegroup {
     name: "CarSettings_proguard_flags",
     srcs: ["proguard.flags"],
+}
+
+filegroup {
+    name: "CarSettingsShadows-srcs",
+    srcs: ["tests/helpers/src/com/android/car/settings/testutils/Shadow*.java"],
 }

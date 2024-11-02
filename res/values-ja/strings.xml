@@ -567,10 +567,10 @@
     <string name="install_apps_permission_title" msgid="3099705360827925296">"新しいアプリのインストール"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"アプリのアンインストール"</string>
     <string name="user_add_user_menu" msgid="4125869008006021799">"プロファイルを追加"</string>
-    <string name="user_new_user_name" msgid="906698527658609819">"新しいプロファイル"</string>
-    <string name="user_add_user_title" msgid="6296827596015729982">"新しいプロファイルを追加しますか？"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"新しいプロファイルを作成したら、そのプロファイルのユーザーは自分でカスタマイズする必要があります。"</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"どのプロファイルでも、他のすべてのプロファイルで使用するアプリを更新できます。"</string>
+    <string name="user_new_user_name" msgid="906698527658609819">"新しいプロフィール"</string>
+    <string name="user_add_user_title" msgid="6296827596015729982">"新しいプロフィールを追加しますか？"</string>
+    <string name="user_add_user_message_setup" msgid="812616230454605159">"新しいプロフィールを作成したら、そのプロフィールのユーザーは自分でカスタマイズする必要があります。"</string>
+    <string name="user_add_user_message_update" msgid="3836353291078729240">"どのプロフィールでも、他のすべてのプロフィールで使用するアプリを更新できます。"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"プロファイル数の上限に達しました"</string>
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{作成できるプロファイルは 1 件のみです。}other{作成できるプロファイルは # 件までです。}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"新しいプロファイルを作成できませんでした"</string>
@@ -590,7 +590,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"自分（%1$s）"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名前"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"セットアップしていません"</string>
-    <string name="edit_user_name_title" msgid="1118500707473139995">"プロファイル名の編集"</string>
+    <string name="edit_user_name_title" msgid="1118500707473139995">"プロフィール名の編集"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"フィールドは空欄にできません。"</string>
     <string name="name_input_invalid_error" msgid="4355625213535164704">"入力されたプロファイル名は無効です。"</string>
     <string name="users_list_title" msgid="770764290290240909">"ユーザー"</string>
@@ -788,10 +788,10 @@
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"画面の画像へのアクセスをアシストアプリに許可します"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"最近送信された通知"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"すべてのアプリ"</string>
-    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"プロファイルとアカウント"</string>
+    <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"プロフィールとアカウント"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"他のプロファイルを管理"</string>
-    <string name="add_a_profile_button_text" msgid="8027395095117925114">"プロファイルを追加"</string>
-    <string name="delete_this_profile_text" msgid="6035404714526922665">"このプロファイルを削除"</string>
+    <string name="add_a_profile_button_text" msgid="8027395095117925114">"プロフィールを追加"</string>
+    <string name="delete_this_profile_text" msgid="6035404714526922665">"このプロフィールを削除"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"プロファイルを追加"</string>
     <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"このプロファイルはドライバーとしてログインしています。ドライバーとして使用していないときにお試しください。"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ディスプレイの明るさ"</string>

@@ -208,7 +208,7 @@
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"אפליקציה מסוימת מבקשת להפוך את מערכת הסטריאו שלך לגלויה בפני מכשירי Bluetooth אחרים למשך <xliff:g id="TIMEOUT">%1$d</xliff:g> שניות."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"האפליקציה <xliff:g id="APP_NAME">%1$s</xliff:g> מבקשת להפעיל את ה-Bluetooth ולהפוך את מערכת הסטריאו שלך לגלויה בפני מכשירים אחרים למשך <xliff:g id="TIMEOUT">%2$d</xliff:g> שניות."</string>
     <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"אפליקציה מסוימת מבקשת להפעיל את ה-Bluetooth ולהפוך את מערכת הסטריאו שלך לגלויה בפני מכשירים אחרים למשך <xliff:g id="TIMEOUT">%1$d</xliff:g> שניות."</string>
-    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"גלוי בתור %1$s למכשירים אחרים"</string>
+    <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"גלוי למכשירים אחרים בתור %1$s"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"המכשירים שלי"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"מכשירים שחוברו בעבר"</string>
     <string name="bluetooth_device_connected_toast" msgid="4614765282582494488">"%1$s מחובר"</string>
@@ -218,10 +218,10 @@
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"כך הרכב יכול לזהות את המיקומים של מכשירי UWB"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"בקשה להתאמת Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"התאמה וחיבור"</string>
-    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"קוד התאמת Bluetooth"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"קוד ההתאמה ל-Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"קוד הגישה מכיל אותיות או סמלים"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"יש להקליד את קוד ההתאמה ולאחר מכן ללחוץ על Return או Enter"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"האם להתאים עם <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"לבצע התאמה עם <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"ל-<xliff:g id="DEVICE_NAME">%1$s</xliff:g> תהיה גישה אל אנשי הקשר ואל היסטוריית השיחות שלך"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ייתכן שיהיה צורך להקליד את קוד הגישה הזה גם במכשיר השני."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ייתכן שיהיה צורך להקליד את המפתח הזה גם במכשיר השני."</string>
@@ -569,8 +569,8 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"הוספת פרופיל"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"פרופיל חדש"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"להוסיף פרופיל חדש?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"לאחר יצירה של פרופיל חדש, המשתמש של הפרופיל הזה צריך להתאים אותו אישית בעצמו."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"עדכון אפליקציות מפרופיל כלשהו יחיל את העדכונים בכל יתר הפרופילים."</string>
+    <string name="user_add_user_message_setup" msgid="812616230454605159">"אחרי שיוצרים פרופיל חדש, המשתמש שהפרופיל שייך לו צריך להתאים אותו אישית."</string>
+    <string name="user_add_user_message_update" msgid="3836353291078729240">"אם מעדכנים אפליקציות בפרופיל כלשהו, העדכון חלים על כל הפרופילים."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"הגעת למספר הפרופילים המרבי"</string>
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{ניתן ליצור רק פרופיל אחד.}one{ניתן ליצור רק # פרופילים.}two{ניתן ליצור רק # פרופילים.}other{ניתן ליצור רק # פרופילים.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"לא ניתן היה ליצור את הפרופיל החדש"</string>
@@ -618,7 +618,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"חשבונות"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"הוספת חשבון"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"לא נוספו חשבונות"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"חשבונות עבור <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"חשבונות של: <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"סנכרון נתונים באופן אוטומטי"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"אפליקציות יוכלו לרענן נתונים באופן אוטומטי"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"לאפשר את סנכרון הנתונים האוטומטי?"</string>

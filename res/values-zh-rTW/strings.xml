@@ -570,7 +570,7 @@
     <string name="user_new_user_name" msgid="906698527658609819">"新的設定檔"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"要新增設定檔嗎？"</string>
     <string name="user_add_user_message_setup" msgid="812616230454605159">"當你建立新設定檔後，該使用者必須自己進行個人化設定。"</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"任何設定檔都能更新所有其他設定檔使用的應用程式。"</string>
+    <string name="user_add_user_message_update" msgid="3836353291078729240">"任何設定檔都能為全部設定檔更新應用程式。"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"設定檔數量已達上限"</string>
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{只能建立 1 個設定檔。}other{最多可以建立 # 個設定檔。}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"無法建立新設定檔"</string>
@@ -618,7 +618,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"帳戶"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"新增帳戶"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"未新增任何帳戶"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> 的帳戶"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"「<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>」的帳戶"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"自動同步處理資料"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"允許應用程式自動重新整理資料"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"要允許自動同步資料嗎？"</string>

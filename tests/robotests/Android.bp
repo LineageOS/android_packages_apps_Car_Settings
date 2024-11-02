@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Car Settings Robolectric test target.
+// Car Settings Robolectric test target. Shadows are for Robolectric only.
 package {
     default_team: "trendy_team_system_experience",
     default_applicable_licenses: ["Android-Apache-2.0"],
@@ -22,6 +22,7 @@ android_robolectric_test {
     name: "CarSettingsRoboTests",
     srcs: [
         "src/**/*.java",
+        ":CarSettingsShadows-srcs",
     ],
 
     libs: [
@@ -33,7 +34,7 @@ android_robolectric_test {
 
     java_resource_dirs: ["config"],
 
-    instrumentation_for: "CarSettingsForTesting",
+    instrumentation_for: "CarSettingsAppForTesting",
 
     test_options: {
         timeout: 36000,
