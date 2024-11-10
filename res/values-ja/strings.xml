@@ -44,7 +44,7 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"モバイルデータに <xliff:g id="CARRIER2_0">%2$s</xliff:g> を使用しています。<xliff:g id="CARRIER1">%1$s</xliff:g> に切り替えると、モバイルデータに <xliff:g id="CARRIER2_1">%2$s</xliff:g> は使用されなくなります。"</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> を使用"</string>
     <string name="roaming_title" msgid="6218635014519017734">"ローミング"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"ローミング中にデータサービスに接続"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ローミング中にデータサービスに接続します"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"データ ローミングを許可しますか？"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"ローミング料金が発生する場合があります。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"データ使用量"</string>
@@ -331,7 +331,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"アンインストール"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"このアプリを無効にすると、Android などの他のアプリが正しく動作しなくなる恐れがあります。"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"アプリを無効にする"</string>
-    <string name="not_installed" msgid="4163454337822508007">"このプロファイルではインストールされません"</string>
+    <string name="not_installed" msgid="4163454337822508007">"このプロフィールではインストールされません"</string>
     <string name="permissions_label" msgid="2701446753515612685">"権限"</string>
     <string name="app_info_all_services_label" msgid="6495363975322723452">"すべてのサービス"</string>
     <string name="notifications_label" msgid="6586089149665170731">"通知"</string>
@@ -571,8 +571,8 @@
     <string name="user_add_user_title" msgid="6296827596015729982">"新しいプロフィールを追加しますか？"</string>
     <string name="user_add_user_message_setup" msgid="812616230454605159">"新しいプロフィールを作成したら、そのプロフィールのユーザーは自分でカスタマイズする必要があります。"</string>
     <string name="user_add_user_message_update" msgid="3836353291078729240">"どのプロフィールでも、他のすべてのプロフィールで使用するアプリを更新できます。"</string>
-    <string name="user_limit_reached_title" msgid="5677729355746623293">"プロファイル数の上限に達しました"</string>
-    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{作成できるプロファイルは 1 件のみです。}other{作成できるプロファイルは # 件までです。}}"</string>
+    <string name="user_limit_reached_title" msgid="5677729355746623293">"プロフィール数の上限に達しました"</string>
+    <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{作成できるプロフィールは 1 件のみです。}other{作成できるプロフィールは # 件までです。}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"新しいプロファイルを作成できませんでした"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"このプロファイルを削除しますか？"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"このプロファイルのアプリとデータはすべて削除されます"</string>
@@ -592,7 +592,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"セットアップしていません"</string>
     <string name="edit_user_name_title" msgid="1118500707473139995">"プロフィール名の編集"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"フィールドは空欄にできません。"</string>
-    <string name="name_input_invalid_error" msgid="4355625213535164704">"入力されたプロファイル名は無効です。"</string>
+    <string name="name_input_invalid_error" msgid="4355625213535164704">"入力されたプロフィール名は無効です。"</string>
     <string name="users_list_title" msgid="770764290290240909">"ユーザー"</string>
     <string name="profiles_list_title" msgid="1443396686780460221">"プロファイル"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s さんに権限が付与されました"</string>
@@ -793,7 +793,7 @@
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"プロフィールを追加"</string>
     <string name="delete_this_profile_text" msgid="6035404714526922665">"このプロフィールを削除"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"プロファイルを追加"</string>
-    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"このプロファイルはドライバーとしてログインしています。ドライバーとして使用していないときにお試しください。"</string>
+    <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"このプロフィールはドライバーとしてログインしています。ドライバーとして使用していないときにお試しください。"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"ディスプレイの明るさ"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"デバイスを表示するには、Bluetooth を ON にしてください"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"デバイスをペア設定するには、Bluetooth の設定を開いてください"</string>
@@ -801,6 +801,8 @@
     <string name="driving_mode_title" msgid="8103270030335833998">"運転モードを設定する"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"レイアウト境界を表示"</string>
     <string name="show_force_rtl_title" msgid="8240732919603115320">"RTL レイアウト方向を使用"</string>
+    <!-- no translation found for show_customization_overlay_title (2543804846629965883) -->
+    <skip />
     <string name="device_admin_add_title" msgid="1294399588284546811">"インフォテインメント システム管理"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"有効なアプリ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"無効なアプリ"</string>
@@ -862,10 +864,10 @@
     <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"デフォルト キーボード"</string>
     <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> に設定"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"グローバル HTTP プロキシが設定されています"</string>
-    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"個人用プロファイル内の信頼できる認証情報"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"個人用プロフィール内の信頼できる認証情報"</string>
     <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"管理者はインフォテインメント システムのロックおよびパスワードの再設定を行えます"</li>\n" "<li>"管理者はインフォテインメント システム上のデータを削除できます"</li></string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"インフォテインメント システム上の全データが削除されるまでのパスワード入力回数"</string>
-    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"プロファイル データが削除されるまでのパスワード入力回数"</string>
+    <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"プロフィール データが削除されるまでのパスワード入力回数"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other">入力回数: <xliff:g id="COUNT_1">%d</xliff:g> 回</item>
       <item quantity="one">入力回数: <xliff:g id="COUNT_0">%d</xliff:g> 回</item>

@@ -134,7 +134,7 @@ android_app {
     // Testing only resources must be applied last so they take precedence.
     resource_dirs: [
         "res",
-        "tests/robotests/res",
+        "tests/deviceless/res",
     ],
 
     certificate: "platform",

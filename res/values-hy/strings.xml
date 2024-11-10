@@ -343,7 +343,7 @@
     <string name="unused_apps" msgid="648471933781010395">"Չօգտագործվող հավելվածներ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# չօգտագործվող հավելված}one{# չօգտագործվող հավելված}other{# չօգտագործվող հավելված}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Հեռացնել թույլտվությունները և տարածք ազատել"</string>
-    <string name="aspect_ratio_label" msgid="7298654990273812425">"Կողմերի հարաբերակցություն (փորձնական)"</string>
+    <string name="aspect_ratio_label" msgid="7298654990273812425">"Կողմերի հարաբերություն (փորձնական)"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s տարածք ներքին հիշողությունում"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Օգտագործում է համակարգի ռեսուրսները՝ հավելվածի արտադրողականությունը կարևորելու համար"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Թրաֆիկի օգտագործում"</string>
@@ -801,6 +801,8 @@
     <string name="driving_mode_title" msgid="8103270030335833998">"Միացնել վարելու ռեժիմը"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"Ցույց տալ դասավորության սահմանները"</string>
     <string name="show_force_rtl_title" msgid="8240732919603115320">"Ուղղությունը դարձնել աջից ձախ"</string>
+    <!-- no translation found for show_customization_overlay_title (2543804846629965883) -->
+    <skip />
     <string name="device_admin_add_title" msgid="1294399588284546811">"Տեղեկատվաժամանցային համակարգի ադմինիստրատոր"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Ակտիվացված հավելվածներ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Ապակտիվացված հավելվածներ"</string>

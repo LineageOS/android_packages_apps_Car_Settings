@@ -41,18 +41,18 @@
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Isključiti prijenos podataka na mobilnoj mreži?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Potrebno je odabrati"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Koristiti <xliff:g id="CARRIER">%1$s</xliff:g> za mobilne podatke?"</string>
-    <string name="sim_change_data_message" msgid="4669775284395549069">"Koristite <xliff:g id="CARRIER2_0">%2$s</xliff:g> za prijenos podataka na mobilnoj mreži. Ako se prebacite na operatera <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> se više neće koristiti za prijenos podataka na mobilnoj mreži."</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"Koristite <xliff:g id="CARRIER2_0">%2$s</xliff:g> za prenos podataka na mobilnoj mreži. Ako se prebacite na operatera <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> se više neće koristiti za prenos podataka na mobilnoj mreži."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Koristi <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Roming"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"Povezivanje na usluge prijenosa podataka u romingu"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Povezivanje na usluge prenosa podataka u romingu"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Dozvoliti roming podataka?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Mogući su troškovi za roming."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Prijenos podataka"</string>
-    <string name="data_usage_title" msgid="2923515974389203812">"Prim. plan prijenosa podataka"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"Prim. plan prenosa podataka"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Iskorišteno je <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <string name="cell_data_warning" msgid="8997739664336571149">"Upozorenje o prijenosu podataka: <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_limit" msgid="6862164869877993009">"Ograničenje prijenosa podataka: <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Upozorenje o prijenosu podataka: <xliff:g id="ID_1">^1</xliff:g> / Ograničenje prijenosa podataka: <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Upozorenje o prenosu podataka: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Ograničenje prenosa podataka: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Upozorenje o prenosu podataka: <xliff:g id="ID_1">^1</xliff:g> / Ograničenje prenosa podataka: <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{Preostao je još # dan}one{Preostao je još # dan}few{Preostala su još # dana}other{Preostalo je još # dana}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Nema preostalog vremena"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Preostalo je manje od 1 dana"</string>
@@ -73,10 +73,10 @@
     <string name="data_warning" msgid="116776633806885370">"Upozorenje na podatke"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Postavi ograničenje za podatke"</string>
     <string name="data_limit" msgid="227338836292511425">"Ograničenje za podatke"</string>
-    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograničavanje prijenosa podataka"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograničavanje prenosa podataka"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Glavna jedinica vozila će isključiti prijenos podataka na mobilnoj mreži nakon što dostigne ograničenje koje ste postavili.\n\nS obzirom na to da glavna jedinica vozila mjeri prijenos podataka te da obračun vašeg operatera može biti drugačiji, uzmite u obzir postavljanje umjerenog ograničenja."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Postavljanje upozorenja o prijenosu podataka"</string>
-    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Postavljanje ograničenja za prijenos podataka"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Postavljanje upozorenja o prenosu podataka"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Postavljanje ograničenja za prenos podataka"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Vaš uređaj mjeri korištenje podataka. Može se razlikovati od podataka mobilnog operatera."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Postavi"</string>
     <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Sačuvaj"</string>
@@ -139,8 +139,8 @@
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Uključiti skeniranje WiFi mreže?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Uključi"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Skeniranje WiFi mreže je isključeno"</string>
-    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatsko prebacivanje na prijenos podataka na mobilnoj mreži"</string>
-    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Korištenje prijenosa podataka na mobilnoj mreži kada WiFi mreža nema pristup internetu. Mogu nastati troškovi prijenosa podataka."</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatsko prebacivanje na prenos podataka na mobilnoj mreži"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Korištenje prenosa podataka na mobilnoj mreži kada WiFi mreža nema pristup internetu. Mogu nastati troškovi prenosa podataka."</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Pronađite WiFi mreže i povežite se s njima"</string>
     <string name="learn_more" msgid="8214605928933358604">"Saznajte više"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Naziv pristupne tačke"</string>
@@ -624,7 +624,7 @@
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Dozvoliti automatsku sinhronizaciju podataka?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Sve promjene na računu koje izvršite na webu će se automatski kopirati na vaše vozilo.\n\nNeki računi također mogu automatski kopirati na web svaku promjenu koju izvršite na vozilu."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Ne dozvoliti automatsku sinhronizaciju podataka?"</string>
-    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ovim će se uštedjeti na prijenosu podataka, ali ćete morati ručno sinhronizirati svaki račun da prikupite najnovije informacije. Također, nećete primati obavještenja kada se izvrše ažuriranja."</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Ovim će se uštedjeti na prenosu podataka, ali ćete morati ručno sinhronizirati svaki račun da prikupite najnovije informacije. Također, nećete primati obavještenja kada se izvrše ažuriranja."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Podaci o računu"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Dodaj račun"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Dodavanje računa"</string>
@@ -801,6 +801,8 @@
     <string name="driving_mode_title" msgid="8103270030335833998">"Postavi način rada za vožnju"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"Prikaži granice rasporeda"</string>
     <string name="show_force_rtl_title" msgid="8240732919603115320">"Prisilno postavi raspored zdesna ulijevo"</string>
+    <!-- no translation found for show_customization_overlay_title (2543804846629965883) -->
+    <skip />
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator informativno-zabavnog sistema"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivirane aplikacije"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivirane aplikacije"</string>

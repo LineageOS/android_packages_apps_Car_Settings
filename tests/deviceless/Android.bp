@@ -21,11 +21,30 @@ package {
 // Pure robolectric deviceless tests for settings (kept as it is for now).
 // Please consider migrating these to multivalent tests instead for portability.
 
-/* Coming up in subsequent CLs.
 android_robolectric_test {
     name: "CarSettingsDevicelessRoboTests",
+    srcs: [
+        "src/**/*.java",
+        ":CarSettingsShadows-srcs",
+    ],
+
+    libs: [
+        "truth",
+        "testng",
+        "android.car",
+        "android.car.test.utils",
+    ],
+
+    java_resource_dirs: ["config"],
+
+    instrumentation_for: "CarSettingsAppForTesting",
+
+    test_options: {
+        timeout: 36000,
+    },
+    upstream: true,
+    strict_mode: false,
 }
-*/
 
 /* Future Ravenwood tests can be added like this if required.
 android_ravenwood_test {
