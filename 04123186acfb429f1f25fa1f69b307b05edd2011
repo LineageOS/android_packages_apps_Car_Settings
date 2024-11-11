@@ -70,6 +70,23 @@
       "parentUuid": "a73920ff_3196eb83",
       "revId": "04123186acfb429f1f25fa1f69b307b05edd2011",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f32e1fc_567707b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-11-11T01:09:28Z",
+      "side": 1,
+      "message": "confirmed on radxa0_tab\n\n```\n11-11 01:02:02.436  4553  4553 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method \u0027int android.car.media.CarVolumeGroupInfo.getId()\u0027 on a null object reference\n```",
+      "revId": "04123186acfb429f1f25fa1f69b307b05edd2011",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
