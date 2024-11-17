@@ -97,7 +97,8 @@ public class ApplicationDetailsFragment extends SettingsFragment {
         use(VersionPreferenceController.class,
                 R.string.pk_application_details_version).setPackageInfo(mPackageInfo);
         use(AppAspectRatioPreferenceController.class,
-                R.string.pk_application_aspect_ratio).setApplicationInfo(mAppEntry.info);
+                R.string.pk_application_aspect_ratio)
+                .setApplicationInfo(mAppEntry.info).setPackageName(mPackageName);
     }
 
     private void retrieveAppEntry() {

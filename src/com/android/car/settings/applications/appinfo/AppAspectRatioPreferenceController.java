@@ -16,14 +16,11 @@
 
 package com.android.car.settings.applications.appinfo;
 
-import static android.provider.Settings.ACTION_MANAGE_USER_ASPECT_RATIO_SETTINGS;
-
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ApplicationInfo;
-import android.net.Uri;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
@@ -38,6 +35,7 @@ public final class AppAspectRatioPreferenceController extends
     private static final String PACKAGE_UI_SCHEME = "package:";
     private ApplicationInfo mApplicationInfo;
     private AspectRatioManager mAspectRatioManager;
+    private String mPackageName;
 
     public AppAspectRatioPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController,
@@ -54,6 +52,7 @@ public final class AppAspectRatioPreferenceController extends
     @Override
     public int getDefaultAvailabilityStatus() {
         return mAspectRatioManager.shouldShowAspectRatioSettingsForApp(mApplicationInfo)
+                && Flags.newFragmentAspectRatioFeature()
                 ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
@@ -62,25 +61,23 @@ public final class AppAspectRatioPreferenceController extends
      *
      * @param applicationInfo The applicationInfo of the app to change aspect ratio.
      */
-    public void setApplicationInfo(ApplicationInfo applicationInfo) {
+    public AppAspectRatioPreferenceController setApplicationInfo(ApplicationInfo applicationInfo) {
         mApplicationInfo = applicationInfo;
+        return this;
+    }
+
+    /**
+     * Set the packageName, which is used to perform actions on a particular package.
+     */
+    public AppAspectRatioPreferenceController setPackageName(String packageName) {
+        mPackageName = packageName;
+        return this;
     }
 
     @Override
     protected boolean handlePreferenceClicked(CarUiPreference preference) {
-        Intent intent = new Intent(ACTION_MANAGE_USER_ASPECT_RATIO_SETTINGS);
-        intent.setData(getPackageUri());
-
-        if (intent.resolveActivity(getContext().getPackageManager()) != null) {
-            getContext().startActivity(intent);
-        } else {
-            LOG.e("No activity found to handle aspect ratio settings.");
-        }
-
+        getFragmentController().launchFragment(
+                AppAspectRatioFragment.getInstance(mPackageName));
         return true;
-    }
-
-    private Uri getPackageUri() {
-        return Uri.parse(PACKAGE_UI_SCHEME + mApplicationInfo.packageName);
     }
 }

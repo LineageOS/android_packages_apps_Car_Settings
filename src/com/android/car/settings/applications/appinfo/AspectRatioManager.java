@@ -19,11 +19,14 @@ package com.android.car.settings.applications.appinfo;
 import static android.os.UserHandle.getUserHandleForUid;
 import static android.view.WindowManager.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE;
 
+import android.app.ActivityManager;
+import android.app.AppGlobals;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.IPackageManager;
 import android.content.pm.LauncherApps;
 import android.content.pm.PackageManager;
-import android.os.Build;
+import android.os.RemoteException;
 import android.provider.DeviceConfig;
 
 import androidx.annotation.NonNull;
@@ -41,9 +44,13 @@ public final class AspectRatioManager {
             "enable_app_compat_aspect_ratio_user_settings";
 
     private final Context mContext;
+    private final IPackageManager mIPm;
+    private final ActivityManager mActivityManager;
 
     public AspectRatioManager(Context context) {
         mContext = context;
+        mIPm = AppGlobals.getPackageManager();
+        mActivityManager = mContext.getSystemService(ActivityManager.class);
     }
 
     /** Determines whether an app should have aspect ratio settings */
@@ -52,12 +59,30 @@ public final class AspectRatioManager {
             return false;
         }
 
-        // This class is only intended to be used for overrides testing for now b/372710124
-        if (!(Build.IS_USERDEBUG || Build.IS_ENG)) {
-            return false;
-        }
-
         return isFeatureEnabled() && canDisplayAspectRatioUi(appInfo);
+    }
+
+    /**
+     * @return {@link PackageManager.UserMinAspectRatio} override for an app
+     */
+    @PackageManager.UserMinAspectRatio
+    public int getUserMinAspectRatioValue(@NonNull String packageName, int uid)
+            throws RemoteException {
+        int aspectRatio = mIPm.getUserMinAspectRatio(packageName, uid);
+        return aspectRatio;
+    }
+
+    /**
+     * Sets user-specified {@link PackageManager.UserMinAspectRatio} override for an app
+     */
+    public void setUserMinAspectRatio(@NonNull String packageName, int uid,
+            @PackageManager.UserMinAspectRatio int aspectRatio) throws RemoteException {
+        mIPm.setUserMinAspectRatio(packageName, uid, aspectRatio);
+        stopApp(packageName);
+    }
+
+    private void stopApp(@NonNull String packageName) {
+        mActivityManager.forceStopPackage(packageName);
     }
 
     /**

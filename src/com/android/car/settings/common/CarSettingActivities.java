@@ -33,6 +33,7 @@ import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.AppsFragment;
+import com.android.car.settings.applications.appinfo.AppAspectRatioFragment;
 import com.android.car.settings.applications.assist.AssistantAndVoiceFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
 import com.android.car.settings.applications.specialaccess.AlarmsAndReminderFragment;
@@ -456,6 +457,28 @@ public class CarSettingActivities {
                 pkg = uri.getSchemeSpecificPart();
             }
             return ApplicationDetailsFragment.getInstance(pkg);
+        }
+    }
+
+    /**
+     * App aspect ratio Activity.
+     */
+    public static class AppAspectRatioActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            Intent intent = getIntent();
+            String pkg = intent.getStringExtra(Settings.EXTRA_APP_PACKAGE);
+            if (TextUtils.isEmpty(pkg)) {
+                LOG.w("No package provided for application detailed intent");
+                Uri uri = intent.getData();
+                if (uri == null) {
+                    LOG.w("No uri provided for application detailed intent");
+                    return null;
+                }
+                pkg = uri.getSchemeSpecificPart();
+            }
+            return AppAspectRatioFragment.getInstance(pkg);
         }
     }
 

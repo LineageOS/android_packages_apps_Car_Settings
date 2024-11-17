@@ -227,4 +227,20 @@
     <dimen name="colored_two_action_switch_preference_margin_end">32dp</dimen>
     <dimen name="colored_two_action_switch_preference_vertical_margin">16dp</dimen>
     <dimen name="colored_two_action_switch_preference_divider_vertical_padding">27dp</dimen>
+
+    <dimen name="radio_with_image_preference_padding_vertical">16dp</dimen>
+    <dimen name="radio_with_image_preference_padding_horizontal">20dp</dimen>
+    <dimen name="radio_with_image_preference_min_width">56dp</dimen>
+    <dimen name="radio_with_image_preference_icon_padding">
+        @dimen/settingslib_illustration_padding
+    </dimen>
+    <dimen name="radio_with_image_preference_icon_max_width">
+        @dimen/settingslib_illustration_width
+    </dimen>
+    <dimen name="radio_with_image_preference_icon_max_height">
+        @dimen/settingslib_illustration_height
+    </dimen>
+
+    <dimen name="aspect_ratio_icon_height">300dp</dimen>
+    <dimen name="aspect_ratio_icon_width">412dp</dimen>
 </resources>

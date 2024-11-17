@@ -365,7 +365,7 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"קלט אסיסטנט וקלט קולי"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"אפליקציית עזרה"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"שימוש בטקסט המופיע במסך"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"אפליקציית העזרה תוכל לגשת לתוכן במסך, למשל לטקסט"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"אפליקציית העזרה תוכל לגשת לטקסט במסך"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"שימוש בצילום מסך"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"אפליקציית העזרה תוכל לגשת לצילום של המסך"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"קלט קולי"</string>
@@ -801,8 +801,7 @@
     <string name="driving_mode_title" msgid="8103270030335833998">"הגדרת נסיעה"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"הצגת גבולות הפריסה"</string>
     <string name="show_force_rtl_title" msgid="8240732919603115320">"קביעת הפריסה מימין לשמאל"</string>
-    <!-- no translation found for show_customization_overlay_title (2543804846629965883) -->
-    <skip />
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"שכבת-על עם התאמה אישית"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"המנהל של מערכת המידע והבידור"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"אפליקציות מופעלות"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"אפליקציות מושבתות"</string>

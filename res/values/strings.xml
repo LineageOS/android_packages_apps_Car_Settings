@@ -760,7 +760,25 @@
     <!-- Label of a switch preference that controls whether the system will remove the permissions and free up space when the app has not been used for months [CHAR LIMIT=40]-->
     <string name="unused_apps_switch">Remove permissions and free up space</string>
     <!-- Label for changing an application's aspect ratio setting. This is an experimental setting [CHAR LIMIT=40] -->
-    <string name="aspect_ratio_label">Aspect ratio(Experimental)</string>
+    <string name="aspect_ratio_label">Aspect ratio (Experimental)</string>
+    <!-- Button label for opening the app action [CHAR LIMIT=20] -->
+    <string name="aspect_ratio_action_button">Open</string>
+    <!-- [CHAR LIMIT=NONE] Label for opening the app in app default aspect ratio -->
+    <string name="user_aspect_ratio_app_default">App default</string>
+    <!-- [CHAR LIMIT=NONE] Label for opening the app in fullscreen aspect ratio -->
+    <string name="user_aspect_ratio_fullscreen">Full screen</string>
+    <!-- [CHAR LIMIT=NONE] Label for opening the app in half screen aspect ratio -->
+    <string name="user_aspect_ratio_half_screen">Half screen</string>
+    <!-- [CHAR LIMIT=NONE] Label for opening the app in device display size aspect ratio -->
+    <string name="user_aspect_ratio_device_size">Device aspect ratio</string>
+    <!-- [CHAR LIMIT=NONE] Label for opening the app in 16:9 aspect ratio -->
+    <string name="user_aspect_ratio_16_9">16:9</string>
+    <!-- [CHAR LIMIT=NONE] Label for opening the app in 3:2 aspect ratio -->
+    <string name="user_aspect_ratio_3_2">3:2</string>
+    <!-- [CHAR LIMIT=NONE] Label for opening the app in 4:3 aspect ratio -->
+    <string name="user_aspect_ratio_4_3">4:3</string>
+    <!-- [CHAR LIMIT=NONE] Warning description for app info aspect ratio page -->
+    <string name="app_aspect_ratio_footer">The app will restart when you change aspect ratio. You may lose unsaved changes. Some apps may not be optimized for certain aspect ratios.</string>
     <!-- Application's internal storage size preference summary. [CHAR LIMIT=40] -->
     <string name="storage_type_internal">%s in internal storage</string>
     <!-- Application's prioritize app performance setting summary. [CHAR LIMIT=100] -->
@@ -2266,4 +2284,8 @@
     <string name="connectivity_inactive_action_text">See plans</string>
 
     <string name="audio_route_dialog_neutral_button_text">Done</string>
+
+    <!-- Toast message to let the user know that there is no supported function for this intent. [CHAR LIMIT=80]
+    TODO(b/371591484): to update this string when UX finalizes it.-->
+    <string name="unsupported_intents_toast_text">Your vehicle does not support this feature</string>
 </resources>

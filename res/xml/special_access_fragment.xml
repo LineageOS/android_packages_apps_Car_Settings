@@ -34,7 +34,9 @@
         android:fragment="com.android.car.settings.applications.specialaccess.NotificationAccessFragment"
         android:key="@string/pk_notification_access_entry"
         android:title="@string/notification_access_title"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
+        settings:occupant_front_passenger="read"
+        settings:occupant_rear_passenger="read"/>
     <Preference
         android:fragment="com.android.car.settings.applications.specialaccess.PremiumSmsAccessFragment"
         android:key="@string/pk_premium_sms_access_entry"
