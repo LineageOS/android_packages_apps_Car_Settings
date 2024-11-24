@@ -343,7 +343,26 @@
     <string name="unused_apps" msgid="648471933781010395">"Колдонулбаган колдонмолор"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# иштетилбеген колдонмо}other{# иштетилбеген колдонмо}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Уруксаттарды өчүрүп, орун бошотуу"</string>
-    <string name="aspect_ratio_label" msgid="7298654990273812425">"Тараптардын катнашы (сынамык)"</string>
+    <!-- no translation found for aspect_ratio_label (5484863076085548807) -->
+    <skip />
+    <!-- no translation found for aspect_ratio_action_button (5581373962239508271) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_app_default (283669241296845522) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_fullscreen (7558176135316113) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_half_screen (6294133158286722632) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_device_size (960231007272059744) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_16_9 (2419220677608547650) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_3_2 (5245528023878893826) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_4_3 (6639743021314111820) -->
+    <skip />
+    <!-- no translation found for app_aspect_ratio_footer (7814071704357140611) -->
+    <skip />
     <string name="storage_type_internal" msgid="8918688427078709570">"Ички сактагычтын %s ээлеп турат"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Колдонмонун иштешине артыкчылык берүү үчүн системанын ресурстарын колдонот"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Маалымат алмашуу"</string>
@@ -801,7 +820,7 @@
     <string name="driving_mode_title" msgid="8103270030335833998">"Айдоо режимин коюу"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"Калыптын чектерин көрсөтүү"</string>
     <string name="show_force_rtl_title" msgid="8240732919603115320">"Калыпты оңдон солго жайгаштыруу"</string>
-    <string name="show_customization_overlay_title" msgid="2543804846629965883">"Ыңгайлаштыруу үчүн оверлей"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"Ыңгайлаштыруу үчүн оверлей элементи"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Инфозоок тутумунун администратору"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Иштетилген колдонмолор"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Өчүрүлгөн колдонмолор"</string>
@@ -937,4 +956,6 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Интернет үчүн тарифтик пландарыңыздын мөөнөтү бүттү"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Тарифтик пландарды көрүү"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Бүттү"</string>
+    <!-- no translation found for unsupported_intents_toast_text (3112314947877145848) -->
+    <skip />
 </resources>

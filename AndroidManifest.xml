@@ -198,6 +198,14 @@
             android:name=".common.CarSettingActivities$UnitsSettingsActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.REGIONAL_PREFERENCES_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.TEMPERATURE_UNIT_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_UnitsSettingsActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
@@ -237,6 +245,18 @@
             <intent-filter>
                 <action android:name="android.settings.NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.ALL_APPS_NOTIFICATION_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.VOICE_CONTROL_DO_NOT_DISTURB_MODE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="android.settings.AUTOMATIC_ZEN_RULE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.ZEN_MODE_PRIORITY_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
@@ -425,6 +445,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.settings.REQUEST_SET_AUTOFILL_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.INPUT_METHOD_SUBTYPE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
@@ -1157,6 +1181,10 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.settings.STORAGE_VOLUME_ACCESS_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.VPN_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

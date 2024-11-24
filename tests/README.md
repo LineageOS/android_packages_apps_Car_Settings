@@ -1,7 +1,6 @@
 # CarSettings Tests
 
 CarSettings tests are organized under various conveniently named directories.
-For additional context, please refer to go/carsettingsunittests.
 
 ## multivalent
 

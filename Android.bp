@@ -159,16 +159,66 @@ android_app {
     },
 }
 
-android_library {
-    name: "CarSettingsForUnitTesting",
+// Testing app (not lib) is required for deviceless testing (Robolectric).
+// This is an app and not a library due to resource processing differences.
+android_app {
+    name: "CarSettingsAppForMultivalentTesting",
     platform_apis: true,
     defaults: [
         "SettingsLibDefaults",
         "SettingsLib-search-defaults",
     ],
 
-    manifest: "tests/unit/AndroidManifest.xml",
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java",
+    ],
 
+    libs: [
+        "android.car",
+    ],
+
+    static_libs: [
+        "CarSettings-core",
+    ],
+
+    // Testing only resources must be applied last so they take precedence.
+    resource_dirs: [
+        "res",
+        "tests/multivalent/res",
+    ],
+
+    certificate: "platform",
+
+    optimize: {
+        enabled: false,
+    },
+
+    privileged: true,
+
+    dex_preopt: {
+        enabled: false,
+    },
+
+    dxflags: ["--multi-dex"],
+    // TODO(b/319708040): re-enable use_resource_processor
+    use_resource_processor: false,
+    lint: {
+        warning_checks: [
+            "FlaggedApi",
+        ],
+    },
+}
+
+android_library {
+    name: "CarSettingsLibForDeviceTesting",
+    platform_apis: true,
+    defaults: [
+        "SettingsLibDefaults",
+        "SettingsLib-search-defaults",
+    ],
+
+    manifest: "tests/multivalent/AndroidManifest.xml",
     srcs: carsettings_srcs,
 
     libs: [
@@ -197,7 +247,7 @@ android_library {
     // Testing only resources must be applied last so they take precedence.
     resource_dirs: [
         "res",
-        "tests/unit/res",
+        "tests/multivalent/res",
     ],
 
     optimize: {

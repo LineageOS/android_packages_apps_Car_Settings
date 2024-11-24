@@ -343,7 +343,26 @@
     <string name="unused_apps" msgid="648471933781010395">"प्रयोग नगरिएका एपहरू"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{प्रयोग नगरिएको # एप}other{प्रयोग नगरिएका # वटा एप}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"अनुमति रद्द गर्नुहोस् र ठाउँ खाली गर्नुहोस्"</string>
-    <string name="aspect_ratio_label" msgid="7298654990273812425">"एस्पेक्ट रेसियो (परीक्षणका क्रममा रहेको)"</string>
+    <!-- no translation found for aspect_ratio_label (5484863076085548807) -->
+    <skip />
+    <!-- no translation found for aspect_ratio_action_button (5581373962239508271) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_app_default (283669241296845522) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_fullscreen (7558176135316113) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_half_screen (6294133158286722632) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_device_size (960231007272059744) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_16_9 (2419220677608547650) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_3_2 (5245528023878893826) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_4_3 (6639743021314111820) -->
+    <skip />
+    <!-- no translation found for app_aspect_ratio_footer (7814071704357140611) -->
+    <skip />
     <string name="storage_type_internal" msgid="8918688427078709570">"%s इन्चको आन्तरिक भण्डारण"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"एपको पर्फर्मेन्सलाई प्राथमिकता दिन सिस्टमसम्बन्धी स्रोतहरू प्रयोग गर्नुहोस्"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटाको प्रयोग"</string>
@@ -637,7 +656,7 @@
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> मध्ये <xliff:g id="ID_1">%1$d</xliff:g> वस्तुका हकमा सिंक अन छ"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सबै वस्तुका हकमा सिंक अन छ"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"सिंक गर्ने सुविधा पूर्णतया अफ छ"</string>
-    <string name="sync_disabled" msgid="393531064334628258">"सिंक निष्क्रिय छ"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"सिंक अफ छ"</string>
     <string name="sync_error" msgid="6698021343089247914">"सिंकसम्बन्धी त्रुटि"</string>
     <string name="last_synced" msgid="4745124489150101529">"पछिल्लो पटक सिंक गरिएको मिति: <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"अहिले सिंक गर्दै..."</string>
@@ -937,4 +956,6 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"तपाईंको इन्टरनेट योजनाको म्याद सकिएको छ"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"योजनाहरू हेर्नुहोस्"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"पूरा भयो"</string>
+    <!-- no translation found for unsupported_intents_toast_text (3112314947877145848) -->
+    <skip />
 </resources>

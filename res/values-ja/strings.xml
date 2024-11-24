@@ -343,7 +343,26 @@
     <string name="unused_apps" msgid="648471933781010395">"使用されていないアプリ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# 個の使用していないアプリ}other{# 個の使用していないアプリ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"権限を削除して空き容量を増やす"</string>
-    <string name="aspect_ratio_label" msgid="7298654990273812425">"アスペクト比（試験運用版）"</string>
+    <!-- no translation found for aspect_ratio_label (5484863076085548807) -->
+    <skip />
+    <!-- no translation found for aspect_ratio_action_button (5581373962239508271) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_app_default (283669241296845522) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_fullscreen (7558176135316113) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_half_screen (6294133158286722632) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_device_size (960231007272059744) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_16_9 (2419220677608547650) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_3_2 (5245528023878893826) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_4_3 (6639743021314111820) -->
+    <skip />
+    <!-- no translation found for app_aspect_ratio_footer (7814071704357140611) -->
+    <skip />
     <string name="storage_type_internal" msgid="8918688427078709570">"%s（内部ストレージ）"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"アプリのパフォーマンスに優先的にシステム リソースを使用します"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"データ使用量"</string>
@@ -937,4 +956,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"インターネット プランの期限が切れています"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"プランを見る"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完了"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ご利用のデバイスはこの機能に対応していません"</string>
 </resources>

@@ -20,7 +20,6 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
@@ -52,7 +51,6 @@ public final class AppAspectRatioPreferenceController extends
     @Override
     public int getDefaultAvailabilityStatus() {
         return mAspectRatioManager.shouldShowAspectRatioSettingsForApp(mApplicationInfo)
-                && Flags.newFragmentAspectRatioFeature()
                 ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 

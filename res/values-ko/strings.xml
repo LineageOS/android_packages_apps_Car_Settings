@@ -343,7 +343,26 @@
     <string name="unused_apps" msgid="648471933781010395">"사용하지 않는 앱"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{사용하지 않는 앱 #개}other{사용하지 않는 앱 #개}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"권한을 삭제하고 여유 공간 확보"</string>
-    <string name="aspect_ratio_label" msgid="7298654990273812425">"가로세로 비율(실험적 기능)"</string>
+    <!-- no translation found for aspect_ratio_label (5484863076085548807) -->
+    <skip />
+    <!-- no translation found for aspect_ratio_action_button (5581373962239508271) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_app_default (283669241296845522) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_fullscreen (7558176135316113) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_half_screen (6294133158286722632) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_device_size (960231007272059744) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_16_9 (2419220677608547650) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_3_2 (5245528023878893826) -->
+    <skip />
+    <!-- no translation found for user_aspect_ratio_4_3 (6639743021314111820) -->
+    <skip />
+    <!-- no translation found for app_aspect_ratio_footer (7814071704357140611) -->
+    <skip />
     <string name="storage_type_internal" msgid="8918688427078709570">"내부 저장소의 %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"시스템 리소스를 사용하여 앱 성능 우선순위를 지정합니다."</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"데이터 사용량"</string>
@@ -421,7 +440,7 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi 제어를 사용하면 앱에서 Wi-Fi를 사용 또는 사용 중지하고, Wi-Fi 네트워크를 검색 및 연결하고, 네트워크를 추가 또는 제거하며, 로컬 전용 핫스팟을 시작하도록 허용합니다."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"더보기"</string>
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
-    <string name="location_toggle_title" msgid="836779750812064601">"위치 사용"</string>
+    <string name="location_toggle_title" msgid="836779750812064601">"위치 정보 사용"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"지정한 앱에서 자동차 위치 정보를 사용합니다."</string>
     <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"인포테인먼트 앱"</string>
     <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"앱이 내 위치 정보에 액세스할 수 있도록 허용"</string>
@@ -937,4 +956,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"인터넷 요금제가 만료되었습니다."</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"요금제 보기"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"완료"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"자동차가 이 기능을 지원하지 않습니다."</string>
 </resources>

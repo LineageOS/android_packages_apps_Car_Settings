@@ -35,10 +35,3 @@ flag {
     description: "Flag to display a single toggle for automatic local time in date/time page."
     bug: "326140783"
 }
-
-flag {
-    name: "new_fragment_aspect_ratio_feature"
-    namespace: "car_sys_exp"
-    description: "Flag to display the preference and the fragment for the aspect ratio page."
-    bug: "375471891"
-}

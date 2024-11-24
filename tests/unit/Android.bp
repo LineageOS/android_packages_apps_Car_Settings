@@ -21,7 +21,7 @@ android_test {
     ],
 
     static_libs: [
-        "CarSettingsForUnitTesting",
+        "CarSettingsLibForDeviceTesting",
         "android.car",
         "android.car.test.utils",
         "androidx.test.core",
