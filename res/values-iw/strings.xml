@@ -186,7 +186,7 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"מכשיר ללא שם"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"מכשירים מותאמים"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"התאמת מכשיר חדש"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth יופעל לצורך התאמה"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ה-Bluetooth יופעל כדי להתאים את המכשיר"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"לנתק את המכשיר?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"הרכב יתנתק מ-<xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"כתובת ה-Bluetooth של הרכב: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -343,26 +343,16 @@
     <string name="unused_apps" msgid="648471933781010395">"אפליקציות שמזמן לא השתמשת בהן"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{אפליקציה אחת שמזמן לא השתמשת בה}one{# אפליקציות שמזמן לא השתמשת בהן}two{# אפליקציות שמזמן לא השתמשת בהן}other{# אפליקציות שמזמן לא השתמשת בהן}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"הסרת הרשאות ופינוי נפח אחסון"</string>
-    <!-- no translation found for aspect_ratio_label (5484863076085548807) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_action_button (5581373962239508271) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_app_default (283669241296845522) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_fullscreen (7558176135316113) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_half_screen (6294133158286722632) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_device_size (960231007272059744) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_16_9 (2419220677608547650) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_3_2 (5245528023878893826) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_4_3 (6639743021314111820) -->
-    <skip />
-    <!-- no translation found for app_aspect_ratio_footer (7814071704357140611) -->
-    <skip />
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"יחס גובה-רוחב (ניסיוני)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"פתיחה"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"ברירת המחדל של האפליקציה"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"מסך מלא"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"חצי מסך"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"יחס הגובה-רוחב של המכשיר"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16:9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"‎3:2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4:3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"האפליקציה תופעל מחדש לאחר השינוי של יחס הגובה-רוחב. יכול להיות ששינויים שלא נשמרו יאבדו. אפליקציות מסוימות לא יעבדו בצורה אופטימלית בחלק מיחסי הגובה-רוחב."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s בשטח אחסון פנימי"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"שימוש במשאבי המערכת תוך מתן עדיפות לביצועי אפליקציות"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"שימוש בחבילת הגלישה"</string>
@@ -535,7 +525,7 @@
     <string name="reset_network_button_text" msgid="8374174455632765033">"איפוס ההגדרות"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"לאפס?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"האם לאפס את כל הגדרות הרשת? לא ניתן לבטל את הפעולה!"</string>
-    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"איפוס הגדרות"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"איפוס ההגדרות"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"הגדרות הרשת אופסו"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"איפוס העדפות האפליקציה"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"הפעולה תאפס את כל ההעדפות עבור:\n\n"<li>"אפליקציות מושבתות"</li>\n<li>"השבתת התראות של אפליקציות"</li>\n<li>"אפליקציות שהן ברירת המחדל לביצוע פעולות"</li>\n<li>"הגבלות של נתוני רקע לאפליקציות"</li>\n<li>"הגבלת הרשאות"</li>\n\n"נתוני האפליקציות לא יאבדו."</string>
@@ -962,6 +952,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"התוקף של חבילות הגלישה שלך פג"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"להצגת חבילות הגלישה"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"סיום"</string>
-    <!-- no translation found for unsupported_intents_toast_text (3112314947877145848) -->
-    <skip />
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"המכשיר שלך לא תומך בתכונה הזו"</string>
 </resources>

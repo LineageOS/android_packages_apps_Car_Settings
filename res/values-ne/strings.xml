@@ -343,26 +343,16 @@
     <string name="unused_apps" msgid="648471933781010395">"प्रयोग नगरिएका एपहरू"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{प्रयोग नगरिएको # एप}other{प्रयोग नगरिएका # वटा एप}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"अनुमति रद्द गर्नुहोस् र ठाउँ खाली गर्नुहोस्"</string>
-    <!-- no translation found for aspect_ratio_label (5484863076085548807) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_action_button (5581373962239508271) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_app_default (283669241296845522) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_fullscreen (7558176135316113) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_half_screen (6294133158286722632) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_device_size (960231007272059744) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_16_9 (2419220677608547650) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_3_2 (5245528023878893826) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_4_3 (6639743021314111820) -->
-    <skip />
-    <!-- no translation found for app_aspect_ratio_footer (7814071704357140611) -->
-    <skip />
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"एस्पेक्ट रेसियो (परीक्षणका क्रममा रहेको)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"खोल्नुहोस्"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"एपको डिफल्ट एस्पेक्ट रेसियो"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"फुल स्क्रिन"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"आधा स्क्रिन"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"डिभाइसको एस्पेक्ट रेसियो"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"१६:९"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"३:२"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"४:३"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"तपाईंले एस्पेक्ट रेसियो बदल्नुभयो भने एप रिस्टार्ट हुने छ। तपाईंले सेभ नगरेका परिवर्तनहरू गुम्न सक्छन्। केही एपहरू निश्चित एस्पेक्ट रेसियोका लागि अप्टिमाइज नगरिन सक्छन्।"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s इन्चको आन्तरिक भण्डारण"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"एपको पर्फर्मेन्सलाई प्राथमिकता दिन सिस्टमसम्बन्धी स्रोतहरू प्रयोग गर्नुहोस्"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटाको प्रयोग"</string>
@@ -956,6 +946,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"तपाईंको इन्टरनेट योजनाको म्याद सकिएको छ"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"योजनाहरू हेर्नुहोस्"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"पूरा भयो"</string>
-    <!-- no translation found for unsupported_intents_toast_text (3112314947877145848) -->
-    <skip />
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"तपाईंको कारमा यो सुविधा प्रयोग गर्न मिल्दैन"</string>
 </resources>

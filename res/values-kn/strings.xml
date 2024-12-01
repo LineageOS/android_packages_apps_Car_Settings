@@ -343,26 +343,16 @@
     <string name="unused_apps" msgid="648471933781010395">"ಬಳಕೆಯಾಗದ ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# ಬಳಕೆಯಾಗದ ಆ್ಯಪ್}one{# ಬಳಕೆಯಾಗದ ಆ್ಯಪ್‌ಗಳು}other{# ಬಳಕೆಯಾಗದ ಆ್ಯಪ್‌ಗಳು}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ಅನುಮತಿಗಳನ್ನು ತೆಗೆಯಿರಿ, ಸ್ಥಳ ಮುಕ್ತಗೊಳಿಸಿ"</string>
-    <!-- no translation found for aspect_ratio_label (5484863076085548807) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_action_button (5581373962239508271) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_app_default (283669241296845522) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_fullscreen (7558176135316113) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_half_screen (6294133158286722632) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_device_size (960231007272059744) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_16_9 (2419220677608547650) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_3_2 (5245528023878893826) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_4_3 (6639743021314111820) -->
-    <skip />
-    <!-- no translation found for app_aspect_ratio_footer (7814071704357140611) -->
-    <skip />
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"ದೃಶ್ಯಾನುಪಾತ (ಪ್ರಾಯೋಗಿಕ)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"ತೆರೆಯಿರಿ"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"ಆ್ಯಪ್‌ ಡೀಫಾಲ್ಟ್‌"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"ಪೂರ್ಣ ಪರದೆ"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"ಅರ್ಧ ಸ್ಕ್ರೀನ್‌"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"ಸಾಧನದ ದೃಶ್ಯಾನುಪಾತ"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16:9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"3:2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4:3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"ನೀವು ದೃಶ್ಯಾನುಪಾತವನ್ನು ಬದಲಾಯಿಸಿದಾಗ ಆ್ಯಪ್ ಮರುಪ್ರಾರಂಭವಾಗುತ್ತದೆ. ಸೇವ್ ಮಾಡದಿರುವ ಬದಲಾವಣೆಗಳನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು. ಕೆಲವು ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ದಿಷ್ಟ ದೃಶ್ಯಾನುಪಾತಗಳಿಗಾಗಿ ಆಪ್ಟಿಮೈಸ್ ಮಾಡದೇ ಇರಬಹುದು."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"ಆಂತರಿಕ ಸಂಗ್ರಹಣೆಯಲ್ಲಿ %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ಆ್ಯಪ್‌ನ ಕಾರ್ಯಕ್ಷಮತೆಗೆ ಆದ್ಯತೆ ನೀಡಲು ಸಿಸ್ಟಂ ಮಾಹಿತಿಯ ಮೂಲಗಳನ್ನು ಬಳಸುತ್ತದೆ"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ಡೇಟಾ ಬಳಕೆ"</string>
@@ -384,7 +374,7 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ಅಸಿಸ್ಟೆಂಟ್ ಮತ್ತು ಧ್ವನಿ ಇನ್‌ಪುಟ್"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ಪರದೆಯಿಂದ ಪಠ್ಯವನ್ನು ಬಳಸಿ"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಪರದೆ ವಿಷಯಗಳನ್ನು ಪಠ್ಯದಂತೆ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸಿ"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಸ್ಕ್ರೀನ್ ವಿಷಯಗಳನ್ನು ಪಠ್ಯದಂತೆ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸಿ"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಬಳಸಿ"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಪರದೆಯ ಚಿತ್ರವನ್ನು ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸಿ"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"ಧ್ವನಿ ಇನ್‌ಪುಟ್‌"</string>
@@ -563,7 +553,7 @@
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"ಸಮಯ ವಲಯ"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"ಸಮಯ ವಲಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"ದಿನಾಂಕ"</string>
-    <string name="date_time_set_date" msgid="2537494485643283230">"ದಿನಾಂಕವನ್ನು ಹೊಂದಿಸಿ"</string>
+    <string name="date_time_set_date" msgid="2537494485643283230">"ದಿನಾಂಕವನ್ನು ಸೆಟ್ ಮಾಡಿ"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"ವರ್ಣಮಾಲೆಯಾನುಸಾರ ವಿಂಗಡಿಸಿ"</string>
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"ಸಮಯ ವಲಯದ ಅನುಸಾರ ವಿಂಗಡಿಸಿ"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"ದಿನಾಂಕ"</string>
@@ -695,7 +685,7 @@
     <string name="permission_grant_in_use" msgid="2314262542396732455">"ಆ್ಯಪ್ ಅನ್ನು ಬಳಸುವಾಗ ಮಾತ್ರ"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"ಪ್ರತಿ ಬಾರಿ ಕೇಳಿ"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ಭದ್ರತೆ"</string>
-    <string name="security_settings_subtitle" msgid="2244635550239273229">"ಪರದೆ ಲಾಕ್"</string>
+    <string name="security_settings_subtitle" msgid="2244635550239273229">"ಸ್ಕ್ರೀನ್ ಲಾಕ್"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ಯಾವುದೂ ಇಲ್ಲ"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"ಪ್ಯಾಟರ್ನ್"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"ಪಿನ್"</string>
@@ -930,7 +920,7 @@
     <string name="captions_settings_text_size_large" msgid="5198207220911360512">"ದೊಡ್ಡದು"</string>
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"ತುಂಬಾ ದೊಡ್ಡದು"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"ಶೀರ್ಷಿಕೆಯ ಶೈಲಿ"</string>
-    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"ಆ್ಯಪ್ ಮೂಲಕ ಹೊಂದಿಸಿ"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"ಆ್ಯಪ್ ಮೂಲಕ ಸೆಟ್ ಮಾಡಿ"</string>
     <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"ಕಪ್ಪಿನ ಮೇಲೆ ಬಿಳಿ"</string>
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"ಬಿಳಿಯ ಮೇಲೆ ಕಪ್ಪು"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"ಕಪ್ಪಿನ ಮೇಲೆ ಹಳದಿ"</string>

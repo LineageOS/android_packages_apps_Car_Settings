@@ -343,26 +343,16 @@
     <string name="unused_apps" msgid="648471933781010395">"इस्तेमाल न किए जाने वाले ऐप्लिकेशन"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{इस्तेमाल न किया जाने वाला # ऐप्लिकेशन}one{इस्तेमाल न किया जाने वाला # ऐप्लिकेशन}other{इस्तेमाल न किए जाने वाले # ऐप्लिकेशन}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"अनुमतियां हटाएं और स्टोरेज खाली करें"</string>
-    <!-- no translation found for aspect_ratio_label (5484863076085548807) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_action_button (5581373962239508271) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_app_default (283669241296845522) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_fullscreen (7558176135316113) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_half_screen (6294133158286722632) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_device_size (960231007272059744) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_16_9 (2419220677608547650) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_3_2 (5245528023878893826) -->
-    <skip />
-    <!-- no translation found for user_aspect_ratio_4_3 (6639743021314111820) -->
-    <skip />
-    <!-- no translation found for app_aspect_ratio_footer (7814071704357140611) -->
-    <skip />
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"आसपेक्ट रेशियो (आज़माने के लिए)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"खोलें"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"ऐप्लिकेशन का डिफ़ॉल्ट आसपेक्ट रेशियो"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"फ़ुल स्क्रीन"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"हाफ़ स्क्रीन"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"डिवाइस का आसपेक्ट रेशियो"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16:9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"3:2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4:3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"आसपेक्ट रेशियो (लंबाई-चौड़ाई का अनुपात) बदलने पर ऐप्लिकेशन रीस्टार्ट हो जाएगा. इससे वे बदलाव मिट सकते हैं जिन्हें सेव नहीं किया गया है. कुछ ऐप्लिकेशन, सभी तरह के आसपेक्ट रेशियो के लिए ऑप्टिमाइज़ नहीं किए गए हैं."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"डिवाइस की मेमोरी में %s है"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ऐप्लिकेशन की परफ़ॉर्मेंस को प्राथमिकता देने के लिए, सिस्टम के संसाधनों का इस्तेमाल करें"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटा खर्च"</string>
@@ -956,6 +946,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"आपके इंटरनेट प्लान खत्म हो गए हैं"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"प्लान देखें"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"हो गया"</string>
-    <!-- no translation found for unsupported_intents_toast_text (3112314947877145848) -->
-    <skip />
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"आपकी गाड़ी में यह सुविधा काम नहीं करती है"</string>
 </resources>
