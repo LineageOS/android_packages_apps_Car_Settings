@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.pm.verify.domain.DomainVerificationUserState;
 import android.net.Uri;
 import android.os.UserHandle;
 
@@ -50,6 +51,8 @@ public abstract class AppLaunchSettingsBasePreferenceController<V extends Prefer
 
     protected final PackageManager mPm;
     private ApplicationsState.AppEntry mAppEntry;
+    private CarDomainVerificationManager mDomainVerificationManager;
+    private CarDomainVerificationManager.DomainVerificationStateChangeListener mStateChangeListener;
 
     public AppLaunchSettingsBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -63,6 +66,24 @@ public abstract class AppLaunchSettingsBasePreferenceController<V extends Prefer
             PackageManager packageManager) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mPm = packageManager;
+        mDomainVerificationManager = new CarDomainVerificationManager(context);
+    }
+
+    @Override
+    protected void onCreateInternal() {
+        super.onCreateInternal();
+        if (mStateChangeListener != null) {
+            mDomainVerificationManager.addListener(mStateChangeListener);
+        }
+    }
+
+    /**
+     * Sets a {@link CarDomainVerificationManager.DomainVerificationStateChangeListener} to listen
+     * to the DomainVerificationState change.
+     */
+    public void setDomainVerificationStateListener(
+            CarDomainVerificationManager.DomainVerificationStateChangeListener listener) {
+        mStateChangeListener = listener;
     }
 
     /** Sets the app entry associated with this settings screen. */
@@ -78,6 +99,13 @@ public abstract class AppLaunchSettingsBasePreferenceController<V extends Prefer
     /** Returns the package name. */
     public String getPackageName() {
         return mAppEntry.info.packageName;
+    }
+
+    /**
+     * Returns the DomainVerificationManager.
+     */
+    public CarDomainVerificationManager getDomainVerificationManager() {
+        return mDomainVerificationManager;
     }
 
     /** Returns the current user id. */
@@ -96,5 +124,25 @@ public abstract class AppLaunchSettingsBasePreferenceController<V extends Prefer
             }
         }
         return false;
+    }
+
+    /**
+     * Return whether the link handling is enabled.
+     */
+    public boolean isLinkHandlingEnabled() {
+        DomainVerificationUserState domainVerificationUserState =
+                getDomainVerificationManager().getDomainVerificationUserState(getPackageName());
+        return domainVerificationUserState != null
+                ? domainVerificationUserState.isLinkHandlingAllowed() : false;
+    }
+
+    /** Get the number of the specified links */
+    public int getLinksNumber(@DomainVerificationUserState.DomainState int state) {
+        final List<String> linkList = mDomainVerificationManager.getLinksList(getPackageName(),
+                state);
+        if (linkList == null) {
+            return 0;
+        }
+        return linkList.size();
     }
 }
