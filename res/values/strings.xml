@@ -908,6 +908,15 @@
         other {# supported links}
         }
     </string>
+    <!-- Title of preference showing the add links preference [CHAR LIMIT=40] -->
+    <string name="opening_links_add_links_title">Add links</string>
+    <!-- Summary of preference showing the add links preference [CHAR LIMIT=40] -->
+    <string name="opening_links_add_links_summary">
+        {count, plural,
+        =1    {# unhandled link}
+        other {# unhandled links}
+        }
+    </string>
     <!-- Main Settings screen setting option name to go into the apps settings [CHAR LIMIT=40] -->
     <string name="apps_settings_title">Apps</string>
     <!-- Title of recently opened apps category [CHAR LIMIT=60] -->

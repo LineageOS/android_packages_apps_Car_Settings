@@ -21,5 +21,6 @@
     android:title="@string/opening_links_verified_links_title"
     android:key="@string/psk_opening_links_verified_links">
     <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_opening_links_verified_links_list"/>
+        android:key="@string/pk_opening_links_verified_links_list"
+        settings:controller="com.android.car.settings.applications.managedomainurls.VerifiedLinkGroupPreferenceController"/>
 </PreferenceScreen>

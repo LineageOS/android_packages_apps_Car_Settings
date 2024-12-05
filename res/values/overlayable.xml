@@ -291,9 +291,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="top_level_divider_width"/>
       <item type="dimen" name="top_level_foreground_icon_inset"/>
       <item type="dimen" name="top_level_menu_width"/>
-      <item type="dimen" name="top_level_preference_title_margin_horizontal"/>
       <item type="dimen" name="top_level_preference_corner_radius"/>
       <item type="dimen" name="top_level_preference_min_height"/>
+      <item type="dimen" name="top_level_preference_title_margin_horizontal"/>
       <item type="dimen" name="top_level_recyclerview_margin_right"/>
       <item type="dimen" name="touch_target_size"/>
       <item type="dimen" name="two_action_preference_divider_width"/>
@@ -600,11 +600,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="integer" name="audio_route_toast_duration"/>
       <item type="integer" name="button_max_ems"/>
       <item type="integer" name="clear_content_timeout_ms"/>
+      <item type="integer" name="config_activity_embed_split_min_cur_dp"/>
       <item type="integer" name="config_networkAvoidBadWifi"/>
       <item type="integer" name="config_preference_onclick_debounce_ms"/>
       <item type="integer" name="config_qc_bluetooth_device_limit"/>
       <item type="integer" name="config_top_level_icon_shape"/>
-      <item type="integer" name="config_activity_embed_split_min_cur_dp"/>
       <item type="integer" name="content_weight"/>
       <item type="integer" name="data_usage_bytes_threshold_ems"/>
       <item type="integer" name="default_app_safe_icon_size"/>
@@ -1321,6 +1321,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="number_of_device_admins_none"/>
       <item type="string" name="okay"/>
       <item type="string" name="one"/>
+      <item type="string" name="opening_links_add_links_summary"/>
+      <item type="string" name="opening_links_add_links_title"/>
       <item type="string" name="opening_links_supported_links_summary"/>
       <item type="string" name="opening_links_supported_links_title"/>
       <item type="string" name="opening_links_verified_links_summary"/>
@@ -1738,7 +1740,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="app_storage_settings_details_fragment"/>
       <item type="xml" name="application_details_fragment"/>
       <item type="xml" name="application_launch_settings_fragment"/>
-      <item type="xml" name="application_launch_settings_fragment_new"/>
+      <item type="xml" name="application_launch_settings_fragment_updated"/>
       <item type="xml" name="applications_settings_fragment"/>
       <item type="xml" name="apps_fragment"/>
       <item type="xml" name="assistant_and_voice_fragment"/>

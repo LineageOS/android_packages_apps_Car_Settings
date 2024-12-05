@@ -28,6 +28,7 @@ import com.android.car.settings.common.Logger;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -125,5 +126,25 @@ public class CarDomainVerificationManager {
                 .filter(it -> it.getValue() == state)
                 .map(it -> it.getKey())
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * Update the recorded user selection for the given domains for the given domainSet
+     */
+    public void setDomainVerificationUserSelection(String pkg, Set<String> domainSet,
+            boolean isEnabled) {
+        if (mDomainVerificationManager == null) {
+            return;
+        }
+        DomainVerificationUserState userState = getDomainVerificationUserState(pkg);
+        if (userState == null) {
+            return;
+        }
+        try {
+            mDomainVerificationManager.setDomainVerificationUserSelection(userState.getIdentifier(),
+                    domainSet, isEnabled);
+        } catch (PackageManager.NameNotFoundException e) {
+            LOG.e("There is an exception that the package name cannot be found: " + e);
+        }
     }
 }
