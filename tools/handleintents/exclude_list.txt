@@ -1,0 +1,6 @@
+// This intents from this file will the excluded when checking for unhandled intents
+
+// This is handled by the developer options
+android.settings.APPLICATION_DEVELOPMENT_SETTINGS
+// This is handled by a GAS module
+android.settings.CREDENTIAL_PROVIDER

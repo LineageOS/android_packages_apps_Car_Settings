@@ -24,4 +24,5 @@ python3 $PROJECT_TOP/tools/handleintents/auto_add_intents.py \
     -p ACTION_ \
     -f $PROJECT_TOP/tools/handleintents/intent_format.txt \
     -t $PROJECT_TOP/tools/handleintents/target_string.txt \
+    -w $PROJECT_TOP/tools/handleintents/exclude_list.txt \
     -e

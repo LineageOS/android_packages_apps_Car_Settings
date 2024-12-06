@@ -59,6 +59,7 @@ def main():
     optional_args.add_argument('-f', '--formatFile', default='', help='The file contains the format for the filtered strings when added to the output file')
     optional_args.add_argument('-t', '--targetStringFile', default='', help='This file contains the target string after which the new content will be inserted.')
     optional_args.add_argument('-e', '--excludeHiddenIntents', action=argparse.BooleanOptionalAction, help='whether to exclude hidden apis.')
+    optional_args.add_argument('-w', '--excludeAllowListIntents', help='Input file path containing the intents that will be excluded.')
     args = parser.parse_args()
 
     new_strings = filter_new_strings(args)
@@ -71,8 +72,9 @@ def filter_new_strings(args):
         filtered_strings.extend(parse_input_file.filter_javadoc_fields(
             file, args.filterPattern, args.excludeHiddenIntents))
 
+    allow_list_strings = parse_input_file.filter_allow_list_intents(args.excludeAllowListIntents)
     current_strings = parse_output_file.filter_intent_actions(args.outputFile)
-    new_strings = sorted(set(filtered_strings) - set(current_strings))
+    new_strings = sorted(set(filtered_strings) - set(current_strings) - set(allow_list_strings))
     return new_strings
 
 def add_new_strings(args, new_strings):
