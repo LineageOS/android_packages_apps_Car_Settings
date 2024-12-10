@@ -18,10 +18,12 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import androidx.test.platform.app.InstrumentationRegistry;
+import static org.junit.Assert.assertNotNull;
+
+import android.content.Intent;
+
 import androidx.test.rule.ActivityTestRule;
 
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.DualPaneTestActivity;
 
 import org.junit.Rule;
@@ -41,16 +43,17 @@ public class DualPaneSettingsFragmentTest extends SettingsFragmentTestCase<DualP
     }
 
     @Test
-    public void launchFragment_otherFragment_opensFragment() throws Throwable {
+    public void launchFragment_startsActivity() throws Throwable {
         AtomicReference<TestSettingsFragment> otherFragment = new AtomicReference<>();
         getActivityTestRule().runOnUiThread(() -> {
             otherFragment.set(new TestSettingsFragment());
             mFragment.onCreate(null);
             mFragment.launchFragment(otherFragment.get());
         });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-        assertThat(
-                mFragment.getFragmentManager().findFragmentById(R.id.fragment_container)).isEqualTo(
-                otherFragment.get());
+        Intent intent = mActivity.getStartActivityListener().getLastValue();
+        assertNotNull(intent);
+        assertNotNull(intent.getComponent());
+        assertThat(intent.getComponent().getClassName()).isEqualTo(
+                SubSettingsActivity.class.getName());
     }
 }

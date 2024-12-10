@@ -27,15 +27,30 @@ import android.car.CarOccupantZoneManager.OccupantZoneConfigChangeListener;
 import android.car.CarOccupantZoneManager.OccupantZoneInfo;
 import android.car.media.CarAudioManager;
 import android.car.wifi.CarWifiManager;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.os.UserManager;
 import android.view.Display;
 
 import androidx.annotation.GuardedBy;
+import androidx.annotation.VisibleForTesting;
+
+import com.android.car.settings.activityembedding.ActivityEmbeddingRulesController;
+import com.android.car.settings.activityembedding.ActivityEmbeddingUtils;
+import com.android.car.settings.common.Logger;
+import com.android.car.settings.deeplink.DeepLinkHomepageActivity;
 
 /**
  * Application class for CarSettings.
  */
 public class CarSettingsApplication extends Application {
 
+    public static final String CAR_SETTINGS_PACKAGE_NAME = "com.android.car.settings";
+    private static final Logger LOG = new Logger(CarSettingsApplication.class);
     private CarOccupantZoneManager mCarOccupantZoneManager;
 
     private final Object mInfoLock = new Object();
@@ -96,7 +111,27 @@ public class CarSettingsApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        registerCarServiceLifecycleListener();
+        // Register activity embedding only when user is unlocked, which happens after boot has been
+        // completed. This is so that RRO values may be read properly for device configurations that
+        // uses RROs for embedding related configs, which are not available before boot completion.
+        ActivityEmbeddingRulesController controller = new ActivityEmbeddingRulesController(this);
+        if (getApplicationContext().getSystemService(UserManager.class).isUserUnlocked()) {
+            controller.initActivityEmbeddingRules();
+        } else {
+            IntentFilter filter = new IntentFilter(Intent.ACTION_USER_UNLOCKED);
+            getApplicationContext().registerReceiver(new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    controller.initActivityEmbeddingRules();
+                }
+            }, filter, 0);
+        }
+        updateDeepLinkHomepageActivityEnabledState();
+    }
 
+    @VisibleForTesting
+    void registerCarServiceLifecycleListener() {
         Car.createCar(this, /* handler= */ null , Car.CAR_WAIT_TIMEOUT_WAIT_FOREVER,
                 mCarServiceLifecycleListener);
     }
@@ -164,6 +199,23 @@ public class CarSettingsApplication extends Application {
             if (display != null) {
                 mOccupantZoneDisplayId = display.getDisplayId();
             }
+        }
+    }
+
+    /**
+     * Disable {@link DeepLinkHomepageActivity} if ActivityEmbedding is not enabled.
+     */
+    private void updateDeepLinkHomepageActivityEnabledState() {
+        int componentEnabledState = ActivityEmbeddingUtils.isEmbeddingActivityEnabled(this)
+                ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+        try {
+            getPackageManager().setComponentEnabledSetting(
+                    /* ComponentName */ new ComponentName(this, DeepLinkHomepageActivity.class),
+                    /* newState */ componentEnabledState,
+                    /* flags */ PackageManager.DONT_KILL_APP);
+        } catch (IllegalArgumentException exception) {
+            LOG.e("Unable to update enabled state for DeepLinkHomepageActivity: " + exception);
         }
     }
 }

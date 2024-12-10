@@ -99,7 +99,7 @@ public class CarSettingsApplicationTest {
         }).when(mCarOccupantZoneManager).registerOccupantZoneConfigChangeListener(any());
 
         mCarSettingsApplication = new CarSettingsApplication();
-        mCarSettingsApplication.onCreate();
+        mCarSettingsApplication.registerCarServiceLifecycleListener();
     }
 
     @After

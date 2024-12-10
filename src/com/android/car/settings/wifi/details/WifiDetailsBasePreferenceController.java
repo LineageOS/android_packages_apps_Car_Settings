@@ -26,6 +26,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.wifi.CarWifiManager;
 import com.android.car.settings.wifi.WifiUtil;
 import com.android.wifitrackerlib.WifiEntry;
 
@@ -45,6 +46,7 @@ public abstract class WifiDetailsBasePreferenceController<V extends Preference> 
 
     private WifiEntry mWifiEntry;
     private WifiInfoProvider mWifiInfoProvider;
+    private CarWifiManager mCarWifiManager;
 
     public WifiDetailsBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -58,6 +60,8 @@ public abstract class WifiDetailsBasePreferenceController<V extends Preference> 
             WifiEntry wifiEntry, WifiInfoProvider wifiInfoProvider) {
         mWifiEntry = wifiEntry;
         mWifiInfoProvider = wifiInfoProvider;
+        mCarWifiManager = new CarWifiManager(getContext(),
+                getFragmentController().getSettingsLifecycle());
         return this;
     }
 
@@ -110,5 +114,9 @@ public abstract class WifiDetailsBasePreferenceController<V extends Preference> 
         return WifiUtil.isWifiEntryConnectedOrConnecting(getWifiEntry())
                 ? AVAILABLE
                 : CONDITIONALLY_UNAVAILABLE;
+    }
+
+    protected CarWifiManager getCarWifiManager() {
+        return mCarWifiManager;
     }
 }

@@ -73,6 +73,7 @@
     <uses-permission android:name="android.permission.UWB_PRIVILEGED"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK" />
     <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_VOLUME"/>
     <uses-permission android:name="android.car.permission.CAR_IDENTIFICATION"/>
@@ -90,6 +91,10 @@
         android:requiredForAllUsers="true"
         android:directBootAware="true"
         android:supportsRtl="true">
+
+        <property
+            android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"
+            android:value="true" />
 
         <activity android:name=".admin.FactoryResetActivity"
             android:excludeFromRecents="true"
@@ -1050,6 +1055,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+        <activity android:name=".deeplink.DeepLinkHomepageActivity"
+                  android:exported="true"
+                  android:enabled="false"
+                  android:excludeFromRecents="true"
+                  android:launchMode="singleTask"
+                  android:taskAffinity=".deeplink.DeepLinkHomepageActivity"
+                  android:permission="android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK">
+            <intent-filter>
+                <action android:name="android.settings.SETTINGS_EMBED_DEEP_LINK_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".search.CarSearchResultTrampoline"
+                  android:theme="@android:style/Theme.NoDisplay"
+                  android:excludeFromRecents="true"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.car.settings.SEARCH_RESULT_TRAMPOLINE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".common.SettingsDefaultIntentActivity"

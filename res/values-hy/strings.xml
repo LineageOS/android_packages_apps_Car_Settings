@@ -101,7 +101,7 @@
     <string name="wifi_disconnected" msgid="4485699234859368137">"Կապ չկա"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"Ցանցն անհասանելի է"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Գաղտնաբառ"</string>
-    <string name="wifi_show_password" msgid="8423293211933521097">"Ցուցադրել գաղտնաբառը"</string>
+    <string name="wifi_show_password" msgid="8423293211933521097">"Ցույց տալ գաղտնաբառը"</string>
     <string name="wifi_no_network_name" msgid="6819604337231313594">"Մուտքագրեք ցանցի անունը"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Ցանցի անունը"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Մուտքագրեք SSID-ն"</string>
@@ -111,7 +111,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"Կապի արագությունը"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Հաճախականություն"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP հասցե"</string>
-    <string name="show_password" msgid="2074628020371139240">"Ցուցադրել գաղտնաբառը"</string>
+    <string name="show_password" msgid="2074628020371139240">"Ցույց տալ գաղտնաբառը"</string>
     <string name="default_network_name_summary" msgid="8148402439232464276">"Մուտքագրեք ցանցի անունը"</string>
     <string name="default_password_summary" msgid="8789594645836902982">"Մուտքագրեք գաղտնաբառը"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Կապը հաստատվեց"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Ցույց տալ բոլորը"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Որոնում"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"Միացված սարքեր"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Օգտագործել Bluetooth-ը"</string>

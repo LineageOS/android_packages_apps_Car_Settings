@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"सफलतापूर्वक जोडियो"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"सबै देखाउनुहोस्"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"खोजी गर्दै"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"कनेक्ट भएका डिभाइसहरू"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लुटुथ"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ब्लुटुथ प्रयोग गर्नुहोस्"</string>
@@ -753,12 +759,12 @@
     <string name="lockpassword_password_requires_letters" msgid="324864645474528299">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि # अक्षर समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि # वटा अक्षर समावेश हुनु पर्छ}}"</string>
     <string name="lockpassword_password_requires_lowercase" msgid="5373735547134824114">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि # लोवरकेसका अक्षर समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि # वटा लोवरकेसका अक्षर समावेश हुनु पर्छ}}"</string>
     <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि # अप्परकेसका अक्षर समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि # वटा अप्परकेसका अक्षर समावेश हुनु पर्छ}}"</string>
-    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि # अङ्क समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि # वटा अङ्क समावेश हुनु पर्छ}}"</string>
+    <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{कम्तीमा पनि # अङ्क समावेश हुनु पर्छ}other{कम्तीमा पनि # वटा अङ्क समावेश हुनु पर्छ}}"</string>
     <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि # विशेष चिन्ह समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि # वटा विशेष चिन्ह समावेश हुनु पर्छ}}"</string>
     <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि अक्षरबाहेकका # वर्ण समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि अक्षरबाहेकका # वटा वर्ण समावेश हुनु पर्छ}}"</string>
     <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि अङ्कबाहेकका # वर्ण समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि अङ्कबाहेकका # वटा वर्ण समावेश हुनु पर्छ}}"</string>
     <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि # भन्दा कम वर्ण समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि # भन्दा कम वर्ण समावेश हुनु पर्छ}}"</string>
-    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{अनिवार्य रूपमा कम्तीमा पनि # अङ्क समावेश हुनु पर्छ}other{अनिवार्य रूपमा कम्तीमा पनि # वटा अङ्क समावेश हुनु पर्छ}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{कम्तीमा पनि # अङ्क समावेश हुनु पर्छ}other{कम्तीमा पनि # वटा अङ्क समावेश हुनु पर्छ}}"</string>
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{अनिवार्य रूपमा # भन्दा कम वर्ण हुनु पर्छ}other{अनिवार्य रूपमा # भन्दा कम वर्ण हुनु पर्छ}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{अनिवार्य रूपमा # भन्दा कम अङ्क हुनु पर्छ}other{अनिवार्य रूपमा # भन्दा कम अङ्क हुनु पर्छ}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"बढ्दो, घट्दो क्रममा वा दोहोरिएका अङ्क हाल्न मिल्दैन"</string>

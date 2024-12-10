@@ -3,6 +3,12 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+/** TODO(b/368412197): DO NOT USE. Do not add new changes to `/unit`.
+    This will be removed in favior of same but multivalent capable tests.
+    Use `CarSettingsMultivalentDeviceTests` instead.  */
+
+// LINT.IfChange
+
 android_test {
     name: "CarSettingsUnitTests",
 
@@ -54,3 +60,5 @@ android_test {
     // TODO(b/319708040): re-enable use_resource_processor
     use_resource_processor: false,
 }
+
+// LINT.ThenChange(packages/apps/Car/Settings/tests/multivalent/Android.bp)

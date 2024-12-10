@@ -16,7 +16,7 @@
 
 package com.android.car.settings.common;
 
-import static com.android.car.settings.common.ExtraSettingsLoader.META_DATA_PREFERENCE_IS_TOP_LEVEL;
+import static com.android.car.settings.common.ExtraSettingsLoader.META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_TINTABLE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
@@ -74,7 +74,7 @@ public class ExtraSettingsUtil {
         if (icon == null) {
             return null;
         }
-        if (metaData.getBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL, /* defaultValue= */ false)) {
+        if (metaData.getBoolean(META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS, /* defaultValue= */ false)) {
             icon.mutate().setTintList(
                     context.getColorStateList(R.color.top_level_injected_icon_default));
             icon = new TopLevelIcon(context, icon, R.dimen.top_level_foreground_icon_inset);

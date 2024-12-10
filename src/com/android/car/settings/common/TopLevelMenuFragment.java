@@ -16,7 +16,13 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.ExtraSettingsLoader.META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS;
+
+import android.car.drivingstate.CarUxRestrictions;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,16 +32,19 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
+import com.android.car.settings.activityembedding.ActivityEmbeddingUtils;
+import com.android.car.settings.common.CarSettingActivities.HomepageActivity;
 import com.android.car.ui.recyclerview.CarUiRecyclerView;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.NavButtonMode;
+import com.android.car.ui.toolbar.ToolbarController;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -52,6 +61,7 @@ public class TopLevelMenuFragment extends SettingsFragment {
 
     private static final String KEY_SAVED_SELECTED_PREFERENCE_KEY = "saved_selected_preference_key";
 
+    private MenuItem mSearchButton;
     private String mSelectedPreferenceKey;
 
     @Override
@@ -61,21 +71,77 @@ public class TopLevelMenuFragment extends SettingsFragment {
     }
 
     @Override
+    protected List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mSearchButton);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mSearchButton = new MenuItem.Builder(getContext())
+                .setToSearch()
+                .setOnClickListener(i -> onSearchButtonClicked())
+                .setUxRestrictions(CarUxRestrictions.UX_RESTRICTIONS_NO_KEYBOARD)
+                .build();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updatePreferenceHighlight(getHeaderKeyFromActivity());
+    }
+
+    @Override
+    protected void setupToolbar(@NonNull ToolbarController toolbar) {
+        super.setupToolbar(toolbar);
+        toolbar.setTitle(R.string.settings_label);
+        if (ActivityEmbeddingUtils.isEmbeddingSplitActivated(getActivity())) {
+            toolbar.setLogo(R.drawable.ic_launcher_settings);
+            toolbar.setNavButtonMode(NavButtonMode.DISABLED);
+        } else {
+            toolbar.setLogo(null);
+            toolbar.setNavButtonMode(NavButtonMode.BACK);
+        }
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if (getToolbar() != null) {
+            setupToolbar(getToolbar());
+        }
         if (savedInstanceState != null
                 && savedInstanceState.getString(KEY_SAVED_SELECTED_PREFERENCE_KEY) != null) {
             updatePreferenceHighlight(
                     savedInstanceState.getString(KEY_SAVED_SELECTED_PREFERENCE_KEY));
         } else {
-            updatePreferenceHighlight(getActivity().getIntent()
-                    .getStringExtra(BaseCarSettingsActivity.META_DATA_KEY_HEADER_KEY));
+            if (mSelectedPreferenceKey != null) {
+                updatePreferenceHighlight(mSelectedPreferenceKey);
+            } else {
+                updatePreferenceHighlight(getHeaderKeyFromActivity());
+            }
+        }
+    }
+
+    @Nullable
+    private String getHeaderKeyFromActivity() {
+        if (getActivity() == null || !(getActivity() instanceof HomepageActivity)) {
+            return null;
+        }
+        return ((HomepageActivity) getActivity()).getTopLevelHeaderKey();
+    }
+
+    private void setSelectedPreferenceKey(@Nullable String key) {
+        mSelectedPreferenceKey = key;
+        if (getActivity() != null && getActivity() instanceof HomepageActivity) {
+            ((HomepageActivity) getActivity()).setTopLevelHeaderKey(key);
         }
     }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
+        setSelectedPreferenceKey(mSelectedPreferenceKey);
         outState.putString(KEY_SAVED_SELECTED_PREFERENCE_KEY, mSelectedPreferenceKey);
     }
 
@@ -95,32 +161,20 @@ public class TopLevelMenuFragment extends SettingsFragment {
         if (fragment.getArguments() != null) {
             preferenceKey = fragment.getArguments().getString(FRAGMENT_MENU_PREFERENCE_KEY);
         }
-        if (TextUtils.equals(getCurrentFragmentClass(), fragment.getClass().getName())
-                && TextUtils.equals(preferenceKey, mSelectedPreferenceKey)) {
-            // Do nothing - already at the location being navigated to.
-            return;
-        }
-        clearBackStack();
         updatePreferenceHighlight(preferenceKey);
         super.launchFragment(fragment);
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference.getFragment() == null) {
-            // No fragment provided - likely launching a new activity.
+        if (preference.getFragment() == null
+                && !preference.getExtras().getBoolean(META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS)) {
+            // Launching a new activity that is not a top level injected settings
             return super.onPreferenceTreeClick(preference);
         }
-        if (TextUtils.equals(getCurrentFragmentClass(), preference.getFragment())
-                && TextUtils.equals(preference.getKey(), mSelectedPreferenceKey)) {
-            // Do nothing - already at the location being navigated to.
-            return true;
-        }
-        clearBackStack();
         updatePreferenceHighlight(preference.getKey());
         return super.onPreferenceTreeClick(preference);
     }
-
     @Override
     protected HighlightablePreferenceGroupAdapter createHighlightableAdapter(
             PreferenceScreen preferenceScreen) {
@@ -130,7 +184,7 @@ public class TopLevelMenuFragment extends SettingsFragment {
     }
 
     private void updatePreferenceHighlight(String key) {
-        mSelectedPreferenceKey = key;
+        setSelectedPreferenceKey(key);
         if (!TextUtils.isEmpty(mSelectedPreferenceKey)) {
             requestPreferenceHighlight(mSelectedPreferenceKey);
         } else {
@@ -143,35 +197,16 @@ public class TopLevelMenuFragment extends SettingsFragment {
         return mSelectedPreferenceKey;
     }
 
-    @Nullable
-    private String getCurrentFragmentClass() {
-        FragmentActivity activity = getActivity();
-        if (activity == null) {
-            return null;
-        }
-        Fragment currentFragment =
-                activity.getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-        if (currentFragment == null) {
-            return null;
-        }
-        return currentFragment.getClass().getName();
-    }
-
-    private void clearBackStack() {
-        FragmentActivity activity = getActivity();
-        if (activity == null) {
+    private void onSearchButtonClicked() {
+        Intent intent = new Intent(Settings.ACTION_APP_SEARCH_SETTINGS)
+                .setPackage(getSettingsIntelligencePkgName(getContext()));
+        if (intent.resolveActivity(getContext().getPackageManager()) == null) {
             return;
         }
+        startActivity(intent);
+    }
 
-        // dismiss dialogs
-        List<Fragment> fragments = activity.getSupportFragmentManager().getFragments();
-        for (Fragment fragment : fragments) {
-            if (fragment instanceof DialogFragment) {
-                ((DialogFragment) fragment).dismiss();
-            }
-        }
-        // clear fragments
-        activity.getSupportFragmentManager().popBackStackImmediate(/* name= */ null,
-                FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    private String getSettingsIntelligencePkgName(Context context) {
+        return context.getString(R.string.config_settingsintelligence_package_name);
     }
 }

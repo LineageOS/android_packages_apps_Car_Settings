@@ -16,7 +16,7 @@
 
 package com.android.car.settings.common;
 
-import static com.android.car.settings.common.ExtraSettingsLoader.META_DATA_PREFERENCE_IS_TOP_LEVEL;
+import static com.android.car.settings.common.ExtraSettingsLoader.META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_KEY_ORDER;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON_URI;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
@@ -235,7 +235,7 @@ public class ExtraSettingsLoaderTest {
 
         assertThat(preferenceToBundleMap).hasSize(1);
         for (Bundle b : preferenceToBundleMap.values()) {
-            assertThat(b.getBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL)).isTrue();
+            assertThat(b.getBoolean(META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS)).isTrue();
         }
     }
 

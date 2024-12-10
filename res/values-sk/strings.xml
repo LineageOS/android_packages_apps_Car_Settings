@@ -86,7 +86,7 @@
     <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Aj tak vypnúť"</string>
     <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Internet vo vozidle je vypnutý. Môže to spôsobiť, že niektoré funkcie alebo aplikácie vozidla prestanú fungovať. Kľúčové údaje, ktoré vyžaduje prevádzka vozidla, sa budú ďalej zdieľať s výrobcom vozidla."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"%1$s využité %2$s – %3$s"</string>
-    <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Pripojenie k inej sieti"</string>
+    <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Pripojiť k inej sieti"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Nastavenia siete"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Zapína sa Wi‑Fi…"</string>
@@ -141,7 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Vyhľadávanie sietí Wi‑Fi je zapnuté"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automaticky prepnúť na mobilné dáta"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Používať mobilné dáta, keď Wi‑Fi nemá prístup k internetu. Za využité dáta vám môžu byť účtované poplatky."</string>
-    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Vyhľadať a pripojiť sa k sieťam Wi-Fi"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"Vyhľadávať siete Wi-Fi a pripájať sa k nim"</string>
     <string name="learn_more" msgid="8214605928933358604">"Ďalšie informácie"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Názov hotspotu"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Zapína sa <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Pripojenie je úspešné"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Zobraziť všetko"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Vyhľadávanie"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"Pripojené zariadenia"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Používať Bluetooth"</string>

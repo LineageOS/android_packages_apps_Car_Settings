@@ -25,9 +25,8 @@ import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.DualPaneTestActivity;
+import com.android.car.settings.testutils.SinglePaneTestActivity;
 import com.android.car.settings.testutils.TestSettingsFragment1;
-import com.android.car.settings.testutils.TestSettingsFragment2;
 import com.android.car.settings.testutils.TestTopLevelMenuFragment;
 
 import org.junit.Before;
@@ -40,17 +39,15 @@ import org.mockito.MockitoAnnotations;
 public class TopLevelMenuFragmentTest {
 
     private TopLevelMenuFragment mFragment;
-    private DualPaneTestActivity mActivity;
     private FragmentManager mFragmentManager;
 
     @Rule
-    public ActivityTestRule<DualPaneTestActivity> mActivityTestRule =
-            new ActivityTestRule<>(DualPaneTestActivity.class);
+    public ActivityTestRule<SinglePaneTestActivity> mActivityTestRule =
+            new ActivityTestRule<>(SinglePaneTestActivity.class);
 
     @Before
     public void setUp() throws Throwable {
         MockitoAnnotations.initMocks(this);
-        mActivity = mActivityTestRule.getActivity();
         mFragmentManager = mActivityTestRule.getActivity().getSupportFragmentManager();
         setUpFragment();
     }
@@ -72,33 +69,12 @@ public class TopLevelMenuFragmentTest {
         assertThat(mFragment.getSelectedPreferenceKey()).isEqualTo("pk_test_fragment_1");
     }
 
-    @Test
-    public void onSamePreferenceTapped_noDuplicateEntry() throws Throwable {
-        mActivityTestRule.runOnUiThread(() -> {
-            mFragment.getPreferenceScreen().getPreference(0).performClick();
-            mFragment.getPreferenceScreen().getPreference(0).performClick();
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-        assertThat(getCurrentFragment().getClass()).isEqualTo(TestSettingsFragment1.class);
-        assertThat(mFragmentManager.getBackStackEntryCount()).isEqualTo(1);
-    }
-
-    @Test
-    public void onDifferentPreferenceTapped_clearsBackStack() throws Throwable {
-        mActivityTestRule.runOnUiThread(() -> {
-            mFragment.getPreferenceScreen().getPreference(0).performClick();
-            mFragment.getPreferenceScreen().getPreference(1).performClick();
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-        assertThat(getCurrentFragment().getClass()).isEqualTo(TestSettingsFragment2.class);
-        assertThat(mFragmentManager.getBackStackEntryCount()).isEqualTo(1);
-    }
-
     private void setUpFragment() throws Throwable {
         String topLevelMenuTag = "top_level_menu";
         mActivityTestRule.runOnUiThread(() -> {
             mFragmentManager.beginTransaction()
-                    .replace(R.id.top_level_menu, new TestTopLevelMenuFragment(), topLevelMenuTag)
+                    .replace(R.id.fragment_container, new TestTopLevelMenuFragment(),
+                            topLevelMenuTag)
                     .commitNow();
         });
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();

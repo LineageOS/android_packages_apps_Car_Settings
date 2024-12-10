@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"החיבור הצליח"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"הצגת הכול"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"מחפש"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"מכשירים מחוברים"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"שימוש ב-Bluetooth"</string>
@@ -758,7 +764,7 @@
     <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו אות}one{צריכה להכיל לפחות # תווים שאינם אותיות}two{צריכה להכיל לפחות # תווים שאינם אותיות}other{צריכה להכיל לפחות # תווים שאינם אותיות}}"</string>
     <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{צריכה להכיל לפחות תו אחד שאינו ספרה}one{צריכה להכיל לפחות # תווים שאינם ספרות}two{צריכה להכיל לפחות # תווים שאינם ספרות}other{צריכה להכיל לפחות # תווים שאינם ספרות}}"</string>
     <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{צריכה להכיל לפחות תו אחד}one{צריכה להכיל לפחות # תווים}two{צריכה להכיל לפחות # תווים}other{צריכה להכיל לפחות # תווים}}"</string>
-    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{צריכה להכיל לפחות ספרה אחת}one{צריכה להכיל לפחות # ספרות}two{צריכה להכיל לפחות # ספרות}other{צריכה להכיל לפחות # ספרות}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{צריך להכיל לפחות ספרה אחת}one{צריך להכיל לפחות # ספרות}two{צריך להכיל לפחות # ספרות}other{צריך להכיל לפחות # ספרות}}"</string>
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{צריכה להיות קצרה מתו אחד}one{צריכה להיות קצרה מ-# תווים}two{צריכה להיות קצרה מ-# תווים}other{צריכה להיות קצרה מ-# תווים}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{צריכה להיות קצרה מספרה אחת}one{צריכה להיות קצרה מ-# ספרות}two{צריכה להיות קצרה מ-# ספרות}other{צריכה להיות קצרה מ-# ספרות}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"אין להגדיר רצף ספרות עולה, יורד או חוזר"</string>

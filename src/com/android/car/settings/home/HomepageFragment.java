@@ -51,8 +51,10 @@ public class HomepageFragment extends SettingsFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        // TODO(b/376742190): deprecate this class as only TopLevelMenuFragment is used with
+        //  ActivityEmbeddings.
         // TODO: Re-enable suggestions once more use cases are supported.
-        // use(SuggestionsPreferenceController.class, R.string.pk_suggestions).setLoaderManager(
+        //  use(SuggestionsPreferenceController.class, R.string.pk_suggestions).setLoaderManager(
         //        LoaderManager.getInstance(/* owner= */ this));
     }
 

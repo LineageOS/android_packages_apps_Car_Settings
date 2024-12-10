@@ -17,9 +17,13 @@
 
 <resources>
     <!-- Whether all activities should be single pane views or not. -->
-    <bool name="config_global_force_single_pane">true</bool>
-    <!-- Fully qualified class name for the homepage fragment. -->
-    <string name="config_homepage_fragment_class" translatable="false">com.android.car.settings.home.HomepageFragment</string>
+    <bool name="config_global_force_single_pane">false</bool>
+    <!-- Class name for the dual pane homepage placeholder activity class. -->
+    <string name="config_homepage_placeholder_class" translatable="false">
+        com.android.car.settings.common.CarSettingActivities$BluetoothSettingsActivity</string>
+    <!-- Top-level preference key for config_homepage_placeholder_class -->
+    <string name="config_homepage_placeholder_preference_key" translatable="false">
+        @string/pk_bluetooth_settings_entry</string>
     <!-- Whether to show the launcher icon for settings home or not. -->
     <bool name="config_enable_home_settings_icon">true</bool>
     <!-- Whether system_update_settings should be shown or not. -->
@@ -32,6 +36,9 @@
     <bool name="config_show_premium_sms">true</bool>
     <!-- Whether exit button in settings' root action bar should be shown or not -->
     <bool name="config_show_settings_root_exit_icon">true</bool>
+    <!-- Class name for the homepage activity alias used in AndroidManifest. -->
+    <string name="config_homepage_activity_alias_name" translatable="false">
+        com.android.car.settings.Settings_Launcher_Homepage</string>
     <!--
         Array of bluetooth device major classes that should be used for unbonded
         device filter.
@@ -113,7 +120,7 @@
         Whether to allow chevrons on top-level preferences when enabled for
         car-ui-lib preferences.
     -->
-    <bool name="config_top_level_enable_chevrons">true</bool>
+    <bool name="config_top_level_enable_chevrons">false</bool>
     <!-- Whether to show top level icon background. When this is set to be true, adjust the value
          for top_level_foreground_icon_inset accordingly. -->
     <bool name="config_show_top_level_icon_background">false</bool>
@@ -206,4 +213,7 @@
     -->
     <string-array name="config_debug_support_devices_exclude_car">
     </string-array>
+
+    <!-- Smallest pixel value of WIDTH of the window when dual pane should be used -->
+    <integer name="config_activity_embed_split_min_cur_dp">1400</integer>
 </resources>

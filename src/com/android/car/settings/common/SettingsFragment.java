@@ -16,7 +16,7 @@
 
 package com.android.car.settings.common;
 
-import static com.android.car.settings.common.BaseCarSettingsActivity.META_DATA_KEY_SINGLE_PANE;
+import static com.android.car.settings.deeplink.DeepLinkHomepageActivity.EXTRA_TARGET_SECONDARY_CONTAINER;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
@@ -43,7 +43,9 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
+import com.android.car.settings.activityembedding.ActivityEmbeddingUtils;
 import com.android.car.ui.baselayout.Insets;
 import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.recyclerview.CarUiRecyclerView;
@@ -217,9 +219,26 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         toolbar.setTitle(getPreferenceScreen().getTitle());
         toolbar.setMenuItems(items);
         toolbar.setLogo(null);
-        if (getActivity().getIntent().getBooleanExtra(META_DATA_KEY_SINGLE_PANE, false)) {
+        if (shouldDisableBackButton()) {
+            toolbar.setNavButtonMode(NavButtonMode.DISABLED);
+        } else {
             toolbar.setNavButtonMode(NavButtonMode.BACK);
         }
+    }
+
+    private boolean shouldDisableBackButton() {
+        if (getActivity() == null || getActivity().getIntent() == null) {
+            return false;
+        }
+        if (getFragmentManager().getBackStackEntryCount() > 1
+                || getActivity().getIntent().getBooleanExtra(EXTRA_TARGET_SECONDARY_CONTAINER,
+                false)) {
+            return false;
+        }
+        boolean startedBySettings = getActivity().getIntent().getAction() == null
+                || CarSettingsApplication.CAR_SETTINGS_PACKAGE_NAME.equals(
+                        getActivity().getLaunchedFromPackage());
+        return startedBySettings && ActivityEmbeddingUtils.isEmbeddingSplitActivated(getActivity());
     }
 
     @Override

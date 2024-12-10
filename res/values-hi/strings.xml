@@ -132,8 +132,8 @@
     <string name="wifi_dns" msgid="1841448353154932801">"डीएनएस"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 पते"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"गेटवे"</string>
-    <string name="wifi_preferences_title" msgid="772788844257225510">"वाई-फ़ाई से जुड़ी पसंद"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"वाई-फ़ाई अपने आप चालू करें"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"वाई-फ़ाई की सेटिंग"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"वाई-फ़ाई अपने-आप चालू हो जाए"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"सेव किए गए अच्छी क्वालिटी के नेटवर्क पास होने पर वाई-फ़ाई अपने आप चालू हो जाएगा, जैसे कि आपके घर का नेटवर्क"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"\'जगह की जानकारी\' बंद होने से यह सुविधा उपलब्ध नहीं है. "<annotation id="link">"जगह की जानकारी"</annotation>" चालू करें."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"वाई-फ़ाई नेटवर्क ढूंंढने की सुविधा चालू करें?"</string>
@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"कनेक्शन कामयाब रहा"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"सभी दिखाएं"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"खोजना"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"कनेक्ट किए गए डिवाइस"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लूटूथ"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ब्लूटूथ का इस्तेमाल करें"</string>
