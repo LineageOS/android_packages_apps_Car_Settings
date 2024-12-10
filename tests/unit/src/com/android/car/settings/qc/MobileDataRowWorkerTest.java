@@ -22,8 +22,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
 public class MobileDataRowWorkerTest extends MobileDataBaseWorkerTestCase<MobileDataRowWorker> {
+
     @Override
     protected MobileDataRowWorker getWorker() {
-        return new MobileDataRowWorker(mContext, SettingsQCRegistry.MOBILE_DATA_ROW_URI);
+        MobileDataRowWorker mobileDataRowWorker =
+                new MobileDataRowWorker(mContext, SettingsQCRegistry.MOBILE_DATA_ROW_URI);
+        mobileDataRowWorker.setQCItem(new MobileDataRow(mContext));
+        return mobileDataRowWorker;
     }
 }

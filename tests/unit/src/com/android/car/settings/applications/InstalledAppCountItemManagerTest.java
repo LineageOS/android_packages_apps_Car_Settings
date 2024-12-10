@@ -27,6 +27,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.UserManager;
 
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -50,11 +51,16 @@ public class InstalledAppCountItemManagerTest {
     private ApplicationInfo mMockApplicationInfo;
     @Mock
     private PackageManager mMockPm;
+    @Mock
+    private UserManager mMockUm;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
+        when(mContext.getPackageManager()).thenReturn(mMockPm);
+        when(mContext.getSystemService(UserManager.class)).thenReturn(mMockUm);
+        when(mMockUm.isUserForeground()).thenReturn(true);
         mInstalledAppCountItemManager = new InstalledAppCountItemManager(mContext);
     }
 
@@ -70,7 +76,6 @@ public class InstalledAppCountItemManagerTest {
         mMockApplicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
         List<ResolveInfo> intents = new ArrayList<>();
         intents.add(new ResolveInfo());
-        when(mContext.getPackageManager()).thenReturn(mMockPm);
         when(mMockPm.queryIntentActivitiesAsUser(any(), anyInt(), anyInt())).thenReturn(intents);
 
         assertThat(mInstalledAppCountItemManager.shouldCountApp(mMockApplicationInfo)).isTrue();
@@ -80,7 +85,6 @@ public class InstalledAppCountItemManagerTest {
     public void isSystemApp_userCannotOpen_isNotCounted() {
         mMockApplicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
         List<ResolveInfo> intents = new ArrayList<>();
-        when(mContext.getPackageManager()).thenReturn(mMockPm);
         when(mMockPm.queryIntentActivitiesAsUser(any(), anyInt(), anyInt())).thenReturn(intents);
 
         assertThat(mInstalledAppCountItemManager.shouldCountApp(mMockApplicationInfo)).isFalse();

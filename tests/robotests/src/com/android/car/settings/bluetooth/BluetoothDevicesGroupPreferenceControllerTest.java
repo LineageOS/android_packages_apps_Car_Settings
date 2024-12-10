@@ -31,11 +31,12 @@ import android.content.Context;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
-import com.android.car.settings.testutils.ShadowBluetoothPan;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
@@ -47,10 +48,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.util.ReflectionHelpers;
 
@@ -58,8 +56,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /** Unit test for {@link BluetoothDevicesGroupPreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowBluetoothAdapter.class, ShadowBluetoothPan.class})
+@RunWith(AndroidJUnit4.class)
 public class BluetoothDevicesGroupPreferenceControllerTest {
 
     @Mock
@@ -79,7 +76,7 @@ public class BluetoothDevicesGroupPreferenceControllerTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        Context context = RuntimeEnvironment.application;
+        Context context = InstrumentationRegistry.getInstrumentation().getContext();
 
         mLocalBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */
                 null);

@@ -539,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Format 24 jam"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Gunakan format 24 jam"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Masa"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Tetapkan masa"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Tetapkan jam"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Zon waktu"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Pilih zon waktu"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Tarikh"</string>
@@ -548,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Isih mengikut zon waktu"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Tarikh"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Masa"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Tarikh dan masa automatik mungkin menggunakan sumber seperti lokasi dan rangkaian mudah alih untuk menentukan tarikh, masa dan zon waktu."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Gunakan lokasi kereta anda untuk menetapkan tarikh dan masa secara automatik. Hanya berfungsi jika lokasi dihidupkan."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Teruskan"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Tukar dalam tetapan"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Lokasi anda dimatikan. Masa automatik mungkin tidak berfungsi."</string>
     <string name="user_admin" msgid="1535484812908584809">"Pentadbir"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Dilog masuk sebagai pentadbir"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Berikan kebenaran kepada pentadbir?"</string>
@@ -792,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Untuk melihat peranti anda, hidupkan Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Untuk menggandingkan peranti, buka tetapan Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Tunjukkan batas reka letak"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Pentadbir sistem maklumat hibur"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Apl yang diaktifkan"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Apl yang dinyahaktifkan"</string>

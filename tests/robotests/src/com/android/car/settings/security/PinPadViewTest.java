@@ -23,6 +23,8 @@ import static org.mockito.MockitoAnnotations.initMocks;
 
 import android.view.View;
 
+import androidx.test.runner.AndroidJUnit4;
+
 import com.android.car.settings.R;
 
 import org.junit.Before;
@@ -30,12 +32,11 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.Arrays;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class PinPadViewTest {
 
     private static int[] sAllKeys =

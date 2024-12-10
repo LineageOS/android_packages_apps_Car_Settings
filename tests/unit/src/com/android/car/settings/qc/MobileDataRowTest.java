@@ -20,6 +20,8 @@ import static com.android.car.qc.QCItem.QC_ACTION_TOGGLE_STATE;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -63,7 +65,7 @@ public class MobileDataRowTest extends BaseSettingsQCItemTestCase {
         when(mContext.getSystemService(TelephonyManager.class)).thenReturn(mTelephonyManager);
         mMobileDataRow = new TestMobileDataRow(mContext);
         mMobileDataRow.setSubscription(mDataSubscription);
-        when(mDataSubscription.isDataSubscriptionInactive()).thenReturn(false);
+        when(mDataSubscription.isDataSubscriptionInactive()).thenReturn(true);
     }
 
     @Test
@@ -76,21 +78,22 @@ public class MobileDataRowTest extends BaseSettingsQCItemTestCase {
     }
 
     @Test
-    public void getQCItem_mobileDataEnabled_switchChecked() {
+    public void getQCItem_mobileDataDisabled_nullSubtitleAndActionText() {
         when(mDataUsageController.isMobileDataSupported()).thenReturn(true);
-        when(mTelephonyManager.getNetworkOperatorName()).thenReturn(TEST_NETWORK_NAME);
-        when(mDataUsageController.isMobileDataEnabled()).thenReturn(true);
+        when(mDataUsageController.isMobileDataEnabled()).thenReturn(false);
         QCRow row = getRow();
-        assertThat(row.getEndItems().get(0).isChecked()).isTrue();
+        assertEquals(mContext.getString(R.string.mobile_network_state_off), row.getSubtitle());
+        assertNull(row.getActionText());
     }
 
     @Test
-    public void getQCItem_noNetworkName_nullSubtitle() {
+    public void getQCItem_noNetworkName_dataSubscriptionFlagOn_validSubtitle() {
         when(mDataUsageController.isMobileDataSupported()).thenReturn(true);
         when(mTelephonyManager.getNetworkOperatorName()).thenReturn("");
         when(mDataUsageController.isMobileDataEnabled()).thenReturn(true);
         QCRow row = getRow();
-        assertThat(row.getSubtitle()).isNull();
+        assertEquals(mContext.getString(
+                R.string.connectivity_inactive_prompt), row.getSubtitle());
     }
 
     @Test

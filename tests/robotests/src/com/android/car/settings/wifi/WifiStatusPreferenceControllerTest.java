@@ -28,6 +28,8 @@ import android.net.wifi.WifiManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.Lifecycle.Event;
 import androidx.preference.Preference;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -37,16 +39,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
-import org.robolectric.annotation.Config;
 
 import java.util.Arrays;
 import java.util.List;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarWifiManager.class})
+@RunWith(AndroidJUnit4.class)
 public class WifiStatusPreferenceControllerTest {
     private static final List<Integer> VISIBLE_STATES = Arrays.asList(
             WifiManager.WIFI_STATE_DISABLED,
@@ -62,7 +60,7 @@ public class WifiStatusPreferenceControllerTest {
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
         Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
                 PackageManager.FEATURE_WIFI, true);
         mPreference = new Preference(mContext);

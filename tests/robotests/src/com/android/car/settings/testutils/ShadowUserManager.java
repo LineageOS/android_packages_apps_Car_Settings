@@ -39,13 +39,14 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
     private static boolean sCanAddMoreUsers = true;
     private static Map<Integer, List<UserInfo>> sProfiles = new ArrayMap<>();
     private static Map<Integer, Bitmap> sUserIcons = new ArrayMap<>();
+    private static int sMaxSupportedUsers = 1;
 
     @Implementation
     protected int[] getProfileIdsWithDisabled(int userId) {
         if (sProfiles.containsKey(userId)) {
             return sProfiles.get(userId).stream().mapToInt(userInfo -> userInfo.id).toArray();
         }
-        return new int[]{};
+        return new int[] {};
     }
 
     @Implementation
@@ -56,7 +57,7 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
         return Collections.emptyList();
     }
 
-    /** Adds a profile to be returned by {@link #getProfiles(int)}. **/
+    /** Adds a profile to be returned by {@link #getProfiles(int)}. */
     public void addProfile(
             int userHandle, int profileUserHandle, String profileName, int profileFlags) {
         sProfiles.putIfAbsent(userHandle, new ArrayList<>());
@@ -100,11 +101,21 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
         sUserIcons.put(userId, icon);
     }
 
+    public static void setMaxSupportedUsersCount(int maxSupportedUsers) {
+        sMaxSupportedUsers = maxSupportedUsers;
+    }
+
+    @Implementation
+    protected static int getMaxSupportedUsers() {
+        return sMaxSupportedUsers;
+    }
+
     @Resetter
     public static void reset() {
         org.robolectric.shadows.ShadowUserManager.reset();
         sIsHeadlessSystemUserMode = true;
         sCanAddMoreUsers = true;
+        sMaxSupportedUsers = 1;
         sProfiles.clear();
         sUserIcons.clear();
     }

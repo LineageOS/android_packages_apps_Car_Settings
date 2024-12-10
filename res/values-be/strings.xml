@@ -82,9 +82,9 @@
     <string name="data_usage_warning_save_title" msgid="2900544287239037695">"Захаваць"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"Сетка OEM"</string>
     <string name="network_and_internet_vehicle_internet_title" msgid="2518848595673002736">"Інтэрнэт у аўтамабілі"</string>
-    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Выключэнне інтэрнэту ў аўтамабілі можа заблакіраваць работу пэўных функцый або праграм аўтамабіля.\n\nМінімальны аб\'ём даных, патрэбны для эксплуатацыі аўтамабіля, будзе працягваць перадавацца вытворцу аўтамабіля."</string>
+    <string name="network_and_internet_oem_network_dialog_description" msgid="4469178879867702066">"Выключэнне інтэрнэту ў аўтамабілі можа заблакіраваць работу пэўных функцый або праграм аўтамабіля.\n\nМінімальны аб’ём даных, патрэбны для эксплуатацыі аўтамабіля, будзе працягваць перадавацца вытворцу аўтамабіля."</string>
     <string name="network_and_internet_oem_network_dialog_confirm_label" msgid="2630033932472996255">"Усё роўна выключыць"</string>
-    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Інтэрнэту ў аўтамабілі выключаны. Гэта можа заблакіраваць работу пэўных функцый або праграм аўтамабіля. Мінімальны аб\'ём даных, патрэбны для эксплуатацыі аўтамабіля, будзе працягваць перадавацца вытворцу аўтамабіля."</string>
+    <string name="network_and_internet_oem_network_disabled_footer" msgid="3529208167627034245">"Інтэрнэту ў аўтамабілі выключаны. Гэта можа заблакіраваць работу пэўных функцый або праграм аўтамабіля. Мінімальны аб’ём даных, патрэбны для эксплуатацыі аўтамабіля, будзе працягваць перадавацца вытворцу аўтамабіля."</string>
     <string name="network_and_internet_data_usage_time_range_summary" msgid="1792995626433410056">"З %2$s да %3$s выкарыстана %1$s"</string>
     <string name="network_and_internet_join_other_network_title" msgid="7126831320010062712">"Далучыцца да іншай сеткі"</string>
     <string name="network_and_internet_network_preferences_title" msgid="2983548049081168876">"Параметры сеткі"</string>
@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Прыярытэтны дыяпазон 5,0 ГГц"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 і 5 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Выберыце дыяпазон Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Хот-спот Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Хот-спот"</string>
@@ -500,7 +499,7 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Загрузка…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Цяпер вы ў # кроку ад таго, каб стаць распрацоўшчыкам.}one{Цяпер вы ў # кроку ад таго, каб стаць распрацоўшчыкам.}few{Цяпер вы ў # кроках ад таго, каб стаць распрацоўшчыкам.}many{Цяпер вы ў # кроках ад таго, каб стаць распрацоўшчыкам.}other{Цяпер вы ў # кроку ад таго, каб стаць распрацоўшчыкам.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Цяпер вы распрацоўшчык!"</string>
-    <string name="show_dev_already" msgid="1678087328973865736">"Не трэба, вы ўжо з\'яўляецеся распрацоўшчыкам."</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"Не трэба, вы ўжо з’яўляецеся распрацоўшчыкам."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Параметры распрацоўшчыка"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Параметры скіду"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Скід налад сеткі, праграм ці прылады"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑гадзінны фармат"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Выкарыстоўваць 24-гадзінны фармат"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Час"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Задаць час"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Наладзіць гадзіннік"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Часавы пояс"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Выберыце часавы пояс"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Дата"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Сартаваць па часавым поясе"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Дата"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Час"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Функцыя \"Аўтаматычная дата і час\" можа выкарыстоўваць пэўныя крыніцы, у прыватнасці геаданыя і мабільныя сеткі, для выяўлення даты, часу і часавага пояса."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Каб аўтаматычна наладзіць дату і час, выкарыстоўвайце месцазнаходжанне аўтамабіля. Працуе, толькі калі вызначэнне месцазнаходжання ўключана."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Працягнуць"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Змяніць у наладах"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Вызначэнне месцазнаходжання выключана. Функцыя аўтаматычнага выяўлення часу можа не працаваць."</string>
     <string name="user_admin" msgid="1535484812908584809">"Адміністратар"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Вы ўвайшлі як адміністратар"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Даць дазволы адміністратара?"</string>
@@ -741,8 +745,8 @@
     <string name="lockpassword_password_requires_uppercase" msgid="2002482631049525313">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # вялікую літару}one{Пароль павінен змяшчаць як мінімум # вялікую літару}few{Пароль павінен змяшчаць як мінімум # вялікія літары}many{Пароль павінен змяшчаць як мінімум # вялікіх літар}other{Пароль павінен змяшчаць як мінімум # вялікай літары}}"</string>
     <string name="lockpassword_password_requires_numeric" msgid="5694949801691947801">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # лічбу.}one{Пароль павінен змяшчаць як мінімум # лічбу.}few{Пароль павінен змяшчаць як мінімум # лічбы.}many{Пароль павінен змяшчаць як мінімум # лічбаў.}other{Пароль павінен змяшчаць як мінімум # лічбы.}}"</string>
     <string name="lockpassword_password_requires_symbols" msgid="1789501049908004075">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # спецыяльны сімвал}one{Пароль павінен змяшчаць як мінімум # спецыяльны сімвал}few{Пароль павінен змяшчаць як мінімум # спецыяльныя сімвалы}many{Пароль павінен змяшчаць як мінімум # спецыяльных сімвалаў}other{Пароль павінен змяшчаць як мінімум # спецыяльнага сімвала}}"</string>
-    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # сімвал, які не з\'яўляецца літарай.}one{Пароль павінен змяшчаць як мінімум # сімвал, які не з\'яўляецца літарай.}few{Пароль павінен змяшчаць як мінімум # сімвалы, якія не з\'яўляюцца літарамі.}many{Пароль павінен змяшчаць як мінімум # сімвалаў, якія не з\'яўляюцца літарамі.}other{Пароль павінен змяшчаць як мінімум # сімвала, якія не з\'яўляюцца літарамі.}}"</string>
-    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # сімвал, які не з\'яўляецца лічбай.}one{Пароль павінен змяшчаць як мінімум # сімвал, які не з\'яўляецца лічбай.}few{Пароль павінен змяшчаць як мінімум # сімвалы, якія не з\'яўляюцца лічбамі.}many{Пароль павінен змяшчаць як мінімум # сімвалаў, якія не з\'яўляюцца лічбамі.}other{Пароль павінен змяшчаць як мінімум # сімвала, якія не з\'яўляюцца лічбамі.}}"</string>
+    <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # сімвал, які не з’яўляецца літарай.}one{Пароль павінен змяшчаць як мінімум # сімвал, які не з’яўляецца літарай.}few{Пароль павінен змяшчаць як мінімум # сімвалы, якія не з’яўляюцца літарамі.}many{Пароль павінен змяшчаць як мінімум # сімвалаў, якія не з’яўляюцца літарамі.}other{Пароль павінен змяшчаць як мінімум # сімвала, якія не з’яўляюцца літарамі.}}"</string>
+    <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # сімвал, які не з’яўляецца лічбай.}one{Пароль павінен змяшчаць як мінімум # сімвал, які не з’яўляецца лічбай.}few{Пароль павінен змяшчаць як мінімум # сімвалы, якія не з’яўляюцца лічбамі.}many{Пароль павінен змяшчаць як мінімум # сімвалаў, якія не з’яўляюцца лічбамі.}other{Пароль павінен змяшчаць як мінімум # сімвала, якія не з’яўляюцца лічбамі.}}"</string>
     <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # сімвал}one{Пароль павінен змяшчаць як мінімум # сімвал}few{Пароль павінен змяшчаць як мінімум # сімвалы}many{Пароль павінен змяшчаць як мінімум # сімвалаў}other{Пароль павінен змяшчаць як мінімум # сімвала}}"</string>
     <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{Пароль павінен змяшчаць як мінімум # лічбу}one{Пароль павінен змяшчаць як мінімум # лічбу}few{Пароль павінен змяшчаць як мінімум # лічбы}many{Пароль павінен змяшчаць як мінімум # лічбаў}other{Пароль павінен змяшчаць як мінімум # лічбы}}"</string>
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Пароль павінен змяшчаць менш чым # сімвал}one{Пароль павінен змяшчаць менш чым # сімвал}few{Пароль павінен змяшчаць менш чым # сімвалы}many{Пароль павінен змяшчаць менш чым # сімвалаў}other{Пароль павінен змяшчаць менш чым # сімвала}}"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Каб пабачыць прылады, уключыце Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Каб спалучыць прыладу, адкрыйце налады Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Тэма"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Паказаць межы макета"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Адміністратар інфармацыйна-забаўляльнай сістэмы"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Актываваныя праграмы"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Адключаныя праграмы"</string>
@@ -939,6 +944,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Паглядзець планы"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Вашы інтэрнэт-планы пратэрмінаваны"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Паглядзець планы"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Гатова"</string>
 </resources>

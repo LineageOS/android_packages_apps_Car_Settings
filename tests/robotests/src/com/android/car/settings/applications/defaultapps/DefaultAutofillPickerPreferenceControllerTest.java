@@ -28,6 +28,8 @@ import android.provider.Settings;
 import android.service.autofill.AutofillService;
 
 import androidx.preference.PreferenceGroup;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -37,13 +39,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowPackageManager;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 @Config(shadows = {ShadowSecureSettings.class})
 public class DefaultAutofillPickerPreferenceControllerTest {
 
@@ -58,7 +58,7 @@ public class DefaultAutofillPickerPreferenceControllerTest {
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 DefaultAutofillPickerPreferenceController.class, mPreferenceGroup);

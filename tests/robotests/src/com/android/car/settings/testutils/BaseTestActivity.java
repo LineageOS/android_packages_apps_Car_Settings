@@ -16,34 +16,30 @@
 
 package com.android.car.settings.testutils;
 
-import static com.android.car.ui.core.CarUi.requireToolbar;
-
 import android.car.drivingstate.CarUxRestrictions;
-import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentHost;
-import com.android.car.settings.common.UxRestrictionsProvider;
-import com.android.car.ui.toolbar.ToolbarController;
+import com.android.car.settings.common.BaseCarSettingsActivity;
 
-/**
- * Test activity used for testing {@code BaseFragment} instances.
- */
-public class BaseTestActivity extends FragmentActivity implements FragmentHost,
-        UxRestrictionsProvider {
+/** Test activity used for testing {@code BaseFragment} instances. */
+public class BaseTestActivity extends BaseCarSettingsActivity {
 
     private boolean mOnBackPressedFlag;
-    private CarUxRestrictions mRestrictionInfo = new CarUxRestrictions.Builder(/* reqOpt= */ true,
-            CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+    private CarUxRestrictions mRestrictionInfo =
+            new CarUxRestrictions.Builder(
+                            /* reqOpt= */ true,
+                            CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
+                            /* timestamp= */ 0)
+                    .build();
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.car_setting_activity);
+    protected Fragment getInitialFragment() {
+        return null;
     }
 
     /**
@@ -71,11 +67,6 @@ public class BaseTestActivity extends FragmentActivity implements FragmentHost,
     }
 
     @Override
-    public ToolbarController getToolbar() {
-        return requireToolbar(this);
-    }
-
-    @Override
     public CarUxRestrictions getCarUxRestrictions() {
         return mRestrictionInfo;
     }
@@ -84,9 +75,7 @@ public class BaseTestActivity extends FragmentActivity implements FragmentHost,
         mRestrictionInfo = restrictionInfo;
     }
 
-    /**
-     * Override to catch onBackPressed invocations on the activity.
-     */
+    /** Override to catch onBackPressed invocations on the activity. */
     @Override
     public void onBackPressed() {
         mOnBackPressedFlag = true;
@@ -102,9 +91,7 @@ public class BaseTestActivity extends FragmentActivity implements FragmentHost,
         return mOnBackPressedFlag;
     }
 
-    /**
-     * Clear the boolean flag for onBackPressed by setting it to false.
-     */
+    /** Clear the boolean flag for onBackPressed by setting it to false. */
     public void clearOnBackPressedFlag() {
         mOnBackPressedFlag = false;
     }

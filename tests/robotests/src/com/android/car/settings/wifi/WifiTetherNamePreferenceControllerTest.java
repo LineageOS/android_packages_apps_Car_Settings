@@ -25,7 +25,10 @@ import android.content.Context;
 import android.net.wifi.SoftApConfiguration;
 
 import androidx.lifecycle.Lifecycle;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.ValidatedEditTextPreference;
 import com.android.car.settings.testutils.ShadowCarWifiManager;
@@ -33,13 +36,9 @@ import com.android.car.settings.testutils.ShadowCarWifiManager;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarWifiManager.class})
+@RunWith(AndroidJUnit4.class)
 public class WifiTetherNamePreferenceControllerTest {
 
     private Context mContext;
@@ -54,19 +53,22 @@ public class WifiTetherNamePreferenceControllerTest {
 
     @Test
     public void onStart_wifiConfigHasSSID_setsSummary() {
-        mContext = RuntimeEnvironment.application;
-        mCarWifiManager = new CarWifiManager(mContext, mock(Lifecycle.class));
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
+        Lifecycle mockLifecycle = mock(Lifecycle.class);
+        FragmentController mockFragmentController = mock(FragmentController.class);
+        when(mockFragmentController.getSettingsLifecycle()).thenReturn(mockLifecycle);
+
+        mCarWifiManager = new CarWifiManager(mContext, mockLifecycle);
         String testSSID = "TEST_SSID";
-        SoftApConfiguration config = new SoftApConfiguration.Builder()
-                .setSsid(testSSID)
-                .build();
+        SoftApConfiguration config = new SoftApConfiguration.Builder().setSsid(testSSID).build();
         getShadowCarWifiManager().setSoftApConfig(config);
         mPreference = new ValidatedEditTextPreference(mContext);
         mControllerHelper =
-                new PreferenceControllerTestHelper<WifiTetherNamePreferenceController>(mContext,
-                        WifiTetherNamePreferenceController.class, mPreference);
-        when(mControllerHelper.getMockFragmentController().getSettingsLifecycle())
-                .thenReturn(mock(Lifecycle.class));
+                new PreferenceControllerTestHelper<WifiTetherNamePreferenceController>(
+                        mContext,
+                        WifiTetherNamePreferenceController.class,
+                        mPreference,
+                        mockFragmentController);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         assertThat(mPreference.getSummary()).isEqualTo(testSSID);
     }

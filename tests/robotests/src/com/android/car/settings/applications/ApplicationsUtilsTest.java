@@ -25,6 +25,8 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.pm.UserInfo;
 
+import androidx.test.runner.AndroidJUnit4;
+
 import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.ShadowDefaultDialerManager;
 import com.android.car.settings.testutils.ShadowSmsApplication;
@@ -33,16 +35,17 @@ import com.android.car.settings.testutils.ShadowUserHelper;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.Collections;
 
 /** Unit test for {@link ApplicationsUtils}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowDefaultDialerManager.class, ShadowSmsApplication.class,
-        ShadowUserHelper.class})
+@RunWith(AndroidJUnit4.class)
+@Config(
+        shadows = {
+            ShadowUserHelper.class
+        })
 public class ApplicationsUtilsTest {
 
     private static final String PACKAGE_NAME = "com.android.car.settings.test";

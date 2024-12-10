@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 GGs (tavsiya etiladi)"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GGs"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GGs"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 va 5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi hotspot uchun kamida bitta chastota tanlang:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi hotspot"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 soatlik format"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24 soatlik format"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Vaqt"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Vaqtni sozlash"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Soatni sozlash"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Vaqt mintaqasi"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Vaqt mintaqasi"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Sana"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Vaqt mintaqasi bo‘yicha saralash"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Sana"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Vaqt"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Sana, vaqt va vaqt mintaqasini aniqlashda avtomatik sana va vaqt joylashuv axboroti va mobil tarmoqlardan foydalanishi mumkin."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Avtomobil joylashuvi sana va vaqtni avtomatik belgilaydi. Bu faqat joylashuv yoniqligida ishlaydi."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Davom etish"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Sozlamalar orqali oʻzgartirish"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Joylashuv sozlamasi oʻchiq. Avtomatik vaqt ishlamasligi mumkin."</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Administrator sifatida kirgansiz"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Administrator ruxsatlari berilsinmi?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Qurilmalaringizni koʻrish uchun Bluetoothni yoqing"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Qurilmani ulash uchun Bluetooth sozlamalarini oching"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Mavzu"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Elementlar hoshiyasi"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Axborot-hordiq tizimi boshqaruvi"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Faol ilovalar"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Nofaol ilovalar"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Tarif rejalari"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Internet tarifingiz muddati tugadi"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Tarif rejalari"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Tayyor"</string>
 </resources>

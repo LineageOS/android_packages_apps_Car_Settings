@@ -205,6 +205,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="choose_pin_title_text_margin_bottom"/>
       <item type="dimen" name="choose_title_text_margin_bottom"/>
       <item type="dimen" name="circle_ripple_bg_radius"/>
+      <item type="dimen" name="colored_two_action_switch_preference_divider_vertical_padding"/>
+      <item type="dimen" name="colored_two_action_switch_preference_margin_end"/>
+      <item type="dimen" name="colored_two_action_switch_preference_vertical_margin"/>
+      <item type="dimen" name="colored_two_action_switch_preference_vertical_padding"/>
       <item type="dimen" name="confirm_lock_message_vertical_spacing"/>
       <item type="dimen" name="confirm_pattern_dimension"/>
       <item type="dimen" name="data_usage_summary_preference_button_height"/>
@@ -234,6 +238,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="number_picker_text_size"/>
       <item type="dimen" name="opacity_disabled"/>
       <item type="dimen" name="opacity_enabled"/>
+      <item type="dimen" name="password_content_weight_percent"/>
       <item type="dimen" name="pin_pad_key_height"/>
       <item type="dimen" name="pin_pad_key_margin"/>
       <item type="dimen" name="pin_pad_key_width"/>
@@ -498,6 +503,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="hotspot_qr_code"/>
       <item type="id" name="hotspot_qr_code_instruction"/>
       <item type="id" name="hotspot_qr_code_password"/>
+      <item type="id" name="icon"/>
       <item type="id" name="icon_frame"/>
       <item type="id" name="key0"/>
       <item type="id" name="key1"/>
@@ -561,6 +567,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="top_level_menu_container"/>
       <item type="id" name="top_level_recycler_view"/>
       <item type="id" name="up_arrow_container"/>
+      <item type="id" name="vertical_guideline"/>
       <item type="id" name="widget_summary"/>
       <item type="integer" name="audio_route_selector_usage"/>
       <item type="integer" name="audio_route_toast_duration"/>
@@ -737,6 +744,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="auto_launch_disable_text"/>
       <item type="string" name="auto_launch_enable_text"/>
       <item type="string" name="auto_launch_reset_text"/>
+      <item type="string" name="auto_local_time_dialog_msg"/>
+      <item type="string" name="auto_local_time_dialog_negative_button_text"/>
+      <item type="string" name="auto_local_time_dialog_positive_button_text"/>
+      <item type="string" name="auto_local_time_disclaimer_summary"/>
+      <item type="string" name="auto_local_time_toggle_summary"/>
       <item type="string" name="autofill_add_service"/>
       <item type="string" name="autofill_confirmation_message"/>
       <item type="string" name="autofill_settings_title"/>
@@ -1381,6 +1393,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="show_dev_already"/>
       <item type="string" name="show_dev_countdown"/>
       <item type="string" name="show_dev_on"/>
+      <item type="string" name="show_layout_bounds_title"/>
       <item type="string" name="show_password"/>
       <item type="string" name="show_system"/>
       <item type="string" name="signed_in_admin_user"/>
@@ -1684,6 +1697,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="data_usage_set_threshold_fragment"/>
       <item type="xml" name="data_warning_and_limit_fragment"/>
       <item type="xml" name="datetime_settings_fragment"/>
+      <item type="xml" name="datetime_settings_fragment_v2"/>
       <item type="xml" name="default_autofill_picker_fragment"/>
       <item type="xml" name="default_voice_input_picker_fragment"/>
       <item type="xml" name="developer_options_fragment"/>

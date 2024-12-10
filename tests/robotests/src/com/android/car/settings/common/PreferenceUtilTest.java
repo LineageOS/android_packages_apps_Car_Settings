@@ -24,13 +24,13 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
+import androidx.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class PreferenceUtilTest {
 
     @Test
@@ -49,7 +49,7 @@ public class PreferenceUtilTest {
     @Test
     public void testCheckPreferenceType_false() {
         Preference preference = new ListPreference(RuntimeEnvironment.application);
-        assertThat(
+    assertThat(
                 PreferenceUtil.checkPreferenceType(preference, TwoStatePreference.class)).isFalse();
     }
 

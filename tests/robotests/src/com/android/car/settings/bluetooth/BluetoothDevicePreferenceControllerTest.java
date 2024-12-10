@@ -19,8 +19,8 @@ package com.android.car.settings.bluetooth;
 import static android.content.pm.PackageManager.FEATURE_BLUETOOTH;
 import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
 
-import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
+import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -36,11 +36,12 @@ import android.os.UserManager;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
-import com.android.car.settings.testutils.ShadowBluetoothPan;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 import org.junit.After;
@@ -50,16 +51,12 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowUserManager;
 
 /** Unit test for {@link BluetoothDevicePreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowBluetoothAdapter.class, ShadowBluetoothPan.class})
+@RunWith(AndroidJUnit4.class)
 public class BluetoothDevicePreferenceControllerTest {
 
     @Mock
@@ -71,7 +68,7 @@ public class BluetoothDevicePreferenceControllerTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
 
         // Make sure controller is available.
         Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(

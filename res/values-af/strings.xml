@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 GHz-band verkies"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 en 5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Kies 1+ band vir warmkol:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi-fi-warmkol"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Warmkol"</string>
@@ -316,7 +315,7 @@
     <string name="all_applications" msgid="7798210477486822168">"Wys alle programme"</string>
     <string name="default_applications" msgid="1558183275638697087">"Verstekapps"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"Apps wat werkverrigting beïnvloed"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Programtoestemmings"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Apptoestemmings"</string>
     <string name="app_permissions_summary" msgid="5402214755935368418">"Beheer apptoegang tot jou data"</string>
     <string name="applications_settings" msgid="794261395191035632">"Appinligting"</string>
     <string name="force_stop" msgid="1616958676171167028">"Stop app"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-uurformaat"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Gebruik 24-uurformaat"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Tyd"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Stel tyd"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Stel horlosie"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Tydsone"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Kies tydsone"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Datum"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Rangskik volgens tydsone"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Datum"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Tyd"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Outomatiese datum en -tyd kan bronne soos ligging en mobiele netwerke gebruik om datum, tyd en tydsone te bepaal."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Gebruik jou kar se ligging om outomaties die datum en tyd te stel. Dit werk net as ligging aangeskakel is."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Gaan voort"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Verander in instellings"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Jou ligging is afgeskakel. Outomatiese tyd mag dalk nie werk nie."</string>
     <string name="user_admin" msgid="1535484812908584809">"Admin"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Aangemeld as admin"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Gee admintoestemmings?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Skakel Bluetooth aan om jou toestelle te sien"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Maak Bluetooth-instellings oop om \'n toestel saam te bind"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Wys uitleg se grense"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Inligtingvermaakstelseladmin"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Geaktiveerde programme"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Gedeaktiveerde programme"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Sien pakkette"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Jou internetpakkette het verval"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Sien pakkette"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Klaar"</string>
 </resources>

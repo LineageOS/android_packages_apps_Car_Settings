@@ -37,6 +37,7 @@ import com.android.internal.widget.LockPatternView;
 import com.android.internal.widget.LockscreenCredential;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -102,6 +103,21 @@ public class InitialLockSetupService extends Service {
             return null;
         }
 
+        private List<LockPatternView.Cell> byteArrayToPattern(byte[] bytes) {
+            if (bytes.length > 0 && bytes[0] <= 9) {
+                // Be compatible with old clients that incorrectly created the byte[] with cells
+                // numbered binary 1-9 instead of the LockPatternUtils convention of ASCII 1-9.
+                List<LockPatternView.Cell> pattern = new ArrayList<>();
+                for (int i = 0; i < bytes.length; i++) {
+                    pattern.add(LockPatternView.Cell.of(
+                                (byte) ((bytes[i] - 1) / 3), (byte) ((bytes[i] - 1) % 3)));
+                }
+                return pattern;
+            }
+            return LockPatternUtils.byteArrayToPattern(bytes,
+                    LockPatternUtils.PATTERN_SIZE_DEFAULT);
+        }
+
         private LockscreenCredential createLockscreenCredential(
                 @LockTypes int lockType, byte[] password) {
             switch (lockType) {
@@ -112,9 +128,7 @@ public class InitialLockSetupService extends Service {
                     String pinStr = new String(password, StandardCharsets.UTF_8);
                     return LockscreenCredential.createPin(pinStr);
                 case LockTypes.PATTERN:
-                    List<LockPatternView.Cell> pattern =
-                            LockPatternUtils.byteArrayToPattern(password,
-                                    LockPatternUtils.PATTERN_SIZE_DEFAULT);
+                    List<LockPatternView.Cell> pattern = byteArrayToPattern(password);
                     return LockscreenCredential.createPattern(pattern,
                             LockPatternUtils.PATTERN_SIZE_DEFAULT);
                 default:

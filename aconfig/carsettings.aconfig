@@ -28,3 +28,10 @@ flag {
     description: "Flag to update hotspot band page with dual band support"
     bug: "193605871"
 }
+
+flag {
+    name: "update_date_and_time_page"
+    namespace: "car_sys_exp"
+    description: "Flag to display a single toggle for automatic local time in date/time page."
+    bug: "326140783"
+}

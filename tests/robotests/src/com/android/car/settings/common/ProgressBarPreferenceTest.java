@@ -24,16 +24,16 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.preference.PreferenceViewHolder;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class ProgressBarPreferenceTest {
 
     private static final String TEST_LABEL = "TEST_LABEL";
@@ -44,7 +44,7 @@ public class ProgressBarPreferenceTest {
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
         View rootView = View.inflate(mContext, R.layout.progress_bar_preference,
                 /* root= */ null);
         mViewHolder = PreferenceViewHolder.createInstanceForTests(rootView);

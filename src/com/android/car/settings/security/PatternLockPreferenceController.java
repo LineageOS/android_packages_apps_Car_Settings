@@ -53,6 +53,11 @@ public class PatternLockPreferenceController extends LockTypeBasePreferenceContr
     }
 
     @Override
+    protected boolean isSecureLockType() {
+        return true;
+    }
+
+    @Override
     protected void updateState(Preference preference) {
         super.updateState(preference);
 

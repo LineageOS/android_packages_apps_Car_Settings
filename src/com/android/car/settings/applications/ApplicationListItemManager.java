@@ -15,12 +15,17 @@
  */
 package com.android.car.settings.applications;
 
+import static android.Manifest.permission.MANAGE_OWN_CALLS;
+
+import android.content.pm.PackageManager;
 import android.os.Handler;
+import android.os.UserManager;
 import android.os.storage.VolumeInfo;
 
 import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.PermissionUtil;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
@@ -57,6 +62,8 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
     // Milliseconds that warnIfNotAllLoadedInTime method waits before comparing mAppsToLoad and
     // mLoadedApps to log any apps that failed to load.
     private final int mMaxAppLoadWaitInterval;
+    private final boolean mIsVisibleBackgroundUser;
+    private final PackageManager mPackageManager;
 
     private ApplicationsState.Session mSession;
     private ApplicationsState.AppFilter mAppFilter;
@@ -76,13 +83,17 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
 
     public ApplicationListItemManager(VolumeInfo volumeInfo, Lifecycle lifecycle,
             ApplicationsState appState, int millisecondUpdateInterval,
-            int maxWaitIntervalToFinishLoading) {
+            int maxWaitIntervalToFinishLoading, PackageManager packageManager,
+            UserManager userManager) {
         mVolumeInfo = volumeInfo;
         mLifecycle = lifecycle;
         mAppState = appState;
         mHandler = new Handler();
         mMillisecondUpdateInterval = millisecondUpdateInterval;
         mMaxAppLoadWaitInterval = maxWaitIntervalToFinishLoading;
+        mPackageManager = packageManager;
+        mIsVisibleBackgroundUser = !userManager.isUserForeground() && userManager.isUserVisible()
+                && !userManager.isProfile();
     }
 
     /**
@@ -188,11 +199,25 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
             return;
         }
 
+        // MUMD passenger users can't use telephony applications so they don't interrupt the
+        // driver's calls
+        ArrayList<ApplicationsState.AppEntry> filteredApps = new ArrayList<>();
+        if (mIsVisibleBackgroundUser) {
+            for (ApplicationsState.AppEntry appEntry : apps) {
+                if (!PermissionUtil.doesPackageRequestPermission(appEntry.info.packageName,
+                        mPackageManager, MANAGE_OWN_CALLS)) {
+                    filteredApps.add(appEntry);
+                }
+            }
+        } else {
+            filteredApps.addAll(apps);
+        }
+
         if (mReadyToRenderUpdates) {
             mReadyToRenderUpdates = false;
             mLoadedApps = new ArrayList<>();
 
-            for (ApplicationsState.AppEntry app : apps) {
+            for (ApplicationsState.AppEntry app : filteredApps) {
                 if (isLoaded(app)) {
                     mLoadedApps.add(app);
                 }
@@ -210,12 +235,12 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
                 }
             }, mMillisecondUpdateInterval);
         } else {
-            mDeferredAppsToUpload = apps;
+            mDeferredAppsToUpload = filteredApps;
         }
 
         // Add all apps that are not already contained in mAppsToLoad Set, since we want it to be an
         // exhaustive Set of all apps to be loaded.
-        mAppsToLoad.addAll(apps);
+        mAppsToLoad.addAll(filteredApps);
     }
 
     private boolean isLoaded(ApplicationsState.AppEntry app) {

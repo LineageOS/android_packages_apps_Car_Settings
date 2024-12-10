@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Préférer la bande de 5,0 GHz"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 et 5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Choisir au moins une bande de PA Wi-Fi :"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Point d\'accès Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Point d\'accès sans fil"</string>
@@ -535,12 +534,12 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"Veuillez patienter…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Date et heure"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Configurer la date, l\'heure, le fuseau horaire et les formats"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"Régler l\'heure automatiquement"</string>
+    <string name="date_time_auto" msgid="6018635902717385962">"Définir l\'heure automatiquement"</string>
     <string name="zone_auto" msgid="4174874778459184605">"Régler le fuseau horaire auto."</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Format 24 heures"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Utiliser le format 24 heures"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Heure"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Définir l\'heure"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Régler l\'horloge"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Fuseau horaire"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Sélectionner le fuseau horaire"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Date"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Trier par fuseau horaire"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Date"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Heure"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"La détection automatique de la date et de l\'heure pourrait utiliser des sources telles que la position et les réseaux cellulaires pour déterminer la date, l\'heure et le fuseau horaire."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Utilisez la position de votre voiture pour régler automatiquement la date et l\'heure. Fonctionne uniquement si la localisation est activée."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Continuer"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Changer l\'option dans les paramètres"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"La localisation est désactivée. La détection automatique du fuseau horaire pourrait ne pas fonctionner."</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrateur"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Connecté comme administrateur"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Accorder les autorisations d\'administrateur?"</string>
@@ -659,7 +663,7 @@
     <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Permettez aux applis d\'infodivertissement d\'enregistrer du contenu audio"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Accès aux caméras"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Choisissez si les applis peuvent accéder aux caméras de votre voiture"</string>
-    <string name="required_apps_group_title" msgid="8607608579973985786">"Applications requises"</string>
+    <string name="required_apps_group_title" msgid="8607608579973985786">"Applis requises"</string>
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Les applis requises par votre constructeur automobile pour vous aider à conduire"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Politique"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Il se peut que le constructeur de votre automobile ait encore accès à la caméra de celle-ci"</string>
@@ -695,7 +699,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Dessinez un schéma de déverrouillage"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Retirez le doigt lorsque vous avez terminé"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Schéma enregistré"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Redessinez le schéma pour confirmer"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Retracez le schéma pour confirmer"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Reliez au moins 4 points. Réessayez."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Schéma incorrect"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Comment dessiner un schéma de déverr."</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Pour afficher vos appareils, activez le Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Pour associer un appareil, ouvrez les paramètres Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Thème"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Afficher les contours de la mise en page"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrateur du système d\'infodivertissement"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Applications activées"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Applications désactivées"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Voir les forfaits"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Vos forfaits Internet ont expiré"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Voir les forfaits"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Terminé"</string>
 </resources>

@@ -32,6 +32,7 @@ import android.view.accessibility.AccessibilityManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceCategory;
 import androidx.test.core.app.ApplicationProvider;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -39,13 +40,12 @@ import com.android.car.settings.common.PreferenceControllerTestHelper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.Shadows;
 import org.robolectric.shadows.ShadowAccessibilityManager;
 
 import java.util.List;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class ScreenReaderCategoryPreferenceControllerTest {
 
     private final Context mContext = ApplicationProvider.getApplicationContext();

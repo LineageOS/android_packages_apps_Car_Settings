@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"ເລືອກຄື້ນ 5.0 GHz ກ່ອນ"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2.4 ແລະ 5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ເລືອກຢ່າງໜ້ອຍໜຶ່ງຄື້ນສຳລັບ Wi‑Fi ຮັອດສະປອດ:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi ຮັອດສະປອດ"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ຮັອດສະປອດ"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"ຮູບແບບເວລາ 24 ຊົ່ວໂມງ"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"ໃຊ້ຮູບແບບ 24 ຊົ່ວໂມງ"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"ເວລາ"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"ຕັ້ງເວລາ"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"ຕັ້ງໂມງ"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"ເຂດເວລາ"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"ເລືອກເຂດເວລາ"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"ວັນທີ"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"ລຽງລຳດັບຕາມເຂດເວລາ"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"ວັນທີ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"ເວລາ"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"ວັນທີ ແລະ ເວລາອັດຕະໂນມັດອາດໃຊ້ຂໍ້ມູນຈາກແຫຼ່ງທີ່ມາຕ່າງໆ ເຊັ່ນ: ສະຖານທີ່ ແລະ ເຄືອຂ່າຍມືຖືເພື່ອລະບຸວັນທີ, ເວລາ ແລະ ເຂດເວລາ."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"ໃຊ້ສະຖານທີ່ຂອງລົດຂອງທ່ານເພື່ອຕັ້ງຄ່າວັນທີ ແລະ ເວລາໂດຍອັດຕະໂນມັດ. ຈະນຳໃຊ້ໄດ້ເມື່ອສະຖານທີ່ເປີດຢູ່."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"ສືບຕໍ່"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"ປ່ຽນໃນການຕັ້ງຄ່າ"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"ສະຖານທີ່ຂອງທ່ານປິດຢູ່. ເວລາອັດຕະໂນມັດອາດບໍ່ເຮັດວຽກ."</string>
     <string name="user_admin" msgid="1535484812908584809">"ຜູ້ເບິ່ງແຍງລະບົບ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ເຂົ້າສູ່ລະບົບເປັນຜູ້ເບິ່ງແຍງລະບົບ"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"ໃຫ້ສິດອະນຸຍາດແກ່ຜູ້ເບິ່ງແຍງລະບົບບໍ?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ເພື່ອເຫັນອຸປະກອນຂອງທ່ານ, ກະລຸນາເປີດ Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ເພື່ອຈັບຄູ່ອຸປະກອນ, ກະລຸນາເປີດການຕັ້ງຄ່າ Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"ຮູບແບບສີສັນ"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"ສະແດງຂອບຂອງໂຄງຮ່າງ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ຜູ້ເບິ່ງແຍງລະບົບສາລະບັນເທີງ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ແອັບທີ່ເປີດນຳໃຊ້"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ແອັບທີ່ປິດນຳໃຊ້"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"ເບິ່ງແພັກເກດ"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"ແພັກເກດອິນເຕີເນັດຂອງທ່ານໝົດອາຍຸແລ້ວ"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ເບິ່ງແພັກເກດ"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ແລ້ວໆ"</string>
 </resources>

@@ -21,12 +21,13 @@ import static com.google.common.truth.Truth.assertThat;
 import android.text.InputFilter;
 import android.text.SpannableStringBuilder;
 
+import androidx.test.runner.AndroidJUnit4;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 
 /** Unit test for {@link Utf8ByteLengthFilter}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class Utf8ByteLengthFilterTest {
 
     @Test

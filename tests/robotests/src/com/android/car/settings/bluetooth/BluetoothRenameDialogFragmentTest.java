@@ -20,27 +20,29 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.ui.CarUiLayoutInflaterFactory;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.shadows.ShadowDialog;
 
 /** Unit test for {@link BluetoothRenameDialogFragment}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class BluetoothRenameDialogFragmentTest {
 
     private TestBluetoothRenameDialogFragment mFragment;
@@ -48,6 +50,9 @@ public class BluetoothRenameDialogFragmentTest {
 
     @Before
     public void setUp() {
+        LayoutInflater.from(RuntimeEnvironment.application)
+                .setFactory2(new CarUiLayoutInflaterFactory());
+
         BaseTestActivity activity = Robolectric.setupActivity(BaseTestActivity.class);
         mFragment = new TestBluetoothRenameDialogFragment();
         mFragment.show(activity.getSupportFragmentManager(), /* tag= */ null);
@@ -64,8 +69,9 @@ public class BluetoothRenameDialogFragmentTest {
     @Test
     public void softInputShown() {
         InputMethodManager imm =
-                (InputMethodManager) RuntimeEnvironment.application.getSystemService(
-                        Context.INPUT_METHOD_SERVICE);
+                (InputMethodManager)
+                        RuntimeEnvironment.application.getSystemService(
+                                Context.INPUT_METHOD_SERVICE);
         assertThat(Shadows.shadowOf(imm).isSoftInputVisible()).isTrue();
     }
 

@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"باند ۵٫۰ گیگاهرتز اولویت دارد"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"۲٫۴ گیگاهرتز"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"۵٫۰ گیگاهرتز"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"‫۲٫۴ و ۵٫۰ گیگاهرتز"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"حداقل یک باند برای نقطه اتصال Wi‑Fi انتخاب کنید:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"نقطه اتصال Wi-Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"نقطه اتصال"</string>
@@ -229,7 +228,7 @@
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"باید ۱۶ رقم باشد"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"معمولا ۰۰۰۰ یا ۱۲۳۴"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"درخواست مرتبط‌سازی"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"برای مرتبط‌سازی با <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ضربه بزنید."</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"برای مرتبط‌سازی با <xliff:g id="DEVICE_NAME">%1$s</xliff:g> تک‌ضرب بزنید."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"انتخاب دستگاه بلوتوث"</string>
     <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"بلوتوث"</string>
     <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"تلفن"</string>
@@ -247,9 +246,9 @@
     <string name="tts_pitch" msgid="2389171233852604923">"زیر و بمی صدا"</string>
     <string name="tts_reset" msgid="6289481549801844709">"بازنشانی"</string>
     <string name="sound_settings" msgid="3072423952331872246">"صدا"</string>
-    <string name="ring_volume_title" msgid="3135241004980719442">"بلندی صدای زنگ"</string>
+    <string name="ring_volume_title" msgid="3135241004980719442">"صدای زنگ"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"میزان صدای مسیریابی"</string>
-    <string name="incoming_call_volume_title" msgid="6972117872424656876">"زنگ"</string>
+    <string name="incoming_call_volume_title" msgid="6972117872424656876">"آهنگ زنگ"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"اعلان"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"رسانه"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"تنظیم میزان صدا برای موسیقی و ویدیو"</string>
@@ -501,7 +500,7 @@
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{اکنون # گام تا توسعه‌دهنده شدن فاصله دارید.}one{اکنون # گام تا توسعه‌دهنده شدن فاصله دارید.}other{اکنون # گام تا توسعه‌دهنده شدن فاصله دارید.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"شما اکنون یک برنامه‌نویس هستید!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"نیازی نیست، شما اکنون برنامه‌نویس هستید."</string>
-    <string name="developer_options_settings" msgid="1530739225109118480">"گزینه‌های تولیدکننده"</string>
+    <string name="developer_options_settings" msgid="1530739225109118480">"گزینه‌های توسعه‌دهندگان"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"بازنشانی گزینه‌ها"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"شبکه، برنامه‌ها یا بازنشانی دستگاه"</string>
     <string name="reset_network_title" msgid="3077846909739832734">"بازنشانی Wi-Fi و بلوتوث"</string>
@@ -522,12 +521,12 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"با این کار همه اولویت‌های مربوط به موارد زیر بازنشانی می‌شود:\n\n"<li>"برنامه‌های غیرفعال‌شده"</li>\n<li>"اعلان‌های برنامه غیرفعال‌شده"</li>\n<li>"برنامه‌های پیش‌فرض برای عملکردها"</li>\n<li>"محدودیت‌های داده پس‌زمینه برای برنامه‌ها"</li>\n<li>"هرگونه محدودیت مجوز"</li>\n\n"هیچ داده برنامه‌ای را از دست نخواهید داد."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"بازنشانی برنامه‌ها"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"اولویت‌های برنامه بازنشانی شده است"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"پاک‌سازی داده‌ها (بازنشانی کارخانه‌ای)"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"پاک کردن همه داده‌ها (بازنشانی کارخانه‌ای)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"پاک کردن همه داده‌ها و نمایه‌های سیستم اطلاعات-سرگرمی"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"با این کار، همه داده‌های سیستم اطلاعات-سرگرمی خودرو پاک می‌شود، ازجمله:\n\n"<li>"حساب‌ها و نمایه‌های شما"</li>\n<li>"تنظیمات و داده‌های برنامه و سیستم"</li>\n<li>"برنامه‌های بارگیری‌شده"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"درحال‌حاضر به سیستم حساب های زیر وارد شده‌اید:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"نمایه‌های دیگری برای این خودرو راه‌اندازی شده است."</string>
-    <string name="factory_reset_button_text" msgid="2626666247051368256">"پاک کردن تمام داده‌ها"</string>
+    <string name="factory_reset_button_text" msgid="2626666247051368256">"پاک کردن همه داده‌ها"</string>
     <string name="factory_reset_confirm_title" msgid="3354542161765761879">"همه داده‌ها پاک شود؟"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"با این کار همه داده‌های نمایه شخصی، حساب‌ها، و برنامه‌های بارگیری‌شده در این سیستم اطلاعات-سرگرمی پاک خواهد شد.\n\nاین کنش واگردشدنی نیست."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"پاک کردن همه چیز"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"قالب ۲۴ ساعته"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"استفاده از قالب ۲۴ ساعته"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"زمان"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"تنظیم زمان"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"تنظیم ساعت"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"منطقه زمانی"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"انتخاب منطقهٔ زمانی"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"تاریخ"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"به ترتیب منطقه زمانی"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"تاریخ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"زمان"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"تاریخ و ساعت خودکار ممکن است از منابعی مثل مکان یا شبکه‌های تلفن همراه برای تعیین تاریخ، ساعت، و منطقه زمانی استفاده کنند."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"برای تنظیم خودکار تاریخ و ساعت از مکان خودروتان استفاده می‌شود. فقط درصورت روشن بودن مکان کار می‌کند."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"ادامه دادن"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"تغییر دادن در «تنظیمات»"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"مکان شما خاموش است. ممکن است ساعت خودکار کار نکند."</string>
     <string name="user_admin" msgid="1535484812908584809">"سرپرست"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"به‌عنوان سرپرست به سیستم وارد شدید"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"اجازه‌های سرپرست اعطا شود؟"</string>
@@ -624,7 +628,7 @@
     <string name="add_account_title" msgid="5988746086885210040">"افزودن حساب"</string>
     <string name="add_an_account" msgid="1072285034300995091">"افزودن حساب"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"نمایه‌های محدود نمی‌توانند حسابی را اضافه کنند"</string>
-    <string name="remove_account_title" msgid="8840386525787836381">"حذف حساب"</string>
+    <string name="remove_account_title" msgid="8840386525787836381">"برداشتن حساب"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"حساب برداشته شود؟"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"با پاک کردن این حساب، همه پیام‌ها، مخاطبین و داده‌های دیگر از دستگاه حذف خواهد شد!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"حساب برداشته نشد."</string>
@@ -636,7 +640,7 @@
     <string name="sync_error" msgid="6698021343089247914">"خطای همگام‌سازی"</string>
     <string name="last_synced" msgid="4745124489150101529">"تاریخ آخرین همگام‌سازی: <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"در حال همگام‌سازی…"</string>
-    <string name="sync_one_time_sync" msgid="491707183321353107">"برای اینکه اکنون همگام‌سازی کنید، ضربه بزنید<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="491707183321353107">"برای اینکه اکنون همگام‌سازی کنید، تک‌ضرب بزنید<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"اکنون همگام‌سازی شود"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"لغو همگام‌سازی"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"برای دیدن دستگاه‌ها، بلوتوث را روشن کنید"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"برای جفت کردن دستگاه، تنظیمات بلوتوث را باز کنید"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"زمینه"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"نمایش محدوده‌های چیدمان"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"سرپرست سیستم اطلاعات-سرگرمی"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"برنامه‌های فعال"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"برنامه‌های غیرفعال"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"دیدن طرح‌ها"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"طرح‌های اینترنت شما منقضی شده است"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"دیدن طرح‌ها"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"تمام"</string>
 </resources>

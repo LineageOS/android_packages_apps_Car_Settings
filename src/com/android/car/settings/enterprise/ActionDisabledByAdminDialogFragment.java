@@ -148,8 +148,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
             mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, mAdminUserId);
             mActionDisabledByAdminController.setupLearnMoreButton(context);
         }
-        initializeDialogViews(context, builder, enforcedAdmin,
-                getEnforcementAdminUserId(enforcedAdmin));
+        initializeDialogViews(context, builder, enforcedAdmin);
         return builder;
     }
 
@@ -162,21 +161,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     }
 
     private void initializeDialogViews(Context context, AlertDialogBuilder builder,
-            @Nullable EnforcedAdmin enforcedAdmin, @UserIdInt int userId) {
-        ComponentName admin = null;
-
-        if (enforcedAdmin != null) {
-            admin = enforcedAdmin.component;
-            if (admin == null) {
-                return;
-            }
-
-            mActionDisabledByAdminController.updateEnforcedAdmin(enforcedAdmin, userId);
-        }
-
-        if (isNotValidEnforcedAdmin(context, enforcedAdmin)) {
-            admin = null;
-        }
+            @Nullable EnforcedAdmin enforcedAdmin) {
         setIcon(builder, R.drawable.ic_lock);
         setAdminSupportTitle(context, builder, mRestriction);
 
@@ -209,7 +194,8 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
     private boolean isNotDeviceOwner(Context context, ComponentName admin,
             @UserIdInt int userId) {
         EnforcedAdmin deviceOwner = RestrictedLockUtilsInternal.getDeviceOwner(context);
-        return !((deviceOwner.component).equals(admin) && userId == UserHandle.USER_SYSTEM);
+        return !(deviceOwner != null && (deviceOwner.component).equals(admin)
+                && userId == UserHandle.USER_SYSTEM);
     }
 
     private void setAdminSupportTitle(Context context, AlertDialogBuilder builder,
@@ -223,13 +209,18 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
 
     private void setAdminSupportDetails(Context context, AlertDialogBuilder builder,
             @Nullable EnforcedAdmin enforcedAdmin) {
-        if (enforcedAdmin == null || enforcedAdmin.component == null) {
-            LOG.i("setAdminSupportDetails(): no admin on " + enforcedAdmin);
+        if (enforcedAdmin == null) {
+            LOG.i("setAdminSupportDetails(): no admin");
             return;
         }
         CharSequence supportMessage = null;
         if (isNotValidEnforcedAdmin(context, enforcedAdmin)) {
-            enforcedAdmin.component = null;
+            if (enforcedAdmin.component == null) {
+                // Null component indicates that the restriction was set by the system passenger
+                supportMessage = context.getString(R.string.restricted_for_passenger);
+            } else {
+                enforcedAdmin.component = null;
+            }
         } else {
             if (enforcedAdmin.user == null) {
                 enforcedAdmin.user = UserHandle.of(UserHandle.myUserId());
@@ -243,6 +234,7 @@ public final class ActionDisabledByAdminDialogFragment extends CarUiDialogFragme
         CharSequence supportContentString =
                 mActionDisabledByAdminController.getAdminSupportContentString(
                         context, supportMessage);
+
         if (supportContentString != null) {
             builder.setMessage(supportContentString);
         }

@@ -123,6 +123,10 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        if (!mIsPin) {
+            View rootView = view.findViewById(R.id.settings_content_focus_area);
+            setupImeInsetListener(rootView);
+        }
         mPasswordField = view.findViewById(R.id.password_entry);
         mPasswordEntryInputDisabler = new TextViewInputDisabler(mPasswordField);
         mMsgView = view.findViewById(R.id.message);

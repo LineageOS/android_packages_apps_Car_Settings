@@ -73,14 +73,14 @@ public class AutoDatetimeTogglePreferenceControllerTest {
     }
 
     @Test
-    public void testRefreshUi_unchecked() {
+    public void testRefreshUi_autoDateTimeSupported_unchecked() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME, 0);
         mController.refreshUi();
         assertThat(mPreference.isChecked()).isFalse();
     }
 
     @Test
-    public void testRefreshUi_checked() {
+    public void testRefreshUi_autoDateTimeSupported_checked() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME, 1);
         mController.refreshUi();
         assertThat(mPreference.isChecked()).isTrue();

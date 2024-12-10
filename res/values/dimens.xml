@@ -109,6 +109,7 @@
     <dimen name="confirm_lock_message_vertical_spacing">@*android:dimen/car_padding_2</dimen>
     <dimen name="lock_hint_padding">24dp</dimen>
     <dimen name="lock_hint_min_height">110dp</dimen>
+    <dimen name="password_content_weight_percent">0.5833</dimen>
 
     <!-- Profile Switcher -->
     <dimen name="profile_switcher_image_avatar_size">96dp</dimen>
@@ -222,4 +223,8 @@
 
     <dimen name="rounded_corner_radius">16dp</dimen>
 
+    <dimen name="colored_two_action_switch_preference_vertical_padding">24dp</dimen>
+    <dimen name="colored_two_action_switch_preference_margin_end">32dp</dimen>
+    <dimen name="colored_two_action_switch_preference_vertical_margin">16dp</dimen>
+    <dimen name="colored_two_action_switch_preference_divider_vertical_padding">27dp</dimen>
 </resources>

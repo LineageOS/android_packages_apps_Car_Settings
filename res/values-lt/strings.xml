@@ -539,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 val. formatas"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Naudoti 24 val. formatą"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Laikas"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Nustatyti laiką"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Laikrodžio nustatymas"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Laiko juosta"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Pasirinkti laiko juostą"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Data"</string>
@@ -548,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Rūšiuoti pagal laiko juostą"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Data"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Laikas"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Parinktis „Automatiniai data ir laikas“ gali naudoti tokius šaltinius kaip vietovė ir mobiliojo ryšio tinklai, kad galėtų nustatyti datą, laiką ir laiko juostą."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Naudokite automobilio vietovę, kad galėtumėte automatiškai nustatyti datą ir laiką. Veikia, tik kai vietovės nustatymas įjungtas."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Tęsti"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Pakeisti nustatymuose"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Vietovės nustatymas išjungtas. Automatinis laikas gali neveikti."</string>
     <string name="user_admin" msgid="1535484812908584809">"Administratorius"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Esate prisij. kaip administrator."</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Suteikti administratoriaus leidimus?"</string>
@@ -792,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Norėdami matyti savo įrenginius, įjunkite „Bluetooth“"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Norėdami susieti įrenginį, atidarykite „Bluetooth“ nustatymus"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Rodyti išdėstymo ribas"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informacinės pramoginės sistemos administratorius"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Suaktyvintos programos"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Išaktyvintos programos"</string>

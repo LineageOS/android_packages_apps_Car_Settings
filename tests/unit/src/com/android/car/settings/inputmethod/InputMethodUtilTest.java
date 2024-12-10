@@ -159,11 +159,11 @@ public class InputMethodUtilTest {
                     mPackageManager, mInputMethodManager, gvtPackageName);
             googleVoiceTypingIMEList.add(googleVoiceTypingIME);
         }
+        ArrayList<InputMethodInfo> getEnabledInputMethodListReturnValue =
+                new ArrayList<InputMethodInfo>(googleVoiceTypingIMEList);
+        getEnabledInputMethodListReturnValue.add(placeholderIME);
         when(mInputMethodManager.getEnabledInputMethodList())
-                .thenReturn(
-                        new ArrayList<InputMethodInfo>(googleVoiceTypingIMEList) {{
-                            add(placeholderIME);
-                        }});
+                .thenReturn(getEnabledInputMethodListReturnValue);
         when(mDevicePolicyManager.getPermittedInputMethodsForCurrentUser()).thenReturn(null);
 
         List<InputMethodInfo> results = InputMethodUtil.getPermittedAndEnabledInputMethodList(

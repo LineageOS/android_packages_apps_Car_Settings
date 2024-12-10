@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz လိုင်း ဦးစားပေး"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"၂.၄ GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"၅.၀ GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"၂.၄ နှင့် ၅ GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi ဟော့စပေါ့ လိုင်း-"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi-Fi ဟော့စပေါ့"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ဟော့စပေါ့"</string>
@@ -541,7 +540,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"၂၄-နာရီ စနစ်"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"၂၄-နာရီ စနစ်ကို သုံးရန်"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"အချိန်"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"အချိန်သတ်မှတ်ရန်"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"နာရီ သတ်မှတ်ခြင်း"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"စံတော်ချိန်"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"စံတော်ချိန်အားသတ်မှတ်ရန်"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"ရက်စွဲ"</string>
@@ -550,6 +549,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"စံတော်ချိန်အလိုက် စီရန်"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"ရက်စွဲ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"အချိန်"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"အလိုအလျောက် ရက်စွဲနှင့်အချိန်သည် ရက်စွဲ၊ အချိန်နှင့် ဒေသစံတော်ချိန်တို့ကို ဆုံးဖြတ်ရန် တည်နေရာနှင့် မိုဘိုင်းကွန်ရက်များကဲ့သို့ ရင်းမြစ်များကို သုံးနိုင်သည်။"</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"ရက်စွဲနှင့်အချိန်ကို အလိုအလျောက်သတ်မှတ်ရန် သင့်ကား၏တည်နေရာကို သုံးပါ။ တည်နေရာကို ဖွင့်ထားမှသာ အလုပ်လုပ်သည်။"</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"ရှေ့ဆက်ရန်"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"ဆက်တင်များတွင် ပြောင်းရန်"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"သင့်တည်နေရာကို ပိတ်ထားသည်။ အလိုအလျောက်အချိန် အလုပ်မလုပ်နိုင်ပါ။"</string>
     <string name="user_admin" msgid="1535484812908584809">"စီမံခန့်ခွဲသူ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"စီမံခန့်ခွဲသူအဖြစ် ဝင်ထားသည်"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"စီမံခန့်ခွဲသူ ခွင့်ပြုချက်များ ပေးမလား။"</string>
@@ -794,6 +798,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"သင့်စက်များကို တွေ့နိုင်ရန် ဘလူးတုသ်ဖွင့်ပါ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"စက်နှင့်တွဲချိတ်ရန် ဘလူးတုသ် ဆက်တင်များကို ဖွင့်ပါ"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"အပြင်အဆင်"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"အပြင်အဆင်ဘောင်များ ပြပါ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ် စီမံခန့်ခွဲသူ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ဖွင့်ထားသောအက်ပ်များ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ပိတ်ထားသောအက်ပ်များ"</string>
@@ -928,6 +933,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"အစီအစဉ်များ ကြည့်ရန်"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"သင့်အင်တာနက်အစီအစဉ်များ သက်တမ်းကုန်သွားပါပြီ"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"အစီအစဉ်များ ကြည့်ရန်"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ပြီးပြီ"</string>
 </resources>

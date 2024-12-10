@@ -23,6 +23,9 @@ import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
 import android.os.UserManager;
 
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
+
 import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
@@ -30,12 +33,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 @Config(shadows = {ShadowUserManager.class})
 public class ProfileIconProviderTest {
 
@@ -43,15 +44,18 @@ public class ProfileIconProviderTest {
     private ProfileIconProvider mProfileIconProvider;
     private UserInfo mUserInfo;
     private UserManager mUserManager;
+    private ShadowUserManager mShadowUserManager;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
         mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
 
         mProfileIconProvider = new ProfileIconProvider();
         mUserInfo = new UserInfo(/* id= */ 10, "USER_NAME", /* flags= */ 0);
+        mShadowUserManager = Shadow.extract(mUserManager);
+        mShadowUserManager.addUser(mUserInfo.id, mUserInfo.name, mUserInfo.flags);
     }
 
     @After
@@ -61,15 +65,14 @@ public class ProfileIconProviderTest {
 
     @Test
     public void getRoundedUserIcon_AssignsIconIfNotPresent() {
-        ShadowUserManager.setUserIcon(mUserInfo.id, null);
+        // Set and ensure icon is null initially for this user.
+        mUserManager.setUserIcon(mUserInfo.id, null);
+        assertThat(mUserManager.getUserIcon(mUserInfo.id)).isNull();
 
         Drawable returnedIcon = mProfileIconProvider.getRoundedProfileIcon(mUserInfo, mContext);
 
         assertThat(returnedIcon).isNotNull();
-        assertThat(getShadowUserManager().getUserIcon(mUserInfo.id)).isNotNull();
-    }
-
-    private ShadowUserManager getShadowUserManager() {
-        return Shadow.extract(mUserManager);
+        // Ensure icon is not null anymore after `getRoundedProfileIcon`.
+        assertThat(mShadowUserManager.getUserIcon(mUserInfo.id)).isNotNull();
     }
 }

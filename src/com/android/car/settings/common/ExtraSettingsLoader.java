@@ -27,6 +27,7 @@ import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITL
 import static java.lang.String.CASE_INSENSITIVE_ORDER;
 
 import android.app.ActivityManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -100,9 +101,8 @@ public class ExtraSettingsLoader {
         List<ResolveInfo> extra_settings_results = mPm.queryIntentActivitiesAsUser(intent,
                 PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
         for (ResolveInfo extra_settings_resolveInfo : extra_settings_results) {
-            if (!results.contains(extra_settings_resolveInfo)) {
-                results.add(extra_settings_resolveInfo);
-            }
+            // queryIntentActivitiesAsUser returns shallow copies so we can't use .equals()
+            addResolveInfoIfUnique(results, extra_settings_resolveInfo);
         }
 
         String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
@@ -210,5 +210,17 @@ public class ExtraSettingsLoader {
             return metaData.getString(key);
         }
         return null;
+    }
+
+    /** Adds new ResolveInfo to list if it is unique. */
+    private void addResolveInfoIfUnique(List<ResolveInfo> originalList,
+            ResolveInfo newResolveInfo) {
+        ComponentName componentName = newResolveInfo.activityInfo.getComponentName();
+        boolean alreadyContains = originalList.stream().anyMatch(resolveInfo ->
+                componentName.equals(resolveInfo.activityInfo.getComponentName()));
+
+        if (!alreadyContains) {
+            originalList.add(newResolveInfo);
+        }
     }
 }

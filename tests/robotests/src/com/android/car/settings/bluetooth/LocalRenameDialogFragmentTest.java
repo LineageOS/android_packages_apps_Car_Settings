@@ -25,26 +25,27 @@ import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.view.LayoutInflater;
 import android.widget.EditText;
+
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
+import com.android.car.ui.CarUiLayoutInflaterFactory;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowDialog;
 
 /** Unit test for {@link LocalRenameDialogFragment}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowBluetoothAdapter.class})
+@RunWith(AndroidJUnit4.class)
 public class LocalRenameDialogFragmentTest {
 
     private static final String NAME = "name";
@@ -54,6 +55,9 @@ public class LocalRenameDialogFragmentTest {
 
     @Before
     public void setUp() {
+        LayoutInflater.from(RuntimeEnvironment.application)
+                .setFactory2(new CarUiLayoutInflaterFactory());
+
         mFragment = new LocalRenameDialogFragment();
         getShadowBluetoothAdapter().setState(STATE_ON);
         BluetoothAdapter.getDefaultAdapter().enable();

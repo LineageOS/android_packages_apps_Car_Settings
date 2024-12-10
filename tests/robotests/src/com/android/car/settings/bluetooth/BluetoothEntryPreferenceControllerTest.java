@@ -31,19 +31,20 @@ import android.content.Context;
 import android.os.UserHandle;
 import android.os.UserManager;
 
+import androidx.test.runner.AndroidJUnit4;
+
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowUserManager;
 
 /** Unit test for {@link BluetoothEntryPreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class BluetoothEntryPreferenceControllerTest {
 
     private Context mContext;

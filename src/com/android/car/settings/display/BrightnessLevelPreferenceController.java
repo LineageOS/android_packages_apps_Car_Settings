@@ -28,22 +28,26 @@ import static com.android.settingslib.display.BrightnessUtils.convertLinearToGam
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.database.ContentObserver;
+import android.hardware.display.DisplayManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.PowerManager;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.provider.Settings;
 import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
 
+import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SeekBarPreference;
 import com.android.car.settings.enterprise.EnterpriseUtils;
+import com.android.internal.display.BrightnessSynchronizer;
 
 /** Business logic for changing the brightness of the display. */
 public class BrightnessLevelPreferenceController extends PreferenceController<SeekBarPreference> {
@@ -64,6 +68,8 @@ public class BrightnessLevelPreferenceController extends PreferenceController<Se
     final int mMaximumBacklight;
     @VisibleForTesting
     final int mMinimumBacklight;
+    private final boolean mIsVisibleBackgroundUsersSupported;
+    private DisplayManager mDisplayManager;
 
     public BrightnessLevelPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -72,6 +78,12 @@ public class BrightnessLevelPreferenceController extends PreferenceController<Se
         PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         mMaximumBacklight = powerManager.getMaximumScreenBrightnessSetting();
         mMinimumBacklight = powerManager.getMinimumScreenBrightnessSetting();
+        UserManager userManager = context.getSystemService(UserManager.class);
+        mIsVisibleBackgroundUsersSupported =
+                userManager != null && userManager.isVisibleBackgroundUsersSupported();
+        if (mIsVisibleBackgroundUsersSupported) {
+            mDisplayManager = context.getSystemService(DisplayManager.class);
+        }
     }
 
     @Override
@@ -150,13 +162,30 @@ public class BrightnessLevelPreferenceController extends PreferenceController<Se
 
     @VisibleForTesting
     int getScreenBrightnessLinearValue() throws Settings.SettingNotFoundException {
+        if (mIsVisibleBackgroundUsersSupported && mDisplayManager != null) {
+            float linearFloat = mDisplayManager.getBrightness(getMyOccupantZoneDisplayId());
+            return BrightnessSynchronizer.brightnessFloatToInt(linearFloat);
+        }
+
         return Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, UserHandle.myUserId());
     }
 
     @VisibleForTesting
     void saveScreenBrightnessLinearValue(int linear) {
-        Settings.System.putIntForUser(getContext().getContentResolver(),
-                Settings.System.SCREEN_BRIGHTNESS, linear, UserHandle.myUserId());
+        if (mIsVisibleBackgroundUsersSupported) {
+            if (mDisplayManager != null) {
+                float linearFloat = BrightnessSynchronizer.brightnessIntToFloat(linear);
+                mDisplayManager.setBrightness(getMyOccupantZoneDisplayId(), linearFloat);
+            }
+        } else {
+            Settings.System.putIntForUser(getContext().getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS, linear, UserHandle.myUserId());
+        }
+    }
+
+    private int getMyOccupantZoneDisplayId() {
+        return ((CarSettingsApplication) getContext().getApplicationContext())
+                .getMyOccupantZoneDisplayId();
     }
 }

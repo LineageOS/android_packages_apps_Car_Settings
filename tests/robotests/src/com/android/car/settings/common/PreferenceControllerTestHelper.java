@@ -52,8 +52,11 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
     private static final String PREFERENCE_KEY = "preference_key";
 
     private static final CarUxRestrictions UX_RESTRICTIONS =
-            new CarUxRestrictions.Builder(/* reqOpt= */ true,
-                    CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+            new CarUxRestrictions.Builder(
+                            /* reqOpt= */ true,
+                            CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
+                            /* timestamp= */ 0)
+                    .build();
 
     private Lifecycle.State mState = INITIALIZED;
 
@@ -66,17 +69,42 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
      * Constructs a new helper. Call {@link #setPreference(Preference)} once initialization on the
      * controller is complete to associate the controller with a preference.
      *
-     * @param context                  the {@link Context} to use to instantiate the preference
-     *                                 controller.
+     * @param context the {@link Context} to use to instantiate the preference controller.
      * @param preferenceControllerType the class type under test.
      */
     public PreferenceControllerTestHelper(Context context, Class<T> preferenceControllerType) {
         mMockFragmentController = mock(FragmentController.class);
-        mPreferenceController = ReflectionHelpers.callConstructor(preferenceControllerType,
-                ClassParameter.from(Context.class, context),
-                ClassParameter.from(String.class, PREFERENCE_KEY),
-                ClassParameter.from(FragmentController.class, mMockFragmentController),
-                ClassParameter.from(CarUxRestrictions.class, UX_RESTRICTIONS));
+        mPreferenceController =
+                ReflectionHelpers.callConstructor(
+                        preferenceControllerType,
+                        ClassParameter.from(Context.class, context),
+                        ClassParameter.from(String.class, PREFERENCE_KEY),
+                        ClassParameter.from(FragmentController.class, mMockFragmentController),
+                        ClassParameter.from(CarUxRestrictions.class, UX_RESTRICTIONS));
+        mScreen = new PreferenceManager(context).createPreferenceScreen(context);
+    }
+
+    /**
+     * Constructs a new helper. Call {@link #setPreference(Preference)} once initialization on the
+     * controller is complete to associate the controller with a preference.
+     *
+     * @param context the {@link Context} to use to instantiate the preference controller.
+     * @param preferenceControllerType the class type under test.
+     * @param fragmentController Mock {@link FragmentController} to use for the preference
+     *     controller.
+     */
+    public PreferenceControllerTestHelper(
+            Context context,
+            Class<T> preferenceControllerType,
+            FragmentController fragmentController) {
+        mMockFragmentController = fragmentController;
+        mPreferenceController =
+                ReflectionHelpers.callConstructor(
+                        preferenceControllerType,
+                        ClassParameter.from(Context.class, context),
+                        ClassParameter.from(String.class, PREFERENCE_KEY),
+                        ClassParameter.from(FragmentController.class, mMockFragmentController),
+                        ClassParameter.from(CarUxRestrictions.class, UX_RESTRICTIONS));
         mScreen = new PreferenceManager(context).createPreferenceScreen(context);
     }
 
@@ -86,15 +114,30 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
      *
      * @param preference the {@link Preference} to associate with the controller.
      */
-    public PreferenceControllerTestHelper(Context context, Class<T> preferenceControllerType,
-            Preference preference) {
+    public PreferenceControllerTestHelper(
+            Context context, Class<T> preferenceControllerType, Preference preference) {
         this(context, preferenceControllerType);
         setPreference(preference);
     }
 
     /**
-     * Associates the controller with the given preference. This should only be called once.
+     * Convenience constructor for a new helper for controllers which do not need to do additional
+     * initialization before a preference is set.
+     *
+     * @param preference the {@link Preference} to associate with the controller.
+     * @param fragmentController Mock {@link FragmentController} to use for the preference
+     *     controller.
      */
+    public PreferenceControllerTestHelper(
+            Context context,
+            Class<T> preferenceControllerType,
+            Preference preference,
+            FragmentController fragmentController) {
+        this(context, preferenceControllerType, fragmentController);
+        setPreference(preference);
+    }
+
+    /** Associates the controller with the given preference. This should only be called once. */
     public void setPreference(Preference preference) {
         if (mSetPreferenceCalled) {
             throw new IllegalStateException(
@@ -106,9 +149,7 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
         mSetPreferenceCalled = true;
     }
 
-    /**
-     * Returns the {@link PreferenceController} of this helper.
-     */
+    /** Returns the {@link PreferenceController} of this helper. */
     public T getController() {
         return mPreferenceController;
     }
@@ -123,11 +164,11 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
 
     /**
      * Sends a {@link Lifecycle.Event} to the controller. This is preferred over calling the
-     * controller's lifecycle methods directly as it ensures intermediate events are dispatched.
-     * For example, sending {@link Lifecycle.Event#ON_START} to an
-     * {@link Lifecycle.State#INITIALIZED} controller will dispatch
-     * {@link Lifecycle.Event#ON_CREATE} and {@link Lifecycle.Event#ON_START} while moving the
-     * controller to the {@link Lifecycle.State#STARTED} state.
+     * controller's lifecycle methods directly as it ensures intermediate events are dispatched. For
+     * example, sending {@link Lifecycle.Event#ON_START} to an {@link Lifecycle.State#INITIALIZED}
+     * controller will dispatch {@link Lifecycle.Event#ON_CREATE} and {@link
+     * Lifecycle.Event#ON_START} while moving the controller to the {@link Lifecycle.State#STARTED}
+     * state.
      */
     public void sendLifecycleEvent(Lifecycle.Event event) {
         markState(getStateAfter(event));
@@ -136,9 +177,9 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
     /**
      * Move the {@link PreferenceController} to the given {@code state}. This is preferred over
      * calling the controller's lifecycle methods directly as it ensures intermediate events are
-     * dispatched. For example, marking the {@link Lifecycle.State#STARTED} state on an
-     * {@link Lifecycle.State#INITIALIZED} controller will also send the
-     * {@link Lifecycle.Event#ON_CREATE} and {@link Lifecycle.Event#ON_START} events.
+     * dispatched. For example, marking the {@link Lifecycle.State#STARTED} state on an {@link
+     * Lifecycle.State#INITIALIZED} controller will also send the {@link Lifecycle.Event#ON_CREATE}
+     * and {@link Lifecycle.Event#ON_START} events.
      */
     public void markState(Lifecycle.State state) {
         while (mState != state) {

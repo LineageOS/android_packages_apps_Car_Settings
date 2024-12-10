@@ -29,6 +29,8 @@ import android.net.wifi.SoftApConfiguration;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -36,30 +38,32 @@ import com.android.car.settings.common.ValidatedEditTextPreference;
 import com.android.car.settings.testutils.ShadowCarWifiManager;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
 
+import com.google.errorprone.annotations.Keep;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarWifiManager.class, ShadowLocalBroadcastManager.class})
+@RunWith(AndroidJUnit4.class)
 public class WifiTetherBasePreferenceControllerTest {
 
     private static final String SUMMARY = "SUMMARY";
     private static final String DEFAULT_SUMMARY = "DEFAULT_SUMMARY";
 
-    private static class TestWifiTetherBasePreferenceController extends
-            WifiTetherBasePreferenceController<Preference> {
+    private static class TestWifiTetherBasePreferenceController
+            extends WifiTetherBasePreferenceController<Preference> {
 
         private String mSummary;
         private String mDefaultSummary;
 
-        TestWifiTetherBasePreferenceController(Context context, String preferenceKey,
-                FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        @Keep
+        TestWifiTetherBasePreferenceController(
+                Context context,
+                String preferenceKey,
+                FragmentController fragmentController,
+                CarUxRestrictions uxRestrictions) {
             super(context, preferenceKey, fragmentController, uxRestrictions);
         }
 
@@ -78,8 +82,8 @@ public class WifiTetherBasePreferenceControllerTest {
             return mDefaultSummary;
         }
 
-        protected void setConfigSummaries(@Nullable String summary,
-                @Nullable String defaultSummary) {
+        protected void setConfigSummaries(
+                @Nullable String summary, @Nullable String defaultSummary) {
             mSummary = summary;
             mDefaultSummary = defaultSummary;
         }
@@ -93,14 +97,19 @@ public class WifiTetherBasePreferenceControllerTest {
 
     @Before
     public void setup() {
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
+        Lifecycle mockLifecycle = mock(Lifecycle.class);
+        FragmentController mockFragmentController = mock(FragmentController.class);
+        when(mockFragmentController.getSettingsLifecycle()).thenReturn(mockLifecycle);
+
         mPreference = new ValidatedEditTextPreference(mContext);
         mControllerHelper =
-                new PreferenceControllerTestHelper<TestWifiTetherBasePreferenceController>(mContext,
-                        TestWifiTetherBasePreferenceController.class, mPreference);
+                new PreferenceControllerTestHelper<TestWifiTetherBasePreferenceController>(
+                        mContext,
+                        TestWifiTetherBasePreferenceController.class,
+                        mPreference,
+                        mockFragmentController);
         mController = mControllerHelper.getController();
-        when(mControllerHelper.getMockFragmentController().getSettingsLifecycle())
-                .thenReturn(mock(Lifecycle.class));
     }
 
     @After
@@ -150,11 +159,10 @@ public class WifiTetherBasePreferenceControllerTest {
         SoftApConfiguration config = new SoftApConfiguration.Builder().build();
         mController.setCarSoftApConfig(config);
 
-        Intent expectedIntent = new Intent(
-                WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING);
+        Intent expectedIntent =
+                new Intent(WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING);
 
-        assertThat(
-                ShadowLocalBroadcastManager.getSentBroadcastIntents().get(0).toString())
+        assertThat(ShadowLocalBroadcastManager.getSentBroadcastIntents().get(0).toString())
                 .isEqualTo(expectedIntent.toString());
     }
 

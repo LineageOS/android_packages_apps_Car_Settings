@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz அலைவரிசைக்கு முன்னுரிமை"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2.4 &amp; 5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ஒன்றைத் தேர்வுசெய்யவும்:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"வைஃபை ஹாட்ஸ்பாட்"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ஹாட்ஸ்பாட்"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24 மணிநேர வடிவம்"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24 மணிநேர வடிவத்தைப் பயன்படுத்து"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"நேரம்"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"நேரத்தை அமை"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"கடிகாரத்தை அமைத்தல்"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"நேர மண்டலம்"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"நேரமண்டலத்தை அமை"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"தேதி"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"நேர மண்டலத்தின்படி வரிசைப்படுத்து"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"தேதி"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"நேரம்"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"தேதி, நேரம், நேர மண்டலம் ஆகியவற்றைத் தீர்மானிக்க \'தானியங்கு தேதி மற்றும் நேரம்\' இருப்பிடம், மொபைல் நெட்வொர்க் போன்ற ஆதாரங்களைப் பயன்படுத்தக்கூடும்."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"தேதியையும் நேரத்தையும் தானாக அமைக்க, உங்கள் காரின் இருப்பிடத்தைப் பயன்படுத்தவும். இருப்பிடம் இயக்கப்பட்டிருந்தால் மட்டுமே இது வேலை செய்யும்."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"தொடர்க"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"அமைப்புகளில் மாற்று"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"உங்கள் இருப்பிடம் முடக்கப்பட்டுள்ளது. தானியங்கு நேரம் வேலை செய்யாமல் போகக்கூடும்."</string>
     <string name="user_admin" msgid="1535484812908584809">"நிர்வாகி"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"நிர்வாகியாக உள்நுழைந்துள்ளீர்கள்"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"நிர்வாகி அனுமதிகளை வழங்கவா?"</string>
@@ -660,7 +664,7 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"கேமரா அணுகல்"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"உங்கள் காரின் கேமராவை ஆப்ஸ் அணுகலாமா என்பதைத் தேர்வுசெய்யலாம்"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"தேவைப்படும் ஆப்ஸ்"</string>
-    <string name="required_apps_group_summary" msgid="5026442309718220831">"கார் ஓட்ட உங்களுக்கு உதவுவதற்காக உங்கள் கார் உற்பத்தியாளருக்குத் தேவைப்படுகின்ற ஆப்ஸ்"</string>
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"கார் ஓட்ட உங்களுக்கு உதவுவதற்காக உங்கள் கார் உற்பத்தியாளரால் சொல்லப்பட்ட ஆப்ஸ்"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"கொள்கை"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"உங்கள் காரின் கேமராவிற்கான அணுகலை இப்போதும் உங்கள் கார் தயாரிப்பாளர் கொண்டிருக்கக்கூடும்"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"இன்ஃபோடெயின்மென்ட் ஆப்ஸ்"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"உங்கள் சாதனங்களைக் காண புளூடூத்தை ஆன் செய்யுங்கள்"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"சாதனத்துடன் இணைக்க புளூடூத் அமைப்புகளைத் திறங்கள்"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"தீம்"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"தளவமைப்பு எல்லைகளைக் காட்டுதல்"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"இன்ஃபோடெயின்மென்ட் சிஸ்டம் நிர்வாகி"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"செயல்படுத்தப்பட்ட ஆப்ஸ்"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"முடக்கப்பட்ட ஆப்ஸ்"</string>
@@ -887,7 +892,7 @@
     <string name="factory_reset_later_text" msgid="6371031843489938419">"அடுத்தமுறை காரை இயக்கத் தொடங்கும்போது இன்ஃபோடெயின்மென்ட் சிஸ்டம் மீட்டமைக்கப்படும்."</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"மீட்டமைத்தலைத் தொடங்க காரை நிறுத்த வேண்டும்."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"இந்த அமைப்பை இப்போது மாற்ற முடியாது"</string>
-    <string name="accessibility_settings_title" msgid="2615042088419230347">"அணுகல்தன்மை"</string>
+    <string name="accessibility_settings_title" msgid="2615042088419230347">"மாற்றுத்திறன் வசதி"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"வசனங்கள்"</string>
     <string name="captions_settings_title" msgid="5738067618097295831">"வசன விருப்பத்தேர்வுகள்"</string>
     <string name="captions_settings_off" msgid="7568096968016015626">"ஆஃப்"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"திட்டங்களைக் காட்டு"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"உங்கள் இணையத் திட்டங்கள் காலாவதியாகிவிட்டன"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"திட்டங்களைக் காட்டு"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"முடிந்தது"</string>
 </resources>

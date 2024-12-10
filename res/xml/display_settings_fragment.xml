@@ -36,7 +36,9 @@
         settings:controller="com.android.car.settings.display.ThemeTogglePreferenceController"
         settings:action_item_one="toggleButton"
         settings:action_item_two="toggleButton"
-        settings:action_item_three="toggleButton"/>
+        settings:action_item_three="toggleButton"
+        settings:occupant_front_passenger="hidden"
+        settings:occupant_rear_passenger="hidden"/>
     <com.android.car.settings.common.DividerPreference/>
     <Preference
         android:fragment="com.android.car.settings.datetime.DatetimeSettingsFragment"

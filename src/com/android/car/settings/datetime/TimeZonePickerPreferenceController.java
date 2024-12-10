@@ -16,6 +16,7 @@
 
 package com.android.car.settings.datetime;
 
+import android.app.time.TimeManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,6 +26,7 @@ import android.provider.Settings;
 
 import androidx.preference.Preference;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.datetime.ZoneGetter;
@@ -37,6 +39,7 @@ import java.util.Calendar;
 public class TimeZonePickerPreferenceController extends PreferenceController<Preference> {
 
     private final IntentFilter mIntentFilter;
+    private final TimeManager mTimeManager;
     private final BroadcastReceiver mTimeChangeReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -54,6 +57,8 @@ public class TimeZonePickerPreferenceController extends PreferenceController<Pre
         mIntentFilter = new IntentFilter();
         mIntentFilter.addAction(Intent.ACTION_TIME_CHANGED);
         mIntentFilter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
+
+        mTimeManager = context.getSystemService(TimeManager.class);
     }
 
     @Override
@@ -91,7 +96,10 @@ public class TimeZonePickerPreferenceController extends PreferenceController<Pre
     }
 
     private boolean autoTimezoneIsEnabled() {
-        return Settings.Global.getInt(getContext().getContentResolver(),
-                Settings.Global.AUTO_TIME_ZONE, 0) > 0;
+        if (!Flags.updateDateAndTimePage()) {
+            return Settings.Global.getInt(getContext().getContentResolver(),
+                    Settings.Global.AUTO_TIME_ZONE, 0) > 0;
+        }
+        return DatetimeUtils.isAutoLocalTimeDetectionEnabled(mTimeManager);
     }
 }

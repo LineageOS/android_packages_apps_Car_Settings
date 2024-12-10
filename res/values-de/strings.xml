@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5-GHz-Band bevorzugt"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 und 5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Mindestens ein Band für WLAN-Hotspot wählen:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"WLAN-Hotspot"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Hotspot"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-Stunden-Format"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-Stunden-Format verwenden"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Uhrzeit"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Uhrzeit festlegen"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Uhr einstellen"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Zeitzone"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Zeitzone auswählen"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Datum"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Nach Zeitzone sortieren"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Datum"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Uhrzeit"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Für die automatische Einstellung von Datum und Uhrzeit werden möglicherweise Quellen wie der Standort und mobile Netzwerke genutzt, um das Datum, die Uhrzeit und die Zeitzone zu bestimmen."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Standort des Autos nutzen, um Datum und Uhrzeit automatisch festzulegen. Funktioniert nur, wenn die Standortfreigabe aktiviert ist."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Weiter"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"In Einstellungen ändern"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Die Standortfreigabe ist deaktiviert. Die automatische Zeitzonenerkennung funktioniert daher möglicherweise nicht."</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Als Administrator angemeldet"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Administrator-Berechtigungen erteilen?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Aktiviere Bluetooth, um deine Geräte anzuzeigen"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Öffne die Bluetooth-Einstellungen, um ein Gerät zu koppeln"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Design"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Layoutgrenzen anzeigen"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator des Infotainmentsystems"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivierte Apps"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivierte Apps"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Tarife ansehen"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Deine Internettarife sind abgelaufen"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Tarife ansehen"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Fertig"</string>
 </resources>

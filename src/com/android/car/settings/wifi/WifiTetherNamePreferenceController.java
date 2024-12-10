@@ -52,7 +52,10 @@ public class WifiTetherNamePreferenceController extends
     protected void onCreateInternal() {
         super.onCreateInternal();
         getPreference().setValidator(NAME_VALIDATOR);
-        mName = getCarSoftApConfig().getSsid();
+        SoftApConfiguration config = getCarSoftApConfig();
+        if (config != null) {
+            mName = config.getSsid();
+        }
     }
 
     @Override
@@ -71,10 +74,13 @@ public class WifiTetherNamePreferenceController extends
     }
 
     private void updateSSID(String ssid) {
-        SoftApConfiguration config = new SoftApConfiguration.Builder(getCarSoftApConfig())
-                .setSsid(ssid)
-                .build();
-        setCarSoftApConfig(config);
+        SoftApConfiguration config = getCarSoftApConfig();
+        if (config != null) {
+            config = new SoftApConfiguration.Builder(config)
+                    .setSsid(ssid)
+                    .build();
+            setCarSoftApConfig(config);
+        }
     }
 
     @Override

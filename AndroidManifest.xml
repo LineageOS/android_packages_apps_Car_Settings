@@ -23,10 +23,6 @@
           android:versionCode="1"
           android:versionName="1.0">
 
-    <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="33"/>
-
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.BACKUP"/>
@@ -42,6 +38,7 @@
     <uses-permission android:name="android.permission.CAR_VENDOR_EXTENSION"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA"/>
+    <uses-permission android:name="android.permission.CONTROL_DISPLAY_BRIGHTNESS"/>
     <uses-permission android:name="android.permission.CONTROL_DISPLAY_UNITS"/>
     <uses-permission android:name="android.permission.DELETE_CACHE_FILES"/>
     <uses-permission android:name="android.permission.DUMP"/>
@@ -68,6 +65,7 @@
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
     <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS"/>
     <uses-permission android:name="android.permission.START_FOREGROUND"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
     <uses-permission android:name="android.permission.START_VIEW_APP_FEATURES" />
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
     <uses-permission android:name="android.permission.SUGGEST_MANUAL_TIME_AND_ZONE"/>
@@ -996,7 +994,8 @@
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
-    <service android:name=".bluetooth.BluetoothPairingService" />
+    <service android:name=".bluetooth.BluetoothPairingService"
+        android:foregroundServiceType="connectedDevice"/>
 
         <service android:name=".setupservice.InitialLockSetupService"
                  android:exported="true"

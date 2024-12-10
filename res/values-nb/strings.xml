@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 GHz-bånd foretrekkes"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 og 5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Velg minst ett bånd for wifi-sonen:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Wifi-sone"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Wifi-sone"</string>
@@ -366,7 +365,7 @@
     <string name="assist_app_settings" msgid="9085261410166776497">"Assistentapp"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Bruk tekst fra skjermen"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Gi assistentappen tilgang til skjerminnholdet som tekst"</string>
-    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Bruk skjermdump"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Bruk skjermbilde"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Gi assistentappen tilgang til et bilde av skjermen"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Taleinndata"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Autofylltjeneste"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-timers format"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Bruk 24-timers format"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Klokkeslett"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Angi klokkeslett"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Still klokken"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Tidssone"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Velg tidssone"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Dato"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Sorter etter tidssone"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Dato"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Klokkeslett"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Automatisk dato og klokkeslett kan bruke kilder som posisjon og mobilnettverk til å fastslå dato, klokkeslett og tidssone."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Still inn dato og klokkeslett automatisk etter bilens posisjon. Fungerer kun hvis posisjon er på."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Fortsett"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Endre i innstillingene"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Posisjon er av. Det kan hende at Automatisk klokkeslett ikke fungerer."</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Logget på som administrator"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Vil du gi administratorrettigheter?"</string>
@@ -779,8 +783,8 @@
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Digital assistent-app"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Bruk tekst fra skjermen"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Gi assistenten tillatelse til å bruke innhold på skjermen"</string>
-    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Bruk skjermdump"</string>
-    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Gi assistenten tillatelse til å bruke skjermdumper"</string>
+    <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Bruk skjermbilde"</string>
+    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Gi assistenten tillatelse til å bruke skjermbilder"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"Nylig sendt"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"Alle apper"</string>
     <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Profiler og kontoer"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Slå på Bluetooth for å se enhetene dine"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Åpne Bluetooth-innstillingene for å koble til enheter"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Vis layoutgrenser"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Infotainmentsystem-admin"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktiverte apper"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktiverte apper"</string>
@@ -813,7 +818,7 @@
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Kan ikke starte anrop i dette administrerte kjøretøyet"</string>
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"SMS er ikke tillatt i dette administrerte kjøretøyet"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Kameraet er utilgjengelig i dette administrerte kjøretøyet"</string>
-    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Kan ikke ta skjermdumper i dette administrerte kjøretøyet"</string>
+    <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Kan ikke ta skjermbilder i dette administrerte kjøretøyet"</string>
     <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Kan ikke åpne denne appen i dette administrerte kjøretøyet"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Blokkert av kredittleverandøren din"</string>
     <string name="default_admin_support_msg" msgid="2986598061733013282">"Tilgang til enkelte funksjoner er begrenset av organisasjonen.\n\nHvis du har spørsmål, kan du kontakte organisasjonsadministratoren."</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Se abonnementer"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Internettabonnementene dine er utløpt"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Se abonnementer"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Ferdig"</string>
 </resources>

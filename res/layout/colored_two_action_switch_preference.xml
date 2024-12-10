@@ -15,99 +15,108 @@
     limitations under the License.
 -->
 
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:baselineAligned="false"
     android:tag="carUiPreference">
 
     <com.android.car.ui.uxr.DrawableStateConstraintLayout
         android:id="@+id/colored_preference_first_action_container"
-        android:layout_height="0dp"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight = "1"
+        android:paddingVertical="@dimen/colored_two_action_switch_preference_vertical_padding"
         android:background="?android:attr/selectableItemBackground"
         android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/colored_preference_second_action_container"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <com.android.car.ui.uxr.DrawableStateImageView
-            style="@style/Preference.CarUi.Icon"
-            android:id="@android:id/icon"
-            android:layout_width="@dimen/car_ui_preference_icon_size"
-            android:layout_height="@dimen/car_ui_preference_icon_size"
-            android:scaleType="fitCenter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
 
-        <com.android.car.ui.uxr.DrawableStateTextView
-            android:id="@android:id/title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/car_ui_preference_icon_margin_end"
-            app:layout_goneMarginStart="0dp"
-            android:textDirection="locale"
-            android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.CarUi.PreferenceTitle"
-            app:layout_constraintStart_toEndOf="@android:id/icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@android:id/summary"
-            app:layout_constraintVertical_chainStyle="packed"/>
+            <com.android.car.ui.uxr.DrawableStateImageView
+                android:id="@android:id/icon"
+                android:layout_width="@dimen/car_ui_preference_icon_size"
+                android:layout_height="@dimen/car_ui_preference_icon_size"
+                android:layout_marginEnd="@dimen/colored_two_action_switch_preference_margin_end"
+                app:layout_goneMarginEnd="0dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <com.android.car.ui.uxr.DrawableStateTextView
-            android:id="@android:id/summary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/car_ui_preference_icon_margin_end"
-            app:layout_goneMarginStart="0dp"
-            android:textDirection="locale"
-            android:textAppearance="@style/TextAppearance.CarUi.PreferenceSummary"
-            android:maxLines="2"
-            app:layout_constraintStart_toEndOf="@android:id/icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@android:id/title"
-            app:layout_constraintBottom_toTopOf="@id/action_text"/>
 
-        <com.android.car.ui.uxr.DrawableStateTextView
-            android:id="@+id/action_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/car_ui_preference_icon_margin_end"
-            app:layout_goneMarginStart="0dp"
-            android:textDirection="locale"
-            android:textAppearance="@style/TextAppearance.CarUi.PreferenceSummary"
-            android:maxLines="1"
-            app:layout_constraintStart_toEndOf="@android:id/icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@android:id/summary"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-    </com.android.car.ui.uxr.DrawableStateConstraintLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/colored_two_action_switch_preference_margin_end"
+                app:layout_goneMarginStart="0dp"
+                app:layout_constraintStart_toEndOf="@android:id/icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+            <com.android.car.ui.uxr.DrawableStateTextView
+                android:id="@android:id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.CarUi.PreferenceTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@android:id/summary"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.android.car.ui.uxr.DrawableStateTextView
+                android:id="@android:id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.CarUi.PreferenceSummary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@android:id/title"
+                app:layout_constraintBottom_toTopOf="@id/action_text"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.android.car.ui.uxr.DrawableStateTextView
+                android:id="@+id/action_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.CarUi.PreferenceSummary"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@android:id/summary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            </LinearLayout>
+
+        </com.android.car.ui.uxr.DrawableStateConstraintLayout>
+
+    <com.android.car.ui.uxr.DrawableStateConstraintLayout
         android:id="@+id/colored_preference_second_action_container"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_width="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/colored_preference_first_action_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:paddingVertical="@dimen/colored_two_action_switch_preference_divider_vertical_padding"
+        android:layout_weight = "0"
+        android:layout_gravity="center_vertical">
 
         <View
             android:id="@+id/colored_preference_divider"
-            android:layout_width="@dimen/car_ui_divider_width"
-            android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/car_ui_preference_content_margin_bottom"
-            android:layout_marginTop="@dimen/car_ui_preference_content_margin_top"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/colored_preference_secondary_action"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            style="@style/Preference.CarUi.Divider"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            style="@style/Preference.CarUi.Divider"/>
+            android:layout_marginTop="@dimen/colored_two_action_switch_preference_vertical_margin"
+            android:layout_marginBottom="@dimen/colored_two_action_switch_preference_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <com.android.car.ui.uxr.DrawableStateFrameLayout
             android:id="@+id/colored_preference_secondary_action"
@@ -115,26 +124,26 @@
             android:layout_height="match_parent"
             android:background="?android:attr/selectableItemBackground"
             app:layout_constraintStart_toEndOf="@id/colored_preference_divider"
-            app:layout_constraintEnd_toStartOf="@android:id/widget_frame"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
-            <com.android.car.ui.uxr.DrawableStateSwitch
-                android:id="@+id/colored_preference_secondary_action_concrete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:clickable="false"
-                android:focusable="false"/>
-        </com.android.car.ui.uxr.DrawableStateFrameLayout>
 
-        <!-- The widget frame is required for androidx preferences, but we won't use it. -->
-        <FrameLayout
-            android:id="@android:id/widget_frame"
+        <com.android.car.ui.uxr.DrawableStateSwitch
+            android:id="@+id/colored_preference_secondary_action_concrete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:focusable="false"/>
+    </com.android.car.ui.uxr.DrawableStateFrameLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@android:id/widget_frame"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@+id/colored_preference_secondary_action"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</com.android.car.ui.uxr.DrawableStateConstraintLayout>
+
+</LinearLayout>

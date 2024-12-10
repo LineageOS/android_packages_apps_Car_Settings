@@ -539,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑hour format"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Use 24-hour format"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Time"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Set time"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Set clock"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Time zone"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Select time zone"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Date"</string>
@@ -548,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Sort by time zone"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Date"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Time"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Automatic date and time may use sources like location and mobile networks to determine date, time and time zone."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Use your car’s location to automatically set date and time. Only works if location is on."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Continue"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Change in settings"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Your location is off. Automatic time may not work."</string>
     <string name="user_admin" msgid="1535484812908584809">"Admin"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Signed in as admin"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Grant admin permissions?"</string>
@@ -792,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"To see your devices, turn on Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"To pair a device, open Bluetooth settings"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Theme"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Show layout bounds"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Infotainment system admin"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Activated apps"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deactivated apps"</string>

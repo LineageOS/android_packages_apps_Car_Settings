@@ -22,6 +22,10 @@ import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
 
+import android.app.time.Capabilities;
+import android.app.time.TimeConfiguration;
+import android.app.time.TimeManager;
+import android.app.time.TimeZoneConfiguration;
 import android.content.Context;
 import android.os.UserManager;
 import android.widget.Toast;
@@ -71,6 +75,39 @@ public final class DatetimeUtils {
                 EnterpriseUtils.getActionDisabledByAdminDialog(context,
                         DISALLOW_CONFIG_DATE_TIME),
                 DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
+    }
+
+    /**
+     * Uses {@link android.app.time.TimeManager} to determine if auto time detection capabilities
+     * exist in the system context.
+     */
+    public static boolean isAutoTimeDetectionCapabilityPossessed(TimeManager timeManager) {
+        return timeManager.getTimeCapabilitiesAndConfig().getCapabilities()
+                .getConfigureAutoDetectionEnabledCapability() == Capabilities.CAPABILITY_POSSESSED;
+    }
+
+    /**
+     * Uses {@link android.app.time.TimeManager} to determine if auto time zone detection
+     * capabilities exist in the system context.
+     */
+    public static boolean isAutoTimeZoneDetectionCapabilityPossessed(TimeManager timeManager) {
+        return timeManager.getTimeZoneCapabilitiesAndConfig().getCapabilities()
+                .getConfigureAutoDetectionEnabledCapability() == Capabilities.CAPABILITY_POSSESSED;
+    }
+
+    /**
+     * Uses {@link android.app.time.TimeManager} to determine if auto time and time zone detection
+     * has been enabled in the system context.
+     */
+    public static boolean isAutoLocalTimeDetectionEnabled(TimeManager timeManager) {
+        TimeConfiguration timeConfiguration =
+                timeManager.getTimeCapabilitiesAndConfig().getConfiguration();
+        TimeZoneConfiguration timeZoneConfiguration =
+                timeManager.getTimeZoneCapabilitiesAndConfig().getConfiguration();
+        return isAutoTimeDetectionCapabilityPossessed(timeManager)
+                && timeConfiguration.isAutoDetectionEnabled()
+                && isAutoTimeZoneDetectionCapabilityPossessed(timeManager)
+                && timeZoneConfiguration.isAutoDetectionEnabled();
     }
 
     private DatetimeUtils() {

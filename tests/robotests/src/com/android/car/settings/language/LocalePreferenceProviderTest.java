@@ -28,6 +28,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.LogicalPreferenceGroup;
@@ -41,17 +43,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowLocaleStore.class})
+@RunWith(AndroidJUnit4.class)
 public class LocalePreferenceProviderTest {
 
     private static class Pair {
@@ -79,7 +77,7 @@ public class LocalePreferenceProviderTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
         mLocalePreferenceProvider = new LocalePreferenceProvider(mContext, mSuggestedLocaleAdapter);
         mLocaleAdapterExpectedValues = new ArrayList<>();
 

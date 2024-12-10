@@ -25,12 +25,15 @@ import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.DialogInterface;
+import android.view.LayoutInflater;
 import android.widget.EditText;
+
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
-import com.android.car.settings.testutils.ShadowBluetoothPan;
+import com.android.car.ui.CarUiLayoutInflaterFactory;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -42,24 +45,19 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowDialog;
 import org.robolectric.util.ReflectionHelpers;
 
 /** Unit test for {@link RemoteRenameDialogFragment}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowBluetoothAdapter.class, ShadowBluetoothPan.class})
+@RunWith(AndroidJUnit4.class)
 public class RemoteRenameDialogFragmentTest {
 
     private static final String NAME = "name";
     private static final String NAME_UPDATED = "name updated";
 
-    @Mock
-    private CachedBluetoothDevice mCachedDevice;
-    @Mock
-    private CachedBluetoothDeviceManager mCachedDeviceManager;
+    @Mock private CachedBluetoothDevice mCachedDevice;
+    @Mock private CachedBluetoothDeviceManager mCachedDeviceManager;
     private CachedBluetoothDeviceManager mSaveRealCachedDeviceManager;
     private LocalBluetoothManager mLocalBluetoothManager;
     private RemoteRenameDialogFragment mFragment;
@@ -67,12 +65,15 @@ public class RemoteRenameDialogFragmentTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        LayoutInflater.from(RuntimeEnvironment.application)
+                .setFactory2(new CarUiLayoutInflaterFactory());
 
-        mLocalBluetoothManager = LocalBluetoothManager.getInstance(
-                RuntimeEnvironment.application, /* onInitCallback= */ null);
+        mLocalBluetoothManager =
+                LocalBluetoothManager.getInstance(
+                        RuntimeEnvironment.application, /* onInitCallback= */ null);
         mSaveRealCachedDeviceManager = mLocalBluetoothManager.getCachedDeviceManager();
-        ReflectionHelpers.setField(mLocalBluetoothManager, "mCachedDeviceManager",
-                mCachedDeviceManager);
+        ReflectionHelpers.setField(
+                mLocalBluetoothManager, "mCachedDeviceManager", mCachedDeviceManager);
 
         String address = "00:11:22:33:AA:BB";
         BluetoothDevice device = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(address);
@@ -85,8 +86,8 @@ public class RemoteRenameDialogFragmentTest {
     @After
     public void tearDown() {
         ShadowBluetoothAdapter.reset();
-        ReflectionHelpers.setField(mLocalBluetoothManager, "mCachedDeviceManager",
-                mSaveRealCachedDeviceManager);
+        ReflectionHelpers.setField(
+                mLocalBluetoothManager, "mCachedDeviceManager", mSaveRealCachedDeviceManager);
     }
 
     @Test

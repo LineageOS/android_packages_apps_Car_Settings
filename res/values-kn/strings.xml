@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz ಬ್ಯಾಂಡ್‌ಗೆ ಆದ್ಯತೆ ನೀಡಲಾಗಿದೆ"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2.4 ಮತ್ತು 5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್‌ಗೆ ಬ್ಯಾಂಡ್ ಆರಿಸಿ:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"ವೈ-ಫೈ ಹಾಟ್‌ಸ್ಪಾಟ್"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ಹಾಟ್‌ಸ್ಪಾಟ್"</string>
@@ -187,7 +186,7 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"ಹೆಸರಿಸದಿರುವ ಸಾಧನ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ಜೋಡಿಸಲಾದ ಸಾಧನಗಳು"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"ಹೊಸ ಸಾಧನವನ್ನು ಪೇರ್ ಮಾಡಿ"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ಜೋಡಿಸಲು ಬ್ಲೂಟೂತ್ ಆನ್ ಆಗುತ್ತದೆ"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ಪೇರ್ ಮಾಡಲು ಬ್ಲೂಟೂತ್ ಆನ್ ಆಗುತ್ತದೆ"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ಸಾಧನದ ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸುವುದೇ?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನದಿಂದ ವಾಹನ ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸಲಾಗುತ್ತದೆ."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"ವಾಹನದ ಬ್ಲೂಟೂತ್‌ ವಿಳಾಸ: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -453,7 +452,7 @@
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"ಇತ್ತೀಚಿಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"ಇತ್ತೀಚಿನ ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
     <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 ಆ್ಯಪ್‌ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ"</string>
-    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗೆ ಪ್ರವೇಶವಿದೆ}one{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ}other{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ}}"</string>
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗೆ ಆ್ಯಕ್ಸೆಸ್ ಇದೆ}one{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಆ್ಯಕ್ಸೆಸ್ ಇದೆ}other{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಆ್ಯಕ್ಸೆಸ್ ಇದೆ}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"ಇತ್ತೀಚಿಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"ಲೋಡ್ ಆಗುತ್ತಿದೆ…"</string>
@@ -495,7 +494,7 @@
     <string name="status_serial_number" msgid="9158889113131907656">"ಕ್ರಮ ಸಂಖ್ಯೆ"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"ಹಾರ್ಡ್‌ವೇರ್ ಆವೃತ್ತಿ"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
-    <string name="settings_license_activity_title" msgid="8499293744313077709">"ಮೂರನೇ-ವ್ಯಕ್ತಿ ಪರವಾನಗಿಗಳು"</string>
+    <string name="settings_license_activity_title" msgid="8499293744313077709">"ಥರ್ಡ್-ಪಾರ್ಟಿ ಪರವಾನಗಿಗಳು"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ಪರವಾನಗಿಗಳನ್ನು ಲೋಡ್‌ ಮಾಡುವಲ್ಲಿ ಸಮಸ್ಯೆ ಇದೆ."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ಲೋಡ್ ಆಗುತ್ತಿದೆ..."</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{ನೀವು ಡೆವಲಪರ್ ಆಗುವುದಕ್ಕೆ ಈಗ # ಹಂತದಷ್ಟು ದೂರದಲ್ಲಿದ್ದೀರಿ.}one{ನೀವು ಡೆವಲಪರ್ ಆಗುವುದಕ್ಕೆ ಈಗ # ಹಂತಗಳಷ್ಟು ದೂರದಲ್ಲಿದ್ದೀರಿ.}other{ನೀವು ಡೆವಲಪರ್ ಆಗುವುದಕ್ಕೆ ಈಗ # ಹಂತಗಳಷ್ಟು ದೂರದಲ್ಲಿದ್ದೀರಿ.}}"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑ಗಂಟೆಯ ಫಾರ್ಮ್ಯಾಟ್‌"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-ಗಂಟೆಯ ಫಾರ್ಮ್ಯಾಟ್‌‌ ಬಳಸಿ"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"ಸಮಯ"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"ಸಮಯವನ್ನು ಹೊಂದಿಸಿ"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"ಗಡಿಯಾರವನ್ನು ಸೆಟ್‌ ಮಾಡಿ"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"ಸಮಯ ವಲಯ"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"ಸಮಯ ವಲಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"ದಿನಾಂಕ"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"ಸಮಯ ವಲಯದ ಅನುಸಾರ ವಿಂಗಡಿಸಿ"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"ದಿನಾಂಕ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"ಸಮಯ"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"ದಿನಾಂಕ, ಸಮಯ ಮತ್ತು ಸಮಯ ವಲಯವನ್ನು ನಿರ್ಧರಿಸಲು ಸ್ವಯಂಚಾಲಿತ ದಿನಾಂಕ ಮತ್ತು ಸಮಯವು ಸ್ಥಳ ಮತ್ತು ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳಂತಹ ಮೂಲಗಳನ್ನು ಬಳಸಬಹುದು."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೆಟ್‌ ಮಾಡಲು ನಿಮ್ಮ ಕಾರಿನ ಸ್ಥಳವನ್ನು ಬಳಸಿ. ಸ್ಥಳ ಆನ್ ಆಗಿದ್ದರೆ ಮಾತ್ರ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"ಮುಂದುವರಿಸಿ"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"ಸೆಟ್ಟಿಂಗ್‌‌ಗಳಲ್ಲಿ ಬದಲಾಯಿಸಿ"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"ನಿಮ್ಮ ಸ್ಥಳ ಆಫ್ ಆಗಿದೆ. ಸ್ವಯಂಚಾಲಿತ ಸಮಯ ಕೆಲಸ ಮಾಡದಿರಬಹುದು."</string>
     <string name="user_admin" msgid="1535484812908584809">"ನಿರ್ವಾಹಕರು"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ನಿರ್ವಾಹಕರಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"ನಿರ್ವಾಹಕರ ಅನುಮತಿಗಳನ್ನು ನೀಡಬೇಕೇ?"</string>
@@ -664,7 +668,7 @@
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"ನೀತಿ"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ನಿಮ್ಮ ಕಾರ್‌ನ ತಯಾರಕರು ಇನ್ನೂ ನಿಮ್ಮ ಕಾರ್‌ನ ಕ್ಯಾಮರಾಗೆ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಹೊಂದಿರಬಹುದು"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಆ್ಯಪ್‌ಗಳು"</string>
-    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ಚಿತ್ರಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ವೀಡಿಯೊ ರೆಕಾರ್ಡ್ ಮಾಡಲು ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಆ್ಯಪ್‌ಗಳನ್ನು ಅನುಮತಿಸಿ"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ಚಿತ್ರಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ವೀಡಿಯೊ ರೆಕಾರ್ಡ್ ಮಾಡಲು ಇನ್‌ಫೋಟೇನ್‌ಮೆಂಟ್ ಆ್ಯಪ್‌ಗಳನ್ನು ಅನುಮತಿಸಿ"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"ಅನುಮತಿಸಲಾಗಿದೆ"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"ಯಾವಾಗಲೂ"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"ಅನುಮತಿಸಲಾಗುವುದಿಲ್ಲ"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ನಿಮ್ಮ ಸಾಧನಗಳನ್ನು ನೋಡಲು, ಬ್ಲೂಟೂತ್ ಆನ್ ಮಾಡಿ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ಸಾಧನವನ್ನು ಜೋಡಿಸಲು, ಬ್ಲೂಟೂತ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"ಥೀಮ್"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"ಲೇಔಟ್ ಪರಿಮಿತಿಗಳನ್ನು ತೋರಿಸು"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂ ನಿರ್ವಾಹಕರು"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ಸಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ನಿಷ್ಕ್ರಿಯಗೊಂಡ ಆ್ಯಪ್‌ಗಳು"</string>
@@ -920,13 +925,12 @@
     <string name="camera_recently_accessed" msgid="8084100710444691977">"ಇತ್ತೀಚಿಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"ಇತ್ತೀಚಿನ ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳಿಲ್ಲ"</string>
     <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ಆ್ಯಪ್‌ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ"</string>
-    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗೆ ಪ್ರವೇಶವಿದೆ}one{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ}other{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಪ್ರವೇಶವಿದೆ}}"</string>
+    <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗೆ ಆ್ಯಕ್ಸೆಸ್ ಇದೆ}one{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಆ್ಯಕ್ಸೆಸ್ ಇದೆ}other{{total_count} ಆ್ಯಪ್‌ಗಳಲ್ಲಿನ # ಗಳಿಗೆ ಆ್ಯಕ್ಸೆಸ್ ಇದೆ}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ಇತ್ತೀಚಿಗೆ ಪ್ರವೇಶಿಸಿರುವುದು"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ"</string>
     <string name="camera_settings_loading_app_permission_stats" msgid="1402676190705491418">"ಲೋಡ್ ಆಗುತ್ತಿದೆ…"</string>
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"ಪ್ಲಾನ್‌ಗಳನ್ನು ನೋಡಿ"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಪ್ಲಾನ್‌ಗಳ ಅವಧಿ ಮುಗಿದಿದೆ"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ಪ್ಲಾನ್‌ಗಳನ್ನು ನೋಡಿ"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ಮುಗಿದಿದೆ"</string>
 </resources>

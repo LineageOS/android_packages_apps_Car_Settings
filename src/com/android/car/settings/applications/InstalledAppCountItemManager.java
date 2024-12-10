@@ -16,16 +16,20 @@
 
 package com.android.car.settings.applications;
 
+import static android.Manifest.permission.MANAGE_OWN_CALLS;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 
+import com.android.car.settings.common.PermissionUtil;
 import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.ArrayList;
@@ -37,12 +41,16 @@ import java.util.List;
  */
 public class InstalledAppCountItemManager {
 
-    private Context mContext;
     private final List<InstalledAppCountListener> mInstalledAppCountListeners;
+    private final PackageManager mPackageManager;
+    private final boolean mIsVisibleBackgroundUser;
 
     public InstalledAppCountItemManager(Context context) {
-        mContext = context;
         mInstalledAppCountListeners = new ArrayList<>();
+        mPackageManager = context.getPackageManager();
+        UserManager userManager = context.getSystemService(UserManager.class);
+        mIsVisibleBackgroundUser = !userManager.isUserForeground() && userManager.isUserVisible()
+                && !userManager.isProfile();
     }
 
     /**
@@ -57,7 +65,7 @@ public class InstalledAppCountItemManager {
      */
     public void startLoading() {
         ThreadUtils.postOnBackgroundThread(() -> {
-            List<ApplicationInfo> appList = mContext.getPackageManager()
+            List<ApplicationInfo> appList = mPackageManager
                     .getInstalledApplications(PackageManager.MATCH_DISABLED_COMPONENTS
                             | PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS);
 
@@ -77,6 +85,12 @@ public class InstalledAppCountItemManager {
 
     @VisibleForTesting
     boolean shouldCountApp(ApplicationInfo applicationInfo) {
+        // MUMD passenger users can't use telephony applications so they don't interrupt the
+        // driver's calls
+        if (mIsVisibleBackgroundUser && PermissionUtil.doesPackageRequestPermission(
+                applicationInfo.packageName, mPackageManager, MANAGE_OWN_CALLS)) {
+            return false;
+        }
         if ((applicationInfo.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) != 0) {
             return true;
         }
@@ -87,7 +101,7 @@ public class InstalledAppCountItemManager {
         Intent launchIntent = new Intent(Intent.ACTION_MAIN, null)
                 .addCategory(Intent.CATEGORY_LAUNCHER)
                 .setPackage(applicationInfo.packageName);
-        List<ResolveInfo> intents = mContext.getPackageManager().queryIntentActivitiesAsUser(
+        List<ResolveInfo> intents = mPackageManager.queryIntentActivitiesAsUser(
                 launchIntent,
                 PackageManager.MATCH_DISABLED_COMPONENTS
                         | PackageManager.MATCH_DIRECT_BOOT_AWARE

@@ -20,6 +20,7 @@ import static com.android.car.datasubscription.DataSubscription.DATA_SUBSCRIPTIO
 
 import android.annotation.SuppressLint;
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.database.ContentObserver;
@@ -40,6 +41,7 @@ import com.android.car.datasubscription.DataSubscription;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ColoredTwoActionSwitchPreference;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.utils.StringUtil;
 
@@ -50,6 +52,7 @@ public class MobileNetworkEntryPreferenceController extends
         PreferenceController<ColoredTwoActionSwitchPreference> implements
         SubscriptionsChangeListener.SubscriptionsChangeAction,
         DataSubscription.DataSubscriptionChangeListener {
+    private static final Logger LOG = new Logger(MobileNetworkEntryPreferenceController.class);
     private final UserManager mUserManager;
     private final SubscriptionsChangeListener mChangeListener;
     private final SubscriptionManager mSubscriptionManager;
@@ -142,19 +145,21 @@ public class MobileNetworkEntryPreferenceController extends
 
     @Override
     protected boolean handlePreferenceClicked(ColoredTwoActionSwitchPreference preference) {
-        if (isDataSubscriptionFlagEnable()
-                && mSubscription.isDataSubscriptionInactive()) {
-            Intent dataSubscriptionIntent = new Intent(DATA_SUBSCRIPTION_ACTION);
-            dataSubscriptionIntent.setPackage(getContext().getString(
-                    R.string.connectivity_flow_app));
-            dataSubscriptionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getContext().startActivity(dataSubscriptionIntent);
-            return true;
-        }
         List<SubscriptionInfo> subs = SubscriptionUtils.getAvailableSubscriptions(
                 mSubscriptionManager, mTelephonyManager);
         if (subs.isEmpty()) {
-            return true;
+            if (isDataSubscriptionFlagEnable()
+                    && mSubscription.isDataSubscriptionInactive()) {
+                Intent dataSubscriptionIntent = new Intent(DATA_SUBSCRIPTION_ACTION);
+                dataSubscriptionIntent.setPackage(getContext().getString(
+                        R.string.connectivity_flow_app));
+                dataSubscriptionIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                try {
+                    getContext().startActivity(dataSubscriptionIntent);
+                } catch (ActivityNotFoundException e) {
+                    LOG.w("Can't start activity from package " + DATA_SUBSCRIPTION_ACTION);
+                }
+            }
         } else if (subs.size() == 1) {
             getFragmentController().launchFragment(
                     MobileNetworkFragment.newInstance(subs.get(0).getSubscriptionId()));
@@ -184,13 +189,14 @@ public class MobileNetworkEntryPreferenceController extends
         if (!mTelephonyManager.isDataEnabled()) {
             return getContext().getString(R.string.mobile_network_state_off);
         }
-        if (isDataSubscriptionFlagEnable()
-                && mSubscription.isDataSubscriptionInactive()) {
-            return getContext().getString(R.string.connectivity_inactive_prompt);
-        }
         int count = subs.size();
         if (subs.isEmpty()) {
-            return null;
+            if (isDataSubscriptionFlagEnable()
+                    && mSubscription.isDataSubscriptionInactive()) {
+                return getContext().getString(R.string.connectivity_inactive_prompt);
+            } else {
+                return null;
+            }
         } else if (count == 1) {
             return subs.get(0).getDisplayName();
         } else {

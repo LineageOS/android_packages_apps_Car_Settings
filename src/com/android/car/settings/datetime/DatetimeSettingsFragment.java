@@ -20,6 +20,7 @@ import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
@@ -34,7 +35,10 @@ public class DatetimeSettingsFragment extends SettingsFragment {
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.datetime_settings_fragment;
+        if (!Flags.updateDateAndTimePage()) {
+            return R.xml.datetime_settings_fragment;
+        }
+        return R.xml.datetime_settings_fragment_v2;
     }
 
     public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

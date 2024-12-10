@@ -33,6 +33,8 @@ import android.view.View;
 
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.preference.PreferenceViewHolder;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
 
@@ -41,11 +43,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
 /** Unit test for {@link SuggestionPreference}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class SuggestionPreferenceTest {
 
     private static final String SUGGESTION_ID = "id";
@@ -59,7 +59,7 @@ public class SuggestionPreferenceTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        Context context = RuntimeEnvironment.application;
+        Context context = InstrumentationRegistry.getInstrumentation().getContext();
 
         mSuggestion = new Suggestion.Builder(SUGGESTION_ID).build();
         Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);

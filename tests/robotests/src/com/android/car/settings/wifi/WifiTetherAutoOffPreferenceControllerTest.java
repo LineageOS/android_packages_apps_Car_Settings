@@ -29,6 +29,8 @@ import android.net.wifi.WifiManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 
@@ -38,10 +40,8 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class WifiTetherAutoOffPreferenceControllerTest {
 
     private Context mContext;
@@ -55,7 +55,7 @@ public class WifiTetherAutoOffPreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        mContext = spy(RuntimeEnvironment.application);
+        mContext = spy(InstrumentationRegistry.getInstrumentation().getContext());
 
         when(mContext.getSystemService(WifiManager.class)).thenReturn(mWifiManager);
         mSoftApConfiguration = new SoftApConfiguration.Builder().build();

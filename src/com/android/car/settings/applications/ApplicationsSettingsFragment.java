@@ -21,6 +21,7 @@ import static com.android.car.settings.storage.StorageUtils.maybeInitializeVolum
 import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 
@@ -45,13 +46,15 @@ public class ApplicationsSettingsFragment extends AppListFragment {
 
         Application application = requireActivity().getApplication();
         StorageManager sm = context.getSystemService(StorageManager.class);
+        UserManager um = context.getSystemService(UserManager.class);
         VolumeInfo volume = maybeInitializeVolume(sm, getArguments());
         mAppListItemManager = new ApplicationListItemManager(volume, getLifecycle(),
                 ApplicationsState.getInstance(application),
                 getContext().getResources().getInteger(
                         R.integer.millisecond_app_data_update_interval),
                 getContext().getResources().getInteger(
-                        R.integer.millisecond_max_app_load_wait_interval));
+                        R.integer.millisecond_max_app_load_wait_interval),
+                getContext().getPackageManager(), um);
         mAppListItemManager.registerListener(
                 use(ApplicationsSettingsPreferenceController.class,
                         R.string.pk_all_applications_settings_list));

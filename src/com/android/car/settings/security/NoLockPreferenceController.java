@@ -99,6 +99,11 @@ public class NoLockPreferenceController extends LockTypeBasePreferenceController
     }
 
     @Override
+    protected boolean isSecureLockType() {
+        return false;
+    }
+
+    @Override
     protected void updateState(Preference preference) {
         super.updateState(preference);
 

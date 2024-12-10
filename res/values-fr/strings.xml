@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Bande 5 GHz de préférence"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 et 5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Sélectionnez au moins une bande pour le point d\'accès Wi-Fi :"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Point d\'accès Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Point d\'accès"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Format 24 heures"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Utiliser le format 24 heures"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Heure"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Définir l\'heure"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Régler la date et l\'heure"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Fuseau horaire"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Définir le fuseau horaire"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Date"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Trier par fuseau horaire"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Date"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Heure"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"La détection automatique de la date et de l\'heure peut utiliser des sources telles que la localisation et les réseaux mobiles pour déterminer la date, l\'heure et le fuseau horaire."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Utilisez la localisation de votre voiture pour régler automatiquement la date et l\'heure. Ne fonctionne que si la localisation est activée."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Continuer"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Modifier dans les paramètres"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Votre localisation est désactivée. La détection automatique du fuseau horaire peut ne pas fonctionner."</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrateur"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Connecté en tant qu\'administrateur"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Accorder les droits d\'administrateur ?"</string>
@@ -664,11 +668,11 @@
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Règles"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Votre constructeur automobile a peut-être encore accès à la caméra de votre véhicule"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Applis d\'infoloisirs"</string>
-    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Autorisez les applis d\'infoloisirs à prendre des photos et à enregistrer des vidéos"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Autoriser les applis d\'infoloisirs à prendre des photos et à enregistrer des vidéos"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Autorisées"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Tout le temps"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"Non autorisées"</string>
-    <string name="permission_grant_in_use" msgid="2314262542396732455">"Seulement quand l\'application fonctionne"</string>
+    <string name="permission_grant_in_use" msgid="2314262542396732455">"Seulement si l\'appli est en cours d\'utilisation"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Toujours demander"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sécurité"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Verrouillage d\'écran"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Pour voir vos appareils, activez le Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Pour associer un appareil, ouvrez les paramètres du Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Thème"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Afficher les contours"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administration du système d\'infoloisirs"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Applis activées"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Applis désactivées"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Afficher les forfaits"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Vos forfaits Internet ont expiré"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Afficher les forfaits"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"OK"</string>
 </resources>

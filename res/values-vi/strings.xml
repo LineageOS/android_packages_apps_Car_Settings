@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Ưu tiên băng tần 5 GHz"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 và 5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Chọn 1 băng tần cho điểm phát sóng Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Điểm phát sóng Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Điểm phát sóng"</string>
@@ -501,7 +500,7 @@
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Giờ đây, bạn chỉ còn # bước nữa là trở thành một nhà phát triển.}other{Giờ đây, bạn chỉ còn # bước nữa là trở thành một nhà phát triển.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Bạn đã là nhà phát triển!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Không cần, bạn đã là nhà phát triển."</string>
-    <string name="developer_options_settings" msgid="1530739225109118480">"Tùy chọn của nhà phát triển"</string>
+    <string name="developer_options_settings" msgid="1530739225109118480">"Tuỳ chọn cho nhà phát triển"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Tùy chọn đặt lại"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Đặt lại mạng, ứng dụng hoặc thiết bị"</string>
     <string name="reset_network_title" msgid="3077846909739832734">"Đặt lại Wi‑Fi và Bluetooth"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Định dạng 24 giờ"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Sử dụng định dạng 24 giờ"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Thời gian"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Đặt giờ"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Thiết lập đồng hồ"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Múi giờ"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Chọn múi giờ"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Ngày"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Sắp xếp theo múi giờ"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Ngày"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Thời gian"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Tính năng Ngày và giờ tự động có thể sử dụng những nguồn như thông tin vị trí và mạng di động để xác định ngày, giờ và múi giờ."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Sử dụng dịch vụ vị trí của ô tô để tự động thiết lập ngày và giờ. Tính năng này chỉ hoạt động khi dịch vụ vị trí đang bật."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Tiếp tục"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Thay đổi trong phần cài đặt"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Bạn đang tắt dịch vụ vị trí. Chế độ tự động phát hiện giờ/múi giờ có thể sẽ không hoạt động."</string>
     <string name="user_admin" msgid="1535484812908584809">"Quản trị viên"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Đã đăng nhập là quản trị viên"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Cấp quyền quản trị viên?"</string>
@@ -660,11 +664,11 @@
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Quyền truy cập vào camera"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Chọn xem các ứng dụng có thể truy cập vào camera của ô tô hay không"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Ứng dụng cần thiết"</string>
-    <string name="required_apps_group_summary" msgid="5026442309718220831">"Ứng dụng do nhà sản xuất ô tô yêu cầu để hỗ trợ bạn lái xe"</string>
+    <string name="required_apps_group_summary" msgid="5026442309718220831">"Các ứng dụng mà nhà sản xuất ô tô cần để hỗ trợ bạn lái xe"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Chính sách"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Có thể nhà sản xuất ô tô vẫn có quyền truy cập vào camera ô tô của bạn"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Ứng dụng thông tin giải trí"</string>
-    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Cho phép ứng dụng thông tin giải trí chụp ảnh và quay video"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Cho phép các ứng dụng thông tin giải trí chụp ảnh và quay video"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Được phép"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Mọi lúc"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"Không được phép"</string>
@@ -748,7 +752,7 @@
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Phải có ít hơn # ký tự}other{Phải có ít hơn # ký tự}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Phải có ít hơn # chữ số}other{Phải có ít hơn # chữ số}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Không cho phép thứ tự chữ số tăng dần, giảm dần hoặc lặp lại"</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Tùy chọn phương thức khóa màn hình"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Các phương thức khóa màn hình"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Xóa thông tin xác thực"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Xóa tất cả chứng chỉ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Xóa tất cả nội dung?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Để xem các thiết bị của bạn, hãy bật Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Để ghép nối thiết bị, hãy mở phần cài đặt Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Giao diện"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Hiện ranh giới bố cục"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Quản trị hệ thống thông tin giải trí"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Ứng dụng đã kích hoạt"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Ứng dụng đã hủy kích hoạt"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Xem các gói"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Các gói Internet của bạn đã hết hạn"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Xem các gói"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Xong"</string>
 </resources>

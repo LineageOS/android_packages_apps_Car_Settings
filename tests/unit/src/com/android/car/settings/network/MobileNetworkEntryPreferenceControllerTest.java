@@ -137,7 +137,6 @@ public class MobileNetworkEntryPreferenceControllerTest {
         when(mCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)).thenReturn(true);
         when(mConnectivityManager.getNetworkCapabilities(network)).thenReturn(mCapabilities);
         when(mConnectivityManager.getAllNetworks()).thenReturn(new Network[]{network});
-        when(mDataSubscription.isDataSubscriptionInactive()).thenReturn(false);
 
         when(mUserManager.isAdminUser()).thenReturn(true);
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS))
@@ -343,6 +342,16 @@ public class MobileNetworkEntryPreferenceControllerTest {
     }
 
     @Test
+    public void onCreate_noSubscriptionInfo_InactiveData_validSummary() {
+        when(mDataSubscription.isDataSubscriptionInactive()).thenReturn(true);
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+
+        verify(mMockPreference).setSummary(mContext.getResources().getString(
+                R.string.connectivity_inactive_prompt));
+    }
+
+    @Test
     public void onCreate_oneSim_enabled() {
         SubscriptionInfo info = createSubscriptionInfo(/* subId= */ 1,
                 /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
@@ -400,6 +409,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
                 /* simSlotIndex= */ 2, TEST_NETWORK_NAME);
         List<SubscriptionInfo> selectable = Lists.newArrayList(info1, info2);
         when(mSubscriptionManager.getSelectableSubscriptionInfoList()).thenReturn(selectable);
+        when(mDataSubscription.isDataSubscriptionInactive()).thenReturn(false);
 
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -415,6 +425,16 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
         verify(mFragmentController, never()).launchFragment(
                 any(Fragment.class));
+    }
+
+    @Test
+    @UiThreadTest
+    public void performClick_noSubscriptionInfo_noFragmentStarted() {
+        when(mDataSubscription.isDataSubscriptionInactive()).thenReturn(true);
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.handlePreferenceClicked(mMockPreference);
+
+        verify(mContext).startActivity(any());
     }
 
     @Test

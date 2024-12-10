@@ -32,6 +32,8 @@ import androidx.loader.content.Loader;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.suggestions.SuggestionController;
@@ -41,8 +43,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.util.ReflectionHelpers;
 
 import java.util.Arrays;
@@ -50,7 +50,7 @@ import java.util.Collections;
 import java.util.List;
 
 /** Unit test for {@link SuggestionsPreferenceController}. */
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class SuggestionsPreferenceControllerTest {
 
     private static final Suggestion SUGGESTION_1 = new Suggestion.Builder("1").build();
@@ -71,7 +71,7 @@ public class SuggestionsPreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
         mGroup = new PreferenceCategory(mContext);
 
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,

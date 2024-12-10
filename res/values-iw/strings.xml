@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"עדיפות לתדר של ‎5.0 GHz"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"‎2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"‎5.0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"‫‎2.4GHz ו-5.0GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"יש לבחור תדר אחד לפחות לנקודת Wi‑Fi לשיתוף אינטרנט:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"נקודת Wi‑Fi לשיתוף אינטרנט"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"נקודת אינטרנט"</string>
@@ -535,12 +534,12 @@
     <string name="factory_reset_progress_text" msgid="7704636573522634757">"יש להמתין…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"תאריך ושעה"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"הגדרת תאריך, שעה, אזור זמן ופורמטים"</string>
-    <string name="date_time_auto" msgid="6018635902717385962">"הגדרת השעה באופן אוטומטי"</string>
+    <string name="date_time_auto" msgid="6018635902717385962">"הגדרת הזמן באופן אוטומטי"</string>
     <string name="zone_auto" msgid="4174874778459184605">"הגדרת אזור הזמן באופן אוטומטי"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"פורמט 24 שעות"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"פורמט 24 שעות"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"שעה"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"הגדרת שעה"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"הגדרת השעון"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"אזור זמן"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"אזור זמן"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"תאריך"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"מיון לפי אזור זמן"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"תאריך"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"שעה"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"הזיהוי האוטומטי של אזור הזמן מתבסס על מקורות מידע כמו נתוני המיקום ורשתות סלולריות כדי לקבוע את התאריך, השעה ואזור הזמן."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"אפשר להשתמש במיקום של הרכב כדי להגדיר אוטומטית את התאריך והשעה. הפעולה הזו עובדת רק אם שירות המיקום מופעל."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"המשך"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"לשינוי ב\'הגדרות\'"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"המיקום שלך מושבת. יכול להיות שהזיהוי האוטומטי של אזור הזמן לא יפעל."</string>
     <string name="user_admin" msgid="1535484812908584809">"מנהל מערכת"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"כניסה בתור מנהל מערכת"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"להעניק הרשאות של מנהל מערכת?"</string>
@@ -664,7 +668,7 @@
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"מדיניות"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"יכול להיות שליצרן הרכב עדיין יש גישה למצלמה של הרכב"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"אפליקציות מידע ובידור"</string>
-    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"לאפשר לאפליקציות מידע ובידור לצלם תמונות ולהקליט סרטונים"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"אפליקציות מידע ובידור יכולות לצלם תמונות ולהקליט סרטונים"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"יש הרשאה"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"כל הזמן"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"אין הרשאה"</string>
@@ -687,7 +691,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"הגדרת מסך נעילה"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"בחירת קוד גישה"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"בחירת סיסמה"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"נעילת המסך הנוכחית"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"השיטה הנוכחית לביטול הנעילה"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"מטעמי אבטחה, יש להגדיר קו ביטול נעילה"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ניקוי"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ביטול"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"כדי להציג את המכשירים שלך, צריך להפעיל את Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"כדי להתאים מכשיר, צריך לפתוח את הגדרות Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"עיצוב"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"הצגת גבולות הפריסה"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"המנהל של מערכת המידע והבידור"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"אפליקציות מופעלות"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"אפליקציות מושבתות"</string>
@@ -933,6 +938,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"להצגת חבילות הגלישה"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"התוקף של חבילות הגלישה שלך פג"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"להצגת חבילות הגלישה"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"סיום"</string>
 </resources>

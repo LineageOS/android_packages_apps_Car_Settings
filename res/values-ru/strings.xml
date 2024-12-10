@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 ГГц (рекомендуется)"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 и 5 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Диапазон частот для точек доступа Wi-Fi."</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Точка доступа Wi‑Fi"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Точка доступа"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-часовой формат"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-часовой формат"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Время"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Установить время"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Настроить часы"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Часовой пояс"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Выбрать часовой пояс"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Дата"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Упорядочить по часовому поясу"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Дата"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Время"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Для автоматического определения даты, времени и часового пояса могут использоваться данные геолокации и мобильные сети."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Использовать данные о местоположении автомобиля, чтобы автоматически определять дату и время (работает только при включенной геолокации)"</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Продолжить"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Изменить настройки"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Геолокация отключена. Возможно, время не будет определяться автоматически."</string>
     <string name="user_admin" msgid="1535484812908584809">"Администратор"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Вы вошли как администратор"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Предоставить права администратора?"</string>
@@ -663,7 +667,7 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Приложения для водителей, наличия которых требует производитель вашего автомобиля"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Политика конфиденциальности"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"У производителя автомобиля все ещё может быть доступ к камере вашего автомобиля."</string>
-    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Информационно-\\nразвлекательная система"</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Информация и развлечения"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Разрешить информационно-развлекательным приложениям снимать фото и видео"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Разрешено"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Всегда"</string>
@@ -687,7 +691,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"Блокировка экрана"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Выберите PIN-код"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Выберите пароль"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"Текущий способ блокировки"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"Текущий способ разблокировки"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Для защиты системы создайте граф. ключ."</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Очистить"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Отмена"</string>
@@ -695,7 +699,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Начертите графический ключ"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"По завершении отпустите палец."</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Графический ключ сохранен"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Начертите графический ключ ещё раз."</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Подтвердите графический ключ."</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Нужно соединить не менее 4 точек."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Неверный ключ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Как начертить графический ключ"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Чтобы посмотреть список своих устройств, включите Bluetooth."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Чтобы подключить устройство, откройте настройки Bluetooth."</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Тема"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Показывать границы макета"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Администратор информационно-развлекательной системы"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Активные приложения"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Отключенные приложения"</string>
@@ -939,6 +944,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Посмотреть тарифы"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Ваши тарифные планы на интернет больше не действуют"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Посмотреть тарифы"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Готово"</string>
 </resources>

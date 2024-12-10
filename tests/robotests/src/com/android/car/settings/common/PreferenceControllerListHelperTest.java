@@ -23,21 +23,20 @@ import static org.testng.Assert.assertThrows;
 
 import android.car.drivingstate.CarUxRestrictions;
 
+import androidx.test.runner.AndroidJUnit4;
+
 import com.android.car.settings.R;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Unit test for {@link PreferenceControllerListHelper}.
- */
-@RunWith(RobolectricTestRunner.class)
+/** Unit test for {@link PreferenceControllerListHelper}. */
+@RunWith(AndroidJUnit4.class)
 public class PreferenceControllerListHelperTest {
 
     private static final CarUxRestrictions UX_RESTRICTIONS =

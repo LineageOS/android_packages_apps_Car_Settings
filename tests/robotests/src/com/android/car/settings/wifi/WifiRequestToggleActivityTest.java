@@ -26,6 +26,8 @@ import android.content.pm.PackageManager;
 import android.net.wifi.WifiManager;
 
 import androidx.lifecycle.Lifecycle;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.ShadowCarWifiManager;
@@ -34,14 +36,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.android.controller.ActivityController;
-import org.robolectric.annotation.Config;
 
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarWifiManager.class})
+@RunWith(AndroidJUnit4.class)
 public class WifiRequestToggleActivityTest {
 
     private static final String PACKAGE_NAME = "com.android.vending";
@@ -52,7 +50,7 @@ public class WifiRequestToggleActivityTest {
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        mContext = InstrumentationRegistry.getInstrumentation().getContext();
         Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(PackageManager.FEATURE_WIFI,
                 true);
         ShadowCarWifiManager.setInstance(new CarWifiManager(mContext, mock(Lifecycle.class)));

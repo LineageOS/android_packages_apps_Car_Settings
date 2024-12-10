@@ -18,7 +18,9 @@ package com.android.car.settings.security;
 
 import static android.app.Activity.RESULT_OK;
 
+import android.car.CarOccupantZoneManager;
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.feature.Flags;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
@@ -29,6 +31,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
+import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.FragmentController;
@@ -76,6 +79,11 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
      */
     protected abstract int[] allowedPasswordQualities();
 
+    /**
+     * If the return value is true, this lock type should be considered a secure lock type.
+     * TODO: remove when Flags.supportsSecurePassengerUsers() is cleaned up
+     */
+    protected abstract boolean isSecureLockType();
 
     /** Sets the quality of the current password. */
     public void setCurrentPasswordQuality(int currentPasswordQuality) {
@@ -151,6 +159,10 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
 
     @Override
     public int getDefaultAvailabilityStatus() {
+        if (isSecureLockType() && isPassengerUser() && !Flags.supportsSecurePassengerUsers()) {
+            return CONDITIONALLY_UNAVAILABLE;
+        }
+
         return mUserManager.isGuestUser() ? DISABLED_FOR_PROFILE : AVAILABLE;
     }
 
@@ -172,5 +184,11 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
 
     private CharSequence getSummary() {
         return isCurrentLock() ? getContext().getString(R.string.current_screen_lock) : "";
+    }
+
+    private boolean isPassengerUser() {
+        int zoneType = ((CarSettingsApplication) getContext().getApplicationContext())
+                .getMyOccupantZoneType();
+        return zoneType != CarOccupantZoneManager.OCCUPANT_TYPE_DRIVER;
     }
 }

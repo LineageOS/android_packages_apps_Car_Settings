@@ -29,6 +29,7 @@ import com.android.car.settings.common.PreferenceController;
 /**
  * Business logic which controls the auto datetime toggle.
  */
+// TODO(b/346412366): Remove once Flags.FLAG_UPDATE_DATE_AND_TIME_PAGE fully rolls out.
 public class AutoDatetimeTogglePreferenceController extends
         PreferenceController<SwitchPreference> {
 

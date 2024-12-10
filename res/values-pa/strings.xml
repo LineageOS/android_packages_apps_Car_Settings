@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz ਬੈਂਡ ਨੂੰ ਤਰਜੀਹ ਦਿੱਤੀ ਗਈ"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2.4 ਅਤੇ 5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ਵਾਈ-ਫਾਈ ਹੌਟਸਪੌਟ ਲਈ ਬੈਂਡ ਚੁਣੋ:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"ਵਾਈ‑ਫਾਈ ਹੌਟਸਪੌਟ"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"ਹੌਟਸਪੌਟ"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑ਘੰਟੇ ਵੰਨਗੀ"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-ਘੰਟੇ ਵਾਲਾ ਫਾਰਮੈਟ ਵਰਤੋ"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"ਸਮਾਂ"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"ਸਮਾਂ ਸੈੱਟ ਕਰੋ"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"ਘੜੀ ਨੂੰ ਸੈੱਟ ਕਰੋ"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"ਸਮਾਂ ਖੇਤਰ"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"ਸਮਾਂ ਖੇਤਰ ਚੁਣੋ"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"ਤਾਰੀਖ"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"ਸਮਾਂ ਖੇਤਰ ਮੁਤਾਬਕ ਕ੍ਰਮ-ਬੱਧ ਕਰੋ"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"ਤਾਰੀਖ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"ਸਮਾਂ"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"ਤਾਰੀਖ, ਸਮੇਂ ਅਤੇ ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਨਿਰਧਾਰਿਤ ਕਰਨ ਲਈ, ਸਵੈਚਲਿਤ ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ ਟਿਕਾਣੇ ਅਤੇ ਮੋਬਾਈਲ ਨੈੱਟਵਰਕਾਂ ਵਰਗੇ ਸਰੋਤਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹੈ।"</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"ਤਾਰੀਖ ਅਤੇ ਸਮੇਂ ਨੂੰ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਸੈੱਟ ਕਰਨ ਲਈ, ਆਪਣੀ ਕਾਰ ਦੇ ਟਿਕਾਣੇ ਨੂੰ ਵਰਤੋ। ਇਹ ਸੁਵਿਧਾ ਸਿਰਫ਼ ਟਿਕਾਣੇ ਦੇ ਚਾਲੂ ਹੋਣ \'ਤੇ ਹੀ ਕੰਮ ਕਰਦੀ ਹੈ।"</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"ਜਾਰੀ ਰੱਖੋ"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਜਾ ਕੇ ਬਦਲੋ"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"ਤੁਹਾਡੀ ਟਿਕਾਣਾ ਜਾਣਕਾਰੀ ਬੰਦ ਹੈ। ਸਵੈਚਲਿਤ ਸਮਾਂ ਸ਼ਾਇਦ ਕੰਮ ਨਾ ਕਰੇ।"</string>
     <string name="user_admin" msgid="1535484812908584809">"ਪ੍ਰਸ਼ਾਸਕ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ਪ੍ਰਸ਼ਾਸਕ ਵਜੋਂ ਸਾਈਨ ਇਨ ਕੀਤਾ ਗਿਆ"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"ਕੀ ਪ੍ਰਸ਼ਾਸਕ ਇਜਾਜ਼ਤਾਂ ਦੇਣੀਆਂ ਹਨ?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ਆਪਣੇ ਡੀਵਾਈਸ ਦੇਖਣ ਲਈ, ਬਲੂਟੁੱਥ ਚਾਲੂ ਕਰੋ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ਕਿਸੇ ਡੀਵਾਈਸ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰਨ ਲਈ, ਬਲੂਟੁੱਥ ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"ਥੀਮ"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"ਖਾਕਾ ਸੀਮਾਵਾਂ ਦਿਖਾਓ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ਇੰਫ਼ੋਟੇਨਮੈਂਟ ਸਿਸਟਮ ਪ੍ਰਸ਼ਾਸਕ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ਕਿਰਿਆਸ਼ੀਲ ਕੀਤੀਆਂ ਐਪਾਂ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ਅਕਿਰਿਆਸ਼ੀਲ ਕੀਤੀਆਂ ਐਪਾਂ"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"ਪਲਾਨ ਦੇਖੋ"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"ਤੁਹਾਡੇ ਇੰਟਰਨੈੱਟ ਪਲਾਨਾਂ ਦੀ ਮਿਆਦ ਲੰਘ ਗਈ ਹੈ"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ਪਲਾਨ ਦੇਖੋ"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ਹੋ ਗਿਆ"</string>
 </resources>

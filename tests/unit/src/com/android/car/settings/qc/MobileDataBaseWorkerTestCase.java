@@ -18,8 +18,8 @@ package com.android.car.settings.qc;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.withSettings;
@@ -75,7 +75,8 @@ public abstract class MobileDataBaseWorkerTestCase<E extends MobileDataBaseWorke
     public void onSubscribe_validSubId_registerObserver() {
         createWorker(DEFAULT_SUB_ID);
         mWorker.onQCItemSubscribe();
-        verify(mContentResolver).registerContentObserver(any(Uri.class), eq(false),
+        // There will be an additional observer for data subscription
+        verify(mContentResolver, (times(2))).registerContentObserver(any(Uri.class), eq(false),
                 any(ContentObserver.class));
     }
 
@@ -83,7 +84,8 @@ public abstract class MobileDataBaseWorkerTestCase<E extends MobileDataBaseWorke
     public void onSubscribe_invalidSubId_doesNotRegisterObserver() {
         createWorker(SubscriptionManager.INVALID_SUBSCRIPTION_ID);
         mWorker.onQCItemSubscribe();
-        verify(mContentResolver, never()).registerContentObserver(any(Uri.class), eq(false),
+        // There will be an additional observer for data subscription
+        verify(mContentResolver).registerContentObserver(any(Uri.class), eq(false),
                 any(ContentObserver.class));
     }
 
@@ -92,7 +94,8 @@ public abstract class MobileDataBaseWorkerTestCase<E extends MobileDataBaseWorke
         createWorker(DEFAULT_SUB_ID);
         ArgumentCaptor<ContentObserver> captor = ArgumentCaptor.forClass(ContentObserver.class);
         mWorker.onQCItemSubscribe();
-        verify(mContentResolver).registerContentObserver(any(Uri.class), eq(false),
+        // There will be an additional observer for data subscription
+        verify(mContentResolver, times(2)).registerContentObserver(any(Uri.class), eq(false),
                 captor.capture());
         mWorker.onQCItemUnsubscribe();
         verify(mContentResolver).unregisterContentObserver(captor.getValue());

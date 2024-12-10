@@ -19,6 +19,7 @@ package com.android.car.settings.wifi;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.TetheringManager;
+import android.net.wifi.SoftApConfiguration;
 import android.os.Handler;
 import android.os.HandlerExecutor;
 import android.os.Looper;
@@ -152,8 +153,11 @@ public class WifiTetherPreferenceController extends
     }
 
     private void updateSummary(boolean hotspotEnabled) {
-        String subtitle = WifiTetherUtil.getHotspotSubtitle(getContext(),
-                mCarWifiManager.getSoftApConfig(), hotspotEnabled, mConnectedDevicesCount);
-        getPreference().setSummary(subtitle);
+        SoftApConfiguration config = mCarWifiManager.getSoftApConfig();
+        if (config != null) {
+            String subtitle = WifiTetherUtil.getHotspotSubtitle(getContext(),
+                    config, hotspotEnabled, mConnectedDevicesCount);
+            getPreference().setSummary(subtitle);
+        }
     }
 }

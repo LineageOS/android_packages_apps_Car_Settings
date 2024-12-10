@@ -45,4 +45,9 @@ public class PinLockPreferenceController extends LockTypeBasePreferenceControlle
     protected int[] allowedPasswordQualities() {
         return ALLOWED_PASSWORD_QUALITIES;
     }
+
+    @Override
+    protected boolean isSecureLockType() {
+        return true;
+    }
 }

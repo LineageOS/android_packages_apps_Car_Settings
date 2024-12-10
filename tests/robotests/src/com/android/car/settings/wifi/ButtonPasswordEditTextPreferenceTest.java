@@ -24,19 +24,21 @@ import static org.mockito.Mockito.verify;
 
 import android.content.Context;
 import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.preference.PreferenceViewHolder;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.R;
+import com.android.car.ui.CarUiLayoutInflaterFactory;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(AndroidJUnit4.class)
 public class ButtonPasswordEditTextPreferenceTest {
 
     private PreferenceViewHolder mViewHolder;
@@ -44,7 +46,10 @@ public class ButtonPasswordEditTextPreferenceTest {
 
     @Before
     public void setUp() {
-        Context context = RuntimeEnvironment.application;
+        Context context = InstrumentationRegistry.getInstrumentation().getContext();
+
+        LayoutInflater.from(context).setFactory2(new CarUiLayoutInflaterFactory());
+
         Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
 
         mButtonPreference = new ButtonPasswordEditTextPreference(context);
@@ -55,8 +60,8 @@ public class ButtonPasswordEditTextPreferenceTest {
     @Test
     public void buttonClicked_callsListener() {
         mButtonPreference.onBindViewHolder(mViewHolder);
-        ButtonPasswordEditTextPreference.OnButtonClickListener listener = mock(
-                ButtonPasswordEditTextPreference.OnButtonClickListener.class);
+        ButtonPasswordEditTextPreference.OnButtonClickListener listener =
+                mock(ButtonPasswordEditTextPreference.OnButtonClickListener.class);
         mButtonPreference.setOnButtonClickListener(listener);
 
         mViewHolder.findViewById(android.R.id.widget_frame).performClick();
@@ -65,8 +70,8 @@ public class ButtonPasswordEditTextPreferenceTest {
 
     @Test
     public void performButtonClick_listenerSetAndButtonVisible_listenerFired() {
-        ButtonPasswordEditTextPreference.OnButtonClickListener listener = mock(
-                ButtonPasswordEditTextPreference.OnButtonClickListener.class);
+        ButtonPasswordEditTextPreference.OnButtonClickListener listener =
+                mock(ButtonPasswordEditTextPreference.OnButtonClickListener.class);
         mButtonPreference.setOnButtonClickListener(listener);
         mButtonPreference.showButton(true);
 
@@ -76,8 +81,8 @@ public class ButtonPasswordEditTextPreferenceTest {
 
     @Test
     public void performButtonClick_listenerSetAndButtonInvisible_listenerNotFired() {
-        ButtonPasswordEditTextPreference.OnButtonClickListener listener = mock(
-                ButtonPasswordEditTextPreference.OnButtonClickListener.class);
+        ButtonPasswordEditTextPreference.OnButtonClickListener listener =
+                mock(ButtonPasswordEditTextPreference.OnButtonClickListener.class);
         mButtonPreference.setOnButtonClickListener(listener);
         mButtonPreference.showButton(false);
 
@@ -88,8 +93,9 @@ public class ButtonPasswordEditTextPreferenceTest {
     @Test
     public void onBindViewHolder_buttonShown() {
         mButtonPreference.showButton(true);
-        View containerWithoutWidget = mViewHolder.findViewById(
-                com.android.car.ui.R.id.car_ui_preference_container_without_widget);
+        View containerWithoutWidget =
+                mViewHolder.findViewById(
+                        com.android.car.ui.R.id.car_ui_preference_container_without_widget);
         View actionContainer = mButtonPreference.getWidgetActionContainer(mViewHolder);
         View widgetFrame = mViewHolder.findViewById(android.R.id.widget_frame);
 
@@ -106,8 +112,9 @@ public class ButtonPasswordEditTextPreferenceTest {
     @Test
     public void onBindViewHolder_buttonNotShown() {
         mButtonPreference.showButton(false);
-        View containerWithoutWidget = mViewHolder.findViewById(
-                com.android.car.ui.R.id.car_ui_preference_container_without_widget);
+        View containerWithoutWidget =
+                mViewHolder.findViewById(
+                        com.android.car.ui.R.id.car_ui_preference_container_without_widget);
         View actionContainer = mButtonPreference.getWidgetActionContainer(mViewHolder);
         View widgetFrame = mViewHolder.findViewById(android.R.id.widget_frame);
 

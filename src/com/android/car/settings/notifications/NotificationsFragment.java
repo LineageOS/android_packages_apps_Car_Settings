@@ -21,6 +21,7 @@ import static com.android.car.settings.storage.StorageUtils.maybeInitializeVolum
 import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 import android.provider.Settings;
@@ -52,6 +53,7 @@ public class NotificationsFragment extends SettingsFragment {
         Application application = requireActivity().getApplication();
         ApplicationsState applicationsState = ApplicationsState.getInstance(application);
         StorageManager sm = context.getSystemService(StorageManager.class);
+        UserManager um = context.getSystemService(UserManager.class);
         VolumeInfo volume = maybeInitializeVolume(sm, getArguments());
 
         NotificationsAppListPreferenceController notificationsAppListController =
@@ -66,7 +68,8 @@ public class NotificationsFragment extends SettingsFragment {
                 getContext().getResources().getInteger(
                         R.integer.millisecond_app_data_update_interval),
                 getContext().getResources().getInteger(
-                        R.integer.millisecond_max_app_load_wait_interval));
+                        R.integer.millisecond_max_app_load_wait_interval),
+                getContext().getPackageManager(), um);
         mAppListItemManager.registerListener(notificationsAppListController);
         mAppListItemManager.registerListener(recentNotificationsController);
         recentNotificationsController.setApplicationsState(applicationsState);

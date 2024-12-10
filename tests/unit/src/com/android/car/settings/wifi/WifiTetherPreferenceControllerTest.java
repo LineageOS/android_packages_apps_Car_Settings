@@ -242,6 +242,8 @@ public class WifiTetherPreferenceControllerTest {
     @Test
     public void onTetheringOff_subtitleOff() {
         when(mCarWifiManager.isWifiApEnabled()).thenReturn(false);
+        SoftApConfiguration config = mock(SoftApConfiguration.class);
+        when(mCarWifiManager.getSoftApConfig()).thenReturn(config);
         mController.onCreate(mLifecycleOwner);
         mController.onStart(mLifecycleOwner);
         setTetheringSupported(true);
@@ -272,6 +274,8 @@ public class WifiTetherPreferenceControllerTest {
     public void onDeviceConnected_showsDeviceConnectedSubtitle() {
         int connectedClients = 2;
         when(mCarWifiManager.isWifiApEnabled()).thenReturn(true);
+        SoftApConfiguration config = mock(SoftApConfiguration.class);
+        when(mCarWifiManager.getSoftApConfig()).thenReturn(config);
         mController.onConnectedClientsChanged(connectedClients);
         mController.onCreate(mLifecycleOwner);
         mController.onStart(mLifecycleOwner);

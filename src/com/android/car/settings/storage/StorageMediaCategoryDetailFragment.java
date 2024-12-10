@@ -22,6 +22,7 @@ import static com.android.car.settings.storage.StorageUtils.maybeInitializeVolum
 import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 
@@ -56,6 +57,7 @@ public class StorageMediaCategoryDetailFragment extends AppListFragment {
         Bundle bundle = getArguments();
         long externalAudioBytes = bundle.getLong(EXTRA_AUDIO_BYTES);
         StorageManager sm = context.getSystemService(StorageManager.class);
+        UserManager um = context.getSystemService(UserManager.class);
         VolumeInfo volume = maybeInitializeVolume(sm, getArguments());
         Application application = requireActivity().getApplication();
         mAppListItemManager = new ApplicationListItemManager(volume, getLifecycle(),
@@ -63,7 +65,8 @@ public class StorageMediaCategoryDetailFragment extends AppListFragment {
                 getContext().getResources().getInteger(
                         R.integer.millisecond_app_data_update_interval),
                 getContext().getResources().getInteger(
-                        R.integer.millisecond_max_app_load_wait_interval));
+                        R.integer.millisecond_max_app_load_wait_interval),
+                getContext().getPackageManager(), um);
         StorageMediaCategoryDetailPreferenceController pc = use(
                 StorageMediaCategoryDetailPreferenceController.class,
                 R.string.pk_storage_music_audio_details);

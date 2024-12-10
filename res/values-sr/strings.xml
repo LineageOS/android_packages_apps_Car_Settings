@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Предност има опсег од 5,0 GHz"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 и 5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Одаберите бар један опсег за Wi‑Fi хотспот:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"WiFi хотспот"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Хотспот"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-часовни формат"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Користи 24-часовни формат"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Време"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Подеси време"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Подесите сат"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Временска зона"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Изаберите временску зону"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Датум"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Сортирај према временској зони"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Датум"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Време"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Аутоматски датум и време користе изворе као што су локација и мобилне мреже за утврђивање датума, времена и временске зоне."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Аутоматски подесите датум и време помоћу локације аутомобила. Ради само ако је укључена локација."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Настави"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Промени у подешавањима"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Ваша локација је искључена. Аутоматско време можда неће радити."</string>
     <string name="user_admin" msgid="1535484812908584809">"Администратор"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Пријављени сте као администратор"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Желите да доделите дозволе за администратора?"</string>
@@ -748,7 +752,7 @@
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Мора да садржи мање од # знака}one{Мора да садржи мање од # знака}few{Мора да садржи мање од # знака}other{Мора да садржи мање од # знакова}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Мора да садржи мање од # цифре}one{Мора да садржи мање од # цифре}few{Мора да садржи мање од # цифре}other{Мора да садржи мање од # цифара}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Растући, опадајући или поновљени низ цифара није дозвољен"</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опције закључавања екрана"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опције откључавања екрана"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Обриши акредитиве"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Уклoните све сертификате"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Желите ли да уклоните сав садржај?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Да бисте видели уређаје, укључите Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Да бисте упарили уређај, отворите Bluetooth подешавања"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Тема"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Прикажи границе распореда"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Администратор система за информације и забаву"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Активиране апликације"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Деактивиране апликације"</string>
@@ -933,6 +938,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Погледајте пакете"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Интернет пакет је истекао"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Погледајте пакете"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Готово"</string>
 </resources>

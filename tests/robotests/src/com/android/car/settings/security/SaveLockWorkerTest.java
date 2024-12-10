@@ -22,14 +22,13 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.spy;
 
+import androidx.test.runner.AndroidJUnit4;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.RobolectricTestRunner;
 
-/**
- * Tests for SaveLockWorker class.
- */
-@RunWith(RobolectricTestRunner.class)
+/** Tests for SaveLockWorker class. */
+@RunWith(AndroidJUnit4.class)
 public class SaveLockWorkerTest {
     /**
      * A test to check return value when save worker succeeds

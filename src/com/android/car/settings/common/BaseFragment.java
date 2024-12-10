@@ -29,6 +29,10 @@ import android.view.ViewGroup;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
+import androidx.core.graphics.Insets;
+import androidx.core.view.OnApplyWindowInsetsListener;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
@@ -101,6 +105,25 @@ public abstract class BaseFragment extends Fragment implements
 
     protected final ToolbarController getToolbar() {
         return getFragmentHost().getToolbar();
+    }
+
+    /**
+     *  Listen for changes to the IME insets, adjusting the rootview bottom padding to prevent the
+     *  content from being hidden by the keyboard.
+     */
+    protected final void setupImeInsetListener(View rootView) {
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, new OnApplyWindowInsetsListener() {
+            @NonNull
+            @Override
+            public WindowInsetsCompat onApplyWindowInsets(@NonNull View view,
+                    @NonNull WindowInsetsCompat windowInsetsCompat) {
+                Insets keyboardInsets = windowInsetsCompat.getInsets(WindowInsetsCompat.Type.ime());
+
+                view.setPadding(view.getPaddingLeft(), view.getPaddingTop(), view.getPaddingRight(),
+                        keyboardInsets.bottom);
+                return WindowInsetsCompat.CONSUMED;
+            }
+        });
     }
 
     @Override

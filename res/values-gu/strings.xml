@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz બૅન્ડ પસંદ કર્યું"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2.4 અને 5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"વાઇ-ફાઇ હૉટસ્પૉટ માટે ઓછામાં ઓછું એક બૅન્ડ પસંદ કરો:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"વાઇ-ફાઇ હૉટસ્પૉટ"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"હૉટસ્પૉટ"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑કલાકનું ફૉર્મેટ"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-કલાકના ફૉર્મેટનો ઉપયોગ કરો"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"સમય"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"સમય સેટ કરો"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"ઘડિયાળ સેટ કરો"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"સમય ઝોન"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"સમય ઝોન પસંદ કરો"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"તારીખ"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"સમય ઝોન પ્રમાણે સૉર્ટ કરો"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"તારીખ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"સમય"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"તારીખ, સમય અને સમય ઝોન નક્કી કરવા માટે ઑટોમૅટિક તારીખ અને સમય દ્વારા લોકેશન અને મોબાઇલ નેટવર્ક જેવા સૉર્સનો ઉપયોગ કરવામાં આવી શકે છે."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"તારીખ અને સમય ઑટોમૅટિક રીતે સેટ કરવા માટે, તમારી કારના લોકેશનનો ઉપયોગ કરો. લોકેશન ચાલુ હોય તો જ કામ કરે છે."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"ચાલુ રાખો"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"સેટિંગમાં બદલો"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"તમારું લોકેશન બંધ છે. ઑટોમૅટિક સમય કામ કરી શકશે નહીં."</string>
     <string name="user_admin" msgid="1535484812908584809">"વ્યવસ્થાપક"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"વ્યવસ્થાપક તરીકે સાઇન ઇન થયા"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"વ્યવસ્થાપકને પરવાનગીઓ આપીએ?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"તમારા ડિવાઇસ જોવા માટે, બ્લૂટૂથ ચાલુ કરો"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ડિવાઇસનું જોડાણ કરવા માટે, બ્લૂટૂથ સેટિંગ ખોલો"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"થીમ"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"લેઆઉટ બાઉન્ડ બતાવો"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ઇન્ફોટેનમેન્ટ સિસ્ટમ વ્યવસ્થાપક"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"સક્રિય ઍપ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"નિષ્ક્રિય કરેલી ઍપ"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"પ્લાન જુઓ"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"તમારો ઇન્ટરનેટ પ્લાન સમાપ્ત થઈ ગયો છે"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"પ્લાન જુઓ"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"થઈ ગયું"</string>
 </resources>

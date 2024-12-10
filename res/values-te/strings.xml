@@ -74,7 +74,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"డేటా పరిమితిని సెట్ చేయండి"</string>
     <string name="data_limit" msgid="227338836292511425">"డేటా పరిమితి"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"డేటా వినియోగాన్ని పరిమితం చేయడం"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"మీరు సెట్ చేసిన పరిమితిని చేరుకున్న తర్వాత మీ వాహనం యొక్క మొబైల్ డేటా ఆఫ్ చేయబడుతుంది.\n\nడేటా వినియోగాన్ని మీ ఫోన్ ఒక పద్ధతిలో గణిస్తే, అదే వినియోగ పరిమాణాన్ని మీ క్యారియర్ వేరే పద్ధతిలో గణించవచ్చు, కనుక కనిష్ట పరిమితిని సెట్ చేయడం మంచిది."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"మీరు సెట్ చేసిన పరిమితిని చేరుకున్న తర్వాత మీ వెహికల్‌ యొక్క మొబైల్ డేటా ఆఫ్ చేయబడుతుంది.\n\nడేటా వినియోగాన్ని మీ ఫోన్ ఒక పద్ధతిలో గణిస్తే, అదే వినియోగ పరిమాణాన్ని మీ క్యారియర్ వేరే పద్ధతిలో గణించవచ్చు, కనుక కనిష్ట పరిమితిని సెట్ చేయడం మంచిది."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"డేటా వినియోగ హెచ్చరికను సెట్ చేయండి"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"డేటా వినియోగ పరిమితిని సెట్ చేయండి"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"మీ పరికరం డేటా వినియోగాన్ని గణిస్తుంది. మీ మొబైల్ క్యారియర్ డేటాను బట్టి ఇది మారవచ్చు."</string>
@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz బ్యాండ్‌కు ప్రాధాన్యత"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2.4, 5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"హాట్‌స్పాట్‌కు బ్యాండ్:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi హాట్‌స్పాట్"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"హాట్‌స్పాట్"</string>
@@ -189,7 +188,7 @@
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"కొత్త పరికరాన్ని పెయిర్ చేయండి"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"పెయిర్ చేయడం కోసం బ్లూటూత్ ఆన్ చేయబడుతుంది"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"పరికరాన్ని డిస్‌కనెక్ట్ చేయాలా?"</string>
-    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"మీ వాహనం <xliff:g id="DEVICE_NAME">%1$s</xliff:g> నుండి డిస్‌కనెక్ట్ అవుతుంది."</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"మీ వెహికల్‌ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> నుండి డిస్‌కనెక్ట్ అవుతుంది."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"వాహనం బ్లూటూత్ అడ్రస్‌: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"పరికర బ్లూటూత్ అడ్రస్: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"వాహనం పేరు"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑గంటల ఫార్మాట్"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"24-గంటల ఫార్మాట్‌ని ఉపయోగించండి"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"సమయం"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"సమయాన్ని సెట్ చేయండి"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"గడియారంలో తేదీ, టైమ్ సెట్ చేయండి"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"సమయ మండలి"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"సమయ మండలిని ఎంచుకోండి"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"తేదీ"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"సమయ మండలి ప్రకారం క్రమీకరించు"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"తేదీ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"సమయం"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"ఆటోమేటిక్ తేదీ, టైమ్ అనేవి తేదీ, టైమ్, అలాగే టైమ్ జోన్‌ను గుర్తించడానికి లొకేషన్, మొబైల్ నెట్‌వర్క్‌ల వంటి సోర్స్‌లను ఉపయోగించవచ్చు."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"తేదీ, టైమ్‌ను ఆటోమేటిక్‌గా సెట్ చేయడానికి మీ కారు లొకేషన్‌ను ఉపయోగించండి. మీ పరికరంలో లొకేషన్ ఆన్‌లో ఉంటే మాత్రమే పని చేస్తుంది."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"కొనసాగించండి"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"సెట్టింగ్‌లలో మార్చండి"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"మీ పరికరంలో లొకేషన్ ఆఫ్‌లో ఉంది. ఆటోమేటిక్‌గా టైమ్ అప్‌డేట్ అనేది పని చేయకపోవచ్చు."</string>
     <string name="user_admin" msgid="1535484812908584809">"నిర్వాహకుడు"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"నిర్వాహకుడిగా సైన్ ఇన్ చేశారు"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"అడ్మిన్ అనుమతులను మంజూరు చేయాలా?"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"మీ పరికరాలను చూడటానికి, బ్లూటూత్‌ను ఆన్ చేయండి"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"పరికరాన్ని పెయిర్ చేయడానికి, బ్లూటూత్ సెట్టింగ్‌లను తెరవండి"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"రూపం"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"లేఅవుట్ హద్దులను చూపండి"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"సమాచారంతో కూడిన వినోదం సిస్టమ్ అడ్మిన్"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"యాక్టివేట్ చేయబడిన యాప్‌లు"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"యాక్టివేట్ చేయబడని యాప్‌లు"</string>
@@ -927,6 +932,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"ప్లాన్‌లను చూడండి"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"మీ ఇంటర్నెట్ ప్లాన్‌ గడువు ముగిసింది"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ప్లాన్‌లను చూడండి"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"పూర్తయింది"</string>
 </resources>

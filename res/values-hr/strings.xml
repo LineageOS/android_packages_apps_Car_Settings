@@ -160,8 +160,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Prednost se daje pojasu od 5,0 GHz"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
-    <!-- no translation found for wifi_ap_2G_5G (5526758464441623079) -->
-    <skip />
+    <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2,4 i 5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Odaberite barem jedan pojas za žarišnu točku Wi‑Fija:"</string>
     <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi žarišna točka"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"Žarišna točka"</string>
@@ -540,7 +539,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-satni oblik"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Koristi 24-satni format"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Vrijeme"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Postavljanje vremena"</string>
+    <string name="date_time_set_time" msgid="3684135432529445165">"Postavljanje sata"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Vremenska zona"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Odabir vremenske zone"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Datum"</string>
@@ -549,6 +548,11 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Poredaj po vremenskoj zoni"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Datum"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Vrijeme"</string>
+    <string name="auto_local_time_disclaimer_summary" msgid="5965459676137313463">"Opcija Automatski datum i vrijeme može upotrebljavati izvore kao što su lokacija i mobilne mreže za utvrđivanje datuma, vremena i vremenske zone."</string>
+    <string name="auto_local_time_toggle_summary" msgid="6617503441738434427">"Upotrijebite lokaciju svog automobila za automatsko postavljanje datuma i vremena. Funkcionira samo ako je lokacija uključena."</string>
+    <string name="auto_local_time_dialog_negative_button_text" msgid="6594888186816335207">"Nastavi"</string>
+    <string name="auto_local_time_dialog_positive_button_text" msgid="4078408719499933410">"Promijeni u postavkama"</string>
+    <string name="auto_local_time_dialog_msg" msgid="1692514715620573896">"Vaša je lokacija isključena. Automatsko vrijeme možda neće funkcionirati."</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Prijavljeni ste kao administrator"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"Dodijeliti administratorska dopuštenja?"</string>
@@ -723,7 +727,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Ukloni"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Otkaži"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potvrdi"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Mora imati najmanje četiri znaka"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Mora sadržavati najmanje 4 znaka"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"Ta vrsta zaključavanja nije dostupna."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Smije sadržavati samo znamenke od 0 do 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator uređaja ne dopušta upotrebu nedavnog PIN-a"</string>
@@ -793,6 +797,7 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Da biste vidjeli svoje uređaje, uključite Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Da biste uparili uređaj, otvorite postavke Bluetootha"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Prikaži okvir izgleda"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrator sustava za informiranje i zabavu"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivirane aplikacije"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivirane aplikacije"</string>
@@ -933,6 +938,5 @@
     <string name="data_subscription_explore_options" msgid="4089747156447849054">"Prikaži pakete"</string>
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Vaši su internetski paketi istekli"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Prikaži pakete"</string>
-    <!-- no translation found for audio_route_dialog_neutral_button_text (3303313405283478327) -->
-    <skip />
+    <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Gotovo"</string>
 </resources>

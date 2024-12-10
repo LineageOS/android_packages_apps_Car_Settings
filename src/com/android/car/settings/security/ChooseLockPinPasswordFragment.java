@@ -155,6 +155,9 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        View rootView = view.findViewById(R.id.settings_content_focus_area);
+        setupImeInsetListener(rootView);
+
         mPasswordField = view.findViewById(R.id.password_entry);
         mPasswordField.setOnEditorActionListener((textView, actionId, keyEvent) -> {
             // Check if this was the result of hitting the enter or "done" key

@@ -114,14 +114,14 @@ public class AutoTimeZoneTogglePreferenceControllerTest {
     }
 
     @Test
-    public void testRefreshUi_unchecked() {
+    public void testRefreshUi_autoTimeZoneSupported_unchecked() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 0);
         mController.refreshUi();
         assertThat(mPreference.isChecked()).isFalse();
     }
 
     @Test
-    public void testRefreshUi_checked() {
+    public void testRefreshUi_autoTimeZoneSupported_checked() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 1);
         mController.refreshUi();
         assertThat(mPreference.isChecked()).isTrue();

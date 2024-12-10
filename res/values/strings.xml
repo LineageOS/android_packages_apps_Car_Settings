@@ -1253,7 +1253,7 @@
     <!-- Date & time setting screen setting option title [CHAR LIMIT=30] -->
     <string name="date_time_set_time_title">Time</string>
     <!-- Date & time setting screen setting option title -->
-    <string name="date_time_set_time">Set time</string>
+    <string name="date_time_set_time">Set clock</string>
     <!-- Date & time setting screen setting option title [CHAR LIMIT=30] -->
     <string name="date_time_set_timezone_title">Time zone</string>
     <!-- Date & time setting screen setting option title -->
@@ -1270,6 +1270,22 @@
     <string name="date_picker_title">Date</string>
     <!-- Title string shown above TimePicker, letting a user select system time [CHAR LIMIT=20] -->
     <string name="time_picker_title">Time</string>
+    <!-- Date & time auto time detection disclaimer-->
+    <string name="auto_local_time_disclaimer_summary">
+        Automatic date and time may use sources like location and mobile networks to determine date, time and time zone.
+    </string>
+    <!-- Toggle summary string shown when user tried to enable auto time and time zone detection without location enabled.-->
+    <string name="auto_local_time_toggle_summary">
+        Use your car\u2019s location to automatically set date and time. Only works if location is on.
+    </string>
+    <!-- Dialog's negative button string shown when user tried to enable auto time and time zone detection without location enabled.-->
+    <string name="auto_local_time_dialog_negative_button_text">Continue</string>
+    <!-- Dialog's positive button string shown when user tried to enable auto time and time zone detection without location enabled.-->
+    <string name="auto_local_time_dialog_positive_button_text">Change in settings</string>
+    <!-- Dialog string shown when user tried to enable auto time and time zone detection without location enabled.-->
+    <string name="auto_local_time_dialog_msg">
+        Your location is off. Automatic time may not work.
+    </string>
 
     <!-- Admin user management --><skip/>
     <!-- Title for Admin user [CHAR LIMIT=35] -->
@@ -1905,6 +1921,9 @@
     <string name="qc_bluetooth_on_no_devices_info">To pair a device, open Bluetooth settings</string>
     <!-- UI Mode quick control, control name to change display UI mode (auto/day/night) [CHAR LIMIT=40] -->
     <string name="qc_ui_mode_title">Theme</string>
+    <!-- A quick control entry to control whether to show the layout bounds [CHAR LIMIT=40] -->
+    <string name="show_layout_bounds_title">Show layout bounds</string>
+
 
     <!-- Device Policy Management --><skip/>
     <!-- Device admin add activity title -->

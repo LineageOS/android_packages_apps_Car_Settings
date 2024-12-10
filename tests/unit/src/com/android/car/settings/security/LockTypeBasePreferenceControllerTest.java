@@ -16,6 +16,8 @@
 
 package com.android.car.settings.security;
 
+import static android.car.feature.Flags.FLAG_SUPPORTS_SECURE_PASSENGER_USERS;
+
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
@@ -26,20 +28,24 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.app.admin.DevicePolicyManager;
+import android.car.CarOccupantZoneManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.UserManager;
+import android.platform.test.flag.junit.SetFlagsRule;
 
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
@@ -49,6 +55,7 @@ import com.android.car.ui.preference.CarUiTwoActionTextPreference;
 import com.android.internal.widget.LockscreenCredential;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -63,21 +70,30 @@ public class LockTypeBasePreferenceControllerTest {
     private static final LockscreenCredential NONE_LOCKSCREEN_CREDENTIAL =
             LockscreenCredential.createNone();
 
-    private Context mContext = ApplicationProvider.getApplicationContext();
+    private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private LifecycleOwner mLifecycleOwner;
     private Preference mPreference;
-    private LockTypeBasePreferenceController mPreferenceController;
+    private TestLockTypeBasePreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
 
     @Mock
     private FragmentController mFragmentController;
     @Mock
     private UserManager mMockUserManager;
+    @Mock
+    private CarSettingsApplication mCarSettingsApplication;
+
+    @Rule
+    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
+
+        when(mContext.getApplicationContext()).thenReturn(mCarSettingsApplication);
+        when(mCarSettingsApplication.getMyOccupantZoneType()).thenReturn(
+                CarOccupantZoneManager.OCCUPANT_TYPE_DRIVER);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -181,6 +197,33 @@ public class LockTypeBasePreferenceControllerTest {
     }
 
     @Test
+    public void testGetAvailabilityStatus_driverUser_isAvailable() {
+        mPreferenceController.setIsSecureLockType(true);
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_passengerUser_secureLockSupported_isAvailable() {
+        mPreferenceController.setIsSecureLockType(true);
+        when(mCarSettingsApplication.getMyOccupantZoneType()).thenReturn(
+                CarOccupantZoneManager.OCCUPANT_TYPE_FRONT_PASSENGER);
+        mSetFlagsRule.enableFlags(FLAG_SUPPORTS_SECURE_PASSENGER_USERS);
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), AVAILABLE);
+    }
+
+    @Test
+    public void testGetAvailabilityStatus_passengerUser_secureLockUnSupported_isNotAvailable() {
+        mPreferenceController.setIsSecureLockType(true);
+        when(mCarSettingsApplication.getMyOccupantZoneType()).thenReturn(
+                CarOccupantZoneManager.OCCUPANT_TYPE_FRONT_PASSENGER);
+        mSetFlagsRule.disableFlags(FLAG_SUPPORTS_SECURE_PASSENGER_USERS);
+        PreferenceControllerTestUtil.assertAvailability(
+                mPreferenceController.getAvailabilityStatus(), CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
     public void testControllerPassword_isSet() {
         mPreferenceController.onCreate(mLifecycleOwner);
         assertThat(mPreferenceController.getCurrentPassword()).isEqualTo(
@@ -195,6 +238,7 @@ public class LockTypeBasePreferenceControllerTest {
     }
 
     private class TestLockTypeBasePreferenceController extends LockTypeBasePreferenceController {
+        private boolean mIsSecureLockType = false;
 
         TestLockTypeBasePreferenceController(Context context, String preferenceKey,
                 FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -210,6 +254,15 @@ public class LockTypeBasePreferenceControllerTest {
         @Override
         protected int[] allowedPasswordQualities() {
             return new int[]{MATCHING_PASSWORD_QUALITY};
+        }
+
+        @Override
+        protected boolean isSecureLockType() {
+            return mIsSecureLockType;
+        }
+
+        void setIsSecureLockType(boolean secure) {
+            mIsSecureLockType = secure;
         }
     }
 }

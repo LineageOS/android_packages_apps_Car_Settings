@@ -25,6 +25,8 @@ import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
 import android.content.SyncAdapterType;
 
+import androidx.test.runner.AndroidJUnit4;
+
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
@@ -34,8 +36,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
 import java.util.Collections;
@@ -43,8 +43,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /** Unit tests for {@link AccountTypesHelper}. */
-@RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowContentResolver.class, ShadowAccountManager.class})
+@RunWith(AndroidJUnit4.class)
 public class AccountTypesHelperTest {
     private static final String ACCOUNT_TYPE_1 = "com.acct1";
     private static final String ACCOUNT_TYPE_2 = "com.acct2";

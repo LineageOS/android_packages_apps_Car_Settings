@@ -16,6 +16,8 @@
 
 package com.android.car.settings.bluetooth;
 
+import static android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE;
+
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -168,7 +170,8 @@ public final class BluetoothPairingService extends Service {
         registerReceiver(mCancelReceiver, filter);
         mRegistered = true;
 
-        startForeground(NOTIFICATION_ID, builder.getNotification());
+        startForeground(NOTIFICATION_ID, builder.getNotification(),
+                FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE);
         return START_REDELIVER_INTENT;
     }
 
