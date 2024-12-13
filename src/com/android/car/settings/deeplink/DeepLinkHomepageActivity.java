@@ -90,7 +90,7 @@ public class DeepLinkHomepageActivity extends CarSettingActivities.HomepageActiv
         }
         ComponentName targetComponentName = targetIntent.resolveActivity(getPackageManager());
         targetIntent.setComponent(targetComponentName);
-        targetIntent.removeFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        targetIntent.removeFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         targetIntent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
         targetIntent.replaceExtras(intent);
         ActivityEmbeddingRulesController.registerDualPaneSplitRule(this,
