@@ -70,6 +70,7 @@
     <uses-permission android:name="android.permission.START_VIEW_APP_FEATURES" />
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
     <uses-permission android:name="android.permission.SUGGEST_MANUAL_TIME_AND_ZONE"/>
+    <uses-permission android:name="android.permission.UPDATE_DOMAIN_VERIFICATION_USER_SELECTION"/>
     <uses-permission android:name="android.permission.UWB_PRIVILEGED"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>

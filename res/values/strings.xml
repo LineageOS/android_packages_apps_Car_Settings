@@ -786,6 +786,10 @@
     <string name="storage_type_internal">%s in internal storage</string>
     <!-- Application's prioritize app performance setting summary. [CHAR LIMIT=100] -->
     <string name="prioritize_app_performance_summary">Uses system resources to prioritize app performance</string>
+    <!-- Title for preference to controlling whether this app is the default for some actions [CHAR LIMIT=40] -->
+    <string name="app_open_by_default_title">Open by default"</string>
+    <!-- Summary for preference to controlling whether this app is the default for some actions [CHAR LIMIT=100] -->
+    <string name="app_open_by_default_summary">Allow app to open supported links</string>
     <!-- Activity title for network data usage summary. [CHAR LIMIT=25] -->
     <string name="data_usage_summary_title">Data usage</string>
     <!-- Activity title for Appk data usage summary. [CHAR LIMIT=25] -->
@@ -884,8 +888,26 @@
     <string name="app_link_open_ask">Ask every time</string>
     <!-- Explanation that the app that will NEVER be launched to open web links to domains that it understands [CHAR LIMIT=60] -->
     <string name="app_link_open_never">Don\u2019t open in this app</string>
-    <!-- Title of dialog showing the supported link domains [CHAR LIMIT=40] -->
+    <!-- Title of preference showing the supported link domains [CHAR LIMIT=40] -->
     <string name="app_launch_supported_domain_urls_title">Supported links</string>
+    <!-- Title of preference showing the verifier link domains [CHAR LIMIT=40] -->
+    <string name="opening_links_verified_links_title">Verified links</string>
+    <!-- Summary of preference showing the number of verifier link [CHAR LIMIT=40] -->
+    <string name="opening_links_verified_links_summary">
+        {count, plural,
+        =1    {# verified link}
+        other {# verified links}
+        }
+    </string>
+    <!-- Title of preference showing the supported link domains [CHAR LIMIT=40] -->
+    <string name="opening_links_supported_links_title">Supported links</string>
+    <!-- Summary of preference showing the supported link domains [CHAR LIMIT=40] -->
+    <string name="opening_links_supported_links_summary">
+        {count, plural,
+        =1    {# supported link}
+        other {# supported links}
+        }
+    </string>
     <!-- Main Settings screen setting option name to go into the apps settings [CHAR LIMIT=40] -->
     <string name="apps_settings_title">Apps</string>
     <!-- Title of recently opened apps category [CHAR LIMIT=60] -->
