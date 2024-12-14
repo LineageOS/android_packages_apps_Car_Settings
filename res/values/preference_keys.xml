@@ -251,7 +251,9 @@
         3_2_pref
     </string>
 
-
+    <string name="pk_app_open_by_default" translatable="false">
+        app_open_by_default
+    </string>
 
     <!-- Default apps Settings -->
     <string name="pk_default_assist_and_voice" translatable="false">default_assist_and_voice
@@ -273,6 +275,18 @@
     </string>
     <string name="pk_opening_links_app_details_state" translatable="false">
         opening_links_app_details_state
+    </string>
+    <string name="pk_opening_links_app_toggle" translatable="false">
+        opening_links_app_toggle
+    </string>
+    <string name="pk_opening_links_verified_links" translatable="false">
+        opening_links_verified_links
+    </string>
+    <string name="pk_opening_links_verified_links_list" translatable="false">
+        opening_links_verified_links_list
+    </string>
+    <string name="pk_opening_links_supported_links" translatable="false">
+        opening_links_supported_links
     </string>
     <string name="pk_opening_links_app_details_urls" translatable="false">
         opening_links_app_details_urls

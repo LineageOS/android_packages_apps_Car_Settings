@@ -743,6 +743,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="app_list_preference_none"/>
       <item type="string" name="app_names_concatenation_template_2"/>
       <item type="string" name="app_names_concatenation_template_3"/>
+      <item type="string" name="app_open_by_default_summary"/>
+      <item type="string" name="app_open_by_default_title"/>
       <item type="string" name="app_permissions"/>
       <item type="string" name="app_permissions_summary"/>
       <item type="string" name="app_usage_cycle"/>
@@ -1319,6 +1321,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="number_of_device_admins_none"/>
       <item type="string" name="okay"/>
       <item type="string" name="one"/>
+      <item type="string" name="opening_links_supported_links_summary"/>
+      <item type="string" name="opening_links_supported_links_title"/>
+      <item type="string" name="opening_links_verified_links_summary"/>
+      <item type="string" name="opening_links_verified_links_title"/>
       <item type="string" name="outgoing_calls_permission_title"/>
       <item type="string" name="performance_impacting_apps"/>
       <item type="string" name="performance_impacting_apps_button_label"/>
@@ -1429,8 +1435,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="share_remote_bugreport_dialog_title"/>
       <item type="string" name="sharing_remote_bugreport_dialog_message"/>
       <item type="string" name="show_captions_toggle_title"/>
-      <item type="string" name="show_dev_already"/>
       <item type="string" name="show_customization_overlay_title"/>
+      <item type="string" name="show_dev_already"/>
       <item type="string" name="show_dev_countdown"/>
       <item type="string" name="show_dev_on"/>
       <item type="string" name="show_force_rtl_title"/>
@@ -1732,6 +1738,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="app_storage_settings_details_fragment"/>
       <item type="xml" name="application_details_fragment"/>
       <item type="xml" name="application_launch_settings_fragment"/>
+      <item type="xml" name="application_launch_settings_fragment_new"/>
       <item type="xml" name="applications_settings_fragment"/>
       <item type="xml" name="apps_fragment"/>
       <item type="xml" name="assistant_and_voice_fragment"/>
@@ -1815,6 +1822,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="units_fragment"/>
       <item type="xml" name="usage_access_fragment"/>
       <item type="xml" name="vehicle_data_fragment"/>
+      <item type="xml" name="verified_links_fragment"/>
       <item type="xml" name="wifi_control_fragment"/>
       <item type="xml" name="wifi_detail_fragment"/>
       <item type="xml" name="wifi_list_fragment"/>
