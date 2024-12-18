@@ -120,6 +120,10 @@
                 <action android:name="android.settings.SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.HOME_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_HomepageActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
@@ -206,6 +210,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.settings.REGIONAL_PREFERENCES_SETTINGS" />
+                <action android:name="android.settings.MEASUREMENT_SYSTEM_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
@@ -364,6 +369,10 @@
             android:name=".common.CarSettingActivities$SystemSettingsActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.REGION_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_SystemSettingsActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
@@ -377,6 +386,7 @@
                 <action android:name="android.net.wifi.PICK_WIFI_NETWORK" />
                 <action android:name="android.settings.WIFI_SETTINGS" />
                 <action android:name="android.settings.panel.action.WIFI" />
+                <action android:name="android.settings.PROCESS_WIFI_EASY_CONNECT_URI" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
@@ -406,6 +416,10 @@
                 <action android:name="android.settings.NETWORK_OPERATOR_SETTINGS" />
                 <action android:name="android.settings.DATA_USAGE_SETTINGS" />
                 <action android:name="android.settings.MOBILE_DATA_USAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.APN_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
@@ -749,6 +763,10 @@
                 <action android:name="android.settings.SHOW_REMOTE_BUGREPORT_DIALOG" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.BUGREPORT_HANDLER_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -923,6 +941,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
+            <intent-filter>
+                <action android:name="IGNORE_BACKGROUND_DATA_RESTRICTIONS_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="distractionOptimized" android:value="true"/>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_DataWarningAndLimitActivity" />
@@ -1091,11 +1113,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
+                <action android:name="android.settings.APP_NOTIFICATION_PROMOTION_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="android.settings.BATTERY_SAVER_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.settings.BIOMETRIC_ENROLL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.DREAM_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.FIRST_DAY_OF_WEEK_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
