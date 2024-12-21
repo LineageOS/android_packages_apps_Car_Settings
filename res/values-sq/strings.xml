@@ -358,10 +358,8 @@
     <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"Aplikacioni do të riniset kur të ndryshosh raportin e pamjes. Mund t\'i humbasësh ndryshimet e paruajtura. Disa aplikacione mund të mos jenë të optimizuara për raporte të caktuara të pamjes."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s në hapësirën e brendshme të ruajtjes"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Përdor burimet e sistemit për t\'i dhënë përparësi performancës së aplikacionit"</string>
-    <!-- no translation found for app_open_by_default_title (7275063779631935446) -->
-    <skip />
-    <!-- no translation found for app_open_by_default_summary (3261520150951464121) -->
-    <skip />
+    <string name="app_open_by_default_title" msgid="7275063779631935446">"Hap si parazgjedhje"</string>
+    <string name="app_open_by_default_summary" msgid="3261520150951464121">"Lejo që aplikacioni të hapë lidhjet e mbështetura"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Përdorimi i të dhënave"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Përdorimi i të dhënave"</string>
     <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Historiku i përdorimit"</string>
@@ -406,14 +404,10 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Pyet çdo herë"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Mos e hap në këtë aplikacion"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Lidhjet e mbështetura"</string>
-    <!-- no translation found for opening_links_verified_links_title (6781351697264180708) -->
-    <skip />
-    <!-- no translation found for opening_links_verified_links_summary (4578067248862197847) -->
-    <skip />
-    <!-- no translation found for opening_links_supported_links_title (7151392813491148977) -->
-    <skip />
-    <!-- no translation found for opening_links_supported_links_summary (3020072581729951074) -->
-    <skip />
+    <string name="opening_links_verified_links_title" msgid="6781351697264180708">"Lidhjet e verifikuara"</string>
+    <string name="opening_links_verified_links_summary" msgid="4578067248862197847">"{count,plural, =1{# lidhje e verifikuar}other{# lidhje të verifikuara}}"</string>
+    <string name="opening_links_supported_links_title" msgid="7151392813491148977">"Lidhjet e mbështetura"</string>
+    <string name="opening_links_supported_links_summary" msgid="3020072581729951074">"{count,plural, =1{# lidhje e mbështetur}other{# lidhje të mbështetura}}"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"Aplikacionet"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"Hapur së fundi"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Shiko të gjitha aplikacionet (%1$d)"</string>

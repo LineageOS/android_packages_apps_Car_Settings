@@ -358,10 +358,8 @@
     <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"మీరు ఆకార నిష్పత్తిని మార్చినప్పుడు యాప్ రీస్టార్ట్ అవుతుంది. మీరు సేవ్ చేయని మార్పులను కోల్పోవచ్చు. కొన్ని యాప్‌లు నిర్దిష్ట ఆకార నిష్పత్తులకు ఆప్టిమైజ్ చేయబడకపోవచ్చు."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"అంతర్గత స్టోరేజ్‌లో %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"యాప్ పనితీరుకు ప్రాధాన్యత ఇవ్వడానికి సిస్టమ్ రిసోర్స్‌లను ఉపయోగిస్తుంది"</string>
-    <!-- no translation found for app_open_by_default_title (7275063779631935446) -->
-    <skip />
-    <!-- no translation found for app_open_by_default_summary (3261520150951464121) -->
-    <skip />
+    <string name="app_open_by_default_title" msgid="7275063779631935446">"ఆటోమేటిక్‌గా తెరవండి"</string>
+    <string name="app_open_by_default_summary" msgid="3261520150951464121">"సపోర్ట్ చేసే లింక్‌లను తెరవడానికి యాప్‌ను అనుమతించండి"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"డేటా వినియోగం"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"యాప్ డేటా వినియోగం"</string>
     <string name="data_usage_usage_history_title" msgid="2386346082501471648">"వినియోగ హిస్టరీ"</string>
@@ -406,14 +404,10 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"ప్రతిసారి అడగాలి"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"ఈ యాప్‌లో తెరవదు"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"మద్దతిచ్చే లింక్‌లు"</string>
-    <!-- no translation found for opening_links_verified_links_title (6781351697264180708) -->
-    <skip />
-    <!-- no translation found for opening_links_verified_links_summary (4578067248862197847) -->
-    <skip />
-    <!-- no translation found for opening_links_supported_links_title (7151392813491148977) -->
-    <skip />
-    <!-- no translation found for opening_links_supported_links_summary (3020072581729951074) -->
-    <skip />
+    <string name="opening_links_verified_links_title" msgid="6781351697264180708">"వెరిఫై అయిన లింక్‌లు"</string>
+    <string name="opening_links_verified_links_summary" msgid="4578067248862197847">"{count,plural, =1{# వెరిఫై అయిన లింక్}other{# వెరిఫై అయిన లింక్‌లు}}"</string>
+    <string name="opening_links_supported_links_title" msgid="7151392813491148977">"సపోర్ట్ ఉన్న లింక్‌లు"</string>
+    <string name="opening_links_supported_links_summary" msgid="3020072581729951074">"{count,plural, =1{# సపోర్ట్ ఉన్న లింక్}other{# సపోర్ట్ ఉన్న లింక్‌లు}}"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"యాప్‌లు"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"ఇటీవల తెరిచినవి"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"అన్ని %1$d యాప్‌లను చూడండి"</string>
@@ -752,7 +746,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"తీసివేయండి"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"రద్దు చేయండి"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"నిర్ధారించు"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"తప్పనిసరిగా కనీసం 4 అక్షరాలు ఉండాలి"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"తప్పనిసరిగా కనీసం 4 క్యారెక్టర్స్ ఉండాలి."</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"ఈ లాక్ రకం అందుబాటులో లేదు."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"తప్పనిసరిగా 0-9 అంకెలను మాత్రమే కలిగి ఉండాలి."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ఇటీవలి పిన్‌ని ఉపయోగించడానికి పరికర నిర్వాహకులు అనుమతించరు"</string>
