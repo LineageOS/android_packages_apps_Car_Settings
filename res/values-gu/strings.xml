@@ -358,10 +358,8 @@
     <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"જ્યારે તમે સાપેક્ષ ગુણોત્તરમાં ફેરફાર કરશો ત્યારે ઍપ ફરી શરૂ થશે. તમે સાચવ્યા ન હોય એવા ફેરફારો ગુમાવો તેવું બની શકે છે. અમુક ચોક્કસ સાપેક્ષ ગુણોત્તર માટે કેટલીક ઍપ ઑપ્ટિમાઇઝ કરવામાં ન આવે તેવું બની શકે છે."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s આંતરિક સ્ટોરેજમાં"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ઍપના પર્ફોર્મન્સને પ્રાધાન્ય આપવા સિસ્ટમના સંસાધનોનો ઉપયોગ કરો"</string>
-    <!-- no translation found for app_open_by_default_title (7275063779631935446) -->
-    <skip />
-    <!-- no translation found for app_open_by_default_summary (3261520150951464121) -->
-    <skip />
+    <string name="app_open_by_default_title" msgid="7275063779631935446">"ડિફૉલ્ટ તરીકે ખોલો"</string>
+    <string name="app_open_by_default_summary" msgid="3261520150951464121">"ઍપને સપોર્ટેડ લિંક ખોલવાની મંજૂરી આપો"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ડેટા વપરાશ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ઍપ ડેટા વપરાશ"</string>
     <string name="data_usage_usage_history_title" msgid="2386346082501471648">"વપરાશનો ઇતિહાસ"</string>
@@ -406,14 +404,10 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"દર વખતે પૂછો"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"ક્યારેય આ ઍપમાં ખોલશો નહીં"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"સમર્થિત લિંક"</string>
-    <!-- no translation found for opening_links_verified_links_title (6781351697264180708) -->
-    <skip />
-    <!-- no translation found for opening_links_verified_links_summary (4578067248862197847) -->
-    <skip />
-    <!-- no translation found for opening_links_supported_links_title (7151392813491148977) -->
-    <skip />
-    <!-- no translation found for opening_links_supported_links_summary (3020072581729951074) -->
-    <skip />
+    <string name="opening_links_verified_links_title" msgid="6781351697264180708">"ચકાસણી કરાયેલી લિંક"</string>
+    <string name="opening_links_verified_links_summary" msgid="4578067248862197847">"{count,plural, =1{ચકાસણી કરાયેલી # લિંક}one{ચકાસણી કરાયેલી # લિંક}other{ચકાસણી કરાયેલી # લિંક}}"</string>
+    <string name="opening_links_supported_links_title" msgid="7151392813491148977">"સપોર્ટેડ લિંક"</string>
+    <string name="opening_links_supported_links_summary" msgid="3020072581729951074">"{count,plural, =1{# સપોર્ટેડ લિંક}one{# સપોર્ટેડ લિંક}other{# સપોર્ટેડ લિંક}}"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"ઍપ"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"તાજેતરમાં ખોલેલી"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"બધી %1$d ઍપ જુઓ"</string>
