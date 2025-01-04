@@ -46,6 +46,7 @@ def main():
     required_args.add_argument('-p', '--filterPattern', default='', help='Input file path (absolute or relative to cwd)', required=True)
     optional_args = parser.add_argument_group('optional arguments')
     optional_args.add_argument('-e', '--excludeHiddenIntents', action=argparse.BooleanOptionalAction, help='whether to exclude hidden apis.')
+    optional_args.add_argument('-w', '--excludeAllowListIntents', help='Input file path containing the intents that will be excluded.')
     args = parser.parse_args()
 
     new_strings = auto_add_intents.filter_new_strings(args)

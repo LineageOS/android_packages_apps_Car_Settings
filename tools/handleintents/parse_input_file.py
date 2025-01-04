@@ -38,6 +38,16 @@ def filter_javadoc_fields(file_path, format, exclude_hidden):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+def filter_allow_list_intents(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            return [line.strip() for line in file if "//" not in line and line.strip()]
+
+    except FileNotFoundError:
+        print(f"Error: File '{file_path}' not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
 def main():
     file_path = os.environ.get('ANDROID_BUILD_TOP') + '/frameworks/base/core/java/android/provider/Settings.java'
     results = filter_javadoc_fields(file_path, "ACTION_", True)
