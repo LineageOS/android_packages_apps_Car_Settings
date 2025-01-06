@@ -43,6 +43,7 @@ public class AudioRouteSelectionDialogFragment extends CarUiDialogFragment {
         mContext = context;
         mUsage = context.getResources().getInteger(R.integer.audio_route_selector_usage);
         mAudioRoutesManager = new AudioRoutesManager(context, mUsage);
+        mAudioRoutesManager.setShowToast(false);
     }
 
     @Override
