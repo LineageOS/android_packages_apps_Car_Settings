@@ -59,6 +59,8 @@ public class MediaAudioSelectorRow extends SettingsQCItem {
                 .setSubtitle(mAudioRoutesManager.getDeviceNameForAddress(
                         mAudioRoutesManager.getActiveDeviceAddress()))
                 .setIcon(Icon.createWithResource(getContext(), R.drawable.ic_qc_speaker_group))
+                .showChevron(true)
+                .showBottomDivider(true)
                 .setPrimaryAction(getPrimaryAction())
                 .build()
         );

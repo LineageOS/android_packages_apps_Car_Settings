@@ -19,16 +19,20 @@ package com.android.car.settings.notifications;
 
 
 import static com.android.internal.notification.NotificationAccessConfirmationActivityContract.EXTRA_COMPONENT_NAME;
+import static com.android.internal.notification.NotificationAccessConfirmationActivityContract.EXTRA_USER_ID;
 
 import android.Manifest;
 import android.annotation.Nullable;
 import android.app.NotificationManager;
 import android.content.ComponentName;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageItemInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.ServiceInfo;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.service.notification.NotificationListenerService;
 import android.text.TextUtils;
 import android.view.accessibility.AccessibilityEvent;
 
@@ -40,6 +44,8 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.internal.app.AlertActivity;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
+
+import java.util.List;
 
 /**
  * This activity is a copy of
@@ -93,6 +99,29 @@ public class NotificationAccessConfirmationActivity extends FragmentActivity {
             return;
         }
 
+        Intent NLSIntent = new Intent(NotificationListenerService.SERVICE_INTERFACE);
+        int userId = getIntent().getIntExtra(EXTRA_USER_ID, UserHandle.USER_NULL);
+        List<ResolveInfo> matchedServiceList = getPackageManager().queryIntentServicesAsUser(
+                NLSIntent, /* flags */ 0, userId);
+        boolean hasNLSIntentFilter = false;
+        for (ResolveInfo service : matchedServiceList) {
+            if (service.serviceInfo.packageName.equals(mComponentName.getPackageName())) {
+                if (!REQUIRED_PERMISSION.equals(service.serviceInfo.permission)) {
+                    LOG.e("Service " + mComponentName + " lacks permission " + REQUIRED_PERMISSION);
+                    finish();
+                    return;
+                }
+                hasNLSIntentFilter = true;
+                break;
+            }
+        }
+        if (!hasNLSIntentFilter) {
+            LOG.e("Service " + mComponentName + " lacks an intent-filter action for "
+                    + NotificationListenerService.SERVICE_INTERFACE);
+            finish();
+            return;
+        }
+
         ConfirmationDialogFragment confirmationDialogFragment =
                 new ConfirmationDialogFragment.Builder(this)
                         .setTitle(getString(R.string.notification_listener_security_warning_title,
@@ -121,19 +150,6 @@ public class NotificationAccessConfirmationActivity extends FragmentActivity {
     }
 
     private void onAllow() {
-        try {
-            ServiceInfo serviceInfo = getPackageManager().getServiceInfo(mComponentName, 0);
-            if (!REQUIRED_PERMISSION.equals(serviceInfo.permission)) {
-                LOG.e("Service " + mComponentName + " lacks permission " + REQUIRED_PERMISSION);
-                finish();
-                return;
-            }
-        } catch (PackageManager.NameNotFoundException e) {
-            LOG.e("Failed to get service info for " + mComponentName, e);
-            finish();
-            return;
-        }
-
         getSystemService(NotificationManager.class)
                 .setNotificationListenerAccessGranted(mComponentName, true);
         finish();

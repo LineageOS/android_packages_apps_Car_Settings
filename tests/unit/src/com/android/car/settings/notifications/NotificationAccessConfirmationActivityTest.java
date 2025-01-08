@@ -99,25 +99,29 @@ public final class NotificationAccessConfirmationActivityTest {
     }
 
     @Test
-    public void componentNameNonEmpty_showsConfirmationDialog() {
+    public void showsDialog() throws Exception {
+        ServiceInfo info = createServiceInfoForTempComponent(
+                Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE);
+        doReturn(info).when(mPackageManager).getServiceInfo(info.getComponentName(), 0);
+
         launchActivityWithValidIntent();
         assertThat(mActivityScenario.getState()).isAtLeast(Lifecycle.State.CREATED);
+        assertThat(mActivity.mFinishTriggered).isFalse();
+        assertThat(getConfirmationDialog().isShowing()).isTrue();
     }
 
     @Test
-    public void onAllow_permissionMissing_finishes() throws Exception {
+    public void intentFilterMissing_finishes() {
         launchActivityWithValidIntent();
-        assertThat(mActivityScenario.getState()).isAtLeast(Lifecycle.State.CREATED);
+        assertThat(mActivity.mFinishTriggered).isTrue();
+    }
+
+    @Test
+    public void permissionMissing_finishes() throws Exception {
         ServiceInfo info = createServiceInfoForTempComponent(/* permission = */ "");
         doReturn(info).when(mPackageManager).getServiceInfo(info.getComponentName(), 0);
 
-        AndroidMockitoHelper.syncRunOnUiThread(mActivity, () -> {
-            getConfirmationDialog().getButton(DialogInterface.BUTTON_POSITIVE).performClick();
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-
-        // Not asserting DESTROYED state as mActivityScenario.getState() returns STARTED state for
-        // some unknown reason.
+        launchActivityWithValidIntent();
         assertThat(mActivity.mFinishTriggered).isTrue();
     }
 

@@ -56,6 +56,7 @@ public class AudioRoutesManager {
     private LocalBluetoothManager mBluetoothManager;
     private int mAudioZone;
     private int mUsage;
+    private boolean mShowToast = true;
     private String mActiveDeviceAddress;
     private String mFutureActiveDeviceAddress;
     private AudioZoneConfigUpdateListener mUpdateListener;
@@ -177,6 +178,13 @@ public class AudioRoutesManager {
         mUpdateListener = listener;
     }
 
+    /**
+     * Sets whether to set a toast when switching the audio route.
+     */
+    public void setShowToast(boolean showToast) {
+        mShowToast = showToast;
+    }
+
     public List<String> getAudioRouteList() {
         return mAddressList;
     }
@@ -219,7 +227,9 @@ public class AudioRoutesManager {
      * Update to a new audio destination of the provided address.
      */
     public AudioRouteItem updateAudioRoute(String address) {
-        showToast(address);
+        if (mShowToast) {
+            showToast(address);
+        }
         mFutureActiveDeviceAddress = address;
         AudioRouteItem audioRouteItem = mAudioRouteItemMap.get(address);
         if (audioRouteItem.getAudioRouteType() == TYPE_BLUETOOTH_A2DP) {
