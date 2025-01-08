@@ -30,7 +30,6 @@
         style="@style/ColoredSwitchPreferenceStyle"
         settings:controller="com.android.car.settings.applications.managedomainurls.OpenLinksSwitchPreferenceController"/>
     <com.android.car.ui.preference.CarUiPreference
-        android:fragment="com.android.car.settings.applications.managedomainurls.VerifiedLinksFragment"
         android:key="@string/pk_opening_links_verified_links"
         android:title="@string/opening_links_verified_links_title"
         settings:controller="com.android.car.settings.applications.managedomainurls.VerifiedLinksPreferenceController"/>
@@ -38,4 +37,8 @@
         android:key="@string/pk_opening_links_supported_links"
         android:title="@string/opening_links_supported_links_title"
         settings:controller="com.android.car.settings.applications.managedomainurls.SelectedLinksListPreferenceController"/>
+    <com.android.car.ui.preference.CarUiMultiSelectListPreference
+        android:key="@string/pk_opening_links_add_links"
+        android:title="@string/opening_links_add_links_title"
+        settings:controller="com.android.car.settings.applications.managedomainurls.AddLinksListPreferenceController"/>
 </PreferenceScreen>
