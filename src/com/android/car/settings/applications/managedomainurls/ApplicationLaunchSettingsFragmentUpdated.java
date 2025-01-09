@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** Settings screen to show details about launching a specific app. */
-public class ApplicationLaunchSettingsFragmentNew extends SettingsFragment implements
+public class ApplicationLaunchSettingsFragmentUpdated extends SettingsFragment implements
         CarDomainVerificationManager.DomainVerificationStateChangeListener {
 
     @VisibleForTesting
@@ -44,8 +44,9 @@ public class ApplicationLaunchSettingsFragmentNew extends SettingsFragment imple
     private List<PreferenceController> mLinksListControllers = new ArrayList<>();
 
     /** Creates a new instance of this fragment for the package specified in the arguments. */
-    public static ApplicationLaunchSettingsFragmentNew newInstance(String pkg) {
-        ApplicationLaunchSettingsFragmentNew fragment = new ApplicationLaunchSettingsFragmentNew();
+    public static ApplicationLaunchSettingsFragmentUpdated newInstance(String pkg) {
+        ApplicationLaunchSettingsFragmentUpdated fragment =
+                new ApplicationLaunchSettingsFragmentUpdated();
         Bundle args = new Bundle();
         args.putString(ARG_PACKAGE_NAME, pkg);
         fragment.setArguments(args);
@@ -55,7 +56,7 @@ public class ApplicationLaunchSettingsFragmentNew extends SettingsFragment imple
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.application_launch_settings_fragment_new;
+        return R.xml.application_launch_settings_fragment_updated;
     }
 
     @Override
@@ -79,15 +80,21 @@ public class ApplicationLaunchSettingsFragmentNew extends SettingsFragment imple
 
         VerifiedLinksPreferenceController verifiedLinksPreferenceController =
                 use(VerifiedLinksPreferenceController.class,
-                R.string.pk_opening_links_verified_links);
+                        R.string.pk_opening_links_verified_links);
         verifiedLinksPreferenceController.setAppEntry(mAppEntry);
         mLinksListControllers.add(verifiedLinksPreferenceController);
 
         SelectedLinksListPreferenceController selectedLinksListPreferenceController =
                 use(SelectedLinksListPreferenceController.class,
-                R.string.pk_opening_links_supported_links);
+                        R.string.pk_opening_links_supported_links);
         selectedLinksListPreferenceController.setAppEntry(mAppEntry);
         mLinksListControllers.add(selectedLinksListPreferenceController);
+
+        AddLinksListPreferenceController addLinksListPreferenceController =
+                use(AddLinksListPreferenceController.class,
+                        R.string.pk_opening_links_add_links);
+        addLinksListPreferenceController.setAppEntry(mAppEntry);
+        mLinksListControllers.add(addLinksListPreferenceController);
     }
 
     @Override

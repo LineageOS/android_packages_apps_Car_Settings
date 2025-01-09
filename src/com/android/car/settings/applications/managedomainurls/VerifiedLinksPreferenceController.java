@@ -46,7 +46,7 @@ public class VerifiedLinksPreferenceController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (isLinkHandlingEnabled()) {
+        if (isLinkHandlingEnabled() && getLinksNumber(DOMAIN_STATE_VERIFIED) > 0) {
             return AVAILABLE;
         }
         return CONDITIONALLY_UNAVAILABLE;
@@ -58,5 +58,12 @@ public class VerifiedLinksPreferenceController extends
         preference.setSummary(
                 StringUtil.getIcuPluralsString(getContext(), getLinksNumber(DOMAIN_STATE_VERIFIED),
                         R.string.opening_links_verified_links_summary));
+    }
+
+    @Override
+    protected boolean handlePreferenceClicked(CarUiPreference preference) {
+        getFragmentController().launchFragment(
+                VerifiedLinksFragment.newInstance(getPackageName()));
+        return true;
     }
 }

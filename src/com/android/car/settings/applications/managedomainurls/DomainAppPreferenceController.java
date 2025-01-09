@@ -28,6 +28,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.ui.preference.CarUiPreference;
@@ -150,7 +151,10 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
         preference.setIcon(iconDrawableFactory.getBadgedIcon(entry.info));
         preference.setOnPreferenceClickListener(pref -> {
             getFragmentController().launchFragment(
-                    ApplicationLaunchSettingsFragment.newInstance(entry.info.packageName));
+                    Flags.newFragmentForIntents()
+                            ? ApplicationLaunchSettingsFragmentUpdated.newInstance(
+                            entry.info.packageName) : ApplicationLaunchSettingsFragment.newInstance(
+                            entry.info.packageName));
             return true;
         });
         return preference;
