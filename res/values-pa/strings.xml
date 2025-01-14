@@ -408,6 +408,8 @@
     <string name="opening_links_verified_links_summary" msgid="4578067248862197847">"{count,plural, =1{# ਪੁਸ਼ਟੀਕਿਰਤ ਲਿੰਕ}one{# ਪੁਸ਼ਟੀਕਿਰਤ ਲਿੰਕ}other{# ਪੁਸ਼ਟੀਕਿਰਤ ਲਿੰਕ}}"</string>
     <string name="opening_links_supported_links_title" msgid="7151392813491148977">"ਸਮਰਥਿਤ ਲਿੰਕ"</string>
     <string name="opening_links_supported_links_summary" msgid="3020072581729951074">"{count,plural, =1{# ਸਮਰਥਿਤ ਲਿੰਕ}one{# ਸਮਰਥਿਤ ਲਿੰਕ}other{# ਸਮਰਥਿਤ ਲਿੰਕ}}"</string>
+    <string name="opening_links_add_links_title" msgid="7560149353866939877">"ਲਿੰਕ ਸ਼ਾਮਲ ਕਰੋ"</string>
+    <string name="opening_links_add_links_summary" msgid="7374297489426317237">"{count,plural, =1{# ਅਣਪ੍ਰਬੰਧਿਤ ਲਿੰਕ}one{# ਅਣਪ੍ਰਬੰਧਿਤ ਲਿੰਕ}other{# ਅਣਪ੍ਰਬੰਧਿਤ ਲਿੰਕ}}"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"ਐਪਾਂ"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"ਹਾਲ ਹੀ ਵਿੱਚ ਖੋਲ੍ਹੀਆਂ ਗਈਆਂ ਐਪਾਂ"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"ਸਾਰੀਆਂ %1$d ਐਪਾਂ ਦੇਖੋ"</string>
@@ -470,8 +472,8 @@
     <string name="microphone_manage_permissions" msgid="7280905792151988183">"ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਸੰਬੰਧੀ ਇਜਾਜ਼ਤਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ"</string>
     <string name="microphone_recently_accessed" msgid="2084292372486026607">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="microphone_no_recent_access" msgid="6412908936060990649">"ਕੋਈ ਹਾਲੀਆ ਐਪ ਨਹੀਂ"</string>
-    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 ਐਪਾਂ ਕੋਲ ਪੁਹੰਚ ਹੈ"</string>
-    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ}one{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ}other{{total_count} ਵਿੱਚੋਂ # ਐਪਾਂ ਕੋਲ ਪੁਹੰਚ ਹੈ}}"</string>
+    <string name="microphone_app_permission_summary_microphone_off" msgid="6139321726246115550">"0 ਐਪਾਂ ਕੋਲ ਪਹੁੰਚ ਹੈ"</string>
+    <string name="microphone_app_permission_summary_microphone_on" msgid="7870834777359783838">"{count,plural, =1{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪਹੁੰਚ ਹੈ}one{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪਹੁੰਚ ਹੈ}other{{total_count} ਵਿੱਚੋਂ # ਐਪਾਂ ਕੋਲ ਪਹੁੰਚ ਹੈ}}"</string>
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"ਸਭ ਦੇਖੋ"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…"</string>
@@ -946,7 +948,7 @@
     <string name="camera_manage_permissions" msgid="9005596413781984368">"ਕੈਮਰਾ ਇਜਾਜ਼ਤਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ"</string>
     <string name="camera_recently_accessed" msgid="8084100710444691977">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="camera_no_recent_access" msgid="965105023454777859">"ਕੋਈ ਹਾਲੀਆ ਐਪ ਨਹੀਂ"</string>
-    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ਐਪ ਕੋਲ ਪੁਹੰਚ ਹੈ"</string>
+    <string name="camera_app_permission_summary_camera_off" msgid="1437200903113016549">"0 ਐਪ ਕੋਲ ਪਹੁੰਚ ਹੈ"</string>
     <string name="camera_app_permission_summary_camera_on" msgid="7260565911222013361">"{count,plural, =1{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪਹੁੰਚ ਹੈ}one{{total_count} ਵਿੱਚੋਂ # ਐਪ ਕੋਲ ਪਹੁੰਚ ਹੈ}other{{total_count} ਵਿੱਚੋਂ # ਐਪਾਂ ਕੋਲ ਪਹੁੰਚ ਹੈ}}"</string>
     <string name="camera_settings_recent_requests_title" msgid="2433698239374365206">"ਹਾਲ ਹੀ ਵਿੱਚ ਪਹੁੰਚ ਕੀਤੀ"</string>
     <string name="camera_settings_recent_requests_view_all_title" msgid="8590811106414244795">"ਸਭ ਦੇਖੋ"</string>

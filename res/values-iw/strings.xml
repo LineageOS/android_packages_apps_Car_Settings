@@ -231,7 +231,7 @@
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"חייב להיות בן 16 ספרות"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"בדרך כלל 0000 או 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"בקשת התאמה"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"יש להקיש כדי ליצור התאמה עם <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"יש ללחוץ כדי ליצור התאמה עם <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"בחירת מכשיר Bluetooth"</string>
     <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"Bluetooth"</string>
     <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"טלפון"</string>
@@ -408,6 +408,8 @@
     <string name="opening_links_verified_links_summary" msgid="4578067248862197847">"{count,plural, =1{יש קישור מאומת אחד}one{יש # קישורים מאומתים}two{יש # קישורים מאומתים}other{יש # קישורים מאומתים}}"</string>
     <string name="opening_links_supported_links_title" msgid="7151392813491148977">"קישורים נתמכים"</string>
     <string name="opening_links_supported_links_summary" msgid="3020072581729951074">"{count,plural, =1{יש קישור נתמך אחד}one{יש # קישורים נתמכים}two{יש # קישורים נתמכים}other{יש # קישורים נתמכים}}"</string>
+    <string name="opening_links_add_links_title" msgid="7560149353866939877">"הוספת קישורים"</string>
+    <string name="opening_links_add_links_summary" msgid="7374297489426317237">"{count,plural, =1{קישור אחד שלא טופל}one{‫# קישורים שלא טופלו}two{‫# קישורים שלא טופלו}other{‫# קישורים שלא טופלו}}"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"אפליקציות"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"נפתחו לאחרונה"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"לעיון בכל %1$d האפליקציות"</string>
@@ -425,7 +427,7 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"ההרשאה הזו מתירה לאפליקציה לשנות את הגדרות המערכת."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"גישה להתראות"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"האם להתיר ל-<xliff:g id="SERVICE">%1$s</xliff:g> לגשת אל התראות?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ל-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> תהיה אפשרות לקרוא את כל ההתראות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שמתקבלות. האפליקציה תוכל גם לבטל התראות או להפעיל לחצני פעולה שהן כוללות.\n\nכמו כן, האפליקציה תוכל להפעיל או לכבות את התכונה \'נא לא להפריע\' ולשנות הגדרות קשורות."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ל-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> תהיה אפשרות לקרוא את כל ההתראות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שמתקבלות. האפליקציה תוכל גם לבטל התראות או להפעיל כפתורי פעולה שהן כוללות.\n\nכמו כן, האפליקציה תוכל להפעיל או לכבות את התכונה \"נא לא להפריע\" ולשנות הגדרות קשורות."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"אם הגישה של <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> להתראות תושבת, ניתן יהיה להשבית גם את הגישה לתכונה \'נא לא להפריע\'."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"כיבוי"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ביטול"</string>
@@ -659,7 +661,7 @@
     <string name="sync_error" msgid="6698021343089247914">"שגיאת סנכרון"</string>
     <string name="last_synced" msgid="4745124489150101529">"סונכרן לאחרונה ב-<xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"הסנכרון מתבצע עכשיו…"</string>
-    <string name="sync_one_time_sync" msgid="491707183321353107">"יש להקיש כדי לסנכרן כעת<xliff:g id="LAST_SYNC_TIME">
+    <string name="sync_one_time_sync" msgid="491707183321353107">"יש ללחוץ כדי לסנכרן כעת<xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"לסנכרון עכשיו"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ביטול הסנכרון"</string>
