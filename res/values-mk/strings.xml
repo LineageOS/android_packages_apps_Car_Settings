@@ -408,6 +408,8 @@
     <string name="opening_links_verified_links_summary" msgid="4578067248862197847">"{count,plural, =1{# потврден линк}one{# потврден линк}other{# потврдени линка}}"</string>
     <string name="opening_links_supported_links_title" msgid="7151392813491148977">"Поддржани линкови"</string>
     <string name="opening_links_supported_links_summary" msgid="3020072581729951074">"{count,plural, =1{# поддржан линк}one{# поддржан линк}other{# поддржани линка}}"</string>
+    <string name="opening_links_add_links_title" msgid="7560149353866939877">"Додајте линкови"</string>
+    <string name="opening_links_add_links_summary" msgid="7374297489426317237">"{count,plural, =1{# неуправуван линк}one{# неуправуван линк}other{# неуправувани линкови}}"</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"Апликации"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"Неодамна отворени"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"Прикажи ги сите %1$d апликации"</string>
@@ -495,7 +497,7 @@
     <string name="device_status" msgid="267298179806290920">"Статус"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"Статус на батерија, мрежа и други информации"</string>
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"Телефонски број, сигнал итн."</string>
-    <string name="about_settings" msgid="4329457966672592345">"За"</string>
+    <string name="about_settings" msgid="4329457966672592345">"Информации"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"Прикажи правни информации, статус, верзија на софтвер"</string>
     <string name="legal_information" msgid="1838443759229784762">"Правни информации"</string>
