@@ -91,6 +91,7 @@
         android:label="@string/settings_label"
         android:requiredForAllUsers="true"
         android:directBootAware="true"
+        android:enableOnBackInvokedCallback="false"
         android:supportsRtl="true">
 
         <property
