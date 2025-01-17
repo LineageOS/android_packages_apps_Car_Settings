@@ -22,7 +22,7 @@ android_robolectric_test {
     srcs: [
         "src/**/*.kt",
         // Goal is have `src/**/*.java` (i.e. all tests to work w/ Robolectric)
-        // "src/**/AccountDetailsPreferenceControllerTest.java",
+        "src/**/AccountDetailsPreferenceControllerTest.java",
         "src/**/AccountGroupPreferenceControllerTest.java",
         "src/**/AddMobileNetworkPreferenceControllerTest.java",
         // "src/**/AddProfilePreferenceControllerTest.java",
