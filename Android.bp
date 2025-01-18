@@ -95,6 +95,7 @@ android_app {
     certificate: "platform",
 
     optimize: {
+        keep_runtime_invisible_annotations: true,
         proguard_flags_files: ["proguard.flags"],
     },
 

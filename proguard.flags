@@ -1,17 +1,12 @@
--verbose
 # Use ProGuard only to get rid of unused classes
 -dontobfuscate
 -dontoptimize
--keepattributes *
 
-# Preverification was introduced in Java 6 to enable faster classloading, but
-# dex doesn't use the java .class format, so it has no benefit and can cause
-# problems.
--dontpreverify
-
-# Skipping analysis of some classes may make proguard strip something that's
-# needed.
--dontskipnonpubliclibraryclasses
+# Keep all attributes except runtime invisible annotations.
+-keepattributes !RuntimeInvisibleAnnotations,
+                !RuntimeInvisibleParameterAnnotations,
+                !RuntimeInvisibleTypeAnnotations,
+                *
 
 # Parcel reflectively accesses this field.
 -keepclassmembers class * implements android.os.Parcelable {
