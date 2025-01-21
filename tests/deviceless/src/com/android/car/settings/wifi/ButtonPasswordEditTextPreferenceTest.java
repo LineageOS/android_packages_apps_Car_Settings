@@ -31,6 +31,7 @@ import androidx.preference.PreferenceViewHolder;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 
+import com.android.car.oem.tokens.Token;
 import com.android.car.settings.R;
 import com.android.car.ui.CarUiLayoutInflaterFactory;
 
@@ -49,8 +50,8 @@ public class ButtonPasswordEditTextPreferenceTest {
         Context context = InstrumentationRegistry.getInstrumentation().getContext();
 
         LayoutInflater.from(context).setFactory2(new CarUiLayoutInflaterFactory());
-
-        Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
+        Context oemStyledContext = Token.createOemStyledContext(context);
+        Context themedContext = new ContextThemeWrapper(oemStyledContext, R.style.CarSettingTheme);
 
         mButtonPreference = new ButtonPasswordEditTextPreference(context);
         View rootView = View.inflate(themedContext, mButtonPreference.getLayoutResource(), null);

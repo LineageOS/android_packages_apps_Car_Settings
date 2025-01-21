@@ -34,6 +34,15 @@
         <item name="android:fragmentOpenExitAnimation">@animator/trans_left_out</item>
         <item name="android:fragmentCloseEnterAnimation">@animator/trans_left_in</item>
         <item name="android:fragmentCloseExitAnimation">@animator/trans_right_out</item>
+        <item name="oemTokenOverrideEnabled">true</item>
+        <item name="bluetoothBondedDeviceButtonRadius">?oemShapeCornerSmall</item>
+        <item name="bluetoothBondedDevicePreferenceToggleButtonRadius">?oemShapeCornerExtraSmall</item>
+        <item name="topLevelPreferenceCornerRadius">?oemShapeCornerMedium</item>
+        <item name="wifiDetailsShareRoundedCornerRadius">?oemShapeCornerSmall</item>
+        <item name="themeToggleButtonRadius">?oemShapeCornerSmall</item>
+        <item name="themeTogglePreferenceToggleButtonRadius">?oemShapeCornerExtraSmall</item>
+        <item name="suggestionsCornerRadius">?oemShapeCornerSmall</item>
+        <item name="wifiTetherQrCodeRoundedCornerRadius">?oemShapeCornerSmall</item>
     </style>
 
     <style name="FallbackHome" parent="@android:style/Theme.DeviceDefault.NoActionBar">

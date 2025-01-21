@@ -42,7 +42,7 @@
         android:scaleType="fitCenter"
         android:antialias="true"
         app:cardElevation="@dimen/card_view_elevation"
-        app:cardCornerRadius="@dimen/rounded_corner_radius"
+        app:cardCornerRadius="?wifiDetailsShareRoundedCornerRadius"
         android:layout_marginTop="@dimen/wifi_share_page_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

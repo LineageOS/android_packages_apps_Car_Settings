@@ -21,7 +21,7 @@
         android:height="@dimen/theme_toggle_button_size">
         <shape android:shape="rectangle">
             <solid android:color="@color/theme_toggle_button_background" />
-            <corners android:radius="@dimen/theme_toggle_button_radius" />
+            <corners android:radius="?themeToggleButtonRadius" />
         </shape>
     </item>
     <item android:width="@dimen/theme_toggle_button_size"

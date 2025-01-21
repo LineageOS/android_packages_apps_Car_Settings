@@ -72,6 +72,7 @@
         android:debuggable="true"
         android:testOnly="true">
         <uses-library android:name="android.test.runner" />
+        <uses-library android:name="com.android.oem.tokens" android:required="false"/>
 
         <activity
             android:name="com.android.car.settings.common.SubSettingsActivity"
