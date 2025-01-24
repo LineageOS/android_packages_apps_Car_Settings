@@ -110,7 +110,8 @@ public class InitialLockSetupService extends Service {
                 List<LockPatternView.Cell> pattern = new ArrayList<>();
                 for (int i = 0; i < bytes.length; i++) {
                     pattern.add(LockPatternView.Cell.of(
-                                (byte) ((bytes[i] - 1) / 3), (byte) ((bytes[i] - 1) % 3)));
+                                (byte) ((bytes[i] - 1) / 3), (byte) ((bytes[i] - 1) % 3),
+                                LockPatternUtils.PATTERN_SIZE_DEFAULT));
                 }
                 return pattern;
             }
