@@ -16,6 +16,9 @@
 
 package com.android.car.settings.storage;
 
+import static android.content.pm.ApplicationInfo.FLAG_ALLOW_CLEAR_USER_DATA;
+import static android.content.pm.ApplicationInfo.FLAG_SYSTEM;
+
 import static com.android.car.settings.common.ActionButtonsPreference.ActionButtons;
 
 import android.app.ActivityManager;
@@ -116,7 +119,9 @@ public class StorageApplicationActionButtonsPreferenceController extends
         return ActionButtonsPreference.class;
     }
 
-    /** Sets the {@link ApplicationsState.AppEntry} which is used to load the app name and icon. */
+    /**
+     * Sets the {@link ApplicationsState.AppEntry} which is used to load the app name and icon.
+     */
     public StorageApplicationActionButtonsPreferenceController setAppEntry(
             ApplicationsState.AppEntry appEntry) {
         mAppEntry = appEntry;
@@ -224,7 +229,8 @@ public class StorageApplicationActionButtonsPreferenceController extends
             long cacheSize = data.getCacheBytes();
             long dataSize = data.getDataBytes() - cacheSize;
 
-            mClearStorageButton.setEnabled(dataSize > 0 && !mDataCleared);
+            mClearStorageButton.setEnabled(
+                    dataSize > 0 && !mDataCleared && clearDataAllowedBySystemFlag());
             mClearCacheButton.setEnabled(cacheSize > 0 && !mCacheCleared);
         }
     }
@@ -279,6 +285,18 @@ public class StorageApplicationActionButtonsPreferenceController extends
             }
         }
     }
+
+    /**
+     * Clearing data can only be disabled for system apps. For all non-system apps it is enabled.
+     * System apps disable it explicitly via the android:allowClearUserData tag.
+     */
+    private boolean clearDataAllowedBySystemFlag() {
+        boolean sysApp = (mAppEntry.info.flags & FLAG_SYSTEM) == FLAG_SYSTEM;
+        boolean allowClearData =
+                (mAppEntry.info.flags & FLAG_ALLOW_CLEAR_USER_DATA) == FLAG_ALLOW_CLEAR_USER_DATA;
+        return !sysApp || allowClearData;
+    }
+
 
     /*
      * Private method to initiate clearing user data when the user clicks the clear data
