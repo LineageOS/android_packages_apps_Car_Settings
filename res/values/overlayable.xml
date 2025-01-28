@@ -51,6 +51,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="action_item_two"/>
       <item type="attr" name="action_item_two_enabled"/>
       <item type="attr" name="action_item_two_shown"/>
+      <item type="attr" name="bluetoothBondedDeviceButtonRadius"/>
+      <item type="attr" name="bluetoothBondedDevicePreferenceToggleButtonRadius"/>
       <item type="attr" name="controller"/>
       <item type="attr" name="disabledTitleColor"/>
       <item type="attr" name="dividerColor"/>
@@ -75,13 +77,19 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="progress"/>
       <item type="attr" name="searchable"/>
       <item type="attr" name="showChevron"/>
+      <item type="attr" name="suggestionsCornerRadius"/>
       <item type="attr" name="suggestionsPrimaryColor"/>
       <item type="attr" name="suggestionsSecondaryColor"/>
+      <item type="attr" name="themeToggleButtonRadius"/>
+      <item type="attr" name="themeTogglePreferenceToggleButtonRadius"/>
       <item type="attr" name="titleColor"/>
       <item type="attr" name="titleText"/>
+      <item type="attr" name="topLevelPreferenceCornerRadius"/>
       <item type="attr" name="usage"/>
       <item type="attr" name="warningTextColor"/>
+      <item type="attr" name="wifiDetailsShareRoundedCornerRadius"/>
       <item type="attr" name="wifiSignalColor"/>
+      <item type="attr" name="wifiTetherQrCodeRoundedCornerRadius"/>
       <item type="bool" name="config_allow_adas_location_switch_clickable"/>
       <item type="bool" name="config_allow_audio_destination_selection"/>
       <item type="bool" name="config_always_ignore_ux_restrictions"/>
@@ -114,6 +122,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="brightness_thumb_inner_ring_color"/>
       <item type="color" name="brightness_thumb_outer_ring_color"/>
       <item type="color" name="car_grey_400_with_disable"/>
+      <item type="color" name="colored_two_action_switch_preference_warning_text_color"/>
       <item type="color" name="config_progress_background_tint"/>
       <item type="color" name="ic_launcher_settings_background"/>
       <item type="color" name="ic_toolbar_settings_background"/>
@@ -184,7 +193,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="aspect_ratio_icon_width"/>
       <item type="dimen" name="block_by_admin_icon_padding"/>
       <item type="dimen" name="bluetooth_bonded_device_border_width"/>
-      <item type="dimen" name="bluetooth_bonded_device_button_radius"/>
       <item type="dimen" name="bluetooth_bonded_device_button_size"/>
       <item type="dimen" name="bluetooth_bonded_device_foreground_icon_inset"/>
       <item type="dimen" name="bluetooth_device_foreground_icon_inset"/>
@@ -195,10 +203,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="bluetooth_pin_dialog_subtext_margin_top"/>
       <item type="dimen" name="bluetooth_pin_dialog_text_margin_end"/>
       <item type="dimen" name="bluetooth_pin_dialog_text_margin_start"/>
-      <item type="dimen" name="brightness_knob_inner_ring_inner_radius"/>
       <item type="dimen" name="brightness_knob_size"/>
       <item type="dimen" name="brightness_knob_thumb_inner_ring_thickness"/>
-      <item type="dimen" name="brightness_knob_thumb_outer_ring_inner_radius"/>
       <item type="dimen" name="brightness_knob_thumb_outer_ring_thickness"/>
       <item type="dimen" name="brightness_seekbar_height"/>
       <item type="dimen" name="brightness_seekbar_margin_bottom"/>
@@ -207,11 +213,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="brightness_seekbar_track_height"/>
       <item type="dimen" name="button_fading_edge_length"/>
       <item type="dimen" name="button_min_width"/>
-      <item type="dimen" name="button_ripple_radius"/>
       <item type="dimen" name="card_view_elevation"/>
       <item type="dimen" name="choose_pin_title_text_margin_bottom"/>
       <item type="dimen" name="choose_title_text_margin_bottom"/>
-      <item type="dimen" name="circle_ripple_bg_radius"/>
       <item type="dimen" name="colored_two_action_switch_preference_divider_vertical_padding"/>
       <item type="dimen" name="colored_two_action_switch_preference_margin_end"/>
       <item type="dimen" name="colored_two_action_switch_preference_vertical_margin"/>
@@ -240,7 +244,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="multi_action_preference_item_container_padding"/>
       <item type="dimen" name="multi_action_preference_item_divider_margin_end"/>
       <item type="dimen" name="multi_action_preference_toggle_button_margin"/>
-      <item type="dimen" name="multi_action_preference_toggle_button_radius"/>
       <item type="dimen" name="multi_action_preference_toggle_button_size"/>
       <item type="dimen" name="number_picker_text_size"/>
       <item type="dimen" name="opacity_disabled"/>
@@ -270,10 +273,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="radio_with_image_preference_min_width"/>
       <item type="dimen" name="radio_with_image_preference_padding_horizontal"/>
       <item type="dimen" name="radio_with_image_preference_padding_vertical"/>
-      <item type="dimen" name="rounded_corner_radius"/>
       <item type="dimen" name="secondary_icon_size"/>
       <item type="dimen" name="suggestions_action_bar_height"/>
-      <item type="dimen" name="suggestions_corner_radius"/>
       <item type="dimen" name="suggestions_padding_end"/>
       <item type="dimen" name="suggestions_padding_start"/>
       <item type="dimen" name="suggestions_subtext_margin_top"/>
@@ -281,7 +282,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="suggestions_text_padding_top"/>
       <item type="dimen" name="suggestions_top_bottom_margin"/>
       <item type="dimen" name="theme_toggle_button_foreground_icon_inset"/>
-      <item type="dimen" name="theme_toggle_button_radius"/>
       <item type="dimen" name="theme_toggle_button_size"/>
       <item type="dimen" name="tile_icon_margin_bottom"/>
       <item type="dimen" name="tile_margin_bottom"/>
@@ -291,7 +291,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="top_level_divider_width"/>
       <item type="dimen" name="top_level_foreground_icon_inset"/>
       <item type="dimen" name="top_level_menu_width"/>
-      <item type="dimen" name="top_level_preference_corner_radius"/>
       <item type="dimen" name="top_level_preference_min_height"/>
       <item type="dimen" name="top_level_preference_title_margin_horizontal"/>
       <item type="dimen" name="top_level_recyclerview_margin_right"/>
@@ -308,7 +307,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="usage_number_text_size"/>
       <item type="dimen" name="usage_pickers_margin_vertical"/>
       <item type="dimen" name="usage_pickers_text_margin_end"/>
-      <item type="dimen" name="user_disclaimer_action_button_corner_radius"/>
       <item type="dimen" name="user_disclaimer_action_button_height"/>
       <item type="dimen" name="user_disclaimer_action_button_max_width"/>
       <item type="dimen" name="user_disclaimer_action_button_min_width"/>
@@ -320,12 +318,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="bluetooth_bonded_device_rotary_background"/>
       <item type="drawable" name="brightness_seekbar_background"/>
       <item type="drawable" name="brightness_seekbar_track"/>
-      <item type="drawable" name="button_ripple_bg"/>
       <item type="drawable" name="car_ic_navigation"/>
       <item type="drawable" name="car_ic_navigation_mute"/>
       <item type="drawable" name="car_ic_phone_volume"/>
       <item type="drawable" name="car_ic_phone_volume_mute"/>
-      <item type="drawable" name="circle_ripple_bg"/>
       <item type="drawable" name="color_progress_bar"/>
       <item type="drawable" name="ic_add"/>
       <item type="drawable" name="ic_app_aspect_ratio_16_9"/>
@@ -473,7 +469,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="privacy_vehicle_data"/>
       <item type="drawable" name="profile_add_circle"/>
       <item type="drawable" name="profile_avatar_bg_circle"/>
-      <item type="drawable" name="rectangle_ripple_mask"/>
       <item type="drawable" name="restricted_wifi_signal"/>
       <item type="drawable" name="theme_toggle_button_rotary_background"/>
       <item type="drawable" name="top_level_preference_background"/>

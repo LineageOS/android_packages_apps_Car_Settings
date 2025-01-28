@@ -93,6 +93,7 @@
         android:directBootAware="true"
         android:enableOnBackInvokedCallback="false"
         android:supportsRtl="true">
+        <uses-library android:name="com.android.oem.tokens" android:required="false"/>
 
         <property
             android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"

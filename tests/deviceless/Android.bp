@@ -33,7 +33,10 @@ android_robolectric_test {
         "testng",
         "android.car",
         "android.car.test.utils",
+        "token-shared-lib-prebuilt",
     ],
+
+    enforce_uses_libs: false,
 
     java_resource_dirs: ["config"],
 

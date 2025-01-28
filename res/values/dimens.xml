@@ -22,7 +22,6 @@
 
     <dimen name="button_min_width">@*android:dimen/car_button_min_width</dimen>
     <dimen name="button_fading_edge_length">40dp</dimen>
-    <dimen name="button_ripple_radius">@*android:dimen/car_radius_1</dimen>
 
     <!-- Action Bar -->
     <dimen name="action_bar_height">@*android:dimen/car_app_bar_height</dimen>
@@ -34,7 +33,6 @@
 
     <!-- Suggestions -->
     <dimen name="suggestions_top_bottom_margin">@*android:dimen/car_padding_4</dimen>
-    <dimen name="suggestions_corner_radius">@*android:dimen/car_radius_3</dimen>
     <!-- Padding between the top of the card and the text -->
     <dimen name="suggestions_text_padding_top">@*android:dimen/car_padding_2</dimen>
     <!-- Padding between the bottom of the text and the action bar -->
@@ -51,9 +49,7 @@
     <dimen name="brightness_seekbar_track_height">6dp</dimen>
     <dimen name="brightness_seekbar_track_corner">3dp</dimen>
     <dimen name="brightness_knob_size">44dp</dimen>
-    <dimen name="brightness_knob_inner_ring_inner_radius">22dp</dimen>
     <dimen name="brightness_knob_thumb_inner_ring_thickness">8dp</dimen>
-    <dimen name="brightness_knob_thumb_outer_ring_inner_radius">30dp</dimen>
     <dimen name="brightness_knob_thumb_outer_ring_thickness">8dp</dimen>
 
     <dimen name="tile_margin_start">@*android:dimen/car_padding_2</dimen>
@@ -61,7 +57,6 @@
     <dimen name="tile_margin_bottom">@*android:dimen/car_padding_5</dimen>
     <dimen name="tile_padding">10dp</dimen>
     <dimen name="tile_icon_margin_bottom">@*android:dimen/car_padding_4</dimen>
-    <dimen name="circle_ripple_bg_radius">90dp</dimen>
 
     <!-- Bluetooth -->
     <dimen name="bluetooth_pin_dialog_margin_start">@*android:dimen/car_keyline_1</dimen>
@@ -73,7 +68,6 @@
     <dimen name="bluetooth_pin_dialog_text_margin_end">@*android:dimen/car_keyline_3</dimen>
     <dimen name="bluetooth_pin_dialog_subtext_margin_top">@*android:dimen/car_padding_1</dimen>
     <dimen name="bluetooth_bonded_device_button_size">72dp</dimen>
-    <dimen name="bluetooth_bonded_device_button_radius">16dp</dimen>
     <dimen name="bluetooth_bonded_device_foreground_icon_inset">14dp</dimen>
     <dimen name="bluetooth_bonded_device_border_width">2dp</dimen>
     <dimen name="bluetooth_device_icon_size">44dp</dimen>
@@ -81,7 +75,6 @@
 
     <!-- Display -->
     <dimen name="theme_toggle_button_size">72dp</dimen>
-    <dimen name="theme_toggle_button_radius">16dp</dimen>
     <dimen name="theme_toggle_button_foreground_icon_inset">14dp</dimen>
 
     <!-- Wifi -->
@@ -158,7 +151,6 @@
     <dimen name="multi_action_preference_item_divider_margin_end">12dp</dimen>
     <dimen name="multi_action_preference_item_container_padding">@dimen/car_ui_padding_2</dimen>
     <dimen name="multi_action_preference_toggle_button_size">72dp</dimen>
-    <dimen name="multi_action_preference_toggle_button_radius">11dp</dimen>
     <dimen name="multi_action_preference_toggle_button_margin">12dp</dimen>
 
     <!-- Data usage -->
@@ -205,7 +197,6 @@
     <dimen name="top_level_menu_width">549dp</dimen>
     <dimen name="top_level_divider_width">1dp</dimen>
     <dimen name="top_level_preference_min_height">96dp</dimen>
-    <dimen name="top_level_preference_corner_radius">24dp</dimen>
     <dimen name="top_level_preference_title_margin_horizontal">2dp</dimen>
     <dimen name="top_level_recyclerview_margin_right">@*android:dimen/car_padding_2</dimen>
     <dimen name="top_level_foreground_icon_inset">0dp</dimen>
@@ -214,7 +205,6 @@
     <dimen name="user_disclaimer_text_size">@*android:dimen/car_body1_size</dimen>
     <dimen name="user_disclaimer_action_button_height">76dp</dimen>
     <dimen name="user_disclaimer_action_button_top_margin">48dp</dimen>
-    <dimen name="user_disclaimer_action_button_corner_radius">38dp</dimen>
     <dimen name="user_disclaimer_action_button_max_width">500dp</dimen>
     <dimen name="user_disclaimer_action_button_min_width">@*android:dimen/car_button_min_width</dimen>
     <dimen name="user_disclaimer_action_button_text_size">@*android:dimen/car_body3_size</dimen>
@@ -223,7 +213,6 @@
     <!-- Blocked by admin icon -->
     <dimen name="block_by_admin_icon_padding">@*android:dimen/car_padding_2</dimen>
 
-    <dimen name="rounded_corner_radius">16dp</dimen>
 
     <dimen name="colored_two_action_switch_preference_vertical_padding">24dp</dimen>
     <dimen name="colored_two_action_switch_preference_margin_end">32dp</dimen>

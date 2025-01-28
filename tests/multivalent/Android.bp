@@ -133,7 +133,9 @@ android_robolectric_test {
         "platform-test-annotations",
         "testng",
         "truth",
+        "token-shared-lib-prebuilt",
     ],
+    enforce_uses_libs: false,
     java_resource_dirs: ["config"],
     instrumentation_for: "CarSettingsAppForMultivalentTesting",
     test_options: {
@@ -155,7 +157,9 @@ android_test {
         "android.test.runner.stubs.system",
         "android.test.base.stubs.system",
         "android.test.mock.stubs.system",
+        "token-shared-lib-prebuilt",
     ],
+    enforce_uses_libs: false,
     static_libs: [
         "CarSettingsLibForDeviceTesting",
         "android.car",
@@ -172,6 +176,7 @@ android_test {
         "testng",
         "car-helper-lib",
         "collector-device-lib-platform",
+        "oem-token-lib",
     ],
     jni_libs: [
         "libdexmakerjvmtiagent",
