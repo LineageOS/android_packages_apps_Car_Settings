@@ -32,6 +32,7 @@ import com.android.car.settings.common.PreferenceController;
  * Controller which determines if the top level entry into Bluetooth settings should be displayed
  * based on device capabilities and user restrictions.
  */
+
 public class BluetoothEntryPreferenceController extends PreferenceController<Preference> {
 
     private final UserManager mUserManager;

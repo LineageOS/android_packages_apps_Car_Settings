@@ -136,4 +136,13 @@
         <attr name="warningTextColor" format="color"/>
         <attr name="normalTextColor" format="color"/>
     </declare-styleable>
+
+    <attr name="suggestionsCornerRadius" format="dimension"/>
+    <attr name="bluetoothBondedDeviceButtonRadius" format="dimension"/>
+    <attr name="bluetoothBondedDevicePreferenceToggleButtonRadius" format="dimension"/>
+    <attr name="themeToggleButtonRadius" format="dimension"/>
+    <attr name="themeTogglePreferenceToggleButtonRadius" format="dimension"/>
+    <attr name="topLevelPreferenceCornerRadius" format="dimension"/>
+    <attr name="wifiTetherQrCodeRoundedCornerRadius" format="dimension"/>
+    <attr name="wifiDetailsShareRoundedCornerRadius" format="dimension"/>
 </resources>

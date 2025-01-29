@@ -20,7 +20,7 @@
             <solid android:color="@color/car_ui_rotary_focus_pressed_fill_secondary_color"/>
             <stroke android:width="@dimen/car_ui_rotary_focus_pressed_stroke_width"
                     android:color="@color/car_ui_rotary_focus_pressed_stroke_secondary_color"/>
-            <corners android:radius="@dimen/multi_action_preference_toggle_button_radius" />
+            <corners android:radius="?bluetoothBondedDevicePreferenceToggleButtonRadius" />
         </shape>
     </item>
     <item android:state_focused="true">
@@ -28,7 +28,7 @@
             <solid android:color="@color/car_ui_rotary_focus_fill_secondary_color"/>
             <stroke android:width="@dimen/car_ui_rotary_focus_stroke_width"
                     android:color="@color/car_ui_rotary_focus_stroke_secondary_color"/>
-            <corners android:radius="@dimen/multi_action_preference_toggle_button_radius" />
+            <corners android:radius="?bluetoothBondedDevicePreferenceToggleButtonRadius" />
         </shape>
     </item>
 </selector>

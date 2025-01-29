@@ -36,6 +36,7 @@ import androidx.preference.PreferenceViewHolder;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 
+import com.android.car.oem.tokens.Token;
 import com.android.car.settings.R;
 
 import org.junit.Before;
@@ -62,7 +63,8 @@ public class SuggestionPreferenceTest {
         Context context = InstrumentationRegistry.getInstrumentation().getContext();
 
         mSuggestion = new Suggestion.Builder(SUGGESTION_ID).build();
-        Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
+        Context oemStyledContext = Token.createOemStyledContext(context);
+        Context themedContext = new ContextThemeWrapper(oemStyledContext, R.style.CarSettingTheme);
         View rootView = View.inflate(themedContext, R.layout.suggestion_preference, null);
         mHolder = PreferenceViewHolder.createInstanceForTests(rootView);
         mPref = new SuggestionPreference(context, mSuggestion, mCallback);

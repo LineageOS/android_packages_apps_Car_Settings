@@ -302,14 +302,17 @@
     <string name="units_unit_name_millivolt" msgid="4730384331465782188">"ಮಿಲಿವೋಲ್ಟ್"</string>
     <string name="units_unit_name_milliwatts" msgid="6689028603486588098">"ಮಿಲಿವ್ಯಾಟ್"</string>
     <string name="units_unit_name_ampere_hour" msgid="6139925422033142476">"ಆ್ಯಂಪಿಯರ್ ಅವರ್"</string>
-    <string name="units_unit_name_kilowatt_hour" msgid="4282251431283475831">"ಕಿಲೋವ್ಯಾಟ್"</string>
+    <!-- no translation found for units_unit_name_kilowatt_hour (3686434641263087159) -->
+    <skip />
     <string name="units_unit_name_psi" msgid="9199487304284041266">"ಪ್ರತಿ ಚದರ ಇಂಚ್‌ಗೆ ಪೌಂಡ್‌ಗಳು"</string>
     <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"ಪ್ರತಿ ಗಂಟೆಗೆ ಮೈಲಿಗಳು"</string>
     <string name="units_unit_name_kilometers_per_hour" msgid="8243061370606677881">"ಪ್ರತಿ ಗಂಟೆಗೆ ಕಿಲೋಮೀಟರ್‌ಗಳು"</string>
     <string name="units_unit_name_bar" msgid="4051903414466411804">"ಬಾರ್"</string>
     <string name="units_unit_name_degrees" msgid="47944625323398947">"ಡಿಗ್ರಿ"</string>
-    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"ನೂರು ಮೈಲಿಗಳಿಗೆ ಒಂದು ಕಿಲೋವ್ಯಾಟ್"</string>
-    <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="2761254652642587883">"ಪ್ರತಿ ನೂರು ಕಿಲೋಮೀಟರ್‌ಗಳಿಗೆ ಒಂದು ಕಿಲೊವಾಟ್"</string>
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (8428052736559260976) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (3717342495287074950) -->
+    <skip />
     <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"ಪ್ರತಿ ಗ್ಯಾಲನ್‌ಗೆ ಮೈಲ್‌ಗಳು (ಅಮೇರಿಕಾ)"</string>
     <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"ಪ್ರತಿ ಗ್ಯಾಲನ್‌ಗೆ ಮೈಲ್‌ಗಳು (ಯುನೈಟೆಡ್ ಕಿಂಗ್‌ಡಮ್)"</string>
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"ಪ್ರತಿ ಲೀಟರ್‌ಗೆ ಕಿಲೋಮೀಟರ್‌ಗಳು"</string>
@@ -631,7 +634,7 @@
     <string name="storage_total_size_label" msgid="3892138268243791912">"ಒಟ್ಟು"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"ಸಂಗ್ರಹಣೆಯನ್ನು ತೆರವುಗೊಳಿಸಿ"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"ಕ್ಯಾಷ್ ಅಳಿಸಿ"</string>
-    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ಆ್ಯಪ್ ಡೇಟಾ ಅಳಿಸುವುದೇ?"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ಆ್ಯಪ್ ಡೇಟಾ ಅಳಿಸಬೇಕೆ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"ಈ ಆ್ಯಪ್‌ನ ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ. ಇದು ಫೈಲ್‌ಗಳು, ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಡೇಟಾಬೇಸ್‌ಗಳು ಮತ್ತು ಇತರ ಆ್ಯಪ್ ಡೇಟಾವನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ಆ್ಯಪ್‌ಗಾಗಿ ಸಂಗ್ರಹಣೆ ತೆರವುಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> ಸುರಕ್ಷಿತವಾಗಿ ತೆಗೆದುಹಾಕಲಾಗಿದೆ"</string>

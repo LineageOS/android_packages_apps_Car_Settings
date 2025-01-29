@@ -24,6 +24,7 @@ android_test {
         "android.test.runner.stubs.system",
         "android.test.base.stubs.system",
         "android.test.mock.stubs.system",
+        "token-shared-lib-prebuilt",
     ],
 
     static_libs: [
@@ -42,7 +43,10 @@ android_test {
         "testng",
         "car-helper-lib",
         "collector-device-lib-platform",
+        "oem-token-lib",
     ],
+
+    enforce_uses_libs: false,
 
     jni_libs: [
         "libdexmakerjvmtiagent",

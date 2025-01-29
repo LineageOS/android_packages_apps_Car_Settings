@@ -302,14 +302,17 @@
     <string name="units_unit_name_millivolt" msgid="4730384331465782188">"Mili vôn"</string>
     <string name="units_unit_name_milliwatts" msgid="6689028603486588098">"Miliwatt"</string>
     <string name="units_unit_name_ampere_hour" msgid="6139925422033142476">"Ampe giờ"</string>
-    <string name="units_unit_name_kilowatt_hour" msgid="4282251431283475831">"Kilowatt giờ"</string>
+    <!-- no translation found for units_unit_name_kilowatt_hour (3686434641263087159) -->
+    <skip />
     <string name="units_unit_name_psi" msgid="9199487304284041266">"Pao trên inch vuông"</string>
     <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"Dặm trên giờ"</string>
     <string name="units_unit_name_kilometers_per_hour" msgid="8243061370606677881">"Kilomet trên giờ"</string>
     <string name="units_unit_name_bar" msgid="4051903414466411804">"Barơ"</string>
     <string name="units_unit_name_degrees" msgid="47944625323398947">"Độ"</string>
-    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"Kilowatt trên một trăm dặm"</string>
-    <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="2761254652642587883">"Kilowatt trên một trăm kilomet"</string>
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (8428052736559260976) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (3717342495287074950) -->
+    <skip />
     <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"Dặm trên galông (Mỹ)"</string>
     <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Dặm trên galông (Anh)"</string>
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilomet trên lít"</string>
@@ -774,7 +777,7 @@
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{Phải có ít hơn # ký tự}other{Phải có ít hơn # ký tự}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{Phải có ít hơn # chữ số}other{Phải có ít hơn # chữ số}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Không cho phép thứ tự chữ số tăng dần, giảm dần hoặc lặp lại"</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Các phương thức khóa màn hình"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Các phương thức khoá màn hình"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Xóa thông tin xác thực"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Xóa tất cả chứng chỉ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Xóa tất cả nội dung?"</string>
