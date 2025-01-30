@@ -142,7 +142,6 @@ android_robolectric_test {
         timeout: 36000,
     },
     strict_mode: false,
-    test_config: "CarSettingsMultivalentRoboTests-AndroidTest.xml",
 }
 
 android_test {
