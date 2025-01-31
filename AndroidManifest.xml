@@ -1247,6 +1247,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
+                <action android:name="android.settings.SIM_PREFERENCE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="android.settings.STORAGE_VOLUME_ACCESS_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
