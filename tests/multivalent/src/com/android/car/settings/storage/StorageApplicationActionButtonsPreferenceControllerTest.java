@@ -16,6 +16,9 @@
 
 package com.android.car.settings.storage;
 
+import static android.content.pm.ApplicationInfo.FLAG_ALLOW_CLEAR_USER_DATA;
+import static android.content.pm.ApplicationInfo.FLAG_SYSTEM;
+
 import static com.android.car.settings.common.ActionButtonsPreference.ActionButtons;
 import static com.android.car.settings.storage.StorageApplicationActionButtonsPreferenceController.CONFIRM_CLEAR_STORAGE_DIALOG_TAG;
 
@@ -77,11 +80,10 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
     private ActionButtonsPreference mActionButtonsPreference;
     private StorageApplicationActionButtonsPreferenceController mPreferenceController;
     private CarUxRestrictions mCarUxRestrictions;
+    private ApplicationsState.AppEntry mAppEntry;
 
     @Mock
     private FragmentController mFragmentController;
-    @Mock
-    private ApplicationsState.AppEntry mMockAppEntry;
     @Mock
     private AppsStorageStatsManager mMockAppsStorageStatsManager;
     @Mock
@@ -103,12 +105,12 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
         appInfo.packageName = PACKAGE_NAME;
         appInfo.manageSpaceActivityName = TEST_MANAGE_STORAGE_ACTIVITY;
 
-        ApplicationsState.AppEntry appEntry = new ApplicationsState.AppEntry(mContext, appInfo,
+        mAppEntry = new ApplicationsState.AppEntry(mContext, appInfo,
                 1234L);
-        appEntry.label = LABEL;
-        appEntry.sizeStr = SIZE_STR;
-        appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
-        appEntry.info.packageName = PACKAGE_NAME;
+        mAppEntry.label = LABEL;
+        mAppEntry.sizeStr = SIZE_STR;
+        mAppEntry.icon = mContext.getDrawable(R.drawable.test_icon);
+        mAppEntry.info = appInfo;
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -131,7 +133,7 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
 
     @Test
     public void testCheckInitialized_noPackageNameEntry_throwException() {
-        mPreferenceController.setAppEntry(mMockAppEntry).setAppsStorageStatsManager(
+        mPreferenceController.setAppEntry(mAppEntry).setAppsStorageStatsManager(
                 mMockAppsStorageStatsManager).setLoaderManager(mMockLoaderManager);
         assertThrows(IllegalStateException.class,
                 () -> PreferenceControllerTestUtil.assignPreference(mPreferenceController,
@@ -140,7 +142,7 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
 
     @Test
     public void testCheckInitialized_noAppsStorageStatsManagerEntry_throwException() {
-        mPreferenceController.setAppEntry(mMockAppEntry).setPackageName(
+        mPreferenceController.setAppEntry(mAppEntry).setPackageName(
                 PACKAGE_NAME).setLoaderManager(mMockLoaderManager);
         assertThrows(IllegalStateException.class,
                 () -> PreferenceControllerTestUtil.assignPreference(mPreferenceController,
@@ -149,7 +151,7 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
 
     @Test
     public void testCheckInitialized_noLoaderManager_throwException() {
-        mPreferenceController.setAppEntry(mMockAppEntry).setPackageName(
+        mPreferenceController.setAppEntry(mAppEntry).setPackageName(
                 PACKAGE_NAME).setAppsStorageStatsManager(mMockAppsStorageStatsManager);
         assertThrows(IllegalStateException.class,
                 () -> PreferenceControllerTestUtil.assignPreference(mPreferenceController,
@@ -247,7 +249,7 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
 
     @Test
     public void handleClearDataClick_allowedBySystem_shouldShowDialogToClear() {
-        mMockAppEntry.info = new ApplicationInfo();
+        mAppEntry.info = new ApplicationInfo();
         setupAndAssignPreference();
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -274,7 +276,7 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = PACKAGE_NAME;
         info.manageSpaceActivityName = TEST_MANAGE_STORAGE_ACTIVITY;
-        mMockAppEntry.info = info;
+        mAppEntry.info = info;
         setupAndAssignPreference();
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -303,7 +305,7 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
         ApplicationInfo info = new ApplicationInfo();
         info.packageName = PACKAGE_NAME;
         info.manageSpaceActivityName = TEST_MANAGE_STORAGE_ACTIVITY;
-        mMockAppEntry.info = info;
+        mAppEntry.info = info;
         setupAndAssignPreference();
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -413,8 +415,19 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
         assertThat(getClearStorageButton().isEnabled()).isFalse();
     }
 
+    @Test
+    public void onDataLoaded_allowClearUserDataNotAllowed_disablesStorageButton() {
+        mAppEntry.info.flags = FLAG_SYSTEM & ~FLAG_ALLOW_CLEAR_USER_DATA;
+        setupAndAssignPreference();
+
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onDataLoaded(null, false, false);
+
+        assertThat(getClearStorageButton().isEnabled()).isFalse();
+    }
+
     private void setupAndAssignPreference() {
-        mPreferenceController.setAppEntry(mMockAppEntry).setPackageName(
+        mPreferenceController.setAppEntry(mAppEntry).setPackageName(
                 PACKAGE_NAME).setAppsStorageStatsManager(mMockAppsStorageStatsManager)
                 .setLoaderManager(mMockLoaderManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController,
