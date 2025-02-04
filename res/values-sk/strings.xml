@@ -302,17 +302,14 @@
     <string name="units_unit_name_millivolt" msgid="4730384331465782188">"Milivolt"</string>
     <string name="units_unit_name_milliwatts" msgid="6689028603486588098">"Miliwatt"</string>
     <string name="units_unit_name_ampere_hour" msgid="6139925422033142476">"Ampérhodina"</string>
-    <!-- no translation found for units_unit_name_kilowatt_hour (3686434641263087159) -->
-    <skip />
+    <string name="units_unit_name_kilowatt_hour" msgid="3686434641263087159">"Kilowatthodina"</string>
     <string name="units_unit_name_psi" msgid="9199487304284041266">"Libry na štvorcový palec"</string>
     <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"Míle za hodinu"</string>
     <string name="units_unit_name_kilometers_per_hour" msgid="8243061370606677881">"Kilometre za hodinu"</string>
     <string name="units_unit_name_bar" msgid="4051903414466411804">"Bar"</string>
     <string name="units_unit_name_degrees" msgid="47944625323398947">"Stupeň"</string>
-    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (8428052736559260976) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (3717342495287074950) -->
-    <skip />
+    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="8428052736559260976">"Kilowatthodiny na sto míľ"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="3717342495287074950">"Kilowatthodiny na sto kilometrov"</string>
     <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"Míle na galón (USA)"</string>
     <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Míle na galón (UK)"</string>
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilometre na liter"</string>
@@ -739,7 +736,7 @@
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Zadajte PIN"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Zadajte svoje heslo"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Z bezpečnostných dôvodov nastavte PIN"</string>
-    <string name="confirm_your_pin_header" msgid="9096581288537156102">"Znova zadajte kód PIN"</string>
+    <string name="confirm_your_pin_header" msgid="9096581288537156102">"Znova zadajte PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN musí mať aspoň 4 číslice"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Kód PIN je neplatný, musí mať najmenej 4 číslice."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Kódy PIN sa nezhodujú"</string>
