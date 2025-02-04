@@ -51,11 +51,13 @@ import com.android.car.settings.common.ActionButtonsPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.ResourceTestUtils;
+import com.android.car.settings.testutils.RobolectricTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.StorageStatsSource;
 
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -178,6 +180,9 @@ public class StorageApplicationActionButtonsPreferenceControllerTest {
 
     @Test
     public void handleClearCacheClick_disallowedBySystem_shouldNotDeleteApplicationCache() {
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/392704956",
+                RobolectricTestUtils.isRunningOnRobolectric());
         setupAndAssignPreference();
 
         mPreferenceController.onCreate(mLifecycleOwner);
