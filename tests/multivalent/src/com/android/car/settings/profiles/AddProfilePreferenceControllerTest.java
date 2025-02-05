@@ -46,9 +46,11 @@ import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment;
 import com.android.car.settings.testutils.EnterpriseTestUtils;
 import com.android.car.settings.testutils.ResourceTestUtils;
+import com.android.car.settings.testutils.RobolectricTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.car.ui.preference.CarUiPreference;
 
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -266,6 +268,10 @@ public class AddProfilePreferenceControllerTest {
     that. */
     @Test
     public void testCallOnClick_profileLimitReached_showErrorDialog() {
+        // TODO(b/392705953): Remove this assumption once the bug is fixed.
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/392705953",
+                RobolectricTestUtils.isRunningOnRobolectric());
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByUm(mUserManager, TEST_RESTRICTION, false);

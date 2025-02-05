@@ -48,10 +48,12 @@ import com.android.car.settings.common.ActionButtonsPreference;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.RobolectricTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -345,6 +347,9 @@ public class ProfileDetailsActionButtonsPreferenceControllerTest {
 
     @Test
     public void onMakeAdminConfirmed_makeProfileAdmin() {
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/392706043",
+                RobolectricTestUtils.isRunningOnRobolectric());
         mSession = ExtendedMockito.mockitoSession().mockStatic(
                 UserHelper.class).startMocking();
 
