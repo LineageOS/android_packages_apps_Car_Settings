@@ -33,8 +33,10 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.RobolectricTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -74,6 +76,10 @@ public class ProfileDetailsBasePreferenceControllerTest {
 
     @Test
     public void testCheckInitialized_missingUserInfo() {
+        // TODO(b/394651425): Remove this assumption once the bug is fixed.
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/394651425",
+                RobolectricTestUtils.isRunningOnRobolectric());
         assertThrows(IllegalStateException.class,
                 () -> PreferenceControllerTestUtil.assignPreference(mPreferenceController,
                         mPreference));

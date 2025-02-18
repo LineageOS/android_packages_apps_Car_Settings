@@ -38,6 +38,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.RobolectricTestUtils;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
@@ -46,6 +47,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.MockitoSession;
 
 @RunWith(AndroidJUnit4.class)
@@ -71,17 +73,24 @@ public final class ProfileDetailsEndSessionPreferenceControllerTest {
     @Before
     @UiThreadTest
     public void setUp() {
+        MockitoAnnotations.initMocks(this);
+        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
+
+        mPreference = new CarUiPreference(mContext);
+    }
+
+    @Before
+    public void setUpStaticMocks() {
+      // TODO(b/394651425): Performe the same setup regardless if robolectric is used.
+      if (!RobolectricTestUtils.isRunningOnRobolectric()) {
         mSession = ExtendedMockito.mockitoSession()
                 .initMocks(this)
                 .mockStatic(ProfileHelper.class, withSettings().lenient())
                 .startMocking();
 
         ExtendedMockito.when(ProfileHelper.getInstance(mContext)).thenReturn(mProfileHelper);
-
-        mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
-                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
-
-        mPreference = new CarUiPreference(mContext);
+      }
     }
 
     @After
@@ -258,6 +267,9 @@ public final class ProfileDetailsEndSessionPreferenceControllerTest {
 
     @Test
     public void onClick_logoutProfile() {
+        // TODO(b/394651425): Remove.
+        RobolectricTestUtils.assumeNotRunningOnRobolectric(
+                "Skipping test on Robolectric b/394651425");
         initPreferenceController();
         mPreferenceController.handlePreferenceClicked(mPreference);
         verify(mProfileHelper).logoutProfile();

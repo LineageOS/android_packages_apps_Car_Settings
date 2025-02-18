@@ -18,6 +18,7 @@ package com.android.car.settings.testutils;
 
 import static org.robolectric.shadow.api.Shadow.newInstanceOf;
 import android.car.Car;
+import android.car.user.CarUserManager;
 import android.content.Context;
 import android.os.Handler;
 import org.robolectric.annotation.Implementation;
@@ -38,5 +39,13 @@ public class ShadowCar {
             long waitTimeoutMs,
             Car.CarServiceLifecycleListener statusChangeListener) {
         return newInstanceOf(Car.class);
+    }
+
+    @Implementation
+    public Object getCarManager(String serviceName) {
+        if (Car.CAR_USER_SERVICE.equals(serviceName)) {
+            return newInstanceOf(CarUserManager.class);
+        }
+        throw new UnsupportedOperationException("Only Car.CAR_USER_SERVICE is supported");
     }
 }
