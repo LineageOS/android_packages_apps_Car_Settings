@@ -105,7 +105,7 @@ public class NotificationAccessConfirmationActivity extends FragmentActivity {
                 NLSIntent, /* flags */ 0, userId);
         boolean hasNLSIntentFilter = false;
         for (ResolveInfo service : matchedServiceList) {
-            if (service.serviceInfo.packageName.equals(mComponentName.getPackageName())) {
+            if (service.serviceInfo.getComponentName().equals(mComponentName)) {
                 if (!REQUIRED_PERMISSION.equals(service.serviceInfo.permission)) {
                     LOG.e("Service " + mComponentName + " lacks permission " + REQUIRED_PERMISSION);
                     finish();
