@@ -1121,6 +1121,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
+                <action android:name="android.settings.APP_LOCALE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="android.settings.APP_NOTIFICATION_PROMOTION_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -1302,6 +1306,19 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.settings.WEBVIEW_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.SHOW_REGULATORY_INFO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- To remove after they are supported by injected settings apps -->
+            <intent-filter android:priority="-1">
+                <action android:name="android.settings.CAST_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="-1">
+                <action android:name="android.settings.CREDENTIAL_PROVIDER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
