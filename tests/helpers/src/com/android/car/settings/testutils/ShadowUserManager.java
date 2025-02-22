@@ -65,12 +65,12 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
     }
 
     @Implementation
-    protected void setUserRestriction(String key, boolean value, UserHandle userHandle) {
-        setUserRestriction(userHandle, key, value);
+    protected List<UserInfo> getUsers(boolean excludeDying) {
+        return super.getUsers();
     }
 
     @Implementation
-    protected List<UserInfo> getUsers(boolean excludeDying) {
+    public List<UserInfo> getAliveUsers() {
         return super.getUsers();
     }
 

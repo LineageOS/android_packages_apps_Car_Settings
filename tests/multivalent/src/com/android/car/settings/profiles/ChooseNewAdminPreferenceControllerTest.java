@@ -42,10 +42,12 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.RobolectricTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -83,12 +85,6 @@ public class ChooseNewAdminPreferenceControllerTest {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
         mDialog = new ConfirmationDialogFragment.Builder(mContext).build();
 
-        mSession = ExtendedMockito.mockitoSession()
-                .mockStatic(ProfileHelper.class, withSettings().lenient())
-                .mockStatic(UserHelper.class)
-                .startMocking();
-        when(ProfileHelper.getInstance(any(Context.class))).thenReturn(mProfileHelper);
-
         PreferenceManager preferenceManager = new PreferenceManager(mContext);
         PreferenceScreen screen = preferenceManager.createPreferenceScreen(mContext);
         mPreference = new LogicalPreferenceGroup(mContext);
@@ -97,6 +93,19 @@ public class ChooseNewAdminPreferenceControllerTest {
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
         mController.setAdminInfo(TEST_ADMIN_USER);
         PreferenceControllerTestUtil.assignPreference(mController, mPreference);
+    }
+
+    @Before
+    public void setUpStaticMocks() {
+        // TODO(b/394651425): Performe the same setup regardless if robolectric is used.
+        if (!RobolectricTestUtils.isRunningOnRobolectric()) {
+            mSession =
+                    ExtendedMockito.mockitoSession()
+                            .mockStatic(ProfileHelper.class, withSettings().lenient())
+                            .mockStatic(UserHelper.class)
+                            .startMocking();
+            when(ProfileHelper.getInstance(any(Context.class))).thenReturn(mProfileHelper);
+        }
     }
 
     @After
@@ -118,9 +127,18 @@ public class ChooseNewAdminPreferenceControllerTest {
 
     @Test
     public void testCheckInitialized_noAdminInfoSet_throwsError() {
-        ChooseNewAdminPreferenceController controller = new ChooseNewAdminPreferenceController(
-                mContext, /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
-        assertThrows(IllegalStateException.class,
+        // TODO(b/394651425): Remove this assumption once the bug is fixed.
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/394651425",
+                RobolectricTestUtils.isRunningOnRobolectric());
+        ChooseNewAdminPreferenceController controller =
+                new ChooseNewAdminPreferenceController(
+                        mContext,
+                        /* preferenceKey= */ "key",
+                        mFragmentController,
+                        mCarUxRestrictions);
+        assertThrows(
+                IllegalStateException.class,
                 () -> PreferenceControllerTestUtil.assignPreference(controller, mPreference));
     }
 
@@ -133,14 +151,22 @@ public class ChooseNewAdminPreferenceControllerTest {
 
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_grantAdminCalled() {
+        // TODO(b/394651425): Remove this assumption once the bug is fixed.
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/394651425",
+                RobolectricTestUtils.isRunningOnRobolectric());
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        ExtendedMockito.verify(() -> UserHelper.grantAdminPermissions(mContext,
-                TEST_OTHER_USER.getUserHandle()));
+        ExtendedMockito.verify(
+                () -> UserHelper.grantAdminPermissions(mContext, TEST_OTHER_USER.getUserHandle()));
     }
 
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_removeUserCalled() {
+        // TODO(b/394651425): Remove this assumption once the bug is fixed.
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/394651425",
+                RobolectricTestUtils.isRunningOnRobolectric());
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
         verify(mProfileHelper).removeProfile(any(), eq(TEST_ADMIN_USER));
@@ -148,6 +174,10 @@ public class ChooseNewAdminPreferenceControllerTest {
 
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_success_noErrorDialog() {
+        // TODO(b/394651425): Remove this assumption once the bug is fixed.
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/394651425",
+                RobolectricTestUtils.isRunningOnRobolectric());
         when(mProfileHelper.removeProfile(any(), eq(TEST_ADMIN_USER)))
                 .thenReturn(ProfileHelper.REMOVE_PROFILE_RESULT_SUCCESS);
 
@@ -158,6 +188,10 @@ public class ChooseNewAdminPreferenceControllerTest {
 
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_failure_errorDialog() {
+        // TODO(b/394651425): Remove this assumption once the bug is fixed.
+        Assume.assumeFalse(
+                "Skipping test on Robolectric b/394651425",
+                RobolectricTestUtils.isRunningOnRobolectric());
         when(mProfileHelper.removeProfile(any(), eq(TEST_ADMIN_USER)))
                 .thenReturn(ProfileHelper.REMOVE_PROFILE_RESULT_FAILED);
 

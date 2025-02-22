@@ -16,6 +16,8 @@
 
 package com.android.car.settings.testutils;
 
+import org.junit.Assume;
+
 public class RobolectricTestUtils {
     private final static String ROBOLECTRIC_CLASS_NAME = "org.robolectric.Robolectric";
 
@@ -31,5 +33,14 @@ public class RobolectricTestUtils {
         } catch (ClassNotFoundException e) {
             return false;
         }
+    }
+
+    /**
+     * Assumes that the test is not running under Robolectric.
+     *
+     * @param message the message to display if the assumption is not met.
+     */
+    public static void assumeNotRunningOnRobolectric(String message) {
+        Assume.assumeFalse(message, isRunningOnRobolectric());
     }
 }
