@@ -18,6 +18,7 @@ package com.android.car.settings.profiles;
 
 import static android.os.UserManager.DISALLOW_ADD_USER;
 import static android.os.UserManager.SWITCHABILITY_STATUS_OK;
+import static android.os.UserManager.USER_TYPE_FULL_SECONDARY;
 
 import android.annotation.IntDef;
 import android.app.Activity;
@@ -414,13 +415,21 @@ public class ProfileGridRecyclerView extends RecyclerView {
         }
 
         private void handleAddProfileClicked(View addProfileView) {
-            if (!mUserManager.canAddMoreUsers()) {
+            if (!canAddMoreUsers()) {
                 showMaxProfilesLimitReachedDialog();
             } else {
                 mAddProfileView = addProfileView;
                 // Disable button so it cannot be clicked multiple times
                 mAddProfileView.setEnabled(false);
                 showConfirmCreateNewProfileDialog();
+            }
+        }
+
+        private boolean canAddMoreUsers() {
+            if (android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
+                return mUserManager.canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
+            } else {
+                return mUserManager.canAddMoreUsersLegacy();
             }
         }
 

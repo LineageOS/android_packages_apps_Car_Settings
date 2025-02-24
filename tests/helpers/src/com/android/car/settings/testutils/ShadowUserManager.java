@@ -88,6 +88,11 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
         return sCanAddMoreUsers;
     }
 
+    @Implementation
+    protected static boolean canAddMoreUsers(String userType) {
+        return sCanAddMoreUsers;
+    }
+
     public static void setCanAddMoreUsers(boolean isEnabled) {
         sCanAddMoreUsers = isEnabled;
     }
