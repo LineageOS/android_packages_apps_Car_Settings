@@ -1107,7 +1107,7 @@
                   android:theme="@style/AlertDialogTheme"
                   android:excludeFromRecents="true"
                   android:exported="true"
-                  android:launchMode="singleTask">
+                  android:launchMode="singleTop">
             <meta-data android:name="distractionOptimized" android:value="true"/>
             <!-- Common Settings Intents -->
             <intent-filter>
