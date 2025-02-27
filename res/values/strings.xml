@@ -975,10 +975,10 @@
     <string name="premium_sms_access_title">Premium SMS</string>
     <!-- Message shown for option to enable Premium SMS for an app. [CHAR_LIMIT=NONE] -->
     <string name="premium_sms_access_description">Premium SMS may cost you money and will add up to your carrier bills. If you enable permission for an app, you will be able to send premium SMS using that app.</string>
-    <!-- Title for managing apps which can query usage data. [CHAR_LIMIT=30] -->
-    <string name="usage_access_title">Usage access</string>
-    <!-- Description of the usage access permission. [CHAR_LIMIT=NONE] -->
-    <string name="usage_access_description">Usage access allows an app to track what other apps you\u2019re using and how often, as well as your carrier, language settings, and other details.</string>
+    <!-- Title for managing apps which can query usage data. [CHAR_LIMIT=40] -->
+    <string name="usage_access_title">App usage data</string>
+    <!-- Description of the app usage data permission. [CHAR_LIMIT=NONE] -->
+    <string name="usage_access_description">Access to all app usage data allows an app to track what other apps you\u2019re using and how often, as well as your carrier, language settings, and other details.</string>
     <!-- Title for managing apps which can change Wi-Fi state. [CHAR_LIMIT=30] -->
     <string name="wifi_control_title">Wi-Fi control</string>
     <!-- Description of the change wifi state permission. [CHAR_LIMIT=NONE] -->
