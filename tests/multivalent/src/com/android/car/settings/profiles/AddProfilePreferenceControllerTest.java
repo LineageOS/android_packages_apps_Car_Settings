@@ -268,9 +268,9 @@ public class AddProfilePreferenceControllerTest {
     that. */
     @Test
     public void testCallOnClick_profileLimitReached_showErrorDialog() {
-        // TODO(b/392705953): Remove this assumption once the bug is fixed.
+        // TODO(b/394651425): Remove this assumption once the bug is fixed.
         Assume.assumeFalse(
-                "Skipping test on Robolectric b/392705953",
+                "Skipping test on Robolectric b/394651425",
                 RobolectricTestUtils.isRunningOnRobolectric());
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
