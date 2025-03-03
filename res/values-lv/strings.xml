@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Piekļuve paziņojumiem"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vai atļaut pakalpojumam <xliff:g id="SERVICE">%1$s</xliff:g> piekļūt paziņojumiem?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> varēs lasīt visus paziņojumus, tostarp personas informāciju, piemēram, kontaktpersonu vārdu un jūsu saņemtās īsziņas. Lietotne varēs arī noraidīt paziņojumus vai aktivizēt tajos esošās darbību pogas. \n\nLietotne varēs arī ieslēgt vai izslēgt režīmu “Netraucēt” un mainīt saistītos iestatījumus."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Izslēdzot paziņojumu piekļuvi lietotnei <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, var tikt izslēgta arī piekļuve režīmam “Netraucēt”."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Izslēgt"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Atcelt"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Šīs lietotnes negatīvi ietekmē sistēmas veiktspēju, un tika pārtraukta to darbība fonā.\nPiešķiriet kādai lietotnei prioritāti, lai atļautu tās darbību fonā un noņemtu to no šī saraksta."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Piešķirt prioritāti"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Maksas īsziņas"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Par maksas īsziņām no jums var tikt iekasēta samaksa, kas tiks pievienota jūsu mobilo sakaru operatora rēķinam. Ja kādai lietotnei iespējosiet piekļuves atļauju, varēsiet sūtīt maksas īsziņas, izmantojot šo lietotni."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Piekļuve lietojuma datiem"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Piekļuve lietojuma datiem ļauj lietotnei izsekot, kādas lietotnes un cik bieži izmantojat, kā arī iegūt informāciju par jūsu mobilo sakaru operatoru, valodas iestatījumiem u.c."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi pārvaldība"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi pārvaldība ļauj lietotnei ieslēgt vai izslēgt Wi-Fi savienojumu, meklēt Wi-Fi tīklus un izveidot savienojumus ar tiem, pievienot vai noņemt tīklus, vai izveidot vietējo tīklāju."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Vairāk"</string>

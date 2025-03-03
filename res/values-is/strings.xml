@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Tilkynningaaðgangur"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Veita <xliff:g id="SERVICE">%1$s</xliff:g> aðgang að tilkynningum?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> mun geta lesið allar tilkynningar, þar á meðal persónuupplýsingar á borð við nöfn tengiliða og texta skilaboða sem þú færð. Það mun einnig geta hunsað tilkynningar eða valið aðgerðahnappa innan þeirra.\n\n Þetta mun einnig gera forritinu kleift að kveikja og slökkva á Ónáðið ekki og breyta tengdum stillingum."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ef þú slekkur á tilkynningaaðgangi fyrir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kann einnig að verða slökkt á Ónáðið ekki."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Slökkva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hætta við"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Þessi forrit hafa neikvæð áhrif á afköst kerfisins og komið hefur verið í veg fyrir að þau keyri í bakgrunni.\nTil að leyfa bakgrunnsnotkun forrits skaltu setja það í forgang og fjarlægja það af þessum lista."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Forgangsraða forriti"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Sérstakt SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Sérstök SMS-skilaboð geta kostað þig peninga og munu bætast við símreikninginn þinn. Ef þú virkjar leyfi fyrir forrit geturðu sent sérstök SMS með því forriti."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Notkunaraðgangur"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Aðgangur að notkun gerir forriti kleift að fylgjast með því hvaða önnur forrit þú notar og hversu oft, sem og símafyrirtækinu þínu, tungumálastillingum og öðrum upplýsingum."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi stjórnun"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi stjórnun leyfir forriti að kveikja og slökkva á Wi-Fi, leita að og tengjast við Wi-Fi net, bæta við og fjarlægja net og búa til staðbundinn heitan reit."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Meira"</string>

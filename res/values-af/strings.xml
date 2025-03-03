@@ -176,7 +176,7 @@
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"Toestel om saam met <xliff:g id="APPNAME">%1$s</xliff:g> te gebruik"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"Geen toestelle gekry nie. Maak seker dat toestelle aangeskakel is en beskikbaar is om te koppel."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"Probeer weer"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Iets het voorgeval. Die program het die versoek gekanselleer om \'n toestel te kies."</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"Iets het voorgeval. Die app het die versoek gekanselleer om \'n toestel te kies."</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Verbinding suksesvol"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Wys alles"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Soek"</string>
@@ -205,12 +205,12 @@
     <string name="bluetooth_turning_off" msgid="1753975097241024061">"Skakel tans Bluetooth af …"</string>
     <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth aanskakel"</string>
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth afskakel"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"\'n Program wil Bluetooth aanskakel"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"\'n Program wil Bluetooth afskakel"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"\'n App wil Bluetooth aanskakel"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"\'n App wil Bluetooth afskakel"</string>
     <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil jou kopeenheid <xliff:g id="TIMEOUT">%2$d</xliff:g> sekondes lank vir ander Bluetooth-toestelle sigbaar maak."</string>
-    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"\'n Program wil jou kopeenheid <xliff:g id="TIMEOUT">%1$d</xliff:g> sekondes lank vir ander Bluetooth-toestelle sigbaar maak."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"\'n App wil jou kopeenheid <xliff:g id="TIMEOUT">%1$d</xliff:g> sekondes lank vir ander Bluetooth-toestelle sigbaar maak."</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth aanskakel en jou kopeenheid <xliff:g id="TIMEOUT">%2$d</xliff:g> sekondes lank vir ander toestelle sigbaar maak."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"\'n Program wil Bluetooth aanskakel en jou kopeenheid <xliff:g id="TIMEOUT">%1$d</xliff:g> sekondes lank vir ander toestelle sigbaar maak."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"\'n App wil Bluetooth aanskakel en jou kopeenheid <xliff:g id="TIMEOUT">%1$d</xliff:g> sekondes lank vir ander toestelle sigbaar maak."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Sigbaar aan ander toestelle as %1$s"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"My toestelle"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Voorheen gekoppel"</string>
@@ -332,7 +332,7 @@
     <string name="disable_text" msgid="4358165448648990820">"Deaktiveer"</string>
     <string name="enable_text" msgid="1794971777861881238">"Aktiveer"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Deïnstalleer"</string>
-    <string name="app_disable_dialog_text" msgid="7731155411006654025">"As jy hierdie program deaktiveer, sal Android en ander programme dalk nie meer soos bedoel werk nie."</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"As jy hierdie app deaktiveer, sal Android en ander apps dalk nie meer soos bedoel werk nie."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Deaktiveer app"</string>
     <string name="not_installed" msgid="4163454337822508007">"Nie vir hierdie profiel geïnstalleer nie"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Toestemmings"</string>
@@ -344,7 +344,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Geen toestemmings is verleen nie"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Geen toestemmings is versoek nie"</string>
     <string name="unused_apps" msgid="648471933781010395">"Ongebruikte apps"</string>
-    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# ongebruikte program}other{# ongebruikte programme}}"</string>
+    <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# ongebruikte app}other{# ongebruikte apps}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Verwyder toestemmings en maak spasie oop"</string>
     <string name="aspect_ratio_label" msgid="5484863076085548807">"Aspekverhouding (eksperimenteel)"</string>
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"Maak oop"</string>
@@ -370,12 +370,12 @@
     <string name="app_data_usage_foreground" msgid="76513424438149709">"Voorgrond"</string>
     <string name="app_data_usage_background" msgid="6972054078770685280">"Agtergrond"</string>
     <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Laat data toe"</string>
-    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Laat dié program toe om mobiele data te gebruik"</string>
+    <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Laat dié app toe om mobiele data te gebruik"</string>
     <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Beperk data"</string>
-    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Gebruik mobiele data net as program op voorgrond is"</string>
+    <string name="app_data_usage_background_data_summary" msgid="4445472217737386826">"Gebruik mobiele data net as app op voorgrond is"</string>
     <string name="computing_size" msgid="5791407621793083965">"Bereken tans …"</string>
     <string name="runtime_permissions_additional_count" msgid="3920383880473283764">"{count,plural, =1{# bykomende toestemming}other{# bykomende toestemmings}}"</string>
-    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Let wel: Ná \'n herselflaai kan hierdie program nie begin voordat jy jou voertuig ontsluit het nie."</string>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Let wel: Ná \'n herselflaai kan hierdie app nie begin voordat jy jou voertuig ontsluit het nie."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Bystand en steminvoer"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Bystandprogram"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Gebruik teks op die skerm"</string>
@@ -387,7 +387,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Geen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Is gekies"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Die assistent sal inligting oor programme wat tans op jou stelsel gebruik word, kan lees, insluitend inligting wat op jou skerm sigbaar is of toeganklik is binne die programme."</string>
-    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Maak seker dat jy hierdie program vertrou&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Outovul&gt;%1$s&lt;/xliff:g&gt; gebruik wat op jou skerm is om te bepaal wat outomaties ingevul kan word."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Maak seker dat jy hierdie app vertrou&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Outovul&gt;%1$s&lt;/xliff:g&gt; gebruik wat op jou skerm is om te bepaal wat outomaties ingevul kan word."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Voeg diens by"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Oopmaak van skakels"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Geïnstalleerde apps"</string>
@@ -397,12 +397,12 @@
     <string name="app_launch_title" msgid="3442601467010363057">"Maak by verstek oop"</string>
     <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Ander verstekke"</string>
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Verstekinstellings is nie gestel nie."</string>
-    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Jy het gekies om hierdie program by verstek oop te maak vir sekere handelinge."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Jy het gekies om hierdie app by verstek oop te maak vir sekere handelinge."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Vee verstekke uit"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Maak gesteunde skakels oop"</string>
-    <string name="app_link_open_always" msgid="5783167184335545230">"Maak in hierdie program oop"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Maak in hierdie app oop"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"Vra elke keer"</string>
-    <string name="app_link_open_never" msgid="2173174327831792316">"Moenie in hierdie program oopmaak nie"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"Moenie in hierdie app oopmaak nie"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Gesteunde skakels"</string>
     <string name="opening_links_verified_links_title" msgid="6781351697264180708">"Geverifieerde skakels"</string>
     <string name="opening_links_verified_links_summary" msgid="4578067248862197847">"{count,plural, =1{# geverifieerde skakel}other{# geverifieerde skakels}}"</string>
@@ -425,21 +425,24 @@
     <string name="hide_system_apps" msgid="6583947381056154020">"Versteek stelselprogramme"</string>
     <string name="alarms_and_reminders_title" msgid="5201073616071479075">"Wekkers en onthounotas"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Verander stelselinstellings"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Hierdie toestemming laat \'n program toe om stelselinstellings te verander."</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Hierdie toestemming laat \'n app toe om stelselinstellings te verander."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Kennisgewingtoegang"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Laat kennisgewingtoegang vir <xliff:g id="SERVICE">%1$s</xliff:g> toe?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> sal alle kennisgewings kan lees, insluitend persoonlike inligting soos kontakname en die teks van boodskappe wat jy ontvang. Dit sal ook kennisgewings kan toemaak of aksieknoppies binne-in hulle kan aktiveer.\n\nDit sal die program ook die vermoë gee om Moenie Steur nie aan of af te skakel en verwante instellings te verander."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"As jy kennisgewingtoegang vir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> afskakel, kan Moenie Steur Nie-toegang dalk ook afgeskakel word."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> sal alle kennisgewings kan lees, insluitend persoonlike inligting soos kontakname en die teks van boodskappe wat jy ontvang. Dit sal ook kennisgewings kan toemaak of aksieknoppies binne-in hulle kan aktiveer.\n\nDit sal die app ook die vermoë gee om Moenie Steur nie aan of af te skakel en verwante instellings te verander."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Skakel af"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Kanselleer"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Hierdie apps het stelselwerkverrigting negatief beïnvloed en is verhoed om op die agtergrond te loop.\nPrioritiseer app om agtergrondgebruik toe te laat en verwyder dit van hierdie lys."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritiseer app"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium-SMS"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS\'e kan jou geld kos en die koste sal by jou diensverskafferfakture gevoeg word. As jy toestemming vir \'n program aktiveer, sal jy premium-SMS\'e met daardie program kan stuur."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Gebruiktoegang"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Gebruiktoegang laat \'n app toe om na te spoor watter ander apps jy gebruik en hoe gereeld, asook jou diensverskaffer, taalinstellings en ander besonderhede."</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS\'e kan jou geld kos en die koste sal by jou diensverskafferfakture gevoeg word. As jy toestemming vir \'n app aktiveer, sal jy premium-SMS\'e met daardie app kan stuur."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-fi-beheer"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-beheer laat \'n program toe om Wi-Fi aan of af te skakel, Wi-Fi-netwerke te soek en aan hulle te koppel, netwerke by te voeg of te verwyder, en om \'n warmkol wat net plaaslik is, te begin."</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-beheer laat \'n app toe om Wi-Fi aan of af te skakel, Wi-Fi-netwerke te soek en aan hulle te koppel, netwerke by te voeg of te verwyder, en om \'n warmkol wat net plaaslik is, te begin."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Meer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ligging"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Gebruik ligging"</string>
@@ -632,8 +635,8 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Vee berging uit"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Maak kas skoon"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vee programdata uit?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Hierdie program se data sal permanent uitgevee word. Dit sluit lêers, instellings, databasisse en ander programdata in."</string>
-    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Kon nie berging vir program uitvee nie."</string>
+    <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Hierdie app se data sal permanent uitgevee word. Dit sluit lêers, instellings, databasisse en ander appdata in."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Kon nie berging vir app uitvee nie."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> is veilig losgemaak"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Kon <xliff:g id="NAME">%1$s</xliff:g> nie veilig losmaak nie"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Rekeninge"</string>
@@ -828,8 +831,8 @@
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Gedeaktiveerde programme"</string>
     <string name="device_admin_apps_description" msgid="1371935499168453457">"Programme met hierdie toestemming het toegang tot hierdie voertuig se data"</string>
     <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Geen voertuigadministrateurprogramme nie"</string>
-    <string name="device_admin_status" msgid="4041772636856135168">"Die inligtingvermaakstelsel se administrasieprogram is aktief en laat die program <xliff:g id="APP_NAME">%1$s</xliff:g> toe om die volgende bewerkings uit te voer:"</string>
-    <string name="device_admin_warning" msgid="8997805999333600901">"Die aktivering van hierdie inligtingvermaakstelselprogram sal die program <xliff:g id="APP_NAME">%1$s</xliff:g> toelaat om die volgende bewerkings uit te voer:"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Die inligtingvermaakstelsel se administrasieapp is aktief en laat die app <xliff:g id="APP_NAME">%1$s</xliff:g> toe om die volgende bewerkings uit te voer:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Die aktivering van hierdie inligtingvermaakstelselapp sal die app <xliff:g id="APP_NAME">%1$s</xliff:g> toelaat om die volgende bewerkings uit te voer:"</string>
     <string name="add_device_admin_msg" msgid="8188888666879499482">"Aktiveer dié inligtingvermaakstelselapp?"</string>
     <string name="add_device_admin" msgid="7674707256074840333">"Aktiveer hierdie inligtingvermaakstelselprogram"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Deaktiveer en deïnstalleer"</string>
@@ -844,12 +847,12 @@
     <string name="disabled_by_policy_title_sms" msgid="3044491214572494290">"Mag nie SMS\'e in hierdie bestuurde voertuig stuur nie"</string>
     <string name="disabled_by_policy_title_camera" msgid="8929782627587059121">"Kamera is nie in hierdie bestuurde voertuig beskikbaar nie"</string>
     <string name="disabled_by_policy_title_screen_capture" msgid="4059715943558852466">"Kan nie skermskote in hierdie bestuurde voertuig neem nie"</string>
-    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Kan nie hierdie program in hierdie bestuurde voertuig oopmaak nie"</string>
+    <string name="disabled_by_policy_title_suspend_packages" msgid="7505332012990359725">"Kan nie hierdie app in hierdie bestuurde voertuig oopmaak nie"</string>
     <string name="disabled_by_policy_title_financed_device" msgid="6005343494788285981">"Geblokkeer deur jou kredietverskaffer"</string>
     <string name="default_admin_support_msg" msgid="2986598061733013282">"Die organisasie beperk toegang tot sekere van die kenmerke.\n\nKontak die organisasiebestuurder as jy vrae het."</string>
     <string name="help_url_action_disabled_by_it_admin" msgid="1479392394986580260"></string>
     <string name="manage_device_admin" msgid="7087659697154317316">"Voertuigadministrasieprogramme"</string>
-    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# geaktiveerde program}other{# geaktiveerde programme}}"</string>
+    <string name="number_of_device_admins" msgid="7508826094096451485">"{count,plural, =1{# geaktiveerde app}other{# geaktiveerde apps}}"</string>
     <string name="number_of_device_admins_none" msgid="5547493703413973954">"Geen geaktiveerde programme nie"</string>
     <string name="work_policy_privacy_settings" msgid="5263835989260149968">"<xliff:g id="ORGANIZATION_NAME">%1$s</xliff:g> se voertuigbeleid"</string>
     <string name="work_policy_privacy_settings_no_org_name" msgid="8011687012493940230">"Voertuigbeleid"</string>
@@ -860,17 +863,17 @@
     <string name="enterprise_privacy_header" msgid="4652489109303330306">"Die vlootadmin kan instellings verander en sagteware in die inligtingvermaakstelsel installeer om toegang tot data in hierdie bestuurde voertuig te gee.\n\nKontak jou vloot se admin vir meer besonderhede."</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Inligting wat jou vlootadmin kan sien"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Veranderinge wat jou vlootadmin gemaak het"</string>
-    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Data wat met jou bestuurde voertuig se rekening geassosieer word"</li>\n" "<li>"Lys programme in jou bestuurde voertuig"</li>\n" "<li>"Hoeveelheid tyd en data wat in elke program gebruik is"</li></string>
+    <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Data wat met jou bestuurde voertuig se rekening geassosieer word"</li>\n" "<li>"Lys apps in jou bestuurde voertuig"</li>\n" "<li>"Hoeveelheid tyd en data wat in elke app gebruik is"</li></string>
     <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Jou toegang tot die inligtingvermaakstelsel"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Lys programme in jou voertuig"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Aantal programme is geskat. Dit sluit dalk nie programme in wat buite die Play Winkel geïnstalleer is nie."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
-      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> programme</item>
-      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> program</item>
+      <item quantity="other">Minimum <xliff:g id="COUNT_1">%d</xliff:g> app</item>
+      <item quantity="one">Minimum <xliff:g id="COUNT_0">%d</xliff:g> app</item>
     </plurals>
     <plurals name="enterprise_privacy_number_packages" formatted="false" msgid="1765193032869129370">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> programme</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> program</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apps</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> app</item>
     </plurals>
     <string name="enterprise_privacy_network_logs" msgid="5093305105565608542">"Mees onlangse netwerkverkeerloglêer"</string>
     <string name="enterprise_privacy_bug_reports" msgid="9197432120122370521">"Mees onlangse foutverslag"</string>

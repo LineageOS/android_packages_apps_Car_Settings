@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Bildirishnomalarga ruxsat"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> uchun bildirishnomadan foydalanish ruxsati berilsinmi?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> barcha bildirishnomalarni, jumladan, kontakt ismlari va siz qabul qilgan xabarlar matni kabi shaxsiy maʼlumotlarni oʻqiy oladi. Shuningdek, u bildirishnomalarni yopishi yoki ulardagi turli amal tugmalarini ishga tushira oladi.\n\nIlova Bezovta qilinmasin rejimini yoqish va oʻchirish hamda shu bilan bogʻliq sozlamalarni ham oʻzgartirishi mumkin."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Agar <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> uchun bildirishnomalar ruxsati faolsizlantirilganda, Bezovta qilinmasin ruxsati ham faolsizlantirilishi mumkin."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Agar <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> uchun bildirishnomalardan foydalanish faolsizlantirilsa, “Bezovta qilinmasin” tugmasi ham faolsizlantiriladi."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Ha"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Bekor qilish"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ushbu ilovalar tizimning ishlashiga salbiy taʼsir qiladi va fonda ishlashi taqiqlanadi.\nFonda foydalanishga ruxsat berish uchun ilovani asosiy qilib belgilang va uni ushbu roʻyxatdan olib tashlang."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Ilovaga ustunlik berish"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Pulli SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS uchun sizdan haq olinishi va operatorga qoʻshimcha to‘lov amalga oshirilishi mumkin. Agar ilova uchun ruxsatnoma taqdim etsangiz, oʻsha ilovadan SMS yuborishingiz mumkin boʻladi."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Foydalanish tarixiga kirish"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Foydalanish tarixiga kirish huquqi qanday ilovalardan va qancha muddatda foydalanishingiz, shuningdek, tarmoq operatori, til va boshqa parametrlarni kuzatish imkonini beradi."</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"Ilovadan foydalanish maʼlumotlari"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Barcha ilovadan foydalanish maʼlumotlari ruxsati qanday ilovalardan va qancha muddatda foydalanishingiz, shuningdek, tarmoq operatori, til va boshqa parametrlarni kuzatish imkonini beradi."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi tarmoqlarni boshqarish"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi tarmoqlarni boshqarish ilovaga Wi-Fi aloqasini yoqish yoki faolsizlantirish, Wi-Fi tarmoqlarni aniqlash va ularga ulanish, tarmoqlar kiritish yoki ularni olib tashlash yoki faqat mahalliy hotspotni ishga tushirish imkoniyatini beradi."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Yana"</string>

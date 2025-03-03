@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Доступ к уведомлениям"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Предоставить приложению \"<xliff:g id="SERVICE">%1$s</xliff:g>\" доступ к уведомлениям?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Приложение <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> сможет читать все уведомления, в том числе содержащие личную информацию (например, имена контактов и сообщения). Оно также получит право закрывать уведомления и нажимать кнопки в них.\n\nПриложение сможет включать и отключать режим \"Не беспокоить\", а также менять его настройки."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Если вы отключите доступ к уведомлениям для приложения \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\", также может быть отключен доступ к настройкам режима \"Не беспокоить\"."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Отключить"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Отмена"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Эти приложения снижают производительность системы. Им запрещено работать в фоновом режиме.\nПриоритизируйте приложение, чтобы разрешить ему работать в фоновом режиме и удалить из этого списка."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Приоритизировать"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Платные SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Обратите внимание, что такие SMS могут оплачиваться дополнительно. Предоставив разрешение приложению, вы сможете отправлять платные SMS с его помощью."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Доступ к истории использования"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Эта настройка разрешает отслеживать данные об использовании других приложений, сведения об операторе связи, языковые настройки и другую информацию."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Управление сетями Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Эта настройка разрешает приложению сканировать, добавлять и удалять сети Wi-Fi, подключаться к ним, включать и отключать модуль Wi-Fi, а также создавать локальные точки доступа."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Ещё"</string>

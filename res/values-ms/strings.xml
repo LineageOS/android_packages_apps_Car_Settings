@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Akses pemberitahuan"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Benarkan akses pemberitahuan untuk <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> akan dapat membaca semua pemberitahuan, termasuk maklumat peribadi seperti nama kenalan dan teks mesej yang anda terima. Selain itu, apl tersebut juga dapat mengetepikan pemberitahuan atau mencetuskan butang tindakan yang terdapat pada apl ini. \n\nTindakan ini turut memberi apl tersebut keupayaan untuk menghidupkan atau mematikan ciri Jangan Ganggu dan menukar tetapan yang berkaitan."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jika anda mematikan akses pemberitahuan untuk <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, akses ciri Jangan Ganggu mungkin turut dimatikan."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Matikan"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Batal"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Apl ini memberikan kesan negatif pada prestasi sistem dan telah dihalang daripada berjalan di latar.\nUtamakan apl untuk membenarkan penggunaan apl di latar dan alih keluar apl daripada senarai ini."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Utamakan apl"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS Premium bukan percuma dan cajnya akan ditambahkan pada bil pembawa anda. Jika anda mendayakan kebenaran untuk apl, anda akan dapat menghantar SMS premium menggunakan apl itu."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Akses penggunaan"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Akses penggunaan membenarkan apl mengesan apl lain yang anda gunakan dan kekerapan penggunaan tersebut serta pembawa, tetapan bahasa dan butiran anda yang lain."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Kawalan Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kawalan Wi-Fi membenarkan apl menghidupkan atau mematikan Wi-Fi, mengimbas dan menyambung ke rangkaian Wi-Fi, menambah atau mengalih keluar rangkaian, atau memulakan tempat liputan setempat sahaja."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Lagi"</string>

@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Dostęp do powiadomień"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Zezwolić usłudze <xliff:g id="SERVICE">%1$s</xliff:g> na dostęp do powiadomień?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Aplikacja <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> będzie mogła czytać wszystkie powiadomienia, w tym informacje osobiste, takie jak nazwy kontaktów i treść otrzymywanych wiadomości. Będzie też mogła odrzucać powiadomienia lub używać zawartych w nich przycisków czynności.\n\nDodatkowo aplikacja będzie mogła włączać lub wyłączać opcję Nie przeszkadzać i zmieniać powiązane ustawienia."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jeśli wyłączysz dostęp do powiadomień dla aplikacji <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, możesz również wyłączyć opcję Nie przeszkadzać."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Wyłącz"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anuluj"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Te aplikacje negatywnie wpływają na wydajność systemu, dlatego ich działanie w tle zostało zablokowane.\nJeśli chcesz zezwolić na działanie danej aplikacji w tle i usunąć ją z tej listy, nadaj jej priorytet."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Nadaj priorytet aplikacji"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS-y specjalne"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Za SMS-y specjalne może być pobierana dodatkowa, wyższa opłata, która pojawi się na Twoim rachunku telefonicznym. Po włączeniu tego uprawnienia możliwe będzie wysyłanie SMS-ów specjalnych z wybranej aplikacji."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Dostęp do danych o użyciu"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Dostęp do danych o użyciu umożliwia aplikacji śledzenie tego, jakich innych aplikacji używasz i jak często, oraz odczytywanie m.in. informacji o operatorze i ustawień językowych."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Sterowanie Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Sterowanie Wi-Fi pozwala aplikacji na włączanie i wyłączanie Wi-Fi, wyszukiwanie sieci Wi-Fi i łączenie się z nimi, dodawanie oraz usuwanie sieci i uruchamianie lokalnego hotspota."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Więcej"</string>

@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"الوصول إلى الإشعارات"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"هل تسمح بوصول خدمة <xliff:g id="SERVICE">%1$s</xliff:g> إلى الإشعارات؟"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"سيكون بإمكان <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية مثل أسماء جهات الاتصال ونصوص الرسائل التي تتلقّاها. وسيتمكّن كذلك من تجاهل الإشعارات أو تشغيل أزرار الإجراءات التي تحتوي عليها.\n\nوتتيح هذه الميزة أيضًا للتطبيق إمكانية تفعيل ميزة \"عدم الإزعاج\" أو إيقافها وتغيير الإعدادات ذات الصلة."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"عند إيقاف الوصول إلى الإشعارات لخدمة <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>، قد يتم إيقاف الوصول إلى ميزة \"عدم الإزعاج\" أيضًا."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"إيقاف"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"إلغاء"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"تؤثر هذه التطبيقات سلبًا في أداء النظام وقد تم منع استخدامها في الخلفية.\nعليك منح الأولوية للتطبيق للسماح باستخدامه في الخلفية وإزالته من هذه القائمة."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"منح أولوية للتطبيق"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"الرسائل القصيرة برسوم إضافية"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"يمكن أن تكلفك الرسائل القصيرة SMS المميزة بعض الرسوم، وستتم إضافة هذه الرسوم إلى فواتير مشغِّل شبكة الجوّال. وفي حال تفعيل الإذن لأحد التطبيقات، ستتمكن من إرسال رسائل قصيرة SMS مميزة باستخدام هذا التطبيق."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"الوصول إلى بيانات الاستخدام"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"يتيح الدخول إلى بيانات الاستخدام للتطبيق إمكانية تتبُّع التطبيقات الأخرى التي تستخدمها ومدى تكرار استخدامها ومشغّل شبكة الجوّال وإعدادات اللغة وغيرها من التفاصيل."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"التحكّم في شبكة Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"يسمح التحكم في شبكة Wi-Fi للتطبيق بتفعيل شبكات Wi-Fi أو إيقافها أو البحث عنها أو الاتصال بها أو إضافتها أو إزالتها أو بدء نقطة اتصال محلية فقط."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"المزيد"</string>

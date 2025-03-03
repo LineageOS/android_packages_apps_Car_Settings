@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Tilgang til varsler"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vil du gi tilgang til varsler for <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kan lese alle varsler, inkludert personopplysninger som kontaktnavn og tekstinnholdet i meldinger du mottar. Den kan også avvise varsler eller utløse handlingsknapper i varslene. \n\nDette gir også appen muligheten til å slå Ikke forstyrr av eller på samt endre tilknyttede innstillinger."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Hvis du slår av varseltilgang for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan tilgang til «Ikke forstyrr» også bli slått av."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Hvis du slår av varseltilgang for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan Ikke forstyrr-kontroll også bli slått av."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Slå av"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Avbryt"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Disse appene påvirker systemytelsen negativt, og de er forhindret fra å kjøre i bakgrunnen.\nDu kan prioritere apper for å tillate at de kjører i bakgrunnen, og fjerne dem fra denne listen."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioriter appen"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium-SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS kan koste penger og legges til telefonregningen din. Hvis du slår på tillatelse for en app, kan du sende premium-SMS via den appen."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Brukstilgang"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Med brukstilgang kan apper spore hvilke andre apper du bruker, og hvor ofte du bruker dem. Operatør, språkinnstillinger og annen informasjon kan også spores med brukstilgang."</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"Data om appbruk"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Med tilgang til alle data om appbruk kan apper spore hvilke andre apper du bruker, og hvor ofte du bruker dem. Også operatør, språkinnstillinger og annen informasjon kan spores med tilgang til alle data om appbruk."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wifi-kontroll"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Med wifi-kontroll kan en app slå wifi på eller av, søke etter og koble til wifi-nettverk, legge til eller fjerne nettverk eller starte en lokal wifi-sone"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mer"</string>
