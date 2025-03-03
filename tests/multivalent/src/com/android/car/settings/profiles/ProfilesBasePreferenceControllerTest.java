@@ -43,13 +43,16 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 import com.android.car.settings.testutils.TestLifecycleOwner;
+import com.android.car.settings.testutils.RobolectricTestUtils;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.MockitoSession;
 import org.mockito.quality.Strictness;
 
@@ -81,11 +84,7 @@ public class ProfilesBasePreferenceControllerTest {
     @Before
     @UiThreadTest
     public void setUp() {
-        mSession = ExtendedMockito.mockitoSession()
-                .initMocks(this)
-                .spyStatic(ProfileHelper.class)
-                .strictness(Strictness.LENIENT)
-                .startMocking();
+        MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
@@ -99,14 +98,28 @@ public class ProfilesBasePreferenceControllerTest {
         screen.addPreference(mPreferenceGroup);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
 
-        ExtendedMockito.doReturn(mProfileHelper)
-                .when(() -> ProfileHelper.getInstance(eq(mContext)));
-        when(mProfileHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
-        when(mProfileHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
-        when(mProfileHelper.getAllSwitchableProfiles()).thenReturn(
-                Collections.singletonList(TEST_OTHER_USER));
-        when(mProfileHelper.getAllLivingProfiles(any())).thenReturn(
-                Collections.singletonList(TEST_OTHER_USER));
+    }
+
+    @Before
+    public void setUpStaticMocks() {
+        // TODO(b/394651425): Performe the same setup regardless if robolectric is used.
+        if (!RobolectricTestUtils.isRunningOnRobolectric()) {
+            mSession =
+                    ExtendedMockito.mockitoSession()
+                            .initMocks(this)
+                            .spyStatic(ProfileHelper.class)
+                            .strictness(Strictness.LENIENT)
+                            .startMocking();
+            when(ProfileHelper.getInstance(any(Context.class))).thenReturn(mProfileHelper);
+            ExtendedMockito.doReturn(mProfileHelper)
+                    .when(() -> ProfileHelper.getInstance(eq(mContext)));
+            when(mProfileHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
+            when(mProfileHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
+            when(mProfileHelper.getAllSwitchableProfiles())
+                    .thenReturn(Collections.singletonList(TEST_OTHER_USER));
+            when(mProfileHelper.getAllLivingProfiles(any()))
+                    .thenReturn(Collections.singletonList(TEST_OTHER_USER));
+        }
     }
 
     @After
@@ -126,6 +139,9 @@ public class ProfilesBasePreferenceControllerTest {
 
     @Test
     public void onCreate_populatesUsers() {
+        // TODO(b/397515001): Remove this assumption once the bug is fixed.
+        RobolectricTestUtils.assumeNotRunningOnRobolectric(
+                "Skipping test on Robolectric b/397515001");
         mPreferenceController.onCreate(mLifecycleOwner);
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
@@ -133,6 +149,9 @@ public class ProfilesBasePreferenceControllerTest {
 
     @Test
     public void onCreate_populatesOtherUsers() {
+        // TODO(b/397515001): Remove this assumption once the bug is fixed.
+        RobolectricTestUtils.assumeNotRunningOnRobolectric(
+                "Skipping test on Robolectric b/397515001");
         mPreferenceController.getPreferenceProvider().setIncludeCurrentProfile(true);
         mPreferenceController.onCreate(mLifecycleOwner);
 
@@ -141,6 +160,9 @@ public class ProfilesBasePreferenceControllerTest {
 
     @Test
     public void onCreate_populatesGuestUsers() {
+        // TODO(b/397515001): Remove this assumption once the bug is fixed.
+        RobolectricTestUtils.assumeNotRunningOnRobolectric(
+                "Skipping test on Robolectric b/397515001");
         mPreferenceController.getPreferenceProvider().setIncludeCurrentProfile(true);
         mPreferenceController.getPreferenceProvider().setIncludeGuest(true);
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -159,6 +181,9 @@ public class ProfilesBasePreferenceControllerTest {
 
     @Test
     public void refreshUi_userChange_updatesGroup() {
+        // TODO(b/394651425): Remove this assumption once the bug is fixed.
+        RobolectricTestUtils.assumeNotRunningOnRobolectric(
+                "Skipping test on Robolectric b/394651425");
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
 

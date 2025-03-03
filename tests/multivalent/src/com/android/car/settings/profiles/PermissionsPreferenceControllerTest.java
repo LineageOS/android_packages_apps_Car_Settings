@@ -39,6 +39,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.testutils.RobolectricTestUtils;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
@@ -74,13 +75,6 @@ public class PermissionsPreferenceControllerTest {
     @Before
     @UiThreadTest
     public void setUp() {
-        mSession = ExtendedMockito.mockitoSession()
-                .initMocks(this)
-                .mockStatic(UserManager.class, withSettings().lenient())
-                .startMocking();
-
-        ExtendedMockito.when(UserManager.get(mContext)).thenReturn(mMockUserManager);
-
         mLifecycleOwner = new TestLifecycleOwner();
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
@@ -96,6 +90,19 @@ public class PermissionsPreferenceControllerTest {
         mPreferenceController.setUserInfo(TEST_USER);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreferenceGroup);
         mPreferenceController.onCreate(mLifecycleOwner);
+    }
+
+    @Before
+    public void setUpStaticMocks() {
+      // TODO(b/394651425): Performe the same setup regardless if robolectric is used.
+      if (!RobolectricTestUtils.isRunningOnRobolectric()) {
+        mSession = ExtendedMockito.mockitoSession()
+                .initMocks(this)
+                .mockStatic(UserManager.class, withSettings().lenient())
+                .startMocking();
+
+        ExtendedMockito.when(UserManager.get(mContext)).thenReturn(mMockUserManager);
+      }
     }
 
     @After
