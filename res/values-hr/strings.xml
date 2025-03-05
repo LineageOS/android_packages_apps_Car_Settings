@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Pristup obavijestima"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Želite li dopustiti usluzi <xliff:g id="SERVICE">%1$s</xliff:g> da pristupa obavijestima?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Aplikacija <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> moći će čitati sve obavijesti, uključujući osobne podatke kao što su imena kontakata i tekst poruka koje primate. Moći će i odbacivati obavijesti ili pokretati gumbe za radnje koje obavijesti sadrže.\n\nAplikacija će također moći uključiti ili isključiti značajku Ne uznemiravaj i promijeniti povezane postavke."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako isključite pristup obavijestima za <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, možda će se isključiti i pristup značajci Ne uznemiravaj."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Odustani"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ove aplikacije negativno utječu na izvedbu sustava i onemogućeno im je izvođenje u pozadini.\nDajte aplikaciji prednost da biste omogućili njezinu upotrebu u pozadini i uklonili je s ovog popisa."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prednost aplikaciji"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS-ovi s dodatnom naplatom"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS-ovi s dodatnom naplatom mogu se dodatno naplaćivati i povećat će vaš račun. Ako nekoj aplikaciji date to dopuštenje, moći ćete slati SMS-ove s dodatnom naplatom pomoću te aplikacije."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Pristup upotrebi"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Pristup podacima o upotrebi omogućuje aplikaciji praćenje drugih aplikacija koje upotrebljavate i učestalosti njihove upotrebe, kao i praćenje mobilnog operatera, postavki jezika i ostalih pojedinosti."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Upravljanje Wi-Fijem"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Upravljanje Wi-Fijem omogućuje aplikaciji da uključuje ili isključuje Wi-Fi, traži Wi-Fi mreže i povezuje se s njima, dodaje ili uklanja mreže te pokreće lokalnu žarišnu točku."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Više"</string>

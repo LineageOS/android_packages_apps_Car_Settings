@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Kufikia arifa"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Ungependa kuiruhusu <xliff:g id="SERVICE">%1$s</xliff:g> ifikie arifa?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> itaweza kusoma arifa zote, ikiwa ni pamoja na taarifa binafsi kama vile majina ya anwani na SMS ambazo unapokea. Itaweza pia kuondoa arifa au kusababisha shughuli za vitufe vya vitendo vilivyomo.\n\nHii pia itaipa programu uwezo wa kuwasha au kuzima kipengele cha Usinisumbue na kubadilisha mipangilio inayohusiana nacho."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ukizima ufikiaji wa arifa katika <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, huenda hali hii pia ikazima ufikiaji wa kipengee cha Usinisumbue."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Zima"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Ghairi"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Programu hizi huathiri vibaya mfumo wa utendaji na zimezuiliwa kufanya kazi katika hali ya chinichini.\nIpe programu kipaumbele ili kuruhusu matumizi katika hali ya chinichini na uiondoe kwenye orodha hii."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Ipe programu kipaumbele"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS inayotozwa ada ya ziada"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Gharama ya huduma ya SMS zinazolipiwa itajumuishwa kwenye bili yako ya mtoa huduma. Ikiwa utaipa programu fulani ruhusa, utaweza kutuma SMS zinazolipiwa ukitumia programu hiyo."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Kufikia matumizi"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Ufikiaji wa matumizi huruhusu programu kufuatilia programu zingine unazotumia na mara ngapi unazitumia, pamoja na mtoa huduma, mipangilio ya lugha na maelezo yako mengine."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Kudhibiti Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kidhibiti cha Wi-Fi huruhusu programu iwashe au izime Wi-Fi, itafute na iunganishe kwenye mitandao ya Wi-Fi, iongeze au iondoe mitandao au ianzishe mtandaopepe wa eneo mahususi."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Zaidi"</string>

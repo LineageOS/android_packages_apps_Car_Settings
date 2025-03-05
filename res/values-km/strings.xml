@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"ការចូលប្រើ​ការជូនដំណឹង"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"អនុញ្ញាតឱ្យចូល​ប្រើការជូនដំណឹង​សម្រាប់ <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> នឹងអាច​អាន​ការជូនដំណឹង​ទាំងអស់ រួមទាំង​ព័ត៌មានផ្ទាល់ខ្លួន​ដូចជា ​ឈ្មោះទំនាក់ទំនង និងសារជាអក្សរ​ដែលអ្នក​ទទួលបាន​ជាដើម។ វា​ក៏នឹងអាច​ច្រានចោល​ការជូនដំណឹង ឬ​ចាប់ផ្តើម​ប៊ូតុង​សកម្មភាព​ដែលវាមាន​ផងដែរ។\n\nសកម្មភាពនេះក៏នឹង​អាចឱ្យ​កម្មវិធី​បើក ឬ​បិទ​មុខងារកុំរំខាន ​និងប្ដូរ​ការកំណត់​ដែលពាក់ព័ន្ធ​បានផងដែរ។"</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ប្រសិនបើ​អ្នកបិទ​ការចូលប្រើ​ការជូនដំណឹង​សម្រាប់ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> នោះការចូលប្រើ​មុខងារកុំរំខាន​ក៏​ត្រូវបាន​បិទ​ផងដែរ។"</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"បិទ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"បោះបង់"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"កម្មវិធីទាំងនេះប៉ះពាល់ជាអវិជ្ជមានដល់ប្រតិបត្តិការរបស់ប្រព័ន្ធ និងត្រូវបានទប់ស្កាត់មិនឱ្យដំណើរការនៅផ្ទៃខាងក្រោយ។\nសូមកំណត់អាទិភាពកម្មវិធី ដើម្បីអាចឱ្យមានការប្រើប្រាស់នៅផ្ទៃខាងក្រោយ និងដកកម្មវិធីនោះចេញពីបញ្ជីនេះ។"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"កំណត់អាទិភាពកម្មវិធី"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS លំដាប់ខ្ពស់"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"សេវាកម្ម SMS បង់ប្រាក់​អាចនឹងគិតថ្លៃពីអ្នក ហើយបញ្ចូលតម្លៃនោះ​ទៅក្នុងការគិតថ្លៃតាម​ក្រុមហ៊ុនសេវាទូរសព្ទ​របស់អ្នក។ ប្រសិនបើ​អ្នកបើកការអនុញ្ញាតសម្រាប់កម្មវិធី នោះអ្នកនឹង​អាចផ្ញើសេវាកម្ម SMS បង់ប្រាក់​ដោយប្រើកម្មវិធីនោះ។"</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"ការចូល​ប្រើប្រាស់"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"ការចូល​ប្រើប្រាស់​អនុញ្ញាតឱ្យ​កម្មវិធី​តាមដាន​កម្មវិធី​ផ្សេងទៀត​ដែលអ្នកកំពុងប្រើ និងប្រើប្រាស់​ញឹកញាប់​កម្រិតណា ហើយ​វា​ក៏តាមដាន​ក្រុមហ៊ុនសេវាទូរសព្ទ ការកំណត់ភាសា និងព័ត៌មាន​លម្អិត​ផ្សេងទៀត​របស់អ្នក​ផងដែរ។"</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"ការ​គ្រប់គ្រង Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ការ​គ្រប់គ្រង Wi-Fi អនុញ្ញាតឱ្យ​កម្មវិធីបើក ឬបិទ Wi-Fi ស្កេន និងភ្ជាប់បណ្តាញ Wi-Fi បញ្ចូល ឬលុប​បណ្តាញ ឬចាប់ផ្តើម​តែហតស្ប៉ត​មូលដ្ឋាន​ប៉ុណ្ណោះ។"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ច្រើន​ទៀត"</string>

@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"सूचना अ‍ॅक्सेस"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ला सूचना अ‍ॅक्सेस करण्याची अनुमती द्यायची का?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"संपर्क नावे आणि तुम्हाला येणारे एसएमएस यासारख्या वैयक्तिक माहितीच्या समावेशासह <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सर्व सूचना पाहू शकेल. ते त्यांच्यामधील सूचना डिसमिस करू शकेल अथवा त्यामध्ये असलेली अ‍ॅक्शन बटणे ट्रिगर करू शकेल. \n\nयामुळे ॲपला व्यत्यय आणू नका सुरू किंवा बंद करता येईल आणि संबंधित सेटिंग्ज बदलता येतील."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ॲपसाठी सूचना अ‍ॅक्सेस बंद केल्यास, व्यत्यय आणू नका चा अ‍ॅक्सेस देखील बंद केला जाऊ शकतो."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"बंद करा"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द करा"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ही अ‍ॅप्स सिस्टीमच्या परफॉर्मन्सवर नकारात्मक परिणाम करतात आणि त्यांना बॅकग्राउंडमध्ये रन करण्यापासून प्रतिबंधित केले आहे.\nबॅकग्राउंडचा वापर सुरू ठेवण्यासाठी ते या सूचीमधून काढून टाकण्यासाठी अ‍ॅपला प्राधान्य द्या."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ॲपला प्राधान्य द्या"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"प्रीमियम एसएमएस"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रीमियम SMS मुळे तुम्हाला कदाचित शुल्क लागू होतील आणि तुमच्या कॅरियर बिलमध्ये जोडले जातील. तुम्ही अ‍ॅपसाठी परवानगी सुरू केल्यास, तुम्ही ते अ‍ॅप वापरून प्रीमियम SMS पाठवू शकता."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"वापर अ‍ॅक्सेस"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"तुम्ही इतर अ‍ॅप्स किती वारंवार वापरत आहात, तसेच तुमचे वाहक, भाषा सेटिंग्ज आणि इतर तपशील यांचा मागोवा घेण्‍याची वापर अ‍ॅक्सेस अ‍ॅपला अनुमती देतो."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"वाय-फाय नियंत्रण"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"वाय-फाय नियंत्रण ॲपला वाय-फाय सुरू किंवा बंद करण्याची, वाय-फाय नेटवर्क स्कॅन आणि त्याच्याशी कनेक्ट करण्याची, नेटवर्क जोडण्याची किंवा काढण्याची किंवा फक्त स्थानिक हॉटस्पॉट सुरू करण्याची अनुमती देते."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"आणखी"</string>

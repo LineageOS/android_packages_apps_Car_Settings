@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Bildiriş girişi"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> üçün bildiriş girişinə icazə verilsin?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kontakt adları və aldığınız mesajların mətni kimi şəxsi məlumatlar daxil olmaqla, bütün bildirişləri oxuya biləcək. Həmçinin, bildirişləri buraxa və ya onlara daxil olan əməliyyat düymələrini işə sala biləcək.\n\nBu, həmçinin tətbiqə Narahat Etməyin funksiyasını aktiv və ya deaktiv etmək və əlaqədar ayarları dəyişmək imkanı verəcək."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> üçün bildiriş girişini deaktiv etsəniz, Narahat Etməyin girişi də deaktiv edilə bilər."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Deaktiv edin"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Ləğv edin"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Bu tətbiqlər sistemin performansına mənfi təsir göstərir və onların arxa fonda işləməsinin qarşısı alınıb.\nArxa fonda istifadəyə icazə vermək üçün tətbiqi prioritetləşdirin və onu bu siyahıdan silin."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Tətbiqi prioritetləşdirin"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMS müəyyən məbləğ tuta bilər və mobil operator fakturasına əlavə oluna bilər. Tətbiq üçün icazəni aktiv etsəniz, həmin tətbiqdən istifadə edərək, Premium SMS göndərə biləcəksiniz."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"İstifadə girişi"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"İstifadə girişi işlədilən tətbiqləri və müntəzəmliyi izləyir, operatoru, dili və digər parametrləri müəyyən edir."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi idarəetməsi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi idarəetməsi tətbiqə Wi-Fi şəbəkəsini aktiv və ya deaktiv etmək, Wi-Fi şəbəkələrini skan etmək və onlara qoşulmaq, şəbəkə əlavə etmək və ya silmək, yaxud yalnız lokal olan hotspota qoşulmaq imkanı verir."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Daha çox"</string>

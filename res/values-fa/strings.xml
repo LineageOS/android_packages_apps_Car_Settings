@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"دسترسی به اعلان"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"دسترسی به اعلان برای <xliff:g id="SERVICE">%1$s</xliff:g> مجاز شود؟"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> می‌تواند همه اعلان‌ها را بخواند، ازجمله اطلاعات شخصی مانند نام مخاطبین و پیام‌های نوشتاری که دریافت می‌کنید. همچنین می‌تواند اعلان‌ها را رد کند یا دکمه عمل آن‌ها را فعال کند. \n\nهمچنین به این برنامه توانایی روشن یا خاموش کردن «مزاحم نشوید» و تغییر تنظیمات مربوطه را می‌دهد."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"اگر دسترسی به اعلان را برای <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> خاموش کنید، ممکن است دسترسی به «مزاحم نشوید» هم خاموش شود."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"خاموش کردن"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"لغو"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"این برنامه‌ها تأثیری منفی بر عملکرد سیستم دارند و اجرای آن‌ها در پس‌زمینه متوقف شده است.\nبرای اینکه به برنامه اجازه دهید در پس‌زمینه اجرا شود آن را در اولویت قرار دهید و از این فهرست بردارید."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"اولویت‌بندی برنامه"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"پیامک ویژه"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ممکن است استفاده از «پیامک ممتاز» برای شما هزینه داشته باشد و مبلغ صورت‌حساب‌های شرکت مخابراتی‌تان را افزایش دهد. اگر مجوز را برای برنامه‌ای فعال کنید، می‌توانید با استفاده از آن برنامه پیامک ممتاز ارسال کنید."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"دسترسی به داده‌های مصرف"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"دسترسی به داده‌های مصرف، امکان ردیابی اینکه از چه برنامه‌های دیگری و چند وقت یک‌بار استفاده می‌کنید و همچنین شرکت مخابراتی‌تان، تنظیمات زبان و سایر جزئیات را به برنامه می‌دهد."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"کنترل Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"کنترل Wi-Fi به برنامه‌ اجازه می‌دهد Wi-Fi را روشن یا خاموش کند، شبکه‌های Wi-Fi را اسکن کند و به آن‌ها متصل شود، شبکه‌ها را اضافه یا حذف کند یا نقطه اتصالی فقط محلی راه‌اندازی کند."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"بیشتر"</string>

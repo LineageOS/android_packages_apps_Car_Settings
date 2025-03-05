@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"알림 액세스"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>의 알림 액세스를 허용하시겠습니까?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>에서 연락처 이름과 수신 메시지 텍스트 등 개인정보를 포함한 모든 알림을 읽을 수 있게 됩니다. 또한 알림을 삭제하거나 포함된 작업 버튼을 실행하며 \n\n앱에서 방해 금지 모드를 사용 또는 사용 중지하고 관련 설정을 변경할 수도 있습니다."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>에서 알림 액세스를 사용 중지하면 방해 금지 모드 액세스도 사용 중지됩니다."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"끄기"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"취소"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"시스템 성능에 부정적인 영향을 미쳐 백그라운드 실행이 차단된 앱입니다.\n앱 우선순위를 지정하여 백그라운드 사용을 허용하고 이 목록에서 삭제하세요."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"앱 우선순위 지정"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"프리미엄 SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"프리미엄 SMS는 요금이 부과될 수 있으며 이는 이동통신사 요금에 추가됩니다. 앱에 권한을 부여하면 해당 앱을 사용하여 프리미엄 SMS를 사용할 수 있게 됩니다."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"사용 기록에 액세스"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"앱에서 사용 기록에 액세스하도록 허용하면 사용 중인 다른 앱의 종류와 사용 빈도, 이동통신사, 언어 설정, 기타 세부정보를 추적할 수 있게 됩니다."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi 제어"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi 제어를 사용하면 앱에서 Wi-Fi를 사용 또는 사용 중지하고, Wi-Fi 네트워크를 검색 및 연결하고, 네트워크를 추가 또는 제거하며, 로컬 전용 핫스팟을 시작하도록 허용합니다."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"더보기"</string>

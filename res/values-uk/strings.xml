@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Доступ до сповіщень"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Надати додатку <xliff:g id="SERVICE">%1$s</xliff:g> доступ до сповіщень?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> зможе переглядати всі сповіщення, зокрема з особистою інформацією, як-от іменами контактів і текстами отриманих повідомлень, а також відхиляти сповіщення або активувати в них командні кнопки.\n\nДодаток зможе вмикати й вимикати режим \"Не турбувати\" та змінювати пов’язані з ним налаштування."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Якщо вимкнути доступ додатка <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> до сповіщень, доступ до режиму \"Не турбувати\" також буде вимкнено."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Вимкнути"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Скасувати"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ці додатки негативно впливають на продуктивність системи, тому їх роботу у фоновому режимі заблоковано.\nНадайте додатку пріоритет, щоб дозволити його використання у фоновому режимі й вилучити з цього списку."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Надати пріоритет"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Платні SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Кошти за платні SMS стягує оператор. Ви зможете надсилати платні SMS у додатку, якому надасте такий дозвіл."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Доступ до історії використання"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Завдяки доступу до історії використання додаток може відстежувати, які інші додатки ви використовуєте і як часто, а також визначати назву вашого оператора, налаштування мови й інші відомості."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Керування Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Додаток із дозволом на керування Wi-Fi може вмикати й вимикати Wi-Fi, шукати, додавати й вилучати мережі, підключатися до них, а також запускати локальну точку доступу."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Більше"</string>

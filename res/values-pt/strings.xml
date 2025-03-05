@@ -429,15 +429,18 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permitir que <xliff:g id="SERVICE">%1$s</xliff:g> acesse as notificações?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> poderá ler todas as notificações, incluindo informações pessoais, como nomes de contato e o texto das mensagens que você recebe. Ele também poderá dispensar notificações ou ativar botões de ação que elas contenham.\n\nIsso também autoriza o app a ativar ou desativar o modo \"Não perturbe\" e alterar as configurações relacionadas."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se você desativar o acesso a notificações para <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o acesso \"Não perturbe\" também seja desativado."</string>
+    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
+    <skip />
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Esses apps prejudicam o desempenho do sistema e tiveram a execução em segundo plano impedida.\nPriorize o app para permitir o uso em segundo plano e o remover desta lista."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Priorizar app"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"O SMS premium pode gerar custos e será adicionado à sua conta da operadora. Se você conceder permissão para um app, será possível enviar SMS premium usando esse app."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Acesso ao uso"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"O acesso ao uso permite que um app monitore quais outros apps você está usando e com que frequência, bem como sua operadora, suas configurações de idioma e outros detalhes."</string>
+    <!-- no translation found for usage_access_title (2306113730908698218) -->
+    <skip />
+    <!-- no translation found for usage_access_description (7889884409739123407) -->
+    <skip />
     <string name="wifi_control_title" msgid="5660436566907731929">"Controle de Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"O controle de Wi-Fi permite que um app ative ou desative o Wi-Fi, verifique redes Wi-Fi e se conecte a elas, adicione ou remova redes, ou inicie um ponto de acesso somente local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mais"</string>
