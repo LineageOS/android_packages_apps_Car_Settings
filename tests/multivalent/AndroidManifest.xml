@@ -143,7 +143,7 @@
         <activity
             android:name="com.android.car.settings.testutils.TestSubSettingsActivity"
             android:theme="@style/CarSettingTheme"
-            android:windowSoftInputMode="adjustPan">/>
+            android:windowSoftInputMode="adjustPan">
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 

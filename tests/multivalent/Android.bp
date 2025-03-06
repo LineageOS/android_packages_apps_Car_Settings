@@ -22,6 +22,13 @@ android_robolectric_test {
     srcs: [
         "src/**/*.kt",
         // Goal is have `src/**/*.java` (i.e. all tests to work w/ Robolectric)
+        "src/**/applications/*.java",
+        "src/**/applications/appinfo/*.java",
+        "src/**/applications/assist/*.java",
+        "src/**/applications/defaultapps/*.java",
+        "src/**/applications/managedomainurls/*.java",
+        "src/**/applications/performance/*.java",
+        "src/**/applications/specialaccess/*.java",
         "src/**/profiles/AddProfilePreferenceControllerTest.java",
         "src/**/profiles/ChooseNewAdminPreferenceControllerTest.java",
         "src/**/profiles/DemoProfileDialogHandlerTest.java",
@@ -33,7 +40,6 @@ android_robolectric_test {
         "src/**/AccountGroupPreferenceControllerTest.java",
         "src/**/AddMobileNetworkPreferenceControllerTest.java",
         "src/**/AddProfilePreferenceControllerTest.java",
-        "src/**/AllAppsPreferenceControllerTest.java",
         "src/**/BluetoothStateSwitchPreferenceControllerTest.java",
         "src/**/CellularFallbackTogglePreferenceControllerTest.java",
         "src/**/ChooseLockTypePreferenceControllerTest.java",
@@ -43,8 +49,6 @@ android_robolectric_test {
         "src/**/DataUsageSummaryPreferenceControllerTest.java",
         "src/**/DataWarningPreferenceControllerTest.java",
         "src/**/DatePickerPreferenceControllerTest.java",
-        "src/**/DefaultAssistantPickerEntryPreferenceControllerTest.java",
-        "src/**/DomainUrlsUtilsTest.java",
         "src/**/KeyboardManagementPreferenceControllerTest.java",
         // "src/**/LanguageBasePreferenceControllerTest.java",
         "src/**/LegalPreferenceControllerTest.java",
@@ -57,11 +61,8 @@ android_robolectric_test {
         "src/**/MediaVolumeSliderWorkerTest.java",
         "src/**/MicTogglePreferenceControllerTest.java",
         "src/**/MicrophoneRecentAccessViewAllPreferenceControllerTest.java",
-        "src/**/MoreSpecialAccessPreferenceControllerTest.java",
-        "src/**/NotificationsPreferenceControllerTest.java",
         "src/**/PreferenceControllerTest.java",
         "src/**/ProfileDetailsActionButtonsPreferenceControllerTest.java",
-        "src/**/RecentAppsViewAllPreferenceControllerTest.java",
         "src/**/ResetNetworkEntryPreferenceControllerTest.java",
         "src/**/SettingsQCRegistryTest.java",
         "src/**/StorageApplicationActionButtonsPreferenceControllerTest.java",
@@ -119,6 +120,23 @@ android_robolectric_test {
         "src/**/TextDrawable.java",
         "src/**/WifiDetailsBasePreferenceControllerTestCase.java",
         ":CarSettingsShadows-srcs",
+    ],
+    exclude_srcs: [
+        // TODO(b/394651425): include after addressing static dependency.
+        "src/**/applications/PrioritizeAppPerformancePreferenceControllerTest.java",
+        "src/**/applications/assist/DefaultVoiceInputPickerEntryPreferenceControllerTest.java",
+        "src/**/applications/assist/DefaultVoiceInputPickerPreferenceControllerTest.java",
+        "src/**/applications/performance/PerfImpactingAppsPreferenceControllerTest.java",
+        "src/**/applications/specialaccess/AppStateAppOpsBridgeTest.java",
+        "src/**/applications/managedomainurls/ClearDefaultsPreferenceControllerTest.java",
+        "src/**/applications/managedomainurls/DomainUrlsPreferenceControllerTest.java",
+        "src/**/applications/performance/PerfImpactingAppsItemManagerTest.java",
+        // TODO(b/401066343): include after fix.
+        "src/**/applications/assist/ScreenshotContextPreferenceControllerTest.java",
+        // TODO(b/401066270): include after fix.
+        "src/**/applications/assist/TextContextPreferenceControllerTest.java",
+        // TODO(b/401072792): include after fix.
+        "src/**/applications/specialaccess/AppOpsPreferenceControllerTest.java",
     ],
     libs: [
         "android.car.test.utils",
