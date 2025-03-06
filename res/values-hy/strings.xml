@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Ծանուցումների հասանելիություն"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Հասանելի դարձնե՞լ ծանուցումները <xliff:g id="SERVICE">%1$s</xliff:g> հավելվածին"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> հավելվածը կկարողանա կարդալ բոլոր ծանուցումները, ներառյալ անձնական տվյալները, օրինակ, կոնտակտների անուններն ու հաղորդագրությունները: Այն նաև կկարողանա փակել ծանուցումները և ակտիվացնել դրանցում պարունակվող գործողությունների կոճակները:\n\nՀավելվածին նաև կտրվի «Չանհանգստացնել» գործառույթը միացնելու/անջատելու և դրա կարգավորումները փոխելու թույլտվություն:"</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Եթե անջատեք ծանուցումների հասանելիությունը <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> օգտատիրոջ համար, «Չանհանգստացնել» գործառույթը նույնպես կարող է անջատվել։"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Անջատել"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Չեղարկել"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Այս հավելվածները բացասաբար են անդրադառնում համակարգի արտադրողականության վրա, ուստի դրանց աշխատանքը ֆոնային ռեժիմում արգելափակվել է։\nԱռաջնահերթություն տվեք հավելվածին, որպեսզի թույլատրվի ֆոնային օգտագործումը, և հեռացրեք հավելվածն այս ցանկից։"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Դարձնել առաջնահերթ"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Վճարովի SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Վճարովի SMS-ները կարող են լրացուցիչ գանձումներ առաջացնել: Հավելվածին թույլտվություն տալու դեպքում կկարողանաք դրա միջոցով վճարովի SMS-ներ ուղարկել։"</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Հավելվածի օգտագործման տվյալներ"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Օգտագործման տվյալների հասանելիությունը հնարավորություն է տալիս հավելվածներին հավաքել տարբեր տեղեկություններ, օրինակ, այն մասին, թե ուրիշ ինչ հավելվածներ եք օգտագործում և ինչ հաճախականությամբ, որ օպերատորից եք օգտվում, լեզվի ինչ կարգավորումներ եք սահմանել և այլն։"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-ի կառավար"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-ի կառավարը հնարավորություն է տալիս հավելվածներին միացնել և անջատել Wi-Fi-ը, գտնել Wi-Fi ցանցեր և միանալ դրանց, ավելացնել և հեռացնել ցանցեր, միացնել միայն լոկալ թեժ կետ:"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Լրացուցիչ կարգավորումներ"</string>

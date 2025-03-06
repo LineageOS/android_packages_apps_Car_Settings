@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Acces la notificări"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permiți accesul la notificări pentru <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> va putea să citească toate notificările, inclusiv informațiile cu caracter personal, cum ar fi numele persoanelor de contact și textul mesajelor primite. De asemenea, va putea să închidă notificări sau să declanșeze butoane pentru acțiuni din acestea.\n\nAstfel, aplicația va putea să activeze sau să dezactiveze starea Nu deranja și să modifice setările aferente."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Dacă dezactivezi accesul la notificări pentru <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, este posibil să fie dezactivată și comanda Nu deranja."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Dezactivează"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulează"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aceste aplicații afectează negativ performanța sistemului și nu s-a permis rularea lor în fundal.\nPrioritizează aplicația pentru a permite folosirea în fundal și elimin-o din listă."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritizează aplicația"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS-urile premium pot genera costuri care se vor adăuga la factura operatorului. Dacă activezi permisiunea pentru o aplicație, vei putea trimite SMS-uri premium folosind acea aplicație."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Date privind utilizarea aplicațiilor"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Accesul la toate datele privind utilizarea aplicațiilor permite unei aplicații să înregistreze ce alte aplicații folosești și cât de des le folosești, precum și operatorul, setările de limbă și alte detalii."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Cu controlul rețelei Wi-Fi, o aplicație poate să activeze sau să dezactiveze conexiunea Wi-Fi, să scaneze și să se conecteze la rețelele Wi-Fi, să adauge sau să elimine rețele sau să pornească un hotspot local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mai multe"</string>

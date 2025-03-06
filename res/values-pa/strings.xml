@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"ਸੂਚਨਾ ਪਹੁੰਚ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"ਕੀ <xliff:g id="SERVICE">%1$s</xliff:g> ਨੂੰ ਸੂਚਨਾ ਪਹੁੰਚ ਦੇਣੀ ਹੈ?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ਵੱਲੋਂ ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਨੂੰ ਪੜ੍ਹਿਆ ਜਾ ਸਕੇਗਾ ਜਿਸ ਵਿੱਚ ਸੰਪਰਕ ਨਾਮ ਅਤੇ ਤੁਹਾਨੂੰ ਪ੍ਰਾਪਤ ਹੋਣ ਵਾਲੇ ਲਿਖਤ ਸੁਨੇਹਿਆਂ ਵਰਗੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਸ਼ਾਮਲ ਹੁੰਦੀ ਹੈ। ਇਹ ਸੂਚਨਾਵਾਂ ਨੂੰ ਖਾਰਜ ਕਰਨ ਜਾਂ ਉਸ ਵਿੱਚ ਸ਼ਾਮਲ ਕਾਰਵਾਈ ਬਟਨਾਂ ਨੂੰ ਟ੍ਰਿਗਰ ਵੀ ਕਰ ਸਕੇਗੀ। \n\nਇਹ ਐਪ ਨੂੰ \'ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ\' ਨੂੰ ਬੰਦ ਜਾਂ ਚਾਲੂ ਕਰਨ ਅਤੇ ਸੰਬੰਧਿਤ ਸੈਟਿੰਗਾਂ ਨੂੰ ਬਦਲਣ ਦੀ ਸਮਰੱਥਾ ਵੀ ਦੇਵੇਗੀ।"</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"ਜੇ ਤੁਸੀਂ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ਲਈ ਸੂਚਨਾ ਪਹੁੰਚ ਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ \'ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ\' ਕੰਟਰੋਲ ਵੀ ਬੰਦ ਹੋ ਸਕਦਾ ਹੈ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ਬੰਦ ਕਰੋ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ਰੱਦ ਕਰੋ"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ਇਹ ਐਪਾਂ ਸਿਸਟਮ ਦੀ ਕਾਰਗੁਜ਼ਾਰੀ ਨੂੰ ਨਕਾਰਾਤਮਕ ਤਰੀਕੇ ਨਾਲ ਪ੍ਰਭਾਵਿਤ ਕਰਦੀਆਂ ਹਨ ਅਤੇ ਐਪ ਨੂੰ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਚੱਲਣ ਤੋਂ ਰੋਕਿਆ ਗਿਆ ਹੈ।\nਬੈਕਗ੍ਰਾਊਂਡ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਆਗਿਆ ਦੇਣ ਲਈ ਐਪ ਨੂੰ ਤਰਜੀਹ ਦਿਓ ਅਤੇ ਇਸਨੂੰ ਇਸ ਸੂਚੀ ਵਿੱਚੋਂ ਹਟਾਓ।"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ਐਪ ਨੂੰ ਤਰਜੀਹ ਦਿਓ"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"ਪ੍ਰੀਮੀਅਮ SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ਪ੍ਰੀਮੀਅਮ SMS ਦਾ ਤੁਹਾਡੇ ਤੋਂ ਖਰਚਾ ਲਿਆ ਜਾ ਸਕਦਾ ਹੈ ਅਤੇ ਇਸ ਨਾਲ ਤੁਹਾਡੇ ਕੈਰੀਅਰ ਬਿੱਲਾਂ ਵਿੱਚ ਵਾਧਾ ਹੋ ਜਾਵੇਗਾ। ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਐਪ ਨੂੰ ਇਜਾਜ਼ਤ ਦਿੰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਉਸ ਐਪ ਦੀ ਵਰਤੋਂ ਨਾਲ ਪ੍ਰੀਮੀਅਮ SMS ਭੇਜਣ ਦੇ ਯੋਗ ਹੋ ਜਾਵੋਗੇ।"</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"ਐਪ ਵਰਤੋਂ ਡਾਟਾ"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"ਐਪ ਵਰਤੋਂ ਦੇ ਸਾਰੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਦੇਣ ਨਾਲ ਕਿਸੇ ਐਪ ਨੂੰ ਤੁਹਾਡੇ ਵੱਲੋਂ ਵਰਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹੋਰ ਐਪਾਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦੀ ਵਾਰਵਾਰਤਾ ਨੂੰ ਅਤੇ ਨਾਲ ਹੀ ਤੁਹਾਡੇ ਕੈਰੀਅਰ, ਭਾਸ਼ਾ ਸੰਬੰਧੀ ਸੈਟਿੰਗਾਂ, ਅਤੇ ਹੋਰ ਵੇਰਵਿਆਂ ਨੂੰ ਟਰੈਕ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ।"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ਵਾਈ‑ਫਾਈ ਕੰਟਰੋਲ"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ਵਾਈ-ਫਾਈ ਕੰਟਰੋਲ ਰਾਹੀਂ ਕੋਈ ਐਪ ਵਾਈ-ਫਾਈ ਚਾਲੂ ਜਾਂ ਬੰਦ ਕਰ ਸਕਦੀ ਹੈ, ਵਾਈ-ਫਾਈ ਨੈੱਟਵਰਕਾਂ ਨੂੰ ਸਕੈਨ ਅਤੇ ਉਹਨਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰ ਸਕਦੀ ਹੈ, ਨੈੱਟਵਰਕਾਂ ਨੂੰ ਸ਼ਾਮਲ ਕਰ ਜਾਂ ਹਟਾ ਸਕਦੀ ਹੈ, ਜਾਂ ਸਿਰਫ਼-ਸਥਾਨਕ ਹੌਟਸਪੌਟ ਸ਼ੁਰੂ ਕਰ ਸਕਦੀ ਹੈ।"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ਹੋਰ"</string>

@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"通知へのアクセス"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"通知へのアクセス を <xliff:g id="SERVICE">%1$s</xliff:g> に許可しますか？"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> がすべての通知を読み取れるようになります。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内の操作ボタンをタップしたりすることも許可されます。\n\nこれにより、アプリがサイレント モード設定を切り替えたり、関連する設定を変更したりすることも可能になります。"</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> の通知アクセスを OFF にすると、サイレント モードの管理機能も OFF になります。"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"無効にする"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"キャンセル"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"これらのアプリはシステムのパフォーマンス低下の要因となっていますが、バックグラウンドでの実行が許可されていません。\nアプリをバックグラウンドで使用できるようにし、このリストから除外するには、優先アプリとして指定してください。"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"優先アプリとして指定する"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"プレミアム SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"プレミアム SMS で料金が発生した場合は、携帯通信会社の請求に加算されます。アプリで権限を有効にすると、そのアプリを使用してプレミアム SMS を送信できるようになります。"</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"アプリの使用状況データ"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"すべてのアプリの使用状況データへのアクセスを許可すると、アプリは他のアプリの使用状況、使用頻度、携帯通信会社、言語設定などの情報を追跡できるようになります。"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi の管理"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"「Wi-Fi の管理」により、アプリは Wi-Fi のオン / オフ切り替え、Wi-Fi ネットワークのスキャンと接続、ネットワークの追加と削除、ローカル専用アクセス ポイントの起動を行えるようになります。"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"その他"</string>

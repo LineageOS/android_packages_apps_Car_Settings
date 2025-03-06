@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Accesso alle notifiche"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Consentire l\'accesso alle notifiche a <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> potrà leggere tutte le notifiche, incluse le informazioni personali quali i nomi dei contatti e il testo dei messaggi ricevuti. Potrà inoltre ignorare le notifiche o attivare i pulsanti di azione inclusi. \n\nL\'app potrà anche attivare o disattivare la funzione Non disturbare e modificare le relative impostazioni."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Se disattivi l\'accesso alle notifiche per <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, potrebbe essere disattivato anche il controllo della funzionalità Non disturbare."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Disattiva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annulla"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Queste app influiscono negativamente sulle prestazioni del sistema ed è stato impedito il loro funzionamento in background.\nDai priorità all\'app per consentire l\'uso in background e rimuoverla da questo elenco."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Dai priorità all\'app"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Gli SMS premium potrebbero comportare costi, che verranno aggiunti alle fatture del tuo operatore. Se attivi l\'autorizzazione per un\'app, potrai utilizzare tale app per inviare SMS premium."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Dati sull\'utilizzo delle app"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"L\'accesso a tutti i dati sull\'utilizzo delle app consente a un\'app di monitorare quali altre app utilizzi e con quale frequenza, oltre a informazioni come operatore, lingua impostata e altri dettagli."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Controllo del Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Controllo del Wi-Fi consente a un\'app di attivare o disattivare il Wi-Fi, cercare e connettersi a reti Wi-Fi, aggiungere e rimuovere reti oppure avviare un hotspot solo locale."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Altro"</string>

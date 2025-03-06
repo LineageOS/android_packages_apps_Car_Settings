@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"નોટિફિકેશનનો ઍક્સેસ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> માટે નોટિફિકેશનના ઍક્સેસની મંજૂરી આપીએ?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, સંપર્ક નામ અને તમને મળતા સંદેશાની ટેક્સ્ટ જેવી વ્યક્તિગત માહિતી સહિત બધા નોટિફિકેશન વાંચી શકશે. તે આ નોટિફિકેશનને છોડી દઈ શકશે અથવા તેમાં રહેલા ક્રિયા બટનને શરૂ પણ કરી શકશે.\n\nઆ ખલેલ પાડશો નહીંને ચાલુ કે બંધ કરવાની તથા સંબંધિત સેટિંગ બદલવાની ક્ષમતા પણ ઍપને આપશે."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"જો તમે <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> માટે નોટિફિકેશન ઍક્સેસને બંધ કરો છો, તો \"ખલેલ પાડશો નહીં\"નું નિયંત્રણ પણ બંધ કરવામાં આવી શકે છે."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"બંધ કરો"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"રદ કરો"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"આ ઍપ સિસ્ટમના કાર્યપ્રદર્શન પર નકારાત્મક અસર કરે છે અને તેથી તેને બૅકગ્રાઉન્ડમાં ચાલતા અટકાવવામાં આવી છે.\nઍપનો ઉપયોગ બૅકગ્રાઉન્ડમાં ચલાવવા માટે કરવામાં આવે તેની મંજૂરી આપવા, તેને પ્રાધાન્યતા આપો અને આ સૂચિમાંથી તેને કાઢી નાખો."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ઍપને પ્રાધાન્યતા આપો"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"પ્રીમિયમ SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"તમને પ્રીમિયમ SMS માટે શુલ્ક લાગી શકે છે અને તે તમારા કૅરિઅર બિલમાં ઉમેરવામાં આવશે. જો તમે કોઇ ઍપ માટે પરવાનગી ચાલુ કરો છો, તો તમે તે ઍપનો ઉપયોગ કરીને પ્રીમિયમ SMS મોકલી શકશો."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"ઍપ વપરાશનો ડેટા"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"ઍપ વપરાશના ડેટાનો ઍક્સેસ કોઈ ઍપને તમે કઈ અન્ય ઍપ અને કેટલીવાર ઉપયોગ કરી રહ્યાં છો તેમજ તમારા મોબાઇલ ઑપરેટર, ભાષા સેટિંગ અને અન્ય વિગતોને ટ્રૅક કરવાની મંજૂરી આપે છે."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"વાઇ-ફાઇ નિયંત્રણ"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"વાઇ-ફાઇ નિયંત્રણ ઍપને વાઇ-ફાઇ ચાલુ અથવા બંધ કરવાની, વાઇ-ફાઇ નેટવર્કને સ્કૅન કરીને કનેક્ટ કરવાની, નેટવર્ક ઉમેરવાની કે કાઢી નાખવાની અથવા માત્ર-સ્થાનિક હૉટસ્પૉટ શરૂ કરવાની મંજૂરી આપે છે."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"વધુ"</string>

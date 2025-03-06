@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Ukufinyelela isaziso"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vumela ukufinyelela kwesaziso kwe-<xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"I-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> izokwazi ukufunda zonke izibuyekezo, ezifaka ulwazi lomuntu siqu olufana namagama woxhumana nabo kanye nombhalo wemilayezo oyitholayo. Izophinda ikwazi ukucashisa izaziso noma izinkinobho zesenzo sokuqalisa ezisiqukethe.\n\nLokhu kuzophinda kunikeze uhlelo lokusebenza ikhono lokuvula noma lokuvala okuthi Ungaphazamisi kuphinde kushintshe izilungiselelo ezihambisanayo."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Uma uvala ukufinyelela kwezaziso kwe-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, ukulawula okuthi Ungaphazamisi nakho kungavaleka."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Vala"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Khansela"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Lama-app anomthelela ongemuhle ekusebenzeni kwesistimu futhi avinjiwe ukuthi asebenze ngemuva.\nBeka kuqala i-app ukuze uvumele ukusebenza kwangemuva futhi uyisuse kulolu hlu."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Yenza kubaluleke i-app"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"IPremium SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"I-Premium SMS ingakwenzela izindleko zemali futhi izongeza kumabhili enkampani yenethiwekhi. Uma unika amandla imvume yohlelo lokusebenza, uzokwazi ukuthumela i-premium SMS usebenzisa lolo hlelo lokusebenza."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Idatha yokusetshenziswa kwe-app"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Ukufinyelela kukho konke ukusetshenziswa kwedatha ye-app kuvumela i-app ukuba ilandelele ukuthi yimaphi amanye ama-app owasebenzisayo nokuthi kaningi kangakanani, kanye nenkampani yakho yenethiwekhi, amasethingi olimi neminye imininingwane."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Ulawulo lwe-Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Isilawuli se-Wi-Fi sivumela uhlelo lokusebenza ukuthi luvule noma luvale i-Wi-Fi, luskene futhi luxhumeke kumanethiwekhi e-Wi-Fi, lungeze noma lususe amanethiwekhi, noma luqale i-hotspot yasendaweni kuphela."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Okuningi"</string>

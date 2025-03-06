@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Jakinarazpenetarako sarbidea"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> zerbitzuari jakinarazpenetarako sarbidea eman nahi diozu?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioak jakinarazpen guztiak irakurri ahal izango ditu, informazio pertsonala (adibidez, kontaktuen izenak eta jasotako testu-mezuak) dutenak barne. Horrez gain, jakinarazpenak baztertu eta haietako ekintza-botoiak abiarazi ahal izango ditu.\n\nGainera, ez molestatzeko modua aktibatzeko eta desaktibatzeko aukera izango du aplikazioak, baita horrekin erlazionatutako ezarpenak aldatzekoa ere."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioari jakinarazpenak atzitzeko aukera desaktibatzen badiozu, baliteke ez molestatzeko modua kontrolatzeko aukera ere desaktibatzea."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desaktibatu"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Utzi"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aplikazio hauek sistemaren errendimendua okertzen dute; horregatik, atzeko planoan exekutatzea galarazi zaie.\nAplikazio hauetakoren bat atzeko planoan erabili nahi baduzu, eman iezaiozu lehentasuna, eta zerrenda honetatik kenduko da."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Eman lehentasuna aplikazioari"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium SMSak"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMSak ordaindu egin behar izan ditzakezu eta, hala bada, operadorearen fakturan gehituko da haien kostua. Aplikazioei baimen hau ematen badiezu, premium SMSak bidaltzeko gai izango dira."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Aplikazioen erabilera-datuak"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Aplikazio guztien erabilera-datuak atzitzeak zer beste aplikazio eta zer maiztasunarekin erabiltzen dituzun jakiteko baimena ematen die aplikazioei, baita zer operadore duzun, zer hizkuntza-ezarpen dituzun eta beste xehetasun batzuk ere."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wifi-konexioa kontrolatzea"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wifi-konexioa kontrolatzeko aukerarekin, aplikazioak hauek egin ditzake: wifi-konexioa aktibatu edo desaktibatu, wifi-sareak bilatu eta haietara konektatu, sareak gehitu edo kendu, edota wifi-gune lokalak sortu."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Gehiago"</string>

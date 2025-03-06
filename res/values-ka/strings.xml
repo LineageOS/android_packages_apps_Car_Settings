@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"შეტყობინებებზე წვდომა"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"გსურთ, მიანიჭოთ <xliff:g id="SERVICE">%1$s</xliff:g>-ს შეტყობინებებზე წვდომა?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> შეძლებს ყველა შეტყობინების წაკითხვას, მათ შორის, ისეთი პირადი ინფორმაციის, როგორიცაა კონტაქტების სახელები და თქვენ მიერ მიღებული შეტყობინებების ტექსტი. მას ასევე შეეძლება შეტყობინებების უგულებელყოფა და იმ მოქმედების ღილაკების ამოქმედება, რომლებსაც ისინი შეიცავს.\n\n აპს „არ შემაწუხოთ“ რეჟიმის ჩართვის ან გამორთვის და დაკავშირებული პარამეტრების შეცვლის შესაძლებლობაც მიეცემა."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"თუ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-ს შეტყობინებებზე წვდომას გამოურთავთ, სავარაუდოდ, „არ შემაწუხოთ“ რეჟიმზე კონტროლიც გამოირთვება."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"გამორთვა"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"გაუქმება"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"ეს აპები უარყოფითად აისახება სისტემის მუშაობაზე და აკრძალულია ფონში გაშვება.\nმიანიჭეთ აპს პრიორიტეტი, რათა დაუშვათ ფონური გამოყენება და ამოშალოთ იგი ამ სიიდან."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"აპის პრიორიტეტიზაცია"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"პრემიუმ SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"პრემიუმ SMS შეტყობინებებისთვის შეიძლება დამატებითი საფასურის გადახდა მოგიწიოთ. აპისთვის ამ ნებართვის მიცემის შემთხვევაში, თქვენ მისი მეშვეობით პრემიუმ SMS შეტყობინებების გაგზავნას შეძლებთ."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"აპის გამოყენების მონაცემები"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"აპის გამოყენების ყველა მონაცემზე წვდომა აპს საშუალებას აძლევს, თვალყური ადევნოს, რომელ სხვა აპებს და რამდენად ხშირად იყენებთ, ასევე, თქვენს ოპერატორს, ენის პარამეტრებსა და სხვა დეტალებს."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-ს მართვა"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-ს მართვა საშუალებას აძლევს აპს, ჩართოს ან გამორთოს Wi-Fi, მოახდინოს სკანირება Wi-Fi ქსელების აღმოსაჩენად და მათთან დასაკავშირებლად, დაამატოს ან ამოშალოს ქსელები, ან გაუშვას მხოლოდ ადგილობრივი მოხმარების უსადენო ქსელი."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"მეტი"</string>

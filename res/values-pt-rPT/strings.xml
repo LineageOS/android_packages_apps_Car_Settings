@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"O serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> consegue ler todas as notificações, incluindo informações pessoais como nomes de contactos e o texto das mensagens recebidas. Também consegue ignorar notificações ou acionar botões de ação que estas contenham.\n\nDeste modo, a aplicação também pode ativar ou desativar o modo Não incomodar e alterar as definições relacionadas."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Se desativar o acesso às notificações para <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o controlo do modo Não incomodar seja igualmente desativado."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Estas apps afetam negativamente o desempenho do sistema e foram impedidas de funcionar em segundo plano.\nDê prioridade à app para permitir a utilização em segundo plano e remova-a da lista."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Dar prioridade à app"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"O serviço de SMS premium pode custar dinheiro e, nesse caso, será adicionado às faturas do seu operador. Se ativar a autorização para uma aplicação, poderá enviar SMS premium através da mesma."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Dados de utilização da app"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"O acesso a todos os dados de utilização da app permite que uma app monitorize que outras apps estão a ser usadas e com que frequência, bem como a operadora e as definições de idioma, entre outros detalhes."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Controlo de Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"O controlo de Wi-Fi permite a uma aplicação ativar ou desativar o Wi-Fi, procurar e estabelecer ligação a redes Wi-Fi, adicionar ou remover redes, assim como iniciar uma zona Wi-Fi apenas local."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Mais"</string>

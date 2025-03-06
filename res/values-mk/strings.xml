@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Пристап до известувања"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Да се дозволи пристап на <xliff:g id="SERVICE">%1$s</xliff:g> до известувањата?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ќе може да ги чита сите известувања, вклучувајќи лични информации, како што се имињата на контактите и текстот од пораките што ги добивате. Ќе може и да отфрла известувања или да активира копчиња за дејство што ги содржат.\n\nИсто така, ќе ѝ овозможи на апликацијата да го вклучува и исклучува „Не вознемирувај“ и да ги менува поврзаните поставки."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Ако го исклучите пристапот на <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> до известувањата, може да се исклучи и контролата на „Не вознемирувај“."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Исклучи"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Откажи"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Апликацииве негативно влијаат на изведбата на системот и спречени се да се извршуваат во заднина.\nДајте предност на апликација за да дозволите користење во заднина и отстранете ја од списоков."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Дајте предност на апликацијата"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Премиум SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Премиум SMS може да ве чини пари, а сумата ќе се додаде на сметките од операторот. Ако овозможите дозвола за апликацијата, ќе може да испраќате премиум SMS со неа."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Податоци за користење апликација"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Пристапот до сите податоци за користењето апликација овозможуваат апликацијата да следи кои други апликации ги користите и колку често, како и вашиот оператор, поставки за јазик и други детали."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Контрола на Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Контролата на Wi-Fi дозволува апликацијава да вклучува или исклучува Wi-Fi, да скенира и да се поврзува на Wi-Fi мрежи, да додава или отстранува мрежи или да стартува локална точка на пристап."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Повеќе"</string>
