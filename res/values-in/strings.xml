@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Akses notifikasi"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Izinkan akses notifikasi untuk <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> dapat membaca semua notifikasi, termasuk informasi pribadi seperti nama kontak dan SMS yang diterima. Ini juga dapat menutup notifikasi atau memicu tombol tindakan di dalamnya.\n\nIni juga dapat membuat aplikasi mengaktifkan atau menonaktifkan fitur Jangan Ganggu dan mengubah setelan terkait."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jika akses notifikasi untuk <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> dinonaktifkan, akses fitur Jangan Ganggu juga dapat dinonaktifkan."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Jika Anda menonaktifkan akses notifikasi untuk <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kontrol mode Jangan Ganggu mungkin juga akan dinonaktifkan."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Nonaktifkan"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Batal"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Aplikasi ini berdampak negatif pada performa sistem dan telah dihentikan agar tidak berjalan di latar belakang.\nPrioritaskan aplikasi untuk mengizinkan penggunaan di latar belakang dan menghapusnya dari daftar ini."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritaskan apl"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS Premium"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS Premium mungkin memerlukan biaya dan akan menambah tagihan operator. Jika izin aplikasi diaktifkan, Anda dapat mengirim SMS premium menggunakan aplikasi tersebut."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Akses penggunaan"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Akses penggunaan memungkinkan aplikasi melacak aplikasi lain yang Anda gunakan dan frekuensi penggunaannya, serta operator, setelan bahasa, dan detail lainnya."</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"Data penggunaan aplikasi"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Akses ke semua data penggunaan aplikasi memungkinkan aplikasi melacak aplikasi lain yang Anda gunakan serta seberapa sering Anda menggunakannya. Akses ini juga memungkinkan aplikasi melacak operator, setelan bahasa, dan detail lainnya."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kontrol Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontrol Wi-Fi memungkinkan aplikasi mengaktifkan atau menonaktifkan Wi-Fi, memindai dan menghubungkan ke jaringan Wi-Fi, menambahkan atau menghapus jaringan, atau memulai hotspot khusus lokal."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Lainnya"</string>

@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"通知存取權"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"要允許「<xliff:g id="SERVICE">%1$s</xliff:g>」存取通知嗎？"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"「<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>」將可讀取所有通知 (包括聯絡人姓名和你收到的訊息文字等個人資訊)，而且還能關閉通知或觸發通知當中的動作按鈕。\n\n此外，該應用程式將因此能夠開啟或關閉「零打擾」模式，以及變更相關設定。"</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"如果你停用「<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>」的通知存取權，「零打擾」模式的存取權可能會一併停用。"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"如果你停用「<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>」的通知存取權，「零打擾」模式控制項可能也會一併遭到停用。"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"關閉"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"這些應用程式會對系統效能造成負面影響，目前已禁止在背景執行。\n你可以將特定應用程式設為優先，允許該應用程式在背景執行，並將其從這份清單中移除。"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"將應用程式設為優先"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"付費簡訊"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"傳送付費簡訊必須另外付費，相關費用會併入電信費帳單。如果你為某個應用程式啟用權限，即可利用該應用程式傳送付費簡訊。"</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"用量資料存取權"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"具有使用存取權的應用程式可以追蹤你使用的其他應用程式與頻率，以及你的電信業者、語言設定等詳情。"</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"應用程式使用資料"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"能夠存取所有應用程式使用資料的應用程式，可以追蹤你使用的其他應用程式與使用頻率，以及你的電信業者、語言設定和其他詳細資料。"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi 控制"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"取得「Wi-Fi 控制」權限後，應用程式就能開啟或關閉 Wi-Fi、掃描及連上 Wi-Fi 網路、新增或移除網路，或啟動僅限區域網路的無線基地台。"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"更多"</string>

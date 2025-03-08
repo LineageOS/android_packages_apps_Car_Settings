@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"የማሳወቂያ መዳረሻ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"ለ<xliff:g id="SERVICE">%1$s</xliff:g> የማሳወቂያ መዳረሻ ይፈቀድለት?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> እንደ የእውቂያ ስሞች እና የሚቀበሏቸው የመልዕክቶች ጽሑፍም ያሉ የግል መረጃንም ጨምሮ ሁሉንም ማሳወቂያዎች ማንበብ ይችላል። እንዲሁም ማሳወቂያዎችን ማሰናበት ወይም ሊይዟቸው የሚችሏቸው የእርምጃ አዝራሮችን ሊቀሰቅሱ ይችላሉ።\n\nይሄ እንዲሁም መተግበሪያው «አትረብሽ»ን የማብራት ወይም የማጥፋት እና ተዛማጅ ቅንብሮችን የመቀየር ይችሎታ ይሰጠዋል።"</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"የ<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ማሳወቂያ መዳረሻን ካጠፉ የአትረብሽ መዳረሻ እንዲሁም ሊጠፋ ይችላል።"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"የ<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> የማሳወቂያ መዳረሻን ካጠፉ አትረብሽ ቁጥጥር እንዲሁ ሊጠፋ ይችላል።"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"አጥፋ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ተወው"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"እነዚህ መተግበሪያዎች በሥርዓት አፈጻጸም ላይ አሉታዊ ተጽዕኖ ያደርጋሉ እና በዳራ ከመሄድ የተከለከሉ ናቸው።\n የዳራ አጠቃቀምን ለመፍቀድ እና ከዚህ ዝርዝር እሱን ለማስወገድ ለመተግበሪያው ቅድሚያ ይስጡ።"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ለመተግበሪያ ቅድሚያ ስጥ"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"ፕሪሚየም ኤስኤምኤስ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ፕሪሚየም ኤስኤምኤስ ውድ ገንዘብ ሊያስወጣዎት ይችላል፣ እና በአገልግሎት አቅራቢ ክፍያዎ ላይ ሒሳብ ያስጨምርብዎታል። ለመተግበሪያ ፈቃድን ካነቁ ያንን መተግበሪያ በመጠቀም ፕሪሚየም ኤስኤምኤስ መላክ ይችላሉ።"</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"የአጠቃቀም መዳረሻ"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"የአጠቃቀም መዳረሻ አንድ መተግበሪያ የሚጠቀሟቸውን ሌሎች መተግበሪያዎች እና ምን ያህል ጊዜ እንደሚጠቀሙባቸው፣ እንዲሁም የአገልግሎት አቅራቢዎን፣ የቋንቋ ቅንብሮችዎን እና ሌሎች ዝርዝሮችዎን እንዲከታተል ያስችለዋል።"</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"የመተግበሪያ አጠቃቀም ውሂብ"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"ለሁሉም የመተግበሪያ አጠቃቀም ውሂብ መዳረሻ አንድ መተግበሪያ ምን ሌሎች መተግበሪያዎችን እና በምን ያህል ድግግሞሽ እየተጠቀሙ እንደሆነ፣ እንዲሁም የእርስዎን አገልግሎት አቅራቢ፣ የቋንቋ ቅንብሮች እና ሌሎች ዝርዝሮችን እንዲከታተል ያስችላል።"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"የWi-Fi ቁጥጥር"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi መቆጣጠሪያ አንድ መተግበሪያ Wi-Fiን እንዲያበራ ወይም እንዲያጠፋ፣ የWi-Fi አውታረ መረቦች እንዲቃኝ እና ከእነሱ ጋር እንዲገናኝ፣ አውታረ መረቦችን እንዲያክል ወይም እንዲያስወግድድ፣ ወይም የአካባቢ-ብቻ መገናኛ ነጥብን እንዲያስጀምርር ያስችለዋል።"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"ተጨማሪ"</string>
