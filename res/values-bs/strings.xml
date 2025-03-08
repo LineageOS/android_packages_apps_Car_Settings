@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Pristup obavještenjima"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Dozvoliti aplikaciji <xliff:g id="SERVICE">%1$s</xliff:g> pristup obavještenjima?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> će moći čitati sva obavještenja, uključujući lične informacije kao što su imena kontakata i tekst primljenih poruka. Također će moći odbaciti obavještenja ili koristiti dugmad za radnje u obavještenjima.\n\nTime će se aplikaciji dati i mogućnost da uključi i isključi način rada Ne ometaj te da promijeni postavke povezane s tom opcijom."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Ako aplikaciji <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> isključite pristup obavještenjima, upravljanje funkcijom Ne ometaj također će se možda isključiti."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Otkaži"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ove aplikacije negativno utiču na performanse sistema i njihov rad u pozadini je spriječen.\nDajte prioritet aplikaciji da dozvolite korištenje u pozadini i uklonite je s ovog spiska."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Daj prioritet aplik."</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Premijum SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Moguće je da se usluga slanja premium SMS-ova dodatno plaća, a trošak će se dodati na račun operatera. Ako aplikaciji date odobrenje, moći ćete slati premium SMS-ove putem te aplikacije."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Podaci o korištenju aplikacija"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Pristup svim podacima o korištenju aplikacija omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često i da ima uvid u vašeg operatera, postavke jezika i druge detalje."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Upravljanje WiFi-jem"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontroliranje WiFi mreže omogućava aplikaciji da uključi ili isključi WiFi, skenira i da se poveže na WiFi, doda ili ukloni mreže te pokrene lokalnu pristupnu tačku."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Više"</string>

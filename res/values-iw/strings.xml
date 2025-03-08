@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"גישה להתראות"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"האם להתיר ל-<xliff:g id="SERVICE">%1$s</xliff:g> לגשת אל התראות?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ל-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> תהיה אפשרות לקרוא את כל ההתראות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שמתקבלות. האפליקציה תוכל גם לבטל התראות או להפעיל כפתורי פעולה שהן כוללות.\n\nכמו כן, האפליקציה תוכל להפעיל או לכבות את התכונה \"נא לא להפריע\" ולשנות הגדרות קשורות."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"אם משביתים את הגישה של <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> להתראות, יכול להיות שגם השליטה בתכונה \"נא לא להפריע\" תושבת."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"כיבוי"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ביטול"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"האפליקציות האלה משפיעות לרעה על ביצועי המערכת ולכן הן נחסמו להפעלה ברקע.\nכדי לאפשר לאפליקציה לפעול ברקע יש לקבוע לה עדיפות ולהסיר אותה מהרשימה הזו."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"עדיפות לאפליקציה"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"‫SMS פרימיום"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"החיובים תמורת שליחה של הודעות SMS בתשלום, אם יהיו, יצורפו לחשבונות הספק שלך. לאחר שמפעילים את ההרשאה לאפליקציה כלשהי, ניתן לשלוח באמצעותה הודעות SMS בתשלום."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"נתוני השימוש באפליקציות"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"גישה לכל נתוני השימוש באפליקציות מאפשרת לאפליקציה לעקוב אחרי האפליקציות האחרות שמשתמשים בהן ואחרי תדירות השימוש בהן. המידע כולל גם את זהות הספק, הגדרות השפה ופרטים אחרים."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"שליטה ב-Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"שליטה ב-Wi-Fi מאפשרת לאפליקציות להפעיל ולכבות חיבור Wi-Fi, לסרוק רשתות Wi-Fi ולהתחבר אליהן, להוסיף ולהסיר רשתות או להפעיל נקודה לשיתוף אינטרנט באופן מקומי בלבד."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"עוד"</string>

@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Kennisgewingtoegang"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Laat kennisgewingtoegang vir <xliff:g id="SERVICE">%1$s</xliff:g> toe?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> sal alle kennisgewings kan lees, insluitend persoonlike inligting soos kontakname en die teks van boodskappe wat jy ontvang. Dit sal ook kennisgewings kan toemaak of aksieknoppies binne-in hulle kan aktiveer.\n\nDit sal die app ook die vermoë gee om Moenie Steur nie aan of af te skakel en verwante instellings te verander."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"As jy kennisgewingtoegang vir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> afskakel, kan die Moenie Steur Nie-kontrole dalk ook afgeskakel word."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Skakel af"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Kanselleer"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Hierdie apps het stelselwerkverrigting negatief beïnvloed en is verhoed om op die agtergrond te loop.\nPrioritiseer app om agtergrondgebruik toe te laat en verwyder dit van hierdie lys."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritiseer app"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium-SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS\'e kan jou geld kos en die koste sal by jou diensverskafferfakture gevoeg word. As jy toestemming vir \'n app aktiveer, sal jy premium-SMS\'e met daardie app kan stuur."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Appgebruiksdata"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Toegang tot alle appgebruiksdata laat ’n app toe om na te spoor watter ander apps jy gebruik en hoe gereeld jy dit gebruik, asook jou diensverskaffer, taalinstellings en ander besonderhede."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-fi-beheer"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-beheer laat \'n app toe om Wi-Fi aan of af te skakel, Wi-Fi-netwerke te soek en aan hulle te koppel, netwerke by te voeg of te verwyder, en om \'n warmkol wat net plaaslik is, te begin."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Meer"</string>

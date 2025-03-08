@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"জাননীৰ এক্সেছ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>ক জাননী এক্সেছ কৰাৰ অনুমতি দিবনে?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>এ সকলো জাননী আৰু ব্যক্তিগত তথ্য যেনে সম্পৰ্কৰ নাম আৰু আপুনি লাভ কৰা পাঠ বাৰ্তা পঢ়িবলৈ সক্ষম হ’ব। ই জাননী প্ৰত্যাখ্যান কৰিব পাৰিব বা সেইবিলাকত থকা ক্ৰিয়া সম্পৰ্কীয় বুটামৰ দ্বাৰা কৰিবলগীয়া কাৰ্যসমূহৰ সূচনা কৰিব পাৰিব। \n\nই এপ্‌টোক অসুবিধা নিদিব অন বা অফ কৰাৰ লগতে তাৰ লগত জড়িত ছেটিংসমূহ সলনি কৰাৰ ক্ষমতা দিব।"</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"আপুনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>ৰ বাবে জাননীৰ এক্সেছ অফ কৰে, তেন্তে অসুবিধা নিদিবৰ নিয়ন্ত্ৰণো অফ কৰা হ’ব পাৰে।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"অফ কৰক"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল কৰক"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"এই এপ্‌সমূহে ছিষ্টেমৰ কাৰ্যদক্ষতাত ঋণাত্মক প্ৰভাৱ পেলায় আৰু এইবোৰক নেপথ্যত চলাত বাধা দিয়া হৈছে।\nনেপথ্যত ব্যৱহাৰৰ অনুমতি দিবলৈ আৰু ইয়াক সূচীখনৰ পৰা আঁতৰাবলৈ এপক অগ্ৰাধিকাৰ দিয়ক।"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"এপক অগ্ৰাধিকাৰ দিয়ক"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"প্ৰিমিয়াম এছএমএছ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"প্ৰিমিয়াম এছএমএছৰ কাৰণে আপুনি খৰচ বহন কৰিবলগীয়া হ’ব পাৰে যাৰ বাবে বাহকে আপোনালৈ পঠিওৱা বিলত দেয়ৰ পৰিমাণ বাঢ়িব পাৰে। আপুনি যদি কোনো এপক অনুমতি দিয়ে, তেন্তে আপুনি সেই এপ্‌টো ব্যৱহাৰ কৰি প্ৰিমিয়াম এছএমএছ পঠাব পাৰিব।"</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"এপে ব্যৱহাৰ কৰা ডেটা"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"এপে ব্যৱহাৰ কৰা আটাইবোৰ ডেটা এক্সেছ কৰিব দিলে ই কোনো এপক আপুনি ব্যৱহাৰ কৰি থকা অন্য এপ্‌সমূহ আপুনি কিমান সঘনাই ব্যৱহাৰ কৰে, লগতে আপোনাৰ বাহক, ভাষাৰ ছেটিং আৰু অন্য সবিশেষ ট্ৰেক কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ৱাই-ফাই নিয়ন্ত্ৰণ"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ৱাই-ফাই নিয়ন্ত্ৰণ সুবিধাই এটা এপক ৱাই-ফাই অন বা অফ কৰিবলৈ, স্কেন কৰিবলৈ আৰু ৱাই-ফাই নেটৱৰ্কৰ সৈতে সংযোগ কৰিবলৈ আৰু বা নেটৱৰ্ক আঁতৰাবলৈ, বা স্থানীয়-মাত্ৰ হটস্পট আৰম্ভ কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"অধিক"</string>

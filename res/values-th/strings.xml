@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"การเข้าถึงการแจ้งเตือน"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"อนุญาตให้ <xliff:g id="SERVICE">%1$s</xliff:g> เข้าถึงการแจ้งเตือนไหม"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> จะอ่านการแจ้งเตือนทั้งหมดได้ รวมถึงข้อมูลส่วนบุคคล เช่น ชื่อผู้ติดต่อและข้อความที่คุณได้รับ นอกจากนี้ยังจะปิดการแจ้งเตือนหรือทริกเกอร์ปุ่มการทำงานในการแจ้งเตือนได้ด้วย\n\nการเปิดใช้ยังทำให้แอปนี้เปิดหรือปิดฟีเจอร์ห้ามรบกวนและเปลี่ยนแปลงการตั้งค่าที่เกี่ยวข้องได้"</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"หากคุณปิดการเข้าถึงการแจ้งเตือนสำหรับ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> การควบคุมของโหมดห้ามรบกวนอาจปิดไปด้วย"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ปิด"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ยกเลิก"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"แอปเหล่านี้ส่งผลเสียต่อประสิทธิภาพของระบบและถูกป้องกันไม่ให้ทำงานในเบื้องหลัง\nตั้งแอปเป็นแอปสำคัญเพื่ออนุญาตการใช้งานในเบื้องหลังและนำแอปดังกล่าวออกจากรายการนี้"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"ตั้งเป็นแอปสำคัญ"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"SMS แบบพรีเมียม"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS แบบพรีเมียมอาจมีค่าใช้จ่ายและจะเพิ่มเข้าไปในใบเรียกเก็บเงินจากผู้ให้บริการ หากคุณให้สิทธิ์แอปหนึ่งๆ คุณจะใช้แอปนั้นส่ง SMS แบบพรีเมียมได้"</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"ข้อมูลการใช้งานแอป"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"การเข้าถึงข้อมูลการใช้งานแอปทั้งหมดทำให้แอปสามารถติดตามว่าคุณกำลังใช้แอปอื่นใดอยู่ ความถี่ในการใช้ รวมทั้งผู้ให้บริการ การตั้งค่าภาษา และรายละเอียดอื่นๆ"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"การควบคุม Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"การควบคุม Wi-Fi จะอนุญาตให้แอปเปิดหรือปิด Wi-Fi, สแกนหาและเชื่อมต่อเครือข่าย Wi-Fi, เพิ่มหรือนำเครือข่ายออก หรือเริ่มฮอตสปอตในพื้นที่เท่านั้น"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"เพิ่มเติม"</string>

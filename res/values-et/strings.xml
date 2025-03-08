@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Juurdepääs märguannetele"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Kas lubada teenuse <xliff:g id="SERVICE">%1$s</xliff:g> puhul märguannetele juurdepääs?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> saab lugeda kõiki märguandeid, sh isiklikke andmeid, nt kontaktide nimesid ja teile saadetud tekstsõnumeid. See saab ka märguannetest loobuda või neis olevaid toimingunuppe aktiveerida.\n\nSamuti võimaldab see rakendusel funktsiooni Mitte segada sisse või välja lülitada ja sellega seotud seadeid muuta."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Kui lülitate teenuse <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> jaoks juurdepääsu märguannetele välja, võidakse välja lülitada ka funktsioon Mitte segada."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Lülita välja"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Tühista"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Need rakendused mõjutavad süsteemi toimivust negatiivselt ja nende käitamine taustal takistati.\nTaustal käitamise lubamiseks prioriseerige rakendus ja eemaldage see sellest loendist."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioriseeri rakendus"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Tasuline SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Tasuliste SMS-ide saatmisel võidakse teilt nõuda tasu, mis lisatakse operaatori esitatud arvele. Kui annate rakendusele loa, on teil selle rakenduse abil võimalik tasulisi SMS-e saata."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Rakenduste kasutamise andmed"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Juurdepääs kõigi rakenduste kasutamise andmetele võimaldab rakendusel jälgida, milliseid rakendusi ja kui sageli kasutate, aga ka teie mobiilioperaatorit, keeleseadeid ja muid andmeid."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"WiFi-seadete juhtimine"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"WiFi-seadete juhtimine lubab rakendusel WiFi sisse või välja lülitada, WiFi-võrke otsida ja nendega ühenduse luua, võrke lisada või eemaldada või kohaliku kuumkoha luua."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Rohkem"</string>

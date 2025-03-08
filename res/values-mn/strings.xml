@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Мэдэгдлийн хандалт"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>-н мэдэгдлийн хандалтыг зөвшөөрөх үү?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> таны харилцагчийн нэр, хүлээн авсан мессежийн текст зэрэг хувийн мэдээлэл бүхий бүх мэдэгдлийг унших боломжтой бөгөөд мэдэгдлийг хаах, тэдгээрийн доторх үйлдлийн товчлуурыг хэрэгсэхгүй болгох боломжтой. \n\nМөн энэ нь аппад \'Бүү саад бол\' тохиргоог асаах, унтраах болон үүнтэй холбоотой тохиргоог өөрчлөхийг зөвшөөрнө."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Хэрэв та <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-н мэдэгдлийн хандалтыг унтраавал Бүү саад бол онцлогийн тохиргоог мөн унтрааж магадгүй."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Унтраах"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Цуцлах"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Эдгээр аппууд нь системийн гүйцэтгэлд сөргөөр нөлөөлдөг ба ард ажиллуулахаас сэргийлсэн.\nАрын хэрэглээг зөвшөөрөхийн тулд аппыг эрэмбэлээд, энэ жагсаалтаас хасна уу."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Аппыг эрэмбэлэх"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Премиум SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMS-н төлбөрийг таны оператор компанийн төлбөр дээр нэмэхийг анхаарна уу. Та энэ аппын зөвшөөрлийг идэвхжүүлсэн тохиолдолд энэ аппыг ашиглан premium SMS илгээх боломжтой болно."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Аппын ашиглалтын өгөгдөл"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Бүх аппын ашиглалтын өгөгдөлд хандах эрх нь аппад таныг өөр ямар аппыг хэр тогтмол ашиглаж байгаагаас гадна таны оператор компани, хэлний тохиргоо болон бусад дэлгэрэнгүй мэдээллийг хянахыг зөвшөөрнө."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi хяналт"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi хяналт нь аппад Wi-Fi-г унтраах эсвэл асаах, Wi-Fi сүлжээнд скан хийх болон холбогдох, сүлжээ нэмэх эсвэл хасах, эсвэл зөвхөн дотоодод ашиглах сүлжээний цэгийг эхлүүлэхийг зөвшөөрдөг."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Бусад"</string>

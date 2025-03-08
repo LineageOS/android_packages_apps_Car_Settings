@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"सूचनामाथिको पहुँच"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> लाई सूचनामाथि पहुँच राख्ने अनुमति दिने हो?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सम्पर्क सूचीका व्यक्तीको नाम र तपाईंले प्राप्त गर्ने सन्देशहरूका पाठ जस्ता व्यक्तिगत जानकारीलगायतका सबै सूचनाहरू पढ्न सक्ने छ। यसले सूचनाहरू खारेज गर्न वा तिनीहरूमा रहेका कारबाहीसम्बन्धी बटनहरू ट्रिगर गर्न पनि सक्ने छ। \n\nयसले एपलाई बाधा नपुऱ्याउनुहोस् मोड अन र अफ गर्ने र सम्बन्धित सेटिङ परिवर्तन गर्ने क्षमता पनि प्रदान गर्ने छ।"</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"तपाईंले <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> लाई दिइएको नोटिफिकेसन एक्सेस रद्द गर्नुभयो भने Do Not Disturb सम्बन्धी कन्ट्रोल पनि अफ हुन सक्छ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"निष्क्रिय पार्नुहोस्"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द गर्नुहोस्"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"यी एपहरूले सिस्टमको पर्फर्मेन्समा नकरात्मक प्रभाव पार्छन् र यी एपहरूलाई ब्याकग्राउन्डमा चल्ने अनुमति दिइएको छैन।\nतपाईं एपलाई ब्याकग्राउन्डमा चल्ने अनुमति दिन चाहनुहुन्छ भने यसलाई प्राथमिकता दिनुहोस् र सूचीबाट हटाउनुहोस्।"</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"एपलाई प्राथमिकता दिनुहोस्"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"प्रिमियम SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रिमियम SMS सुविधा सक्रिय गर्नाले तपाईंलाई पैसा लाग्न सक्छ र उक्त लागत तपाईंको सेवा प्रदायकलाई तिर्नु पर्ने बिलमा जोडिने छ। तपाईंले एपका लागि अनुमति सक्षम पार्नुभएका खण्डमा तपाईं त्यस एपको प्रयोग गरेर प्रिमियम SMS पठाउन सक्नु हुने छ।"</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"एपको प्रयोगसम्बन्धी डेटा"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"कुनै एपले एपको प्रयोगसम्बन्धी सबै डेटाको एक्सेसका सहायताले तपाईं अन्य कुन कुन एपहरू कति पटक प्रयोग गर्दै हुनुहुन्छ भन्ने कुराका साथसाथै तपाईंको सेवा प्रदायक, भाषासम्बन्धी सेटिङ र अन्य विवरण ट्र्याक गर्न सक्छ।"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi कन्ट्रोल"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi नियन्त्रकले एपलाई Wi-Fi सक्रिय गर्ने वा निष्क्रिय पार्ने, स्क्यान गरी Wi-Fi नेटवर्कमा जडान गर्ने, नेटवर्कहरू थप्ने वा हटाउने, वा स्थानीय रूपमा मात्र प्रयोग गर्न मिल्ने हटस्पट सुरु गर्ने अनुमति दिन्छ।"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"थप"</string>

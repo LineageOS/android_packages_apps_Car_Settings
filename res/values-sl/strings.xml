@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Dostop do obvestil"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Želite storitvi <xliff:g id="SERVICE">%1$s</xliff:g> dovoliti dostop do obvestil?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> lahko prebere vsa obvestila, vključno z osebnimi podatki, kot so imena stikov ter besedilo prejetih sporočil. Prav tako lahko opusti obvestila ali sproži gumbe dejanj v obvestilih.\n\nS tem lahko aplikacija tudi vklopi ali izklopi način »ne moti« in spremeni povezane nastavitve."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Če za aplikacijo <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> izklopite dostop do obvestil, bo morda izklopljen tudi dostop do nadzora načina »Ne moti«."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Izklop"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Prekliči"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Te aplikacije negativno vplivajo na delovanje sistema in jim je bilo preprečeno izvajanje v ozadju.\nDajte aplikaciji prednost, da ji odobrite uporabo sredstev ozadju in jo odstranite s tega seznama."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Dajanje pred. aplik."</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Plačljiva sporočila SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Plačljiva sporočila SMS vam lahko povzročijo stroške in povečajo račun za mobilno telefonijo. Če za aplikacijo omogočite dovoljenje, boste lahko s tisto aplikacijo pošiljali plačljiva sporočila SMS."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Podatki o uporabi aplikacij"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Dostop do vseh podatkov o uporabi aplikacij omogoča aplikaciji, da spremlja, katere aplikacije še uporabljate in kako pogosto, ter da si ogleda podrobnosti o operaterju, nastavitvah jezika in drugem."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Upravljanje povezave Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Upravljanje povezave Wi-Fi aplikaciji omogoča vklop ali izklop povezave Wi-Fi, iskanje omrežij Wi-Fi in povezovanje z njimi, dodajanje ali odstranjevanje omrežij ali zagon lokalne dostopne točke."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Več"</string>

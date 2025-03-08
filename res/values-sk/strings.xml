@@ -429,18 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Prístup k upozorneniam"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Chcete povoliť službe <xliff:g id="SERVICE">%1$s</xliff:g> prístup k upozorneniam?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> bude môcť čítať všetky upozornenia vrátane osobných údajov, ako sú mená kontaktov a texty prijatých správ. Bude môcť tiež zrušiť upozornenia alebo spustiť v nich obsiahnuté tlačidlá akcií.\n\nAplikácia tým získa aj možnosť vypnúť alebo zapnúť režim bez vyrušení a meniť súvisiace nastavenia."</string>
-    <!-- no translation found for notification_listener_revoke_warning_summary (5960149609163649424) -->
-    <skip />
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Ak vypnete prístup k upozorneniam pre aplikáciu <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, môžete tým vypnúť aj ovládanie režimu bez vyrušení."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Vypnúť"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Zrušiť"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Tieto aplikácie negatívne ovplyvňujú výkon systému, a preto bolo zablokované ich spúšťanie na pozadí.\nUprednostnením aplikácie povolíte jej používanie na pozadí a odstránite ju tak z tohto zoznamu."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Uprednostniť aplikáciu"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Prémiová SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Za prémiové správy SMS sa môžu účtovať poplatky, ktoré sa naúčtujú na faktúru operátora. Ak aktivujete toto povolenie pre aplikáciu, budete môcť pomocou nej posielať prémiové správy SMS."</string>
-    <!-- no translation found for usage_access_title (2306113730908698218) -->
-    <skip />
-    <!-- no translation found for usage_access_description (7889884409739123407) -->
-    <skip />
+    <string name="usage_access_title" msgid="2306113730908698218">"Údaje o využití aplikácie"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Prístup k všetkým údajom o využití umožňuje aplikácii sledovať, aké ďalšie aplikácie používate a ako často ich používate. Môže však sledovať aj nastavenia jazyka, operátora a ďalšie podrobnosti."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Ovládanie Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Ovládanie Wi‑Fi umožňuje aplikácii zapnúť alebo vypnúť pripojenie Wi‑Fi, vyhľadávať siete Wi‑Fi a pripájať sa k nim, pridávať ich alebo odstraňovať, prípadne spustiť výhradne miestny hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Viac"</string>
