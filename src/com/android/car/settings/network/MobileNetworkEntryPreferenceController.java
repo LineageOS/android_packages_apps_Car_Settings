@@ -40,6 +40,7 @@ import androidx.annotation.VisibleForTesting;
 import com.android.car.datasubscription.DataSubscription;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ColoredTwoActionSwitchPreference;
+import com.android.car.settings.common.DataSubscriptionStatsLogHelper;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
@@ -158,6 +159,10 @@ public class MobileNetworkEntryPreferenceController extends
                     getContext().startActivity(dataSubscriptionIntent);
                 } catch (ActivityNotFoundException e) {
                     LOG.w("Can't start activity from package " + DATA_SUBSCRIPTION_ACTION);
+                }
+                finally {
+                    DataSubscriptionStatsLogHelper.getInstance()
+                            .writeDataSubscriptionEventReported();
                 }
             }
         } else if (subs.size() == 1) {

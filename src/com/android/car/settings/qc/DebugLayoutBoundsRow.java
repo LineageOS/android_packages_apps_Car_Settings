@@ -22,7 +22,6 @@ import static com.android.car.qc.QCItem.QC_TYPE_ACTION_SWITCH;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.sysprop.DisplayProperties;
 
 import com.android.car.qc.QCActionItem;
@@ -30,6 +29,7 @@ import com.android.car.qc.QCItem;
 import com.android.car.qc.QCList;
 import com.android.car.qc.QCRow;
 import com.android.car.settings.R;
+import com.android.car.settings.common.BuildInfoUtil;
 import com.android.settingslib.development.DevelopmentSettingsEnabler;
 import com.android.settingslib.development.SystemPropPoker;
 
@@ -43,7 +43,7 @@ public class DebugLayoutBoundsRow extends SettingsQCItem {
 
     @Override
     protected QCItem getQCItem() {
-        if (!(Build.IS_USERDEBUG || Build.IS_ENG)
+        if (!BuildInfoUtil.isDevTesting(getContext())
                 || !DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(getContext())) {
             return null;
         }
@@ -77,6 +77,6 @@ public class DebugLayoutBoundsRow extends SettingsQCItem {
 
     @Override
     Class getBackgroundWorkerClass() {
-        return DebugLayoutBoundsRowWorker.class;
+        return DefaultQCBackgroundWorker.class;
     }
 }

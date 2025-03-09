@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"連線成功"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"顯示全部"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"正在搜尋..."</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"已連接裝置"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"藍牙"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"使用藍牙"</string>
@@ -343,6 +349,16 @@
     <string name="unused_apps" msgid="648471933781010395">"不使用的應用程式"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# 個不使用的應用程式}other{# 個不使用的應用程式}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"移除權限並騰出空間"</string>
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"長寬比 (實驗版)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"開啟"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"應用程式預設"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"全螢幕"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"半螢幕"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"裝置長寬比"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16:9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"3:2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4:3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"變更長寬比後，應用程式會重新啟動。你可能會遺失未儲存的變更內容。部分應用程式可能並未針對特定長寬比進行優化。"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"佔了內部儲存空間 %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"使用系統資源優先處理應用程式效能"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"數據用量"</string>
@@ -797,7 +813,10 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"如要查看你的裝置，請開啟藍牙"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"如要配對裝置，請開啟藍牙設定"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"主題"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"設定駕駛模式"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"顯示版面界限"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"強制使用從右至左的版面配置方向"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"自訂重疊"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"資訊娛樂系統管理員"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"已啟用的應用程式"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"已停用的應用程式"</string>
@@ -933,4 +952,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"你的互聯網計劃已到期"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看計劃"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完成"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"你的汽車不支援此功能"</string>
 </resources>

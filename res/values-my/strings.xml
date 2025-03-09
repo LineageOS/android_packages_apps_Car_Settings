@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"ချိတ်ဆက်ပြီးပါပြီ"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"အားလုံးပြရန်"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ရှာဖွေနေသည်…"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"ချိတ်ဆက်ကိရိယာများ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ဘလူးတုသ်"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ဘလူးတုသ် သုံးခြင်း"</string>
@@ -343,6 +349,16 @@
     <string name="unused_apps" msgid="648471933781010395">"အသုံးမပြုသော အက်ပ်များ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{အသုံးမပြုသောအက်ပ် # ခု}other{အသုံးမပြုသောအက်ပ် # ခု}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ခွင့်ပြုချက်ဖယ်ရှားပြီး နေရာလွတ်လုပ်ရန်"</string>
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"အချိုးအစား (စမ်းသပ်ဆဲ)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"ဖွင့်ရန်"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"အက်ပ် မူရင်း"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"ဖန်သားပြင်အပြည့်"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"ဖန်သားပြင်တစ်ဝက်"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"စက်၏အချိုးအစား"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"၁၆ x ၉"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"၃ x ၂"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"၄ x ၃"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"အချိုးအစား ပြောင်းလိုက်သောအခါ အက်ပ်ပြန်စပါမည်။ သိမ်းမထားသော အပြောင်းအလဲများ ဆုံးရှုံးနိုင်သည်။ အချို့အက်ပ်များသည် အချို့သောအချိုးအစားတွင် ကောင်းစွာအလုပ်မလုပ်ပါ။"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"စက်တွင်းသိုလှောင်ခန်းတွင် %s"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"အက်ပ်စွမ်းဆောင်ရည်ကို ဦးစားပေးရန် စနစ်ရင်းမြစ်များကို သုံးနိုင်သည်"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ဒေတာသုံးစွဲမှု"</string>
@@ -796,9 +812,12 @@
     <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ဤပရိုဖိုင်သည် မောင်းသူအဖြစ် လက်ရှိ လက်မှတ်ထိုးဝင်ထားသည်။ မောင်းသူအဖြစ် ပရိုဖိုင် မသုံးချိန်၌ ပြန်စမ်းပါ။"</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"မျက်နှာပြင် တောက်ပမှု"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"သင့်စက်များကို တွေ့နိုင်ရန် ဘလူးတုသ်ဖွင့်ပါ"</string>
-    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"စက်နှင့်တွဲချိတ်ရန် ဘလူးတုသ် ဆက်တင်များကို ဖွင့်ပါ"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"စက်နှင့်ချိတ်ရန် ဘလူးတုသ် ဆက်တင်ကို ဖွင့်ပါ"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"အပြင်အဆင်"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"မောင်းနှင်မှု သတ်မှတ်ခြင်း"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"အပြင်အဆင်ဘောင်များ ပြပါ"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"RTL အပြင်အဆင်အတိုင်း ဖြစ်စေခြင်း"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"စိတ်ကြိုက်ပြင်ဆင်ခြင်း ထပ်ပိုးလွှာ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ် စီမံခန့်ခွဲသူ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ဖွင့်ထားသောအက်ပ်များ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ပိတ်ထားသောအက်ပ်များ"</string>
@@ -934,4 +953,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"သင့်အင်တာနက်အစီအစဉ်များ သက်တမ်းကုန်သွားပါပြီ"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"အစီအစဉ်များ ကြည့်ရန်"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ပြီးပြီ"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ဤလုပ်ဆောင်ချက်ကို သင့်ယာဉ်တွင် မရနိုင်ပါ"</string>
 </resources>

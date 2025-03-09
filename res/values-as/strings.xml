@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"সংযোগ সফল হৈছে"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"সকলো দেখুৱাওক"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"অনুসন্ধান কৰি থকা হৈছে"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"সংযুক্ত ডিভাইচ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ব্লুটুথ ব্যৱহাৰ কৰক"</string>
@@ -343,6 +349,16 @@
     <string name="unused_apps" msgid="648471933781010395">"অব্যৱহৃত এপ্‌"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# টা অব্যৱহৃত এপ্}one{# টা অব্যৱহৃত এপ্}other{# টা অব্যৱহৃত এপ্}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"অনুমতি আঁতৰাওক আৰু ঠাই খালী কৰক"</string>
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"আকাৰৰ অনুপাত (পৰীক্ষামূলক)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"খোলক"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"এপৰ ডিফ’ল্ট"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"পূৰ্ণ স্ক্ৰীন"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"অৰ্ধ স্ক্ৰীন"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"ডিভাইচৰ আকাৰৰ অনুপাত"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"১৬:৯"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"৩:২"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"৪:৩"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"আপুনি আকাৰৰ অনুপাত সলনি কৰিলে এপ্‌টো পুনৰ আৰম্ভ হ’ব। আপুনি ছেভ নকৰা সালসলনিসমূহ হেৰুৱাব পাৰে। কিছুমান বিশেষ আকাৰৰ অনুপাতৰ বাবে কিছুমান এপ্‌ অপ্টিমাইজ কৰা নহ’বও পাৰে।"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s অভ্যন্তৰীণ ষ্ট’ৰেজত আছে"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"এপৰ কাৰ্যদক্ষতাক অগ্ৰাধিকাৰ দিবলৈ ছিষ্টেমৰ সম্পদসমূহ ব্যৱহাৰ কৰে"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ডেটাৰ ব্যৱহাৰ"</string>
@@ -797,7 +813,10 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"আপোনাৰ ডিভাইচসমূহ চাবলৈ ব্লুটুথ অন কৰক"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"কোনো ডিভাইচ পেয়াৰ কৰিবলৈ ব্লুটুথ ছেটিং খোলক"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"থীম"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"ড্ৰাইভিং ম’ড ছেট কৰক"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"লে’আউটৰ সীমা দেখুৱাওক"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"RTL লে’আউটৰ দিশ বলেৰে সলনি কৰক"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"কাষ্টমাইজেশ্বনৰ অ’ভাৰলে’"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ইনফ’টেইনমেণ্ট ছিষ্টেমৰ প্ৰশাসক"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"সক্ৰিয় কৰা এপ্"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"নিষ্ক্ৰিয় কৰা এপ্"</string>
@@ -933,4 +952,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"আপোনাৰ ইণ্টাৰনেটৰ আঁচনিৰ ম্যাদ উকলিছে"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"আঁচনি চাওক"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"কৰা হ’ল"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"আপোনাৰ বাহনখনে এই সুবিধাটো সমৰ্থন নকৰে"</string>
 </resources>

@@ -70,6 +70,6 @@ public class SettingsScreenLockActivity extends BaseCarSettingsActivity {
                             DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED));
         }
         fragment.setArguments(bundle);
-        launchFragmentInternal(fragment);
+        updateFragmentContainer(fragment);
     }
 }

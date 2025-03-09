@@ -26,13 +26,14 @@ import android.text.TextUtils;
 
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.R;
 import com.android.car.settings.accessibility.AccessibilitySettingsFragment;
 import com.android.car.settings.accessibility.CaptionsSettingsFragment;
 import com.android.car.settings.accounts.ChooseAccountFragment;
+import com.android.car.settings.activityembedding.ActivityEmbeddingUtils;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.AppsFragment;
+import com.android.car.settings.applications.appinfo.AppAspectRatioFragment;
 import com.android.car.settings.applications.assist.AssistantAndVoiceFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
 import com.android.car.settings.applications.specialaccess.AlarmsAndReminderFragment;
@@ -82,22 +83,50 @@ public class CarSettingActivities {
      * Homepage Activity.
      */
     public static class HomepageActivity extends BaseCarSettingsActivity {
-        @Nullable
         @Override
-        protected Fragment getInitialFragment() {
-            try {
-                return getSupportFragmentManager().getFragmentFactory().instantiate(
-                        getClassLoader(), getString(R.string.config_homepage_fragment_class));
-            } catch (Fragment.InstantiationException e) {
-                LOG.e("Unable to instantiate homepage fragment", e);
-                return null;
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            if (!isTaskRoot()) {
+                // When HomepageActivity is not launched as task root, such as via ACTION_SETTINGS,
+                // the placeholder will not be activated.
+                // In the DeepLinkHomepageActivity case, if the intent comes from another app, the
+                // host app may not have been configured as trusted embedding host, thus launching
+                // the activity without activating embeddings.
+                Intent intent = new Intent(getIntent()).setPackage(getPackageName()).addFlags(
+                        Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                startActivity(intent);
+                finish();
             }
         }
 
         @Override
-        protected boolean shouldFocusContentOnLaunch() {
-            // Focus should stay with the top-level menu for the HomepageActivity.
-            return false;
+        protected void onNewIntent(Intent intent) {
+            super.onNewIntent(intent);
+            // Because HomepageActivity is a singleTask activity, after onCreate has already been
+            // called, additional Intents will not call onCreate() again.
+            // Call setIntent() so that they may be processed during onResume()
+            setIntent(intent);
+        }
+
+        @Override
+        protected void handleNewIntent(Intent intent) {
+            super.handleNewIntent(intent);
+            if (intent.getAction() != null && (intent.getAction().equals(Intent.ACTION_MAIN)
+                    || intent.getAction().equals(Settings.ACTION_SETTINGS))) {
+                setTopLevelHeaderKey(
+                        ActivityEmbeddingUtils.getPlaceholderPreferenceHighlightKey(this));
+            }
+        }
+
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            try {
+                return new TopLevelMenuFragment();
+            } catch (Fragment.InstantiationException e) {
+                LOG.e("Unable to instantiate homepage fragment", e);
+                return null;
+            }
         }
     }
 
@@ -456,6 +485,28 @@ public class CarSettingActivities {
                 pkg = uri.getSchemeSpecificPart();
             }
             return ApplicationDetailsFragment.getInstance(pkg);
+        }
+    }
+
+    /**
+     * App aspect ratio Activity.
+     */
+    public static class AppAspectRatioActivity extends BaseCarSettingsActivity {
+        @Nullable
+        @Override
+        protected Fragment getInitialFragment() {
+            Intent intent = getIntent();
+            String pkg = intent.getStringExtra(Settings.EXTRA_APP_PACKAGE);
+            if (TextUtils.isEmpty(pkg)) {
+                LOG.w("No package provided for application detailed intent");
+                Uri uri = intent.getData();
+                if (uri == null) {
+                    LOG.w("No uri provided for application detailed intent");
+                    return null;
+                }
+                pkg = uri.getSchemeSpecificPart();
+            }
+            return AppAspectRatioFragment.getInstance(pkg);
         }
     }
 

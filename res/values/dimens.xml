@@ -87,6 +87,7 @@
     <!-- Wifi -->
     <dimen name="hotspot_qr_code_size">256dp</dimen>
     <dimen name="qc_code_preference_margin">@*android:dimen/car_padding_1</dimen>
+    <dimen name="wifi_share_page_margin">@*android:dimen/car_padding_2</dimen>
     <dimen name="card_view_elevation">6dp</dimen>
     <!-- The white area around the actual barcode of the QR code -->
     <dimen name="qr_code_margin">1.5dp</dimen>
@@ -201,10 +202,11 @@
     <dimen name="action_buttons_divider_height">@dimen/divider_preference_height</dimen>
 
     <!-- Top-level menu -->
-    <dimen name="top_level_menu_width">550dp</dimen>
+    <dimen name="top_level_menu_width">549dp</dimen>
     <dimen name="top_level_divider_width">1dp</dimen>
     <dimen name="top_level_preference_min_height">96dp</dimen>
     <dimen name="top_level_preference_corner_radius">24dp</dimen>
+    <dimen name="top_level_preference_title_margin_horizontal">2dp</dimen>
     <dimen name="top_level_recyclerview_margin_right">@*android:dimen/car_padding_2</dimen>
     <dimen name="top_level_foreground_icon_inset">0dp</dimen>
 
@@ -227,4 +229,20 @@
     <dimen name="colored_two_action_switch_preference_margin_end">32dp</dimen>
     <dimen name="colored_two_action_switch_preference_vertical_margin">16dp</dimen>
     <dimen name="colored_two_action_switch_preference_divider_vertical_padding">27dp</dimen>
+
+    <dimen name="radio_with_image_preference_padding_vertical">16dp</dimen>
+    <dimen name="radio_with_image_preference_padding_horizontal">20dp</dimen>
+    <dimen name="radio_with_image_preference_min_width">56dp</dimen>
+    <dimen name="radio_with_image_preference_icon_padding">
+        @dimen/settingslib_illustration_padding
+    </dimen>
+    <dimen name="radio_with_image_preference_icon_max_width">
+        @dimen/settingslib_illustration_width
+    </dimen>
+    <dimen name="radio_with_image_preference_icon_max_height">
+        @dimen/settingslib_illustration_height
+    </dimen>
+
+    <dimen name="aspect_ratio_icon_height">300dp</dimen>
+    <dimen name="aspect_ratio_icon_width">412dp</dimen>
 </resources>

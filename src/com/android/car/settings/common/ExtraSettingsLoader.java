@@ -42,11 +42,13 @@ import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.activityembedding.ActivityEmbeddingRulesController;
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.drawer.TileUtils;
 
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -56,7 +58,7 @@ import java.util.stream.Collectors;
  */
 // TODO: investigate using SettingsLib Tiles.
 public class ExtraSettingsLoader {
-    static final String META_DATA_PREFERENCE_IS_TOP_LEVEL = "injectedTopLevelPreference";
+    static final String META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS = "injectedTopLevelPreference";
     private static final Logger LOG = new Logger(ExtraSettingsLoader.class);
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
     private final Context mContext;
@@ -166,7 +168,8 @@ public class ExtraSettingsLoader {
                 category = CATEGORY_DEVICE;
             }
             boolean isTopLevel = mTopLevelCategories.contains(category);
-            metaData.putBoolean(META_DATA_PREFERENCE_IS_TOP_LEVEL, isTopLevel);
+            metaData.putBoolean(META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS, isTopLevel);
+
             Drawable icon = ExtraSettingsUtil.createIcon(mContext, metaData,
                     activityInfo.packageName);
 
@@ -181,6 +184,8 @@ public class ExtraSettingsLoader {
                     summary = null;
                     metaData.remove(META_DATA_PREFERENCE_SUMMARY_URI);
                 }
+                key = key != null ? key : getTopLevelPreferenceKey(title);
+                registerDualPaneSplitRule(extraSettingIntent, activityInfo.launchMode);
             } else {
                 preference = new CarUiPreference(mContext);
             }
@@ -196,6 +201,12 @@ public class ExtraSettingsLoader {
             mPreferenceBundleMap.put(preference, metaData);
         }
         return mPreferenceBundleMap;
+    }
+
+    private String getTopLevelPreferenceKey(CharSequence preferenceTitle) {
+        return new String("top_level_extra_settings_preference_" + preferenceTitle + "_entry")
+                .replace(" ", "_")
+                .toLowerCase(Locale.ROOT);
     }
 
     /**
@@ -222,5 +233,22 @@ public class ExtraSettingsLoader {
         if (!alreadyContains) {
             originalList.add(newResolveInfo);
         }
+    }
+
+    /**
+     * Registers {@link ActivityEmbeddingRulesController#registerHomepageDualPaneSplitRule} for all
+     * top level extra settings preference as these activities should all finish along with the
+     * {@link CarSettingActivities.HomepageActivity} on back press.
+     */
+    private void registerDualPaneSplitRule(Intent extraSettingIntent, int launchMode) {
+        // Single instance activities may create new tasks if they already exist in the back of
+        // current task stack. Settings clearTop to true will bring those activities behind Settings
+        // rather than to the foreground.
+        boolean clearTop = (launchMode != ActivityInfo.LAUNCH_SINGLE_INSTANCE)
+                && (launchMode != ActivityInfo.LAUNCH_SINGLE_INSTANCE_PER_TASK);
+        ActivityEmbeddingRulesController.registerHomepageDualPaneSplitRule(/* context= */ mContext,
+                /* secondaryComponent= */ extraSettingIntent.getComponent(),
+                /* secondaryIntentAction= */ extraSettingIntent.getAction(),
+                /* clearTop= */ clearTop);
     }
 }

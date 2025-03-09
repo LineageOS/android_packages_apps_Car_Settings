@@ -288,4 +288,21 @@ public class CarWifiManager implements WifiPickerTracker.WifiPickerTrackerCallba
             }
         }
     }
+
+    /**
+     * @return true if this device supports Wi-Fi Easy-connect (Device Provisioning Protocol)
+     */
+    public boolean isEasyConnectSupported() {
+        if (mWifiManager != null && mWifiManager.isEasyConnectSupported()) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Returns the {@link WifiManager}
+     */
+    public WifiManager getWifiManager() {
+        return mWifiManager;
+    }
 }

@@ -85,10 +85,12 @@ public class HighlightablePreferenceGroupAdapter extends PreferenceGroupAdapter 
         }
         root.post(() -> {
             recyclerView.scrollToPosition(position);
-            int oldPosition = mHighlightPosition;
-            mHighlightPosition = position;
-            notifyItemChanged(oldPosition);
-            notifyItemChanged(position);
+            if (position != mHighlightPosition) {
+                int oldPosition = mHighlightPosition;
+                mHighlightPosition = position;
+                notifyItemChanged(oldPosition);
+                notifyItemChanged(position);
+            }
         });
     }
 

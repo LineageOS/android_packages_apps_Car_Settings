@@ -47,6 +47,7 @@
     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
     <uses-permission android:name="android.permission.HIDE_NON_SYSTEM_OVERLAY_WINDOWS"/>
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
     <uses-permission android:name="android.permission.MANAGE_SENSOR_PRIVACY"/>
@@ -72,8 +73,11 @@
     <uses-permission android:name="android.permission.UWB_PRIVILEGED"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK" />
     <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_SETTINGS"/>
     <uses-permission android:name="android.car.permission.CAR_CONTROL_AUDIO_VOLUME"/>
+    <uses-permission android:name="android.car.permission.CAR_IDENTIFICATION"/>
+    <uses-permission android:name="android.car.permission.CONTROL_APP_BLOCKING"/>
     <uses-permission android:name="android.car.permission.READ_PERSIST_TETHERING_SETTINGS"/>
 
     <permission android:name="com.android.car.settings.SET_INITIAL_LOCK"
@@ -87,6 +91,10 @@
         android:requiredForAllUsers="true"
         android:directBootAware="true"
         android:supportsRtl="true">
+
+        <property
+            android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"
+            android:value="true" />
 
         <activity android:name=".admin.FactoryResetActivity"
             android:excludeFromRecents="true"
@@ -195,6 +203,14 @@
             android:name=".common.CarSettingActivities$UnitsSettingsActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.REGIONAL_PREFERENCES_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.TEMPERATURE_UNIT_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_UnitsSettingsActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
@@ -234,6 +250,18 @@
             <intent-filter>
                 <action android:name="android.settings.NOTIFICATION_SETTINGS" />
                 <action android:name="android.settings.ALL_APPS_NOTIFICATION_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.VOICE_CONTROL_DO_NOT_DISTURB_MODE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="10">
+                <action android:name="android.settings.AUTOMATIC_ZEN_RULE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.ZEN_MODE_PRIORITY_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
@@ -420,6 +448,14 @@
             android:name=".common.CarSettingActivities$LanguagesAndInputActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.REQUEST_SET_AUTOFILL_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.INPUT_METHOD_SUBTYPE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_LanguagesAndInputActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
@@ -513,6 +549,33 @@
             </intent-filter>
             <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
                        android:value="@string/hk_ApplicationsDetailsActivity" />
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name=".common.CarSettingActivities$AppAspectRatioActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <!-- The following intent actions are listed twice in order to support multiple ways to
+                provide the package name. -->
+            <!-- This intent filter expects to receive the package name via the data field.
+                 i.e. adb shell am start -a android.settings.APPLICATION_DETAILS_SETTINGS \
+                      -d "package:<package name>" -->
+            <intent-filter android:priority="10">
+                <action android:name="android.settings.MANAGE_USER_ASPECT_RATIO_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="package" />
+            </intent-filter>
+
+            <!-- This intent filter expects to receive the package name via an extra string.
+                 i.e. adb shell am start -a android.settings.APPLICATION_DETAILS_SETTINGS
+                      -e "android.provider.extra.APP_PACKAGE" "<package name>" -->
+            <intent-filter android:priority="10">
+                <action android:name="android.settings.MANAGE_USER_ASPECT_RATIO_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.car.settings.TOP_LEVEL_HEADER_KEY"
+                       android:value="@string/hk_AppAspectRatioActivity" />
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
@@ -993,8 +1056,166 @@
             </intent-filter>
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
+        <activity android:name=".deeplink.DeepLinkHomepageActivity"
+                  android:exported="true"
+                  android:enabled="false"
+                  android:excludeFromRecents="true"
+                  android:launchMode="singleTask"
+                  android:taskAffinity=".deeplink.DeepLinkHomepageActivity"
+                  android:permission="android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK">
+            <intent-filter>
+                <action android:name="android.settings.SETTINGS_EMBED_DEEP_LINK_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".search.CarSearchResultTrampoline"
+                  android:theme="@android:style/Theme.NoDisplay"
+                  android:excludeFromRecents="true"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.car.settings.SEARCH_RESULT_TRAMPOLINE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
-    <service android:name=".bluetooth.BluetoothPairingService"
+        <activity android:name=".common.SettingsDefaultIntentActivity"
+                  android:theme="@style/AlertDialogTheme"
+                  android:excludeFromRecents="true"
+                  android:exported="true"
+                  android:launchMode="singleTask">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+            <!-- Common Settings Intents -->
+            <intent-filter>
+                <action android:name="android.settings.AIRPLANE_MODE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.BATTERY_SAVER_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.BIOMETRIC_ENROLL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.MEMORY_CARD_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.HARD_KEYBOARD_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.NFC_PAYMENT_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.NFC_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.NFCSHARING_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.NIGHT_DISPLAY_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.NOTIFICATION_POLICY_ACCESS_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.ACTION_PRINT_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.VOICE_CONTROL_AIRPLANE_MODE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.VOICE_CONTROL_BATTERY_SAVER_MODE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.VR_LISTENER_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.search.action.SEARCH_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.action.APP_USAGE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.ACTION_CONDITION_PROVIDER_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.APP_NOTIFICATION_BUBBLE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.AUTO_ROTATE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.FINGERPRINT_ENROLL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.MANAGE_ALL_SIM_PROFILES_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.MANAGE_APP_USE_FULL_SCREEN_INTENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.MANAGE_SUPERVISOR_RESTRICTED_SETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.NOTIFICATION_ASSISTANT_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.QUICK_ACCESS_WALLET_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.QUICK_LAUNCH_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.SATELLITE_SETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.SHOW_WORK_POLICY_INFO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.STORAGE_VOLUME_ACCESS_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.settings.VPN_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".bluetooth.BluetoothPairingService"
         android:foregroundServiceType="connectedDevice"/>
 
         <service android:name=".setupservice.InitialLockSetupService"

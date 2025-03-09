@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.settings.common.ExtraSettingsLoader.META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS;
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_DYNAMIC_SUMMARY;
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_DYNAMIC_TITLE;
 import static com.android.settingslib.drawer.SwitchesProvider.METHOD_GET_PROVIDER_ICON;
@@ -158,18 +159,25 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
      * Adds the extra settings from the system based on the intent that is passed in the preference
      * group. All the preferences that resolve these intents will be added in the preference group.
      *
+     * For preferences added to top the level, add a preference key so that it can be highlighted by
+     * {@link TopLevelMenuFragment#requestPreferenceHighlight} on user click. If the fragment should
+     * also be embedded, we must try to split them to the secondary container.
+     *
      * @param preferenceBundleMap a map of {@link Preference} and {@link Bundle} representing
      * settings injected from system apps and their metadata.
      */
     protected void addExtraSettings(Map<Preference, Bundle> preferenceBundleMap) {
         for (Preference setting : preferenceBundleMap.keySet()) {
             Bundle metaData = preferenceBundleMap.get(setting);
-            boolean distractionOptimized = false;
-            if (metaData.containsKey(META_DATA_DISTRACTION_OPTIMIZED)) {
-                distractionOptimized =
-                        metaData.getBoolean(META_DATA_DISTRACTION_OPTIMIZED);
-            }
-            setting.getExtras().putBoolean(META_DATA_DISTRACTION_OPTIMIZED, distractionOptimized);
+
+            boolean isDistractionOptimized = metaData.getBoolean(META_DATA_DISTRACTION_OPTIMIZED,
+                    /* defaultValue= */ false);
+            setting.getExtras().putBoolean(META_DATA_DISTRACTION_OPTIMIZED, isDistractionOptimized);
+
+            boolean isTopLevel = metaData.getBoolean(META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS,
+                    /* defaultValue= */ false);
+            setting.getExtras().putBoolean(META_DATA_IS_TOP_LEVEL_EXTRA_SETTINGS, isTopLevel);
+
             getDynamicData(setting, metaData);
             getPreference().addPreference(setting);
         }

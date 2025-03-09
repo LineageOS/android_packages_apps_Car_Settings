@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"S\'ha connectat correctament"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Mostra-ho tot"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"S\'està cercant"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"Dispositius connectats"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Utilitza el Bluetooth"</string>
@@ -221,7 +227,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Codi de vinculació per Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"El PIN conté lletres o símbols"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Escriu el codi de vinculació i prem Retorn"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Vols vincular el dispositiu amb <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Vols vincular <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permet que <xliff:g id="DEVICE_NAME">%1$s</xliff:g> accedeixi als contactes i a l\'historial de trucades"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Pot ser que també hagis d\'introduir aquest PIN a l\'altre dispositiu."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Pot ser que també hagis d\'introduir aquesta clau d\'accés a l\'altre dispositiu."</string>
@@ -343,6 +349,16 @@
     <string name="unused_apps" msgid="648471933781010395">"Aplicacions no utilitzades"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# aplicació no utilitzada}other{# aplicacions no utilitzades}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Suprimeix els permisos i allibera espai"</string>
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"Relació d\'aspecte (experimental)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"Obre"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"Predeterminada de l\'aplicació"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"Pantalla completa"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"Mitja pantalla"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"Relació d\'aspecte del dispositiu"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16:9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"3:2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4:3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"L\'aplicació es reiniciarà quan canviïs la relació d\'aspecte. És possible que es perdin els canvis sense desar. Pot ser que algunes aplicacions no s\'optimitzin per a determinades relacions d\'aspecte."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s a l\'emmagatzematge intern"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Utilitza recursos del sistema per prioritzar el rendiment de l\'aplicació"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Ús de dades"</string>
@@ -495,7 +511,7 @@
     <string name="hardware_revision" msgid="5713759927934872874">"Versió del maquinari"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Llicències de tercers"</string>
-    <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"S\'ha produït un problema en carregar les llicències."</string>
+    <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Hi ha hagut un problema en carregar les llicències."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"S\'està carregant…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Ara ja només et queda # pas per convertir-te en desenvolupador.}other{Ara ja només et queden # passos per convertir-te en desenvolupador.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Ara ja ets desenvolupador!"</string>
@@ -703,7 +719,7 @@
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Connecta 4 punts com a mínim. Torna-ho a provar."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"El patró no és correcte"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Com es dibuixa un patró de desbloqueig"</string>
-    <string name="error_saving_lockpattern" msgid="2933512812768570130">"S\'ha produït un error en desar el patró"</string>
+    <string name="error_saving_lockpattern" msgid="2933512812768570130">"Hi ha hagut un error en desar el patró"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"Has superat el nombre d\'intents incorrectes permesos. Torna-ho a provar d\'aquí a <xliff:g id="NUMBER">%d</xliff:g> segons."</string>
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"Patró de rotació no admès; utilitza un tàctil"</string>
     <string name="okay" msgid="4589873324439764349">"D\'acord"</string>
@@ -718,7 +734,7 @@
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"El PIN ha de tenir 4 dígits com a mínim"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"El PIN no és vàlid. Ha de tenir com a mínim 4 dígits."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Els PIN no coincideixen"</string>
-    <string name="error_saving_lockpin" msgid="9011960139736000393">"S\'ha produït un error en desar el PIN"</string>
+    <string name="error_saving_lockpin" msgid="9011960139736000393">"Hi ha hagut un error en desar el PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"El PIN no és correcte"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"La contrasenya no és correcta"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Per seguretat, defineix una contrasenya"</string>
@@ -797,7 +813,10 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Per veure els teus dispositius, activa el Bluetooth"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Per vincular un dispositiu, obre la configuració del Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Tema"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"Configura la conducció"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"Mostra els límits de la disposició"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"Força la direcció dreta-esquerra"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"Superposició de personalització"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrador del sistema d\'informació i entreteniment"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aplicacions activades"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Aplicacions desactivades"</string>
@@ -933,4 +952,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Els teus plans d\'Internet han caducat"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Mostra els plans"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Fet"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"El vehicle no admet aquesta funció"</string>
 </resources>

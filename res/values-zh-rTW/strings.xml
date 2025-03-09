@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"連線成功"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"全部顯示"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"搜尋中"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"已連結的裝置"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"藍牙"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"使用藍牙"</string>
@@ -343,6 +349,16 @@
     <string name="unused_apps" msgid="648471933781010395">"未使用的應用程式"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# 個未使用的應用程式}other{# 個未使用的應用程式}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"移除權限並釋出空間"</string>
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"顯示比例 (實驗設定)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"開啟"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"應用程式預設"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"全螢幕"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"半螢幕"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"裝置顯示比例"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16:9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"3:2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4:3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"變更顯示比例後，應用程式會重新啟動。你可能會失去未儲存的變更內容。部分應用程式可能未針對某些顯示比例完成最佳化調整。"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s (內部儲存空間)"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"將系統資源用於優先提升應用程式效能"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"數據用量"</string>
@@ -569,7 +585,7 @@
     <string name="user_new_user_name" msgid="906698527658609819">"新的設定檔"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"要新增設定檔嗎？"</string>
     <string name="user_add_user_message_setup" msgid="812616230454605159">"當你建立新設定檔後，該使用者必須自己進行個人化設定。"</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"任何設定檔都能更新所有其他設定檔使用的應用程式。"</string>
+    <string name="user_add_user_message_update" msgid="3836353291078729240">"任何設定檔都能為全部設定檔更新應用程式。"</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"設定檔數量已達上限"</string>
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{只能建立 1 個設定檔。}other{最多可以建立 # 個設定檔。}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"無法建立新設定檔"</string>
@@ -617,7 +633,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"帳戶"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"新增帳戶"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"未新增任何帳戶"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> 的帳戶"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"「<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>」的帳戶"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"自動同步處理資料"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"允許應用程式自動重新整理資料"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"要允許自動同步資料嗎？"</string>
@@ -748,7 +764,7 @@
     <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{至少要有 # 個非字母半形字元}other{至少要有 # 個非字母半形字元}}"</string>
     <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{至少要有 # 個非數值半形字元}other{至少要有 # 個非數值半形字元}}"</string>
     <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{至少要有 # 個半形字元}other{至少要有 # 個半形字元}}"</string>
-    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{至少要有 # 位數}other{至少要有 # 位數}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{至少要有 # 個數字}other{至少要有 # 個數字}}"</string>
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{必須少於 # 個半形字元}other{必須少於 # 個半形字元}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{必須少於 # 位數}other{必須少於 # 位數}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"不允許使用依遞增或遞減順序排列或是重複的一串數字"</string>
@@ -797,7 +813,10 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"裝置必須開啟藍牙，才會顯示在畫面上"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"如要配對裝置，請開啟藍牙設定"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"主題"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"開啟行車模式"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"顯示版面配置界限"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"強制使用從右至左版面配置方向"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"自訂疊加"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"資訊娛樂系統管理員"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"已啟用的應用程式"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"已停用的應用程式"</string>
@@ -933,4 +952,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"你的網際網路方案已過期"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看方案"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完成"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"本車輛不支援這項功能"</string>
 </resources>

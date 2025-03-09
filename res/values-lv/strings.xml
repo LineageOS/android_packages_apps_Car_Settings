@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Savienojums izveidots"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Rādīt visu"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Notiek meklēšana"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"Pievienotās ierīces"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Izmantot Bluetooth"</string>
@@ -238,7 +244,7 @@
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Ieteiktās"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Visas valodas"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastatūra"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"Tastatūru pārvaldība"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Pārvaldīt tastatūras"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Teksta pārvēršanas runā izvade"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Vēlamā programma"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Pašreizējā programma"</string>
@@ -343,6 +349,16 @@
     <string name="unused_apps" msgid="648471933781010395">"Neizmantotās lietotnes"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# neizmantota lietotne}zero{# neizmantotu lietotņu}one{# neizmantota lietotne}other{# neizmantotas lietotnes}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Noņemt atļaujas un atbrīvot vietu"</string>
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"Malu attiecība (eksperimentāla funkcija)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"Atvērt"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"Lietotnes noklusējums"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"Pilnekrāna režīms"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"Puse ekrāna"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"Ierīces malu attiecība"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16:9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"3:2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4:3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"Mainot malu attiecību, lietotne tiks restartēta. Iespējams, zaudēsiet nesaglabātas izmaiņas. Dažas lietotnes var nebūt optimizētas noteiktām malu attiecībām."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s: iekšējā atmiņa"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Tiek izmantoti sistēmas resursi, lai piešķirtu lietotnes veiktspējas prioritāti."</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datu lietojums"</string>
@@ -482,7 +498,7 @@
     <string name="legal_information" msgid="1838443759229784762">"Juridiskā informācija"</string>
     <string name="contributors_title" msgid="7698463793409916113">"Līdzdalībnieki"</string>
     <string name="manual" msgid="4819839169843240804">"Manuāli"</string>
-    <string name="regulatory_labels" msgid="3165587388499646779">"Regulējošās uzlīmes"</string>
+    <string name="regulatory_labels" msgid="3165587388499646779">"Regulējošās atzīmes"</string>
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Drošības un regulējošā informācija"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Autortiesības"</string>
     <string name="license_title" msgid="936705938435249965">"Licence"</string>
@@ -568,8 +584,8 @@
     <string name="user_add_user_menu" msgid="4125869008006021799">"Pievienot profilu"</string>
     <string name="user_new_user_name" msgid="906698527658609819">"Jauns profils"</string>
     <string name="user_add_user_title" msgid="6296827596015729982">"Vai pievienot jaunu profilu?"</string>
-    <string name="user_add_user_message_setup" msgid="812616230454605159">"Kad jūs esat izveidojis jaunu profilu, profila īpašniekam tas patstāvīgi jāpielāgo."</string>
-    <string name="user_add_user_message_update" msgid="3836353291078729240">"No jebkura profila var atjaunināt lietotnes, lai izmantotu tās visos pārējos profilos."</string>
+    <string name="user_add_user_message_setup" msgid="812616230454605159">"Pēc jauna profila izveides attiecīgais lietotājs varēs to pielāgot."</string>
+    <string name="user_add_user_message_update" msgid="3836353291078729240">"Jebkurā profilā var atjaunināt lietotnes, kas tiek izmantotas arī visos pārējos profilos."</string>
     <string name="user_limit_reached_title" msgid="5677729355746623293">"Sasniegts profilu ierobežojums"</string>
     <string name="user_limit_reached_message" msgid="2773441357248819721">"{count,plural, =1{Var izveidot tikai vienu profilu.}zero{Var izveidot ne vairāk kā # profilus.}one{Var izveidot ne vairāk kā # profilu.}other{Var izveidot ne vairāk kā # profilus.}}"</string>
     <string name="add_user_error_title" msgid="7589792057846396341">"Nevarēja izveidot jaunu profilu"</string>
@@ -779,7 +795,7 @@
     <string name="restricted_for_driver" msgid="3364388937671526800">"Jūs nevarat veikt šo darbību."</string>
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Nevar pievienot profilu braukšanas laikā."</string>
     <string name="default_search_query" msgid="3137420627428857068">"Meklēt"</string>
-    <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistents un balss vadība"</string>
+    <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Asistents un balss"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Digitālā asistenta lietotne"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Izmantot ekrānā redzamo tekstu"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Atļaujiet Asistentam piekļūt ekrāna saturam"</string>
@@ -797,7 +813,10 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Lai skatītu savas ierīces, ieslēdziet Bluetooth."</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Lai savienotu pārī kādu ierīci, atveriet Bluetooth iestatījumus."</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Motīvs"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"Ieslēgt braukšanas režīmu"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"Rādīt izkārtojuma robežas"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"Virziens no labās uz kreiso (obligāts)"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"Pielāgošanas pārklājums"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Informatīvi izklaidējošās sistēmas administrators"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivizētās lietotnes"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivizētās lietotnes"</string>
@@ -939,4 +958,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Beidzies jūsu interneta plānu derīguma termiņš"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Skatīt plānus"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Gatavs"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Jūsu transportlīdzeklī šī funkcija netiek atbalstīta"</string>
 </resources>

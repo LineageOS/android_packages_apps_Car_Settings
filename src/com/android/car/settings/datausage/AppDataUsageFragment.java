@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 import androidx.loader.app.LoaderManager;
@@ -77,7 +78,6 @@ public class AppDataUsageFragment extends SettingsFragment implements
     public void onAttach(Context context) {
         super.onAttach(context);
 
-        TelephonyManager telephonyManager = context.getSystemService(TelephonyManager.class);
         int subId = getArguments() != null
                 ? getArguments().getInt(ARG_NETWORK_SUB_ID, SUB_ID_NULL) : SUB_ID_NULL;
         if (subId == SUB_ID_NULL) {
@@ -87,18 +87,18 @@ public class AppDataUsageFragment extends SettingsFragment implements
                     SubscriptionManager.class);
             subId = DataUsageUtils.getDefaultSubscriptionId(subscriptionManager);
         }
-        mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(telephonyManager, subId);
+        mNetworkTemplate = getNetworkTemplate(context, subId);
         mDataUsageController = new DataUsageController(context);
         mAppsNetworkStatsManager = new AppsNetworkStatsManager(getContext());
         mAppsNetworkStatsManager.registerListener(
                 use(AppDataUsagePreferenceController.class, R.string.pk_app_data_usage_detail));
-        mDataUsageCycleManager = new DataUsageCycleManager(getContext(), mNetworkTemplate);
+        mDataUsageCycleManager = getDataUsageCycleManager(mNetworkTemplate);
         mDataUsageCycleManager.registerListener(use(DataUsageCyclePreferenceController.class,
                 R.string.pk_data_usage_usage_history));
         use(DataUsageCyclePreferenceController.class,
                 R.string.pk_data_usage_usage_history)
                 .setDataCyclePickedListener(this)
-                .setDataUsageInfo(mDataUsageController.getDataUsageInfo(mNetworkTemplate));
+                .setDataUsageInfo(getDataUsageInfo(mNetworkTemplate));
 
         long usage = mDataUsageController.getDataUsageInfo(mNetworkTemplate).usageLevel;
         mAppDataUsageTotalPreferenceController =
@@ -131,6 +131,22 @@ public class AppDataUsageFragment extends SettingsFragment implements
     @VisibleForTesting(otherwise = VisibleForTesting.NONE)
     Bundle getBundle() {
         return mBundle;
+    }
+
+    @VisibleForTesting
+    NetworkTemplate getNetworkTemplate(Context context, int subId) {
+        TelephonyManager telephonyManager = context.getSystemService(TelephonyManager.class);
+        return DataUsageUtils.getMobileNetworkTemplate(telephonyManager, subId);
+    }
+
+    @VisibleForTesting
+    DataUsageController.DataUsageInfo getDataUsageInfo(@NonNull NetworkTemplate networkTemplate) {
+        return mDataUsageController.getDataUsageInfo(networkTemplate);
+    }
+
+    @VisibleForTesting
+    DataUsageCycleManager getDataUsageCycleManager(@NonNull NetworkTemplate networkTemplate) {
+        return new DataUsageCycleManager(getContext(), networkTemplate);
     }
 
     @Override

@@ -26,6 +26,7 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.applications.appinfo.AppAllServicesPreferenceController;
+import com.android.car.settings.applications.appinfo.AppAspectRatioPreferenceController;
 import com.android.car.settings.applications.appinfo.HibernationSwitchPreferenceController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
@@ -95,6 +96,9 @@ public class ApplicationDetailsFragment extends SettingsFragment {
                 .setPackageName(mPackageName);
         use(VersionPreferenceController.class,
                 R.string.pk_application_details_version).setPackageInfo(mPackageInfo);
+        use(AppAspectRatioPreferenceController.class,
+                R.string.pk_application_aspect_ratio)
+                .setApplicationInfo(mAppEntry.info).setPackageName(mPackageName);
     }
 
     private void retrieveAppEntry() {

@@ -25,7 +25,7 @@
     <string name="auto_brightness_summary" msgid="2002570577219479702">"ପରିବେଶ ଅନୁଯାୟୀ ସ୍କ୍ରିନ୍ ଉଜ୍ଜ୍ୱଳତା ଆଡଜଷ୍ଟ କରନ୍ତୁ"</string>
     <string name="theme_toggle_title" msgid="7091393596274709558">"ଥିମ"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"ରାତି ଆଲୋକ ଅନ୍ ହୋଇଛି"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"ନେଟ୍‌ୱର୍କ ଓ ଇର୍ଣ୍ଟନେଟ୍"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"ନେଟୱାର୍କ ଓ ଇଣ୍ଟର୍ନେଟ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"ମୋବାଇଲ୍‌ ନେଟ୍‌ୱର୍କ"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{#ଟି SIM}other{#ଟି SIM}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"ସକ୍ରିୟ / SIM"</string>
@@ -132,7 +132,7 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 ଠିକଣା"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"ଗେଟ୍‌ୱେ"</string>
-    <string name="wifi_preferences_title" msgid="772788844257225510">"ୱାଇ-ଫାଇ ଅଗ୍ରାଧିକାରଗୁଡ଼ିକ"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"ୱାଇ-ଫାଇ ପସନ୍ଦ"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"ୱାଇ-ଫାଇ ସ୍ୱତଃ ଚାଲୁ କରନ୍ତୁ"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"ୱାଇ-ଫାଇ ଆପଣଙ୍କର ହୋମ ନେଟୱାର୍କ ପରି ଉଚ୍ଚ ଗୁଣବତ୍ତାର ସେଭ୍ ହୋଇଥିବା ନେଟୱାର୍କରେ ଫେରିଆସିବ"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"ଲୋକେସନ୍ ବନ୍ଦ ଥିବା କାରଣରୁ ଉପଲବ୍ଧ ନାହିଁ। "<annotation id="link">"ଲୋକେସନ୍"</annotation>" ଚାଲୁ କରନ୍ତୁ।"</string>
@@ -141,7 +141,7 @@
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"ୱାଇ-ଫାଇ ସ୍କାନିଂ ଚାଲୁ ଅଛି"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ସ୍ୱଚାଳିତ ଭାବେ ମୋବାଇଲ୍ ଡାଟାକୁ ସ୍ୱିଚ୍ କରନ୍ତୁ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fiର ଇଣ୍ଟର୍ନେଟ୍ ଆକ୍ସେସ୍ ନଥିବା ବେଳେ ମୋବାଇଲ୍ ଡାଟା ବ୍ୟବହାର କରନ୍ତୁ। ଡାଟା ବ୍ୟବହାର ଦେୟ ଲାଗୁ ହୋଇପାରେ।"</string>
-    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"ୱାଇ-ଫାଇ ନେଟୱାର୍କ ଖୋଜି ସେଥିରେ ସଂଯୋଗ କରନ୍ତୁ"</string>
+    <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"ୱାଇ-ଫାଇ ନେଟୱାର୍କ ଖୋଜି ସେଥିରେ କନେକ୍ଟ କରନ୍ତୁ"</string>
     <string name="learn_more" msgid="8214605928933358604">"ଅଧିକ ଜାଣନ୍ତୁ"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ହଟ୍‌ସ୍ପଟ୍ ନାମ"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ଚାଲୁ ହେଉଛି..."</string>
@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"ସଫଳତାର ସହ ସଂଯୋଗ ହୋଇଛି"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"ସମସ୍ତ ଦେଖାନ୍ତୁ"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"ଖୋଜୁଛି..."</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"କନେକ୍ଟେଡ ଡିଭାଇସ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ବ୍ଲୁଟୁଥ୍‌"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ବ୍ଲୁଟୁଥ ବ୍ୟବହାର କରନ୍ତୁ"</string>
@@ -239,7 +245,7 @@
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"ସମସ୍ତ ଭାଷା"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"କୀବୋର୍ଡ"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"କୀବୋର୍ଡଗୁଡ଼ିକୁ ପରିଚାଳନା କରନ୍ତୁ"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ୍‍-ଟୁ-ସ୍ପିଚ୍‍ ଆଉଟ୍‍ପୁଟ୍"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"ଟେକ୍ସଟ-ଟୁ-ସ୍ପିଚ ଆଉଟପୁଟ"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ଅଗ୍ରାଧିକାର ଦିଆଯାଇଥିବା ଇଞ୍ଜିନ୍"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"ସାମ୍ପ୍ରତିକ ଇଞ୍ଜିନ୍"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"ସ୍ପୀଚ୍‌ ହାର"</string>
@@ -343,6 +349,16 @@
     <string name="unused_apps" msgid="648471933781010395">"ଅବ୍ୟବହୃତ ଆପ୍ସ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{#ଟି ଅବ୍ୟବହୃତ ଆପ}other{#ଟି ଅବ୍ୟବହୃତ ଆପ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ଅନୁମତିଗୁଡ଼ିକୁ କାଢ଼ି ସ୍ପେସ୍ ଖାଲି କରନ୍ତୁ"</string>
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"ଚଉଡ଼ା ଓ ଉଚ୍ଚତାର ଅନୁପାତ (ପରୀକ୍ଷାମୂଳକ)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"ଖୋଲନ୍ତୁ"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"ଆପ ଡିଫଲ୍ଟ"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"ଅଧା ସ୍କ୍ରିନ"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"ଡିଭାଇସ ଚଉଡ଼ା ଓ ଉଚ୍ଚତାର ଅନୁପାତ"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16:9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"3:2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4:3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"ଆପଣ ଚଉଡ଼ା ଓ ଉଚ୍ଚତାର ଅନୁପାତ ପରିବର୍ତ୍ତନ କଲେ ଏହି ଆପଟି ରିଷ୍ଟାର୍ଟ ହେବ। ଆପଣ ସେଭ କରାଯାଇନଥିବା ପରିବର୍ତ୍ତନଗୁଡ଼ିକୁ ହରାଇପାରନ୍ତି। ନିର୍ଦ୍ଦିଷ୍ଟ ଚଉଡ଼ା ଓ ଉଚ୍ଚତାର ଅନୁପାତ ପାଇଁ କିଛି ଆପ୍ସ ଅପ୍ଟିମାଇଜ ହୋଇନପାରେ।"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"ଇଣ୍ଟର୍ନଲ୍ ଷ୍ଟୋରେଜ୍‌ରେ %s ଅଛି"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"ଆପ ପରଫରମାନ୍ସକୁ ପ୍ରାଥମିକତା ଦେବା ପାଇଁ ସିଷ୍ଟମ ରିସୋର୍ସଗୁଡ଼ିକୁ ବ୍ୟବହାର କରେ"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ଡାଟାର ବ୍ୟବହାର"</string>
@@ -368,7 +384,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ସ୍କ୍ରିନସଟ୍ ବ୍ୟବହାର କରନ୍ତୁ"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ସ୍କ୍ରିନ୍‌ର ଇମେଜକୁ ଆକ୍ସେସ୍‌ କରିବାକୁ ସହାୟକ ଆପ୍‌କୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"ଭଏସ୍‌ ଇନ୍‌ପୁଟ୍"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"ସ୍ୱତଃପୂରଣ ସେବା"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"ଅଟୋଫିଲ ସେବା"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"କୌଣସିଟି ନୁହେଁ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ଚୟନିତ"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ଏହି ସହାୟକ, ସ୍କ୍ରିନ୍‌ରେ ଦେଖାଦେଉଥିବା କିମ୍ୱା ଆପ୍‌ଗୁଡ଼ିକ ମଧ୍ୟରେ ଆକ୍ସେସ୍ ହୋଇପାରିବା ଭଳି ସୂଚନା ସମେତ ଆପଣଙ୍କ ସିଷ୍ଟମ୍‌ରେ ଥିବା ଆପ୍‌ଗୁଡ଼ିକ ବିଷୟରେ ସୂଚନା ପଢ଼ିପାରିବ।"</string>
@@ -596,7 +612,7 @@
     <string name="profiles_list_title" msgid="1443396686780460221">"ପ୍ରୋଫାଇଲଗୁଡ଼ିକ"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s ପାଇଁ ଅନୁମତି ଅନୁମୋଦିତ ହୋଇଛି"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"ଷ୍ଟୋରେଜ"</string>
-    <string name="storage_music_audio" msgid="7827147379976134040">"ମ୍ୟୁଜିକ୍‌ ଓ ଅଡିଓ"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"ମ୍ୟୁଜିକ ଓ ଅଡିଓ"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"ଅନ୍ୟ ଆପ୍‍"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"ସିଷ୍ଟମ୍"</string>
@@ -615,11 +631,11 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>କୁ ସୁରକ୍ଷିତ ଭାବେ ବାହାର କରିଦିଆଯାଇଛି"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>କୁ ସୁରକ୍ଷିତ ଭାବେ ବାହାର କରିହେଲା ନାହିଁ"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ଆକାଉଣ୍ଟ"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"ଆକାଉଣ୍ଟ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"କୌଣସି ଆକାଉଣ୍ଟ ଯୋଗ କରାଯାଇନାହିଁ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ପାଇଁ ଆକାଉଣ୍ଟ"</string>
-    <string name="account_auto_sync_title" msgid="3238816995364191432">"ସ୍ୱଚାଳିତ ଭାବେ ଡାଟା ସିଙ୍କ ହେଉ"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ଆପ୍‌କୁ ସ୍ୱଚାଳିତ ଭାବେ ଡାଟା ସତେଜ କରିବାକୁ ଦିଅନ୍ତୁ"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"ଡାଟା ସ୍ୱତଃ ସିଙ୍କ ହେଉ"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ଆପ୍ସକୁ ସ୍ୱତଃ ଡାଟା ରିଫ୍ରେସ କରିବାକୁ ଦିଅନ୍ତୁ"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ସ୍ୱଚାଳିତ ଡାଟା ସିଙ୍କ କରିବାର ଅନୁମତି ଦେବେ କି?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ଆପଣ ୱେବ ମାଧ୍ୟମରେ ଆପଣଙ୍କ ଆକାଉଣ୍ଟଗୁଡ଼ିକରେ କରିଥିବା ଯେ କୌଣସି ପରିବର୍ତ୍ତନ ସ୍ୱଚାଳିତ ଭାବେ ଆପଣଙ୍କ ଗାଡ଼ିକୁ କପି କରାଯିବ।\n\nଆପଣ ଗାଡ଼ିରେ କରିଥିବା ଯେ କୌଣସି ପରିବର୍ତ୍ତନକୁ କିଛି ଆକାଉଣ୍ଟ ସ୍ୱଚାଳିତ ଭାବେ ୱେବକୁ ମଧ୍ୟ କପି କରିପାରେ।"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ସ୍ୱଚାଳିତ ଡାଟା ସିଙ୍କ କରିବାର ଅନୁମତିକୁ ବାତିଲ କରିବେ?"</string>
@@ -638,7 +654,7 @@
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"ସବୁ ଆଇଟମ୍‌ ପାଇଁ ସିଙ୍କ୍‍ ବନ୍ଦ ହୋଇଛି"</string>
     <string name="sync_disabled" msgid="393531064334628258">"ସିଙ୍କ୍‌ ବନ୍ଦ ଅଛି"</string>
     <string name="sync_error" msgid="6698021343089247914">"ସିଙ୍କ୍‌ରେ ତ୍ରୁଟି"</string>
-    <string name="last_synced" msgid="4745124489150101529">"ଶେଷଥର <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g> ରେ  ସିଙ୍କ୍‌ ହୋଇଥିଲା"</string>
+    <string name="last_synced" msgid="4745124489150101529">"<xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>ରେ ଗତଥର ପାଇଁ ସିଙ୍କ ହୋଇଛି"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"ଏବେ ସିଙ୍କ୍‌ କରୁଛି…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"ବର୍ତ୍ତମାନ <xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g> ରେ  ସିଙ୍କ୍‌ କରିବାକୁ ଟାପ୍‌ କରନ୍ତୁ"</string>
@@ -706,7 +722,7 @@
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ପାଟର୍ନ ସେଭ୍‌ କରିବାରେ ତ୍ରୁଟି"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"ଅନେକଗୁଡ଼ିଏ ଭୁଲ୍ ପ୍ରଚେଷ୍ଟା। <xliff:g id="NUMBER">%d</xliff:g> ସେକେଣ୍ଡରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।"</string>
     <string name="lockpattern_does_not_support_rotary" msgid="7356367113555659428">"ପାଟର୍ନ ରୋଟାରୀକୁ ସମର୍ଥନ କରେ ନାହିଁ, ସ୍ପର୍ଶ ବ୍ୟବହାର କର"</string>
-    <string name="okay" msgid="4589873324439764349">"ଓକେ"</string>
+    <string name="okay" msgid="4589873324439764349">"ଠିକ ଅଛି"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"ସ୍କ୍ରୀନ ଲକ୍ ରିମୁଭ୍‍ କରିବେ କି?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ଏହା ଯେକୌଣସି ବ୍ୟକ୍ତି ଆପଣଙ୍କ ଆକାଉଣ୍ଟରେ ପ୍ରବେଶ ପାଇଁ ଅନୁମତି ଦେବ"</string>
     <string name="security_profile_lock_title" msgid="3082523481292617350">"ପ୍ରୋଫାଇଲ୍ ଲକ୍"</string>
@@ -727,7 +743,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"ଖାଲି କରନ୍ତୁ"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ବାତିଲ କରନ୍ତୁ"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ନିଶ୍ଚିତ"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"ଅତିକମରେ 4ଟି କେରେକ୍ଟର ହେବା ଜରୁରୀ"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"ଅତିକମରେ 4 କେରେକ୍ଟର ହେବା ଜରୁରୀ"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"ଏହି ଲକ ପ୍ରକାର ଉପଲବ୍ଧ ନାହିଁ।"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"କେବଳ 0-9 ପର୍ଯ୍ୟନ୍ତ ସଂଖ୍ୟା ରହିବା ଦରକାର"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ଏକ ସାମ୍ପ୍ରତିକ ପିନ୍‌ର ବ୍ୟବହାରକୁ ଡିଭାଇସ୍‌ ଆଡ୍‌ମିନ୍‌ ଅନୁମତି ଦେବନାହିଁ"</string>
@@ -748,7 +764,7 @@
     <string name="lockpassword_password_requires_nonletter" msgid="3089186186422638926">"{count,plural, =1{ଅତିକମରେ #ଟି ଅକ୍ଷର-ହୋଇନଥିବା କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ଅକ୍ଷର-ହୋଇନଥିବା କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}}"</string>
     <string name="lockpassword_password_requires_nonnumerical" msgid="1677123573552379526">"{count,plural, =1{ଅତିକମରେ #ଟି ସଂଖ୍ୟା-ହୋଇନଥିବା କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ସଂଖ୍ୟା-ହୋଇନଥିବା କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}}"</string>
     <string name="lockpassword_password_too_short" msgid="3898753131694105832">"{count,plural, =1{ଅତିକମରେ #ଟି କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି କେରେକ୍ଟର ରହିବା ଆବଶ୍ୟକ}}"</string>
-    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ଅତିକମରେ #ଟି ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ #ଟି ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ}}"</string>
+    <string name="lockpassword_pin_too_short" msgid="3671037384464545169">"{count,plural, =1{ଅତିକମରେ # ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ}other{ଅତିକମରେ # ଅଙ୍କ ରହିବା ଆବଶ୍ୟକ}}"</string>
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{#ଟି କେରେକ୍ଟରରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}other{#ଟି କେରେକ୍ଟରରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{#ଟି ଅଙ୍କରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}other{#ଟି ଅଙ୍କରୁ କମ୍ ହେବା ଆବଶ୍ୟକ}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ସଂଖ୍ୟାର କ୍ରମବୃଦ୍ଧି, କ୍ରମହ୍ରାସ, କିମ୍ବା ପୁନରାବୃତ୍ତ କ୍ରମ ଅନୁମୋଦିତ ନୁହେଁ"</string>
@@ -797,7 +813,10 @@
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"ଆପଣଙ୍କ ଡିଭାଇସଗୁଡ଼ିକୁ ଦେଖିବା ପାଇଁ, ବ୍ଲୁଟୁଥ ଚାଲୁ କରନ୍ତୁ"</string>
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"ଏକ ଡିଭାଇସକୁ ପେୟାର କରିବା ପାଇଁ, ବ୍ଲୁଟୁଥ ସେଟିଂସ ଖୋଲନ୍ତୁ"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"ଥିମ"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"ଡ୍ରାଇଭିଂ ସେଟ କରନ୍ତୁ"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"ଲେଆଉଟ ବାଉଣ୍ଡ ଦେଖାନ୍ତୁ"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"RTL ଲେଆଉଟ ଡିରେକ୍ସନ ଲାଗୁ କରନ୍ତୁ"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"କଷ୍ଟମାଇଜେସନ ଓଭରଲେ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମ ଆଡମିନ୍"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ସକ୍ରିୟ ଥିବା ଆପଗୁଡ଼ିକ"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"ନିଷ୍କ୍ରିୟ ଥିବା ଆପଗୁଡ଼ିକ"</string>
@@ -933,4 +952,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"ଆପଣଙ୍କର ଇଣ୍ଟର୍ନେଟ ପ୍ଲାନର ମିଆଦ ଶେଷ ହୋଇଯାଇଛି"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ପ୍ଲାନଗୁଡ଼ିକ ଦେଖନ୍ତୁ"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ହୋଇଗଲା"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ଆପଣଙ୍କ ଗାଡ଼ି ଏହି ଫିଚରକୁ ସମର୍ଥନ କରେ ନାହିଁ"</string>
 </resources>

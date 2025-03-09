@@ -28,9 +28,8 @@ import androidx.fragment.app.Fragment;
  * Activity class for launching a SubSetting as a separate activity.
  */
 public class SubSettingsActivity extends BaseCarSettingsActivity {
-
-    private static final String KEY_SUB_SETTINGS_FRAGMENT = "key_sub_settings_fragment";
-    private static final String KEY_SUB_SETTINGS_FRAGMENT_ARGS = "key_sub_settings_fragment_args";
+    public static final String KEY_SUB_SETTINGS_FRAGMENT = "key_sub_settings_fragment";
+    public static final String KEY_SUB_SETTINGS_FRAGMENT_ARGS = "key_sub_settings_fragment_args";
     private static final Logger LOG = new Logger(SubSettingsActivity.class);
 
     /**

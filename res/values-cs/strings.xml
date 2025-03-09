@@ -180,6 +180,12 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"Připojení úspěšně navázáno"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"Zobrazit vše"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"Hledání"</string>
+    <!-- no translation found for wifi_detail_share (3765487472190563802) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_description (1417559695973326762) -->
+    <skip />
+    <!-- no translation found for wifi_detail_share_toast (9106513465439393280) -->
+    <skip />
     <string name="connected_settings_title" msgid="8868738903280658151">"Připojená zařízení"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Používat Bluetooth"</string>
@@ -343,6 +349,16 @@
     <string name="unused_apps" msgid="648471933781010395">"Nepoužívané aplikace"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# nepoužívaná aplikace}few{# nepoužívané aplikace}many{# nepoužívané aplikace}other{# nepoužívaných aplikací}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Odebrat oprávnění a uvolnit místo"</string>
+    <string name="aspect_ratio_label" msgid="5484863076085548807">"Poměr stran (experimentální)"</string>
+    <string name="aspect_ratio_action_button" msgid="5581373962239508271">"Otevřít"</string>
+    <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"Výchozí nastavení aplikace"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"Celá obrazovka"</string>
+    <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"Polovina obrazovky"</string>
+    <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"Poměr stran zařízení"</string>
+    <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"16 : 9"</string>
+    <string name="user_aspect_ratio_3_2" msgid="5245528023878893826">"3 : 2"</string>
+    <string name="user_aspect_ratio_4_3" msgid="6639743021314111820">"4 : 3"</string>
+    <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"Když změníte poměr stran, aplikace se restartuje. Můžete přijít o neuložené změny. Některé aplikace nemusí být optimalizované pro určité poměry stran."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s v interním úložišti"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Používá systémové zdroje k upřednostnění výkonu aplikace"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Využití dat"</string>
@@ -397,7 +413,7 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Pro Asistenta a další aplikace"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# aplikace ovlivňuje výkon}few{# aplikace ovlivňují výkon}many{# aplikace ovlivňuje výkon}other{# aplikací ovlivňuje výkon}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"K systému a dalším nastavením"</string>
-    <string name="special_access" msgid="5730278220917123811">"Zvláštní přístup aplikací"</string>
+    <string name="special_access" msgid="5730278220917123811">"Speciální přístup aplikací"</string>
     <string name="show_system" msgid="4401355756969485287">"Zobrazit systémové aplikace"</string>
     <string name="hide_system" msgid="8845453295584638040">"Skrýt systémové aplikace"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Skrýt systémové aplikace"</string>
@@ -589,7 +605,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"Vy (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Jméno"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Není nastaveno"</string>
-    <string name="edit_user_name_title" msgid="1118500707473139995">"Upravit profilové jméno"</string>
+    <string name="edit_user_name_title" msgid="1118500707473139995">"Upravit název profilu"</string>
     <string name="name_input_blank_error" msgid="2088850865880984123">"Pole nesmí být prázdné."</string>
     <string name="name_input_invalid_error" msgid="4355625213535164704">"Zadané profilové jméno je neplatné."</string>
     <string name="users_list_title" msgid="770764290290240909">"Uživatelé"</string>
@@ -795,9 +811,12 @@
     <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Tento profil je aktuálně přihlášen jako řidič. Zkuste to znovu, až se tento profil používat nebude."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Jas displeje"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"Pokud chcete zobrazit svá zařízení, zapněte Bluetooth"</string>
-    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Pokud spárovat zařízení, zapněte nastavení Bluetooth"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Zařízení spárujete v nastavení Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Motiv"</string>
+    <string name="driving_mode_title" msgid="8103270030335833998">"Nastavit režim jízdy autem"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"Zobrazit ohraničení"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"Vynutit rozvržení zprava doleva"</string>
+    <string name="show_customization_overlay_title" msgid="2543804846629965883">"Vrstva přizpůsobení"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrátor informačního a zábavního systému"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Aktivované aplikace"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Deaktivované aplikace"</string>
@@ -945,4 +964,5 @@
     <string name="connectivity_inactive_prompt" msgid="2325831357510029165">"Vašim internetovým tarifům vypršela platnost"</string>
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Zobrazit tarify"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Hotovo"</string>
+    <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Vaše vozidlo tuhle funkci nepodporuje"</string>
 </resources>
