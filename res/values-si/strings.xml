@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"දැනුම්දීම් ප්‍රවේශය"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> සඳහා දැනුම්දීම් ප්‍රවේශයට ඉඩ දෙන්න ද?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> හට සම්බන්ධතා නම් සහ ඔබට ලැබෙන පණිවිඩවල පෙළ වැනි පුද්ගලික තොරතුරු ඇතුළුව, සියලු දැනුම්දීම් කියවීමට හැකි වනු ඇත. එයට දැනුම්දීම අස් කිරීමට හෝ ඒවායේ අඩංගු ක්‍රියා බොත්තම් ප්‍රේරණය කිරීමටත් හැකි වනු ඇත.\n\nමෙය යෙදුමට බාධා නොකරන්න ක්‍රියාත්මක හෝ ක්‍රියාවිරහිත කිරීමට සහ අදාළ සැකසීම් වෙනස් කිරීමටත් හැකියාව ලබා දෙනු ඇත."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ඔබ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> සඳහා දැනුම්දීම් ප්‍රවේශය ක්‍රියාවිරහිත කළහොත්, බාධා නොකරන්න ප්‍රවේශයත් ක්‍රියාවිරහිත කරනු ඇත."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"ඔබ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> සඳහා දැනුම්දීම් ප්‍රවේශය ක්‍රියාවිරහිත කළහොත්, බාධා නොකරන්න පාලනය ද ක්‍රියාවිරහිත කරනු ඇත."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ක්‍රියාවිරහිත කරන්න"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"අවලංගු කරන්න"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"මෙම යෙදුම් පද්ධතියේ ක්‍රියාකාරිත්වයට සෘණාත්මකව බලපාන අතර පසුබිමේ ක්‍රියාත්මක වීම වළක්වා ඇත.\nපසුබිම් භාවිතයට ඉඩ දීමට සහ මෙම ලැයිස්තුවෙන් එය ඉවත් කිරීමට යෙදුමට ප්‍රමුඛත්වය දෙන්න."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"යෙදුම ප්‍රමුඛ කරන්න"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"ප්‍රිමියම් SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"පාරිතෝෂික කෙටිපණිවුඩ ඔබෙන් මුදල් අය කළ හැකි අතර ඔබේ වාහක බිල්පත්වලට එක් කරනු ඇත. ඔබ යෙදුමක් සඳහා අවසරය සබල කරන්නේ නම්, ඔබට එම යෙදුම භාවිතයෙන් පාරිතෝෂික කෙටිපණිවුඩ යැවීමට හැකි වනු ඇත."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"පරිශීලන ප්‍රවේශය"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"ඔබ භාවිත කරන වෙනත් යෙදුම් මොනවාද යන්න සහ ඒවා කොතරම් භාවිත කරන්නේද යන්න මෙන්ම, ඔබේ වාහකය, භාෂා සැකසීම්, සහ වෙනත් විස්තර පිළිබඳව හඹා යාමට පරිශීලන ප්‍රවේශය යෙදුමකට ඉඩ දෙයි."</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"යෙදුම් භාවිත දත්ත"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"ඔබ භාවිත කරන වෙනත් යෙදුම් මොනවා ද යන්න සහ ඒවා කොතරම් භාවිත කරන්නේ ද යන්න මෙන්ම, ඔබේ වාහකය, භාෂා සැකසීම් සහ වෙනත් විස්තර පිළිබඳව හඹා යාමට සියලු යෙදුම් භාවිතයේ දත්ත වෙත ප්‍රවේශය යෙදුමකට ඉඩ දෙයි."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi පාලනය"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi පාලනය යෙදුමකට Wi-Fi ක්‍රියාත්මක හෝ ක්‍රියාවිරහිත කිරීමට, Wi-Fi ජාල ස්කෑන් කර සබැඳීමට, ජාල එක් කිරීමට හෝ ඉවත් කිරීමට, හෝ ස්ථානීය-පමණි හොට්ස්පොටයක් ඇරඹීමට ඉඩ දෙයි."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"තව"</string>

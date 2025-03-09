@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Quyền truy cập thông báo"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Cho phép <xliff:g id="SERVICE">%1$s</xliff:g> truy cập thông báo?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> có thể đọc tất cả các thông báo, bao gồm cả thông tin cá nhân như tên của người liên hệ và nội dung của thông báo mà bạn nhận được. Ứng dụng này cũng có thể bỏ qua thông báo hoặc kích hoạt các nút thao tác trong những thông báo đó.\n\nĐiều này cũng sẽ cho phép ứng dụng bật hoặc tắt chế độ Không làm phiền và thay đổi chế độ cài đặt có liên quan."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nếu bạn tắt quyền truy cập thông báo của <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, thì quyền truy cập chế độ Không làm phiền cũng có thể bị tắt."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Nếu bạn tắt quyền truy cập thông báo của <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, quyền kiểm soát chế độ Không làm phiền cũng có thể bị tắt."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Tắt"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hủy"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Những ứng dụng này ảnh hưởng tiêu cực đến hiệu suất của hệ thống và đã bị ngăn chạy ở chế độ nền.\nHãy thiết lập chế độ ưu tiên cho ứng dụng để cho phép sử dụng chế độ nền và xoá ứng dụng đó khỏi danh sách này."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Ưu tiên ứng dụng"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Tin nhắn dịch vụ"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Tin nhắn dịch vụ có thể làm bạn mất tiền và sẽ cộng thêm vào hóa đơn nhà mạng của bạn. Nếu cấp quyền cho một ứng dụng, thì bạn có thể gửi Tin nhắn dịch vụ bằng ứng dụng đó."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Quyền truy cập dữ liệu sử dụng"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Quyền truy cập vào dữ liệu sử dụng cho phép một ứng dụng theo dõi các ứng dụng khác mà bạn đang dùng và tần suất sử dụng, cũng như thông tin nhà mạng, các tùy chọn cài đặt ngôn ngữ và thông tin chi tiết khác."</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"Dữ liệu sử dụng ứng dụng"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Quyền truy cập vào tất cả dữ liệu sử dụng ứng dụng cho phép ứng dụng theo dõi xem bạn đang dùng ứng dụng nào khác và tần suất sử dụng, cũng như thông tin về nhà mạng, chế độ cài đặt ngôn ngữ và các thông tin khác."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kiểm soát Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Tùy chọn kiểm soát Wi-Fi cho phép một ứng dụng bật/tắt Wi-Fi, quét và kết nối vào mạng Wi-Fi, thêm/xóa mạng hoặc bắt đầu một điểm phát sóng chỉ dành cho mạng cục bộ."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Xem thêm"</string>

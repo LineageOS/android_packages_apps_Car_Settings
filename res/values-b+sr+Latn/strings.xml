@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Pristup obaveštenjima"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Želite li da dozvolite da <xliff:g id="SERVICE">%1$s</xliff:g> ima pristup obaveštenjima?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> će moći da čita sva obaveštenja, uključujući lične podatke, poput imena kontakata i teksta poruka koje primate. Moći će i da odbacuje obaveštenja ili da koristi dugmad za radnje koja sadrže. \n\nOvo će aplikaciji omogućiti i da uključuje ili isključuje režim Ne uznemiravaj i menja srodna podešavanja."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako isključite pristup obaveštenjima za <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, možda ćete isključiti i pristup režimu Ne uznemiravaj."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Ako isključite pristup obaveštenjima za <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, isključićete i kontrolu režima Ne uznemiravaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Otkaži"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ove aplikacije negativno utiču na performanse sistema i sprečeno je njihovo pokretanje u pozadini.\nDajte prioritet aplikaciji da biste dozvolili korišćenje u pozadini i da biste je uklonili sa ove liste."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritet aplikaciji"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Premijum SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premijum SMS-ovi mogu da koštaju i povećaće račune kod mobilnog operatera. Ako omogućite dozvolu za neku aplikaciju, moći ćete da šaljete premijum SMS-ove pomoću te aplikacije."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Pristup korišćenju"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Pristup korišćenju omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često, kao i da vidi mobilnog operatera, jezička podešavanja i druge podatke."</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"Podaci o korišćenju aplikacije"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Pristup svim podacima o korišćenju omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često, kao i da vidi mobilnog operatera, jezička podešavanja i druge podatke."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kontrola WiFi mreže"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontrola WiFi mreže omogućava aplikaciji da uključi ili isključi WiFi, traži i povezuje se na WiFi mreže, dodaje ili uklanja mreže ili pokreće samo lokalni hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Još"</string>
@@ -620,7 +620,7 @@
     <string name="storage_settings_title" msgid="8957054192781341797">"Memorijski prostor"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"Muzika i audio"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"Druge aplikacije"</string>
-    <string name="storage_files" msgid="6382081694781340364">"Datoteke"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Fajlovi"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem obuhvata datoteke koje se koriste za pokretanje verzije Android-a <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Audio datoteke"</string>

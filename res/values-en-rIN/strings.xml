@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Notification access"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Allow notification access for <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> will be able to read all notifications, including personal information such as contact names and the text of messages that you receive. It will also be able to dismiss notifications or trigger action buttons that they contain.\n\nThis will also give the app the ability to turn Do Not Disturb on or off, and change related settings."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"If you turn off notification access for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, Do Not Disturb access may also be turned off."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"If you turn off notification access for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, Do Not Disturb control may also be turned off."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Turn off"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancel"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"These apps negatively impact system performance and have been prevented from running in the background.\nPrioritise app to allow background usage and remove it from this list."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioritise app"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Premium SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMS may cost you money and will add up to your mobile bills. If you enable permission for an app, you will be able to send premium SMS using that app."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Usage access"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Usage access allows an app to track which other apps you\'re using and how often, as well as your operator, language settings and other details."</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"App usage data"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Access to all app usage data allows an app to track which other apps you’re using and how often, as well as your operator, language settings and other details."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi control"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi control allows an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks add or remove networks, or start a local-only hotspot."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"More"</string>

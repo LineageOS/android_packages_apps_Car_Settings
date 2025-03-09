@@ -429,15 +429,15 @@
     <string name="notification_access_title" msgid="1467340098885813473">"Хабарландыруларды пайдалану"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> қызметіне хабарландыруларды пайдалануға рұқсат берілсін бе?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> барлық хабарландыруларды, соның ішінде контакт аттары, сізге келген хабарлардың мәтіні сияқты жеке ақпаратты оқи алатын болады. Сондай-ақ хабарландыруларды өзгерте, жаба немесе олардағы әрекет түймелерін қоса алады. \n\nБұл, сондай-ақ қолданбаға Мазаламау режимін қосуға немесе өшіруге және тиісті параметрлерді өзгертуге мүмкіндік береді."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Егер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үшін хабарландыруларды пайдалану мүмкіндігін өшірсеңіз, Мазаламау режимін пайдалану мүмкін болмайды."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Егер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үшін хабарландыруларды пайдалану рұқсатын өшірсеңіз, \"Мазаламау\" басқару элементтері да өшуі мүмкін."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өшіру"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Бас тарту"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Бұл қолданбалар жүйенің өнімділігіне кері әсер етеді, сондықтан олардың фондық режимде жұмыс істеуіне тыйым салынды.\nҚолданбаның фондық режимде пайдаланылуына рұқсат беру үшін оны басым етіңіз және осы тізімнен жойыңыз."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Қолданбаны басым ету"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Ақылы SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Ақылы SMS жіберу үшін оператор тарифтеріне сәйкес ақы алынады. Егер қолданбаға рұқсат берсеңіз, сол қолданба арқылы ақылы SMS жібере аласыз."</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"Пайдалану мәліметін көру"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Пайдалану мәліметін көру рұқсаты қолданбаға сіз пайдаланатын басқа қолданбаларды және қаншалықты жиі пайдаланатыңыз туралы ақпаратты, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"Пайдалану туралы дерек"</string>
+    <string name="usage_access_description" msgid="7889884409739123407">"Барлық қолданбаны пайдалану туралы деректі пайдалануға рұқсат беру әрекеті қолданбаға басқа қолданбаларды қаншалықты жиі пайдаланатыныңызды, сондай-ақ байланыс операторыңыз, тіл параметрлеріңіз және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi желісін басқару"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi желісін басқару функциясы қолданбаға Wi-Fi желісін қосуға немесе өшіруге, Wi-Fi желілерін іздеуге және оларға жалғануға, желілерді енгізуге не өшіруге немесе тек жергілікті хотспотты іске қосуға рұқсат етеді."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Тағы"</string>
