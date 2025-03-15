@@ -16,8 +16,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="show_dev_countdown_cm">{count, plural,
-      =1      {Agora você está a # passo de ativar as configurações de desenvolvimento.}
-      other   {Agora você está a # passos de ativar as configurações de desenvolvimento.}
+      =1      {Você está agora a # passo de ativar as configurações de desenvolvimento.}
+      other   {Você está agora a # passos de ativar as configurações de desenvolvimento.}
     }</string>
     <string name="show_dev_on_cm">Você ativou as configurações de desenvolvimento!</string>
     <string name="show_dev_already_cm">Não é necessário, você já ativou as configurações de desenvolvimento.</string>
