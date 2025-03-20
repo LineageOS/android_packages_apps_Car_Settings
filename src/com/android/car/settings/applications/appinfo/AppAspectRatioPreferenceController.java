@@ -16,9 +16,12 @@
 
 package com.android.car.settings.applications.appinfo;
 
+import android.car.Car;
+import android.car.content.pm.CarPackageManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
@@ -35,12 +38,18 @@ public final class AppAspectRatioPreferenceController extends
     private ApplicationInfo mApplicationInfo;
     private AspectRatioManager mAspectRatioManager;
     private String mPackageName;
+    private CarPackageManager mCarPackageManager;
 
     public AppAspectRatioPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mAspectRatioManager = new AspectRatioManager(context);
+
+        Car car = Car.createCar(getContext());
+        if (car != null) {
+            mCarPackageManager = car.getCarManager(CarPackageManager.class);
+        }
     }
 
     @Override
@@ -50,6 +59,16 @@ public final class AppAspectRatioPreferenceController extends
 
     @Override
     public int getDefaultAvailabilityStatus() {
+        if (mCarPackageManager != null) {
+            try {
+                if (!mCarPackageManager.requiresDisplayCompat(mApplicationInfo.packageName)) {
+                    return UNSUPPORTED_ON_DEVICE;
+                }
+            } catch (PackageManager.NameNotFoundException e) {
+                LOG.e("App " + mApplicationInfo + " not found");
+            }
+        }
+
         return mAspectRatioManager.shouldShowAspectRatioSettingsForApp(mApplicationInfo)
                 ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
