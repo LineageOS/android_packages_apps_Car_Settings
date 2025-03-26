@@ -97,7 +97,7 @@ public class DataUsageSetThresholdBaseFragmentTest {
     @UiThreadTest
     public void onActivityCreated_noTemplateSet_getsDefaultTemplate() throws Throwable {
         when(DataUsageUtils.getDefaultSubscriptionId(any())).thenReturn(SUB_ID);
-        when(DataUsageUtils.getMobileNetworkTemplate(any(), eq(SUB_ID)))
+        when(DataUsageUtils.getMobileNetworkTemplate(mContext, any(), eq(SUB_ID)))
                 .thenReturn(mMockNetworkTemplate);
         setUpFragment(/* useTemplate= */ false, /* initialBytes= */ MIB_IN_BYTES);
 
