@@ -418,14 +418,14 @@
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"तुमच्या डेटाचा अ‍ॅप अ‍ॅक्सेस नियंत्रित करा"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"असिस्टंट आणि आणखी बऱ्याच गोष्टींसाठी"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# अ‍ॅप परफॉर्मन्सवर परिणाम करते}other{# अ‍ॅप्स परफॉर्मन्सवर परिणाम करतात}}"</string>
-    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"सिस्टम आणि इतर सेटिंग्जसाठी"</string>
+    <string name="apps_special_app_access_summary" msgid="6464767436309742163">"सिस्टीम आणि इतर सेटिंग्जसाठी"</string>
     <string name="special_access" msgid="5730278220917123811">"विशेष अ‍ॅप अ‍ॅक्सेस"</string>
-    <string name="show_system" msgid="4401355756969485287">"सिस्टम दाखवा"</string>
-    <string name="hide_system" msgid="8845453295584638040">"सिस्टम लपवा"</string>
-    <string name="hide_system_apps" msgid="6583947381056154020">"सिस्टम ॲप्स लपवा"</string>
+    <string name="show_system" msgid="4401355756969485287">"सिस्टीम दाखवा"</string>
+    <string name="hide_system" msgid="8845453295584638040">"सिस्टीम लपवा"</string>
+    <string name="hide_system_apps" msgid="6583947381056154020">"सिस्टीम ॲप्स लपवा"</string>
     <string name="alarms_and_reminders_title" msgid="5201073616071479075">"अलार्म आणि रिमाइंडर"</string>
-    <string name="modify_system_settings_title" msgid="4596320571562433972">"सिस्टम सेटिंग्ज सुधारित करा"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"ही परवानगी ॲपला सिस्टम सेटिंग्ज सुधारित करण्‍याची अनुमती देते."</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"सिस्टीम सेटिंग्ज सुधारित करा"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"ही परवानगी अ‍ॅपला सिस्टीम सेटिंग्ज सुधारित करण्‍याची अनुमती देते."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"सूचना अ‍ॅक्सेस"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ला सूचना अ‍ॅक्सेस करण्याची अनुमती द्यायची का?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"संपर्क नावे आणि तुम्हाला येणारे एसएमएस यासारख्या वैयक्तिक माहितीच्या समावेशासह <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सर्व सूचना पाहू शकेल. ते त्यांच्यामधील सूचना डिसमिस करू शकेल अथवा त्यामध्ये असलेली अ‍ॅक्शन बटणे ट्रिगर करू शकेल. \n\nयामुळे ॲपला व्यत्यय आणू नका सुरू किंवा बंद करता येईल आणि संबंधित सेटिंग्ज बदलता येतील."</string>
@@ -478,8 +478,8 @@
     <string name="microphone_settings_recent_requests_title" msgid="8154796551134761329">"अलीकडे अ‍ॅक्सेस केलेला"</string>
     <string name="microphone_settings_recent_requests_view_all_title" msgid="4339820818072842872">"सर्व पहा"</string>
     <string name="microphone_settings_loading_app_permission_stats" msgid="4357161201098081615">"लोड होत आहे…"</string>
-    <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
-    <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>
+    <string name="system_setting_title" msgid="6864599341809463440">"सिस्टीम"</string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टीम अपडेट"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"प्रगत"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"याविषयी, कायदेशीर माहिती, रीसेट करणे आणि आणखी बरेच काही"</string>
     <string name="restart_infotainment_system_title" msgid="5174129167446756511">"इंफोटेनमेंट सिस्टीम पुन्हा सुरू करा"</string>
@@ -579,7 +579,7 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"प्रशासक म्हणून साइन इन केले आहे"</string>
     <string name="grant_admin_permissions_title" msgid="4496239754512028468">"ॲडमिन परवानग्या द्यायच्या का?"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"प्रशासक करा"</string>
-    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"इतर ॲडमिनसाठीच्या प्रोफाइलसह ॲडमिनला इतर प्रोफाइल हटवता येतील आणि इंफोटेनमेंट सिस्टम फॅक्टरी रीसेट करता येईल."</string>
+    <string name="grant_admin_permissions_message" msgid="5205433947453539566">"इतर ॲडमिनसाठीच्या प्रोफाइलसह ॲडमिनला इतर प्रोफाइल हटवता येतील आणि इंफोटेनमेंट सिस्टीम फॅक्टरी रीसेट करता येईल."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"ही क्रिया परत उलट करता येणार नाही."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"होय, प्रशासक करा"</string>
     <string name="create_user_permission_title" msgid="2402003632264628632">"नवीन प्रोफाइल तयार करा"</string>
@@ -621,7 +621,7 @@
     <string name="storage_music_audio" msgid="7827147379976134040">"संगीत आणि ऑडिओ"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"इतर अ‍ॅप्स"</string>
     <string name="storage_files" msgid="6382081694781340364">"फाइल"</string>
-    <string name="storage_system" msgid="1271345630248014010">"सिस्टम"</string>
+    <string name="storage_system" msgid="1271345630248014010">"सिस्टीम"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टममध्ये अशा फायलींचा समावेश आहे ज्यांचा वापर Android आवृत्ती <xliff:g id="VERSION">%s</xliff:g> रन करण्यासाठी केला जातो"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फाइल"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"मोजत आहे…"</string>
@@ -910,11 +910,11 @@
     <string name="sharing_remote_bugreport_dialog_message" msgid="7018120538510110940">"हा बग रिपोर्ट वाहनाच्या संस्था व्यवस्थापकासह शेअर केला जात आहे. अधिक तपशिलांसाठी त्यांच्याशी संपर्क साधा."</string>
     <string name="share_remote_bugreport_action" msgid="5364819432179581532">"शेअर करा"</string>
     <string name="decline_remote_bugreport_action" msgid="7287544934032744334">"नकार द्या"</string>
-    <string name="factory_reset_parked_title" msgid="4004694559766549441">"इंफोटेनमेंट सिस्टम रीसेट करा"</string>
+    <string name="factory_reset_parked_title" msgid="4004694559766549441">"इंफोटेनमेंट सिस्टीम रीसेट करा"</string>
     <string name="factory_reset_parked_text" msgid="1446768795193651311">"तुमच्या सिस्टमला फॅक्टरी रीसेट करण्याची आणि सर्व डेटा मिटवण्याची विनंती मिळाली आहे. तुम्ही ती आता रीसेट करू शकता किंवा पुढील वेळी कार सुरू झाल्यावर ती रीसेट होईल. त्यांनतर तुम्ही नवीन प्रोफाइल सेट करू शकता."</string>
     <string name="factory_reset_now_button" msgid="4461863686086129437">"आता रीसेट करा"</string>
     <string name="factory_reset_later_button" msgid="2653125445148367016">"नंतर रीसेट करा"</string>
-    <string name="factory_reset_later_text" msgid="6371031843489938419">"पुढील वेळी कार सुरू झाल्यावर इंफोटेनमेंट सिस्टम रीसेट होईल."</string>
+    <string name="factory_reset_later_text" msgid="6371031843489938419">"पुढील वेळी कार सुरू झाल्यावर इंफोटेनमेंट सिस्टीम रीसेट होईल."</string>
     <string name="factory_reset_driving_text" msgid="6833832382688900191">"रीसेट सुरू करण्यासाठी कार पार्क केलेली असावी."</string>
     <string name="power_component_disabled" msgid="7084144472096800457">"हे सेटिंग आता बदलू शकत नाही"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"अ‍ॅक्सेसिबिलिटी"</string>
