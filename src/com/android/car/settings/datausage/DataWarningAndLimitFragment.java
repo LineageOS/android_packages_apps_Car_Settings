@@ -74,7 +74,7 @@ public class DataWarningAndLimitFragment extends SettingsFragment {
         if (mNetworkTemplate == null) {
             mTelephonyManager = context.getSystemService(TelephonyManager.class);
             mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
-            mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager,
+            mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(context, mTelephonyManager,
                     DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
         }
 

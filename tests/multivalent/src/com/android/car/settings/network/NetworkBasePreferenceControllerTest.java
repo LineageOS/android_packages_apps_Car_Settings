@@ -72,7 +72,8 @@ public class NetworkBasePreferenceControllerTest {
         ExtendedMockito.when(TelephonyManager.from(mContext)).thenReturn(mMockTelephonyManager);
         when(mMockTelephonyManager.createForSubscriptionId(SUB_ID))
                 .thenReturn(mMockTelephonyManager);
-        ExtendedMockito.when(DataUsageUtils.getMobileNetworkTemplate(mMockTelephonyManager, SUB_ID))
+        ExtendedMockito.when(DataUsageUtils.getMobileNetworkTemplate(mContext,
+                        mMockTelephonyManager, SUB_ID))
                 .thenReturn(mMockNetworkTemplate);
 
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,

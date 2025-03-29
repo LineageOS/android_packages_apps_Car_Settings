@@ -16,6 +16,8 @@
 
 package com.android.car.settings.datausage;
 
+import static android.content.pm.PackageManager.FEATURE_TELEPHONY_SUBSCRIPTION;
+
 import android.content.Context;
 import android.net.NetworkStats;
 import android.net.NetworkTemplate;
@@ -50,8 +52,11 @@ public final class DataUsageUtils {
     /**
      * Returns the mobile network template given the subscription id.
      */
-    public static NetworkTemplate getMobileNetworkTemplate(TelephonyManager telephonyManager,
-            int subscriptionId) {
+    public static NetworkTemplate getMobileNetworkTemplate(Context context,
+            TelephonyManager telephonyManager, int subscriptionId) {
+        if (!context.getPackageManager().hasSystemFeature(FEATURE_TELEPHONY_SUBSCRIPTION)) {
+            return null;
+        }
         String subscriberId = telephonyManager.getSubscriberId(subscriptionId);
         NetworkTemplate.Builder builder =
                 new NetworkTemplate.Builder(NetworkTemplate.MATCH_MOBILE)

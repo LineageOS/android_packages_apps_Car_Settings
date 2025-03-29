@@ -79,7 +79,7 @@ public class AppSpecificDataUsageFragment extends SettingsFragment implements
             TelephonyManager telephonyManager = context.getSystemService(TelephonyManager.class);
             SubscriptionManager subscriptionManager =
                     context.getSystemService(SubscriptionManager.class);
-            networkTemplate = DataUsageUtils.getMobileNetworkTemplate(telephonyManager,
+            networkTemplate = DataUsageUtils.getMobileNetworkTemplate(context, telephonyManager,
                     DataUsageUtils.getDefaultSubscriptionId(subscriptionManager));
         }
 
