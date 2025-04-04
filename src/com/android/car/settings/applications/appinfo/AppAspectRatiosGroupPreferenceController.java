@@ -51,7 +51,6 @@ public class AppAspectRatiosGroupPreferenceController extends
     private static final String KEY_PREF_16_9 = "16_9_pref";
     private static final String KEY_PREF_4_3 = "4_3_pref";
     private static final String KEY_PREF_3_2 = "3_2_pref";
-    private static final String KEY_ASPECT_RATIO_UNSET = "aspect_ratio_unset";
     private static final BiMap<String, Integer> KEY_TO_ASPECT_RATIO_MAP = ImmutableBiMap.of(
             KEY_PREF_DEFAULT, PackageManager.USER_MIN_ASPECT_RATIO_APP_DEFAULT,
             KEY_PREF_FULLSCREEN, PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN,
@@ -59,8 +58,7 @@ public class AppAspectRatiosGroupPreferenceController extends
             KEY_PREF_DISPLAY_SIZE, PackageManager.USER_MIN_ASPECT_RATIO_DISPLAY_SIZE,
             KEY_PREF_4_3, PackageManager.USER_MIN_ASPECT_RATIO_4_3,
             KEY_PREF_16_9, PackageManager.USER_MIN_ASPECT_RATIO_16_9,
-            KEY_PREF_3_2, PackageManager.USER_MIN_ASPECT_RATIO_3_2,
-            KEY_ASPECT_RATIO_UNSET, PackageManager.USER_MIN_ASPECT_RATIO_UNSET
+            KEY_PREF_3_2, PackageManager.USER_MIN_ASPECT_RATIO_3_2
     );
     private List<RadioWithImagePreference> mPreferenceList;
     private String mSelectedKey = KEY_PREF_DEFAULT;
@@ -99,7 +97,7 @@ public class AppAspectRatiosGroupPreferenceController extends
             LOG.d("There is an exception when trying to get the current aspect ratio: " + e);
         }
         mSelectedKey = KEY_TO_ASPECT_RATIO_MAP.inverse()
-                .getOrDefault(currentAspectRatio, KEY_ASPECT_RATIO_UNSET);
+                .getOrDefault(currentAspectRatio, KEY_PREF_DEFAULT);
         for (int i = 0; i < getPreference().getPreferenceCount(); i++) {
             RadioWithImagePreference child =
                     (RadioWithImagePreference) getPreference().getPreference(i);
