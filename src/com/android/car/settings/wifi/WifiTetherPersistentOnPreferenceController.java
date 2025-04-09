@@ -19,7 +19,6 @@ package com.android.car.settings.wifi;
 import static android.car.settings.CarSettings.Global.ENABLE_PERSISTENT_TETHERING;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.feature.Flags;
 import android.car.wifi.CarWifiManager;
 import android.content.Context;
 import android.provider.Settings;
@@ -55,9 +54,6 @@ public class WifiTetherPersistentOnPreferenceController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (!Flags.persistApSettings()) {
-            return UNSUPPORTED_ON_DEVICE;
-        }
         CarWifiManager carWifiManager = getCarWifiManager();
         if (carWifiManager != null && carWifiManager.canControlPersistTetheringSettings()) {
             return AVAILABLE;
