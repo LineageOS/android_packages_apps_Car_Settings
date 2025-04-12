@@ -24,7 +24,7 @@
     <string name="auto_brightness_title" msgid="9124647862844666581">"自适应亮度"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"根据环境调节屏幕亮度"</string>
     <string name="theme_toggle_title" msgid="7091393596274709558">"主题"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"“护眼模式”已开启"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"夜间光效已开启"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"网络和互联网"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"移动网络"</string>
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# 张 SIM 卡}other{# 张 SIM 卡}}"</string>
@@ -710,7 +710,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"继续"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"重试"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"跳过"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"设置屏幕锁定"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"设置屏锁"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"选择 PIN 码"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"选择您的密码"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"当前屏幕锁定设置"</string>
@@ -939,7 +939,7 @@
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"蓝底黄字"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"屏幕阅读器"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"已关闭"</string>
-    <string name="screen_reader_settings_on" msgid="2168217218643349459">"读出屏幕上的内容"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"读出屏幕内容"</string>
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"使用“<xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>”"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"选项"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"设置"</string>
