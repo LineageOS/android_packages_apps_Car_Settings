@@ -543,7 +543,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Cette opération réinitialise toutes les préférences relatives aux éléments suivants :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences des applications ont été réinitialisées"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Effacer toutes les données"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Effacer les données (réinitialisation)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Effacer toutes les données et tous les profils du système d\'infodivertissement"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"Cette action effacera toutes les données du système d\'infodivertissement de votre véhicule, y compris :\n\n"<li>"Vos comptes et profils"</li>\n<li>"Les données et les paramètres du système et de l\'application"</li>\n<li>"Les applications téléchargées"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Vous êtes actuellement connecté aux comptes suivants :"</string>
@@ -939,7 +939,7 @@
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Texte jaune sur fond bleu"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Lecteur d\'écran"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Désactivé"</string>
-    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Énoncer les éléments à l\'écran"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"énoncer les éléments à l\'écran"</string>
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Utiliser <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Options"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Paramètres"</string>
