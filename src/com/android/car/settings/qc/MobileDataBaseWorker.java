@@ -131,7 +131,7 @@ public abstract class MobileDataBaseWorker<E extends SettingsQCItem>
     }
 
     @Override
-    public void onChange(int value) {
+    public void onStatusChanged(int value) {
         if (getQCItem() != null) {
             notifyQCItemChange();
         }
