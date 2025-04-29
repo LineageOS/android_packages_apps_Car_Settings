@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/top_level_preference_background"
+    android:background="?android:attr/selectableItemBackground"
     android:clipToPadding="false"
     android:minHeight="@dimen/top_level_preference_min_height"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
