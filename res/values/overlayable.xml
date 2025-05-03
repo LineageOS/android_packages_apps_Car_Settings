@@ -471,8 +471,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="profile_avatar_bg_circle"/>
       <item type="drawable" name="restricted_wifi_signal"/>
       <item type="drawable" name="theme_toggle_button_rotary_background"/>
-      <item type="drawable" name="top_level_preference_background"/>
-      <item type="drawable" name="top_level_preference_highlight"/>
       <item type="drawable" name="user_disclaimer_action_button_background"/>
       <item type="drawable" name="wifi_signal"/>
       <item type="id" name="action_text"/>
@@ -558,7 +556,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="phonebook_sharing_message_entry_pin"/>
       <item type="id" name="pin_pad"/>
       <item type="id" name="pin_values_hint"/>
-      <item type="id" name="preference_highlighted"/>
       <item type="id" name="profile_avatar"/>
       <item type="id" name="profile_grid"/>
       <item type="id" name="profile_name"/>
