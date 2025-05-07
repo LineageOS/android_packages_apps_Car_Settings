@@ -16,6 +16,8 @@
 
 package com.android.car.settings.profiles;
 
+import static android.os.UserManager.USER_TYPE_FULL_SECONDARY;
+
 import static com.android.car.settings.enterprise.EnterpriseUtils.hasUserRestrictionByDpm;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -95,7 +97,7 @@ public class AddProfilePreferenceController extends PreferenceController<Prefere
             return true;
         }
 
-        if (!mUserManager.canAddMoreUsers()
+        if (!canAddMoreUsers()
                 || hasUserRestrictionByDpm(getContext(), UserManager.DISALLOW_ADD_USER)) {
             mAddProfileHandler.runClickableWhileDisabled();
             return true;
@@ -114,6 +116,14 @@ public class AddProfilePreferenceController extends PreferenceController<Prefere
     protected int getDefaultAvailabilityStatus() {
         return mAddProfileHandler
                 .getAddProfilePreferenceAvailabilityStatus(getContext());
+    }
+
+    private boolean canAddMoreUsers() {
+        if (android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
+            return mUserManager.canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
+        } else {
+            return mUserManager.canAddMoreUsersLegacy();
+        }
     }
 
     @VisibleForTesting

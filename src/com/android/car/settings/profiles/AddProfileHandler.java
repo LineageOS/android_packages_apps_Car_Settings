@@ -17,6 +17,7 @@
 package com.android.car.settings.profiles;
 
 import static android.os.UserManager.DISALLOW_ADD_USER;
+import static android.os.UserManager.USER_TYPE_FULL_SECONDARY;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
@@ -196,7 +197,7 @@ public class AddProfileHandler implements AddNewProfileTask.AddNewProfileListene
             // Shows a dialog if this PreferenceController is disabled because there is
             // restriction set from DevicePolicyManager
             showActionDisabledByAdminDialog();
-        } else if (!getUserManager(mContext).canAddMoreUsers()) {
+        } else if (!canAddMoreUsers()) {
             // Shows a dialog if no more profiles can be added because the maximum allowed number
             // is reached
             ConfirmationDialogFragment dialogFragment =
@@ -217,6 +218,14 @@ public class AddProfileHandler implements AddNewProfileTask.AddNewProfileListene
 
     private static UserManager getUserManager(Context context) {
         return context.getSystemService(UserManager.class);
+    }
+
+    private boolean canAddMoreUsers() {
+        if (android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
+            return getUserManager(mContext).canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
+        } else {
+            return getUserManager(mContext).canAddMoreUsersLegacy();
+        }
     }
 
     @VisibleForTesting
