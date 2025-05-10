@@ -23,6 +23,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -426,6 +427,15 @@ public class ProfileHelperTest {
     @Test
     public void testGetMaxSupportedRealUsers_isHeadless() {
         ShadowUserManager.setIsHeadlessSystemUserMode(true);
+
+        if (android.multiuser.Flags.consistentMaxUsers()
+                && android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
+            when(mMockUserManager.getCurrentAllowedNumberOfUsers(
+                    eq(UserManager.USER_TYPE_FULL_SECONDARY))).thenReturn(4);
+            assertThat(mProfileHelper.getMaxSupportedRealProfiles()).isEqualTo(4);
+            return;
+        }
+
         ShadowUserManager.setMaxSupportedUsersCount(7);
 
         // Create System user, two managed profiles, and two normal users.
@@ -444,6 +454,16 @@ public class ProfileHelperTest {
     @Test
     public void testGetMaxSupportedRealUsers_isNotHeadless() {
         ShadowUserManager.setIsHeadlessSystemUserMode(false);
+
+        if (android.multiuser.Flags.consistentMaxUsers()
+                && android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
+            when(mMockUserManager.getCurrentAllowedNumberOfUsers(
+                    eq(UserManager.USER_TYPE_FULL_SECONDARY))).thenReturn(4);
+            // The system user counts as a real user, so add it as well.
+            assertThat(mProfileHelper.getMaxSupportedRealProfiles()).isEqualTo(5);
+            return;
+        }
+
         ShadowUserManager.setMaxSupportedUsersCount(7);
 
         // Create System user, two managed profiles, and two normal users.
