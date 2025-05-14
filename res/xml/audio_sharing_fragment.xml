@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2025 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/bluetooth_audio_sharing"
+    android:key="@string/psk_audio_sharing">
+    <com.android.car.settings.common.ColoredSwitchPreference
+        android:key="@string/pk_share_audio_switch"
+        android:title="@string/share_audio_switch_title"
+        android:summary="@string/share_audio_switch_summary"
+        style="@style/ColoredSwitchPreferenceStyle"
+        settings:controller="com.android.car.settings.bluetooth.audiosharing.AudioSharingStateSwitchPreferenceController"/>
+    <PreferenceCategory
+        android:key="@string/pk_audio_sharing_active_media_devices"
+        android:title="@string/audio_sharing_active_media_devices"
+        settings:controller="com.android.car.settings.bluetooth.audiosharing.BroadcastDescriptionPreferenceController"/>
+    <com.android.car.ui.preference.CarUiPreference
+        android:icon="@drawable/ic_music_cast"
+        android:key="@string/pk_share_audio_test_sound"
+        android:title="@string/share_audio_test_sound_title"
+        android:summary="@string/share_audio_test_sound_summary"
+        settings:controller="com.android.car.settings.bluetooth.audiosharing.PlaySoundPreferenceController"
+        settings:showChevron="false"/>
+    <com.android.car.settings.bluetooth.audiosharing.DeviceSelectorPreferenceGroup
+        android:key="@string/pk_audio_stream_device_selector"
+        settings:controller="com.android.car.settings.bluetooth.audiosharing.DeviceSelectorPreferenceGroupController"/>
+    <PreferenceCategory
+        android:key="@string/pk_audio_stream_settings"
+        android:title="@string/audio_stream_settings_category_title"
+        settings:controller="com.android.car.settings.bluetooth.audiosharing.BroadcastDescriptionPreferenceController"/>
+    <com.android.car.ui.preference.CarUiTwoActionIconPreference
+        android:key="@string/pk_audio_sharing_audio_stream"
+        android:title="@string/scan_qr_code_to_connect"
+        android:fragment="com.android.car.settings.bluetooth.audiosharing.audiostreaming.AudioStreamFragment"
+        settings:controller="com.android.car.settings.bluetooth.audiosharing.audiostreaming.AudioStreamController"
+        settings:secondaryActionIcon="@drawable/ic_qr"/>
+</PreferenceScreen>
