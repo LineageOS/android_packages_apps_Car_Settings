@@ -21,6 +21,7 @@ import android.content.Context;
 import android.os.Build;
 import android.util.DataUnit;
 import android.util.SparseArray;
+import android.icu.util.MeasureUnit;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
@@ -56,6 +57,17 @@ public class StorageSystemCategoryPreferenceController extends
                     - otherData.getExternalStats().appBytes;
         }
         return Math.max(DataUnit.GIBIBYTES.toBytes(1), usedSizeBytes - attributedSize);
+    }
+
+    @Override
+    protected void setStorageSize(long size, long total) {
+        super.setStorageSize(size, total);
+        getPreference().setMaxLabel(getContext().getString(R.string.storage_total_label,
+                FileSizeFormatter.formatFileSize(
+                getContext(),
+                total,
+                MeasureUnit.GIGABYTE,
+                FileSizeFormatter.GIGABYTE_IN_BYTES)));
     }
 
     @Override
