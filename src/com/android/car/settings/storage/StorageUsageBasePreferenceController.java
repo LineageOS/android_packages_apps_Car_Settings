@@ -82,8 +82,11 @@ public abstract class StorageUsageBasePreferenceController extends
     /**
      * Sets the storage size for this preference that will be displayed as a summary. It will also
      * update the progress bar accordingly.
+     *
+     * <p>Subclass may extend this method to update the preference with category specific
+     * information, such as setMaxLabel or summary.
      */
-    private void setStorageSize(long size, long total) {
+    protected void setStorageSize(long size, long total) {
         getPreference().setSummary(
                 FileSizeFormatter.formatFileSize(
                         getContext(),
