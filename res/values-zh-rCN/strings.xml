@@ -622,6 +622,8 @@
     <string name="storage_other_apps" msgid="945509804756782640">"其他应用"</string>
     <string name="storage_files" msgid="6382081694781340364">"文件"</string>
     <string name="storage_system" msgid="1271345630248014010">"系统"</string>
+    <!-- no translation found for storage_total_label (5055933048275837265) -->
+    <skip />
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"“系统”中包含用于运行 Android 版本 <xliff:g id="VERSION">%s</xliff:g> 的文件"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"音频文件"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"正在计算…"</string>
@@ -774,7 +776,7 @@
     <string name="lockpassword_password_too_long" msgid="1709616257350671045">"{count,plural, =1{必须少于 # 个字符}other{必须少于 # 个字符}}"</string>
     <string name="lockpassword_pin_too_long" msgid="8315542764465856288">"{count,plural, =1{必须少于 # 位数}other{必须少于 # 位数}}"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"禁止使用以升序、降序或重复序列排列的一串数字"</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕解锁方式"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏锁方式"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除凭据"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有证书"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有内容吗？"</string>
