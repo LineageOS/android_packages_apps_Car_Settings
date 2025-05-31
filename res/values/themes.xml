@@ -43,6 +43,7 @@
         <item name="themeTogglePreferenceToggleButtonRadius">?oemShapeCornerExtraSmall</item>
         <item name="suggestionsCornerRadius">?oemShapeCornerSmall</item>
         <item name="wifiTetherQrCodeRoundedCornerRadius">?oemShapeCornerSmall</item>
+        <item name="audioSharingQrCodeRoundedCornerRadius">?oemShapeCornerSmall</item>
     </style>
 
     <style name="FallbackHome" parent="@android:style/Theme.DeviceDefault.NoActionBar">

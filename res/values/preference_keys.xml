@@ -33,6 +33,15 @@
     <string name="pk_bluetooth_extra_settings" translatable="false">bluetooth_extra_settings
     </string>
     <string name="pk_uwb_key" translatable="false">uwb_setting</string>
+    <string name="pk_bluetooth_audio_sharing" translatable="false">bluetooth_audio_sharing</string>
+    <string name="pk_share_audio_switch" translatable="false">share_audio_switch</string>
+    <string name="pk_share_audio_test_sound" translatable="false">share_audio_test_sound</string>
+    <string name="pk_audio_sharing_active_media_devices" translatable="false">audio_sharing_active_media_devices</string>
+    <string name="pk_audio_stream_settings" translatable="false">audio_stream_settings</string>
+    <string name="pk_audio_stream_device_selector" translatable="false">audio_stream_device_selector</string>
+    <string name="pk_audio_sharing_audio_stream" translatable="false">pk_audio_sharing_audio_stream</string>
+    <string name="pk_audio_stream_qr_code_description" translatable="false">pk_audio_stream_qr_code_description</string>
+    <string name="pk_audio_stream_qr_code" translatable="false">pk_audio_stream_qr_code</string>
     <string name="pk_location_settings_entry" translatable="false">location_settings_entry</string>
     <string name="pk_notifications_settings_entry" translatable="false">
         notifications_settings_entry
@@ -470,6 +479,7 @@
 
     <!-- Sound Settings -->
     <string name="pk_audio_destination" translatable="false">audio_destination</string>
+    <string name="pk_audio_destination_new" translatable="false">audio_destination_new</string>
     <string name="pk_volume_settings" translatable="false">volume_settings</string>
     <string name="pk_default_ringtone" translatable="false">default_ringtone</string>
     <string name="pk_default_notification" translatable="false">default_notification</string>

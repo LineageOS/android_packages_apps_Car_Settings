@@ -62,4 +62,12 @@
         settings:occupant_front_passenger="read"
         settings:occupant_rear_passenger="read"
         settings:controller="com.android.car.settings.bluetooth.UwbTogglePreferenceController"/>
+    <com.android.car.ui.preference.CarUiPreference
+        android:fragment="com.android.car.settings.bluetooth.audiosharing.AudioSharingFragment"
+        android:icon="@drawable/ic_audio_sharing"
+        android:key="@string/pk_bluetooth_audio_sharing"
+        android:title="@string/bluetooth_audio_sharing"
+        settings:controller="com.android.car.settings.bluetooth.audiosharing.AudioSharingPreferenceController"
+        settings:showChevron="false">
+    </com.android.car.ui.preference.CarUiPreference>
 </PreferenceScreen>
