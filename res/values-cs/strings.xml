@@ -219,6 +219,26 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Připojení zařízení k autu"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultra-wideband (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Pomáhá autu rozpoznat umístění zařízení UWB"</string>
+    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
+    <skip />
+    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
+    <skip />
+    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
+    <skip />
+    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
+    <skip />
+    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
+    <skip />
+    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
+    <skip />
+    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
+    <skip />
+    <!-- no translation found for audio_streaming_title (174897810502966132) -->
+    <skip />
+    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
+    <skip />
+    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Požadavek na párování zařízení Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Párovat a připojit"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Párovací kód Bluetooth"</string>
@@ -622,8 +642,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Další aplikace"</string>
     <string name="storage_files" msgid="6382081694781340364">"Soubory"</string>
     <string name="storage_system" msgid="1271345630248014010">"Systém"</string>
-    <!-- no translation found for storage_total_label (5055933048275837265) -->
-    <skip />
+    <string name="storage_total_label" msgid="5055933048275837265">"%s celkem"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Systém obsahuje soubory používané ke spuštění systému Android verze <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Zvukové soubory"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Výpočet…"</string>
