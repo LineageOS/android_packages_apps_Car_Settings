@@ -111,4 +111,13 @@ public class DeviceAdminStringProviderImplTest {
         assertThat(e.getMessage())
                 .contains("disabled_by_policy_content_biometric_parental_consent");
     }
+
+    @Test
+    public void testDisabledByParentalControlsTitle() {
+        UnsupportedOperationException e =
+                expectThrows(
+                        UnsupportedOperationException.class,
+                        () -> mDeviceAdminStringProvider.getDisabledByParentalControlsTitle());
+        assertThat(e.getMessage()).contains("disabled_by_policy_title_parental_controls");
+    }
 }
