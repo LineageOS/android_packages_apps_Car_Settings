@@ -219,26 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"আপনার গাড়িতে থাকা ডিভাইস কানেকশন"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"আলট্রা-ওয়াইডব্যান্ড (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"এটি আপনার গাড়িকে UWB ডিভাইসের পজিশন শনাক্ত করতে সাহায্য করে"</string>
-    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
-    <skip />
-    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
-    <skip />
-    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
-    <skip />
-    <!-- no translation found for audio_streaming_title (174897810502966132) -->
-    <skip />
-    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
-    <skip />
-    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
-    <skip />
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"অডিও শেয়ারিং"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"অডিও শেয়ার করুন"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"শ্রোতাদের নিজস্ব LE অডিও হেডফোন থাকতে হবে"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"টেস্ট সাউন্ড চালান"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"অডিও শেয়ার করা হয়েছে, এমন প্রত্যেকের শুনতে পাওয়ার কথা"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"চালু থাকা মিডিয়া ডিভাইস"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"অডিও স্ট্রিমের সেটিংস"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"অডিও স্ট্রিম QR কোড"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"কানেক্ট করার জন্য QR কোড স্ক্যান করুন"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"অডিও স্ট্রিম শুনতে, অন্য লোকজন তাদের Android ডিভাইসে মানানসই হেডফোন কানেক্ট করতে পারবেন। তারপরে তারা এই QR কোড স্ক্যান করতে পারবে।"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ব্লুটুথ পেয়ার করার অনুরোধ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"পেয়ার এবং কানেক্ট করুন"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ব্লুটুথের মাধ্যমে পেয়ার করার কোড"</string>

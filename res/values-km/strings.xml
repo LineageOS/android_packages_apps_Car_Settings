@@ -219,26 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"ការតភ្ជាប់ឧបករណ៍ជាមួយរថយន្តរបស់អ្នក"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"កម្រិតបញ្ជូនខ្ពស់ខ្លាំង (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"ជួយរថយន្តរបស់អ្នកកំណត់ទីតាំងឧបករណ៍ UWB"</string>
-    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
-    <skip />
-    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
-    <skip />
-    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
-    <skip />
-    <!-- no translation found for audio_streaming_title (174897810502966132) -->
-    <skip />
-    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
-    <skip />
-    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
-    <skip />
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"ការស្ដាប់សំឡេងរួមគ្នា"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"ស្ដាប់សំឡេងរួមគ្នា"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"អ្នកស្ដាប់ត្រូវមានកាស LE Audio ផ្ទាល់ខ្លួនរបស់ពួកគេ"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"ចាក់សំឡេងសាកល្បង"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"អ្នកគ្រប់គ្នាដែលកំពុងស្ដាប់គួរតែស្ដាប់ឮវា"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"ឧបករណ៍មេឌៀសកម្ម"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"ការកំណត់ការចាក់សំឡេងលើអ៊ីនធឺណិត"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"កូដ QR ការចាក់សំឡេងលើអ៊ីនធឺណិត"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"ស្កេនកូដ QR ដើម្បីភ្ជាប់"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"ដើម្បីស្ដាប់ការចាក់សំឡេងលើអ៊ីនធឺណិត អ្នកផ្សេងទៀតអាចភ្ជាប់កាសដែលត្រូវគ្នាទៅនឹងឧបករណ៍ Android របស់ពួកគេ។ បន្ទាប់មកពួកគេអាចស្កេនកូដ QR នេះបាន។"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"សំណើ​ផ្គូផ្គង​តាម​ប៊្លូធូស"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ផ្គូផ្គង និងភ្ជាប់"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"លេខកូដផ្គូផ្គងប៊្លូធូស"</string>
