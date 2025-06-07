@@ -73,6 +73,11 @@ public class BluetoothDeviceProfilesPreferenceController extends
     @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
         for (LocalBluetoothProfile profile : getCachedDevice().getProfiles()) {
+            // Do not show if the user should not be able to access this profile from the UI
+            if (!profile.accessProfileEnabled()) {
+                continue;
+            }
+
             Preference profilePref = preferenceGroup.findPreference(profile.toString());
             if (profilePref == null) {
                 profilePref = new BluetoothDeviceProfilePreference(getContext(), profile,
