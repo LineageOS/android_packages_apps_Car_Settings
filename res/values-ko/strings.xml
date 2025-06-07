@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"자동차와 기기 연결"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"초광대역(UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"자동차에서 초광대역 기기의 위치를 파악하도록 돕습니다."</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"오디오 공유"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"오디오 공유"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"오디오를 들으려면 각자 LE 오디오 헤드폰이 있어야 합니다."</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"테스트 소리 재생"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"청취 중인 모든 사용자가 들을 수 있어야 합니다."</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"사용 중인 미디어 기기"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"오디오 스트림 설정"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"오디오 스트림 QR 코드"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"QR 코드를 스캔하여 연결"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"다른 사용자가 오디오 스트림을 들으려면 사용 중인 Android 기기에 호환되는 헤드폰을 연결합니다. 그런 다음 이 QR 코드를 스캔합니다."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"블루투스 페어링 요청"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"페어링 및 연결"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"블루투스 페어링 코드"</string>
@@ -622,8 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"기타 앱"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"시스템"</string>
-    <!-- no translation found for storage_total_label (5055933048275837265) -->
-    <skip />
+    <string name="storage_total_label" msgid="5055933048275837265">"총 %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"시스템에는 Android 버전 <xliff:g id="VERSION">%s</xliff:g> 실행에 사용되는 파일이 포함되어 있습니다."</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"오디오 파일"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"계산 중..."</string>

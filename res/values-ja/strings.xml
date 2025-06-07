@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"デバイスと車との接続"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"超広帯域無線（UWB）"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"UWB デバイスの位置を車が特定できるようにします"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"音声の共有"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"音声を共有"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"聴くには LE Audio 対応ヘッドフォンが必要です。"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"テスト音声の再生"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"聴いている人全員に聞こえます"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"有効なメディア デバイス"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"音声ストリームの設定"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"音声ストリームの QR コード"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"QR コードをスキャンして接続"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"対応するヘッドフォンを Android デバイスに接続して、この QR コードをスキャンした人は、誰でも音声ストリームを聴くことができます。"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth のペア設定リクエスト"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ペア設定して接続"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth ペア設定コード"</string>
@@ -622,8 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"その他のアプリ"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"システム"</string>
-    <!-- no translation found for storage_total_label (5055933048275837265) -->
-    <skip />
+    <string name="storage_total_label" msgid="5055933048275837265">"合計 %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"システムには、Android バージョン <xliff:g id="VERSION">%s</xliff:g> の実行に使用されるファイルが含まれています"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"音声ファイル"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"計算しています…"</string>

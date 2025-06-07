@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"آپ کی کار کے ساتھ آلے کے کنکشنز"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"الٹرا وائڈ بینڈ (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"UWB آلات کی پوزیشن کی شناخت میں آپ کی کار کی مدد کرتا ہے"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"آڈیو کا اشتراک"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"آڈیو کا اشتراک کریں"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"سامعین کو ان کے اپنے LE آڈیو ہیڈ فونز کی ضرورت ہے"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"ٹیسٹ ساؤنڈ چلائیں"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"ہر سننے والے کو یہ سنائی دینا چاہیے"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"فعال میڈیا آلات"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"آڈیو سلسلہ کی ترتیبات"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"آڈیو سلسلے کا QR کوڈ"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"منسلک کرنے کیلئے QR کوڈ اسکین کریں"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"آڈیو سلسلہ سننے کے لئے دوسرے لوگ موافق ہیڈ فونز کو اپنے Android آلہ سے منسلک کر سکتے ہیں۔ پھر وہ اس QR کوڈ کو اسکین کر سکتے ہیں۔"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"بلوٹوتھ جوڑا بنانے کی درخواست"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"جوڑا بنائیں اور منسلک کریں"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"بلوٹوتھ جوڑا بنانے کا کوڈ"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"دیگر ایپس"</string>
     <string name="storage_files" msgid="6382081694781340364">"فائلیں"</string>
     <string name="storage_system" msgid="1271345630248014010">"سسٹم"</string>
+    <!-- String.format failed for translation -->
     <!-- no translation found for storage_total_label (5055933048275837265) -->
     <skip />
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"سسٹم میں Android ورژن <xliff:g id="VERSION">%s</xliff:g> چلانے کے لیے استعمال کی جانے والی فائلیں شامل ہیں"</string>

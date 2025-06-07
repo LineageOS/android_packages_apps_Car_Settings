@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"ನಿಮ್ಮ ಕಾರ್‌ ಜೊತೆಗಿರುವ ಸಾಧನದ ಕನೆಕ್ಷನ್‌ಗಳು"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"ಅಲ್ಟ್ರಾ-ವೈಡ್‌ಬ್ಯಾಂಡ್ (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"UWB ಸಾಧನಗಳ ಸ್ಥಾನವನ್ನು ಗುರುತಿಸಲು ನಿಮ್ಮ ಕಾರಿಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"ಆಡಿಯೋ ಹಂಚಿಕೊಳ್ಳುವಿಕೆ"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"ಆಡಿಯೋ ಹಂಚಿಕೊಳ್ಳಿ"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"ಕೇಳುಗರಿಗೆ ತಮ್ಮದೇ ಆದ LE ಆಡಿಯೋ ಹೆಡ್‌ಫೋನ್‌ಗಳ ಅಗತ್ಯವಿದೆ"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"ಟೆಸ್ಟ್ ಸೌಂಡ್ ಅನ್ನು ಪ್ಲೇ ಮಾಡಿ"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"ಆಲಿಸುತ್ತಿರುವ ಪ್ರತಿಯೊಬ್ಬರೂ ಅದನ್ನು ಕೇಳಬೇಕು"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"ಸಕ್ರಿಯ ಮಾಧ್ಯಮ ಸಾಧನಗಳು"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"ಆಡಿಯೋ ಸ್ಟ್ರೀಮ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"ಆಡಿಯೋ ಸ್ಟ್ರೀಮ್ QR ಕೋಡ್‌"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"ಕನೆಕ್ಟ್ ಮಾಡಲು QR ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"ಆಡಿಯೋ ಸ್ಟ್ರೀಮ್ ಅನ್ನು ಆಲಿಸಲು, ಇತರ ಜನರು ತಮ್ಮ Android ಸಾಧನದಲ್ಲಿ ಹೊಂದಾಣಿಕೆಯ ಹೆಡ್‌ಫೋನ್‌ಗಳನ್ನು ಕನೆಕ್ಟ್‌ ಮಾಡಬಹುದು. ನಂತರ ಅವರು ಈ QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಬಹುದು."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ಬ್ಲೂಟೂತ್‌‌ ಜೋಡಣೆ ವಿನಂತಿ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ಜೋಡಿಸಿ ಮತ್ತು ಸಂಪರ್ಕಪಡಿಸಿ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ಬ್ಲೂಟೂತ್ ಜೋಡಣೆ ಕೋಡ್"</string>
@@ -622,8 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"ಇತರ ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="storage_files" msgid="6382081694781340364">"ಫೈಲ್‌ಗಳು"</string>
     <string name="storage_system" msgid="1271345630248014010">"ಸಿಸ್ಟಂ"</string>
-    <!-- no translation found for storage_total_label (5055933048275837265) -->
-    <skip />
+    <string name="storage_total_label" msgid="5055933048275837265">"ಒಟ್ಟು %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android ಆವೃತ್ತಿ <xliff:g id="VERSION">%s</xliff:g> ರನ್ ಮಾಡಲು ಬಳಸುವ ಫೈಲ್‌ಗಳು ಈ ಸಿಸ್ಟಂನಲ್ಲಿವೆ"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ಆಡಿಯೋ ಫೈಲ್‌ಗಳು"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"ಲೆಕ್ಕ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>

@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"കാറിലേക്ക് കണക്‌റ്റ് ചെയ്ത ഉപകരണങ്ങൾ"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"അൾട്രാ-വൈഡ്ബാൻഡ് (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"UWB ഉപകരണങ്ങളുടെ സ്ഥാനം തിരിച്ചറിയാൻ നിങ്ങളുടെ കാറിനെ സഹായിക്കുന്നു"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"ഓഡിയോ പങ്കിടൽ"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"ഓഡിയോ പങ്കിടുക"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"കേൾക്കുന്നവർക്ക് അവരുടേതായ LE ഓഡിയോ ഹെഡ്‌ഫോണുകൾ ആവശ്യമാണ്"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"ശബ്ദ പരിശോധന പ്ലേ ചെയ്യുക"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"ശ്രദ്ധിക്കുന്ന എല്ലാവരും ഇത് കേൾക്കണം"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"സജീവമായ മീഡിയ ഉപകരണങ്ങൾ"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"ഓഡിയോ സ്ട്രീം ക്രമീകരണം"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"ഓഡിയോ സ്ട്രീം QR കോഡ്"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"കണക്‌റ്റ് ചെയ്യാൻ QR കോഡ് സ്‌കാൻ ചെയ്യുക"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"ഓഡിയോ സ്ട്രീം കേൾക്കാൻ, മറ്റുള്ളവർക്ക് അവരുടെ Android ഉപകരണത്തിലേക്ക് അനുയോജ്യമായ ഹെഡ്‌ഫോണുകൾ കണക്റ്റ് ചെയ്യാം. തുടർന്ന്, അവർക്ക് ഈ QR കോഡ് സ്കാൻ ചെയ്യാം."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth ജോടിയാക്കൽ അഭ്യർത്ഥന"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ജോടിയാക്കി കണ‌ക്‌റ്റ് ചെയ്യുക"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth ജോടിയാക്കൽ കോഡ്"</string>
@@ -622,8 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"മറ്റ് ആപ്പുകൾ"</string>
     <string name="storage_files" msgid="6382081694781340364">"ഫയലുകൾ"</string>
     <string name="storage_system" msgid="1271345630248014010">"സിസ്‌റ്റം"</string>
-    <!-- no translation found for storage_total_label (5055933048275837265) -->
-    <skip />
+    <string name="storage_total_label" msgid="5055933048275837265">"മൊത്തം %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"സിസ്‌റ്റത്തിൽ Android <xliff:g id="VERSION">%s</xliff:g> പതിപ്പ് റൺ ചെയ്യാൻ ഉപയോഗിച്ച ഫയലുകളും ഉൾപ്പെടുന്നു"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ഓഡിയോ ഫയലുകൾ"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"കണക്കാക്കുന്നു…"</string>

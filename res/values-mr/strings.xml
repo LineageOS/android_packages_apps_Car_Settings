@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"तुमच्या कारसोबतची डिव्हाइस कनेक्शन"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"अल्ट्रा-वाइडबँड (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"तुमच्या कारला UWB डिव्हाइसचे स्थान ओळखण्यात मदत करते"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"ऑडिओ शेअरिंग"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"ऑडिओ शेअर करा"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"ऐकणाऱ्यांकडे त्यांचे स्वत:चे LE ऑडिओ हेडफोन असणे आवश्यक आहे"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"चाचणी आवाज प्ले करा"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"ऐकणाऱ्या प्रत्येकाला ते ऐकू यायला हवे"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"ॲक्टिव्ह मीडिया डिव्हाइस"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"ऑडिओ स्ट्रीमची सेटिंग्ज"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"ऑडिओ स्ट्रीमचा QR कोड"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"कनेक्ट करण्यासाठी QR कोड स्कॅन करा"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"ऑडिओ स्ट्रीम ऐकण्यासाठी, इतर लोक त्यांच्या Android डिव्हाइसशी कंपॅटिबल हेडफोन कनेक्ट करू शकतात. त्यानंतर ते हा QR कोड स्कॅन करू शकतात."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लूटूथ पेअरिंग विनंती"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"पेअर करा आणि कनेक्ट करा"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लूटूथ पेअरिंग कोड"</string>
@@ -622,8 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"इतर अ‍ॅप्स"</string>
     <string name="storage_files" msgid="6382081694781340364">"फाइल"</string>
     <string name="storage_system" msgid="1271345630248014010">"सिस्टीम"</string>
-    <!-- no translation found for storage_total_label (5055933048275837265) -->
-    <skip />
+    <string name="storage_total_label" msgid="5055933048275837265">"एकूण %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टममध्ये अशा फायलींचा समावेश आहे ज्यांचा वापर Android आवृत्ती <xliff:g id="VERSION">%s</xliff:g> रन करण्यासाठी केला जातो"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फाइल"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"मोजत आहे…"</string>

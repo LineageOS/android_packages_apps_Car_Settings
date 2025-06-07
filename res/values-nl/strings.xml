@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Apparaatverbindingen met je auto"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultra-wideband (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Helpt je auto om de positie van UWB-apparaten te bepalen"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Audio delen"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Audio delen"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Luisteraars hebben een eigen koptelefoon met LE Audio nodig"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Een testgeluid afspelen"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Iedereen die luistert, zou het moeten horen"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Actieve media-apparaten"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Instellingen voor audiostream"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR-code van audiostream"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Scan de QR-code om verbinding te maken"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Andere mensen kunnen een geschikte koptelefoon met hun Android-apparaat verbinden als ze naar een audiostream willen luisteren. Daarna moeten ze deze QR-code scannen."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth-koppelingsverzoek"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Koppelen en verbinden"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-koppelingscode"</string>
@@ -622,8 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Andere apps"</string>
     <string name="storage_files" msgid="6382081694781340364">"Bestanden"</string>
     <string name="storage_system" msgid="1271345630248014010">"Systeem"</string>
-    <!-- no translation found for storage_total_label (5055933048275837265) -->
-    <skip />
+    <string name="storage_total_label" msgid="5055933048275837265">"Totaal %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Systeem omvat bestanden die worden gebruikt om Android-versie <xliff:g id="VERSION">%s</xliff:g> uit te voeren"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Audiobestanden"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Berekenen…"</string>
