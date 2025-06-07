@@ -219,26 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Conexiuni între dispozitive și mașină"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Bandă ultralargă (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Ajută mașina să identifice poziția dispozitivelor UWB"</string>
-    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
-    <skip />
-    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
-    <skip />
-    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
-    <skip />
-    <!-- no translation found for audio_streaming_title (174897810502966132) -->
-    <skip />
-    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
-    <skip />
-    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
-    <skip />
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Permiterea accesului la audio"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Trimite audio"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Ascultătorii au nevoie de propriul set de căști LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Redă un sunet de test"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Toți cei care ascultă ar trebui să-l audă"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Dispozitive media active"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Setările streamului audio"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"Codul QR al streamului audio"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Scanează codul QR pentru a te conecta"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Pentru a asculta streamul audio, alte persoane pot să conecteze căști compatibile la dispozitivul lor Android. Apoi pot să scaneze acest cod QR."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitare de conectare prin Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Asociază și conectează"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Cod de conectare prin Bluetooth"</string>
