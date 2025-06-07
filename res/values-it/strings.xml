@@ -219,26 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Connessioni del dispositivo all\'auto"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Banda ultralarga (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Consente all\'auto di identificare la posizione dei dispositivi UWB"</string>
-    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
-    <skip />
-    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
-    <skip />
-    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
-    <skip />
-    <!-- no translation found for audio_streaming_title (174897810502966132) -->
-    <skip />
-    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
-    <skip />
-    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
-    <skip />
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Condivisione audio"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Condividi audio"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Chi ascolta i contenuti deve avere le sue cuffie LE audio."</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Riproduci un suono di prova"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Chiunque stia ascoltando dovrebbe sentirlo"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Dispositivi multimediali attivi"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Impostazioni stream audio"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"Codice QR stream audio"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Scansiona il codice QR per connetterti"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Per ascoltare lo stream audio, altre persone possono connettere delle cuffie compatibili al loro dispositivo Android e scansionare questo codice QR."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Richiesta accoppiamento Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Accoppia e connetti"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Codice di accoppiamento Bluetooth"</string>

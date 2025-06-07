@@ -219,26 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Pripojenia zariadenia k autu"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultra‑Wideband (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Pomáha autu rozpoznať umiestnenie zariadení UWB"</string>
-    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
-    <skip />
-    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
-    <skip />
-    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
-    <skip />
-    <!-- no translation found for audio_streaming_title (174897810502966132) -->
-    <skip />
-    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
-    <skip />
-    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
-    <skip />
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Zdieľanie zvuku"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Zdieľať zvuk"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Poslucháči potrebujú vlastné slúchadlá podporujúce LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Prehranie testovacieho zvuku"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Počuť by ho mal každý poslucháč"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Aktívne mediálne zariadenia"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Nastavenia zvukového streamu"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR kód zvukového streamu"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Pripojte sa naskenovaním QR kódu"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Ak chcú ďalší ľudia počúvať zvukový stream, môžu k svojmu zariadeniu s Androidom pripojiť kompatibilné slúchadlá. Potom môžu naskenovať tento QR kód."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Žiadosť o párovanie zariadenia Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Párovať a pripojiť"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Párovací kód Bluetooth"</string>
@@ -742,7 +732,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Nakreslite bezpečnostný vzor"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Na záver zdvihnite prst z obrazovky"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Vzor bol zaznamenaný"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Znova nakreslite vzor pre potvrdenie"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Na potvrdenie nakreslite vzor ešte raz"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Musíte spojiť aspoň 4 body. Skúste to znova."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Nesprávny vzor"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Ako kresliť bezpečnostný vzor obrazovky"</string>
