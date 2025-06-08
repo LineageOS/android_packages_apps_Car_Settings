@@ -219,26 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"З’єднання пристроїв з автомобілем"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Надширокосмуговий зв’язок (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Допомагає автомобілю визначати розташування пристроїв із підтримкою UWB"</string>
-    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
-    <skip />
-    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
-    <skip />
-    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
-    <skip />
-    <!-- no translation found for audio_streaming_title (174897810502966132) -->
-    <skip />
-    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
-    <skip />
-    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
-    <skip />
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Надсилання аудіо"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Поділитись аудіо"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Слухачам потрібно мати власні навушники LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Перевірте звук"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Усі, хто слухає, зможуть чути його"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Активні носії"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Налаштування аудіопотоку"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR-код аудіопотоку"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Сканувати QR-код, щоб підключитися"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Щоб слухати аудіопотік, інші користувачі можуть підключити сумісні навушники до свого пристрою Android, а тоді відсканувати цей QR-код."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Запит Bluetooth на створення пари"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Створити пару та підключитися"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код підключення Bluetooth"</string>
