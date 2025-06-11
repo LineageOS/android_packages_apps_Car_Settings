@@ -1484,11 +1484,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="storage_other_apps"/>
       <item type="string" name="storage_settings_title"/>
       <item type="string" name="storage_system"/>
+      <item type="string" name="storage_total_label"/>
       <item type="string" name="storage_total_size_label"/>
       <item type="string" name="storage_type_internal"/>
       <item type="string" name="storage_unmount_failure"/>
       <item type="string" name="storage_unmount_success"/>
-      <item type="string" name="storage_total_label"/>
       <item type="string" name="suggestion_dismiss_button"/>
       <item type="string" name="sync_button_sync_cancel"/>
       <item type="string" name="sync_button_sync_now"/>
@@ -1796,10 +1796,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="language_picker_fragment"/>
       <item type="xml" name="languages_and_input_fragment"/>
       <item type="xml" name="legal_information_fragment"/>
-      <item type="xml" name="location_access_fragment"/>
       <item type="xml" name="location_access_required_infotainment_fragment"/>
       <item type="xml" name="location_recent_accessed_view_all_fragment"/>
-      <item type="xml" name="location_settings_fragment"/>
       <item type="xml" name="location_settings_required_infotainment_fragment"/>
       <item type="xml" name="manage_domain_urls_fragment"/>
       <item type="xml" name="microphone_access_fragment"/>
