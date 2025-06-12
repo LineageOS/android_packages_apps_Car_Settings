@@ -24,7 +24,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.XmlRes;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.search.CarBaseSearchIndexProvider;
@@ -45,14 +44,11 @@ public class LocationSettingsFragment extends SettingsFragment {
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        if (Flags.requiredInfotainmentAppsSettingsPage()) {
-            return R.xml.location_settings_required_infotainment_fragment;
-        } else {
-            return R.xml.location_settings_fragment;
-        }
+        return R.xml.location_settings_required_infotainment_fragment;
     }
 
     public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new CarBaseSearchIndexProvider(R.xml.location_settings_fragment,
+            new CarBaseSearchIndexProvider(
+                    R.xml.location_settings_required_infotainment_fragment,
                     Settings.ACTION_LOCATION_SOURCE_SETTINGS);
 }

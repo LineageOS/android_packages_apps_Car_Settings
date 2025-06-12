@@ -21,7 +21,6 @@ import android.content.Context;
 
 import androidx.preference.Preference;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
@@ -38,16 +37,5 @@ public class LocationAccessPreferenceController extends PreferenceController<Pre
     @Override
     protected Class<Preference> getPreferenceType() {
         return Preference.class;
-    }
-
-    @Override
-    protected int getDefaultAvailabilityStatus() {
-        if (Flags.requiredInfotainmentAppsSettingsPage()) {
-            return AVAILABLE;
-        } else {
-            return LocationUtil.isDriverWithAdasApps(getContext())
-                    ? AVAILABLE
-                    : CONDITIONALLY_UNAVAILABLE;
-        }
     }
 }

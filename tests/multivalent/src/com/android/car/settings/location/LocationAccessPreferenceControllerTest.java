@@ -26,20 +26,15 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.location.LocationManager;
 import android.os.PackageTagsList;
-import android.platform.test.annotations.DisableFlags;
-import android.platform.test.annotations.EnableFlags;
-import android.platform.test.flag.junit.SetFlagsRule;
 
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -56,9 +51,6 @@ public class LocationAccessPreferenceControllerTest {
     @Mock
     private FragmentController mFragmentController;
 
-    @Rule
-    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
-
     @Before
     @UiThreadTest
     public void setUp() {
@@ -74,49 +66,6 @@ public class LocationAccessPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void getAvailabilityStatus_adasAllowlistNotEmpty_available() {
-        PackageTagsList list = new PackageTagsList.Builder().add("testApp1").build();
-        when(mLocationManager.getAdasAllowlist()).thenReturn(list);
-
-        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
-                AVAILABLE);
-    }
-
-    @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void getAvailabilityStatus_adasAllowlistNotEmpty_conditionallyUnavailable_zoneHidden() {
-        mController.setAvailabilityStatusForZone("hidden");
-        PackageTagsList list = new PackageTagsList.Builder().add("testApp1").build();
-        when(mLocationManager.getAdasAllowlist()).thenReturn(list);
-
-        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
-                CONDITIONALLY_UNAVAILABLE);
-    }
-
-    @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void getAvailabilityStatus_adasAllowlistEmpty_conditionallyUnavailable() {
-        PackageTagsList list = new PackageTagsList.Builder().build();
-        when(mLocationManager.getAdasAllowlist()).thenReturn(list);
-
-        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
-                CONDITIONALLY_UNAVAILABLE);
-    }
-
-    @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void getAvailabilityStatus_adasAllowlistEmpty_conditionallyUnavailable_zoneHidden() {
-        mController.setAvailabilityStatusForZone("hidden");
-        PackageTagsList list = new PackageTagsList.Builder().build();
-        when(mLocationManager.getAdasAllowlist()).thenReturn(list);
-
-        PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
-                CONDITIONALLY_UNAVAILABLE);
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void getAvailabilityStatus_available() {
         PreferenceControllerTestUtil.assertAvailability(mController.getAvailabilityStatus(),
                 AVAILABLE);
