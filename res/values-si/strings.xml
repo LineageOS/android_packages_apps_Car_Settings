@@ -219,26 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"ඔබේ මෝටර් රථය සමග උපාංග සම්බන්ධතා"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"අති-පුළුල් කලාප (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"UWB උපාංගවල පිහිටීම හඳුනා ගැනීමට ඔබේ මෝටර් රථයට උදවු කරයි"</string>
-    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
-    <skip />
-    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
-    <skip />
-    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
-    <skip />
-    <!-- no translation found for audio_streaming_title (174897810502966132) -->
-    <skip />
-    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
-    <skip />
-    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
-    <skip />
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"ශ්‍රව්‍ය බෙදා ගැනීම"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"ශ්‍රව්‍ය බෙදා ගන්න"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"සවන්දෙන්නන්ට ඔවුන්ගේම LE ශ්‍රව්‍ය හෙඩ්ෆෝන් අවශ්‍යයි"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"පරීක්ෂණ ශබ්දයක් වාදනය කරන්න"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"සවන් දෙන සෑම කෙනෙකුටම එය ඇසිය යුතු ය"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"සක්‍රිය මාධ්‍ය උපාංග"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"ශ්‍රව්‍ය ප්‍රවාහ සැකසීම්"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"ශ්‍රව්‍ය ප්‍රවාහ QR කේතය"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"සම්බන්ධ වීමට QR කේතය ස්කෑන් කරන්න"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"ශ්‍රව්‍ය ප්‍රවාහය වෙත සවන් දීමට, වෙනත් පුද්ගලයින්ට ඔවුන්ගේ Android උපාංගයට ගැළපෙන හෙඩ්ෆෝන් සම්බන්ධ කළ හැක. එවිට ඔවුන්ට මෙම QR කේතය ස්කෑන් කළ හැක."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"බ්ලූටූත් යුගලන ඉල්ලීම"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"යුගලනය සහ සබැඳීම"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"බ්ලූටූත් යුගල කේතය"</string>

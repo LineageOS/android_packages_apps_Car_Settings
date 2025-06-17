@@ -219,26 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Tengingar tækis við bílinn þinn"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Ofurbreiðband (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Hjálpar bílnum þínum að bera kennsl á afstöðu UWB-tækja"</string>
-    <!-- no translation found for bluetooth_audio_sharing (5886869395645761760) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_title (8798673733841544186) -->
-    <skip />
-    <!-- no translation found for share_audio_switch_summary (5123598607194828495) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_title (7570329148373530884) -->
-    <skip />
-    <!-- no translation found for share_audio_test_sound_summary (7071332264787908147) -->
-    <skip />
-    <!-- no translation found for audio_sharing_active_media_devices (3845107517790253262) -->
-    <skip />
-    <!-- no translation found for audio_stream_settings_category_title (4274632745953092854) -->
-    <skip />
-    <!-- no translation found for audio_streaming_title (174897810502966132) -->
-    <skip />
-    <!-- no translation found for scan_qr_code_to_connect (734470733189688139) -->
-    <skip />
-    <!-- no translation found for audio_stream_qr_code_description (7809312868707708527) -->
-    <skip />
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Hljóðdeiling"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Deila hljóði"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Hlustendur þurfa að vera með sín eigin heyrnartól sem geta spilað LE-hljóð"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Spila prufuhljóð"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Allir sem hlusta ættu að heyra það"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Virk margmiðlunartæki"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Stillingar hljóðstreymis"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR-kóði hljóðstreymis"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Skannaðu QR-kóðann til að hlusta"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Aðrir geta tengt samhæf heyrnartól við Android-tækin sín og skannað þennan QR-kóða til að hlusta á hljóðstreymið."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Beiðni um Bluetooth-pörun"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Pörun og tenging"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-pörunarkóði"</string>
