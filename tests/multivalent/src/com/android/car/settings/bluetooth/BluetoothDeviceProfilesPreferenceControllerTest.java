@@ -135,16 +135,14 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
 
     @Test
     public void refreshUi_addsNewProfiles() {
-        LocalBluetoothProfile profile1 = mock(LocalBluetoothProfile.class);
-        when(profile1.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
+        LocalBluetoothProfile profile1 = mockLocalBluetoothProfile(R.string.bt_profile_name, true);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile1));
 
         mPreferenceController.refreshUi();
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
 
-        LocalBluetoothProfile profile2 = mock(LocalBluetoothProfile.class);
-        when(profile2.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
+        LocalBluetoothProfile profile2 = mockLocalBluetoothProfile(R.string.bt_profile_name, true);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Arrays.asList(profile1, profile2));
 
         mPreferenceController.refreshUi();
@@ -157,10 +155,8 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
 
     @Test
     public void refreshUi_removesRemovedProfiles() {
-        LocalBluetoothProfile profile1 = mock(LocalBluetoothProfile.class);
-        when(profile1.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
-        LocalBluetoothProfile profile2 = mock(LocalBluetoothProfile.class);
-        when(profile2.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
+        LocalBluetoothProfile profile1 = mockLocalBluetoothProfile(R.string.bt_profile_name, true);
+        LocalBluetoothProfile profile2 = mockLocalBluetoothProfile(R.string.bt_profile_name, true);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Arrays.asList(profile1, profile2));
 
         mPreferenceController.refreshUi();
@@ -181,8 +177,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
 
     @Test
     public void refreshUi_profiles_showsPreference() {
-        LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
-        when(profile.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
+        LocalBluetoothProfile profile = mockLocalBluetoothProfile(R.string.bt_profile_name, true);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile));
 
         mPreferenceController.refreshUi();
@@ -201,8 +196,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
 
     @Test
     public void profileChecked_setsProfilePreferred() {
-        LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
-        when(profile.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
+        LocalBluetoothProfile profile = mockLocalBluetoothProfile(R.string.bt_profile_name, false);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile));
         mPreferenceController.refreshUi();
 
@@ -218,8 +212,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
 
     @Test
     public void profileChecked_connectsToProfile() {
-        LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
-        when(profile.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
+        LocalBluetoothProfile profile = mockLocalBluetoothProfile(R.string.bt_profile_name, false);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile));
         mPreferenceController.refreshUi();
 
@@ -235,9 +228,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
 
     @Test
     public void profileUnchecked_setsProfileNotPreferred() {
-        LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
-        when(profile.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
-        when(profile.isEnabled(mBondedDevice)).thenReturn(true);
+        LocalBluetoothProfile profile = mockLocalBluetoothProfile(R.string.bt_profile_name, true);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile));
         mPreferenceController.refreshUi();
 
@@ -253,9 +244,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
 
     @Test
     public void profileUnchecked_disconnectsFromProfile() {
-        LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
-        when(profile.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
-        when(profile.isEnabled(mBondedDevice)).thenReturn(true);
+        LocalBluetoothProfile profile = mockLocalBluetoothProfile(R.string.bt_profile_name, true);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile));
         mPreferenceController.refreshUi();
 
@@ -274,9 +263,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_BLUETOOTH))
                 .thenReturn(true);
         when(mBondedCachedDevice.isBusy()).thenReturn(true);
-        LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
-        when(profile.getNameResource(mBondedDevice)).thenReturn(R.string.bt_profile_name);
-        when(profile.isEnabled(mBondedDevice)).thenReturn(true);
+        LocalBluetoothProfile profile = mockLocalBluetoothProfile(R.string.bt_profile_name, true);
         when(mBondedCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile));
         mPreferenceController.refreshUi();
 
@@ -292,5 +279,17 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
         profilePreference.performClick();
 
         verify(mFragmentController).showDialog(any(), any());
+    }
+
+    // --------------------------------------------------------------------------------------------
+    // Utilities
+    // --------------------------------------------------------------------------------------------
+
+    private LocalBluetoothProfile mockLocalBluetoothProfile(int name, boolean enabled) {
+        LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
+        when(profile.getNameResource(mBondedDevice)).thenReturn(name);
+        when(profile.isEnabled(mBondedDevice)).thenReturn(enabled);
+        when(profile.accessProfileEnabled()).thenReturn(true);
+        return profile;
     }
 }
