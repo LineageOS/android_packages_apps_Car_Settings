@@ -49,3 +49,10 @@ flag {
     description: "Flag to display the multi-casting feature in Car Settings."
     bug: "406359269"
 }
+
+flag {
+    name: "app_function_access_permissions_ui"
+    namespace: "car_sys_exp"
+    description: "Flag to show app function permission pages."
+    bug: "427789419"
+}
