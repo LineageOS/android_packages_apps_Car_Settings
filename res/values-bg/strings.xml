@@ -700,10 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Приложения, които се изискват от производителя на автомобила ви, за да ви помагат да шофирате"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Декларация"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Производителят на автомобила ви пак може да има достъп до камерата на колата ви"</string>
-    <!-- no translation found for app_function_access_settings_title (7029660854535229000) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (404048231298577346) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Контролиране на други приложения от агент"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Извършване на действия на устройството ви, както и в други приложения"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Приложения за основното устройство"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Разрешаване на приложенията за основното устройство да правят снимки и да записват видеоклипове"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Разрешено"</string>
@@ -827,7 +825,7 @@
     <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"Потребители и профили"</string>
     <string name="manage_other_profiles_button_text" msgid="2262188413455510828">"Управление на други потр. профили"</string>
     <string name="add_a_profile_button_text" msgid="8027395095117925114">"Добавяне на потребителски профил"</string>
-    <string name="delete_this_profile_text" msgid="6035404714526922665">"Изтриване на този потр. профил"</string>
+    <string name="delete_this_profile_text" msgid="6035404714526922665">"Изтриване на този потребителски профил"</string>
     <string name="add_profile_text" msgid="9118410102199116969">"Добавяне на потребителски профил"</string>
     <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"Понастоящем този потребителски профил се използва от шофьор. Опитайте отново, когато не се използва така."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"Яркост на екрана"</string>

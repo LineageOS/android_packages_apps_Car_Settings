@@ -77,7 +77,7 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ระบบเครื่องเสียงของรถยนต์จะปิดอินเทอร์เน็ตมือถือเมื่อมีการใช้งานถึงขีดจำกัดที่คุณกำหนดไว้\n\nเนื่องจากนี่เป็นปริมาณการใช้อินเทอร์เน็ตที่วัดโดยระบบเครื่องเสียง ปริมาณการใช้งานที่ผู้ให้บริการวัดได้จึงอาจไม่เท่ากัน โปรดกำหนดขีดจำกัดอย่างระมัดระวัง"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ตั้งค่าคำเตือนปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ตั้งค่าขีดจำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
-    <string name="data_usage_settings_footer" msgid="681881387909678237">"ปริมาณการใช้อินเทอร์เน็ตจะวัดโดยอุปกรณ์ ซึ่งอาจแตกต่างจากปริมาณอินเทอร์เน็ตของผู้ให้บริการเครือข่ายมือถือ"</string>
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"ปริมาณการใช้อินเทอร์เน็ตจะวัดโดยอุปกรณ์ ซึ่งอาจแตกต่างจากปริมาณอินเทอร์เน็ตของผู้ให้บริการมือถือ"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ตั้งค่า"</string>
     <string name="data_usage_warning_save_title" msgid="2900544287239037695">"บันทึก"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"เครือข่าย OEM"</string>
@@ -700,10 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"แอปที่ผู้ผลิตรถยนต์ของคุณต้องใช้เพื่อช่วยในการขับขี่"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"นโยบาย"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ผู้ผลิตรถยนต์อาจยังเข้าถึงกล้องของรถได้อยู่"</string>
-    <!-- no translation found for app_function_access_settings_title (7029660854535229000) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (404048231298577346) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"การควบคุมแอปอื่นๆ ของตัวแทน"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"ดำเนินการต่างๆ บนอุปกรณ์และในแอปอื่นๆ"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"แอปสาระบันเทิง"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"อนุญาตให้แอปสาระบันเทิงถ่ายภาพและบันทึกวิดีโอ"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"อนุญาต"</string>
