@@ -632,9 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Muut sovellukset"</string>
     <string name="storage_files" msgid="6382081694781340364">"Tiedostot"</string>
     <string name="storage_system" msgid="1271345630248014010">"Järjestelmä"</string>
-    <!-- String.format failed for translation -->
-    <!-- no translation found for storage_total_label (5055933048275837265) -->
-    <skip />
+    <string name="storage_total_label" msgid="5055933048275837265">"Yhteensä %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Järjestelmä sisältää tiedostoja, joita tarvitaan Android-version <xliff:g id="VERSION">%s</xliff:g> toimintaan."</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Äänitiedostot"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Lasketaan…"</string>
@@ -702,10 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Auton valmistajan edellyttämät sovellukset, jotka auttavat ajamaan"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Käytäntö"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Autosi valmistajalla saattaa yhä olla pääsy autosi kameraan"</string>
-    <!-- no translation found for app_function_access_settings_title (7029660854535229000) -->
-    <skip />
-    <!-- no translation found for app_function_access_settings_summary (404048231298577346) -->
-    <skip />
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Agenttien hallinta muissa sovelluksissa"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Toimintojen suorittaminen laitteella ja muissa sovelluksissa"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Infotainment-sovellukset"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Salli, että infotainment-sovellukset ottavat kuvia ja kuvaavat videoita"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Sallittu"</string>
