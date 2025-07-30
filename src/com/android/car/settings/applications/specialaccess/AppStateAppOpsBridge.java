@@ -16,6 +16,7 @@
 
 package com.android.car.settings.applications.specialaccess;
 
+import android.annotation.NonNull;
 import android.app.AppGlobals;
 import android.app.AppOpsManager;
 import android.content.Context;
@@ -102,6 +103,10 @@ public class AppStateAppOpsBridge implements AppEntryListManager.ExtraInfoBridge
                 Map<String, PermissionState> entriesForProfile = new ArrayMap<>();
                 entries.put(profileId, entriesForProfile);
                 for (PackageInfo packageInfo : packageInfos) {
+                    if (packageInfo == null) {
+                        LOG.d("Ignoring null packageInfo entry");
+                        continue;
+                    }
                     boolean isAvailable = mIPackageManager.isPackageAvailable(
                             packageInfo.packageName,
                             profileId);
@@ -165,7 +170,7 @@ public class AppStateAppOpsBridge implements AppEntryListManager.ExtraInfoBridge
         return pkgNames;
     }
 
-    private boolean shouldIgnorePackage(PackageInfo packageInfo) {
+    private boolean shouldIgnorePackage(@NonNull PackageInfo packageInfo) {
         return packageInfo.packageName.equals("android")
                 || packageInfo.packageName.equals(mContext.getPackageName())
                 || !ArrayUtils.contains(packageInfo.requestedPermissions, mPermission);
