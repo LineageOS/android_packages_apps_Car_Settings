@@ -104,5 +104,6 @@ public abstract class MobileDataBaseWorkerTestCase<E extends MobileDataBaseWorke
     private void createWorker(int subId) {
         when(SubscriptionManager.getDefaultDataSubscriptionId()).thenReturn(subId);
         mWorker = getWorker();
+        mWorker.setQCItem(new MobileDataRow(mContext));
     }
 }
