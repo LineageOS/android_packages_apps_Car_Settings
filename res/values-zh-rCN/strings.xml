@@ -652,7 +652,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"未添加任何账号"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>的账号"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"自动同步数据"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"让应用自动刷新数据"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"允许应用自动刷新数据"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"要允许自动同步数据吗？"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"您在网络上对自己的账号进行的所有更改都会自动同步到您的车辆。\n\n有些账号可能还会将您在车辆上进行的所有更改自动同步到网络上。"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"要禁止自动同步数据吗？"</string>
@@ -910,8 +910,8 @@
       <item quantity="one">相机应用</item>
     </plurals>
     <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
-      <item quantity="other">电子邮件客户端应用</item>
-      <item quantity="one">电子邮件客户端应用</item>
+      <item quantity="other">邮件客户端应用</item>
+      <item quantity="one">邮件客户端应用</item>
     </plurals>
     <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
       <item quantity="other">电话应用</item>
