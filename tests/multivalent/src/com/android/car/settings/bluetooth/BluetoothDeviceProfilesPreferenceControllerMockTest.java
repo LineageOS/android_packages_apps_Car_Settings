@@ -16,11 +16,14 @@
 
 package com.android.car.settings.bluetooth;
 
+import static android.bluetooth.BluetoothProfile.HEADSET_CLIENT;
+
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_PROFILE;
 import static com.android.car.settings.enterprise.ActionDisabledByAdminDialogFragment.DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG;
+import static com.android.car.settings.testutils.BluetoothTestUtils.TestLocalBluetoothProfile;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -33,7 +36,6 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothProfile;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.UserManager;
@@ -108,8 +110,7 @@ public final class BluetoothDeviceProfilesPreferenceControllerMockTest {
 
         when(mCachedDevice.getDevice()).thenReturn(mDevice);
 
-        LocalBluetoothProfile profile =
-                new BluetoothTestUtils.TestLocalBluetoothProfile(BluetoothProfile.HEADSET_CLIENT);
+        LocalBluetoothProfile profile = new TestLocalBluetoothProfile(HEADSET_CLIENT);
         when(mCachedDevice.getProfiles()).thenReturn(List.of(profile));
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();

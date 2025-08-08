@@ -16,6 +16,8 @@
 
 package com.android.car.settings.bluetooth;
 
+import static com.android.car.settings.testutils.BluetoothTestUtils.TestLocalBluetoothProfile;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assume.assumeTrue;
@@ -125,10 +127,8 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
         when(mBondedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDED);
         when(mBondedCachedDevice.getDevice()).thenReturn(mBondedDevice);
 
-        mPhoneProfile =
-                new BluetoothTestUtils.TestLocalBluetoothProfile(BluetoothProfile.HEADSET_CLIENT);
-        mMediaProfile =
-                new BluetoothTestUtils.TestLocalBluetoothProfile(BluetoothProfile.A2DP_SINK);
+        mPhoneProfile = new TestLocalBluetoothProfile(BluetoothProfile.HEADSET_CLIENT);
+        mMediaProfile = new TestLocalBluetoothProfile(BluetoothProfile.A2DP_SINK);
         when(mBondedCachedDevice.getProfiles()).thenReturn(List.of(mPhoneProfile, mMediaProfile));
 
         BluetoothDevice unbondedDevice = mock(BluetoothDevice.class);
