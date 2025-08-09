@@ -107,7 +107,7 @@ public class BluetoothTestUtils {
 
         @Override
         public boolean accessProfileEnabled() {
-            return false;
+            return true;
         }
 
         @Override
