@@ -175,10 +175,8 @@ public abstract class BaseEnterpriseTestCase {
         when(mDpm.getDeviceOwnerOrganizationName()).thenReturn(orgName);
     }
 
-    protected final void mockFinancialDevice() {
-        when(mDpm.isDeviceManaged()).thenReturn(true);
-        when(mDpm.getDeviceOwnerType(mDefaultAdmin))
-                .thenReturn(DevicePolicyManager.DEVICE_OWNER_TYPE_FINANCED);
+    protected final void mockFinancedDevice() {
+        when(mDpm.isFinancedDevice()).thenReturn(true);
     }
 
     protected final void mockActiveAdmin(ComponentName componentName) {

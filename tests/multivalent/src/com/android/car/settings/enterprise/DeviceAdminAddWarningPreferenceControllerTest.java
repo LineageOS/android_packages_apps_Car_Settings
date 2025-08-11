@@ -79,9 +79,9 @@ public final class DeviceAdminAddWarningPreferenceControllerTest extends
     }
 
     @Test
-    public void testUpdateState_deviceOwner_financialDevice() {
+    public void testUpdateState_deviceOwner_financedDevice() {
         mockDeviceOwner();
-        mockFinancialDevice();
+        mockFinancedDevice();
 
         mController.updateState(mPreference);
 
