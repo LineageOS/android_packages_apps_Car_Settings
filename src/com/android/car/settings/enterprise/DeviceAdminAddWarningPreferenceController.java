@@ -16,7 +16,6 @@
 
 package com.android.car.settings.enterprise;
 
-import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
@@ -51,7 +50,7 @@ public final class DeviceAdminAddWarningPreferenceController
                 title = context.getString(R.string.admin_profile_owner_user_message);
             } else {
                 // Show device owner description.
-                if (isFinancedDevice()) {
+                if (mDpm.isFinancedDevice()) {
                     title = context.getString(R.string.admin_financed_message);
                 } else {
                     title = context.getString(R.string.admin_device_owner_message);
@@ -69,11 +68,5 @@ public final class DeviceAdminAddWarningPreferenceController
         }
 
         preferenceGroup.setTitle(title);
-    }
-
-    private boolean isFinancedDevice() {
-        return mDpm.isDeviceManaged() && mDpm.getDeviceOwnerType(mDpm
-                .getDeviceOwnerComponentOnAnyUser())
-                    == DevicePolicyManager.DEVICE_OWNER_TYPE_FINANCED;
     }
 }

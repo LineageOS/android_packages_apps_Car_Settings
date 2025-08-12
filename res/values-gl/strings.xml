@@ -74,7 +74,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Definir límite de uso de datos"</string>
     <string name="data_limit" msgid="227338836292511425">"Límite de uso de datos"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitar o uso de datos"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Desactivaranse os datos móbiles na unidade principal do vehículo unha vez que se acade o límite que estableceses.\n\nPosto que a unidade principal mide o uso de datos e que posiblemente o teu operador contabilice o uso de forma diferente, considera a posibilidade de configurar un límite conservador."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Desactivaranse os datos móbiles no sistema multimedia do vehículo unha vez que se acade o límite que estableceses.\n\nPosto que o sistema multimedia mide o uso de datos e que posiblemente o teu operador contabilice o uso de forma diferente, considera a posibilidade de configurar un límite conservador."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Definir advertencia de uso de datos"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Definir límite de uso de datos"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"A medición do uso de datos provén do teu dispositivo. Pode diferir con respecto á información do teu operador móbil."</string>
@@ -207,10 +207,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere desactivar o Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Unha aplicación quere activar o Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Unha aplicación quere desactivar o Bluetooth"</string>
-    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere que a túa unidade principal estea visible para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Unha aplicación quere que a túa unidade principal estea visible para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere activar o Bluetooth e que a túa unidade principal estea visible para outros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Unha aplicación quere activar o Bluetooth e que a túa unidade principal estea visible para outros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere que o teu sistema multimedia estea visible para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Unha aplicación quere que o teu sistema multimedia estea visible para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere activar o Bluetooth e que o teu sistema multimedia estea visible para outros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Unha aplicación quere activar o Bluetooth e que o teu sistema multimedia estea visible para outros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Visible para outros dispositivos como %1$s"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Os meus dispositivos"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Conectados anteriormente"</string>
