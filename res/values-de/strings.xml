@@ -63,7 +63,7 @@
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Tarif anzeigen"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"Datennutzung durch Apps"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"Eingeschränkt"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tag für Zurücksetzung des Nutzungszyklus"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tag, an dem Nutzungszyklus zurückgesetzt wird"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Jeden Monat zurücksetzen am:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Festlegen"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datenwarnung &amp; Datenlimit"</string>
@@ -75,7 +75,7 @@
     <string name="data_limit" msgid="227338836292511425">"Datenlimit"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datennutzung begrenzen"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Das Infotainmentsystem deines Fahrzeugs deaktiviert mobile Daten, sobald das von dir festgelegte Limit erreicht wurde.\n\nDa die Datennutzung von dem Infotainmentsystem gemessen wird und dein Mobilfunkanbieter sie möglicherweise anders berechnet, solltest du von einem eher etwas niedrigeren Limit ausgehen."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Warnung für Datennutzung festlegen"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Warnung zur Datennutzung festlegen"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limit für Datennutzung festlegen"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Die Datennutzung wird von deinem Gerät gemessen. Diese Messung kann von derjenigen deines Mobilfunkanbieters abweichen."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Festlegen"</string>
@@ -150,7 +150,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sicherheit"</string>
     <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
     <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
-    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Keiner"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Band für Zugangspunkt"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Band für Zugangspunkt wählen"</string>
