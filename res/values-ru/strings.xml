@@ -553,7 +553,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Будут сброшены следующие настройки:\n\n"<li>"Отключенные приложения."</li>\n<li>"Отключенные уведомления приложений."</li>\n<li>"Приложения по умолчанию."</li>\n<li>"Ограничения на передачу данных в фоновом режиме."</li>\n<li>"Все ограничения разрешений."</li>\n\n"Данные приложений удалены не будут."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Сбросить настройки"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Настройки приложений сброшены."</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Стереть все данные (заводские настройки)"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Удалить все данные (сброс настроек)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Удалить все данные и профили из информационно-развлекательной системы"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"Будут удалены все данные из информационно-развлекательной системы автомобиля, в том числе:\n\n"<li>"ваши аккаунты и профили;"</li>\n<li>"данные и настройки системы и приложений;"</li>\n<li>"скачанные приложения."</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Вы вошли в следующие аккаунты:"</string>
@@ -834,7 +834,7 @@
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Тема"</string>
     <string name="driving_mode_title" msgid="8103270030335833998">"Включить режим вождения"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"Показывать границы макета"</string>
-    <string name="show_force_rtl_title" msgid="8240732919603115320">"Отразить интерфейс справа налево"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"Расположение справа налево"</string>
     <string name="show_customization_overlay_title" msgid="2543804846629965883">"Оверлей настройки"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Администратор информационно-развлекательной системы"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Активные приложения"</string>
