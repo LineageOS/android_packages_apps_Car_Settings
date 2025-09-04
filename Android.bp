@@ -62,6 +62,7 @@ android_library {
         "services.core",
         "car-data-subscription-lib",
         "oem-token-lib",
+        "com_android_systemui_car_flags_lib",
     ],
 
     libs: [
@@ -258,6 +259,7 @@ android_library {
         "com_android_car_settings_flags_lib",
         "car-data-subscription-lib",
         "oem-token-lib",
+        "com_android_systemui_car_flags_lib",
     ],
 
     enforce_uses_libs: false,

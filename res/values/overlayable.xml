@@ -190,6 +190,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="ap_preference_item_icon_margin_end"/>
       <item type="dimen" name="ap_preference_item_padding_end"/>
       <item type="dimen" name="ap_preference_item_padding_start"/>
+      <item type="dimen" name="aspect_ratio_dialog_width"/>
       <item type="dimen" name="aspect_ratio_icon_height"/>
       <item type="dimen" name="aspect_ratio_icon_width"/>
       <item type="dimen" name="block_by_admin_icon_padding"/>
@@ -317,6 +318,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="user_disclaimer_action_button_top_margin"/>
       <item type="dimen" name="user_disclaimer_text_size"/>
       <item type="dimen" name="wifi_share_page_margin"/>
+      <item type="drawable" name="aspect_ratio_dialog_container_background"/>
       <item type="drawable" name="bluetooth_bonded_device_rotary_background"/>
       <item type="drawable" name="brightness_seekbar_background"/>
       <item type="drawable" name="brightness_seekbar_track"/>
@@ -480,6 +482,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="wifi_signal"/>
       <item type="id" name="action_text"/>
       <item type="id" name="alphanumeric_pin"/>
+      <item type="id" name="aspect_ratio_dialog"/>
+      <item type="id" name="aspect_ratio_dialog_message"/>
+      <item type="id" name="aspect_ratio_dialog_title"/>
+      <item type="id" name="aspect_ratio_radio_group"/>
       <item type="id" name="audio_sharing_qr_code"/>
       <item type="id" name="bottomDivider"/>
       <item type="id" name="button1"/>
@@ -494,6 +500,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="button4"/>
       <item type="id" name="button4Icon"/>
       <item type="id" name="button4Text"/>
+      <item type="id" name="button_apply"/>
+      <item type="id" name="button_close"/>
       <item type="id" name="bytes_threshold"/>
       <item type="id" name="bytes_threshold_container"/>
       <item type="id" name="bytes_units"/>
@@ -622,6 +630,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="integer" name="recent_notifications_days_threshold"/>
       <item type="integer" name="user_switcher_num_col"/>
       <item type="layout" name="action_buttons_preference"/>
+      <item type="layout" name="aspect_ratio_dialog"/>
+      <item type="layout" name="aspect_ratio_dialog_activity"/>
       <item type="layout" name="audio_sharing_device_selector_preference_group"/>
       <item type="layout" name="audio_stream_qr_preference"/>
       <item type="layout" name="bluetooth_pin_confirm"/>
@@ -762,6 +772,13 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="apps_special_app_access_summary"/>
       <item type="string" name="apps_view_all_apps_title"/>
       <item type="string" name="aspect_ratio_action_button"/>
+      <item type="string" name="aspect_ratio_dialog_app_default_text"/>
+      <item type="string" name="aspect_ratio_dialog_apply_button_text"/>
+      <item type="string" name="aspect_ratio_dialog_close_button_text"/>
+      <item type="string" name="aspect_ratio_dialog_full_screen_text"/>
+      <item type="string" name="aspect_ratio_dialog_half_screen_text"/>
+      <item type="string" name="aspect_ratio_dialog_message"/>
+      <item type="string" name="aspect_ratio_dialog_title"/>
       <item type="string" name="aspect_ratio_label"/>
       <item type="string" name="assist_access_context_summary"/>
       <item type="string" name="assist_access_context_title"/>
@@ -1723,6 +1740,18 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="zone_list_menu_sort_by_timezone"/>
       <item type="style" name="ActionDialogTheme"/>
       <item type="style" name="AlertDialogTheme"/>
+      <item type="style" name="AspectRatioDialogActivityContainer"/>
+      <item type="style" name="AspectRatioDialogActivityTheme"/>
+      <item type="style" name="AspectRatioDialogApplyButton"/>
+      <item type="style" name="AspectRatioDialogButton"/>
+      <item type="style" name="AspectRatioDialogCloseButton"/>
+      <item type="style" name="AspectRatioDialogContainer"/>
+      <item type="style" name="AspectRatioDialogMessageAndActionContainer"/>
+      <item type="style" name="AspectRatioDialogMessageTextView"/>
+      <item type="style" name="AspectRatioDialogOptionsContainer"/>
+      <item type="style" name="AspectRatioDialogOptionsRadioButton"/>
+      <item type="style" name="AspectRatioDialogOptionsRadioGroup"/>
+      <item type="style" name="AspectRatioDialogTitle"/>
       <item type="style" name="CarSettingTheme"/>
       <item type="style" name="CarSettingsActivityDividerStyle"/>
       <item type="style" name="CarSettingsFragmentContainerStyle"/>
