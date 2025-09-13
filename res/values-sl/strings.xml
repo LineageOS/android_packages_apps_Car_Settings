@@ -984,18 +984,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Oglejte si pakete"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Končano"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Vaše vozilo ne podpira te funkcije"</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Nastavitve razmerja stranic"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Aplikacija se bo znova zagnala, ko boste spremenili razmerje stranic. Morda boste izgubili neshranjene spremembe. Nekatere aplikacije morda niso optimizirane za nekatera razmerja stranic."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Zapri"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Uporabi"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Privzeto za aplikacijo"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Celozaslonski način"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Način polovice zaslona"</string>
 </resources>
