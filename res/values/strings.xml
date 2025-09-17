@@ -1624,10 +1624,6 @@
     <string name="camera_access_disclaimer_summary">
         Your car manufacturer may still have access to your car\u2019s camera
     </string>
-    <!-- Title for the entrypoint that navigates to the App Function Access Settings page. [CHAR LIMIT=70]-->
-    <string name="app_function_access_settings_title">Agent control of other apps</string>
-    <!-- Summary for the entrypoint that navigates to the App Function Access Settings page. [CHAR LIMIT=130]-->
-    <string name="app_function_access_settings_summary">Perform actions on your device and in other apps</string>
     <!-- Title of infotainment apps accessing camera [CHAR LIMIT=40]-->
     <string name="camera_infotainment_apps_toggle_title">Infotainment apps</string>
     <!-- Summary of infotainment apps accessing camera [CHAR LIMIT=NONE]-->
@@ -1642,6 +1638,21 @@
     <string name="permission_grant_in_use">Only while using the app</string>
     <!-- Summary for the apps which have been granted permission for one-time use [CHAR LIMIT=40]-->
     <string name="permission_grant_ask">Ask every time</string>
+
+    <!-- TODO: (b/427794560) update strings for app function access when UX is finalized -->
+    <!-- AppFunction Permissions Pages --><skip/>
+    <!-- Title for the entrypoint that navigates to the App Function Access Settings page. [CHAR LIMIT=70]-->
+    <string name="app_function_access_settings_title">Agent control of other apps</string>
+    <!-- Summary for the entrypoint that navigates to the App Function Access Settings page. [CHAR LIMIT=130]-->
+    <string name="app_function_access_settings_summary">Perform actions on your device and in other apps</string>
+    <!-- Title for the entrypoint that navigates to the Manage App Function Access for specific Agent Settings page. [CHAR LIMIT=70]-->
+    <string name="agent_app_function_access_settings_title">App access</string>
+    <!-- Summary for the entrypoint that navigates to the Manage App Function Access for specific Agent Settings page. [CHAR LIMIT=130]-->
+    <string name="agent_app_function_access_settings_summary">Allow this agent to access info or take actions in apps</string>
+    <!-- Title for the entrypoint that navigates to the App Function Access of this Target app Settings page. [CHAR LIMIT=70]-->
+    <string name="target_app_function_access_settings_title">Agent access</string>
+    <!-- Summary for the entrypoint that navigates to the App Function Access  of this Target app Settings page. [CHAR LIMIT=130]-->
+    <string name="target_app_function_access_settings_summary">Agents that can access info or take actions in this app</string>
 
     <!-- security lock --><skip/>
     <!-- Title for security settings [CHAR LIMIT=20] -->
