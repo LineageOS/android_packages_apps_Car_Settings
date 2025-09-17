@@ -700,8 +700,6 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"ଆପଣଙ୍କୁ ଡ୍ରାଇଭ କରିବାରେ ସାହାଯ୍ୟ କରିବା ପାଇଁ ଆପଣଙ୍କ କାରର ନିର୍ମାତାଙ୍କ ଦ୍ୱାରା ଆବଶ୍ୟକ ହେଉଥିବା ଆପ୍ସ"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"ନୀତି"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ଆପଣଙ୍କ କାର ନିର୍ମାତାଙ୍କ ପାଖରେ ଏବେ ବି ଆପଣଙ୍କ କାରର କେମେରାକୁ ଆକ୍ସେସ ଥାଇପାରେ"</string>
-    <string name="app_function_access_settings_title" msgid="7029660854535229000">"ଅନ୍ୟ ଆପ୍ସର ଏଜେଣ୍ଟ ନିୟନ୍ତ୍ରଣ"</string>
-    <string name="app_function_access_settings_summary" msgid="404048231298577346">"ଆପଣଙ୍କ ଡିଭାଇସ ଏବଂ ଅନ୍ୟ ଆପ୍ସରେ କାର୍ଯ୍ୟ ପରଫର୍ମ କରନ୍ତୁ"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ଇନଫୋଟେନମେଣ୍ଟ ଆପ୍ସ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ଫଟୋ ଉଠାଇବା ଏବଂ ଭିଡିଓ ରେକର୍ଡ କରିବା ପାଇଁ ଇନଫୋଟେନମେଣ୍ଟ ଆପ୍ସକୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"ଅନୁମତି ଦିଆଯାଇଛି"</string>
@@ -709,6 +707,16 @@
     <string name="permission_grant_never" msgid="1357441946890127898">"ଅନୁମତି ଦିଆଯାଇନାହିଁ"</string>
     <string name="permission_grant_in_use" msgid="2314262542396732455">"କେବଳ ଆପ ବ୍ୟବହାର କରିବା ବେଳେ"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"ପ୍ରତ୍ୟେକ ଥର ପଚାରନ୍ତୁ"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"ଅନ୍ୟ ଆପ୍ସର ଏଜେଣ୍ଟ ନିୟନ୍ତ୍ରଣ"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"ଆପଣଙ୍କ ଡିଭାଇସ ଏବଂ ଅନ୍ୟ ଆପ୍ସରେ କାର୍ଯ୍ୟ ପରଫର୍ମ କରନ୍ତୁ"</string>
+    <!-- no translation found for agent_app_function_access_settings_title (2891760345742481252) -->
+    <skip />
+    <!-- no translation found for agent_app_function_access_settings_summary (693092645147911992) -->
+    <skip />
+    <!-- no translation found for target_app_function_access_settings_title (7685771153243303475) -->
+    <skip />
+    <!-- no translation found for target_app_function_access_settings_summary (2533432320530009749) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"ସୁରକ୍ଷା"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"କିଛି ନାହିଁ"</string>
