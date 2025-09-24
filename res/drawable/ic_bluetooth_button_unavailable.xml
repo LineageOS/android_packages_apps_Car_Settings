@@ -21,7 +21,7 @@
           android:height="@dimen/bluetooth_bonded_device_button_size">
         <shape android:shape="rectangle">
             <corners android:radius="?bluetoothBondedDeviceButtonRadius"/>
-            <solid android:color="@color/bluetooth_disabled_device_background_color"/>
+            <solid android:color="@color/theme_toggle_button_background_unavailable"/>
             <stroke android:width="@dimen/bluetooth_bonded_device_border_width"
                     android:color="@color/bluetooth_disabled_device_icon_color"/>
         </shape>

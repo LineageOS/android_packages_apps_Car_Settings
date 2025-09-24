@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2023 The Android Open Source Project
+  ~ Copyright (C) 2025 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -14,11 +14,10 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
+<!--
+    By default, the Quick Controls view will tint the provided icon to the configured value.
+    Therefore, the color specified here is more of a placeholder to create the initial fill.
+-->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="false"
-        android:alpha="?android:attr/disabledAlpha"
-        android:color="?attr/oemColorSecondaryContainer"/>
-    <item android:state_checked="false"
-        android:color="?attr/oemColorSecondaryContainer"/>
-    <item android:color="?attr/oemColorPrimary"/>
+    <item android:color="?attr/oemColorOnSurfaceVariant"/>
 </selector>

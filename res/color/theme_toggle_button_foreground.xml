@@ -14,9 +14,11 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<!-- @color/car_grey_400 but with disabled and ux restricted states. -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false"
+        android:alpha="?android:attr/disabledAlpha"
+        android:color="?attr/oemColorOnSecondaryContainer"/>
     <item android:state_checked="false"
-        android:color="@color/theme_toggle_button_icon_color_unchecked"/>
-    <item android:color="@color/theme_toggle_button_icon_color_checked"/>
+        android:color="?attr/oemColorOnSecondaryContainer"/>
+    <item android:color="?attr/oemColorOnPrimary"/>
 </selector>
