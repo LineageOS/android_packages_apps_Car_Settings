@@ -32,7 +32,6 @@ import android.content.SharedPreferences;
 
 import androidx.preference.Preference;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.bluetooth.LeAudioProfile;
@@ -164,7 +163,6 @@ public abstract class BaseAudioSharingPreferenceController<T extends Preference>
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (!Flags.carSettingsMultiCasting()) return CONDITIONALLY_UNAVAILABLE;
         if (isUserEnabled() && isBroadcasting()) {
             return AVAILABLE;
         }
