@@ -183,7 +183,7 @@
     <string name="wifi_detail_share" msgid="3765487472190563802">"Կիսվել"</string>
     <string name="wifi_detail_share_description" msgid="1417559695973326762">"Սկանավորեք այս QR կոդը՝ Wi‑Fi-ին միանալու համար"</string>
     <string name="wifi_detail_share_toast" msgid="9106513465439393280">"Կապի փոխանցումը հասնաելի չէ այս Wi‑Fi-ի համար։"</string>
-    <string name="connected_settings_title" msgid="8868738903280658151">"Միացված սարքեր"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"Կապակցված սարքեր"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"Օգտագործել Bluetooth-ը"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Անանուն սարք"</string>
@@ -972,18 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Դիտել պլանները"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Պատրաստ է"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Ձեր մեքենան չի աջակցում այս գործառույթը"</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Կողմերի հարաբերության կարգավորումներ"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Երբ թարմացնեք կողմերի հարաբերակցությունը, հավելվածը կվերագործարկվի։ Որոշ փոփոխություններ կարող են չպահպանվել։ Որոշ հավելվածներ կարող են չօպտիմալացվել կողմերի որոշակի հարաբերակցության համար։"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Փակել"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Կիրառել"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Հավելվածի կանխադրված տարբերակ"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Լիաէկրան"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Կիսաէկրան"</string>
 </resources>

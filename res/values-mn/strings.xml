@@ -972,18 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Багцыг харах"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Болсон"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Таны тээврийн хэрэгсэл энэ онцлогийг дэмждэггүй"</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Аспектын харьцааны тохиргоо"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Таныг аспектын харьцааг өөрчлөх үед апп дахин эхэлнэ. Та хадгалаагүй өөрчлөлтөө алдаж болзошгүй. Зарим аппыг тодорхой аспектын харьцаанд оновчлохгүй байж магадгүй."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Хаах"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Ашиглах"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Аппын өгөгдмөл"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Бүтэн дэлгэц"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Хагас дэлгэц"</string>
 </resources>

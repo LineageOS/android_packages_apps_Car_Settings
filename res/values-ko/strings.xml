@@ -972,18 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"요금제 보기"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"완료"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"자동차가 이 기능을 지원하지 않습니다."</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"가로세로 비율 설정"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"가로세로 비율을 변경하면 앱이 다시 시작됩니다. 저장하지 않은 변경사항은 손실될 수 있습니다. 일부 앱은 특정 가로세로 비율에 최적화되어 있지 않을 수 있습니다."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"닫기"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"적용"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"앱 기본값"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"전체 화면"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"절반 화면"</string>
 </resources>

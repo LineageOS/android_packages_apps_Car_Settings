@@ -492,8 +492,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Жүйенің жаңа нұсқалары"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Қосымша"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"Сипаттама, құқықтық ақпарат, бастапқы күйге қайтару және т.б."</string>
-    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Ақпараттық-сауықтық жүйені өшіріп қосу"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Көліктің ақпараттық-сауықтық жүйесін өшіріп қосу бірнеше минут алуы мүмкін. Жалғастырғыңыз келе ме?"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Ақпарат және ойын-сауық жүйесін өшіріп қосу"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Көліктің ақпарат және ойын-сауық жүйесін өшіріп қосу бірнеше минут алуы мүмкін. Жалғастырғыңыз келе ме?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Жалғастыру"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android нұсқасы"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android қауіпсіздік түзетуінің деңгейі"</string>
@@ -555,7 +555,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Қолданба параметрлері бастапқы күйіне қайтарылды."</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Барлық деректі өшіру (зауыттық параметрлерге қайтару)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Ақпарат және ойын-сауық жүйесінен барлық дерек пен профильдерді өшіру"</string>
-    <string name="factory_reset_desc" msgid="2774024747279286354">"Бұл – көлігіңіздің ақпараттық-сауықтық жүйесінен деректердің барлығын өшіреді, соның ішінде:\n\n"<li>"аккаунттарыңыз бен профильдеріңізді;"</li>\n<li>"жүйе және қолданба деректері мен параметрлерін;"</li>\n<li>"жүктеп алынған қолданбаларды"</li>"."</string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Бұл – көлігіңіздің ақпарат және ойын-сауық жүйесінен деректердің барлығын өшіреді, соның ішінде:\n\n"<li>"аккаунттарыңыз бен профильдеріңізді;"</li>\n<li>"жүйе және қолданба деректері мен параметрлерін;"</li>\n<li>"жүктеп алынған қолданбаларды"</li>"."</string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Сіз келесі аккаунттарға кірдіңіз:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Бұл көлік үшін басқа профильдер реттелген."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Барлық деректі өшіру"</string>
@@ -679,7 +679,7 @@
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Синхрондауды өшіру"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Синхрондауда қате шығуда. Кішкене уақыттан кейін қалпына келеді."</string>
     <string name="privacy_settings_title" msgid="3150145262029229572">"Құпиялық"</string>
-    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Ақпараттық-сауықтық жүйе деректері"</string>
+    <string name="privacy_vehicle_data_title" msgid="6385777370742595651">"Ақпарат және ойын-сауық жүйесі деректері"</string>
     <string name="privacy_location_summary" msgid="7019817848470566242">"Қолданбаның локацияны пайдалану рұқсатын басқару"</string>
     <string name="mute_camera_title" msgid="215494079895460172">"Камера"</string>
     <string name="mute_camera_summary" msgid="1237452064757403042">"Қолданбаның камераны пайдалану параметрлерін басқару"</string>
@@ -836,21 +836,21 @@
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"Жиектерді көрсету"</string>
     <string name="show_force_rtl_title" msgid="8240732919603115320">"Оңнан солға орналастыру"</string>
     <string name="show_customization_overlay_title" msgid="2543804846629965883">"Бейімдеу оверлейі"</string>
-    <string name="device_admin_add_title" msgid="1294399588284546811">"Ақпараттық-сауықтық жүйе әкімшісі"</string>
+    <string name="device_admin_add_title" msgid="1294399588284546811">"Ақпарат және ойын-сауық жүйесінің әкімшісі"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"Қосылған қолданбалар"</string>
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Өшірілген қолданбалар"</string>
     <string name="device_admin_apps_description" msgid="1371935499168453457">"Мұндай рұқсаты бар қолданбалар осы көліктің деректерін пайдалана алады."</string>
     <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Көлік әкімшісіне арналған қолданбалар жоқ."</string>
-    <string name="device_admin_status" msgid="4041772636856135168">"Бұл ақпараттық-сауықтық жүйе әкімшісінің қолданбасы жұмыс істеп тұр және <xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасының мына әрекеттерді орындауына мүмкіндік береді:"</string>
-    <string name="device_admin_warning" msgid="8997805999333600901">"Осы ақпараттық-сауықтық жүйе қолданбасын белсендірсеңіз, <xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы мына әрекеттерді орындай алады:"</string>
-    <string name="add_device_admin_msg" msgid="8188888666879499482">"Осы ақпараттық-сауықтық жүйе қолданбасын белсендіру керек пе?"</string>
-    <string name="add_device_admin" msgid="7674707256074840333">"Осы ақпараттық-сауықтық жүйе қолданбасын белсендіру"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Бұл ақпарат және ойын-сауық жүйесі әкімшісінің қолданбасы жұмыс істеп тұр және <xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасының мына әрекеттерді орындауына мүмкіндік береді:"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Осы ақпарат және ойын-сауық жүйесі қолданбасын белсендірсеңіз, <xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы мына әрекеттерді орындай алады:"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Осы ақпарат және ойын-сауық жүйесі қолданбасын белсендіру керек пе?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Осы ақпарат және ойын-сауық жүйесі қолданбасын белсендіру"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Өшіру және жою"</string>
-    <string name="remove_device_admin" msgid="3595343390502030723">"Ақпараттық-сауықтық жүйе қолданбасын өшіру"</string>
+    <string name="remove_device_admin" msgid="3595343390502030723">"Ақпарат және ойын-сауық жүйесі қолданбасын өшіру"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Ұйым басқарушысы осы профильмен байланысты қолданбалар мен деректі, соның ішінде параметрлерді, рұқсаттарды, корпоративтік рұқсатты, желідегі әрекеттерді және көлік локациясы туралы ақпаратты бақылап, басқара алады."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Ұйым басқарушысы осы профильмен байланысты қолданбалар мен деректі, соның ішінде параметрлерді, рұқсаттарды, корпоративтік рұқсатты, желідегі әрекеттерді және құрылғы локациясы туралы ақпаратты бақылап, басқара алады."</string>
-    <string name="admin_device_owner_message" msgid="896530502350904835">"Ұйым басқарушысы осы ақпараттық-сауықтық жүйемен байланысты қолданбалар мен деректі, соның ішінде параметрлерді, рұқсаттарды, корпоративтік рұқсатты, желідегі әрекеттерді және көлік локациясы туралы ақпаратты бақылап, басқара алады."</string>
-    <string name="admin_financed_message" msgid="7357397436233684082">"Ұйым басқарушысы осы ақпараттық-сауықтық жүйемен байланысты деректі пайдалана, қолданбаларды басқара және осы көлік параметрлерін өзгерте алады."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"Ұйым басқарушысы осы ақпарат және ойын-сауық жүйесімен байланысты қолданбалар мен деректі, соның ішінде параметрлерді, рұқсаттарды, корпоративтік рұқсатты, желідегі әрекеттерді және көлік локациясы туралы ақпаратты бақылап, басқара алады."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"Ұйым басқарушысы осы ақпарат және ойын-сауық жүйесімен байланысты деректі пайдалана, қолданбаларды басқара және осы көлік параметрлерін өзгерте алады."</string>
     <string name="disabled_by_policy_title" msgid="1121694702115232518">"Параметр қолжетімсіз"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Бұл басқарылатын көлікте дыбыс деңгейін өзгерту мүмкін емес"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Бұл басқарылатын көлікте қоңырау шалу мүмкін емес"</string>
@@ -870,11 +870,11 @@
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"<xliff:g id="SERVICE">%1$s</xliff:g> туралы толығырақ ақпарат"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Басқарылатын көлік туралы ақпарат"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Автопарк әкімшісі басқаратын параметрлер"</string>
-    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Осы басқарылатын көліктегі деректерді пайдалану үшін автопарк әкімшісі ақпараттық-сауықтық жүйеде параметрлерді өзгертіп, бағдарламалық құрал орната алады.\n\nҚосымша мәліметтер алу үшін автопарк әкімшісіне хабарласыңыз."</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Осы басқарылатын көліктегі деректерді пайдалану үшін автопарк әкімшісі ақпарат және ойын-сауық жүйесінде параметрлерді өзгертіп, бағдарламалық құрал орната алады.\n\nҚосымша мәліметтер алу үшін автопарк әкімшісіне хабарласыңыз."</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Автопарк әкімшісі көре алатын ақпарат"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Автопарк әкімшісі енгізген өзгерістер"</string>
     <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Басқарылатын көлік аккаунтымен байланыстырылған дерек"</li>\n" "<li>"Басқарылатын көліктегі қолданбалар тізімі"</li>\n" "<li>"Әр қолданбада жұмсалған уақыт пен дерек мөлшері"</li></string>
-    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Ақпараттық-сауықтық жүйеге кіру"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Ақпарат және ойын-сауық жүйесіне кіру"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Көліктегі қолданбалар тізімі"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Қолданба саны шамамен алынған. Бұған Play Store дүкенінен тыс орнатылған қолданбалар кірмеуі мүмкін."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
@@ -898,8 +898,8 @@
     <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"<xliff:g id="APP_LABEL">%s</xliff:g> орнатылды."</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Ғаламдық HTTP прокси-сервері орнатылды."</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Жеке профильдегі сенімді тіркелу деректері"</string>
-    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Әкімші ақпараттық-сауықтық жүйені құлыптай және құпия сөзді қайта орната алады."</li>\n" "<li>"Әкімші ақпараттық-сауықтық жүйедегі деректі өшіре алады."</li></string>
-    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Құпия сөз бірнеше рет қате енгізілсе, ақпараттық-сауықтық жүйедегі барлық дерек жойылады."</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"Әкімші ақпарат және ойын-сауық жүйесін құлыптай және құпия сөзді қайта орната алады."</li>\n" "<li>"Әкімші ақпарат және ойын-сауық жүйесіндегі деректі өшіре алады."</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Құпия сөз бірнеше рет қате енгізілсе, ақпарат және ойын-сауық жүйесіндегі барлық дерек жойылады."</string>
     <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Құпия сөз бірнеше рет қате енгізілсе, профиль дерегі жойылады."</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> әрекет</item>
@@ -972,18 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Жоспарларды көру"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Дайын"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Көлігіңіз бұл функцияға қолдау көрсетпейді."</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Арақатынас параметрлері"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Арақатынасты өзгерткенде, қолданба өшіп қосылады. Сақталмаған өзгерістерді жоғалтып алуыңыз мүмкін. Кейбір қолданбалар белгілі бір арақатынастар үшін оңтайландырылмаған болуы мүмкін."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Жабу"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Қолдану"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Қолданбаның әдепкі арақатынасы"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Толық экран"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Жарты экран"</string>
 </resources>

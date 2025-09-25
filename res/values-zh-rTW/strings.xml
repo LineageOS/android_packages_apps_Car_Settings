@@ -972,18 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看方案"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完成"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"本車輛不支援這項功能"</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"顯示比例設定"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"變更顯示比例後，應用程式會重新啟動。你可能會失去未儲存的變更內容。部分應用程式可能未針對某些顯示比例完成最佳化調整。"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"關閉"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"套用"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"應用程式預設"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"全螢幕"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"半螢幕"</string>
 </resources>
