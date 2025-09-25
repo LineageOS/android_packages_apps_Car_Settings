@@ -114,11 +114,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="aspect_ratio_icon_outline_color"/>
       <item type="color" name="bluetooth_bonded_device_background"/>
       <item type="color" name="bluetooth_bonded_device_foreground"/>
-      <item type="color" name="bluetooth_bonded_device_icon_color_checked"/>
-      <item type="color" name="bluetooth_bonded_device_icon_color_unchecked"/>
-      <item type="color" name="bluetooth_bonded_device_off_background_color"/>
-      <item type="color" name="bluetooth_device_icon_color"/>
-      <item type="color" name="bluetooth_disabled_device_background_color"/>
       <item type="color" name="bluetooth_disabled_device_icon_color"/>
       <item type="color" name="brightness_thumb_inner_ring_color"/>
       <item type="color" name="brightness_thumb_outer_ring_color"/>
@@ -131,10 +126,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="qc_default_icon_color"/>
       <item type="color" name="text_color_accent_with_disable"/>
       <item type="color" name="theme_toggle_button_background"/>
+      <item type="color" name="theme_toggle_button_background_unavailable"/>
       <item type="color" name="theme_toggle_button_foreground"/>
-      <item type="color" name="theme_toggle_button_icon_color_checked"/>
-      <item type="color" name="theme_toggle_button_icon_color_unchecked"/>
-      <item type="color" name="theme_toggle_button_off_background_color"/>
+      <item type="color" name="theme_toggle_button_foreground_unavailable"/>
       <item type="color" name="top_level_accessibility_background"/>
       <item type="color" name="top_level_accessibility_icon"/>
       <item type="color" name="top_level_applications_background"/>
