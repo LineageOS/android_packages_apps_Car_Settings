@@ -709,14 +709,10 @@
     <string name="permission_grant_ask" msgid="1613256400438907973">"Pitaj svaki put"</string>
     <string name="app_function_access_settings_title" msgid="7029660854535229000">"Pristup aplikacije agenta za druge aplikacije"</string>
     <string name="app_function_access_settings_summary" msgid="404048231298577346">"Izvršite radnje na uređaju i u drugim aplikacijama"</string>
-    <!-- no translation found for agent_app_function_access_settings_title (2891760345742481252) -->
-    <skip />
-    <!-- no translation found for agent_app_function_access_settings_summary (693092645147911992) -->
-    <skip />
-    <!-- no translation found for target_app_function_access_settings_title (7685771153243303475) -->
-    <skip />
-    <!-- no translation found for target_app_function_access_settings_summary (2533432320530009749) -->
-    <skip />
+    <string name="agent_app_function_access_settings_title" msgid="2891760345742481252">"Pristup aplikaciji"</string>
+    <string name="agent_app_function_access_settings_summary" msgid="693092645147911992">"Dopustite ovom agentu da pristupa podacima ili poduzima radnje u aplikacijama"</string>
+    <string name="target_app_function_access_settings_title" msgid="7685771153243303475">"Pristup agenta"</string>
+    <string name="target_app_function_access_settings_summary" msgid="2533432320530009749">"Agenti koji mogu pristupati podacima ili poduzimati radnje u ovoj aplikaciji"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sigurnost"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Zaključavanje zaslona"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ništa"</string>

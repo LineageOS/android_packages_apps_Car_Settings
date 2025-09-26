@@ -709,14 +709,10 @@
     <string name="permission_grant_ask" msgid="1613256400438907973">"हर बार पूछें"</string>
     <string name="app_function_access_settings_title" msgid="7029660854535229000">"अन्य ऐप्लिकेशन के लिए एजेंट कंट्रोल"</string>
     <string name="app_function_access_settings_summary" msgid="404048231298577346">"अपने डिवाइस और अन्य ऐप्लिकेशन में कार्रवाइयां करने की अनुमति दें"</string>
-    <!-- no translation found for agent_app_function_access_settings_title (2891760345742481252) -->
-    <skip />
-    <!-- no translation found for agent_app_function_access_settings_summary (693092645147911992) -->
-    <skip />
-    <!-- no translation found for target_app_function_access_settings_title (7685771153243303475) -->
-    <skip />
-    <!-- no translation found for target_app_function_access_settings_summary (2533432320530009749) -->
-    <skip />
+    <string name="agent_app_function_access_settings_title" msgid="2891760345742481252">"ऐप्लिकेशन को दिया गया ऐक्सेस"</string>
+    <string name="agent_app_function_access_settings_summary" msgid="693092645147911992">"इस एजेंट को ऐप्लिकेशन में जानकारी ऐक्सेस करने या कार्रवाइयां करने की अनुमति दें"</string>
+    <string name="target_app_function_access_settings_title" msgid="7685771153243303475">"एजेंट को दिया गया ऐक्सेस"</string>
+    <string name="target_app_function_access_settings_summary" msgid="2533432320530009749">"ऐसे एजेंट जो इस ऐप्लिकेशन में जानकारी ऐक्सेस कर सकते हैं या कार्रवाइयां कर सकते हैं"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>
