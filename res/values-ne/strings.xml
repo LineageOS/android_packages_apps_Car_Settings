@@ -972,18 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"योजनाहरू हेर्नुहोस्"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"पूरा भयो"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"तपाईंको कारमा यो सुविधा प्रयोग गर्न मिल्दैन"</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"एस्पेक्ट रेसियोसम्बन्धी सेटिङ"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"तपाईंले एस्पेक्ट रेसियो बदल्नुभयो भने एप रिस्टार्ट हुने छ। तपाईंले सेभ नगरिएका परिवर्तनहरू गुमाउन सक्नुहुन्छ। केही एपहरू निश्चित एस्पेक्ट रेसियोका लागि अप्टिमाइज नगरिन सक्छन्।"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"बन्द गर्नुहोस्"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"लागू गर्नुहोस्"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"एपको डिफल्ट एस्पेक्ट रेसियो"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"फुल स्क्रिन"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"आधा स्क्रिन"</string>
 </resources>

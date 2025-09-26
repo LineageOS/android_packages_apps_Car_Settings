@@ -972,18 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"See plans"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Done"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Your vehicle does not support this feature"</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Aspect ratio settings"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"The app will restart when you change the aspect ratio. You may lose unsaved changes. Some apps may not be optimised for certain aspect ratios."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Close"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Apply"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"App default"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Full screen"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Half screen"</string>
 </resources>

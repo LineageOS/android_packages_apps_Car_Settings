@@ -996,18 +996,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"الاطّلاع على الخطط"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"تم"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"لا تتيح مركبتك استخدام هذه الميزة"</string>
-    <!-- no translation found for aspect_ratio_dialog_title (5037908726234453003) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_message (4199444972791605946) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_close_button_text (106373988244349134) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_apply_button_text (6640581762487796778) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_app_default_text (5086218873843168173) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_full_screen_text (888165107964490897) -->
-    <skip />
-    <!-- no translation found for aspect_ratio_dialog_half_screen_text (3832684591279367444) -->
-    <skip />
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"إعدادات نسبة العرض إلى الارتفاع"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"سيُعاد تشغيل التطبيق بعد تغيير نسبة العرض إلى الارتفاع. ربما لا تظهر التغييرات غير المحفوظة. وقد لا تتوافق بعض التطبيقات مع نِسب عرض إلى ارتفاع محدَّدة."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"إغلاق"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"تطبيق"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"نسبة العرض إلى الارتفاع التلقائية في التطبيق"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ملء الشاشة"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"نصف الشاشة"</string>
 </resources>
