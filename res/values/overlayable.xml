@@ -636,6 +636,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="layout" name="action_buttons_preference"/>
       <item type="layout" name="aspect_ratio_dialog"/>
       <item type="layout" name="aspect_ratio_dialog_activity"/>
+      <item type="layout" name="audio_route_preference_group"/>
       <item type="layout" name="audio_sharing_device_selector_preference_group"/>
       <item type="layout" name="audio_stream_qr_preference"/>
       <item type="layout" name="bluetooth_pin_confirm"/>
@@ -801,6 +802,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="assistant_and_voice_use_text_from_screen_title"/>
       <item type="string" name="assistant_security_warning"/>
       <item type="string" name="audio_route_dialog_neutral_button_text"/>
+      <item type="string" name="audio_route_preference_available_to_join"/>
+      <item type="string" name="audio_route_preference_connecting_broadcast"/>
+      <item type="string" name="audio_route_preference_connecting_device"/>
+      <item type="string" name="audio_route_preference_disconnecting_broadcast"/>
+      <item type="string" name="audio_route_preference_listening"/>
       <item type="string" name="audio_route_selector_title"/>
       <item type="string" name="audio_route_selector_toast"/>
       <item type="string" name="audio_sharing_active_media_devices"/>
@@ -1796,6 +1802,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="applications_settings_fragment"/>
       <item type="xml" name="apps_fragment"/>
       <item type="xml" name="assistant_and_voice_fragment"/>
+      <item type="xml" name="audio_route_picker_fragment"/>
       <item type="xml" name="audio_sharing_fragment"/>
       <item type="xml" name="audio_stream_fragment"/>
       <item type="xml" name="bluetooth_device_details_fragment"/>

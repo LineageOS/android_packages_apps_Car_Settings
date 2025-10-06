@@ -23,27 +23,32 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.media.CarAudioManager;
 import android.content.Context;
+import android.platform.test.annotations.EnableFlags;
+import android.platform.test.flag.junit.SetFlagsRule;
 import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
-import androidx.preference.ListPreference;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceScreen;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.android.car.settings.R;
+import com.android.car.settings.Flags;
+import com.android.car.settings.common.CollapsibleSeekbarPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestUtil;
+import com.android.car.settings.sound.audiorouting.AudioRoutePreferenceGroup;
 import com.android.car.settings.testutils.TestLifecycleOwner;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -63,8 +68,11 @@ public class AudioRouteSelectorControllerTest {
     private LifecycleOwner mLifecycleOwner;
     private CarUxRestrictions mCarUxRestrictions;
     private AudioRouteSelectorController mPreferenceController;
-    private ListPreference mPreference;
+    private AudioRoutePreferenceGroup mPreference;
     private MockitoSession mSession;
+
+    @Rule
+    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
 
     @Mock
     private FragmentController mFragmentController;
@@ -95,7 +103,10 @@ public class AudioRouteSelectorControllerTest {
         mPreferenceController = new AudioRouteSelectorController(mContext,
                 /* preferenceKey= */ "key", mFragmentController,
                 mCarUxRestrictions);
-        mPreference = new ListPreference(mContext);
+        PreferenceManager preferenceManager = new PreferenceManager(mContext);
+        PreferenceScreen preferenceScreen = preferenceManager.createPreferenceScreen(mContext);
+        mPreference = new AudioRoutePreferenceGroup(mContext);
+        preferenceScreen.addPreference(mPreference);
         mPreferenceController.setAudioRoutesManager(mAudioRoutesManager);
         when(mAudioRoutesManager.getCarAudioManager()).thenReturn(mCarAudioManager);
         when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_DYNAMIC_ROUTING))
@@ -107,11 +118,11 @@ public class AudioRouteSelectorControllerTest {
         when(mAudioRouteItem2.getAddress()).thenReturn(INACTIVE_ADDRESS);
         when(mAudioRouteItem2.getName()).thenReturn(INACTIVE_NAME);
         when(mAudioRoutesManager.isAudioRoutingEnabled()).thenReturn(true);
-        when(mAudioRoutesManager.getActiveDeviceAddress()).thenReturn(ACTIVE_ADDRESS);
+        when(mAudioRoutesManager.getOutputAddress()).thenReturn(ACTIVE_ADDRESS);
         when(mAudioRoutesManager.getAudioRouteList()).thenReturn(
                 Arrays.asList(ACTIVE_ADDRESS, INACTIVE_ADDRESS));
-        when(mAudioRoutesManager.getDeviceNameForAddress(ACTIVE_ADDRESS)).thenReturn(ACTIVE_NAME);
-        when(mAudioRoutesManager.getDeviceNameForAddress(INACTIVE_ADDRESS))
+        when(mAudioRoutesManager.getDeviceName(ACTIVE_ADDRESS)).thenReturn(ACTIVE_NAME);
+        when(mAudioRoutesManager.getDeviceName(INACTIVE_ADDRESS))
                 .thenReturn(INACTIVE_NAME);
     }
 
@@ -126,28 +137,23 @@ public class AudioRouteSelectorControllerTest {
     }
 
     @Test
+    @EnableFlags(Flags.FLAG_NEW_AUDIO_ROUTING_UI)
     public void onCreate_testUpdatePreferenceOptions() {
+        when(mAudioRoutesManager.getRouteItem(ACTIVE_ADDRESS)).thenReturn(mAudioRouteItem1);
+        when(mAudioRoutesManager.getRouteItem(INACTIVE_ADDRESS)).thenReturn(mAudioRouteItem2);
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onStart(mLifecycleOwner);
 
-        assertThat(mPreference.getTitle().toString()).isEqualTo(
-                mContext.getString(R.string.audio_route_selector_title));
-        assertThat(mPreference.getSummary().toString()).isEqualTo(ACTIVE_NAME);
-        assertThat(mPreference.getValue().toString()).isEqualTo(ACTIVE_ADDRESS);
-        assertThat(mPreference.getEntries().length).isEqualTo(2);
-        assertThat(mPreference.getEntries()[0].toString()).isEqualTo(ACTIVE_NAME);
-        assertThat(mPreference.getEntries()[1].toString()).isEqualTo(INACTIVE_NAME);
-        assertThat(mPreference.getEntryValues()[0].toString()).isEqualTo(ACTIVE_ADDRESS);
-        assertThat(mPreference.getEntryValues()[1].toString()).isEqualTo(INACTIVE_ADDRESS);
-    }
+        assertThat(mPreference.getPreferenceCount()).isEqualTo(2);
 
-    @Test
-    public void onCreate_testHandlePreferenceChanged() {
-        mPreferenceController.onCreate(mLifecycleOwner);
-        mPreferenceController.onStart(mLifecycleOwner);
+        CollapsibleSeekbarPreference activePreference =
+                (CollapsibleSeekbarPreference) mPreference.getPreference(0);
+        assertThat(activePreference.getTitle().toString()).isEqualTo(ACTIVE_NAME);
+        assertThat(activePreference.getKey()).isEqualTo(ACTIVE_ADDRESS);
 
-        mPreferenceController.handlePreferenceChanged(mPreference, INACTIVE_ADDRESS);
-
-        verify(mAudioRoutesManager).updateAudioRoute(INACTIVE_ADDRESS);
+        CollapsibleSeekbarPreference inactivePreference =
+                (CollapsibleSeekbarPreference) mPreference.getPreference(1);
+        assertThat(inactivePreference.getTitle().toString()).isEqualTo(INACTIVE_NAME);
+        assertThat(inactivePreference.getKey()).isEqualTo(INACTIVE_ADDRESS);
     }
 }

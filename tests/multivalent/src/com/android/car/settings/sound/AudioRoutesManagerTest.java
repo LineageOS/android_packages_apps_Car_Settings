@@ -28,6 +28,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.withSettings;
 
+import android.bluetooth.BluetoothProfile;
 import android.car.media.CarAudioManager;
 import android.car.media.CarAudioZoneConfigInfo;
 import android.car.media.CarVolumeGroupInfo;
@@ -114,7 +115,7 @@ public class AudioRoutesManagerTest {
         when(mCarVolumeGroupInfo.getAudioDeviceAttributes())
                 .thenReturn(new ArrayList<>(Collections.singleton(mAudioDeviceAttributes)));
         mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
-        mAudioRoutesManager.setUpdateListener(mUpdateListener);
+        mAudioRoutesManager.setListener(mUpdateListener);
 
         List<String> audioRouteList = mAudioRoutesManager.getAudioRouteList();
         assertThat(audioRouteList.size()).isEqualTo(2);
@@ -128,7 +129,7 @@ public class AudioRoutesManagerTest {
         when(mCarVolumeGroupInfo.getAudioDeviceAttributes())
                 .thenReturn(Arrays.asList(mAudioDeviceAttributes, mOtherAudioDeviceAttributes));
         mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
-        mAudioRoutesManager.setUpdateListener(mUpdateListener);
+        mAudioRoutesManager.setListener(mUpdateListener);
 
         List<String> audioRouteList = mAudioRoutesManager.getAudioRouteList();
         assertThat(audioRouteList.size()).isEqualTo(2);
@@ -142,9 +143,9 @@ public class AudioRoutesManagerTest {
         when(mCarVolumeGroupInfo.getAudioDeviceAttributes())
                 .thenReturn(new ArrayList<>(Collections.singleton(mAudioDeviceAttributes)));
         mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
-        mAudioRoutesManager.setUpdateListener(mUpdateListener);
+        mAudioRoutesManager.setListener(mUpdateListener);
 
-        assertThat(mAudioRoutesManager.getActiveDeviceAddress()).isEqualTo(AUDIO_DEVICE_ADDRESS);
+        assertThat(mAudioRoutesManager.getOutputAddress()).isEqualTo(AUDIO_DEVICE_ADDRESS);
     }
 
     @Test
@@ -153,9 +154,9 @@ public class AudioRoutesManagerTest {
         when(mCarVolumeGroupInfo.getAudioDeviceAttributes())
                 .thenReturn(new ArrayList<>(Collections.singleton(mAudioDeviceAttributes)));
         mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
-        mAudioRoutesManager.setUpdateListener(mUpdateListener);
+        mAudioRoutesManager.setListener(mUpdateListener);
 
-        Map<String, AudioRouteItem> audioRouteItemMap = mAudioRoutesManager.getAudioRouteItemMap();
+        Map<String, AudioRouteItem> audioRouteItemMap = mAudioRoutesManager.getActiveRoutes();
         assertThat(audioRouteItemMap.size()).isEqualTo(2);
         assertThat(audioRouteItemMap.containsKey(AUDIO_DEVICE_ADDRESS)).isTrue();
         assertThat(audioRouteItemMap.get(AUDIO_DEVICE_ADDRESS).getName())
@@ -191,6 +192,7 @@ public class AudioRoutesManagerTest {
         when(mCachedBluetoothDevice.getName()).thenReturn(BT_DEVICE_NAME);
         when(mCachedBluetoothDevice.getAddress()).thenReturn(BT_DEVICE_ADDRESS);
         when(mCachedBluetoothDevice.isConnectedA2dpDevice()).thenReturn(true);
+        when(mCachedBluetoothDevice.isActiveDevice(BluetoothProfile.A2DP)).thenReturn(true);
 
         when(mContext.getApplicationContext()).thenReturn(mCarSettingsApplication);
         when(mCarSettingsApplication.getCarAudioManager()).thenReturn(mCarAudioManager);
