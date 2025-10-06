@@ -49,3 +49,10 @@ flag {
     description: "Flag to show app function permission pages."
     bug: "427789419"
 }
+
+flag {
+    name: "new_audio_routing_ui"
+    namespace: "car_sys_exp"
+    description: "An UI update to fragment for audio route picker."
+    bug: "450096763"
+}

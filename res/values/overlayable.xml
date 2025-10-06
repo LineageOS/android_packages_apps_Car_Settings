@@ -320,6 +320,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="car_ic_navigation_mute"/>
       <item type="drawable" name="car_ic_phone_volume"/>
       <item type="drawable" name="car_ic_phone_volume_mute"/>
+      <item type="drawable" name="collapsible_seekbar_preference_background"/>
       <item type="drawable" name="color_progress_bar"/>
       <item type="drawable" name="ic_add"/>
       <item type="drawable" name="ic_app_aspect_ratio_16_9"/>
@@ -334,6 +335,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_arrow_forward"/>
       <item type="drawable" name="ic_audio_navi"/>
       <item type="drawable" name="ic_audio_sharing"/>
+      <item type="drawable" name="ic_audio_sharing_exit"/>
+      <item type="drawable" name="ic_audio_sharing_join"/>
+      <item type="drawable" name="ic_audio_sharing_primary"/>
       <item type="drawable" name="ic_backspace"/>
       <item type="drawable" name="ic_block"/>
       <item type="drawable" name="ic_blocked_by_admin"/>
@@ -405,6 +409,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_wifi_level_3"/>
       <item type="drawable" name="ic_qc_wifi_level_4"/>
       <item type="drawable" name="ic_qr"/>
+      <item type="drawable" name="ic_radio_btn_checked"/>
+      <item type="drawable" name="ic_radio_btn_unchecked"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
       <item type="drawable" name="ic_restricted_wifi_signal_0"/>
@@ -502,6 +508,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="car_settings_activity_wrapper"/>
       <item type="id" name="carrier_info_text"/>
       <item type="id" name="checkbox"/>
+      <item type="id" name="collapsible_seekbar_preference_first_action_container"/>
+      <item type="id" name="collapsible_seekbar_preference_layout"/>
+      <item type="id" name="collapsible_seekbar_preference_second_action_container"/>
+      <item type="id" name="collapsible_seekbar_preference_second_action_item"/>
       <item type="id" name="colored_preference_divider"/>
       <item type="id" name="colored_preference_first_action_container"/>
       <item type="id" name="colored_preference_second_action_container"/>
@@ -634,6 +644,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="layout" name="choose_lock_password"/>
       <item type="layout" name="choose_lock_pattern"/>
       <item type="layout" name="choose_lock_pin"/>
+      <item type="layout" name="collapsible_seekbar_preference"/>
       <item type="layout" name="colored_two_action_switch_preference"/>
       <item type="layout" name="confirm_lock_password"/>
       <item type="layout" name="confirm_lock_pattern"/>
