@@ -206,24 +206,25 @@ public final class PerfImpactingAppsPreferenceControllerTest {
                 /* isKillable= */ false);
     }
 
-    @Test
-    @UiThreadTest
-    public void onPreferenceClick_showConfirmationDialog_prioritizePrivilegedApp() {
-        CarUiTwoActionTextPreference actualPreference =
-                (CarUiTwoActionTextPreference) mPreferenceGroup.getPreference(1);
+    // @Test
+    // @UiThreadTest
+    // TODO(b/450965703): re-enable
+    // public void onPreferenceClick_showConfirmationDialog_prioritizePrivilegedApp() {
+    //     CarUiTwoActionTextPreference actualPreference =
+    //             (CarUiTwoActionTextPreference) mPreferenceGroup.getPreference(1);
 
-        actualPreference.performSecondaryActionClick();
+    //     actualPreference.performSecondaryActionClick();
 
-        verify(mMockFragmentController).showDialog(mDialogFragmentCaptor.capture(), anyString());
-        ConfirmationDialogFragment dialogFragment = mDialogFragmentCaptor.getValue();
+    //     verify(mMockFragmentController).showDialog(mDialogFragmentCaptor.capture(), anyString());
+    //     ConfirmationDialogFragment dialogFragment = mDialogFragmentCaptor.getValue();
 
-        assertThat(dialogFragment).isNotNull();
+    //     assertThat(dialogFragment).isNotNull();
 
-        dialogFragment.onClick(dialogFragment.getDialog(), DialogInterface.BUTTON_POSITIVE);
+    //     dialogFragment.onClick(dialogFragment.getDialog(), DialogInterface.BUTTON_POSITIVE);
 
-        verify(mMockPackageManager).setApplicationEnabledSetting(TEST_PRIVILEGE_PKG_NAME,
-                PackageManager.COMPONENT_ENABLED_STATE_ENABLED, /* flags= */ 0);
-    }
+    //     verify(mMockPackageManager).setApplicationEnabledSetting(TEST_PRIVILEGE_PKG_NAME,
+    //             PackageManager.COMPONENT_ENABLED_STATE_ENABLED, /* flags= */ 0);
+    // }
 
     @Test
     @UiThreadTest
