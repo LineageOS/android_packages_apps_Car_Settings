@@ -175,7 +175,7 @@
     <string name="wifi_error" msgid="3105105447117289410">"ఎర్రర్"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g>తో ఉపయోగించుకునే పరికరం"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"పరికరాలు ఏవీ కనుగొనబడలేదు. పరికరాలు ఆన్‌లో ఉన్నాయని మరియు కనెక్ట్ చేయడానికి అందుబాటులో ఉన్నాయని నిర్ధారించుకోండి."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"మళ్లీ ట్రై చేయండి"</string>
     <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ పరికరాన్ని ఎంచుకునే రిక్వెస్ట్‌ను రద్దు చేసింది."</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"అన్నింటినీ చూపు"</string>
@@ -610,7 +610,7 @@
     <string name="delete_user_error_title" msgid="287249031795906102">"ప్రొఫైల్ తొలగించబడలేదు. మీరు పరికరాన్ని రీస్టార్ట్ చేసి, మళ్లీ ట్రై చేయవచ్చు."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"మీరు ప్రొఫైళ్లను మార్చినప్పుడు లేదా వాహనాన్ని రీస్టార్ట్ చేసినప్పుడు ఈ ప్రొఫైల్ తొలగించబడుతుంది."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"విస్మరించు"</string>
-    <string name="delete_user_error_retry" msgid="5116434895572670563">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"మళ్లీ ట్రై చేయండి"</string>
     <string name="delete_last_user_dialog_title" msgid="3454454005909291260">"చివరి యూజర్ ప్రొఫైల్‌ను తొలగించాలా?"</string>
     <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"మీరు ఈ వాహనం కోసం మిగిలి ఉన్న ఏకైక ప్రొఫైల్‌ను తొలగిస్తే, ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న మొత్తం డేటా, సెట్టింగ్‌లు, యాప్‌లు ఫ్యాక్టరీ రీసెట్ చేయబడతాయి."</string>
     <string name="delete_last_user_system_setup_required_message" msgid="726196874941282088">"రీసెట్ చేసిన తర్వాత, మీరు కొత్త ప్రొఫైల్‌ను సెటప్ చేయవచ్చు."</string>
@@ -721,7 +721,7 @@
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"నిర్ధారించు"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"మళ్లీ గీయి"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"కొనసాగించండి"</string>
-    <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"మళ్లీ ట్రై చేయండి"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"స్కిప్ చేయండి"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"స్క్రీన్ లాక్‌ను సెట్ చేయండి"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"మీ పిన్ ఎంచుకోండి"</string>
