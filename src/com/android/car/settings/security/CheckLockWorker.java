@@ -25,6 +25,7 @@ import com.android.internal.widget.LockPatternChecker;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternView;
 import com.android.internal.widget.LockscreenCredential;
+import com.android.internal.widget.VerifyCredentialResponse;
 
 import java.util.List;
 
@@ -51,7 +52,9 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
     }
 
     @Override
-    public void onChecked(boolean matched, int throttleTimeoutMs) {
+    public void onChecked(VerifyCredentialResponse response) {
+        final boolean matched = response.isMatched();
+        final int throttleTimeoutMs = response.getTimeout();
         mCheckInProgress = false;
 
         if (mListener == null) {
