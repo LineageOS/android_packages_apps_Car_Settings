@@ -39,9 +39,12 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.time.Duration;
+
 @RunWith(AndroidJUnit4.class)
 public class ConfirmLockLockoutHelperTest {
     private static final int TEST_USER = 100;
+    private static final Duration TIMEOUT = Duration.ofSeconds(1);
 
     private final Context mContext = ApplicationProvider.getApplicationContext();
     private ConfirmLockLockoutHelper mConfirmLockLockoutHelper;
@@ -61,54 +64,54 @@ public class ConfirmLockLockoutHelperTest {
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsZero_doesNothing() {
-        runOnCheckCompletedWithTimeout(0);
+        runOnCheckCompletedWithTimeout(Duration.ZERO);
 
-        verify(mLockPatternUtils, never()).setLockoutAttemptDeadline(TEST_USER, 0);
+        verify(mLockPatternUtils, never()).setLockoutAttemptDeadline(TEST_USER, Duration.ZERO);
     }
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsZero_noTimer() {
-        runOnCheckCompletedWithTimeout(0);
+        runOnCheckCompletedWithTimeout(Duration.ZERO);
 
         assertThat(mConfirmLockLockoutHelper.getCountDownTimer()).isNull();
     }
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsPositive_setsLockoutDeadline() {
-        runOnCheckCompletedWithTimeout(1000);
+        runOnCheckCompletedWithTimeout(TIMEOUT);
 
-        verify(mLockPatternUtils).setLockoutAttemptDeadline(TEST_USER, 1000);
+        verify(mLockPatternUtils).setLockoutAttemptDeadline(TEST_USER, TIMEOUT);
     }
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsPositive_refreshesUILocked() {
-        when(mLockPatternUtils.getLockoutAttemptDeadline(TEST_USER)).thenReturn(1000L);
-        runOnCheckCompletedWithTimeout(1000);
+        when(mLockPatternUtils.getLockoutEndTime(TEST_USER)).thenReturn(TIMEOUT);
+        runOnCheckCompletedWithTimeout(TIMEOUT);
 
         verify(mUIController).refreshUI(true);
     }
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsPositive_createsTimer() {
-        runOnCheckCompletedWithTimeout(1000);
+        runOnCheckCompletedWithTimeout(TIMEOUT);
 
         assertThat(mConfirmLockLockoutHelper.getCountDownTimer()).isNotNull();
     }
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsPositive_timerTickUpdatesErrorText() {
-        runOnCheckCompletedWithTimeout(1000);
+        runOnCheckCompletedWithTimeout(TIMEOUT);
 
         reset(mUIController);
         CountDownTimer timer = mConfirmLockLockoutHelper.getCountDownTimer();
-        timer.onTick(1000);
+        timer.onTick(TIMEOUT.toMillis());
 
         verify(mUIController).setErrorText(contains("1"));
     }
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsPositive_onFinishUpdatesErrorText() {
-        runOnCheckCompletedWithTimeout(1000);
+        runOnCheckCompletedWithTimeout(TIMEOUT);
 
         reset(mUIController);
         CountDownTimer timer = mConfirmLockLockoutHelper.getCountDownTimer();
@@ -119,7 +122,7 @@ public class ConfirmLockLockoutHelperTest {
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsPositive_onFinishUpdatesUINotLocked() {
-        runOnCheckCompletedWithTimeout(1000);
+        runOnCheckCompletedWithTimeout(TIMEOUT);
 
         reset(mUIController);
         CountDownTimer timer = mConfirmLockLockoutHelper.getCountDownTimer();
@@ -130,11 +133,11 @@ public class ConfirmLockLockoutHelperTest {
 
     @Test
     public void onCheckCompletedWithTimeout_timeoutIsPositive_onPauseUpdatesErrorText() {
-        runOnCheckCompletedWithTimeout(1000);
+        runOnCheckCompletedWithTimeout(TIMEOUT);
 
         reset(mUIController);
         CountDownTimer timer = mConfirmLockLockoutHelper.getCountDownTimer();
-        timer.onTick(1000);
+        timer.onTick(TIMEOUT.toMillis());
 
         verify(mUIController).setErrorText(contains("1"));
 
@@ -143,7 +146,7 @@ public class ConfirmLockLockoutHelperTest {
         verify(mUIController).setErrorText("");
     }
 
-    private void runOnCheckCompletedWithTimeout(int timeout) {
+    private void runOnCheckCompletedWithTimeout(Duration timeout) {
         try {
             // Needs to be called on the UI thread due to the CountDownTimer.
             UiThreadStatement.runOnUiThread(() -> {

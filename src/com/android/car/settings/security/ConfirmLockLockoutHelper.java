@@ -26,6 +26,8 @@ import com.android.car.settings.R;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.widget.LockPatternUtils;
 
+import java.time.Duration;
+
 /** Common lockout handling code. */
 public class ConfirmLockLockoutHelper {
 
@@ -65,19 +67,19 @@ public class ConfirmLockLockoutHelper {
     }
 
     /** Handles when the lock check is completed but returns a timeout. */
-    public void onCheckCompletedWithTimeout(int timeoutMs) {
-        if (timeoutMs <= 0) {
+    public void onCheckCompletedWithTimeout(Duration timeout) {
+        if (!timeout.isPositive()) {
             return;
         }
 
-        long deadline = mLockPatternUtils.setLockoutAttemptDeadline(mUserId, timeoutMs);
+        long deadline = mLockPatternUtils.setLockoutAttemptDeadline(mUserId, timeout).toMillis();
         handleAttemptLockout(deadline);
     }
 
     /** To be called when the UI is resumed to reset the timeout countdown if necessary. */
     public void onResumeUI() {
         if (isLockedOut()) {
-            handleAttemptLockout(mLockPatternUtils.getLockoutAttemptDeadline(mUserId));
+            handleAttemptLockout(mLockPatternUtils.getLockoutEndTime(mUserId).toMillis());
         } else {
             mUiController.refreshUI(isLockedOut());
         }
@@ -104,7 +106,7 @@ public class ConfirmLockLockoutHelper {
     }
 
     private boolean isLockedOut() {
-        return mLockPatternUtils.getLockoutAttemptDeadline(mUserId) != 0;
+        return !mLockPatternUtils.getLockoutEndTime(mUserId).isZero();
     }
 
     private CountDownTimer newCountDownTimer(long countDownMillis) {

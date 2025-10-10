@@ -30,6 +30,7 @@ import com.android.car.settings.common.BaseFragment;
 import com.android.internal.widget.LockPatternView;
 import com.android.internal.widget.LockscreenCredential;
 
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -177,7 +178,7 @@ public class ConfirmLockPatternFragment extends BaseFragment {
                 }
             };
 
-    private void onCheckCompleted(boolean lockMatched, int timeoutMs) {
+    private void onCheckCompleted(boolean lockMatched, Duration timeout) {
         if (lockMatched) {
             try (LockscreenCredential patternCred = LockscreenCredential.createPattern(mPattern)) {
                 // onLockVerified does not take ownership of the LockscreenCredential
@@ -185,8 +186,8 @@ public class ConfirmLockPatternFragment extends BaseFragment {
                 mCheckLockListener.onLockVerified(patternCred);
             }
         } else {
-            if (timeoutMs > 0) {
-                mConfirmLockLockoutHelper.onCheckCompletedWithTimeout(timeoutMs);
+            if (timeout.isPositive()) {
+                mConfirmLockLockoutHelper.onCheckCompletedWithTimeout(timeout);
             } else {
                 mLockPatternView.setEnabled(true);
                 mMsgView.setText(R.string.lockpattern_pattern_wrong);
