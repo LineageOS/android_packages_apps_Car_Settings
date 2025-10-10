@@ -216,4 +216,11 @@
 
     <!-- Smallest pixel value of WIDTH of the window when dual pane should be used -->
     <integer name="config_activity_embed_split_min_cur_dp">1400</integer>
+
+    <!--
+        Package names of apps to not show in the injected settings.
+    -->
+    <string-array name="config_extra_settings_blocklist">
+        <item>com.android.providers.media.photopicker.PhotoPickerSettingsActivity</item>
+    </string-array>
 </resources>

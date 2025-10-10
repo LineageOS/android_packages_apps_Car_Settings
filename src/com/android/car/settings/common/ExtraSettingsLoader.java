@@ -46,6 +46,7 @@ import com.android.car.settings.activityembedding.ActivityEmbeddingRulesControll
 import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.drawer.TileUtils;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
@@ -66,6 +67,7 @@ public class ExtraSettingsLoader {
     private final boolean mIsTopLevelSummariesEnabled;
     private Map<Preference, Bundle> mPreferenceBundleMap;
     private PackageManager mPm;
+    private List<String> mExtraSettingsBlockList;
 
     public ExtraSettingsLoader(Context context) {
         mContext = context;
@@ -75,6 +77,8 @@ public class ExtraSettingsLoader {
                 R.array.config_top_level_injection_categories));
         mIsTopLevelSummariesEnabled = mContext.getResources().getBoolean(
                 R.bool.config_top_level_injection_enable_summaries);
+        mExtraSettingsBlockList = Arrays.asList(mContext.getResources().getStringArray(
+                R.array.config_extra_settings_blocklist));
     }
 
     @VisibleForTesting
@@ -113,7 +117,8 @@ public class ExtraSettingsLoader {
         // Filter criteria: must be a system application and must have metaData
         // Sort criteria: sort results based on [order, package within order]
         results = results.stream()
-                .filter(r -> r.system && r.activityInfo != null && r.activityInfo.metaData != null)
+                .filter(r -> r.system && r.activityInfo != null && r.activityInfo.metaData != null
+                        && !mExtraSettingsBlockList.contains(r.activityInfo.name))
                 .sorted((r1, r2) -> {
                     // First sort by order
                     int orderCompare = r2.activityInfo.metaData.getInt(META_DATA_KEY_ORDER)
