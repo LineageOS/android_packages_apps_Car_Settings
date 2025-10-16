@@ -572,6 +572,19 @@
     <string name="sound_alert_sounds_summary">Ringtone, notifications, alarm</string>
     <!-- Title for the audio routes selector. [CHAR LIMIT=40] -->
     <string name="audio_route_selector_title">Play media on</string>
+    <!-- Summary for the connected audio state. [CHAR LIMIT=40] -->
+    <string name="audio_route_preference_listening">Listening</string>
+    <!-- Summary for the available to join audio state. [CHAR LIMIT=40] -->
+    <string name="audio_route_preference_available_to_join">Available to join</string>
+    <!-- Summary for unicast connecting audio state. [CHAR LIMIT=40] -->
+    <string name="audio_route_preference_connecting_device">Connecting to device</string>
+    <!-- Summary for BLE connecting audio state. [CHAR LIMIT=40] -->
+    <string name="audio_route_preference_connecting_broadcast">Connecting to audio sharing</string>
+    <!-- Summary for BLE connecting audio state. [CHAR LIMIT=40] -->
+    <string name="audio_route_preference_disconnecting_broadcast">Disconnecting from audio sharing</string>
+
+
+
     <!-- Toast informing the audio route is being changed. [CHAR LIMIT=80] -->
     <string name="audio_route_selector_toast">Switching media to %1$s</string>
 
