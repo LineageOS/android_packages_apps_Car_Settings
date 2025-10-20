@@ -700,8 +700,6 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"आपकी कार बनाने वाली कंपनी के मुताबिक, ये ऐप्लिकेशन ड्राइविंग में मदद पाने के लिए ज़रूरी हैं"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"नीति"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ऐसा हो सकता है कि आपकी कार के मैन्युफ़ैक्चरर के पास, अब भी आपकी कार के कैमरे का ऐक्सेस हो"</string>
-    <string name="app_function_access_settings_title" msgid="7029660854535229000">"अन्य ऐप्लिकेशन के लिए एजेंट कंट्रोल"</string>
-    <string name="app_function_access_settings_summary" msgid="404048231298577346">"अपने डिवाइस और अन्य ऐप्लिकेशन में कार्रवाइयां करने की अनुमति दें"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"सूचना और मनोरंजन की सुविधा वाले ऐप्लिकेशन"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"सूचना और मनोरंजन की सुविधा देने वाले ऐप्लिकेशन को फ़ोटो खींचने और वीडियो रिकॉर्ड करने की अनुमति दें"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"अनुमति है"</string>
@@ -709,6 +707,12 @@
     <string name="permission_grant_never" msgid="1357441946890127898">"अनुमति नहीं है"</string>
     <string name="permission_grant_in_use" msgid="2314262542396732455">"सिर्फ़ ऐप्लिकेशन इस्तेमाल करते समय"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"हर बार पूछें"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"अन्य ऐप्लिकेशन के लिए एजेंट कंट्रोल"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"अपने डिवाइस और अन्य ऐप्लिकेशन में कार्रवाइयां करने की अनुमति दें"</string>
+    <string name="agent_app_function_access_settings_title" msgid="2891760345742481252">"ऐप्लिकेशन को दिया गया ऐक्सेस"</string>
+    <string name="agent_app_function_access_settings_summary" msgid="693092645147911992">"इस एजेंट को ऐप्लिकेशन में जानकारी ऐक्सेस करने या कार्रवाइयां करने की अनुमति दें"</string>
+    <string name="target_app_function_access_settings_title" msgid="7685771153243303475">"एजेंट को दिया गया ऐक्सेस"</string>
+    <string name="target_app_function_access_settings_summary" msgid="2533432320530009749">"ऐसे एजेंट जो इस ऐप्लिकेशन में जानकारी ऐक्सेस कर सकते हैं या कार्रवाइयां कर सकते हैं"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>
@@ -972,4 +976,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"प्लान देखें"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"हो गया"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"आपकी गाड़ी में यह सुविधा काम नहीं करती है"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"आसपेक्ट रेशियो की सेटिंग"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"आसपेक्ट रेशियो (लंबाई-चौड़ाई का अनुपात) बदलने पर ऐप्लिकेशन रीस्टार्ट हो जाएगा. इससे वे बदलाव मिट सकते हैं जिन्हें सेव नहीं किया गया है. ऐसा हो सकता है कि कुछ ऐप्लिकेशन, सभी तरह के आसपेक्ट रेशियो के लिए ऑप्टिमाइज़ न किए गए हों."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"बंद करें"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"लागू करें"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ऐप्लिकेशन का डिफ़ॉल्ट आसपेक्ट रेशियो"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"फ़ुल स्क्रीन"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"हाफ़ स्क्रीन"</string>
 </resources>

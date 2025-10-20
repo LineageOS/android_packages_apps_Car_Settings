@@ -37,7 +37,6 @@ import java.util.List;
 
 /** Screen used to pick the data usage warning threshold bytes. */
 public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment {
-
     @VisibleForTesting
     static final long MIB_IN_BYTES = 1024 * 1024;
     @VisibleForTesting
@@ -57,8 +56,6 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
     NetworkTemplate mNetworkTemplate;
 
     private MenuItem mSaveButton;
-    private TelephonyManager mTelephonyManager;
-    private SubscriptionManager mSubscriptionManager;
 
     @Override
     @XmlRes
@@ -81,14 +78,8 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
             // Loads the current policies to the policy editor cache.
             mPolicyEditor.read();
         }
-        mNetworkTemplate = getArguments().getParcelable(
-                NetworkPolicyManager.EXTRA_NETWORK_TEMPLATE);
-        if (mNetworkTemplate == null) {
-            mTelephonyManager = context.getSystemService(TelephonyManager.class);
-            mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
-            mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(context, mTelephonyManager,
-                    DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
-        }
+
+        mNetworkTemplate = getNetworkTemplate(context);
 
         mSaveButton = new MenuItem.Builder(context)
                 .setTitle(R.string.data_usage_warning_save_title)
@@ -121,6 +112,18 @@ public abstract class DataUsageSetThresholdBaseFragment extends SettingsFragment
         super.onCreate(savedInstanceState);
 
         getPreferenceScreen().setTitle(getTitleResId());
+    }
+
+    protected NetworkTemplate getNetworkTemplate(Context context) {
+        NetworkTemplate template = getArguments().getParcelable(
+                NetworkPolicyManager.EXTRA_NETWORK_TEMPLATE);
+        if (template == null) {
+            template = DataUsageUtils.getMobileNetworkTemplate(context,
+                    context.getSystemService(TelephonyManager.class),
+                    DataUsageUtils.getDefaultSubscriptionId(
+                            context.getSystemService(SubscriptionManager.class)));
+        }
+        return template;
     }
 
     @VisibleForTesting

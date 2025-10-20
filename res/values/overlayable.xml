@@ -25,6 +25,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="array" name="config_allowed_bluetooth_scanning_packages"/>
       <item type="array" name="config_debug_support_devices"/>
       <item type="array" name="config_debug_support_devices_exclude_car"/>
+      <item type="array" name="config_extra_settings_blocklist"/>
       <item type="array" name="config_fixed_notification_access_packages"/>
       <item type="array" name="config_ignore_ux_restrictions"/>
       <item type="array" name="config_ringtone_audio_attribute_usages_map_key"/>
@@ -114,11 +115,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="aspect_ratio_icon_outline_color"/>
       <item type="color" name="bluetooth_bonded_device_background"/>
       <item type="color" name="bluetooth_bonded_device_foreground"/>
-      <item type="color" name="bluetooth_bonded_device_icon_color_checked"/>
-      <item type="color" name="bluetooth_bonded_device_icon_color_unchecked"/>
-      <item type="color" name="bluetooth_bonded_device_off_background_color"/>
-      <item type="color" name="bluetooth_device_icon_color"/>
-      <item type="color" name="bluetooth_disabled_device_background_color"/>
       <item type="color" name="bluetooth_disabled_device_icon_color"/>
       <item type="color" name="brightness_thumb_inner_ring_color"/>
       <item type="color" name="brightness_thumb_outer_ring_color"/>
@@ -131,10 +127,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="color" name="qc_default_icon_color"/>
       <item type="color" name="text_color_accent_with_disable"/>
       <item type="color" name="theme_toggle_button_background"/>
+      <item type="color" name="theme_toggle_button_background_unavailable"/>
       <item type="color" name="theme_toggle_button_foreground"/>
-      <item type="color" name="theme_toggle_button_icon_color_checked"/>
-      <item type="color" name="theme_toggle_button_icon_color_unchecked"/>
-      <item type="color" name="theme_toggle_button_off_background_color"/>
+      <item type="color" name="theme_toggle_button_foreground_unavailable"/>
       <item type="color" name="top_level_accessibility_background"/>
       <item type="color" name="top_level_accessibility_icon"/>
       <item type="color" name="top_level_applications_background"/>
@@ -190,6 +185,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="ap_preference_item_icon_margin_end"/>
       <item type="dimen" name="ap_preference_item_padding_end"/>
       <item type="dimen" name="ap_preference_item_padding_start"/>
+      <item type="dimen" name="aspect_ratio_dialog_width"/>
       <item type="dimen" name="aspect_ratio_icon_height"/>
       <item type="dimen" name="aspect_ratio_icon_width"/>
       <item type="dimen" name="block_by_admin_icon_padding"/>
@@ -317,6 +313,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="user_disclaimer_action_button_top_margin"/>
       <item type="dimen" name="user_disclaimer_text_size"/>
       <item type="dimen" name="wifi_share_page_margin"/>
+      <item type="drawable" name="aspect_ratio_dialog_container_background"/>
       <item type="drawable" name="bluetooth_bonded_device_rotary_background"/>
       <item type="drawable" name="brightness_seekbar_background"/>
       <item type="drawable" name="brightness_seekbar_track"/>
@@ -324,6 +321,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="car_ic_navigation_mute"/>
       <item type="drawable" name="car_ic_phone_volume"/>
       <item type="drawable" name="car_ic_phone_volume_mute"/>
+      <item type="drawable" name="collapsible_seekbar_preference_background"/>
       <item type="drawable" name="color_progress_bar"/>
       <item type="drawable" name="ic_add"/>
       <item type="drawable" name="ic_app_aspect_ratio_16_9"/>
@@ -338,6 +336,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_arrow_forward"/>
       <item type="drawable" name="ic_audio_navi"/>
       <item type="drawable" name="ic_audio_sharing"/>
+      <item type="drawable" name="ic_audio_sharing_exit"/>
+      <item type="drawable" name="ic_audio_sharing_join"/>
+      <item type="drawable" name="ic_audio_sharing_primary"/>
       <item type="drawable" name="ic_backspace"/>
       <item type="drawable" name="ic_block"/>
       <item type="drawable" name="ic_blocked_by_admin"/>
@@ -409,6 +410,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_qc_wifi_level_3"/>
       <item type="drawable" name="ic_qc_wifi_level_4"/>
       <item type="drawable" name="ic_qr"/>
+      <item type="drawable" name="ic_radio_btn_checked"/>
+      <item type="drawable" name="ic_radio_btn_unchecked"/>
       <item type="drawable" name="ic_remove_circle"/>
       <item type="drawable" name="ic_restore"/>
       <item type="drawable" name="ic_restricted_wifi_signal_0"/>
@@ -480,6 +483,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="wifi_signal"/>
       <item type="id" name="action_text"/>
       <item type="id" name="alphanumeric_pin"/>
+      <item type="id" name="aspect_ratio_dialog"/>
+      <item type="id" name="aspect_ratio_dialog_message"/>
+      <item type="id" name="aspect_ratio_dialog_title"/>
+      <item type="id" name="aspect_ratio_radio_group"/>
       <item type="id" name="audio_sharing_qr_code"/>
       <item type="id" name="bottomDivider"/>
       <item type="id" name="button1"/>
@@ -494,12 +501,18 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="button4"/>
       <item type="id" name="button4Icon"/>
       <item type="id" name="button4Text"/>
+      <item type="id" name="button_apply"/>
+      <item type="id" name="button_close"/>
       <item type="id" name="bytes_threshold"/>
       <item type="id" name="bytes_threshold_container"/>
       <item type="id" name="bytes_units"/>
       <item type="id" name="car_settings_activity_wrapper"/>
       <item type="id" name="carrier_info_text"/>
       <item type="id" name="checkbox"/>
+      <item type="id" name="collapsible_seekbar_preference_first_action_container"/>
+      <item type="id" name="collapsible_seekbar_preference_layout"/>
+      <item type="id" name="collapsible_seekbar_preference_second_action_container"/>
+      <item type="id" name="collapsible_seekbar_preference_second_action_item"/>
       <item type="id" name="colored_preference_divider"/>
       <item type="id" name="colored_preference_first_action_container"/>
       <item type="id" name="colored_preference_second_action_container"/>
@@ -622,6 +635,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="integer" name="recent_notifications_days_threshold"/>
       <item type="integer" name="user_switcher_num_col"/>
       <item type="layout" name="action_buttons_preference"/>
+      <item type="layout" name="aspect_ratio_dialog"/>
+      <item type="layout" name="aspect_ratio_dialog_activity"/>
+      <item type="layout" name="audio_route_preference_group"/>
       <item type="layout" name="audio_sharing_device_selector_preference_group"/>
       <item type="layout" name="audio_stream_qr_preference"/>
       <item type="layout" name="bluetooth_pin_confirm"/>
@@ -630,6 +646,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="layout" name="choose_lock_password"/>
       <item type="layout" name="choose_lock_pattern"/>
       <item type="layout" name="choose_lock_pin"/>
+      <item type="layout" name="collapsible_seekbar_preference"/>
       <item type="layout" name="colored_two_action_switch_preference"/>
       <item type="layout" name="confirm_lock_password"/>
       <item type="layout" name="confirm_lock_pattern"/>
@@ -713,6 +730,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="admin_financed_message"/>
       <item type="string" name="admin_profile_owner_message"/>
       <item type="string" name="admin_profile_owner_user_message"/>
+      <item type="string" name="agent_app_function_access_settings_summary"/>
+      <item type="string" name="agent_app_function_access_settings_title"/>
       <item type="string" name="alarm_ringtone_title"/>
       <item type="string" name="alarm_volume_title"/>
       <item type="string" name="alarms_and_reminders_title"/>
@@ -762,6 +781,13 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="apps_special_app_access_summary"/>
       <item type="string" name="apps_view_all_apps_title"/>
       <item type="string" name="aspect_ratio_action_button"/>
+      <item type="string" name="aspect_ratio_dialog_app_default_text"/>
+      <item type="string" name="aspect_ratio_dialog_apply_button_text"/>
+      <item type="string" name="aspect_ratio_dialog_close_button_text"/>
+      <item type="string" name="aspect_ratio_dialog_full_screen_text"/>
+      <item type="string" name="aspect_ratio_dialog_half_screen_text"/>
+      <item type="string" name="aspect_ratio_dialog_message"/>
+      <item type="string" name="aspect_ratio_dialog_title"/>
       <item type="string" name="aspect_ratio_label"/>
       <item type="string" name="assist_access_context_summary"/>
       <item type="string" name="assist_access_context_title"/>
@@ -777,6 +803,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="assistant_and_voice_use_text_from_screen_title"/>
       <item type="string" name="assistant_security_warning"/>
       <item type="string" name="audio_route_dialog_neutral_button_text"/>
+      <item type="string" name="audio_route_preference_available_to_join"/>
+      <item type="string" name="audio_route_preference_connecting_broadcast"/>
+      <item type="string" name="audio_route_preference_connecting_device"/>
+      <item type="string" name="audio_route_preference_disconnecting_broadcast"/>
+      <item type="string" name="audio_route_preference_listening"/>
       <item type="string" name="audio_route_selector_title"/>
       <item type="string" name="audio_route_selector_toast"/>
       <item type="string" name="audio_sharing_active_media_devices"/>
@@ -1503,6 +1534,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="system_advanced_title"/>
       <item type="string" name="system_setting_title"/>
       <item type="string" name="system_update_settings_title"/>
+      <item type="string" name="target_app_function_access_settings_summary"/>
+      <item type="string" name="target_app_function_access_settings_title"/>
       <item type="string" name="terms_title"/>
       <item type="string" name="tether_settings_title_all"/>
       <item type="string" name="text_to_speech_current_engine"/>
@@ -1723,6 +1756,18 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="zone_list_menu_sort_by_timezone"/>
       <item type="style" name="ActionDialogTheme"/>
       <item type="style" name="AlertDialogTheme"/>
+      <item type="style" name="AspectRatioDialogActivityContainer"/>
+      <item type="style" name="AspectRatioDialogActivityTheme"/>
+      <item type="style" name="AspectRatioDialogApplyButton"/>
+      <item type="style" name="AspectRatioDialogButton"/>
+      <item type="style" name="AspectRatioDialogCloseButton"/>
+      <item type="style" name="AspectRatioDialogContainer"/>
+      <item type="style" name="AspectRatioDialogMessageAndActionContainer"/>
+      <item type="style" name="AspectRatioDialogMessageTextView"/>
+      <item type="style" name="AspectRatioDialogOptionsContainer"/>
+      <item type="style" name="AspectRatioDialogOptionsRadioButton"/>
+      <item type="style" name="AspectRatioDialogOptionsRadioGroup"/>
+      <item type="style" name="AspectRatioDialogTitle"/>
       <item type="style" name="CarSettingTheme"/>
       <item type="style" name="CarSettingsActivityDividerStyle"/>
       <item type="style" name="CarSettingsFragmentContainerStyle"/>
@@ -1758,6 +1803,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="applications_settings_fragment"/>
       <item type="xml" name="apps_fragment"/>
       <item type="xml" name="assistant_and_voice_fragment"/>
+      <item type="xml" name="audio_route_picker_fragment"/>
       <item type="xml" name="audio_sharing_fragment"/>
       <item type="xml" name="audio_stream_fragment"/>
       <item type="xml" name="bluetooth_device_details_fragment"/>

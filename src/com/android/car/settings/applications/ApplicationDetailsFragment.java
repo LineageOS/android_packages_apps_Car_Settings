@@ -25,9 +25,11 @@ import android.os.UserHandle;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.applications.appinfo.AgentAppFunctionAccessPreferenceController;
 import com.android.car.settings.applications.appinfo.AppAllServicesPreferenceController;
 import com.android.car.settings.applications.appinfo.AppAspectRatioPreferenceController;
 import com.android.car.settings.applications.appinfo.HibernationSwitchPreferenceController;
+import com.android.car.settings.applications.appinfo.TargetAppFunctionAccessPreferenceController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.applications.ApplicationsState;
@@ -85,6 +87,10 @@ public class ApplicationDetailsFragment extends SettingsFragment {
                 R.string.pk_application_details_notifications).setPackageInfo(mPackageInfo);
         use(PermissionsPreferenceController.class,
                 R.string.pk_application_details_permissions).setPackageName(mPackageName);
+        use(TargetAppFunctionAccessPreferenceController.class,
+                R.string.pk_app_details_target_appfn_access).setApplicationInfo(mAppEntry.info);
+        use(AgentAppFunctionAccessPreferenceController.class,
+                R.string.pk_app_details_agent_appfn_access).setApplicationInfo(mAppEntry.info);
         use(StoragePreferenceController.class,
                 R.string.pk_application_details_storage)
                 .setAppEntry(mAppEntry).setAppState(mAppState).setPackageName(mPackageName);

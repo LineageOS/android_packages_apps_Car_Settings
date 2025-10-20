@@ -550,7 +550,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"設定をリセット"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ネットワーク設定をリセットしました"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"アプリの設定をリセット"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"この操作により、次の設定がすべてリセットされます。\n\n"<li>"無効化されているアプリ"</li>\n<li>"無効化されているアプリの通知"</li>\n<li>"特定の操作で使用するデフォルトのアプリ"</li>\n<li>"アプリのバックグラウンド データの制限"</li>\n<li>"権限のすべての制限"</li>\n\n"アプリのデータが失われることはありません。"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"この操作により、次の設定がすべてリセットされます。\n\n"<li>"無効化したアプリ"</li>\n<li>"アプリの無効化した通知"</li>\n<li>"特定の操作で使用するデフォルトのアプリ"</li>\n<li>"アプリのバックグラウンド データの制限"</li>\n<li>"権限のすべての制限"</li>\n\n"アプリのデータが失われることはありません。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"アプリをリセット"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"アプリの設定をリセットしました"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"すべてのデータを消去（初期設定にリセット）"</string>
@@ -700,8 +700,6 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"運転をサポートするために車のメーカーが必要とするアプリ"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"ポリシー"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"車のメーカーが引き続き車のカメラにアクセスできる場合があります"</string>
-    <string name="app_function_access_settings_title" msgid="7029660854535229000">"他のアプリのエージェントのコントロール"</string>
-    <string name="app_function_access_settings_summary" msgid="404048231298577346">"デバイスと他のアプリで操作を実行します"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"インフォテインメント アプリ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"インフォテインメント アプリによる写真と動画の撮影を許可する"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"許可されたアプリ"</string>
@@ -709,6 +707,12 @@
     <string name="permission_grant_never" msgid="1357441946890127898">"許可されてないアプリ"</string>
     <string name="permission_grant_in_use" msgid="2314262542396732455">"アプリの使用中のみ"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"毎回確認"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"他のアプリのエージェントのコントロール"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"デバイスと他のアプリで操作を実行します"</string>
+    <string name="agent_app_function_access_settings_title" msgid="2891760345742481252">"アプリアクセス"</string>
+    <string name="agent_app_function_access_settings_summary" msgid="693092645147911992">"アプリでの情報へのアクセスや操作をこのエージェントに許可します"</string>
+    <string name="target_app_function_access_settings_title" msgid="7685771153243303475">"エージェント アクセス"</string>
+    <string name="target_app_function_access_settings_summary" msgid="2533432320530009749">"このアプリで情報にアクセスし、操作できるエージェント"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"セキュリティ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"画面ロック"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"なし"</string>
@@ -972,4 +976,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"プランを見る"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完了"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ご利用のデバイスはこの機能に対応していません"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"アスペクト比の設定"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"アスペクト比を変更すると、アプリが再起動します。保存されていない変更は失われる可能性があります。一部のアプリは特定のアスペクト比に合わせて最適化できない場合があります。"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"閉じる"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"適用"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"アプリのデフォルト"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"全画面表示"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"画面半分のみ表示"</string>
 </resources>

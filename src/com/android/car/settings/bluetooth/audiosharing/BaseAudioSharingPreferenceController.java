@@ -32,7 +32,6 @@ import android.content.SharedPreferences;
 
 import androidx.preference.Preference;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.bluetooth.LeAudioProfile;
@@ -61,6 +60,27 @@ public abstract class BaseAudioSharingPreferenceController<T extends Preference>
     protected LocalBluetoothLeBroadcastAssistant mLeBroadcastAssistantProfile;
     private boolean mUserAudioSharingEnabled;
 
+    // listener to update availability state bluetooth state is turned on and off
+    private final BroadcastReceiver mBluetoothStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final int state = intent.getIntExtra(EXTRA_STATE, ERROR);
+            if (state == STATE_ON || state == STATE_OFF) {
+                refreshUi();
+            }
+        }
+    };
+
+    /**
+     * Static method for retrieving user preference for enabling or disabling of BLE.
+     * @return {@code true} if user prefers to enable BLE, {@code false} otherwise.
+     */
+    public static boolean isUserAudioSharingEnabled(Context context) {
+        SharedPreferences sharedPrefs =
+                context.getSharedPreferences(USER_ENABLE_AUDIO_SHARING_KEY, Context.MODE_PRIVATE);
+        return sharedPrefs.getBoolean(USER_ENABLE_AUDIO_SHARING_KEY, /* defaultValue= */ false);
+    }
+
     public BaseAudioSharingPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
@@ -72,16 +92,6 @@ public abstract class BaseAudioSharingPreferenceController<T extends Preference>
             mLeBroadcastAssistantProfile = mBtManager.getProfileManager()
                     .getLeAudioBroadcastAssistantProfile();
         }
-        // listener to update availability state bluetooth state is turned on and off
-        context.registerReceiver(new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                final int state = intent.getIntExtra(EXTRA_STATE, ERROR);
-                if (state == STATE_ON || state == STATE_OFF) {
-                    refreshUi();
-                }
-            }
-        }, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
         // listener to update availability state when broadcast updates
         if (isBroadcastAvailable()) {
             mLeBroadcastProfile.registerServiceCallBack(getContext().getMainExecutor(),
@@ -103,8 +113,6 @@ public abstract class BaseAudioSharingPreferenceController<T extends Preference>
         // listener to update availability state when user toggles audio sharing
         SharedPreferences sharedPrefs =
                 context.getSharedPreferences(USER_ENABLE_AUDIO_SHARING_KEY, Context.MODE_PRIVATE);
-        mUserAudioSharingEnabled = sharedPrefs.getBoolean(USER_ENABLE_AUDIO_SHARING_KEY,
-                /* defaultValue= */ false);
         sharedPrefs.registerOnSharedPreferenceChangeListener(
                 (sharedPreferences, key) -> {
                     if (key != null && key.equals(USER_ENABLE_AUDIO_SHARING_KEY)) {
@@ -113,7 +121,22 @@ public abstract class BaseAudioSharingPreferenceController<T extends Preference>
                         refreshUi();
                     }
                 });
+        mUserAudioSharingEnabled = isUserAudioSharingEnabled(context);
     }
+
+    @Override
+    protected void onResumeInternal() {
+        super.onResumeInternal();
+        getContext().registerReceiver(mBluetoothStateReceiver,
+                new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+    }
+
+    @Override
+    protected void onPauseInternal() {
+        super.onPauseInternal();
+        getContext().unregisterReceiver(mBluetoothStateReceiver);
+    }
+
 
     /**
      * @return {@link BluetoothLeBroadcastMetadata} representing the current broadcast, or
@@ -164,7 +187,6 @@ public abstract class BaseAudioSharingPreferenceController<T extends Preference>
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (!Flags.carSettingsMultiCasting()) return CONDITIONALLY_UNAVAILABLE;
         if (isUserEnabled() && isBroadcasting()) {
             return AVAILABLE;
         }

@@ -119,6 +119,7 @@ android_robolectric_test {
         "src/**/TestTopLevelMenuFragment.java",
         "src/**/TextDrawable.java",
         "src/**/WifiDetailsBasePreferenceControllerTestCase.java",
+        "src/**/displaycompat/*",
         ":CarSettingsShadows-srcs",
     ],
     exclude_srcs: [

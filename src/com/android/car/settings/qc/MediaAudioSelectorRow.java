@@ -52,12 +52,11 @@ public class MediaAudioSelectorRow extends SettingsQCItem {
         if (mAudioRoutesManager.getAudioRouteList().size() < 2) {
             return null;
         }
-
         QCList.Builder listBuilder = new QCList.Builder();
         listBuilder.addRow(new QCRow.Builder()
                 .setTitle(getContext().getString(R.string.audio_route_selector_title))
-                .setSubtitle(mAudioRoutesManager.getDeviceNameForAddress(
-                        mAudioRoutesManager.getActiveDeviceAddress()))
+                .setSubtitle(mAudioRoutesManager.getDeviceName(
+                        mAudioRoutesManager.getOutputAddress()))
                 .setIcon(Icon.createWithResource(getContext(), R.drawable.ic_qc_speaker_group))
                 .showChevron(true)
                 .showBottomDivider(true)

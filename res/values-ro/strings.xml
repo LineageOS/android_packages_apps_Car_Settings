@@ -700,8 +700,6 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Aplicații cerute de producătorul mașinii ca să te ajute să conduci"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Politica"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Producătorul mașinii poate avea în continuare acces la camera mașinii"</string>
-    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Controlul agentului asupra altor aplicații"</string>
-    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Realizează acțiuni pe dispozitivul tău și în alte aplicații"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Aplicațiile de infotainment"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Permite ca aplicațiile de infotainment să facă fotografii și să înregistreze conținut video"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Permisă"</string>
@@ -709,6 +707,12 @@
     <string name="permission_grant_never" msgid="1357441946890127898">"Nepermisă"</string>
     <string name="permission_grant_in_use" msgid="2314262542396732455">"Numai când folosești aplicația"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Întreabă de fiecare dată"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Controlul agentului asupra altor aplicații"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Realizează acțiuni pe dispozitivul tău și în alte aplicații"</string>
+    <string name="agent_app_function_access_settings_title" msgid="2891760345742481252">"Accesul la aplicații"</string>
+    <string name="agent_app_function_access_settings_summary" msgid="693092645147911992">"Permite-i acestui agent să acceseze informații sau acționeze în aplicații"</string>
+    <string name="target_app_function_access_settings_title" msgid="7685771153243303475">"Acces pentru agenți"</string>
+    <string name="target_app_function_access_settings_summary" msgid="2533432320530009749">"Agenți care pot să acceseze informații sau acționeze în această aplicație"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Securitate"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blocarea ecranului"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Fără"</string>
@@ -978,4 +982,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Vezi planurile"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Gata"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Vehiculul tău nu acceptă această funcție"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Setări pentru raportul de dimensiuni"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Aplicația va reporni când schimbi raportul de dimensiuni. Este posibil să pierzi modificările nesalvate. Unele aplicații pot să nu fie optimizate pentru anumite raporturi de dimensiuni."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Închide"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Aplică"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Prestabilit pentru aplicație"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Ecran complet"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Jumătate de ecran"</string>
 </resources>

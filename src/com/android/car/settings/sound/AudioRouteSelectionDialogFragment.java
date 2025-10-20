@@ -21,6 +21,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.window.embedding.ActivityEmbeddingController;
+
 import com.android.car.settings.R;
 import com.android.car.ui.AlertDialogBuilder;
 import com.android.car.ui.preference.CarUiDialogFragment;
@@ -43,7 +45,6 @@ public class AudioRouteSelectionDialogFragment extends CarUiDialogFragment {
         mContext = context;
         mUsage = context.getResources().getInteger(R.integer.audio_route_selector_usage);
         mAudioRoutesManager = new AudioRoutesManager(context, mUsage);
-        mAudioRoutesManager.setShowToast(false);
     }
 
     @Override
@@ -52,10 +53,10 @@ public class AudioRouteSelectionDialogFragment extends CarUiDialogFragment {
         List<CarUiRadioButtonListItem> itemList = new ArrayList<>();
         for (String address : addressList) {
             CarUiRadioButtonListItem item = new CarUiRadioButtonListItem();
-            item.setTitle(mAudioRoutesManager.getDeviceNameForAddress(address));
-            item.setOnItemClickedListener(l -> mAudioRoutesManager.updateAudioRoute(address));
+            item.setTitle(mAudioRoutesManager.getDeviceName(address));
+            item.setOnItemClickedListener(l -> mAudioRoutesManager.requestRouteSwitch(address));
             itemList.add(item);
-            if (address.equals(mAudioRoutesManager.getActiveDeviceAddress())) {
+            if (address.equals(mAudioRoutesManager.getOutputAddress())) {
                 item.setChecked(true);
             }
         }
@@ -73,6 +74,12 @@ public class AudioRouteSelectionDialogFragment extends CarUiDialogFragment {
 
     @Override
     protected void onDialogClosed(boolean positiveResult) {
-        getActivity().finish();
+        boolean isEmbeddedDialog = ActivityEmbeddingController.getInstance(getActivity())
+                .isActivityEmbedded(getActivity());
+        if (!isEmbeddedDialog) {
+            // finishing an embedded activity will finish all Settings activities, including the
+            // homepage activity on the left pane.
+            getActivity().finish();
+        }
     }
 }

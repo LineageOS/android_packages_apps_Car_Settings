@@ -700,8 +700,6 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Apps wat deur jou motor se vervaardiger vereis word om jou te help bestuur"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Beleid"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Jou motorvervaardiger het dalk steeds toegang tot jou motor se kamera"</string>
-    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Agentbeheer van ander apps"</string>
-    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Voer handelinge op jou toestel en in ander apps uit"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Inligtingvermaakapps"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Laat inligtingvermaakapps toe om foto\'s en video te neem"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Toegelaat"</string>
@@ -709,6 +707,12 @@
     <string name="permission_grant_never" msgid="1357441946890127898">"Nie toegelaat nie"</string>
     <string name="permission_grant_in_use" msgid="2314262542396732455">"Net terwyl jy die app gebruik"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"Vra elke keer"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Agentbeheer van ander apps"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Voer handelinge op jou toestel en in ander apps uit"</string>
+    <string name="agent_app_function_access_settings_title" msgid="2891760345742481252">"Apptoegang"</string>
+    <string name="agent_app_function_access_settings_summary" msgid="693092645147911992">"Laat hierdie agent toe om in apps toegang tot inligting te kry en aksie te neem"</string>
+    <string name="target_app_function_access_settings_title" msgid="7685771153243303475">"Agenttoegang"</string>
+    <string name="target_app_function_access_settings_summary" msgid="2533432320530009749">"Agente wat in hierdie app toegang tot inligting kan kry of aksies kan neem"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sekuriteit"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skermslot"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Geen"</string>
@@ -972,4 +976,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Sien pakkette"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Klaar"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Jou voertuig steun nie hierdie kenmerk nie"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Aspekverhoudinginstellings"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Die app sal herbegin as jy die aspekverhouding verander. Jy kan ongestoorde veranderinge verloor. Sommige apps sal dalk nie vir sekere aspekverhoudings geoptimeer wees nie."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Maak toe"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Pas toe"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Appverstek"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Volskerm"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Halfskerm"</string>
 </resources>

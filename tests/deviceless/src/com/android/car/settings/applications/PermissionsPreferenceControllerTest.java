@@ -18,13 +18,16 @@ package com.android.car.settings.applications;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.robolectric.Shadows.shadowOf;
 import static org.testng.Assert.assertThrows;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
+import androidx.test.core.app.ApplicationProvider;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 
@@ -34,7 +37,6 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.shadows.ShadowApplication;
 
 @RunWith(AndroidJUnit4.class)
 public class PermissionsPreferenceControllerTest {
@@ -72,7 +74,9 @@ public class PermissionsPreferenceControllerTest {
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
 
-        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
+        Intent actual =
+                shadowOf((Application) ApplicationProvider.getApplicationContext())
+                        .getNextStartedActivity();
         assertThat(actual.getAction()).isEqualTo(Intent.ACTION_MANAGE_APP_PERMISSIONS);
         assertThat(actual.getStringExtra(Intent.EXTRA_PACKAGE_NAME)).isEqualTo(PACKAGE_NAME);
     }

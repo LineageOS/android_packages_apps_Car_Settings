@@ -20,7 +20,6 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.ColoredSwitchPreference;
 import com.android.car.settings.common.FragmentController;
 
@@ -68,7 +67,6 @@ public class AudioSharingStateSwitchPreferenceController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (!Flags.carSettingsMultiCasting()) return CONDITIONALLY_UNAVAILABLE;
         if (isBluetoothStateOn() && isBroadcastAvailable()) {
             return AVAILABLE;
         }

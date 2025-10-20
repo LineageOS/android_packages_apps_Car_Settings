@@ -14,7 +14,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
 <resources>
     <dimen name="icon_size">@*android:dimen/car_primary_icon_size</dimen>
     <dimen name="secondary_icon_size">@*android:dimen/car_secondary_icon_size</dimen>
@@ -214,7 +213,6 @@
     <!-- Blocked by admin icon -->
     <dimen name="block_by_admin_icon_padding">@*android:dimen/car_padding_2</dimen>
 
-
     <dimen name="colored_two_action_switch_preference_vertical_padding">24dp</dimen>
     <dimen name="colored_two_action_switch_preference_margin_end">32dp</dimen>
     <dimen name="colored_two_action_switch_preference_vertical_margin">16dp</dimen>
@@ -235,4 +233,6 @@
 
     <dimen name="aspect_ratio_icon_height">300dp</dimen>
     <dimen name="aspect_ratio_icon_width">412dp</dimen>
+
+    <dimen name="aspect_ratio_dialog_width">893dp</dimen>
 </resources>
