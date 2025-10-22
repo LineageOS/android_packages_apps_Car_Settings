@@ -19,7 +19,7 @@ package com.android.car.settings.sound;
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 import static android.media.AudioAttributes.USAGE_MEDIA;
 import static android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP;
-import static android.media.AudioDeviceInfo.TYPE_BUS;
+import static android.media.AudioDeviceInfo.TYPE_BUILTIN_SPEAKER;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -168,8 +168,7 @@ public class AudioRoutesManagerTest {
         assertThat(deviceAudioRoute).isNotNull();
         assertThat(deviceAudioRoute.getName()).isEqualTo(AUDIO_DEVICE_NAME);
         assertThat(deviceAudioRoute.getAddress()).isEqualTo(AUDIO_DEVICE_ADDRESS);
-        assertThat(deviceAudioRoute.getAudioRouteType()).isEqualTo(TYPE_BUS);
-        assertThat(deviceAudioRoute.getAudioDeviceAttributes()).isEqualTo(mAudioDeviceAttributes);
+        assertThat(deviceAudioRoute.getAudioRouteType()).isEqualTo(TYPE_BUILTIN_SPEAKER);
         assertThat(deviceAudioRoute.getBluetoothDevice()).isNull();
 
         AudioRouteItem btAudioRoute1 = audioRouteItemMap.get(BT_DEVICE_ADDRESS_1);
@@ -177,7 +176,6 @@ public class AudioRoutesManagerTest {
         assertThat(btAudioRoute1.getName()).isEqualTo(BT_DEVICE_NAME_1);
         assertThat(btAudioRoute1.getAddress()).isEqualTo(BT_DEVICE_ADDRESS_1);
         assertThat(btAudioRoute1.getAudioRouteType()).isEqualTo(TYPE_BLUETOOTH_A2DP);
-        assertThat(btAudioRoute1.getAudioDeviceAttributes()).isNull();
         assertThat(btAudioRoute1.getBluetoothDevice()).isEqualTo(mCachedBluetoothDevice1);
 
         AudioRouteItem btAudioRoute2 = audioRouteItemMap.get(BT_DEVICE_ADDRESS_2);
@@ -185,7 +183,6 @@ public class AudioRoutesManagerTest {
         assertThat(btAudioRoute2.getName()).isEqualTo(BT_DEVICE_NAME_2);
         assertThat(btAudioRoute2.getAddress()).isEqualTo(BT_DEVICE_ADDRESS_2);
         assertThat(btAudioRoute2.getAudioRouteType()).isEqualTo(TYPE_BLUETOOTH_A2DP);
-        assertThat(btAudioRoute2.getAudioDeviceAttributes()).isNull();
         assertThat(btAudioRoute2.getBluetoothDevice()).isEqualTo(mCachedBluetoothDevice2);
     }
 
@@ -223,6 +220,7 @@ public class AudioRoutesManagerTest {
         when(mAudioAttributes.getUsage()).thenReturn(USAGE);
         when(mAudioDeviceAttributes.getAddress()).thenReturn(AUDIO_DEVICE_ADDRESS);
         when(mAudioDeviceAttributes.getName()).thenReturn(AUDIO_DEVICE_NAME);
+        when(mAudioDeviceAttributes.getType()).thenReturn(TYPE_BUILTIN_SPEAKER);
         when(mOtherAudioDeviceAttributes.getAddress()).thenReturn(BT_DEVICE_ADDRESS_1);
         when(mOtherAudioDeviceAttributes.getName()).thenReturn(BT_DEVICE_NAME_1);
         when(mCarAudioManager.getOutputDeviceForUsage(TEST_ZONE_ID, USAGE))

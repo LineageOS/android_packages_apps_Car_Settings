@@ -19,8 +19,9 @@ package com.android.car.settings.sound;
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 import static android.car.media.CarAudioManager.CONFIG_STATUS_AUTO_SWITCHED;
 import static android.car.media.CarAudioManager.CONFIG_STATUS_CHANGED;
+import static android.media.AudioDeviceInfo.TYPE_BLE_BROADCAST;
+import static android.media.AudioDeviceInfo.TYPE_BLE_HEADSET;
 import static android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP;
-import static android.media.AudioManager.DEVICE_OUT_BLE_BROADCAST;
 
 import android.bluetooth.BluetoothProfile;
 import android.car.media.AudioZoneConfigurationsChangeCallback;
@@ -210,7 +211,7 @@ public class AudioRoutesManager {
                 .toList();
         for (AudioDeviceAttributes attr : getUsageMatchedAttributes(activeAudioZones,
                 /* isActive=*/ true)) {
-            mCachedAudioRoutes.put(attr.getAddress(), new AudioRouteItem(attr));
+            mCachedAudioRoutes.put(attr.getAddress(), new AudioRouteItem.Builder(attr).build());
         }
         // Register for all connected Bluetooth devices.
         List<CachedBluetoothDevice> bluetoothDevices = mBluetoothManager.getCachedDeviceManager()
@@ -220,10 +221,7 @@ public class AudioRoutesManager {
                 .toList();
         for (CachedBluetoothDevice device : bluetoothDevices) {
             //  The active Bluetooth device must have been registered from the car audio zones.
-            AudioRouteItem item = mCachedAudioRoutes.computeIfAbsent(device.getAddress(),
-                    address -> new AudioRouteItem(device));
-            item.setBluetoothDevice(device);
-            item.setAudioRouteType(TYPE_BLUETOOTH_A2DP);
+            mCachedAudioRoutes.put(device.getAddress(), new AudioRouteItem.Builder(device).build());
         }
         // Update active device address.
         AudioDeviceInfo info = mCarAudioManager.getOutputDeviceForUsage(mAudioZone, mUsage);
@@ -312,8 +310,7 @@ public class AudioRoutesManager {
     /** Is this address a valid BLE broadcast */
     public boolean isLeBroadcast(@NonNull String address) {
         AudioRouteItem item = mCachedAudioRoutes.get(address);
-        return item != null && item.getAudioDeviceAttributes() != null
-                && item.getAudioDeviceAttributes().getInternalType() == DEVICE_OUT_BLE_BROADCAST;
+        return item != null && item.getAudioRouteType() == TYPE_BLE_BROADCAST;
     }
 
     /**
@@ -335,7 +332,8 @@ public class AudioRoutesManager {
         }
         LOG.d("Updating the current targeted address as %s".formatted(getDeviceName(address)));
         mLastSwitchedAddress = address;
-        if (audioRouteItem.getAudioRouteType() == TYPE_BLUETOOTH_A2DP) {
+        if (audioRouteItem.getAudioRouteType() == TYPE_BLUETOOTH_A2DP
+                || audioRouteItem.getAudioRouteType() == TYPE_BLE_HEADSET) {
             CachedBluetoothDevice bluetoothDevice = audioRouteItem.getBluetoothDevice();
             if (bluetoothDevice.isActiveDevice(BluetoothProfile.A2DP)) {
                 requestRouteSwitchInternal();
