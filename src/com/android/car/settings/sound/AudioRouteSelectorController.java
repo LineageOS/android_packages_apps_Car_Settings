@@ -19,9 +19,6 @@ package com.android.car.settings.sound;
 import static android.bluetooth.BluetoothAdapter.STATE_ON;
 
 import static com.android.car.settings.bluetooth.audiosharing.BaseAudioSharingPreferenceController.isUserAudioSharingEnabled;
-import static com.android.car.settings.common.CollapsibleSeekbarPreference.STATE_MULTI_SELECTED;
-import static com.android.car.settings.common.CollapsibleSeekbarPreference.STATE_SELECTED;
-import static com.android.car.settings.common.CollapsibleSeekbarPreference.STATE_UNSELECTED;
 
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothLeBroadcastMetadata;
@@ -231,7 +228,7 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
             }
             AudioRouteItem item = mRouteManager.getRouteItem(address);
             if (item != null) {
-                CollapsibleSeekbarPreference pref = new CollapsibleSeekbarPreference(getContext());
+                AudioRoutePreference pref = new AudioRoutePreference(getContext());
                 pref.setListener(this);
                 pref.setKey(item.getAddress());
                 pref.setTitle(mRouteManager.getDeviceName(item.getAddress()));
@@ -293,18 +290,18 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
     }
 
     @Nullable
-    private CollapsibleSeekbarPreference getChildPreference(@NonNull String key) {
-        for (CollapsibleSeekbarPreference pref : getChildPreferences()) {
+    private AudioRoutePreference getChildPreference(@NonNull String key) {
+        for (AudioRoutePreference pref : getChildPreferences()) {
             if (key.equals(pref.getKey())) return pref;
         }
         return null;
     }
 
     @NonNull
-    private List<CollapsibleSeekbarPreference> getChildPreferences() {
-        List<CollapsibleSeekbarPreference> children = new ArrayList<>();
+    private List<AudioRoutePreference> getChildPreferences() {
+        List<AudioRoutePreference> children = new ArrayList<>();
         for (int i = 0; i < getPreference().getPreferenceCount(); i++) {
-            children.add(getPreference().getPreference(i));
+            children.add((AudioRoutePreference) getPreference().getPreference(i));
         }
         return children;
     }
@@ -383,7 +380,7 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
         String activeAddress = mRouteManager.getOutputAddress();
         mConnectingUnicastDevices.remove(activeAddress);
         LOG.d("Output audio device: %s".formatted(mRouteManager.getDeviceName(activeAddress)));
-        for (CollapsibleSeekbarPreference pref : getChildPreferences()) {
+        for (AudioRoutePreference pref : getChildPreferences()) {
             String address = pref.getKey();
             if (address.equals(activeAddress) && (mConnectingBroadcastDevices.isEmpty()
                     || mConnectingBroadcastDevices.contains(address))) {
@@ -392,26 +389,26 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
                 // has been changed into default.
                 // BT active -> [BT inactive, auto switch to main] -> BLE active
                 // Let it fall through and set as inactive to avoid flickering during transition
-                setUnicastActive(pref, isLeAudioBluetoothDevice(address));
+                pref.setUnicastActive(isLeAudioBluetoothDevice(address));
                 mDisconnectingBroadcastDevices.remove(address);
             } else if (isAudioSharingEnabled() && isLeAudioBluetoothDevice(address)) {
                 // Multi-casting UI states for BLE enabled devices.
                 if (isReceivingBroadcast(address, getCurrentBroadcast())) {
                     // Case 1: Device is receiving BLE broadcast
                     mConnectingBroadcastDevices.remove(address);
-                    setMulticastActive(pref);
+                    pref.setMulticastActive();
                 } else if (activeAddress != null && activeAddress.equals(
                         mRouteManager.getBroadcastAddress())) {
                     // Case 2: Device is not currently receiving, but BLE is the active output
-                    setMulticastInactive(pref);
+                    pref.setMulticastInactive();
                 } else {
                     // fall through: no active BLE, set device as unicast inactive
-                    setUnicastInactive(pref);
+                    pref.setUnicastInactive();
                     mDisconnectingBroadcastDevices.remove(address);
                 }
             } else {
                 // fall through: by default, set all other device as unicast inactive
-                setUnicastInactive(pref);
+                pref.setUnicastInactive();
                 mDisconnectingBroadcastDevices.remove(address);
             }
             // Add summary string indicating last user input in the UI
@@ -423,30 +420,6 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
                 pref.setSummary(R.string.audio_route_preference_disconnecting_broadcast);
             }
         }
-    }
-
-    private void setUnicastActive(CollapsibleSeekbarPreference preference, boolean isLeCapable) {
-        LOG.d("Unicast Active: [%s]".formatted(preference.getTitle()));
-        preference.setSummary(R.string.audio_route_preference_listening);
-        preference.updateState(STATE_SELECTED, isLeCapable);
-    }
-
-    private void setUnicastInactive(CollapsibleSeekbarPreference preference) {
-        LOG.d("Unicast Inactive: [%s]".formatted(preference.getTitle()));
-        preference.setSummary(null);
-        preference.updateState(STATE_UNSELECTED, false);
-    }
-
-    private void setMulticastActive(CollapsibleSeekbarPreference preference) {
-        LOG.d("Multicast Active: [%s]".formatted(preference.getTitle()));
-        preference.setSummary(R.string.audio_route_preference_listening);
-        preference.updateState(STATE_MULTI_SELECTED, true);
-    }
-
-    private void setMulticastInactive(CollapsibleSeekbarPreference preference) {
-        LOG.d("Multicast Inactive[%s]".formatted(preference.getTitle()));
-        preference.setSummary(R.string.audio_route_preference_available_to_join);
-        preference.updateState(STATE_UNSELECTED, true);
     }
 
     private void startBroadcast() {
