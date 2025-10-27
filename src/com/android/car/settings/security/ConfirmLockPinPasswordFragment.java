@@ -37,6 +37,8 @@ import com.android.car.settings.common.BaseFragment;
 import com.android.internal.widget.LockscreenCredential;
 import com.android.internal.widget.TextViewInputDisabler;
 
+import java.time.Duration;
+
 /**
  * Fragment for confirming existing lock PIN or password.  The containing activity must implement
  * CheckLockListener.
@@ -305,12 +307,12 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
     }
 
     @VisibleForTesting
-    void onCheckCompleted(boolean lockMatched, int timeoutMs) {
+    void onCheckCompleted(boolean lockMatched, Duration timeout) {
         if (lockMatched) {
             mCheckLockListener.onLockVerified(mEnteredPassword);
         } else {
-            if (timeoutMs > 0) {
-                mConfirmLockLockoutHelper.onCheckCompletedWithTimeout(timeoutMs);
+            if (timeout.isPositive()) {
+                mConfirmLockLockoutHelper.onCheckCompletedWithTimeout(timeout);
             } else {
                 mMsgView.setText(
                         mIsPin ? R.string.lockscreen_wrong_pin

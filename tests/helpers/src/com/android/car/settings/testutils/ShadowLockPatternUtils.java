@@ -119,20 +119,10 @@ public class ShadowLockPatternUtils {
      * @return the millis since boot of the lockout end time.
      */
     @Implementation
-    public long setLockoutAttemptDeadline(int userId, int deadline) {
-        long lockoutEndTimeMs = SystemClock.elapsedRealtime() + (long) deadline;
-        sUserToLockoutEndTimeMap.put(userId, Duration.ofMillis(lockoutEndTimeMs));
-        return lockoutEndTimeMs;
-    }
-
-    /**
-     * Gets the lockout end time for a given user.
-     *
-     * @return the millis since boot of the lockout end time.
-     */
-    @Implementation
-    public long getLockoutAttemptDeadline(int userId) {
-        return getLockoutEndTime(userId).toMillis();
+    public Duration setLockoutAttemptDeadline(int userId, Duration deadline) {
+        Duration lockoutEndTime = Duration.ofMillis(SystemClock.elapsedRealtime()).plus(deadline);
+        sUserToLockoutEndTimeMap.put(userId, lockoutEndTime);
+        return lockoutEndTime;
     }
 
     /**
