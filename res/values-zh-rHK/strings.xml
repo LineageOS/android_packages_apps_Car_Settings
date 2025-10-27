@@ -273,6 +273,11 @@
     <string name="sound_alert_sounds" msgid="6838044721739163867">"警示音效"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"鈴聲、通知、鬧鐘"</string>
     <string name="audio_route_selector_title" msgid="9137648859313120159">"透過以下裝置播放媒體："</string>
+    <string name="audio_route_preference_listening" msgid="2187464983808020936">"正在聽取"</string>
+    <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"可加入"</string>
+    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"正在連接裝置"</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"正在連接音訊分享功能"</string>
+    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"正在中斷音訊分享功能連線"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"切換媒體至 %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"亮度"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"在光線不足時調查螢幕"</string>
@@ -424,7 +429,7 @@
     <string name="apps_settings_title" msgid="3982535942394315336">"應用程式"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"最近開啟的應用程式"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"查看全部 %1$d 個應用程式"</string>
-    <string name="apps_permission_manager_title" msgid="8776335943862484131">"權限管理員"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"權限管理工具"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"控制應用程式資料存取權"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"「Google 助理」及其他"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# 個應用程式正在影響系統效能}other{# 個應用程式正在影響系統效能}}"</string>

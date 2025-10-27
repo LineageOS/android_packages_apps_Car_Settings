@@ -16,8 +16,8 @@
 -->
 
 <resources>
-    <style name="PreferenceButtonTextAppearance"
-           parent="@*android:style/TextAppearance.DeviceDefault.Widget.Button.Borderless.Colored">
+    <style name="PreferenceButtonAppearance"
+           parent="@*android:style/Widget.DeviceDefault.Button.Borderless.Colored">
         <item name="android:fadingEdgeLength">@dimen/button_fading_edge_length</item>
         <item name="android:ellipsize">none</item>
         <item name="android:requiresFadingEdge">horizontal</item>

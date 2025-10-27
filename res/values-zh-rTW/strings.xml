@@ -169,7 +169,7 @@
     <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"開車時一律使用無線基地台"</string>
     <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"在車輛發動時啟用無線基地台"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"掃描這個 QR code 即可加入「%s」"</string>
-    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"無線基地台密碼：%s"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"熱點密碼：%s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求關閉 Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"發生錯誤"</string>
@@ -273,6 +273,11 @@
     <string name="sound_alert_sounds" msgid="6838044721739163867">"警示音效"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"鈴聲、通知和鬧鐘"</string>
     <string name="audio_route_selector_title" msgid="9137648859313120159">"選擇媒體輸出裝置"</string>
+    <string name="audio_route_preference_listening" msgid="2187464983808020936">"聽取中"</string>
+    <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"可加入"</string>
+    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"正在連線到裝置"</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"正在連線到音訊分享"</string>
+    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"正在中斷音訊分享連線"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"正在將媒體切換到「%1$s」"</string>
     <string name="display_brightness" msgid="5718970880488110840">"亮度"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"將螢幕調整為適合在低光源環境中查看的亮度"</string>

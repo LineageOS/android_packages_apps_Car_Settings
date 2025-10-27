@@ -273,6 +273,11 @@
     <string name="sound_alert_sounds" msgid="6838044721739163867">"Sons das alertas"</string>
     <string name="sound_alert_sounds_summary" msgid="816501423095651281">"Ton de chamada, notificacións e alarma"</string>
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Reproducir o contido multimedia en"</string>
+    <string name="audio_route_preference_listening" msgid="2187464983808020936">"Escoitando"</string>
+    <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"Dispoñible para unirse"</string>
+    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"Conectando co dispositivo"</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"Conectando co audio compartido"</string>
+    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"Desconectando do audio compartido"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Cambiando ruta multimedia a %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Brillo"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Axusta a pantalla a contornos con pouca luz"</string>
@@ -391,7 +396,7 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"Usar o texto da pantalla"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Permite que a aplicación de asistencia acceda aos contidos da pantalla en forma de texto"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Usar a captura de pantalla"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permite que a aplicación de asistencia acceda ás imaxes presentes na pantalla"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permite que a aplicación de asistencia acceda a unha imaxe da pantalla"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Entrada de voz"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Servizo de autocompletar"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ningunha aplicación"</string>
