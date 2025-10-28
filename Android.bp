@@ -80,6 +80,7 @@ android_library {
         warning_checks: [
             "FlaggedApi",
         ],
+        baseline_filename: "lint-baseline.xml",
     },
 }
 
@@ -168,6 +169,7 @@ android_app {
         warning_checks: [
             "FlaggedApi",
         ],
+        baseline_filename: "lint-baseline.xml",
     },
 }
 
@@ -222,6 +224,7 @@ android_app {
         warning_checks: [
             "FlaggedApi",
         ],
+        baseline_filename: "lint-baseline.xml",
     },
 }
 
@@ -287,6 +290,7 @@ android_library {
         warning_checks: [
             "FlaggedApi",
         ],
+        baseline_filename: "lint-baseline.xml",
     },
 }
 
