@@ -29,7 +29,6 @@ import android.car.media.CarAudioZoneConfigInfo;
 import android.car.media.CarVolumeGroupInfo;
 import android.car.media.SwitchAudioZoneConfigCallback;
 import android.content.Context;
-import android.media.AudioAttributes;
 import android.media.AudioDeviceAttributes;
 import android.media.AudioDeviceInfo;
 import android.util.ArrayMap;
@@ -47,6 +46,7 @@ import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * // TODO: rename to AudioOutputManager and allow registration of multiple callbacks to
@@ -131,20 +131,45 @@ public class AudioRoutesManager {
                 }
 
                 private void logConfigChange(List<CarAudioZoneConfigInfo> configs, int status) {
-                    String activeConfigs = configs.stream()
-                            .map(CarAudioZoneConfigInfo::getName)
-                            .collect(Collectors.joining(" | "));
-                    String statusName = status == CONFIG_STATUS_CHANGED ? "CONFIG_STATUS_CHANGED"
-                            : "CONFIG_STATUS_AUTO_SWITCHED";
-                    LOG.d("Audio zone configs changed: (configs={%s}, status=%s)".formatted(
-                            activeConfigs, statusName));
+                    String statusName = switch (status) {
+                        case CONFIG_STATUS_CHANGED -> "CONFIG_STATUS_CHANGED";
+                        case CONFIG_STATUS_AUTO_SWITCHED -> "CONFIG_STATUS_AUTO_SWITCHED";
+                        default -> "Status: " + status;
+                    };
+                    LOG.d("onAudioZoneConfigurationsChanged: %s (%s)".formatted(
+                            zoneConfigInfosToString(configs),
+                            statusName));
                 }
             };
+
+    private String zoneConfigInfosToString(List<CarAudioZoneConfigInfo> configs) {
+        return String.join(" | ", configs.stream()
+                .map(this::zoneConfigInfoToString)
+                .collect(Collectors.joining(" | ")));
+    }
+
+    private String zoneConfigInfoToString(CarAudioZoneConfigInfo config) {
+        List<String> devices = config.getConfigVolumeGroups().stream()
+                .filter(volumeGroup -> volumeGroup.getAudioAttributes().stream()
+                        .anyMatch(audioAttr -> audioAttr.getUsage() == mUsage))
+                .flatMap(
+                        volumeGroup -> volumeGroup.getAudioDeviceAttributes().stream())
+                .map(AudioDeviceAttributes::getName)
+                .collect(Collectors.toList());
+        String status = Stream.<String>builder()
+                .add(config.isActive() ? "Active" : null)
+                .add(config.isSelected() ? "Selected" : null)
+                .add(config.isDefault() ? "Default" : null)
+                .build()
+                .filter(java.util.Objects::nonNull)
+                .collect(Collectors.joining(","));
+        return config.getName() + " [" + status + "] : " + String.join(",", devices);
+    }
 
     private final SwitchAudioZoneConfigCallback mSwitchAudioZoneConfigCallback =
             (zoneConfig, isSuccessful) -> {
                 LOG.d("Audio zone switch to [%s] successful: %s"
-                        .formatted(zoneConfig.getName(), isSuccessful));
+                        .formatted(zoneConfigInfoToString(zoneConfig), isSuccessful));
                 if (isSuccessful) {
                     updateActiveRoutes();
                     if (mListener != null) {
@@ -325,34 +350,40 @@ public class AudioRoutesManager {
     }
 
     private void requestRouteSwitchInternal() {
-        List<CarAudioZoneConfigInfo> zoneConfigInfoList =
+        if (mLastSwitchedAddress == null) {
+            LOG.d("Failed to switch audio routing: mLastSwitchedAddress is null");
+            mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ false);
+            return;
+        }
+        AudioRouteItem switchedRoute = mCachedActiveRoutes.get(mLastSwitchedAddress);
+        if (switchedRoute == null) {
+            LOG.d("Cannot find an AudioRouteItem for " + mLastSwitchedAddress);
+            mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ false);
+            return;
+        }
+
+        LOG.d("Trying to switch audio route to " + switchedRoute.getAddress());
+
+        List<CarAudioZoneConfigInfo> configs =
                 mCarAudioManager.getAudioZoneConfigInfos(mAudioZone);
-        for (CarAudioZoneConfigInfo carAudioZoneConfigInfo : zoneConfigInfoList) {
+        LOG.d(zoneConfigInfosToString(configs));
+
+        for (CarAudioZoneConfigInfo carAudioZoneConfigInfo : configs) {
             for (CarVolumeGroupInfo carVolumeGroupInfo :
                     carAudioZoneConfigInfo.getConfigVolumeGroups()) {
-                boolean hasCorrectUsage = false;
-                for (AudioAttributes audioAttributes : carVolumeGroupInfo.getAudioAttributes()) {
-                    if (audioAttributes.getUsage() == mUsage) {
-                        hasCorrectUsage = true;
-                        break;
-                    }
-                }
-
-                boolean hasCorrectAddress = false;
-                for (AudioDeviceAttributes audioDeviceAttributes :
-                        carVolumeGroupInfo.getAudioDeviceAttributes()) {
-                    if (mLastSwitchedAddress != null && mLastSwitchedAddress.equals(
-                            audioDeviceAttributes.getAddress())) {
-                        hasCorrectAddress = true;
-                        break;
-                    }
-                }
+                boolean hasCorrectUsage = carVolumeGroupInfo.getAudioAttributes().stream().anyMatch(
+                        audioAttribute -> audioAttribute.getUsage() == mUsage);
+                boolean hasCorrectAddress =
+                        carVolumeGroupInfo.getAudioDeviceAttributes().stream().anyMatch(
+                                deviceAttribute -> switchedRoute.getAddress().equals(
+                                        deviceAttribute.getAddress()));
 
                 if (hasCorrectUsage && hasCorrectAddress && carAudioZoneConfigInfo.isActive()) {
                     try {
                         if (mListener != null) {
                             mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ true);
                         }
+                        LOG.d("Found audio route to " + mLastSwitchedAddress);
                         mCarAudioManager.switchAudioZoneToConfig(carAudioZoneConfigInfo,
                                 ContextCompat.getMainExecutor(mContext),
                                 mSwitchAudioZoneConfigCallback);
@@ -365,6 +396,7 @@ public class AudioRoutesManager {
             }
         }
         if (mListener != null) {
+            LOG.d("Failed to switch audio routing to " + mLastSwitchedAddress);
             mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ false);
         }
     }
