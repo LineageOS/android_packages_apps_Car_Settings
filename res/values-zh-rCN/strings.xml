@@ -388,10 +388,10 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"注意：重新启动后，您必须将车辆解锁，才能运行此应用。"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"助手和语音输入"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"辅助应用"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"使用屏幕上的文字内容"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"使用屏幕文字"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"允许辅助应用获取屏幕上的文字内容"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"使用屏幕截图"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"允许辅助应用使用屏幕截图"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"允许辅助应用获取屏幕截图"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"语音输入"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"自动填充服务"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"无"</string>
@@ -519,7 +519,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"版权"</string>
     <string name="license_title" msgid="936705938435249965">"许可"</string>
     <string name="terms_title" msgid="5201471373602628765">"条款及条件"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"系统 WebView 许可"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"System WebView 许可"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"壁纸"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"卫星图像提供商：\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"型号"</string>
@@ -694,7 +694,7 @@
     <string name="microphone_access_settings_summary" msgid="3531690421673836538">"选择应用能否使用您汽车的麦克风"</string>
     <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"信息娱乐应用"</string>
     <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"允许信息娱乐应用录音"</string>
-    <string name="camera_access_settings_title" msgid="1841809323727456945">"摄像头使用权限"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"相机权限"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"选择应用能否使用您汽车的摄像头"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"必需的应用"</string>
     <string name="required_apps_group_summary" msgid="5026442309718220831">"汽车制造商提供驾驶辅助所需的应用"</string>
@@ -816,7 +816,7 @@
     <string name="default_search_query" msgid="3137420627428857068">"搜索"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和语音"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"数字助理应用"</string>
-    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"使用屏幕上的文字内容"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"使用屏幕文字"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"允许 Google 助理获取屏幕上的内容"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"使用屏幕截图"</string>
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"允许 Google 助理获取屏幕截图"</string>
