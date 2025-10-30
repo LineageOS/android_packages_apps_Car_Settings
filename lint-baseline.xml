@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.4.0-alpha08" type="baseline" client="" dependencies="true" name="" variant="all" version="8.4.0-alpha08">
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 36.1 (current min is 36): `android.net.wifi.SoftApConfiguration.Builder#setPassphrase`"
+        errorLine1="                    .setPassphrase(passwordOrNullIfOpen, mSecurityType)"
+        errorLine2="                     ~~~~~~~~~~~~~">
+        <location
+            file="packages/apps/Car/Settings/src/com/android/car/settings/wifi/WifiTetherPasswordPreferenceController.java"
+            line="177"
+            column="22"/>
+    </issue>
+
+</issues>
