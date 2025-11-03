@@ -27,6 +27,7 @@ import com.android.internal.widget.LockPatternView;
 import com.android.internal.widget.LockscreenCredential;
 import com.android.internal.widget.VerifyCredentialResponse;
 
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -39,7 +40,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
 
     private boolean mHasPendingResult;
     private boolean mLockMatched;
-    private int mThrottleTimeoutMs;
+    private Duration mThrottleTimeout;
     private boolean mCheckInProgress;
     private Listener mListener;
     private LockPatternUtils mLockPatternUtils;
@@ -54,15 +55,15 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
     @Override
     public void onChecked(VerifyCredentialResponse response) {
         final boolean matched = response.isMatched();
-        final int throttleTimeoutMs = response.getTimeout();
+        final Duration throttleTimeout = response.getTimeout();
         mCheckInProgress = false;
 
         if (mListener == null) {
             mHasPendingResult = true;
             mLockMatched = matched;
-            mThrottleTimeoutMs = throttleTimeoutMs;
+            mThrottleTimeout = throttleTimeout;
         } else {
-            mListener.onCheckCompleted(matched, throttleTimeoutMs);
+            mListener.onCheckCompleted(matched, throttleTimeout);
         }
     }
 
@@ -73,7 +74,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
         mListener = listener;
         if (mListener != null && mHasPendingResult) {
             mHasPendingResult = false;
-            mListener.onCheckCompleted(mLockMatched, mThrottleTimeoutMs);
+            mListener.onCheckCompleted(mLockMatched, mThrottleTimeout);
         }
     }
 
@@ -121,10 +122,10 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
     interface Listener {
         /**
          * @param matched Whether the entered password matches the stored record.
-         * @param timeoutMs The remaining amount of time that the user is locked out from
-         *                  retrying the password challenge.
+         * @param timeout The remaining amount of time that the user is locked out from
+         *                retrying the password challenge.
          */
-        void onCheckCompleted(boolean matched, int timeoutMs);
+        void onCheckCompleted(boolean matched, Duration timeout);
     }
 }
 

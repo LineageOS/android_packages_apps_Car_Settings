@@ -21,7 +21,7 @@ import android.util.AttributeSet;
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceGroup;
 
-import com.android.car.settings.common.CollapsibleSeekbarPreference;
+import com.android.car.settings.sound.AudioRoutePreference;
 import com.android.car.ui.R;
 
 public class AudioRoutePreferenceGroup extends PreferenceGroup {
@@ -46,7 +46,7 @@ public class AudioRoutePreferenceGroup extends PreferenceGroup {
 
     @NonNull
     @Override
-    public CollapsibleSeekbarPreference getPreference(int index) {
-        return (CollapsibleSeekbarPreference) super.getPreference(index);
+    public AudioRoutePreference getPreference(int index) {
+        return (AudioRoutePreference) super.getPreference(index);
     }
 }

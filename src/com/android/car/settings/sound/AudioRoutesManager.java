@@ -19,8 +19,9 @@ package com.android.car.settings.sound;
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 import static android.car.media.CarAudioManager.CONFIG_STATUS_AUTO_SWITCHED;
 import static android.car.media.CarAudioManager.CONFIG_STATUS_CHANGED;
+import static android.media.AudioDeviceInfo.TYPE_BLE_BROADCAST;
+import static android.media.AudioDeviceInfo.TYPE_BLE_HEADSET;
 import static android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP;
-import static android.media.AudioManager.DEVICE_OUT_BLE_BROADCAST;
 
 import android.bluetooth.BluetoothProfile;
 import android.car.media.AudioZoneConfigurationsChangeCallback;
@@ -29,7 +30,6 @@ import android.car.media.CarAudioZoneConfigInfo;
 import android.car.media.CarVolumeGroupInfo;
 import android.car.media.SwitchAudioZoneConfigCallback;
 import android.content.Context;
-import android.media.AudioAttributes;
 import android.media.AudioDeviceAttributes;
 import android.media.AudioDeviceInfo;
 import android.util.ArrayMap;
@@ -47,6 +47,7 @@ import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * // TODO: rename to AudioOutputManager and allow registration of multiple callbacks to
@@ -62,7 +63,7 @@ public class AudioRoutesManager {
     private final int mUsage;
     private String mLastSwitchedAddress;
     private AudioZoneConfigUpdateListener mListener;
-    private Map<String, AudioRouteItem> mCachedActiveRoutes;
+    private Map<String, AudioRouteItem> mCachedAudioRoutes;
     private String mCachedActiveDeviceAddress;
 
     /**
@@ -93,9 +94,9 @@ public class AudioRoutesManager {
                             }
                         }
                         boolean routesChanged = activeRoutesChanged(
-                                mCachedActiveRoutes.keySet().stream().toList(), relevantConfigs);
+                                mCachedAudioRoutes.keySet().stream().toList(), relevantConfigs);
                         if (status == CONFIG_STATUS_AUTO_SWITCHED || routesChanged) {
-                            updateActiveRoutes();
+                            updateCachedAudioRoutes();
                         }
                         if (mListener != null) {
                             mListener.onAudioZoneConfigUpdated(routesChanged);
@@ -131,22 +132,47 @@ public class AudioRoutesManager {
                 }
 
                 private void logConfigChange(List<CarAudioZoneConfigInfo> configs, int status) {
-                    String activeConfigs = configs.stream()
-                            .map(CarAudioZoneConfigInfo::getName)
-                            .collect(Collectors.joining(" | "));
-                    String statusName = status == CONFIG_STATUS_CHANGED ? "CONFIG_STATUS_CHANGED"
-                            : "CONFIG_STATUS_AUTO_SWITCHED";
-                    LOG.d("Audio zone configs changed: (configs={%s}, status=%s)".formatted(
-                            activeConfigs, statusName));
+                    String statusName = switch (status) {
+                        case CONFIG_STATUS_CHANGED -> "CONFIG_STATUS_CHANGED";
+                        case CONFIG_STATUS_AUTO_SWITCHED -> "CONFIG_STATUS_AUTO_SWITCHED";
+                        default -> "Status: " + status;
+                    };
+                    LOG.d("onAudioZoneConfigurationsChanged: %s (%s)".formatted(
+                            zoneConfigInfosToString(configs),
+                            statusName));
                 }
             };
+
+    private String zoneConfigInfosToString(List<CarAudioZoneConfigInfo> configs) {
+        return String.join(" | ", configs.stream()
+                .map(this::zoneConfigInfoToString)
+                .collect(Collectors.joining(" | ")));
+    }
+
+    private String zoneConfigInfoToString(CarAudioZoneConfigInfo config) {
+        List<String> devices = config.getConfigVolumeGroups().stream()
+                .filter(volumeGroup -> volumeGroup.getAudioAttributes().stream()
+                        .anyMatch(audioAttr -> audioAttr.getUsage() == mUsage))
+                .flatMap(
+                        volumeGroup -> volumeGroup.getAudioDeviceAttributes().stream())
+                .map(AudioDeviceAttributes::getName)
+                .collect(Collectors.toList());
+        String status = Stream.<String>builder()
+                .add(config.isActive() ? "Active" : null)
+                .add(config.isSelected() ? "Selected" : null)
+                .add(config.isDefault() ? "Default" : null)
+                .build()
+                .filter(java.util.Objects::nonNull)
+                .collect(Collectors.joining(","));
+        return config.getName() + " [" + status + "] : " + String.join(",", devices);
+    }
 
     private final SwitchAudioZoneConfigCallback mSwitchAudioZoneConfigCallback =
             (zoneConfig, isSuccessful) -> {
                 LOG.d("Audio zone switch to [%s] successful: %s"
-                        .formatted(zoneConfig.getName(), isSuccessful));
+                        .formatted(zoneConfigInfoToString(zoneConfig), isSuccessful));
                 if (isSuccessful) {
-                    updateActiveRoutes();
+                    updateCachedAudioRoutes();
                     if (mListener != null) {
                         mListener.onAudioZoneSwitch();
                     }
@@ -162,46 +188,42 @@ public class AudioRoutesManager {
         mAudioZone = ((CarSettingsApplication) mContext.getApplicationContext()).getMyAudioZoneId();
         mBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */ null);
         mUsage = usage;
-        mCachedActiveRoutes = new ArrayMap<>();
+        mCachedAudioRoutes = new ArrayMap<>();
         if (isAudioRoutingEnabled()) {
             mCarAudioManager.clearAudioZoneConfigsCallback();
             mCarAudioManager.setAudioZoneConfigsChangeCallback(mContext.getMainExecutor(),
                     mAudioZoneConfigurationsChangeCallback);
-            updateActiveRoutes();
+            updateCachedAudioRoutes();
         }
     }
 
     /** Returns the AudioRouteItem at the given address */
     public AudioRouteItem getRouteItem(String address) {
-        updateActiveRoutes();
-        return mCachedActiveRoutes.get(address);
+        updateCachedAudioRoutes();
+        return mCachedAudioRoutes.get(address);
     }
 
-    private void updateActiveRoutes() {
-        mCachedActiveRoutes.clear();
-        // register for all active car audio zones
+    private void updateCachedAudioRoutes() {
+        mCachedAudioRoutes.clear();
+        // Register for all active car audio zones.
         List<CarAudioZoneConfigInfo> activeAudioZones = mCarAudioManager
                 .getAudioZoneConfigInfos(mAudioZone).stream()
                 .toList();
         for (AudioDeviceAttributes attr : getUsageMatchedAttributes(activeAudioZones,
                 /* isActive=*/ true)) {
-            mCachedActiveRoutes.put(attr.getAddress(), new AudioRouteItem(attr));
+            mCachedAudioRoutes.put(attr.getAddress(), new AudioRouteItem.Builder(attr).build());
         }
-        // register for all active connected A2DP device
+        // Register for all connected Bluetooth devices.
         List<CachedBluetoothDevice> bluetoothDevices = mBluetoothManager.getCachedDeviceManager()
                 .getCachedDevicesCopy().stream()
                 .filter(device -> device.isConnectedA2dpDevice()
                         || device.isConnectedLeAudioDevice())
                 .toList();
         for (CachedBluetoothDevice device : bluetoothDevices) {
-            if (device.isActiveDevice(BluetoothProfile.A2DP)) {
-                AudioRouteItem item = mCachedActiveRoutes.computeIfAbsent(device.getAddress(),
-                        address -> new AudioRouteItem(device));
-                item.setBluetoothDevice(device);
-                item.setAudioRouteType(TYPE_BLUETOOTH_A2DP);
-            }
+            //  The active Bluetooth device must have been registered from the car audio zones.
+            mCachedAudioRoutes.put(device.getAddress(), new AudioRouteItem.Builder(device).build());
         }
-        // update active device device address
+        // Update active device address.
         AudioDeviceInfo info = mCarAudioManager.getOutputDeviceForUsage(mAudioZone, mUsage);
         mCachedActiveDeviceAddress = info == null ? null : info.getAddress();
     }
@@ -228,17 +250,17 @@ public class AudioRoutesManager {
      * @return currently updated audio route list.
      */
     public List<String> getAudioRouteList() {
-        return mCachedActiveRoutes.keySet().stream().toList();
+        return mCachedAudioRoutes.keySet().stream().toList();
     }
 
     /** True the display name for users at this address, filtering for allowed characters */
     public String getDeviceName(String address) {
-        if (mCachedActiveRoutes.containsKey(address)) {
+        if (mCachedAudioRoutes.containsKey(address)) {
             if (isLeBroadcast(address)) {
                 return "ble audio broadcast";
             }
             // remove special character '%' to prevent run time error during string formatting
-            return mCachedActiveRoutes.get(address).getName()
+            return mCachedAudioRoutes.get(address).getName()
                     .replace("%", "");
         }
         return null;
@@ -246,7 +268,7 @@ public class AudioRoutesManager {
 
     @VisibleForTesting
     Map<String, AudioRouteItem> getActiveRoutes() {
-        return mCachedActiveRoutes;
+        return mCachedAudioRoutes;
     }
 
     @VisibleForTesting
@@ -287,9 +309,8 @@ public class AudioRoutesManager {
 
     /** Is this address a valid BLE broadcast */
     public boolean isLeBroadcast(@NonNull String address) {
-        AudioRouteItem item = mCachedActiveRoutes.get(address);
-        return item != null && item.getAudioDeviceAttributes() != null
-                && item.getAudioDeviceAttributes().getInternalType() == DEVICE_OUT_BLE_BROADCAST;
+        AudioRouteItem item = mCachedAudioRoutes.get(address);
+        return item != null && item.getAudioRouteType() == TYPE_BLE_BROADCAST;
     }
 
     /**
@@ -305,13 +326,14 @@ public class AudioRoutesManager {
      * Update to a new audio destination of the provided address.
      */
     public void requestRouteSwitch(String address) {
-        AudioRouteItem audioRouteItem = mCachedActiveRoutes.get(address);
+        AudioRouteItem audioRouteItem = mCachedAudioRoutes.get(address);
         if (audioRouteItem == null) {
             return;
         }
         LOG.d("Updating the current targeted address as %s".formatted(getDeviceName(address)));
         mLastSwitchedAddress = address;
-        if (audioRouteItem.getAudioRouteType() == TYPE_BLUETOOTH_A2DP) {
+        if (audioRouteItem.getAudioRouteType() == TYPE_BLUETOOTH_A2DP
+                || audioRouteItem.getAudioRouteType() == TYPE_BLE_HEADSET) {
             CachedBluetoothDevice bluetoothDevice = audioRouteItem.getBluetoothDevice();
             if (bluetoothDevice.isActiveDevice(BluetoothProfile.A2DP)) {
                 requestRouteSwitchInternal();
@@ -325,34 +347,40 @@ public class AudioRoutesManager {
     }
 
     private void requestRouteSwitchInternal() {
-        List<CarAudioZoneConfigInfo> zoneConfigInfoList =
+        if (mLastSwitchedAddress == null) {
+            LOG.d("Failed to switch audio routing: mLastSwitchedAddress is null");
+            mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ false);
+            return;
+        }
+        AudioRouteItem switchedRoute = mCachedAudioRoutes.get(mLastSwitchedAddress);
+        if (switchedRoute == null) {
+            LOG.d("Cannot find an AudioRouteItem for " + mLastSwitchedAddress);
+            mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ false);
+            return;
+        }
+
+        LOG.d("Trying to switch audio route to " + switchedRoute.getAddress());
+
+        List<CarAudioZoneConfigInfo> configs =
                 mCarAudioManager.getAudioZoneConfigInfos(mAudioZone);
-        for (CarAudioZoneConfigInfo carAudioZoneConfigInfo : zoneConfigInfoList) {
+        LOG.d(zoneConfigInfosToString(configs));
+
+        for (CarAudioZoneConfigInfo carAudioZoneConfigInfo : configs) {
             for (CarVolumeGroupInfo carVolumeGroupInfo :
                     carAudioZoneConfigInfo.getConfigVolumeGroups()) {
-                boolean hasCorrectUsage = false;
-                for (AudioAttributes audioAttributes : carVolumeGroupInfo.getAudioAttributes()) {
-                    if (audioAttributes.getUsage() == mUsage) {
-                        hasCorrectUsage = true;
-                        break;
-                    }
-                }
-
-                boolean hasCorrectAddress = false;
-                for (AudioDeviceAttributes audioDeviceAttributes :
-                        carVolumeGroupInfo.getAudioDeviceAttributes()) {
-                    if (mLastSwitchedAddress != null && mLastSwitchedAddress.equals(
-                            audioDeviceAttributes.getAddress())) {
-                        hasCorrectAddress = true;
-                        break;
-                    }
-                }
+                boolean hasCorrectUsage = carVolumeGroupInfo.getAudioAttributes().stream().anyMatch(
+                        audioAttribute -> audioAttribute.getUsage() == mUsage);
+                boolean hasCorrectAddress =
+                        carVolumeGroupInfo.getAudioDeviceAttributes().stream().anyMatch(
+                                deviceAttribute -> switchedRoute.getAddress().equals(
+                                        deviceAttribute.getAddress()));
 
                 if (hasCorrectUsage && hasCorrectAddress && carAudioZoneConfigInfo.isActive()) {
                     try {
                         if (mListener != null) {
                             mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ true);
                         }
+                        LOG.d("Found audio route to " + mLastSwitchedAddress);
                         mCarAudioManager.switchAudioZoneToConfig(carAudioZoneConfigInfo,
                                 ContextCompat.getMainExecutor(mContext),
                                 mSwitchAudioZoneConfigCallback);
@@ -365,6 +393,7 @@ public class AudioRoutesManager {
             }
         }
         if (mListener != null) {
+            LOG.d("Failed to switch audio routing to " + mLastSwitchedAddress);
             mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ false);
         }
     }

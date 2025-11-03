@@ -74,7 +74,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Задаване на лимит за данните"</string>
     <string name="data_limit" msgid="227338836292511425">"Лимит за данните"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ограничаване на преноса на данни"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Основното устройство на автомобила ви ще изключи мобилните данни, след като достигне зададения от вас лимит.\n\nТъй като преносът им се измерва от основното устройство, а операторът ви може да го отчита по различен начин, добре е да използвате умерен лимит."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Инфо-развлекателната система на автомобила ви ще изключи мобилните данни, след като достигне зададения от вас лимит.\n\nТъй като преносът им се измерва от инфо-развлекателната система, а операторът ви може да го отчита по различен начин, добре е да използвате умерен лимит."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Задаване на предупреждение за преноса на данни"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Задаване на ограничение за преноса на данни"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Преносът на данни се измерва по устройството ви. Той може да е различен от данните на мобилния ви оператор."</string>
@@ -207,10 +207,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да изключи Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Приложение иска да включи Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Приложение иска да изключи Bluetooth"</string>
-    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да направи основното ви устройство видимо за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
-    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Приложение иска да направи основното ви устройство видимо за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да включи Bluetooth и да направи основното ви устройство видимо за други устройства за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Приложение иска да включи Bluetooth и да направи основното ви устройство видимо за други устройства за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да направи инфо-развлекателната система видима за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Приложение иска да направи инфо-развлекателната система видима за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да включи Bluetooth и да направи инфо-развлекателната система видима за други устройства за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Приложение иска да включи Bluetooth и да направи инфо-развлекателната система видима за други устройства за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Вижда се като %1$s за други устройства"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Моите устройства"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"По-рано свързвани"</string>

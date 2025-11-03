@@ -19,7 +19,7 @@ package com.android.car.settings.sound;
 import static android.car.media.CarAudioManager.AUDIO_FEATURE_DYNAMIC_ROUTING;
 import static android.media.AudioAttributes.USAGE_MEDIA;
 import static android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP;
-import static android.media.AudioDeviceInfo.TYPE_BUS;
+import static android.media.AudioDeviceInfo.TYPE_BUILTIN_SPEAKER;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -66,9 +66,10 @@ public class AudioRoutesManagerTest {
     private static final int TEST_ZONE_ID = 0;
     private static final String AUDIO_DEVICE_NAME = "audio";
     private static final String AUDIO_DEVICE_ADDRESS = "audio_address";
-    private static final String BT_DEVICE_NAME = "bluetooth";
-    private static final String BT_DEVICE_ADDRESS = "bluetooth_address";
-
+    private static final String BT_DEVICE_NAME_1 = "bluetooth1";
+    private static final String BT_DEVICE_ADDRESS_1 = "bluetooth_address_a";
+    private static final String BT_DEVICE_NAME_2 = "bluetooth2";
+    private static final String BT_DEVICE_ADDRESS_2 = "bluetooth_address_b";
     private Context mContext = spy(ApplicationProvider.getApplicationContext());
     private MockitoSession mSession;
     private AudioRoutesManager mAudioRoutesManager;
@@ -83,7 +84,9 @@ public class AudioRoutesManagerTest {
     @Mock
     private CachedBluetoothDeviceManager mCachedBluetoothDeviceManager;
     @Mock
-    private CachedBluetoothDevice mCachedBluetoothDevice;
+    private CachedBluetoothDevice mCachedBluetoothDevice1;
+    @Mock
+    private CachedBluetoothDevice mCachedBluetoothDevice2;
     @Mock
     private CarAudioZoneConfigInfo mCarAudioZoneConfigInfo;
     @Mock
@@ -118,9 +121,10 @@ public class AudioRoutesManagerTest {
         mAudioRoutesManager.setListener(mUpdateListener);
 
         List<String> audioRouteList = mAudioRoutesManager.getAudioRouteList();
-        assertThat(audioRouteList.size()).isEqualTo(2);
+        assertThat(audioRouteList.size()).isEqualTo(3);
         assertThat(audioRouteList.get(0)).isEqualTo(AUDIO_DEVICE_ADDRESS);
-        assertThat(audioRouteList.get(1)).isEqualTo(BT_DEVICE_ADDRESS);
+        assertThat(audioRouteList.get(1)).isEqualTo(BT_DEVICE_ADDRESS_1);
+        assertThat(audioRouteList.get(2)).isEqualTo(BT_DEVICE_ADDRESS_2);
     }
 
     @Test
@@ -132,9 +136,10 @@ public class AudioRoutesManagerTest {
         mAudioRoutesManager.setListener(mUpdateListener);
 
         List<String> audioRouteList = mAudioRoutesManager.getAudioRouteList();
-        assertThat(audioRouteList.size()).isEqualTo(2);
+        assertThat(audioRouteList.size()).isEqualTo(3);
         assertThat(audioRouteList.get(0)).isEqualTo(AUDIO_DEVICE_ADDRESS);
-        assertThat(audioRouteList.get(1)).isEqualTo(BT_DEVICE_ADDRESS);
+        assertThat(audioRouteList.get(1)).isEqualTo(BT_DEVICE_ADDRESS_1);
+        assertThat(audioRouteList.get(2)).isEqualTo(BT_DEVICE_ADDRESS_2);
     }
 
     @Test
@@ -157,28 +162,28 @@ public class AudioRoutesManagerTest {
         mAudioRoutesManager.setListener(mUpdateListener);
 
         Map<String, AudioRouteItem> audioRouteItemMap = mAudioRoutesManager.getActiveRoutes();
-        assertThat(audioRouteItemMap.size()).isEqualTo(2);
-        assertThat(audioRouteItemMap.containsKey(AUDIO_DEVICE_ADDRESS)).isTrue();
-        assertThat(audioRouteItemMap.get(AUDIO_DEVICE_ADDRESS).getName())
-                .isEqualTo(AUDIO_DEVICE_NAME);
-        assertThat(audioRouteItemMap.get(AUDIO_DEVICE_ADDRESS).getAddress())
-                .isEqualTo(AUDIO_DEVICE_ADDRESS);
-        assertThat(audioRouteItemMap.get(AUDIO_DEVICE_ADDRESS).getAudioRouteType())
-                .isEqualTo(TYPE_BUS);
-        assertThat(audioRouteItemMap.get(AUDIO_DEVICE_ADDRESS).getAudioDeviceAttributes())
-                .isEqualTo(mAudioDeviceAttributes);
-        assertThat(audioRouteItemMap.get(AUDIO_DEVICE_ADDRESS).getBluetoothDevice()).isNull();
+        assertThat(audioRouteItemMap.size()).isEqualTo(3);
 
-        assertThat(audioRouteItemMap.containsKey(BT_DEVICE_ADDRESS)).isTrue();
-        assertThat(audioRouteItemMap.get(BT_DEVICE_ADDRESS).getName())
-                .isEqualTo(BT_DEVICE_NAME);
-        assertThat(audioRouteItemMap.get(BT_DEVICE_ADDRESS).getAddress())
-                .isEqualTo(BT_DEVICE_ADDRESS);
-        assertThat(audioRouteItemMap.get(BT_DEVICE_ADDRESS).getAudioRouteType())
-                .isEqualTo(TYPE_BLUETOOTH_A2DP);
-        assertThat(audioRouteItemMap.get(BT_DEVICE_ADDRESS).getAudioDeviceAttributes()).isNull();
-        assertThat(audioRouteItemMap.get(BT_DEVICE_ADDRESS).getBluetoothDevice())
-                .isEqualTo(mCachedBluetoothDevice);
+        AudioRouteItem deviceAudioRoute = audioRouteItemMap.get(AUDIO_DEVICE_ADDRESS);
+        assertThat(deviceAudioRoute).isNotNull();
+        assertThat(deviceAudioRoute.getName()).isEqualTo(AUDIO_DEVICE_NAME);
+        assertThat(deviceAudioRoute.getAddress()).isEqualTo(AUDIO_DEVICE_ADDRESS);
+        assertThat(deviceAudioRoute.getAudioRouteType()).isEqualTo(TYPE_BUILTIN_SPEAKER);
+        assertThat(deviceAudioRoute.getBluetoothDevice()).isNull();
+
+        AudioRouteItem btAudioRoute1 = audioRouteItemMap.get(BT_DEVICE_ADDRESS_1);
+        assertThat(btAudioRoute1).isNotNull();
+        assertThat(btAudioRoute1.getName()).isEqualTo(BT_DEVICE_NAME_1);
+        assertThat(btAudioRoute1.getAddress()).isEqualTo(BT_DEVICE_ADDRESS_1);
+        assertThat(btAudioRoute1.getAudioRouteType()).isEqualTo(TYPE_BLUETOOTH_A2DP);
+        assertThat(btAudioRoute1.getBluetoothDevice()).isEqualTo(mCachedBluetoothDevice1);
+
+        AudioRouteItem btAudioRoute2 = audioRouteItemMap.get(BT_DEVICE_ADDRESS_2);
+        assertThat(btAudioRoute2).isNotNull();
+        assertThat(btAudioRoute2.getName()).isEqualTo(BT_DEVICE_NAME_2);
+        assertThat(btAudioRoute2.getAddress()).isEqualTo(BT_DEVICE_ADDRESS_2);
+        assertThat(btAudioRoute2.getAudioRouteType()).isEqualTo(TYPE_BLUETOOTH_A2DP);
+        assertThat(btAudioRoute2.getBluetoothDevice()).isEqualTo(mCachedBluetoothDevice2);
     }
 
     private void initMocks() {
@@ -188,11 +193,17 @@ public class AudioRoutesManagerTest {
         when(LocalBluetoothManager.getInstance(any(), any())).thenReturn(mBluetoothManager);
         when(mBluetoothManager.getCachedDeviceManager()).thenReturn(mCachedBluetoothDeviceManager);
         when(mCachedBluetoothDeviceManager.getCachedDevicesCopy())
-                .thenReturn(Collections.singleton(mCachedBluetoothDevice));
-        when(mCachedBluetoothDevice.getName()).thenReturn(BT_DEVICE_NAME);
-        when(mCachedBluetoothDevice.getAddress()).thenReturn(BT_DEVICE_ADDRESS);
-        when(mCachedBluetoothDevice.isConnectedA2dpDevice()).thenReturn(true);
-        when(mCachedBluetoothDevice.isActiveDevice(BluetoothProfile.A2DP)).thenReturn(true);
+                .thenReturn(List.of(mCachedBluetoothDevice1, mCachedBluetoothDevice2));
+
+        when(mCachedBluetoothDevice1.getName()).thenReturn(BT_DEVICE_NAME_1);
+        when(mCachedBluetoothDevice1.getAddress()).thenReturn(BT_DEVICE_ADDRESS_1);
+        when(mCachedBluetoothDevice1.isConnectedA2dpDevice()).thenReturn(true);
+        when(mCachedBluetoothDevice1.isActiveDevice(BluetoothProfile.A2DP)).thenReturn(true);
+
+        when(mCachedBluetoothDevice2.getName()).thenReturn(BT_DEVICE_NAME_2);
+        when(mCachedBluetoothDevice2.getAddress()).thenReturn(BT_DEVICE_ADDRESS_2);
+        when(mCachedBluetoothDevice2.isConnectedA2dpDevice()).thenReturn(true);
+        when(mCachedBluetoothDevice2.isActiveDevice(BluetoothProfile.A2DP)).thenReturn(true);
 
         when(mContext.getApplicationContext()).thenReturn(mCarSettingsApplication);
         when(mCarSettingsApplication.getCarAudioManager()).thenReturn(mCarAudioManager);
@@ -209,8 +220,9 @@ public class AudioRoutesManagerTest {
         when(mAudioAttributes.getUsage()).thenReturn(USAGE);
         when(mAudioDeviceAttributes.getAddress()).thenReturn(AUDIO_DEVICE_ADDRESS);
         when(mAudioDeviceAttributes.getName()).thenReturn(AUDIO_DEVICE_NAME);
-        when(mOtherAudioDeviceAttributes.getAddress()).thenReturn(BT_DEVICE_ADDRESS);
-        when(mOtherAudioDeviceAttributes.getName()).thenReturn(BT_DEVICE_NAME);
+        when(mAudioDeviceAttributes.getType()).thenReturn(TYPE_BUILTIN_SPEAKER);
+        when(mOtherAudioDeviceAttributes.getAddress()).thenReturn(BT_DEVICE_ADDRESS_1);
+        when(mOtherAudioDeviceAttributes.getName()).thenReturn(BT_DEVICE_NAME_1);
         when(mCarAudioManager.getOutputDeviceForUsage(TEST_ZONE_ID, USAGE))
                 .thenReturn(mAudioDeviceInfo);
     }

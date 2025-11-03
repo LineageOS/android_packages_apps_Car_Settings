@@ -30,8 +30,8 @@
     <string name="mobile_network_summary_count" msgid="760865625847664029">"{count,plural, =1{# SIM-kort}one{# SIM-kort}other{# SIM-kort}}"</string>
     <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktiv/knyttet til SIM-kort"</string>
     <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inaktiv/knyttet til SIM-kort"</string>
-    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktivt/eSIM"</string>
-    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inaktivt/eSIM"</string>
+    <string name="mobile_network_active_esim" msgid="5175362818078597096">"Aktivt/eSIM-kort"</string>
+    <string name="mobile_network_inactive_esim" msgid="7273712403773327964">"Inaktivt/eSIM-kort"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Tilføj flere"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobildata"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Brug data via mobilnetværk"</string>
@@ -545,9 +545,9 @@
     <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi-netværk og adgangskoder"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobildata"</li></string>
     <string name="reset_network_item_bluetooth" msgid="7475279871421815601"><li>"Telefoner og Bluetooth-enheder"</li></string>
-    <string name="reset_esim_title" msgid="8132107637911831211">"Nulstil alle eSIM til køretøjer"</string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Nulstil alle eSIM-kort til køretøjer"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Dette medfører ikke, at din serviceaftale annulleres."</string>
-    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM kan ikke nulstilles"</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM-kort kan ikke nulstilles"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Vælg netværk"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Nulstil indstillinger"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vil du nulstille?"</string>

@@ -34,6 +34,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 
+import java.time.Duration;
+
 /**
  * Tests for ConfirmLockPinPasswordFragment class.
  */
@@ -61,7 +63,7 @@ public class ConfirmLockPinPasswordFragmentTest {
         View enterKey = mFragment.getView().findViewById(R.id.key_enter);
         mActivityTestRule.runOnUiThread(() -> {
             enterKey.setEnabled(false);
-            mFragment.onCheckCompleted(false, 0);
+            mFragment.onCheckCompleted(false, Duration.ZERO);
         });
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
