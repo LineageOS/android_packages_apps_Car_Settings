@@ -80,7 +80,7 @@ public class DefaultAutofillPickerEntryPreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         Shadows.shadowOf(RuntimeEnvironment.application).setSystemService(
-                Context.AUTOFILL_MANAGER_SERVICE, mAutofillManager);
+                Context.AUTOFILL_SERVICE, mAutofillManager);
         mContext = RuntimeEnvironment.application;
         mButtonPreference = new CarUiTwoActionIconPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
@@ -100,7 +100,7 @@ public class DefaultAutofillPickerEntryPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_autofillManagerIsNull_unsupportedOnDevice() {
         Shadows.shadowOf(RuntimeEnvironment.application).setSystemService(
-                Context.AUTOFILL_MANAGER_SERVICE, null);
+                Context.AUTOFILL_SERVICE, null);
 
         // Reinitialize so that it uses the system service set in this test.
         CarUiTwoActionIconPreference preference = new CarUiTwoActionIconPreference(mContext);
@@ -115,7 +115,7 @@ public class DefaultAutofillPickerEntryPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_autofillManagerIsNull_unsupportedOnDevice_zoneWrite() {
         Shadows.shadowOf(RuntimeEnvironment.application).setSystemService(
-                Context.AUTOFILL_MANAGER_SERVICE, null);
+                Context.AUTOFILL_SERVICE, null);
 
         // Reinitialize so that it uses the system service set in this test.
         CarUiTwoActionIconPreference preference = new CarUiTwoActionIconPreference(mContext);
@@ -131,7 +131,7 @@ public class DefaultAutofillPickerEntryPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_autofillManagerIsNull_unsupportedOnDevice_zoneRead() {
         Shadows.shadowOf(RuntimeEnvironment.application).setSystemService(
-                Context.AUTOFILL_MANAGER_SERVICE, null);
+                Context.AUTOFILL_SERVICE, null);
 
         // Reinitialize so that it uses the system service set in this test.
         CarUiTwoActionIconPreference preference = new CarUiTwoActionIconPreference(mContext);
@@ -147,7 +147,7 @@ public class DefaultAutofillPickerEntryPreferenceControllerTest {
     @Test
     public void getAvailabilityStatus_autofillManagerIsNull_unsupportedOnDevice_zoneHidden() {
         Shadows.shadowOf(RuntimeEnvironment.application).setSystemService(
-                Context.AUTOFILL_MANAGER_SERVICE, null);
+                Context.AUTOFILL_SERVICE, null);
 
         // Reinitialize so that it uses the system service set in this test.
         CarUiTwoActionIconPreference preference = new CarUiTwoActionIconPreference(mContext);
