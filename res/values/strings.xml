@@ -577,11 +577,15 @@
     <!-- Summary for the available to join audio state. [CHAR LIMIT=40] -->
     <string name="audio_route_preference_available_to_join">Available to join</string>
     <!-- Summary for unicast connecting audio state. [CHAR LIMIT=40] -->
-    <string name="audio_route_preference_connecting_device">Connecting to device</string>
+    <string name="audio_route_preference_connecting_device">Connecting...</string>
     <!-- Summary for BLE connecting audio state. [CHAR LIMIT=40] -->
-    <string name="audio_route_preference_connecting_broadcast">Connecting to audio sharing</string>
+    <string name="audio_route_preference_starting_broadcast">Starting broadcast...</string>
     <!-- Summary for BLE connecting audio state. [CHAR LIMIT=40] -->
-    <string name="audio_route_preference_disconnecting_broadcast">Disconnecting from audio sharing</string>
+    <string name="audio_route_preference_connecting_broadcast">Connecting...</string>
+    <!-- Summary for the connecting audio state failed. [CHAR LIMIT=40] -->
+    <string name="audio_route_preference_connecting_failed">Failed to connect to %1$s</string>
+    <!-- Summary for leaving broadcast audio state. [CHAR LIMIT=40] -->
+    <string name="audio_route_preference_leaving_broadcast">Leaving...</string>
 
 
 
