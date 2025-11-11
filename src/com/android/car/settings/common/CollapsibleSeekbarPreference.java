@@ -52,6 +52,7 @@ public class CollapsibleSeekbarPreference extends SeekBarPreference {
     private @MultiSelectState int mSelectionState = STATE_UNSELECTED;
     private boolean mSecondaryActionAvailable;
     private boolean mShowActionButton;
+    private boolean mShowSeekerBar;
 
     @IntDef(flag = false, open = false, value = {
             STATE_SELECTED,
@@ -119,7 +120,7 @@ public class CollapsibleSeekbarPreference extends SeekBarPreference {
 
         // set-up seekbar
         mSeekbarContainer = requireViewByRefId(holder.itemView, R.id.seekbar_container);
-        mSeekbarContainer.setVisibility(shouldShowSeekbar() ? View.VISIBLE : View.GONE);
+        mSeekbarContainer.setVisibility(mShowSeekerBar ? View.VISIBLE : View.GONE);
     }
 
     /**
@@ -166,7 +167,7 @@ public class CollapsibleSeekbarPreference extends SeekBarPreference {
         }
 
         if (mSeekbarContainer != null) {
-            mSeekbarContainer.setVisibility(shouldShowSeekbar() ? View.VISIBLE : View.GONE);
+            mSeekbarContainer.setVisibility(mShowSeekerBar ? View.VISIBLE : View.GONE);
         }
 
         if (notifyChanged) {
@@ -175,11 +176,12 @@ public class CollapsibleSeekbarPreference extends SeekBarPreference {
     }
 
     /**
-     * @return true if seekbar should be shown in the UI, false otherwise.
+     * Sets whether the seekbar should be shown in the UI.
+     *
+     * @param showSeekerBar {@code true} if the seekbar should be visible, {@code false} otherwise.
      */
-    public boolean shouldShowSeekbar() {
-        // TODO: impl this method after supporting volume control profile
-        return false;
+    public void setShowSeekerBar(boolean showSeekerBar) {
+        mShowSeekerBar = showSeekerBar;
     }
 
     /**

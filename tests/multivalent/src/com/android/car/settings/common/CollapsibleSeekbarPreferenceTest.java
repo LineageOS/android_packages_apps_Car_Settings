@@ -105,9 +105,20 @@ public class CollapsibleSeekbarPreferenceTest {
     @Test
     public void onBindViewHolder_shouldHideSeekbar() {
         InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            mPreference.setShowSeekerBar(false);
             mPreference.onBindViewHolder(mViewHolder);
             View seekbarContainer = mViewHolder.findViewById(R.id.seekbar_container);
             assertThat(seekbarContainer.getVisibility()).isEqualTo(View.GONE);
+        });
+    }
+
+    @Test
+    public void onBindViewHolder_shouldShowSeekbar() {
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            mPreference.setShowSeekerBar(true);
+            mPreference.onBindViewHolder(mViewHolder);
+            View seekbarContainer = mViewHolder.findViewById(R.id.seekbar_container);
+            assertThat(seekbarContainer.getVisibility()).isEqualTo(View.VISIBLE);
         });
     }
 
