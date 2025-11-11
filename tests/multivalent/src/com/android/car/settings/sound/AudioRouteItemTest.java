@@ -46,6 +46,7 @@ public class AudioRouteItemTest {
 
     private AudioRouteItem.AudioZoneConfigState mDefaultAudioZoneConfigState;
     private AudioRouteItem.BluetoothDeviceState mDefaultBluetoothDeviceState;
+    private AudioRouteItem.VolumeState mDefaultVolumeState;
 
     @Before
     public void setUp() {
@@ -53,6 +54,7 @@ public class AudioRouteItemTest {
 
         mDefaultAudioZoneConfigState = new AudioRouteItem.AudioZoneConfigState.Builder().build();
         mDefaultBluetoothDeviceState = new AudioRouteItem.BluetoothDeviceState.Builder().build();
+        mDefaultVolumeState = new AudioRouteItem.VolumeState.Builder().build();
     }
 
     @Test
@@ -68,6 +70,7 @@ public class AudioRouteItemTest {
                 new AudioRouteItem.Builder(mAudioDeviceAttributes)
                         .setAudioZoneConfigState(mDefaultAudioZoneConfigState)
                         .setBluetoothDeviceState(mDefaultBluetoothDeviceState)
+                        .setVolumeState(mDefaultVolumeState)
                         .build();
 
         assertThat(audioRouteItem.getName()).isEqualTo(name);
@@ -78,6 +81,8 @@ public class AudioRouteItemTest {
                 .isEqualTo(mDefaultAudioZoneConfigState);
         assertThat(audioRouteItem.getBluetoothDeviceState())
                 .isEqualTo(mDefaultBluetoothDeviceState);
+        assertThat(audioRouteItem.getState()).isEqualTo(AudioRouteItem.State.CREATED);
+        assertThat(audioRouteItem.getVolumeState()).isEqualTo(mDefaultVolumeState);
     }
 
     @Test
@@ -93,6 +98,7 @@ public class AudioRouteItemTest {
                 new AudioRouteItem.Builder(mCachedBluetoothDevice)
                         .setAudioZoneConfigState(mDefaultAudioZoneConfigState)
                         .setBluetoothDeviceState(mDefaultBluetoothDeviceState)
+                        .setVolumeState(mDefaultVolumeState)
                         .build();
 
         assertThat(audioRouteItem.getName()).isEqualTo(name);
@@ -103,6 +109,7 @@ public class AudioRouteItemTest {
                 .isEqualTo(mDefaultAudioZoneConfigState);
         assertThat(audioRouteItem.getBluetoothDeviceState())
                 .isEqualTo(mDefaultBluetoothDeviceState);
+        assertThat(audioRouteItem.getVolumeState()).isEqualTo(mDefaultVolumeState);
     }
 
     @Test
@@ -119,6 +126,7 @@ public class AudioRouteItemTest {
                 new AudioRouteItem.Builder(mCachedBluetoothDevice)
                         .setAudioZoneConfigState(mDefaultAudioZoneConfigState)
                         .setBluetoothDeviceState(mDefaultBluetoothDeviceState)
+                        .setVolumeState(mDefaultVolumeState)
                         .build();
 
         assertThat(audioRouteItem.getName()).isEqualTo(name);
@@ -129,24 +137,22 @@ public class AudioRouteItemTest {
                 .isEqualTo(mDefaultAudioZoneConfigState);
         assertThat(audioRouteItem.getBluetoothDeviceState())
                 .isEqualTo(mDefaultBluetoothDeviceState);
+        assertThat(audioRouteItem.getVolumeState()).isEqualTo(mDefaultVolumeState);
     }
 
     @Test
     public void testAudioZoneConfigStateBuilder() {
         boolean isActive = true;
         boolean isSelected = false;
-        boolean isBroadcasting = true;
 
         AudioRouteItem.AudioZoneConfigState state =
                 new AudioRouteItem.AudioZoneConfigState.Builder()
                         .setIsActive(isActive)
                         .setIsSelected(isSelected)
-                        .setIsBroadcasting(isBroadcasting)
                         .build();
 
-        assertThat(state.mIsActive).isEqualTo(isActive);
-        assertThat(state.mIsSelected).isEqualTo(isSelected);
-        assertThat(state.mIsBroadcasting).isEqualTo(isBroadcasting);
+        assertThat(state.isActive()).isEqualTo(isActive);
+        assertThat(state.isSelected()).isEqualTo(isSelected);
     }
 
     @Test
@@ -166,10 +172,149 @@ public class AudioRouteItemTest {
                         .setIsReceivingBroadcast(isReceivingBroadcast)
                         .build();
 
-        assertThat(state.mIsActiveA2dp).isEqualTo(isActiveA2dp);
-        assertThat(state.mIsActiveLeAudio).isEqualTo(isActiveLeAudio);
-        assertThat(state.mIsConnectedA2dp).isEqualTo(isConnectedA2dp);
-        assertThat(state.mIsConnectedLeAudio).isEqualTo(isConnectedLeAudio);
-        assertThat(state.mIsReceivingBroadcast).isEqualTo(isReceivingBroadcast);
+        assertThat(state.isActiveA2dp()).isEqualTo(isActiveA2dp);
+        assertThat(state.isActiveLeAudio()).isEqualTo(isActiveLeAudio);
+        assertThat(state.isConnectedA2dp()).isEqualTo(isConnectedA2dp);
+        assertThat(state.isConnectedLeAudio()).isEqualTo(isConnectedLeAudio);
+        assertThat(state.isReceivingBroadcast()).isEqualTo(isReceivingBroadcast);
+    }
+
+    @Test
+    public void testToBuilder_createsNewObjectWithSameValues() {
+        String name = "originalName";
+        String address = "originalAddress";
+        int audioDeviceType = TYPE_BLUETOOTH_A2DP;
+        AudioRouteItem.State state = AudioRouteItem.State.UNICAST_ACTIVE;
+
+        AudioRouteItem.AudioZoneConfigState audioZoneConfigState =
+                new AudioRouteItem.AudioZoneConfigState.Builder()
+                        .setIsActive(true)
+                        .setIsSelected(true)
+                        .build();
+        AudioRouteItem.BluetoothDeviceState bluetoothDeviceState =
+                new AudioRouteItem.BluetoothDeviceState.Builder()
+                        .setIsActiveA2dp(true)
+                        .setIsConnectedA2dp(true)
+                        .build();
+
+        AudioRouteItem originalItem =
+                new AudioRouteItem.Builder(mAudioDeviceAttributes)
+                        .setName(name)
+                        .setAddress(address)
+                        .setAudioDeviceType(audioDeviceType)
+                        .setBluetoothDevice(mCachedBluetoothDevice)
+                        .setAudioZoneConfigState(audioZoneConfigState)
+                        .setBluetoothDeviceState(bluetoothDeviceState)
+                        .setState(state)
+                        .build();
+
+        AudioRouteItem newItem = originalItem.toBuilder().build();
+
+        assertThat(newItem.getName()).isEqualTo(originalItem.getName());
+        assertThat(newItem.getAddress()).isEqualTo(originalItem.getAddress());
+        assertThat(newItem.getAudioRouteType()).isEqualTo(originalItem.getAudioRouteType());
+        assertThat(newItem.getBluetoothDevice()).isEqualTo(originalItem.getBluetoothDevice());
+        assertThat(newItem.getAudioZoneConfigState())
+                .isEqualTo(originalItem.getAudioZoneConfigState());
+        assertThat(newItem.getBluetoothDeviceState())
+                .isEqualTo(originalItem.getBluetoothDeviceState());
+        assertThat(newItem.getState()).isEqualTo(originalItem.getState());
+    }
+
+    @Test
+    public void testIsBluetoothAudioRoute() {
+        when(mAudioDeviceAttributes.getType()).thenReturn(TYPE_BLUETOOTH_A2DP);
+        AudioRouteItem bluetoothA2dpItem = new AudioRouteItem.Builder(mAudioDeviceAttributes)
+                .build();
+        assertThat(bluetoothA2dpItem.isBluetoothAudioRoute()).isTrue();
+
+        when(mAudioDeviceAttributes.getType()).thenReturn(TYPE_BLE_HEADSET);
+        AudioRouteItem bleHeadsetItem = new AudioRouteItem.Builder(mAudioDeviceAttributes).build();
+        assertThat(bleHeadsetItem.isBluetoothAudioRoute()).isTrue();
+
+        when(mAudioDeviceAttributes.getType()).thenReturn(TYPE_BUILTIN_SPEAKER);
+        AudioRouteItem speakerItem = new AudioRouteItem.Builder(mAudioDeviceAttributes).build();
+        assertThat(speakerItem.isBluetoothAudioRoute()).isFalse();
+    }
+
+    @Test
+    public void testVolumeStateBuilder() {
+        int min = 1;
+        int max = 10;
+        int current = 5;
+        boolean useProfile = true;
+        AudioRouteItem.VolumeState state = new AudioRouteItem.VolumeState.Builder()
+                .setMinVolume(min)
+                .setMaxVolume(max)
+                .setCurrentVolume(current)
+                .setUseVolumeControlProfile(useProfile)
+                .build();
+        assertThat(state.getMinVolume()).isEqualTo(min);
+        assertThat(state.getMaxVolume()).isEqualTo(max);
+        assertThat(state.getCurrentVolume()).isEqualTo(current);
+        assertThat(state.useVolumeControlProfile()).isEqualTo(useProfile);
+    }
+
+    @Test
+    public void testGlobalStateBuilder() {
+        boolean enabled = true;
+        AudioRouteItem.GlobalState state = new AudioRouteItem.GlobalState.Builder()
+                .setIsAudioSharingEnabled(enabled)
+                .build();
+        assertThat(state.isAudioSharingEnabled()).isEqualTo(enabled);
+    }
+
+    @Test
+    public void testState_isActiveState() {
+        assertThat(AudioRouteItem.State.CREATED.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.UNICAST_READY.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.UNICAST_ACTIVE.isActiveState()).isTrue();
+        assertThat(AudioRouteItem.State.MULTICAST_READY_UNICAST_READY.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.MULTICAST_READY_UNICAST_ACTIVE.isActiveState()).isTrue();
+        assertThat(AudioRouteItem.State.MULTICAST_ACTIVE.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.STARTING_UNICAST.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.JOINING_BROADCAST.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.STARTING_BROADCAST.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.LEAVING_BROADCAST.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.BROADCAST_READY.isActiveState()).isFalse();
+        assertThat(AudioRouteItem.State.BROADCAST_ACTIVE.isActiveState()).isTrue();
+    }
+
+    @Test
+    public void testState_isStartingState() {
+        assertThat(AudioRouteItem.State.STARTING_UNICAST.isStartingState()).isTrue();
+        assertThat(AudioRouteItem.State.JOINING_BROADCAST.isStartingState()).isTrue();
+        assertThat(AudioRouteItem.State.CREATED.isStartingState()).isFalse();
+        assertThat(AudioRouteItem.State.UNICAST_ACTIVE.isStartingState()).isFalse();
+        assertThat(AudioRouteItem.State.BROADCAST_ACTIVE.isStartingState()).isFalse();
+    }
+
+    @Test
+    public void testState_isSelfDrivenState() {
+        assertThat(AudioRouteItem.State.CREATED.isSelfDrivenState()).isTrue();
+        assertThat(AudioRouteItem.State.STARTING_UNICAST.isSelfDrivenState()).isTrue();
+        assertThat(AudioRouteItem.State.STARTING_BROADCAST.isSelfDrivenState()).isTrue();
+        assertThat(AudioRouteItem.State.JOINING_BROADCAST.isSelfDrivenState()).isTrue();
+        assertThat(AudioRouteItem.State.LEAVING_BROADCAST.isSelfDrivenState()).isTrue();
+        assertThat(AudioRouteItem.State.UNICAST_READY.isSelfDrivenState()).isFalse();
+        assertThat(AudioRouteItem.State.UNICAST_ACTIVE.isSelfDrivenState()).isFalse();
+        assertThat(AudioRouteItem.State.BROADCAST_ACTIVE.isSelfDrivenState()).isFalse();
+    }
+
+    @Test
+    public void testState_isBroadcastState() {
+        assertThat(AudioRouteItem.State.CREATED.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.UNICAST_READY.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.UNICAST_ACTIVE.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.MULTICAST_READY_UNICAST_READY.isBroadcastState()).isFalse();
+        assertThat(
+                AudioRouteItem.State.MULTICAST_READY_UNICAST_ACTIVE.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.MULTICAST_ACTIVE.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.STARTING_UNICAST.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.JOINING_BROADCAST.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.STARTING_BROADCAST.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.LEAVING_BROADCAST.isBroadcastState()).isFalse();
+        assertThat(AudioRouteItem.State.BROADCAST_READY.isBroadcastState()).isTrue();
+        assertThat(AudioRouteItem.State.BROADCAST_ACTIVE.isBroadcastState()).isTrue();
     }
 }
