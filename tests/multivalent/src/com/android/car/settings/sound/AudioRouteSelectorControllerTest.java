@@ -170,4 +170,23 @@ public class AudioRouteSelectorControllerTest {
 
         verify(mAudioRoutesManager).setUnicast(BT_DEVICE_ADDRESS);
     }
+
+    @Test
+    @EnableFlags(Flags.FLAG_NEW_AUDIO_ROUTING_UI)
+    public void onMultiSelected_joinBroadcast() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onMultiSelected(BT_DEVICE_ADDRESS,
+                CollapsibleSeekbarPreference.STATE_UNSELECTED);
+        verify(mAudioRoutesManager).joinBroadcast(BT_DEVICE_ADDRESS);
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_NEW_AUDIO_ROUTING_UI)
+    public void onMultiSelected_leaveBroadcast() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onMultiSelected(BT_DEVICE_ADDRESS,
+                CollapsibleSeekbarPreference.STATE_MULTI_SELECTED);
+
+        verify(mAudioRoutesManager).leaveBroadcast(BT_DEVICE_ADDRESS);
+    }
 }

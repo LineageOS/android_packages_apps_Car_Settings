@@ -16,6 +16,8 @@
 
 package com.android.car.settings.sound;
 
+import static com.android.car.settings.common.CollapsibleSeekbarPreference.STATE_MULTI_SELECTED;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -99,6 +101,11 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
 
     @Override
     public void onMultiSelected(String key, int currentState) {
+        if (currentState == STATE_MULTI_SELECTED) {
+            mRouteManager.leaveBroadcast(/* leavingAddress= */ key);
+        } else {
+            mRouteManager.joinBroadcast(/* joiningAddress= */ key);
+        }
     }
 
     @VisibleForTesting

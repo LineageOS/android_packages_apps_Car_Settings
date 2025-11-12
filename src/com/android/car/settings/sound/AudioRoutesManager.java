@@ -32,6 +32,8 @@ import static com.android.car.settings.sound.AudioRouteItem.Command.STOP_UNICAST
 import static com.android.car.settings.sound.AudioRouteItem.State.BROADCAST_ACTIVE;
 import static com.android.car.settings.sound.AudioRouteItem.State.BROADCAST_READY;
 import static com.android.car.settings.sound.AudioRouteItem.State.CREATED;
+import static com.android.car.settings.sound.AudioRouteItem.State.JOINING_BROADCAST;
+import static com.android.car.settings.sound.AudioRouteItem.State.LEAVING_BROADCAST;
 import static com.android.car.settings.sound.AudioRouteItem.State.MULTICAST_ACTIVE;
 import static com.android.car.settings.sound.AudioRouteItem.State.MULTICAST_READY_UNICAST_ACTIVE;
 import static com.android.car.settings.sound.AudioRouteItem.State.MULTICAST_READY_UNICAST_READY;
@@ -39,6 +41,8 @@ import static com.android.car.settings.sound.AudioRouteItem.State.STARTING_BROAD
 import static com.android.car.settings.sound.AudioRouteItem.State.STARTING_UNICAST;
 import static com.android.car.settings.sound.AudioRouteItem.State.UNICAST_ACTIVE;
 import static com.android.car.settings.sound.AudioRouteItem.State.UNICAST_READY;
+
+import static java.util.stream.Collectors.toList;
 
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothLeBroadcastMetadata;
@@ -62,6 +66,7 @@ import androidx.core.content.ContextCompat;
 
 import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
+import com.android.car.settings.bluetooth.audiosharing.BaseLeBroadcastAssistantCallback;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast;
@@ -137,6 +142,10 @@ public class AudioRoutesManager {
         mUsage = usage;
         mCachedAudioRoutes = new ArrayMap<>();
         if (isAudioRoutingEnabled()) {
+            if (mLeBroadcastProfile != null && mLeBroadcastAssistantProfile != null) {
+                mLeBroadcastAssistantProfile.registerServiceCallBack(context.getMainExecutor(),
+                        mBaseLeBroadcastAssistantCallback);
+            }
             mCarAudioManager.clearAudioZoneConfigsCallback();
             mCarAudioManager.setAudioZoneConfigsChangeCallback(mContext.getMainExecutor(),
                     mAudioZoneConfigurationsChangeCallback);
@@ -164,6 +173,11 @@ public class AudioRoutesManager {
         if (mCarAudioManager != null) {
             mCarAudioManager.clearAudioZoneConfigsCallback();
         }
+    }
+
+    @VisibleForTesting
+    public Map<String, AudioRouteItem> getActiveRoutes() {
+        return mCachedAudioRoutes;
     }
 
     /** Is this address a valid BLE broadcast. */
@@ -211,6 +225,56 @@ public class AudioRoutesManager {
         LOG.d("[setUnicast] " + item);
         requestAudioRouteEvent(new AudioRouteEvent(START_UNICAST, item));
     }
+
+    /** Joins a broadcast session for the given address. */
+    public void joinBroadcast(String joiningAddress) {
+        AudioRouteItem item = mCachedAudioRoutes.get(joiningAddress);
+        if (item == null) {
+            LOG.d("[joinBroadcast] Cannot find an AudioRouteItem for " + joiningAddress);
+            return;
+        }
+        joinBroadcast(item);
+    }
+
+    /** Joins a broadcast session for the given AudioRouteItem. */
+    public void joinBroadcast(AudioRouteItem joiningItem) {
+        LOG.d("[joinBroadcast] " + joiningItem);
+        requestAudioRouteEvent(new AudioRouteEvent(JOIN_BROADCAST, joiningItem));
+    }
+
+    /** Leaves a broadcast session for the given address. */
+    public void leaveBroadcast(String leavingAddress) {
+        AudioRouteItem item = mCachedAudioRoutes.get(leavingAddress);
+        if (item == null) {
+            LOG.d("[leaveBroadcast] Cannot find an AudioRouteItem for " + leavingAddress);
+            return;
+        }
+        leaveBroadcast(item);
+    }
+
+    /** Leaves a broadcast session for the given AudioRouteItem. */
+    public void leaveBroadcast(AudioRouteItem leavingAddress) {
+        LOG.d("[leaveBroadcast] " + leavingAddress);
+        requestAudioRouteEvent(new AudioRouteEvent(LEAVE_BROADCAST, leavingAddress));
+    }
+
+    private final BaseLeBroadcastAssistantCallback mBaseLeBroadcastAssistantCallback =
+            new BaseLeBroadcastAssistantCallback() {
+                @Override
+                public void onSourceAdded(@NonNull BluetoothDevice sink, int sourceId, int reason) {
+                    LOG.d("[onSourceAdded] %s <%s>, sourceId: %s, reason: %s".formatted(
+                            sink.getName(), sink.getAddress(), sourceId, reason));
+                    updateAndNotifyAudioRouteItemsIfChanged();
+                }
+
+                @Override
+                public void onSourceRemoved(@NonNull BluetoothDevice sink, int sourceId,
+                        int reason) {
+                    LOG.d("[onSourceRemoved] %s <%s>, sourceId: %s, reason: %s".formatted(
+                            sink.getName(), sink.getAddress(), sourceId, reason));
+                    updateAndNotifyAudioRouteItemsIfChanged();
+                }
+            };
 
     private final SwitchAudioZoneConfigCallback mSwitchAudioZoneConfigCallback =
             (zoneConfig, isSuccessful) -> {
@@ -310,7 +374,8 @@ public class AudioRoutesManager {
                 .filter(volumeGroup -> volumeGroup.getAudioAttributes().stream()
                         .anyMatch(audioAttr -> audioAttr.getUsage() == mUsage))
                 .flatMap(volumeGroup -> volumeGroup.getAudioDeviceAttributes().stream())
-                .map(AudioDeviceAttributes::getName).collect(Collectors.toList());
+                .map(attr -> "%s <%s>".formatted(attr.getName(), attr.getAddress())).collect(
+                        toList());
         String status = Stream.<String>builder().add(config.isActive() ? "Active" : null).add(
                 config.isSelected() ? "Selected" : null).add(
                 config.isDefault() ? "Default" : null).build().filter(Objects::nonNull).collect(
@@ -457,7 +522,9 @@ public class AudioRoutesManager {
                             newState = UNICAST_ACTIVE;
                         }
                     } else {
-                        if (audioRoute.getAudioRouteType() == TYPE_BLE_HEADSET && isLeSelected) {
+                        if (audioRoute.getGlobalState().isAudioSharingEnabled()
+                                && audioRoute.getAudioRouteType() == TYPE_BLE_HEADSET
+                                && isLeSelected) {
                             newState = MULTICAST_READY_UNICAST_READY;
                         } else {
                             newState = UNICAST_READY;
@@ -577,13 +644,163 @@ public class AudioRoutesManager {
                     break;
 
                 case MULTICAST_READY_UNICAST_ACTIVE:
+                    if (command == RESET) {
+                        newState = CREATED;
+                        requestNextEventWithNewState = true;
+                    } else if (command == STOP_UNICAST) {
+                        newState = MULTICAST_READY_UNICAST_READY;
+                    } else if (command == JOIN_BROADCAST) {
+                        newState = STARTING_BROADCAST;
+                        requestNextEventWithNewState = true;
+                    }
+                    break;
+
                 case STARTING_BROADCAST:
+                    if (command != CHECK_CONDITIONS) break;
+
+                    if (!audioRoute.isBluetoothAudioRoute()) {
+                        LOG.d("[handleEvents] <STARTING_BROADCAST> Not Bluetooth device: "
+                                + audioRoute.getName());
+                        break;
+                    }
+
+                    if (!isBroadcastReady) {
+                        LOG.d("[handleEvents] <STARTING_BROADCAST> Starting broadcast...");
+                        startBroadcast();
+                        break;
+                    }
+
+                    if (!isBroadcasting) {
+                        Optional<AudioRouteItem> changeRoute =
+                                audioRouteItems.values().stream().filter(
+                                        item -> item.getAudioRouteType()
+                                                == TYPE_BLE_BROADCAST).findFirst();
+
+                        if (changeRoute.isPresent()) {
+                            mLastSwitchedAddress = changeRoute.get().getAddress();
+
+                            LOG.d("[handleEvents] <STARTING_BROADCAST> requestRouteSwitchInternal"
+                                    + " for " + mLastSwitchedAddress);
+                            requestRouteSwitchInternal(changeRoute.get());
+                            mPendingSelectAddress = mLastSwitchedAddress;
+                        }
+                    } else {
+                        LOG.d("[handleEvents] <STARTING_BROADCAST> Broadcasting...");
+                        chainEvents.addAll(audioRouteItems.values().stream()
+                                .filter(item -> item.getState() == UNICAST_ACTIVE
+                                        && item.getBluetoothDevice().isConnectedLeAudioDevice())
+                                .map(item -> new AudioRouteEvent(JOIN_BROADCAST, item))
+                                .toList());
+                        chainEvents.addAll(audioRouteItems.values().stream()
+                                .filter(item -> item.getState() == BROADCAST_READY)
+                                .map(item -> new AudioRouteEvent(RESET, item))
+                                .toList());
+                        newState = JOINING_BROADCAST;
+                        requestNextEventWithNewState = true;
+                    }
+                    break;
+
                 case JOINING_BROADCAST:
+                    if (command != CHECK_CONDITIONS) break;
+
+                    if (!isBroadcasting) {
+                        LOG.d("[startBroadcast] Broadcasting stopped...");
+                        break;
+                    }
+
+                    if (!isReceivingBroadcast(audioRoute.getBluetoothDevice().getDevice(),
+                            broadcastMetadata)) {
+                        LOG.d("[handleEvents] <JOINING_BROADCAST> addSource " + audioRoute.getName()
+                                + " to broadcast");
+                        mLeBroadcastAssistantProfile.addSource(
+                                audioRoute.getBluetoothDevice().getDevice(),
+                                broadcastMetadata, /* isGroupOp= */ true);
+
+                    } else {
+                        LOG.d("[handleEvents] <JOINING_BROADCAST> JOINED");
+                        newState = MULTICAST_ACTIVE;
+
+                        chainEvents.addAll(audioRouteItems.values().stream()
+                                .filter(item -> item.getState() == UNICAST_ACTIVE)
+                                .map(item -> new AudioRouteEvent(RESET, item))
+                                .toList());
+                        chainEvents.addAll(audioRouteItems.values().stream()
+                                .filter(item -> item.getState() == MULTICAST_READY_UNICAST_ACTIVE)
+                                .map(item -> new AudioRouteEvent(RESET, item))
+                                .toList());
+                    }
+                    break;
+
                 case MULTICAST_READY_UNICAST_READY:
+                    if (command == RESET) {
+                        newState = CREATED;
+                        requestNextEventWithNewState = true;
+                    } else if (command == JOIN_BROADCAST) {
+                        newState = STARTING_BROADCAST;
+                        requestNextEventWithNewState = true;
+                    } else if (command == START_UNICAST) {
+                        chainEvents.addAll(audioRouteItems.values().stream()
+                                .filter(item -> item.getState() == MULTICAST_ACTIVE)
+                                .map(item -> new AudioRouteEvent(LEAVE_BROADCAST, item))
+                                .toList());
+                        newState = STARTING_UNICAST;
+                        requestNextEventWithNewState = true;
+                    }
+                    break;
+
                 case MULTICAST_ACTIVE:
+                    if (command == RESET) {
+                        newState = CREATED;
+                        requestNextEventWithNewState = true;
+                    } else if (command == LEAVE_BROADCAST) {
+                        newState = LEAVING_BROADCAST;
+                        requestNextEventWithNewState = true;
+                    }
+                    break;
+
                 case LEAVING_BROADCAST:
+                    if (command != CHECK_CONDITIONS) break;
+
+                    List<BluetoothLeBroadcastReceiveState> deviceSources =
+                            mLeBroadcastAssistantProfile.getAllSources(
+                                    audioRoute.getBluetoothDevice().getDevice());
+
+                    for (BluetoothLeBroadcastReceiveState source : deviceSources) {
+                        if (broadcastMetadata.getBroadcastId() == source.getBroadcastId()) {
+                            mLeBroadcastAssistantProfile.removeSource(
+                                    audioRoute.getBluetoothDevice().getDevice(),
+                                    /* sourceId */ source.getSourceId());
+                            LOG.d("[handleEvents] <LEAVING_BROADCAST> Leaving broadcast: "
+                                    + audioRoute.getName());
+                        }
+                    }
+
+                    if (!audioRoute.getBluetoothDeviceState().isReceivingBroadcast()) {
+                        LOG.d("[handleEvents] <LEAVING_BROADCAST> Left broadcast: "
+                                + audioRoute.getName());
+                        if (audioRouteItems.values().stream().noneMatch(
+                                item -> item.getBluetoothDeviceState().isReceivingBroadcast())) {
+                            LOG.d("[handleEvents] <LEAVING_BROADCAST> All left. Stopping "
+                                    + "broadcast");
+                            mLeBroadcastProfile.stopLatestBroadcast();
+                        }
+
+                        newState = MULTICAST_READY_UNICAST_READY;
+                    }
+                    break;
+
                 case BROADCAST_READY:
+                    if (command == RESET) {
+                        newState = CREATED;
+                        requestNextEventWithNewState = true;
+                    }
+                    break;
+
                 case BROADCAST_ACTIVE:
+                    if (command == RESET) {
+                        newState = CREATED;
+                        requestNextEventWithNewState = true;
+                    }
                     break;
             }
             if (requestNextEventWithNewState) {
@@ -615,6 +832,7 @@ public class AudioRoutesManager {
     private Map<String, AudioRouteItem> createAudioRoutes() {
         Map<String, AudioRouteItem> newAudioRoutes = new HashMap<>();
         List<CarAudioZoneConfigInfo> configs = mCarAudioManager.getAudioZoneConfigInfos(mAudioZone);
+        LOG.d("[createAudioRoutes] CarAudioZoneConfigInfo: " + zoneConfigInfosToString(configs));
 
         // If multiple active configs for the same name exist, the selected one wins.
         Map<String, CarAudioZoneConfigInfo> activeConfigs = configs.stream().filter(
@@ -769,8 +987,10 @@ public class AudioRoutesManager {
         return isUserAudioSharingEnabled(mContext) && mLeBroadcastAssistantProfile != null;
     }
 
-    @VisibleForTesting
-    Map<String, AudioRouteItem> getActiveRoutes() {
-        return mCachedAudioRoutes;
+    private void startBroadcast() {
+        mLeBroadcastProfile.stopLatestBroadcast();
+        mLeBroadcastProfile.startBroadcast(CarSettingsApplication.CAR_SETTINGS_PACKAGE_NAME,
+                /* language= */ null);
+        mLeBroadcastProfile.setBroadcastCode(new byte[0]);
     }
 }
