@@ -31,16 +31,16 @@ import androidx.test.core.app.ActivityScenario;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.android.dx.mockito.inline.extended.ExtendedMockito;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.MockedStatic;
-import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.MockitoSession;
+import org.mockito.quality.Strictness;
 
 @RunWith(AndroidJUnit4.class)
 public class CarAspectRatioDialogActivityTest {
@@ -53,31 +53,33 @@ public class CarAspectRatioDialogActivityTest {
 
     @Rule
     public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
-    @Rule
-    public final MockitoRule mMockitoRule = MockitoJUnit.rule();
 
     @Mock
     private IPackageManager mPackageManager;
     @Mock
     private IActivityManager mActivityManager;
 
-    private MockedStatic<AppGlobals> mAppGlobalsMock;
-    private MockedStatic<ActivityManager> mActivityManagerMock;
+    private MockitoSession mSession;
 
     @Before
     public void setUp() {
         mSetFlagsRule.enableFlags(com.android.systemui.car.Flags.FLAG_DISPLAY_COMPATIBILITY_V2);
-        mAppGlobalsMock = Mockito.mockStatic(AppGlobals.class);
-        mActivityManagerMock = Mockito.mockStatic(ActivityManager.class);
+        mSession = ExtendedMockito.mockitoSession()
+                .initMocks(this)
+                .mockStatic(AppGlobals.class)
+                .mockStatic(ActivityManager.class)
+                .strictness(Strictness.LENIENT)
+                .startMocking();
 
-        mAppGlobalsMock.when(AppGlobals::getPackageManager).thenReturn(mPackageManager);
-        mActivityManagerMock.when(ActivityManager::getService).thenReturn(mActivityManager);
+        ExtendedMockito.doReturn(mPackageManager).when(AppGlobals::getPackageManager);
+        ExtendedMockito.doReturn(mActivityManager).when(ActivityManager::getService);
     }
 
     @After
     public void tearDown() {
-        mAppGlobalsMock.close();
-        mActivityManagerMock.close();
+        if (mSession != null) {
+            mSession.finishMocking();
+        }
     }
 
     @Test
