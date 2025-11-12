@@ -51,7 +51,9 @@ import android.car.media.CarVolumeGroupInfo;
 import android.car.media.SwitchAudioZoneConfigCallback;
 import android.content.Context;
 import android.media.AudioDeviceAttributes;
+import android.os.CountDownTimer;
 import android.util.ArrayMap;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -59,6 +61,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.core.content.ContextCompat;
 
 import com.android.car.settings.CarSettingsApplication;
+import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast;
@@ -84,6 +87,9 @@ import java.util.stream.Stream;
  */
 public class AudioRoutesManager {
     private static final Logger LOG = new Logger(AudioRoutesManager.class);
+    public static final int TIMEOUT_IN_MILLIS = 5_000;
+    public static final int TIMEOUT_INTERVAL_IN_MILLIS = 1_000;
+    public static final int DEBOUNCE_INTERVAL_IN_MILLIS = 1_000;
     private final Context mContext;
     private CarAudioManager mCarAudioManager = null;
     private final LocalBluetoothManager mBluetoothManager;
@@ -95,6 +101,15 @@ public class AudioRoutesManager {
     private AudioRoutesUpdateListener mAudioRoutesUpdateListener;
     private Map<String, AudioRouteItem> mCachedAudioRoutes;
     private String mCachedActiveDeviceAddress;
+    // The following four fields are used to manage the state transitions when requesting
+    // audio route changes. mPendingActiveAddress and mPendingSelectAddress track the device
+    // addresses for which setActive and switchAudioZoneToConfig, respectively, have been
+    // requested. mCallbackDebouncer is used to group multiple audio zone configuration change
+    // callbacks, and mTimeoutTimer is used to handle potential timeouts during these operations.
+    private String mPendingActiveAddress = null;
+    private String mPendingSelectAddress = null;
+    private CountDownTimer mCallbackDebouncer = null;
+    private CountDownTimer mTimeoutTimer = null;
 
     private record AudioRouteEvent(AudioRouteItem.Command command, AudioRouteItem audioRouteItem) {
     }
@@ -205,6 +220,8 @@ public class AudioRoutesManager {
                         mAudioZone);
                 LOG.d("[mSwitchAudioZoneConfigCallback] Audio zone configs: "
                         + zoneConfigInfosToString(configs));
+                cancelTimer(mTimeoutTimer);
+                cancelTimer(mCallbackDebouncer);
                 updateAndNotifyAudioRouteItemsIfChanged();
             };
 
@@ -216,7 +233,22 @@ public class AudioRoutesManager {
                     List<CarAudioZoneConfigInfo> relevantConfigs = configs.stream().filter(
                             info -> info.getZoneId() == mAudioZone).toList();
                     logConfigChange(relevantConfigs, status);
-                    updateAndNotifyAudioRouteItemsIfChanged();
+
+                    cancelTimer(mTimeoutTimer);
+                    cancelTimer(mCallbackDebouncer);
+                    mCallbackDebouncer = new CountDownTimer(DEBOUNCE_INTERVAL_IN_MILLIS,
+                            DEBOUNCE_INTERVAL_IN_MILLIS) {
+                        @Override
+                        public void onTick(long millisUntilFinished) {
+                        }
+
+                        @Override
+                        public void onFinish() {
+                            updateAndNotifyAudioRouteItemsIfChanged();
+                            beginTimeout();
+                        }
+                    };
+                    mCallbackDebouncer.start();
                 }
 
                 private void logConfigChange(List<CarAudioZoneConfigInfo> configs, int status) {
@@ -229,6 +261,44 @@ public class AudioRoutesManager {
                             zoneConfigInfosToString(configs)));
                 }
             };
+
+    private void beginTimeout() {
+        if (mPendingActiveAddress != null || mPendingSelectAddress != null) {
+            cancelTimer(mTimeoutTimer);
+            mTimeoutTimer = new CountDownTimer(TIMEOUT_IN_MILLIS, TIMEOUT_INTERVAL_IN_MILLIS) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    LOG.d("[mTimeoutTimer] onTick: " + millisUntilFinished);
+                }
+
+                @Override
+                public void onFinish() {
+                    LOG.d("[mTimeoutTimer] timed out.");
+                    cancelStartingUnicast();
+                }
+            };
+            mTimeoutTimer.start();
+        }
+    }
+
+    private void cancelTimer(CountDownTimer timer) {
+        if (timer != null) {
+            timer.cancel();
+        }
+    }
+
+    private void cancelStartingUnicast() {
+        mCachedAudioRoutes.values().stream()
+                .filter(item ->
+                        item.getState() == STARTING_UNICAST
+                                && (Objects.equals(item.getAddress(), mPendingActiveAddress)
+                                || Objects.equals(item.getAddress(),
+                                mPendingSelectAddress)))
+                .findFirst().ifPresent(item -> {
+                    LOG.d("[cancelStartingUnicast] " + item);
+                    requestAudioRouteEvent(new AudioRouteEvent(RESET, item));
+                });
+    }
 
     private String zoneConfigInfosToString(List<CarAudioZoneConfigInfo> configs) {
         return String.join(" | ", configs.stream().map(this::zoneConfigInfoToString).collect(
@@ -412,22 +482,52 @@ public class AudioRoutesManager {
                     break;
 
                 case STARTING_UNICAST:
+                    if (command == RESET) {
+                        newState = CREATED;
+                        requestNextEventWithNewState = true;
+                        mPendingActiveAddress = null;
+                        mPendingSelectAddress = null;
+                        cancelTimer(mTimeoutTimer);
+                        Toast.makeText(mContext, mContext.getString(
+                                R.string.audio_route_preference_connecting_failed,
+                                audioRoute.getName()), Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+
                     if (command != CHECK_CONDITIONS) break;
 
                     if (!audioRoute.getAudioZoneConfigState().isActive()) {
+                        if (Objects.equals(mPendingActiveAddress, audioRoute.getAddress())) {
+                            LOG.d("[handleEvents] <STARTING_UNICAST> setActive already requested "
+                                    + "for " + audioRoute.getName());
+                            break;
+                        }
                         LOG.d("[handleEvents] <STARTING_UNICAST> Bluetooth setActive: "
                                 + audioRoute.getName());
                         audioRoute.getBluetoothDevice().setActive();
+                        mPendingActiveAddress = audioRoute.getAddress();
                         break;
                     }
 
+                    mPendingActiveAddress = null;
+                    cancelTimer(mTimeoutTimer);
+
                     if (!audioRoute.getAudioZoneConfigState().isSelected()) {
                         mLastSwitchedAddress = audioRoute.getAddress();
+                        if (Objects.equals(mPendingSelectAddress,
+                                audioRoute.getAddress())) {
+                            LOG.d("[handleEvents] <STARTING_UNICAST> requestRouteSwitchInternal "
+                                    + "already called " + "for " + audioRoute.getName());
+                            break;
+                        }
                         LOG.d("[handleEvents] <STARTING_UNICAST> requestRouteSwitchInternal for "
                                 + audioRoute.getName());
                         requestRouteSwitchInternal(audioRoute);
+                        mPendingSelectAddress = audioRoute.getAddress();
                         break;
                     }
+
+                    mPendingSelectAddress = null;
 
                     // Unicast becomes active.
                     if (isBroadcastReady
@@ -463,6 +563,7 @@ public class AudioRoutesManager {
                             .map(item -> new AudioRouteEvent(LEAVE_BROADCAST, item))
                             .toList());
                     break;
+
                 case UNICAST_ACTIVE:
                     if (command == RESET) {
                         newState = CREATED;
