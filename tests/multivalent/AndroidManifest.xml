@@ -181,6 +181,10 @@
             android:theme="@style/ActionDialogTheme">
         </activity>
 
+        <activity
+            android:name="com.android.car.settings.displaycompat.CarDisplayDensityDialogActivity"
+            android:theme="@style/ActionDialogTheme" />
+
         <receiver
             android:name="com.android.car.settings.enterprise.DefaultDeviceAdminReceiver">
             <meta-data android:name="android.app.device_admin"

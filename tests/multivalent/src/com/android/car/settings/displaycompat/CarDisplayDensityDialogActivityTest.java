@@ -20,14 +20,19 @@ import static com.android.dx.mockito.inline.extended.ExtendedMockito.doReturn;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mockitoSession;
+import static org.mockito.Mockito.when;
 
 import android.app.ActivityManager;
 import android.app.AppGlobals;
 import android.app.IActivityManager;
+import android.car.Car;
+import android.car.content.pm.CarPackageManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
-import android.content.pm.IPackageManager;
 import android.platform.test.flag.junit.SetFlagsRule;
 
 import androidx.lifecycle.Lifecycle;
@@ -49,21 +54,25 @@ import org.mockito.MockitoSession;
 import org.mockito.quality.Strictness;
 
 @RunWith(AndroidJUnit4.class)
-public class CarAspectRatioDialogActivityTest {
+public class CarDisplayDensityDialogActivityTest {
     private static final String ACTION_SHOW_DIALOG =
-            "com.android.car.settings.aspectRatio.action.SHOW_DIALOG";
+            "com.android.car.settings.displayDensity.action.SHOW_DIALOG";
     private static final String EXTRA_KEY_COMPONENT_NAME =
-            "com.android.car.settings.aspectRatio.extra.COMPONENT_NAME";
+            "com.android.car.settings.displayDensity.extra.COMPONENT_NAME";
     private static final String EXTRA_KEY_USER_ID =
-            "com.android.car.settings.aspectRatio.extra.USER_ID";
+            "com.android.car.settings.displayDensity.extra.USER_ID";
+    private static final String EXTRA_KEY_DISPLAY_ID =
+            "com.android.car.settings.displayDensity.extra.DISPLAY_ID";
 
     @Rule
     public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
 
     @Mock
-    private IPackageManager mPackageManager;
-    @Mock
     private IActivityManager mActivityManager;
+    @Mock
+    private Car mCar;
+    @Mock
+    private CarPackageManager mCarPackageManager;
 
     private MockitoSession mSession;
 
@@ -75,9 +84,11 @@ public class CarAspectRatioDialogActivityTest {
                     .initMocks(this)
                     .mockStatic(AppGlobals.class)
                     .mockStatic(ActivityManager.class)
+                    .mockStatic(Car.class)
                     .strictness(Strictness.LENIENT)
                     .startMocking();
-            doReturn(mPackageManager).when(AppGlobals::getPackageManager);
+            doReturn(mCar).when(() -> Car.createCar(any(Context.class)));
+            when(mCar.getCarManager(eq(CarPackageManager.class))).thenReturn(mCarPackageManager);
             doReturn(mActivityManager).when(ActivityManager::getService);
 
         } else {
@@ -98,9 +109,9 @@ public class CarAspectRatioDialogActivityTest {
     @Test
     public void testOnCreate_invalidAction_finishesActivity() {
         Intent intent = new Intent(ApplicationProvider.getApplicationContext(),
-                CarAspectRatioDialogActivity.class);
+                CarDisplayDensityDialogActivity.class);
 
-        try (ActivityScenario<CarAspectRatioDialogActivity> scenario =
+        try (ActivityScenario<CarDisplayDensityDialogActivity> scenario =
                      ActivityScenario.launch(intent)) {
             assertThat(scenario.getState()).isEqualTo(Lifecycle.State.DESTROYED);
         }
@@ -109,10 +120,10 @@ public class CarAspectRatioDialogActivityTest {
     @Test
     public void testOnCreate_nullComponent_finishesActivity() {
         Intent intent = new Intent(ApplicationProvider.getApplicationContext(),
-                CarAspectRatioDialogActivity.class);
+                CarDisplayDensityDialogActivity.class);
         intent.setAction(ACTION_SHOW_DIALOG);
 
-        try (ActivityScenario<CarAspectRatioDialogActivity> scenario =
+        try (ActivityScenario<CarDisplayDensityDialogActivity> scenario =
                      ActivityScenario.launch(intent)) {
             assertThat(scenario.getState()).isEqualTo(Lifecycle.State.DESTROYED);
         }
@@ -126,14 +137,16 @@ public class CarAspectRatioDialogActivityTest {
                 RobolectricTestUtils.isRunningOnRobolectric());
 
         Intent intent = new Intent(ApplicationProvider.getApplicationContext(),
-                CarAspectRatioDialogActivity.class);
+                CarDisplayDensityDialogActivity.class);
         intent.setAction(ACTION_SHOW_DIALOG);
         ComponentName componentName = new ComponentName("test.pkg", "test.class");
-        int userId = 10;
+        int userId = 99;
+        int displayId = 20;
         intent.putExtra(EXTRA_KEY_COMPONENT_NAME, componentName);
         intent.putExtra(EXTRA_KEY_USER_ID, userId);
+        intent.putExtra(EXTRA_KEY_DISPLAY_ID, displayId);
 
-        try (ActivityScenario<CarAspectRatioDialogActivity> scenario =
+        try (ActivityScenario<CarDisplayDensityDialogActivity> scenario =
                      ActivityScenario.launch(intent)) {
             assertThat(scenario.getState()).isEqualTo(Lifecycle.State.RESUMED);
         }
