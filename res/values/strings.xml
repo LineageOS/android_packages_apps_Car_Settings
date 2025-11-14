@@ -458,7 +458,26 @@
     <string name="uwb_toggle_title">Ultra\u2011Wideband &#40;UWB&#41;</string>
     <!-- Summary of the UWB toggle [CHAR LIMIT=NONE]-->
     <string name="uwb_toggle_summary">Helps your car identify the position of UWB devices</string>
-
+    <!-- Title of the Audio sharing preference [CHAR LIMIT=40] -->
+    <string name="bluetooth_audio_sharing">Audio Sharing</string>
+    <!-- Title of the Share audio switch [CHAR LIMIT=40] -->
+    <string name="share_audio_switch_title">Share audio</string>
+    <!-- Summary of the Share audio switch [CHAR LIMIT=60] -->
+    <string name="share_audio_switch_summary">Listeners need their own LE Audio headphones</string>
+    <!-- Title for playing a test sound on the Share audio page [CHAR LIMIT=40] -->
+    <string name="share_audio_test_sound_title">Play a test sound</string>
+    <!-- Summary for playing a test sound on the Share audio page [CHAR LIMIT=60] -->
+    <string name="share_audio_test_sound_summary">Everyone listening should hear it</string>
+    <!-- Title for category of the Audio streaming settings on the Share audio page [CHAR LIMIT=40] -->
+    <string name="audio_sharing_active_media_devices">Active media devices</string>
+    <!-- Title for category of the Audio streaming settings on the Share audio page [CHAR LIMIT=40] -->
+    <string name="audio_stream_settings_category_title">Audio stream settings</string>
+    <!-- Title for the audio stream Qr code sharing page [CHAR LIMIT=40] -->
+    <string name="audio_streaming_title">Audio stream QR Code</string>
+    <!-- Title for the preference to launch audio stream QR code page [CHAR LIMIT=40] -->
+    <string name="scan_qr_code_to_connect">Scan QR code to connect</string>
+    <!-- Description for how to use Qr code to join audio stream [CHAR LIMIT=NONE] -->
+    <string name="audio_stream_qr_code_description">To listen to audio stream, other people can connect compatible headphones to their android device. They can then scan this QR code.</string>
     <!-- Bluetooth pairing --><skip/>
     <!-- Notification ticker text (shown in the status bar) when a Bluetooth device wants to pair with us -->
     <string name="bluetooth_notif_ticker">Bluetooth pairing request</string>
@@ -1460,6 +1479,8 @@
     <string name="storage_files">Files</string>
     <!-- Preference label for the System storage section. [CHAR LIMIT=50] -->
     <string name="storage_system">System</string>
+    <!-- Max unit label of system storage framgment -->
+    <string name="storage_total_label">%s total</string>
     <!-- Body of dialog informing user about the storage used by the Android System [CHAR LIMIT=NONE]-->
     <string name="storage_detail_dialog_system">System includes files used to run Android version <xliff:g id="version" example="8.0">%s</xliff:g></string>
     <!-- Car storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calculating. [CHAR LIMIT=30] -->

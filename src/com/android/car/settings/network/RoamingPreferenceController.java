@@ -16,6 +16,8 @@
 
 package com.android.car.settings.network;
 
+import static android.content.pm.PackageManager.FEATURE_TELEPHONY_DATA;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.database.ContentObserver;
@@ -78,9 +80,14 @@ public class RoamingPreferenceController extends
 
     @Override
     protected void updateState(TwoStatePreference preference) {
-        preference.setEnabled(getSubId() != SubscriptionManager.INVALID_SUBSCRIPTION_ID);
-        preference.setChecked(getTelephonyManager() != null
-                ? getTelephonyManager().isDataRoamingEnabled() : false);
+        if (getContext().getPackageManager().hasSystemFeature(FEATURE_TELEPHONY_DATA)) {
+            preference.setEnabled(getSubId() != SubscriptionManager.INVALID_SUBSCRIPTION_ID);
+            preference.setChecked(getTelephonyManager() != null
+                    ? getTelephonyManager().isDataRoamingEnabled() : false);
+            return;
+        }
+        preference.setEnabled(false);
+        preference.setChecked(false);
     }
 
     @Override

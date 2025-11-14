@@ -44,7 +44,7 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"Користите <xliff:g id="CARRIER2_0">%2$s</xliff:g> за мобилен интернет. Ако се префрлите на <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> веќе нема да се користи за мобилен интернет."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Користи <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Роаминг"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"Поврзувај се со интернет-услуги во роаминг"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Поврзувај се на мобилен интернет во роаминг"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Да се дозволи ли интернет-роаминг?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Може да ви се наплати за роаминг."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Потрошен интернет"</string>
@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Поврзувања на уредот со вашиот автомобил"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Ултраширок појас (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Му помага на вашиот автомобил да ја идентификува положбата на уредите со UWB"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Споделување аудио"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Споделувајте аудио"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Слушателите треба да имаат сопствени слушалки со LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Пуштете пробен звук"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Секој што слуша би требало да го слушне"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Активни преносливи уреди"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Поставки за аудиостримот"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR-код на аудиостримот"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Скенирајте го QR-кодот за да се поврзете"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"За слушање на аудиостримот, други луѓе може да поврзат компатибилни слушалки на нивниот уред со Android. Потоа може да го скенираат QR-кодов."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Барање за спарување преку Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Спари и поврзи"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код за спарување преку Bluetooth"</string>
@@ -359,7 +369,7 @@
     <string name="storage_type_internal" msgid="8918688427078709570">"%s во внатрешен капацитет"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Се користат ресурси на системот за да се стави приоритет на изведбата на апликацијата"</string>
     <string name="app_open_by_default_title" msgid="7275063779631935446">"Отворај стандардно"</string>
-    <string name="app_open_by_default_summary" msgid="3261520150951464121">"Дозволете апликацијата да отвора поддржани линкови"</string>
+    <string name="app_open_by_default_summary" msgid="3261520150951464121">"Дозволете ѝ на апликацијата да отвора поддржани линкови"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Потрошен интернет"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Потрошен интернет од апл."</string>
     <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Историја на сообраќај"</string>
@@ -436,7 +446,7 @@
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Дајте предност на апликацијата"</string>
     <string name="premium_sms_access_title" msgid="4290463862145052004">"Премиум SMS"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Премиум SMS може да ве чини пари, а сумата ќе се додаде на сметките од операторот. Ако овозможите дозвола за апликацијата, ќе може да испраќате премиум SMS со неа."</string>
-    <string name="usage_access_title" msgid="2306113730908698218">"Податоци за користење апликација"</string>
+    <string name="usage_access_title" msgid="2306113730908698218">"Податоци за користење апликации"</string>
     <string name="usage_access_description" msgid="7889884409739123407">"Пристапот до сите податоци за користењето апликација овозможуваат апликацијата да следи кои други апликации ги користите и колку често, како и вашиот оператор, поставки за јазик и други детали."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Контрола на Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Контролата на Wi-Fi дозволува апликацијава да вклучува или исклучува Wi-Fi, да скенира и да се поврзува на Wi-Fi мрежи, да додава или отстранува мрежи или да стартува локална точка на пристап."</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Други апликации"</string>
     <string name="storage_files" msgid="6382081694781340364">"Датотеки"</string>
     <string name="storage_system" msgid="1271345630248014010">"Систем"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"Вкупно: %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Системот опфаќа датотеки што се користат за извршување на верзијата <xliff:g id="VERSION">%s</xliff:g> на Android"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудиодатотеки"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Се пресметува…"</string>
@@ -776,7 +787,7 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Не е дозволена нагорна, надолна или повторлива секвенца на цифри"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заклучување на екранот"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Бришење акредитиви"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"Отстрани ги сите сертификати"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Отстранете ги сите сертификати"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Дали да се отстранат сите содржини?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Меморијата на акредитиви е избришана."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Меморијата на акредитиви не може да се избрише."</string>

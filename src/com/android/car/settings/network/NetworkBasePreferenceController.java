@@ -65,6 +65,7 @@ public abstract class NetworkBasePreferenceController<V extends Preference> exte
     public void setFields(int subId) {
         mSubId = subId;
         mTelephonyManager = TelephonyManager.from(getContext()).createForSubscriptionId(mSubId);
-        mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager, subId);
+        mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(
+                getContext(), mTelephonyManager, subId);
     }
 }

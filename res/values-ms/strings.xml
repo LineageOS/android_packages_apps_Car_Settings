@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Sambungan peranti dengan kereta anda"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Jalur Ultralebar (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Bantu kereta anda mengenal pasti kedudukan peranti UWB"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Perkongsian Audio"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Kongsi audio"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Pendengar memerlukan fon kepala LE Audio mereka sendiri"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Mainkan bunyi ujian"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Orang yang mendengar seharusnya dapat mendengar bunyi itu"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Peranti media aktif"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Tetapan strim audio"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"Kod QR strim audio"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Imbas kod QR untuk membuat sambungan"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Untuk mendengar strim audio, orang lain boleh menyambungkan fon kepala serasi kepada peranti Android mereka. Kemudian mereka boleh mengimbas kod QR ini."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Permintaan penggandingan Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Gandingkan &amp; sambung"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Kod gandingan Bluetooth"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Apl lain"</string>
     <string name="storage_files" msgid="6382081694781340364">"Fail"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"%s kesemuanya"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem termasuk fail yang digunakan untuk menjalankan Android versi <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Fail audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Mengira…"</string>

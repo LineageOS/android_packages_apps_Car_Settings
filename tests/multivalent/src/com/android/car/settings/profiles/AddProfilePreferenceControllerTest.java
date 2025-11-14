@@ -26,6 +26,7 @@ import static com.android.car.settings.profiles.AddProfilePreferenceController.M
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -159,7 +160,8 @@ public class AddProfilePreferenceControllerTest {
     @Test
     public void onCreate_userRestrictedByDpmFromAddingNewProfileAndNotInDemo_availableForViewing() {
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsers()).thenReturn(true);
+        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
+        when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
 
@@ -171,7 +173,8 @@ public class AddProfilePreferenceControllerTest {
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_availableForViewing_zoneWrite() {
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsers()).thenReturn(true);
+        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
+        when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
 
@@ -185,7 +188,8 @@ public class AddProfilePreferenceControllerTest {
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_availableForViewing_zoneRead() {
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsers()).thenReturn(true);
+        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
+        when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
 
@@ -199,7 +203,8 @@ public class AddProfilePreferenceControllerTest {
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_availableForViewing_zoneHidden() {
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsers()).thenReturn(true);
+        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
+        when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
 
@@ -275,7 +280,8 @@ public class AddProfilePreferenceControllerTest {
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByUm(mUserManager, TEST_RESTRICTION, false);
-        when(mUserManager.canAddMoreUsers()).thenReturn(false);
+        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
+        when(mUserManager.canAddMoreUsers(anyString())).thenReturn(false);
 
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreference.performClick();
@@ -288,7 +294,8 @@ public class AddProfilePreferenceControllerTest {
     @UiThreadTest
     public void disabledClick_restrictedByDpm_dialog() {
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsers()).thenReturn(true);
+        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
+        when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
 

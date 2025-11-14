@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Conexões do dispositivo com seu carro"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Banda ultralarga (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Ajuda seu carro a identificar a posição de dispositivos UWB"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Compartilhamento de áudio"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Compartilhar áudio"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"As pessoas precisam de fones de ouvido próprios com LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Reproduzir um teste de som"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Todas as pessoas conectadas devem ouvir"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Dispositivos portáteis de mídia ativos"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Configurações do stream de áudio"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR code do stream de áudio"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Faça a leitura do QR code para conectar"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Para ouvir o stream de áudio é preciso conectar fones compatíveis ao próprio dispositivo Android e ler o QR code abaixo."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitação de pareamento Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Parear e conectar"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de pareamento Bluetooth"</string>
@@ -428,8 +438,8 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Permite que um app modifique configurações do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permitir que <xliff:g id="SERVICE">%1$s</xliff:g> acesse as notificações?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> poderá ler todas as notificações, incluindo informações pessoais, como nomes de contato e o texto das mensagens que você recebe. Ele também poderá dispensar notificações ou ativar botões de ação que elas contenham.\n\nIsso também autoriza o app a ativar ou desativar o modo \"Não perturbe\" e alterar as configurações relacionadas."</string>
-    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Se você desativar o acesso a notificações para <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o controle do Não perturbe também seja desativado."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> poderá ler todas as notificações, incluindo informações pessoais, como nomes de contato e o texto das mensagens que você recebe. Ele também poderá dispensar notificações ou ativar botões de ação que elas contenham.\n\nIsso também autoriza o app a ativar ou desativar o modo não perturbe e alterar as configurações relacionadas."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="5960149609163649424">"Se você desativar o acesso a notificações para <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o controle do não perturbe também seja desativado."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Esses apps prejudicam o desempenho do sistema e tiveram a execução em segundo plano impedida.\nPriorize o app para permitir o uso em segundo plano e o remover desta lista."</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Outros apps"</string>
     <string name="storage_files" msgid="6382081694781340364">"Arquivos"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistema"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"Total: %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"O sistema inclui arquivos usados para executar a versão <xliff:g id="VERSION">%s</xliff:g> do Android"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Arquivos de áudio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Calculando…"</string>

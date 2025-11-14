@@ -149,7 +149,7 @@
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"हॉटस्पॉट का पासवर्ड"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"सुरक्षा"</string>
     <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-निजी"</string>
-    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-निजी"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 व्यक्तिगत"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"कोई नहीं"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"एपी बैंड"</string>
@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"आपकी कार से कनेक्ट डिवाइस"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"अल्ट्रा-वाइडबैंड (यूडब्ल्यूबी)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"इससे आपकी कार को यूडब्ल्यूबी डिवाइसों की जगह की जानकारी पता लगाने में मदद मिलती है"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"ऑडियो शेयर करने की सुविधा"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"ऑडियो शेयर करें"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"लिसनर के पास LE Audio वाले हेडफ़ोन होने चाहिए"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"कोई टेस्ट साउंड चलाएं"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"यह उन सभी को सुनाई देना चाहिए जिन्हें ऑडियो शेयर किया गया है"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"चालू मीडिया डिवाइस"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"ऑडियो स्ट्रीम की सेटिंग"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"ऑडियो स्ट्रीम का क्यूआर कोड"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"कनेक्ट करने के लिए क्यूआर कोड स्कैन करें"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"ऑडियो स्ट्रीम सुनने के लिए, अन्य लोग अपने Android डिवाइस के साथ काम करने वाले हेडफ़ोन कनेक्ट कर सकते हैं. इसके बाद, वे इस क्यूआर कोड को स्कैन कर सकते हैं."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लूटूथ के ज़रिए जोड़ने का अनुरोध किया गया"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"दूसरे डिवाइस से जोड़ें और कनेक्‍ट करें"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्‍लूटूथ के ज़रिए जोड़ने के लिए कोड"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"दूसरे ऐप्लिकेशन"</string>
     <string name="storage_files" msgid="6382081694781340364">"फ़ाइलें"</string>
     <string name="storage_system" msgid="1271345630248014010">"सिस्टम"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"कुल %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टम में ऐसी फ़ाइलें शामिल हैं जिनका इस्तेमाल Android वर्शन <xliff:g id="VERSION">%s</xliff:g> को चलाने के लिए किया जाता है"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडियो फ़ाइलें"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"गिनती की जा रही है…"</string>
@@ -713,7 +724,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रीन लॉक सेट करें"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"अनलॉक करने के लिए पिन चुनें"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"अनलॉक करने के लिए पासवर्ड चुनें"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"मौजूदा स्क्रीन लॉक"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"मौजूदा स्क्रीन लॉक टाइप"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षा के लिए पैटर्न सेट करें"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"हटाएं"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"अभी नहीं"</string>

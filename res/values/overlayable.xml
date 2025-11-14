@@ -51,6 +51,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="attr" name="action_item_two"/>
       <item type="attr" name="action_item_two_enabled"/>
       <item type="attr" name="action_item_two_shown"/>
+      <item type="attr" name="audioSharingQrCodeRoundedCornerRadius"/>
       <item type="attr" name="bluetoothBondedDeviceButtonRadius"/>
       <item type="attr" name="bluetoothBondedDevicePreferenceToggleButtonRadius"/>
       <item type="attr" name="controller"/>
@@ -192,6 +193,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="dimen" name="aspect_ratio_icon_height"/>
       <item type="dimen" name="aspect_ratio_icon_width"/>
       <item type="dimen" name="block_by_admin_icon_padding"/>
+      <item type="dimen" name="bluetooth_audio_streaming_qr_code_size"/>
       <item type="dimen" name="bluetooth_bonded_device_border_width"/>
       <item type="dimen" name="bluetooth_bonded_device_button_size"/>
       <item type="dimen" name="bluetooth_bonded_device_foreground_icon_inset"/>
@@ -335,6 +337,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_arrow_drop_down"/>
       <item type="drawable" name="ic_arrow_forward"/>
       <item type="drawable" name="ic_audio_navi"/>
+      <item type="drawable" name="ic_audio_sharing"/>
       <item type="drawable" name="ic_backspace"/>
       <item type="drawable" name="ic_block"/>
       <item type="drawable" name="ic_blocked_by_admin"/>
@@ -369,6 +372,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_launcher_settings_foreground"/>
       <item type="drawable" name="ic_lock"/>
       <item type="drawable" name="ic_media_stream"/>
+      <item type="drawable" name="ic_music_cast"/>
       <item type="drawable" name="ic_open"/>
       <item type="drawable" name="ic_ota_update_current"/>
       <item type="drawable" name="ic_ota_update_none"/>
@@ -453,6 +457,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="ic_units"/>
       <item type="drawable" name="ic_uwb"/>
       <item type="drawable" name="ic_video_settings"/>
+      <item type="drawable" name="ic_volume_up"/>
       <item type="drawable" name="ic_warning"/>
       <item type="drawable" name="ic_wifi_signal_0"/>
       <item type="drawable" name="ic_wifi_signal_1"/>
@@ -471,12 +476,11 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="profile_avatar_bg_circle"/>
       <item type="drawable" name="restricted_wifi_signal"/>
       <item type="drawable" name="theme_toggle_button_rotary_background"/>
-      <item type="drawable" name="top_level_preference_background"/>
-      <item type="drawable" name="top_level_preference_highlight"/>
       <item type="drawable" name="user_disclaimer_action_button_background"/>
       <item type="drawable" name="wifi_signal"/>
       <item type="id" name="action_text"/>
       <item type="id" name="alphanumeric_pin"/>
+      <item type="id" name="audio_sharing_qr_code"/>
       <item type="id" name="bottomDivider"/>
       <item type="id" name="button1"/>
       <item type="id" name="button1Icon"/>
@@ -558,7 +562,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="phonebook_sharing_message_entry_pin"/>
       <item type="id" name="pin_pad"/>
       <item type="id" name="pin_values_hint"/>
-      <item type="id" name="preference_highlighted"/>
       <item type="id" name="profile_avatar"/>
       <item type="id" name="profile_grid"/>
       <item type="id" name="profile_name"/>
@@ -619,6 +622,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="integer" name="recent_notifications_days_threshold"/>
       <item type="integer" name="user_switcher_num_col"/>
       <item type="layout" name="action_buttons_preference"/>
+      <item type="layout" name="audio_sharing_device_selector_preference_group"/>
+      <item type="layout" name="audio_stream_qr_preference"/>
       <item type="layout" name="bluetooth_pin_confirm"/>
       <item type="layout" name="bluetooth_pin_entry"/>
       <item type="layout" name="car_setting_activity"/>
@@ -772,6 +777,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="audio_route_dialog_neutral_button_text"/>
       <item type="string" name="audio_route_selector_title"/>
       <item type="string" name="audio_route_selector_toast"/>
+      <item type="string" name="audio_sharing_active_media_devices"/>
+      <item type="string" name="audio_stream_qr_code_description"/>
+      <item type="string" name="audio_stream_settings_category_title"/>
+      <item type="string" name="audio_streaming_title"/>
       <item type="string" name="auto_brightness_summary"/>
       <item type="string" name="auto_brightness_title"/>
       <item type="string" name="auto_launch_disable_text"/>
@@ -798,6 +807,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="bluetooth_ask_enablement_and_discovery"/>
       <item type="string" name="bluetooth_ask_enablement_and_discovery_no_name"/>
       <item type="string" name="bluetooth_ask_enablement_no_name"/>
+      <item type="string" name="bluetooth_audio_sharing"/>
       <item type="string" name="bluetooth_available_devices"/>
       <item type="string" name="bluetooth_bonded_bluetooth_toggle_content_description"/>
       <item type="string" name="bluetooth_bonded_media_toggle_content_description"/>
@@ -1403,6 +1413,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="runtime_permissions_summary_no_permissions_granted"/>
       <item type="string" name="runtime_permissions_summary_no_permissions_requested"/>
       <item type="string" name="safety_and_regulatory_info"/>
+      <item type="string" name="scan_qr_code_to_connect"/>
       <item type="string" name="screen_lock_options"/>
       <item type="string" name="screen_reader_description_title"/>
       <item type="string" name="screen_reader_options_title"/>
@@ -1427,6 +1438,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="settings_license_activity_unavailable"/>
       <item type="string" name="setup_lock_settings_options_button_label"/>
       <item type="string" name="seven"/>
+      <item type="string" name="share_audio_switch_summary"/>
+      <item type="string" name="share_audio_switch_title"/>
+      <item type="string" name="share_audio_test_sound_summary"/>
+      <item type="string" name="share_audio_test_sound_title"/>
       <item type="string" name="share_remote_bugreport_action"/>
       <item type="string" name="share_remote_bugreport_dialog_message"/>
       <item type="string" name="share_remote_bugreport_dialog_message_finished"/>
@@ -1473,6 +1488,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="storage_type_internal"/>
       <item type="string" name="storage_unmount_failure"/>
       <item type="string" name="storage_unmount_success"/>
+      <item type="string" name="storage_total_label"/>
       <item type="string" name="suggestion_dismiss_button"/>
       <item type="string" name="sync_button_sync_cancel"/>
       <item type="string" name="sync_button_sync_now"/>
@@ -1740,6 +1756,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="xml" name="applications_settings_fragment"/>
       <item type="xml" name="apps_fragment"/>
       <item type="xml" name="assistant_and_voice_fragment"/>
+      <item type="xml" name="audio_sharing_fragment"/>
+      <item type="xml" name="audio_stream_fragment"/>
       <item type="xml" name="bluetooth_device_details_fragment"/>
       <item type="xml" name="bluetooth_device_picker_fragment"/>
       <item type="xml" name="bluetooth_pairing_selection_fragment"/>

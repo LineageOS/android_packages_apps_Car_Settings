@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Připojení zařízení k autu"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultra-wideband (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Pomáhá autu rozpoznat umístění zařízení UWB"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Sdílení zvuku"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Sdílet zvuk"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Posluchači potřebují vlastní sluchátka LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Přehrát zkušební zvuk"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Měl by ho slyšet každý, kdo poslouchá"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Aktivní mediální zařízení"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Nastavení zvukového streamu"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR kód zvukového streamu"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Připojte se naskenováním QR kódu"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Další lidé mohou zvukový stream poslouchat tak, že ke svému zařízení Android připojí kompatibilní sluchátka a poté naskenují tento QR kód."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Požadavek na párování zařízení Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Párovat a připojit"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Párovací kód Bluetooth"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Další aplikace"</string>
     <string name="storage_files" msgid="6382081694781340364">"Soubory"</string>
     <string name="storage_system" msgid="1271345630248014010">"Systém"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"%s celkem"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Systém obsahuje soubory používané ke spuštění systému Android verze <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Zvukové soubory"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Výpočet…"</string>
@@ -820,7 +831,7 @@
     <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"Zařízení spárujete v nastavení Bluetooth"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"Motiv"</string>
     <string name="driving_mode_title" msgid="8103270030335833998">"Nastavit režim jízdy autem"</string>
-    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Zobrazit ohraničení"</string>
+    <string name="show_layout_bounds_title" msgid="8590148405645027755">"Zobrazovat ohraničení"</string>
     <string name="show_force_rtl_title" msgid="8240732919603115320">"Vynutit rozvržení zprava doleva"</string>
     <string name="show_customization_overlay_title" msgid="2543804846629965883">"Vrstva přizpůsobení"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"Administrátor informačního a zábavního systému"</string>
@@ -945,7 +956,7 @@
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Velmi velké"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"Styl titulků"</string>
     <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Nastaveno aplikací"</string>
-    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Bílé na černém"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Bílá na černém"</string>
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Černé na bílém"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Žluté na černém"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Žluté na modrém"</string>

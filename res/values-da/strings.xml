@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Enheder forbundet til din bil"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultrabredbånd (UWB, Ultra-Wideband)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Hjælper din bil med at lokalisere UWB-enheder"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Lyddeling"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Del lyd"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Lyttere skal have deres egne høretelefoner med LE-lyd."</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Afspil en testlyd"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Alle, der lytter, bør kunne høre den"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Aktive medieenheder"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Indstillinger for lydstream"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR-kode til lydstream"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Scan QR-koden for at oprette forbindelse"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Andre, som vil lytte til lydstreamen, kan forbinde kompatible høretelefoner til deres Android-enhed og derefter scanne denne QR-kode."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Anmodning om Bluetooth-parring"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Tilknyt og forbind"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-parringskode"</string>
@@ -505,7 +515,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Bidragydere"</string>
     <string name="manual" msgid="4819839169843240804">"Manuel"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Regulatorisk mærkning"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Brugervejledning i sikkerhed og regler"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Brugervejledning i sikkerhed og reguleringer"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Ophavsret"</string>
     <string name="license_title" msgid="936705938435249965">"Licens"</string>
     <string name="terms_title" msgid="5201471373602628765">"Vilkår og betingelser"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Andre apps"</string>
     <string name="storage_files" msgid="6382081694781340364">"Filer"</string>
     <string name="storage_system" msgid="1271345630248014010">"System"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"%s i alt"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Systemet omfatter filer, der anvendes til at køre Android-versionen <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Lydfiler"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Beregner…"</string>

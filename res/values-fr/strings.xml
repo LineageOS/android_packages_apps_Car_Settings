@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Connexions des appareils à votre voiture"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Bande ultralarge (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Aide votre voiture à identifier la position des appareils UWB"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Partage audio"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Partager le contenu audio"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Chaque personne a besoin de son propre casque LE Audio."</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Lire un son de test"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Tous ceux qui écoutent devraient l\'entendre"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Périphériques multimédias actifs"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Paramètres du flux audio"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR code du flux audio"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Scannez le QR code pour vous connecter"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Si d\'autres personnes veulent écouter le flux audio, elles peuvent connecter un casque compatible à leur appareil Android, puis scanner ce QR code."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Demande d\'association Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Associer et connecter"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Code d\'association Bluetooth"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Autres applications"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"Système"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"%s au total"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Le système contient des fichiers servant à l\'exécution d\'Android <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Fichiers audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Calcul…"</string>
@@ -713,7 +724,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"Configurer le verrouillage de l\'écran"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Choisissez votre code"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Sélectionner un mot de passe"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"Verrouillage actuel de l\'écran"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"Méthode utilisée actuellement"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pour la sécurité, définissez un schéma"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Effacer"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Annuler"</string>
@@ -925,7 +936,7 @@
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"Lecteur d\'écran"</string>
     <string name="show_captions_toggle_title" msgid="710582308974826311">"Afficher les sous-titres"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"Taille du texte"</string>
-    <string name="captions_settings_style_header" msgid="944591388386054372">"Style et taille des sous-titres"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"Taille et style des sous-titres"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"Très petite"</string>
     <string name="captions_settings_text_size_small" msgid="1481895299805450566">"Petite"</string>
     <string name="captions_settings_text_size_default" msgid="2227802573224038267">"Par défaut"</string>

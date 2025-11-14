@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"اتصالات الأجهزة بسيارتك"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"النطاق الفائق العرض (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"يساعد هذا الخيار سيارتك في التعرّف على موقع أجهزة النطاق الفائق العرض (UWB)"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"مشاركة الصوت"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"مشاركة الصوت"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"يجب على المستمعين استخدام سماعات الرأس المتوافقة مع LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"تشغيل صوت تجريبي"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"من المفترض أن يسمع جميع المستخدمين هذا الصوت"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"أجهزة الوسائط المشغَّلة"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"إعدادات البث الصوتي"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"رمز الاستجابة السريعة للبث الصوتي"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"مسح رمز الاستجابة السريعة ضوئيًا للربط"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"بإمكان المستخدمين الآخرين الاستماع إلى البث الصوتي عن طريق ربط سماعات الرأس المتوافقة بأجهزة Android. ويمكنهم بعد ذلك مسح رمز الاستجابة السريعة هذا ضوئيًا."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"طلب إقران البلوتوث"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"الإقران والاتصال"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"رمز إقران البلوتوث"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"تطبيقات أخرى"</string>
     <string name="storage_files" msgid="6382081694781340364">"الملفات"</string>
     <string name="storage_system" msgid="1271345630248014010">"النظام"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"مساحة التخزين الإجمالية: ‎%s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"يتضمّن النظام الملفات المستخدمة لتشغيل إصدار Android‏ <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"الملفات الصوتية"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"جارٍ الحساب…"</string>
@@ -949,7 +960,7 @@
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"قارئ الشاشة"</string>
     <string name="show_captions_toggle_title" msgid="710582308974826311">"عرض الشرح"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"حجم النص"</string>
-    <string name="captions_settings_style_header" msgid="944591388386054372">"حجم نصوص الشرح ونمطها"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"حجم نص الترجمة والشرح ونمطه"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"صغير جدًا"</string>
     <string name="captions_settings_text_size_small" msgid="1481895299805450566">"صغير"</string>
     <string name="captions_settings_text_size_default" msgid="2227802573224038267">"تلقائي"</string>

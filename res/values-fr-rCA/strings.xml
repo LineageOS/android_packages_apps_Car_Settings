@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Connexions d\'appareils à votre voiture"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Bande ultralarge (BUL)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Aide votre voiture à identifier la position des appareils BUL"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Partage audio"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Partager l\'audio"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Les auditeurs doivent avoir leurs propres écouteurs LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Tester l\'audio"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Tous les auditeurs devraient l\'entendre"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Appareils de stockage multimédia actifs"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Paramètres du flux audio"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"Code QR du flux audio"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Balayer le code QR pour vous connecter"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Pour écouter un flux audio, d\'autres personnes peuvent connecter des écouteurs compatibles à leur appareil Android. Elles pourront ensuite balayer ce code QR."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Demande d\'association Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Associer et connecter"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Code d\'association Bluetooth"</string>
@@ -543,7 +553,7 @@
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Cette opération réinitialise toutes les préférences relatives aux éléments suivants :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences des applications ont été réinitialisées"</string>
-    <string name="factory_reset_title" msgid="4019066569214122052">"Effacer toutes les données"</string>
+    <string name="factory_reset_title" msgid="4019066569214122052">"Effacer les données (réinitialisation)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Effacer toutes les données et tous les profils du système d\'infodivertissement"</string>
     <string name="factory_reset_desc" msgid="2774024747279286354">"Cette action effacera toutes les données du système d\'infodivertissement de votre véhicule, y compris :\n\n"<li>"Vos comptes et profils"</li>\n<li>"Les données et les paramètres du système et de l\'application"</li>\n<li>"Les applications téléchargées"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Vous êtes actuellement connecté aux comptes suivants :"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Autres applications"</string>
     <string name="storage_files" msgid="6382081694781340364">"Fichiers"</string>
     <string name="storage_system" msgid="1271345630248014010">"Système"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"%s au total"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Le répertoire Système comprend des fichiers utilisés pour faire fonctionner Android version <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Fichiers audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Calcul en cours…"</string>
@@ -939,7 +950,7 @@
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Texte jaune sur fond bleu"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Lecteur d\'écran"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Désactivé"</string>
-    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Énoncer les éléments à l\'écran"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"énoncer les éléments à l\'écran"</string>
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Utiliser <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Options"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Paramètres"</string>

@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Conexiuni între dispozitive și mașină"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Bandă ultralargă (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Ajută mașina să identifice poziția dispozitivelor UWB"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Permiterea accesului la audio"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Trimite audio"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Ascultătorii au nevoie de propriul set de căști LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Redă un sunet de test"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Toți cei care ascultă ar trebui să-l audă"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Dispozitive media active"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Setările streamului audio"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"Codul QR al streamului audio"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Scanează codul QR pentru a te conecta"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Pentru a asculta streamul audio, alte persoane pot să conecteze căști compatibile la dispozitivul lor Android. Apoi pot să scaneze acest cod QR."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Solicitare de conectare prin Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Asociază și conectează"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Cod de conectare prin Bluetooth"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Alte aplicații"</string>
     <string name="storage_files" msgid="6382081694781340364">"Fișiere"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"%s în total"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistemul include fișiere folosite pentru a rula versiunea de Android <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Fișiere audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Se calculează…"</string>

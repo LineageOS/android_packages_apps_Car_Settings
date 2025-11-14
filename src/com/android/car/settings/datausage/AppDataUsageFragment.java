@@ -136,7 +136,7 @@ public class AppDataUsageFragment extends SettingsFragment implements
     @VisibleForTesting
     NetworkTemplate getNetworkTemplate(Context context, int subId) {
         TelephonyManager telephonyManager = context.getSystemService(TelephonyManager.class);
-        return DataUsageUtils.getMobileNetworkTemplate(telephonyManager, subId);
+        return DataUsageUtils.getMobileNetworkTemplate(context, telephonyManager, subId);
     }
 
     @VisibleForTesting

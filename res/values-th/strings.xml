@@ -77,7 +77,7 @@
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ระบบเครื่องเสียงของรถยนต์จะปิดอินเทอร์เน็ตมือถือเมื่อมีการใช้งานถึงขีดจำกัดที่คุณกำหนดไว้\n\nเนื่องจากนี่เป็นปริมาณการใช้อินเทอร์เน็ตที่วัดโดยระบบเครื่องเสียง ปริมาณการใช้งานที่ผู้ให้บริการวัดได้จึงอาจไม่เท่ากัน โปรดกำหนดขีดจำกัดอย่างระมัดระวัง"</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ตั้งค่าคำเตือนปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ตั้งค่าขีดจำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
-    <string name="data_usage_settings_footer" msgid="681881387909678237">"ปริมาณการใช้อินเทอร์เน็ตจะวัดโดยอุปกรณ์ ซึ่งอาจแตกต่างจากปริมาณอินเทอร์เน็ตของผู้ให้บริการเครือข่ายมือถือ"</string>
+    <string name="data_usage_settings_footer" msgid="681881387909678237">"ปริมาณการใช้อินเทอร์เน็ตจะวัดโดยอุปกรณ์ ซึ่งอาจแตกต่างจากปริมาณอินเทอร์เน็ตของผู้ให้บริการมือถือ"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ตั้งค่า"</string>
     <string name="data_usage_warning_save_title" msgid="2900544287239037695">"บันทึก"</string>
     <string name="network_and_internet_oem_network_title" msgid="6436902713696212250">"เครือข่าย OEM"</string>
@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"การเชื่อมต่ออุปกรณ์กับรถของคุณ"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"แถบความถี่กว้างยิ่งยวด (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"ช่วยรถของคุณระบุตำแหน่งของอุปกรณ์ UWB"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"การแชร์เสียง"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"แชร์เสียง"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"ผู้ฟังจำเป็นต้องมีหูฟังที่รองรับ LE Audio ของตนเอง"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"เล่นเสียงทดสอบ"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"ทุกคนที่กำลังฟังอยู่ควรจะได้ยิน"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"อุปกรณ์สื่อที่ใช้งานอยู่"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"การตั้งค่าสตรีมเสียง"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"คิวอาร์โค้ดของสตรีมเสียง"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"สแกนคิวอาร์โค้ดเพื่อเชื่อมต่อ"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"บุคคลอื่นที่ต้องการฟังสตรีมเสียงสามารถเชื่อมต่อหูฟังที่รองรับการใช้งานเข้ากับอุปกรณ์ Android ของตน จากนั้นจึงสแกนคิวอาร์โค้ดนี้ได้"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"คำขอจับคู่อุปกรณ์บลูทูธ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"จับคู่อุปกรณ์และเชื่อมต่อ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"รหัสการจับคู่บลูทูธ"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"แอปอื่นๆ"</string>
     <string name="storage_files" msgid="6382081694781340364">"ไฟล์"</string>
     <string name="storage_system" msgid="1271345630248014010">"ระบบ"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"รวม %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"ระบบรวมไฟล์สำหรับเรียกใช้ Android เวอร์ชัน <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ไฟล์เสียง"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"กำลังคำนวณ…"</string>

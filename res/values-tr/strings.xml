@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Arabanıza bağlı cihazlar"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Ultra geniş bant (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Arabanızın ultra geniş banda sahip cihazların konumlarını belirlemesine yardımcı olur"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Ses Paylaşımı"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Sesi paylaş"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Dinleyen kullanıcıların da LE Audio kulaklığı olması gerekir"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Test sesi çal"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Dinleyen herkes duyabilir"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Etkin medya cihazları"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Ses yayını ayarları"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"Ses yayını QR kodu"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Bağlanmak için QR kodunu tarayın"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Diğer kullanıcılar, ses yayınını dinlemek için uyumlu kulaklıkları Android cihazlarına bağlayabilir ve bu QR kodunu tarayabilir."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth eşleme isteği"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Eşleştir ve bağlan"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth eşleme kodu"</string>
@@ -505,7 +515,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Katkıda bulunanlar"</string>
     <string name="manual" msgid="4819839169843240804">"Manuel"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Yönetmelik etiketleri"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Güvenlik ve yönetmelik kılavuzu"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Güvenlik ve yasal düzenleme kılavuzu"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Telif hakkı"</string>
     <string name="license_title" msgid="936705938435249965">"Lisans"</string>
     <string name="terms_title" msgid="5201471373602628765">"Şartlar ve koşullar"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Diğer uygulamalar"</string>
     <string name="storage_files" msgid="6382081694781340364">"Dosyalar"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"Toplam %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem, Android <xliff:g id="VERSION">%s</xliff:g> sürümünü çalıştırmak için kullanılan dosyaları içeriyor"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Ses dosyaları"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Hesaplanıyor…"</string>

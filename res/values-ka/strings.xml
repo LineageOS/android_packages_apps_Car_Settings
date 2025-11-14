@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"მოწყობილობის კავშირი თქვენს ავტომობილთან"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"ულტრაფართოზოლიანი კავშირი (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"თქვენს ავტომობილს UWB მოწყობილობების პოზიციის იდენტიფიცირებაში ეხმარება"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"აუდიოს გაზიარება"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"აუდიოს გაზიარება"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"მსმენელებს თავიანთი LE-აუდიო ყურსასმენები დასჭირდებათ"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"აუდიოს სატესტო დაკვრა"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"ვინც უსმენს, ყველას უნდა ესმოდეს"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"აქტიური მედიამოწყობილობები"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"აუდიონაკადის პარამეტრები"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"აუდიონაკადის QR კოდი"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"QR კოდის სკანირება დასაკავშირებლად"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"აუდიონაკადის მოსმენის მიზნით სხვა პირებს შეუძლიათ, თავიანთ Android მოწყობილობებს დაუკავშირონ თავსებადი ყურსასმენები. შემდეგ, შეუძლიათ, დაასკანირონ ეს QR კოდი."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth დაწყვილების მოთხოვნა"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"დაწყვილება და შეერთება"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-ის დაკავშირების კოდი"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"სხვა აპები"</string>
     <string name="storage_files" msgid="6382081694781340364">"ფაილები"</string>
     <string name="storage_system" msgid="1271345630248014010">"სისტემა"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"სულ: %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"სისტემა მოიცავს ფაილებს, რომლებიც Android <xliff:g id="VERSION">%s</xliff:g> ვერსიის გასაშვებად გამოიყენება"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"აუდიოფაილები"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"მიმდინარეობს გამოთვლა…"</string>

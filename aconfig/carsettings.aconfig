@@ -49,3 +49,10 @@ flag {
     description: "Flag to display several new fragments added to host necessary intents."
     bug: "376744576"
 }
+
+flag {
+    name: "car_settings_multi_casting"
+    namespace: "car_sys_exp"
+    description: "Flag to display the multi-casting feature in Car Settings."
+    bug: "406359269"
+}

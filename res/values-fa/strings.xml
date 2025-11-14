@@ -94,7 +94,7 @@
     <string name="loading_wifi_list" msgid="8584901433195876465">"درحال بارگیری فهرست Wi‑Fi"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi غیرفعال شد"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"شبکه فراموش نشد"</string>
-    <string name="wifi_failed_connect_message" msgid="4447498225022147324">"اتصال به شبکه برقرار نشد"</string>
+    <string name="wifi_failed_connect_message" msgid="4447498225022147324">"به شبکه متصل نشد"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"افزودن شبکه"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"اتصال"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"درحال اتصال…"</string>
@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"اتصال‌های دستگاه با خودرو"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"«فراپهن‌باند» (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"به خودروتان کمک می‌کند موقعیت دستگاه‌های مجهز به «فراپهن‌باند» را شناسایی کند"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"اشتراک صدا"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"هم‌رسانی صدا"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"شنوندگان باید هدفون مجهز به «صدای کم‌مصرف» خود را داشته باشند"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"پخش صدای آزمایشی"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"همه افرادی که گوش می‌دهند باید این صدا را بشنوند"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"دستگاه‌های رسانه‌ای فعال"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"تنظیمات جاری‌سازی صوتی"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"رمزینه پاسخ‌سریع جاری‌سازی صوتی"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"متصل شدن با اسکن رمزینه پاسخ‌سریع"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"برای گوش دادن به جاری‌سازی صوتی، دیگران می‌توانند هدفون سازگاری را به دستگاه Android خود وصل کنند. سپس می‌توانند این رمزینه پاسخ‌سریع را اسکن کنند."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"درخواست مرتبط‌سازی بلوتوث"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"مرتبط‌ کردن و اتصال"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"کد مرتبط‌سازی بلوتوث"</string>
@@ -516,7 +526,7 @@
     <string name="status_serial_number" msgid="9158889113131907656">"شماره سریال"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"نسخه سخت‌افزار"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
-    <string name="settings_license_activity_title" msgid="8499293744313077709">"مجوزهای شخص ثالث"</string>
+    <string name="settings_license_activity_title" msgid="8499293744313077709">"پروانه‌های طرف سوم"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"مشکلی در بارگیری مجوزها وجود دارد."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"درحال بار کردن…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{اکنون # گام تا توسعه‌دهنده شدن فاصله دارید.}one{اکنون # گام تا توسعه‌دهنده شدن فاصله دارید.}other{اکنون # گام تا توسعه‌دهنده شدن فاصله دارید.}}"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"سایر برنامه‌ها"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"سیستم"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"مجموع %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"سیستم حاوی فایل‌هایی است که برای اجرای Android نسخه <xliff:g id="VERSION">%s</xliff:g> استفاده می‌شود"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"فایل‌های صوتی"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"در حال محاسبه…"</string>
@@ -933,7 +944,7 @@
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"بسیار بزرگ"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"زیرنویس ناشنوایان"</string>
     <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"تنظیم‌شده توسط برنامه"</string>
-    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"سفید در سیاه"</string>
+    <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"سفید روی سیاه"</string>
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"سیاه در سفید"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"زرد در سیاه"</string>
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"زرد در آبی"</string>

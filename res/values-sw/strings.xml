@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"Miunganisho ya vifaa kwenye gari lako"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Bendi Pana Zaidi (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Husaidia gari lako litambue mahali vifaa vya Bendi Pana Zaidi (UWB) vilipo"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Kusikiliza Pamoja"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Sikiliza pamoja na wengine"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Wasikilizaji wanahitaji vipokea sauti vyao vya kichwani vinavyotumia LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Cheza sauti ya jaribio"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Kila mtu anayesikiliza anapaswa kuisikia"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Vifaa vinavyotumika"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Mipangilio ya mtiririko wa maudhui ya sauti"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"Msimbo wa QR wa mtiririko wa maudhui ya sauti"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Changanua msimbo wa QR ili uunganishe"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Ili kusikiliza mtiririko wa maudhui ya sauti, watu wengine wanaweza kuunganisha vipokea sauti vya kichwani vinavyooana na vifaa vyao vya Android. Kisha wanaweza kuchanganua msimbo huu wa QR."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Ombi la kuoanisha Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Oanisha kisha uunganishe"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Msimbo wa kuoanisha Bluetooth"</string>
@@ -401,7 +411,7 @@
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Futa chaguomsingi"</string>
     <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Fungua viungo vinavyoweza kutumika"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"Fungua katika programu hii"</string>
-    <string name="app_link_open_ask" msgid="7242075065136237456">"Uliza kila wakati"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Omba kila wakati"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Usifungue katika programu hii"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Viungo vinavyoweza kutumika"</string>
     <string name="opening_links_verified_links_title" msgid="6781351697264180708">"Viungo vilivyothibitishwa"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Programu zingine"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"Mfumo"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"Jumla ya %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Mfumo unajumuisha faili zinazotumika katika toleo la Android la <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Faili za sauti"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Inahesabu…"</string>

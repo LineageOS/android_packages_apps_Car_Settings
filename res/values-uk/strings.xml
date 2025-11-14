@@ -219,6 +219,16 @@
     <string name="device_connections_category_title" msgid="1753729363581927505">"З’єднання пристроїв з автомобілем"</string>
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Надширокосмуговий зв’язок (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Допомагає автомобілю визначати розташування пристроїв із підтримкою UWB"</string>
+    <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Надсилання аудіо"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Поділитись аудіо"</string>
+    <string name="share_audio_switch_summary" msgid="5123598607194828495">"Слухачам потрібно мати власні навушники LE Audio"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Перевірте звук"</string>
+    <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Усі, хто слухає, зможуть чути його"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Активні носії"</string>
+    <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Налаштування аудіопотоку"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"QR-код аудіопотоку"</string>
+    <string name="scan_qr_code_to_connect" msgid="734470733189688139">"Сканувати QR-код, щоб підключитися"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"Щоб слухати аудіопотік, інші користувачі можуть підключити сумісні навушники до свого пристрою Android, а тоді відсканувати цей QR-код."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Запит Bluetooth на створення пари"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Створити пару та підключитися"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код підключення Bluetooth"</string>
@@ -504,7 +514,7 @@
     <string name="legal_information" msgid="1838443759229784762">"Правова інформація"</string>
     <string name="contributors_title" msgid="7698463793409916113">"Співавтори"</string>
     <string name="manual" msgid="4819839169843240804">"Посібник"</string>
-    <string name="regulatory_labels" msgid="3165587388499646779">"Сертифікації"</string>
+    <string name="regulatory_labels" msgid="3165587388499646779">"Нормативні етикетки"</string>
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Посібник із безпеки й нормативних вимог"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Авторські права"</string>
     <string name="license_title" msgid="936705938435249965">"Ліцензія"</string>
@@ -622,6 +632,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Інші додатки"</string>
     <string name="storage_files" msgid="6382081694781340364">"Файли"</string>
     <string name="storage_system" msgid="1271345630248014010">"Система"</string>
+    <string name="storage_total_label" msgid="5055933048275837265">"Усього: %s"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"У розділі \"Система\" містяться файли, потрібні для роботи Android <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудіофайли"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Обчислення…"</string>
@@ -834,8 +845,8 @@
     <string name="add_device_admin" msgid="7674707256074840333">"Активувати цей додаток інформаційно-розважальної системи"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Вимкнути й видалити"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Деактивувати цей додаток інформаційно-розважальної системи"</string>
-    <string name="admin_profile_owner_message" msgid="8361351256802954556">"Адміністратор організації може відстежувати додатки й дані, пов’язані з цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження транспортного засобу, а також керувати ними."</string>
-    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Адміністратор організації може відстежувати додатки й дані, пов’язані з цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження пристрою, а також керувати ними."</string>
+    <string name="admin_profile_owner_message" msgid="8361351256802954556">"Адміністратор організації може відстежувати додатки й дані, пов’язані із цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження транспортного засобу, а також керувати ними."</string>
+    <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Адміністратор організації може відстежувати додатки й дані, пов’язані із цим профілем, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження пристрою, а також керувати ними."</string>
     <string name="admin_device_owner_message" msgid="896530502350904835">"Адміністратор організації може відстежувати додатки й дані, пов’язані з цією інформаційно-розважальною системою, зокрема налаштування, дозволи, корпоративний доступ, дії в мережі й дані про місцезнаходження транспортного засобу, а також керувати ними."</string>
     <string name="admin_financed_message" msgid="7357397436233684082">"Адміністратор організації може мати доступ до даних, пов’язаних з цією інформаційно-розважальною системою, керувати додатками й змінювати налаштування цього транспортного засобу."</string>
     <string name="disabled_by_policy_title" msgid="1121694702115232518">"Немає доступу"</string>
