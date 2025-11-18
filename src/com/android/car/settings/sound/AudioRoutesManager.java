@@ -23,6 +23,11 @@ import static android.media.AudioDeviceInfo.TYPE_BLE_BROADCAST;
 import static android.media.AudioDeviceInfo.TYPE_BLE_HEADSET;
 import static android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP;
 
+import static com.android.car.settings.bluetooth.audiosharing.BaseAudioSharingPreferenceController.isUserAudioSharingEnabled;
+
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothLeBroadcastMetadata;
+import android.bluetooth.BluetoothLeBroadcastReceiveState;
 import android.bluetooth.BluetoothProfile;
 import android.car.media.AudioZoneConfigurationsChangeCallback;
 import android.car.media.CarAudioManager;
@@ -42,10 +47,15 @@ import androidx.core.content.ContextCompat;
 import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
+import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast;
+import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssistant;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -59,6 +69,8 @@ public class AudioRoutesManager {
     private final Context mContext;
     private final CarAudioManager mCarAudioManager;
     private final LocalBluetoothManager mBluetoothManager;
+    private LocalBluetoothLeBroadcast mLeBroadcastProfile;
+    private LocalBluetoothLeBroadcastAssistant mLeBroadcastAssistantProfile;
     private final int mAudioZone;
     private final int mUsage;
     private String mLastSwitchedAddress;
@@ -187,6 +199,12 @@ public class AudioRoutesManager {
                 .getCarAudioManager();
         mAudioZone = ((CarSettingsApplication) mContext.getApplicationContext()).getMyAudioZoneId();
         mBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */ null);
+        if (mBluetoothManager != null) {
+            mLeBroadcastProfile =
+                    mBluetoothManager.getProfileManager().getLeAudioBroadcastProfile();
+            mLeBroadcastAssistantProfile =
+                    mBluetoothManager.getProfileManager().getLeAudioBroadcastAssistantProfile();
+        }
         mUsage = usage;
         mCachedAudioRoutes = new ArrayMap<>();
         if (isAudioRoutingEnabled()) {
@@ -204,28 +222,91 @@ public class AudioRoutesManager {
     }
 
     private void updateCachedAudioRoutes() {
-        mCachedAudioRoutes.clear();
-        // Register for all active car audio zones.
-        List<CarAudioZoneConfigInfo> activeAudioZones = mCarAudioManager
-                .getAudioZoneConfigInfos(mAudioZone).stream()
-                .toList();
-        for (AudioDeviceAttributes attr : getUsageMatchedAttributes(activeAudioZones,
-                /* isActive=*/ true)) {
-            mCachedAudioRoutes.put(attr.getAddress(), new AudioRouteItem.Builder(attr).build());
-        }
-        // Register for all connected Bluetooth devices.
-        List<CachedBluetoothDevice> bluetoothDevices = mBluetoothManager.getCachedDeviceManager()
-                .getCachedDevicesCopy().stream()
-                .filter(device -> device.isConnectedA2dpDevice()
-                        || device.isConnectedLeAudioDevice())
-                .toList();
-        for (CachedBluetoothDevice device : bluetoothDevices) {
-            //  The active Bluetooth device must have been registered from the car audio zones.
-            mCachedAudioRoutes.put(device.getAddress(), new AudioRouteItem.Builder(device).build());
-        }
+        mCachedAudioRoutes = createAudioRoutes();
         // Update active device address.
         AudioDeviceInfo info = mCarAudioManager.getOutputDeviceForUsage(mAudioZone, mUsage);
         mCachedActiveDeviceAddress = info == null ? null : info.getAddress();
+    }
+
+    private Map<String, AudioRouteItem> createAudioRoutes() {
+        Map<String, AudioRouteItem> newAudioRoutes = new HashMap<>();
+        List<CarAudioZoneConfigInfo> configs = mCarAudioManager.getAudioZoneConfigInfos(mAudioZone);
+
+        // If multiple active configs for the same name exist, the selected one wins.
+        Map<String, CarAudioZoneConfigInfo> activeConfigs = configs.stream().filter(
+                CarAudioZoneConfigInfo::isActive).collect(
+                Collectors.toMap(CarAudioZoneConfigInfo::getName, Function.identity(),
+                        (a, b) -> b.isSelected() ? b : a));
+
+        BluetoothLeBroadcastMetadata broadcastMetadata = getCurrentBroadcast();
+        boolean isAudioSharingEnabled = isAudioSharingEnabled();
+        AudioRouteItem.GlobalState globalState =
+                new AudioRouteItem.GlobalState.Builder().setIsAudioSharingEnabled(
+                        isAudioSharingEnabled).build();
+
+        // Register for all active car audio zone configs.
+        for (CarAudioZoneConfigInfo config : activeConfigs.values()) {
+            for (CarVolumeGroupInfo volumeGroup : config.getConfigVolumeGroups()) {
+                boolean hasCorrectUsage = volumeGroup.getAudioAttributes().stream().anyMatch(
+                        audioAttribute -> audioAttribute.getUsage() == mUsage);
+                if (!hasCorrectUsage) continue;
+
+                for (AudioDeviceAttributes attr : volumeGroup.getAudioDeviceAttributes()) {
+                    AudioRouteItem.Builder builder = new AudioRouteItem.Builder(attr);
+                    if (mCachedAudioRoutes.containsKey(attr.getAddress())) {
+                        // Copy the previous state if existing.
+                        AudioRouteItem cachedItem = mCachedAudioRoutes.get(attr.getAddress());
+                        builder.setState(cachedItem.getState());
+                    }
+                    builder.setAudioZoneConfigState(
+                            new AudioRouteItem.AudioZoneConfigState.Builder()
+                                    .setIsActive(config.isActive())
+                                    .setIsSelected(config.isSelected())
+                                    .build());
+                    builder.setGlobalState(globalState);
+                    newAudioRoutes.put(attr.getAddress(), builder.build());
+                }
+            }
+        }
+
+        Set<String> activeConfigDevices = newAudioRoutes.keySet();
+
+        // Register for all connected Bluetooth devices.
+        List<CachedBluetoothDevice> bluetoothDevices =
+                mBluetoothManager.getCachedDeviceManager().getCachedDevicesCopy().stream().filter(
+                        device -> device.isConnectedA2dpDevice()
+                                || device.isConnectedLeAudioDevice()).toList();
+        for (CachedBluetoothDevice device : bluetoothDevices) {
+            AudioRouteItem.Builder builder = new AudioRouteItem.Builder(device);
+            if (mCachedAudioRoutes.containsKey(device.getAddress())) {
+                // Copy the previous state if existing.
+                AudioRouteItem cachedItem = mCachedAudioRoutes.get(device.getAddress());
+                builder.setState(cachedItem.getState());
+            }
+
+            AudioRouteItem.AudioZoneConfigState audioZoneConfigState = activeConfigDevices.contains(
+                    device.getAddress())
+                    ? newAudioRoutes.get(device.getAddress()).getAudioZoneConfigState()
+                    : new AudioRouteItem.AudioZoneConfigState.Builder().build();
+            builder.setAudioZoneConfigState(audioZoneConfigState);
+
+            boolean isReceivingBroadcast = isReceivingBroadcast(device.getDevice(),
+                    broadcastMetadata);
+
+            AudioRouteItem.BluetoothDeviceState bluetoothDeviceState =
+                    new AudioRouteItem.BluetoothDeviceState.Builder()
+                            .setIsConnectedA2dp(device.isConnectedA2dpDevice())
+                            .setIsConnectedLeAudio(device.isConnectedLeAudioDevice())
+                            .setIsActiveA2dp(device.isActiveDevice(BluetoothProfile.A2DP))
+                            .setIsActiveLeAudio(device.isActiveDevice(BluetoothProfile.LE_AUDIO))
+                            .setIsReceivingBroadcast(isReceivingBroadcast)
+                            .build();
+
+            builder.setBluetoothDeviceState(bluetoothDeviceState);
+            builder.setGlobalState(globalState);
+            newAudioRoutes.put(device.getAddress(), builder.build());
+        }
+        return newAudioRoutes;
     }
 
     private List<AudioDeviceAttributes> getUsageMatchedAttributes(
@@ -264,11 +345,6 @@ public class AudioRoutesManager {
                     .replace("%", "");
         }
         return null;
-    }
-
-    @VisibleForTesting
-    Map<String, AudioRouteItem> getActiveRoutes() {
-        return mCachedAudioRoutes;
     }
 
     @VisibleForTesting
@@ -396,5 +472,36 @@ public class AudioRoutesManager {
             LOG.d("Failed to switch audio routing to " + mLastSwitchedAddress);
             mListener.onSwitchRequested(mLastSwitchedAddress, /* success= */ false);
         }
+    }
+
+    private BluetoothLeBroadcastMetadata getCurrentBroadcast() {
+        List<BluetoothLeBroadcastMetadata> metadata = mLeBroadcastProfile.getAllBroadcastMetadata();
+        if (metadata.isEmpty()) {
+            return null;
+        }
+        return metadata.getFirst();
+    }
+
+    private boolean isReceivingBroadcast(BluetoothDevice device,
+            BluetoothLeBroadcastMetadata broadcastMetadata) {
+        if (broadcastMetadata == null || device == null) {
+            return false;
+        }
+        for (BluetoothLeBroadcastReceiveState state : mLeBroadcastAssistantProfile.getAllSources(
+                device)) {
+            if (state.getSourceDevice().equals(broadcastMetadata.getSourceDevice())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean isAudioSharingEnabled() {
+        return isUserAudioSharingEnabled(mContext) && mLeBroadcastAssistantProfile != null;
+    }
+
+    @VisibleForTesting
+    Map<String, AudioRouteItem> getActiveRoutes() {
+        return mCachedAudioRoutes;
     }
 }
