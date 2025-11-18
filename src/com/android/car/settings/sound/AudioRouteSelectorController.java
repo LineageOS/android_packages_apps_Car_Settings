@@ -417,7 +417,7 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
             } else if (mConnectingBroadcastDevices.contains(address)) {
                 pref.setSummary(R.string.audio_route_preference_connecting_broadcast);
             } else if (mDisconnectingBroadcastDevices.contains(address)) {
-                pref.setSummary(R.string.audio_route_preference_disconnecting_broadcast);
+                pref.setSummary(R.string.audio_route_preference_leaving_broadcast);
             }
         }
     }
