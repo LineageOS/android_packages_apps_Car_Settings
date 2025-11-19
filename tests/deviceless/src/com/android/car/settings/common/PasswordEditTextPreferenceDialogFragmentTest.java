@@ -42,6 +42,7 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.shadows.ShadowAlertDialog;
+import org.robolectric.shadows.ShadowLooper;
 
 /** Unit test for {@link EditTextPreferenceDialogFragment}. */
 @RunWith(AndroidJUnit4.class)
@@ -58,17 +59,16 @@ public class PasswordEditTextPreferenceDialogFragmentTest {
         mContext = InstrumentationRegistry.getInstrumentation().getContext();
         LayoutInflater.from(mContext).setFactory2(new CarUiLayoutInflaterFactory());
 
-        Robolectric.getForegroundThreadScheduler().pause();
         mTestActivityController = ActivityController.of(new BaseTestActivity());
         mTestActivity = mTestActivityController.get();
         mTestActivityController.setup();
 
         TestTargetFragment targetFragment = new TestTargetFragment();
         mTestActivity.launchFragment(targetFragment);
+	ShadowLooper.idleMainLooper();
         mPreference = new PasswordEditTextPreference(mContext);
         mPreference.setDialogLayoutResource(R.layout.preference_dialog_password_edittext);
         mPreference.setKey("key");
-        Robolectric.getForegroundThreadScheduler().unPause();
         targetFragment.getPreferenceScreen().addPreference(mPreference);
 
         mFragment = PasswordEditTextPreferenceDialogFragment.newInstance(mPreference.getKey());
@@ -78,6 +78,7 @@ public class PasswordEditTextPreferenceDialogFragmentTest {
     @Test
     public void onStart_inputTypeSetToPassword_shouldRevealShowPasswordCheckBoxUnchecked() {
         mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         CheckBox checkBox = dialog.findViewById(R.id.checkbox);
 
@@ -89,6 +90,7 @@ public class PasswordEditTextPreferenceDialogFragmentTest {
     public void onCheckBoxChecked_shouldRevealRawPassword() {
         String testPassword = "TEST_PASSWORD";
         mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         CheckBox checkBox = dialog.findViewById(R.id.checkbox);
         EditText editText = dialog.findViewById(android.R.id.edit);
@@ -105,6 +107,7 @@ public class PasswordEditTextPreferenceDialogFragmentTest {
     public void onCheckBoxUnchecked_shouldObscureRawPassword() {
         String testPassword = "TEST_PASSWORD";
         mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         CheckBox checkBox = dialog.findViewById(R.id.checkbox);
         EditText editText = dialog.findViewById(android.R.id.edit);

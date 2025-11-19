@@ -67,7 +67,7 @@ public class WifiRequestToggleActivityTest {
         ShadowCarWifiManager.setWifiState(WifiManager.WIFI_STATE_DISABLED);
 
         mActivityController = createActivityController(WifiManager.ACTION_REQUEST_ENABLE);
-        mActivityController.create().start();
+        mActivityController.setup();
 
         assertDialogShown();
     }
@@ -77,7 +77,7 @@ public class WifiRequestToggleActivityTest {
         ShadowCarWifiManager.setWifiState(WifiManager.WIFI_STATE_ENABLED);
 
         mActivityController = createActivityController(WifiManager.ACTION_REQUEST_DISABLE);
-        mActivityController.create().start();
+        mActivityController.setup();
 
         assertDialogShown();
     }

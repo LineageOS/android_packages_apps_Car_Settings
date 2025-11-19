@@ -56,6 +56,7 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowLooper;
 import org.robolectric.shadows.ShadowUserManager;
 import org.robolectric.util.ReflectionHelpers;
 
@@ -289,10 +290,12 @@ public class PairNewDevicePreferenceControllerTest {
     public void bluetoothAdapterStateChangedBroadcast_refreshesUi() {
         BluetoothAdapter.getDefaultAdapter().enable();
         mController.refreshUi();
+	ShadowLooper.idleMainLooper();
         assertThat(mPreference.getSummary().toString()).isEmpty();
 
         BluetoothAdapter.getDefaultAdapter().disable();
         mContext.sendBroadcast(new Intent(BluetoothAdapter.ACTION_STATE_CHANGED));
+	ShadowLooper.idleMainLooper();
 
         assertThat(mPreference.getSummary().toString()).isNotEmpty();
     }
