@@ -40,6 +40,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.shadows.ShadowDialog;
+import org.robolectric.shadows.ShadowLooper;
 
 /** Unit test for {@link BluetoothRenameDialogFragment}. */
 @RunWith(AndroidJUnit4.class)
@@ -56,6 +57,7 @@ public class BluetoothRenameDialogFragmentTest {
         BaseTestActivity activity = Robolectric.setupActivity(BaseTestActivity.class);
         mFragment = new TestBluetoothRenameDialogFragment();
         mFragment.show(activity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
         mDialog = (AlertDialog) ShadowDialog.getLatestDialog();
     }
 
@@ -147,6 +149,7 @@ public class BluetoothRenameDialogFragmentTest {
 
         editText.append(editStr);
         mDialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick();
+	ShadowLooper.idleMainLooper();
 
         assertThat(mFragment.getDeviceName()).isEqualTo(expectedName);
     }

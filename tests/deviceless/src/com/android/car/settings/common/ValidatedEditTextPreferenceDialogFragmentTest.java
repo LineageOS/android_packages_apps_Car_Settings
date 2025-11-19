@@ -43,6 +43,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowAlertDialog;
+import org.robolectric.shadows.ShadowLooper;
 import org.robolectric.shadows.ShadowWindow;
 
 /** Unit test for {@link EditTextPreferenceDialogFragment}. */
@@ -60,17 +61,16 @@ public class ValidatedEditTextPreferenceDialogFragmentTest {
         mContext = InstrumentationRegistry.getInstrumentation().getContext();
         LayoutInflater.from(mContext).setFactory2(new CarUiLayoutInflaterFactory());
 
-        Robolectric.getForegroundThreadScheduler().pause();
         mTestActivityController = ActivityController.of(new BaseTestActivity());
         mTestActivity = mTestActivityController.get();
         mTestActivityController.setup();
 
         TestTargetFragment targetFragment = new TestTargetFragment();
         mTestActivity.launchFragment(targetFragment);
+	ShadowLooper.idleMainLooper();
         mPreference = new ValidatedEditTextPreference(mContext);
         mPreference.setDialogLayoutResource(R.layout.preference_dialog_edittext);
         mPreference.setKey("key");
-        Robolectric.getForegroundThreadScheduler().unPause();
         targetFragment.getPreferenceScreen().addPreference(mPreference);
 
         mFragment = ValidatedEditTextPreferenceDialogFragment.newInstance(mPreference.getKey());
@@ -80,6 +80,7 @@ public class ValidatedEditTextPreferenceDialogFragmentTest {
     @Test
     public void noValidatorSet_shouldEnablePositiveButton_and_allowEnterToSubmit() {
         mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
 
         Button positiveButton =
                 ShadowAlertDialog.getLatestAlertDialog().getButton(DialogInterface.BUTTON_POSITIVE);
@@ -106,6 +107,7 @@ public class ValidatedEditTextPreferenceDialogFragmentTest {
                             }
                         });
         mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
 
         Button positiveButton =
                 ShadowAlertDialog.getLatestAlertDialog().getButton(DialogInterface.BUTTON_POSITIVE);
@@ -128,6 +130,7 @@ public class ValidatedEditTextPreferenceDialogFragmentTest {
                             }
                         });
         mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
 
         Button positiveButton =
                 ShadowAlertDialog.getLatestAlertDialog().getButton(DialogInterface.BUTTON_POSITIVE);
