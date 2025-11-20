@@ -806,7 +806,9 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="audio_route_preference_available_to_join"/>
       <item type="string" name="audio_route_preference_connecting_broadcast"/>
       <item type="string" name="audio_route_preference_connecting_device"/>
-      <item type="string" name="audio_route_preference_disconnecting_broadcast"/>
+      <item type="string" name="audio_route_preference_connecting_failed"/>
+      <item type="string" name="audio_route_preference_starting_broadcast"/>
+      <item type="string" name="audio_route_preference_leaving_broadcast"/>
       <item type="string" name="audio_route_preference_listening"/>
       <item type="string" name="audio_route_selector_title"/>
       <item type="string" name="audio_route_selector_toast"/>
