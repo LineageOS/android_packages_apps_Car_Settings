@@ -44,10 +44,6 @@ public class AudioRoutePreference extends CollapsibleSeekbarPreference {
         updateUi(item);
     }
 
-    public AudioRoutePreference(Context context) {
-        super(context);
-    }
-
     /**
      * Updates the UI of the preference based on the state of the given {@link AudioRouteItem}.
      *
@@ -109,33 +105,5 @@ public class AudioRoutePreference extends CollapsibleSeekbarPreference {
             default:
                 break;
         }
-    }
-
-    /**
-     * Sets the preference to a unicast active state.
-     *
-     * @param isLeCapable true if the device is LE capable, false otherwise.
-     */
-    public void setUnicastActive(boolean isLeCapable) {
-        setSummary(R.string.audio_route_preference_listening);
-        updateState(STATE_SELECTED, isLeCapable);
-    }
-
-    /** Sets the preference to a unicast inactive state. */
-    public void setUnicastInactive() {
-        setSummary(null);
-        updateState(STATE_UNSELECTED, false);
-    }
-
-    /** Sets the preference to a multicast active state. */
-    public void setMulticastActive() {
-        setSummary(R.string.audio_route_preference_listening);
-        updateState(STATE_MULTI_SELECTED, true);
-    }
-
-    /** Sets the preference to a multicast inactive state. */
-    public void setMulticastInactive() {
-        setSummary(R.string.audio_route_preference_available_to_join);
-        updateState(STATE_UNSELECTED, true);
     }
 }
