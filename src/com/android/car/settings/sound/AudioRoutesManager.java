@@ -840,7 +840,6 @@ public class AudioRoutesManager {
                 Collectors.toMap(CarAudioZoneConfigInfo::getName, Function.identity(),
                         (a, b) -> b.isSelected() ? b : a));
 
-        BluetoothLeBroadcastMetadata broadcastMetadata = getCurrentBroadcast();
         boolean isAudioSharingEnabled = isAudioSharingEnabled();
         AudioRouteItem.GlobalState globalState =
                 new AudioRouteItem.GlobalState.Builder().setIsAudioSharingEnabled(
@@ -892,8 +891,8 @@ public class AudioRoutesManager {
                     : new AudioRouteItem.AudioZoneConfigState.Builder().build();
             builder.setAudioZoneConfigState(audioZoneConfigState);
 
-            boolean isReceivingBroadcast = isReceivingBroadcast(device.getDevice(),
-                    broadcastMetadata);
+            boolean isReceivingBroadcast = isAudioSharingEnabled() && isReceivingBroadcast(
+                    device.getDevice(), getCurrentBroadcast());
 
             AudioRouteItem.BluetoothDeviceState bluetoothDeviceState =
                     new AudioRouteItem.BluetoothDeviceState.Builder()
@@ -962,6 +961,9 @@ public class AudioRoutesManager {
     }
 
     private BluetoothLeBroadcastMetadata getCurrentBroadcast() {
+        // do not check broadcast profiles before accessing broadcast metadata, as an NPE would
+        // indicate this method was called somewhere where BLE profile check should have been done
+        // prior to getting current broadcast
         List<BluetoothLeBroadcastMetadata> metadata = mLeBroadcastProfile.getAllBroadcastMetadata();
         if (metadata.isEmpty()) {
             return null;
