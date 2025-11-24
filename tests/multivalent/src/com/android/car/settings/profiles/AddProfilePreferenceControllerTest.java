@@ -34,6 +34,7 @@ import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -79,19 +80,30 @@ public class AddProfilePreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mLifecycleOwner = new TestLifecycleOwner();
-
         mCarUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
         mPreference = new CarUiPreference(mContext);
-        mPreferenceController = new AddProfilePreferenceController(mContext,
+    }
+
+    private void setupPreferenceController() {
+        Context context = new ContextWrapper(mContext) {
+            @Override
+            public Object getSystemService(String name) {
+                if (Context.USER_SERVICE.equals(name)) {
+                    return mUserManager;
+                }
+                return super.getSystemService(name);
+            }
+        };
+        mPreferenceController = new AddProfilePreferenceController(context,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
-        when(mContext.getSystemService(UserManager.class)).thenReturn(mUserManager);
-        mPreferenceController.setUserManager(mUserManager);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
     }
 
     @Test
     public void onCreate_userInDemoMode_showsExitRetailModeButton() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(true);
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -103,6 +115,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_userCanAddNewProfile_showsAddProfileButton() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_ADD_USER)).thenReturn(false);
 
@@ -116,6 +130,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_userCanAddNewProfile_showsAddProfileButton_zoneWrite() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_ADD_USER)).thenReturn(false);
 
@@ -131,6 +147,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_userCanAddNewProfile_showsAddProfileButton_zoneRead() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_ADD_USER)).thenReturn(false);
 
@@ -146,6 +164,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_userCanAddNewProfile_showsAddProfileButton_zoneHidden() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.hasUserRestriction(UserManager.DISALLOW_ADD_USER)).thenReturn(false);
 
@@ -159,6 +179,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_userRestrictedByDpmFromAddingNewProfileAndNotInDemo_availableForViewing() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
@@ -172,6 +194,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_availableForViewing_zoneWrite() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
@@ -187,6 +211,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_availableForViewing_zoneRead() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
@@ -202,6 +228,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_availableForViewing_zoneHidden() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
@@ -217,6 +245,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_userRestrictedByUmFromAddingNewProfileAndNotInDemo_buttonDisabled() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByUm(mUserManager, TEST_RESTRICTION, true);
@@ -229,6 +259,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_buttonDisabled_zoneWrite() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByUm(mUserManager, TEST_RESTRICTION, true);
@@ -243,6 +275,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_buttonDisabled_zoneRead() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByUm(mUserManager, TEST_RESTRICTION, true);
@@ -257,6 +291,8 @@ public class AddProfilePreferenceControllerTest {
 
     @Test
     public void onCreate_addingNewProfileAndNotInDemo_buttonDisabled_zoneHidden() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByUm(mUserManager, TEST_RESTRICTION, true);
@@ -277,6 +313,8 @@ public class AddProfilePreferenceControllerTest {
         Assume.assumeFalse(
                 "Skipping test on Robolectric b/394651425",
                 RobolectricTestUtils.isRunningOnRobolectric());
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByUm(mUserManager, TEST_RESTRICTION, false);
@@ -293,6 +331,8 @@ public class AddProfilePreferenceControllerTest {
     @Test
     @UiThreadTest
     public void disabledClick_restrictedByDpm_dialog() {
+        setupPreferenceController();
+        mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
         when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
