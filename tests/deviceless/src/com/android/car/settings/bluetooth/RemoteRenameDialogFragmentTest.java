@@ -47,6 +47,7 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowDialog;
+import org.robolectric.shadows.ShadowLooper;
 import org.robolectric.util.ReflectionHelpers;
 
 /** Unit test for {@link RemoteRenameDialogFragment}. */
@@ -106,6 +107,7 @@ public class RemoteRenameDialogFragmentTest {
 
         editText.setText(NAME_UPDATED);
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+	ShadowLooper.idleMainLooper();
 
         verify(mCachedDevice).setName(NAME_UPDATED);
     }
@@ -113,6 +115,7 @@ public class RemoteRenameDialogFragmentTest {
     private AlertDialog showDialog(RemoteRenameDialogFragment fragment) {
         BaseTestActivity activity = Robolectric.setupActivity(BaseTestActivity.class);
         fragment.show(activity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
         return (AlertDialog) ShadowDialog.getLatestDialog();
     }
 }

@@ -46,6 +46,7 @@ import androidx.preference.TwoStatePreference;
 import androidx.test.annotation.UiThreadTest;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
@@ -232,7 +233,11 @@ public class NotificationAccessPreferenceControllerTest {
         dialogFragment.onClick(/* dialog= */ null, DialogInterface.BUTTON_POSITIVE);
 
         PollingCheck.waitFor(
-                () -> mPreferenceController.mAsyncTask.getStatus() == AsyncTask.Status.FINISHED);
+                () -> {
+                    InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+                    return mPreferenceController.mAsyncTask.getStatus() ==
+                            AsyncTask.Status.FINISHED;
+                });
 
         verify(mNotificationManager).removeAutomaticZenRules(any());
     }

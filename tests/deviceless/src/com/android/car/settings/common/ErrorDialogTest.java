@@ -37,6 +37,7 @@ import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.shadows.ShadowLooper;
 
 /** Tests for ErrorDialog. */
 @RunWith(AndroidJUnit4.class)
@@ -55,16 +56,19 @@ public class ErrorDialogTest {
 
         mTestFragment = new Fragment();
         mTestActivity.launchFragment(mTestFragment);
+	ShadowLooper.idleMainLooper();
     }
 
     @Test
     public void testOkDismissesDialog() {
         ErrorDialog dialog = ErrorDialog.show(mTestFragment, R.string.delete_user_error_title);
+	ShadowLooper.idleMainLooper();
 
         assertThat(isDialogShown()).isTrue(); // Dialog is shown.
 
         // Invoke cancel.
         DialogTestUtils.clickPositiveButton(dialog);
+	ShadowLooper.idleMainLooper();
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
@@ -74,6 +78,7 @@ public class ErrorDialogTest {
     public void testErrorDialogSetsTitle() {
         int testTitleId = R.string.add_user_error_title;
         ErrorDialog dialog = ErrorDialog.show(mTestFragment, testTitleId);
+	ShadowLooper.idleMainLooper();
 
         assertThat(DialogTestUtils.getTitle(dialog)).isEqualTo(application.getString(testTitleId));
     }

@@ -29,7 +29,6 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
@@ -112,6 +111,21 @@ public class ExtraSettingsLoaderTest {
         when(mPm.queryIntentActivitiesAsUser(eq(intent), eq(PackageManager.GET_META_DATA),
                 anyInt())).thenReturn(resolveInfoList);
         return loader.loadPreferences(intent);
+    }
+
+    private ExtraSettingsLoader createLoaderWithBlocklist(String[] blocklist) {
+        Resources spiedResources = spy(mContext.getResources());
+        doReturn(blocklist).when(spiedResources).getStringArray(
+                eq(R.array.config_extra_settings_blocklist));
+        Context contextWithMockResources = new ContextWrapper(mContext) {
+            @Override
+            public Resources getResources() {
+                return spiedResources;
+            }
+        };
+        ExtraSettingsLoader loader = new ExtraSettingsLoader(contextWithMockResources);
+        loader.setPackageManager(mPm);
+        return loader;
     }
 
     @Test
@@ -279,12 +293,9 @@ public class ExtraSettingsLoaderTest {
 
     @Test
     public void testLoadPreference_activityInBlocklist_notLoaded() {
-        // Mock resources to mock the blocklist.
-        Resources mockResources = mock(Resources.class);
         String blockedActivityName = "com.android.car.settings.BlockedActivity";
-        when(mockResources.getStringArray(eq(R.array.config_extra_settings_blocklist)))
-                .thenReturn(new String[]{blockedActivityName});
-        doReturn(mockResources).when(mContext).getResources();
+        ExtraSettingsLoader loader = createLoaderWithBlocklist(new String[]{blockedActivityName});
+
         // Create a ResolveInfo for the blocked activity.
         Bundle bundle = new Bundle();
         bundle.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE);
@@ -294,7 +305,7 @@ public class ExtraSettingsLoaderTest {
 
         // Execute and assert that the preference is not loaded.
         Map<Preference, Bundle> preferenceToBundleMap =
-                executeLoadPreferences(mExtraSettingsLoader, Collections.singletonList(resolveInfo),
+                executeLoadPreferences(loader, Collections.singletonList(resolveInfo),
                         FAKE_CATEGORY);
 
         assertThat(preferenceToBundleMap).isEmpty();
@@ -302,12 +313,9 @@ public class ExtraSettingsLoaderTest {
 
     @Test
     public void testLoadPreference_activityNotInBlocklist_isLoaded() {
-        // Mock resources to mock the blocklist.
-        Resources mockResources = mock(Resources.class);
         String blockedActivityName = "com.android.car.settings.BlockedActivity";
-        when(mockResources.getStringArray(eq(R.array.config_extra_settings_blocklist)))
-                .thenReturn(new String[]{blockedActivityName});
-        doReturn(mockResources).when(mContext).getResources();
+        ExtraSettingsLoader loader = createLoaderWithBlocklist(new String[]{blockedActivityName});
+
         // Create a ResolveInfo for an activity that is not blocked.
         String unblockedActivityName = "com.android.car.settings.UnblockedActivity";
         Bundle bundle = new Bundle();
@@ -318,7 +326,7 @@ public class ExtraSettingsLoaderTest {
 
         // Execute and assert that the preference is loaded.
         Map<Preference, Bundle> preferenceToBundleMap =
-                executeLoadPreferences(mExtraSettingsLoader, Collections.singletonList(resolveInfo),
+                executeLoadPreferences(loader, Collections.singletonList(resolveInfo),
                         FAKE_CATEGORY);
 
         assertThat(preferenceToBundleMap).hasSize(1);

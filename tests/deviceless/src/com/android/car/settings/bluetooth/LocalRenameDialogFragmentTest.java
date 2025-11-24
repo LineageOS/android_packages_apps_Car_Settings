@@ -43,6 +43,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowDialog;
+import org.robolectric.shadows.ShadowLooper;
 
 /** Unit test for {@link LocalRenameDialogFragment}. */
 @RunWith(AndroidJUnit4.class)
@@ -94,6 +95,7 @@ public class LocalRenameDialogFragmentTest {
         Intent intent = new Intent(BluetoothAdapter.ACTION_LOCAL_NAME_CHANGED);
         intent.putExtra(EXTRA_LOCAL_NAME, NAME_UPDATED);
         RuntimeEnvironment.application.sendBroadcast(intent);
+	ShadowLooper.idleMainLooper();
 
         assertThat(editText.getText().toString()).isEqualTo(NAME_UPDATED);
         assertThat(dialog.getButton(DialogInterface.BUTTON_POSITIVE).isEnabled()).isFalse();
@@ -107,6 +109,7 @@ public class LocalRenameDialogFragmentTest {
 
         editText.setText(NAME_UPDATED);
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+	ShadowLooper.idleMainLooper();
 
         assertThat(BluetoothAdapter.getDefaultAdapter().getName()).isEqualTo(NAME_UPDATED);
     }
@@ -114,6 +117,7 @@ public class LocalRenameDialogFragmentTest {
     private AlertDialog showDialog(LocalRenameDialogFragment fragment) {
         BaseTestActivity activity = Robolectric.setupActivity(BaseTestActivity.class);
         fragment.show(activity.getSupportFragmentManager(), /* tag= */ null);
+	ShadowLooper.idleMainLooper();
         return (AlertDialog) ShadowDialog.getLatestDialog();
     }
 

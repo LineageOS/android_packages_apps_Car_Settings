@@ -54,7 +54,7 @@ public class AudioRouteSelectionDialogFragment extends CarUiDialogFragment {
         for (String address : addressList) {
             CarUiRadioButtonListItem item = new CarUiRadioButtonListItem();
             item.setTitle(mAudioRoutesManager.getDeviceName(address));
-            item.setOnItemClickedListener(l -> mAudioRoutesManager.requestRouteSwitch(address));
+            item.setOnItemClickedListener(l -> mAudioRoutesManager.setUnicast(address));
             itemList.add(item);
             if (address.equals(mAudioRoutesManager.getOutputAddress())) {
                 item.setChecked(true);

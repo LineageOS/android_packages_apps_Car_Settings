@@ -46,6 +46,7 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowLooper;
 import org.robolectric.shadows.ShadowUserManager;
 
 /** Unit test for {@link BluetoothNamePreferenceController}. */
@@ -117,6 +118,7 @@ public class BluetoothNamePreferenceControllerTest {
         BluetoothAdapter.getDefaultAdapter().setName(NAME_UPDATED);
         RuntimeEnvironment.application.sendBroadcast(
                 new Intent(BluetoothAdapter.ACTION_LOCAL_NAME_CHANGED));
+        ShadowLooper.idleMainLooper();
 
         assertThat(mPreference.getSummary()).isEqualTo(NAME_UPDATED);
     }
