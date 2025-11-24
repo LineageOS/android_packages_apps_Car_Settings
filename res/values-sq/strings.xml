@@ -275,9 +275,11 @@
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Luaj media në"</string>
     <string name="audio_route_preference_listening" msgid="2187464983808020936">"Po dëgjon"</string>
     <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"Ofrohet për t\'u bashkuar"</string>
-    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"Po lidhet me pajisjen"</string>
-    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"Po lidhet me ndarjen e audios"</string>
-    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"Po shkëputet nga ndarja e audios"</string>
+    <string name="audio_route_preference_connecting_device" msgid="2216441962040307488">"Po lidhet..."</string>
+    <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Transmetimi po fillon..."</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Po lidhet..."</string>
+    <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"Lidhja me %1$s dështoi"</string>
+    <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Po largohesh..."</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Media po kalon te %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Ndriçimi"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Rregullo ekranin për nivelin e ulët të dritës"</string>

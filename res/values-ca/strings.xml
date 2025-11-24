@@ -275,9 +275,11 @@
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Reprodueix el contingut multimèdia a"</string>
     <string name="audio_route_preference_listening" msgid="2187464983808020936">"S\'està escoltant"</string>
     <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"Disponible per unir-t\'hi"</string>
-    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"S\'està connectant al dispositiu"</string>
-    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"S\'està connectant a la compartició d\'àudio"</string>
-    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"Desconnectant de la compartició d\'àudio"</string>
+    <string name="audio_route_preference_connecting_device" msgid="2216441962040307488">"S\'està connectant..."</string>
+    <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"S\'està iniciant la difusió..."</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"S\'està connectant..."</string>
+    <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"No s\'ha pogut connectar a %1$s"</string>
+    <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"S\'està sortint..."</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"S\'està canviant el contingut multimèdia a %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Brillantor"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Ajusta la pantalla per a poca llum"</string>
