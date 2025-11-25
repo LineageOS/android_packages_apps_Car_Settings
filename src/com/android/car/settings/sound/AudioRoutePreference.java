@@ -60,6 +60,9 @@ public class AudioRoutePreference extends CollapsibleSeekbarPreference {
         boolean showAudioSharing =
                 item.getGlobalState().isAudioSharingEnabled() && item.isBluetoothAudioRoute();
         setMultiSelectAvailable(showAudioSharing);
+        setMax(item.getVolumeState().getMaxVolume());
+        setMin(item.getVolumeState().getMinVolume());
+        setValue(item.getVolumeState().getCurrentVolume());
 
         switch (item.getState()) {
             case UNICAST_READY, BROADCAST_READY:
@@ -73,12 +76,14 @@ public class AudioRoutePreference extends CollapsibleSeekbarPreference {
             case UNICAST_ACTIVE:
                 updateState(STATE_SELECTED, /* showActionButton= */ false);
                 setSummary(R.string.audio_route_preference_listening);
+                setShowSeekerBar(true);
                 break;
             case MULTICAST_READY_UNICAST_READY:
                 updateState(STATE_UNSELECTED, /* showActionButton= */ true);
                 setSummary(R.string.audio_route_preference_available_to_join);
                 break;
             case MULTICAST_READY_UNICAST_ACTIVE:
+                setShowSeekerBar(true);
                 break;
             case STARTING_BROADCAST:
                 updateState(item.getAudioZoneConfigState().isSelected() ? STATE_SELECTED
@@ -93,6 +98,7 @@ public class AudioRoutePreference extends CollapsibleSeekbarPreference {
             case MULTICAST_ACTIVE:
                 updateState(STATE_MULTI_SELECTED,  /* showActionButton= */ true);
                 setSummary(R.string.audio_route_preference_listening);
+                setShowSeekerBar(true);
                 break;
             case LEAVING_BROADCAST:
                 updateState(STATE_MULTI_SELECTED, /* showActionButton= */ false);
