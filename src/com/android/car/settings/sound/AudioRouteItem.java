@@ -48,33 +48,35 @@ public class AudioRouteItem {
 
     /** An enum to represent the state of an audio route. */
     public enum State {
+        /** The state is not specified. */
+        UNSPECIFIED(0),
         /** The audio route has been created. */
-        CREATED(0),
+        CREATED(1),
         /** The audio route is ready to be selected for unicast. */
-        UNICAST_READY(1),
+        UNICAST_READY(2),
         /** The audio route is selected for unicast. */
-        UNICAST_ACTIVE(2),
+        UNICAST_ACTIVE(3),
         /** The audio route is ready to be selected for unicast or multicast. */
-        MULTICAST_READY_UNICAST_READY(3),
+        MULTICAST_READY_UNICAST_READY(4),
         /**
          * The audio route is selected for unicast while ready to be selected (switched) for
          * multicast.
          */
-        MULTICAST_READY_UNICAST_ACTIVE(4),
+        MULTICAST_READY_UNICAST_ACTIVE(5),
         /** The audio route is selected for multicast (LE Audio sharing). */
-        MULTICAST_ACTIVE(5),
+        MULTICAST_ACTIVE(6),
         /** The audio route is in the process of starting unicast streaming. */
-        STARTING_UNICAST(6),
+        STARTING_UNICAST(7),
         /** The audio route is in the process of joining a broadcast. */
-        JOINING_BROADCAST(7),
+        JOINING_BROADCAST(8),
         /** The audio route is in the process of starting a broadcast. */
-        STARTING_BROADCAST(8),
+        STARTING_BROADCAST(9),
         /** The audio route is in the process of leaving a broadcast. */
-        LEAVING_BROADCAST(9),
+        LEAVING_BROADCAST(10),
         /** The audio route is ready for broadcast (multicast) streaming. */
-        BROADCAST_READY(10),
+        BROADCAST_READY(11),
         /** The audio route is actively broadcast (multicast) streaming. */
-        BROADCAST_ACTIVE(11);
+        BROADCAST_ACTIVE(12);
 
 
         private final int mValue;
