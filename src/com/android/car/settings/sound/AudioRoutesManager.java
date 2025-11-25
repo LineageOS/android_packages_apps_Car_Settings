@@ -23,6 +23,7 @@ import static android.media.AudioDeviceInfo.TYPE_BLE_BROADCAST;
 import static android.media.AudioDeviceInfo.TYPE_BLE_HEADSET;
 
 import static com.android.car.settings.bluetooth.audiosharing.BaseAudioSharingPreferenceController.isUserAudioSharingEnabled;
+import static com.android.car.settings.sound.AudioRouteItem.Command.CANCEL_STARTING_UNICAST;
 import static com.android.car.settings.sound.AudioRouteItem.Command.CHECK_CONDITIONS;
 import static com.android.car.settings.sound.AudioRouteItem.Command.JOIN_BROADCAST;
 import static com.android.car.settings.sound.AudioRouteItem.Command.LEAVE_BROADCAST;
@@ -325,17 +326,20 @@ public class AudioRoutesManager {
         }
     }
 
-    private void cancelStartingUnicast() {
-        mCachedAudioRoutes.values().stream()
-                .filter(item ->
-                        item.getState() == STARTING_UNICAST
-                                && (Objects.equals(item.getAddress(), mPendingActiveAddress)
-                                || Objects.equals(item.getAddress(),
-                                mPendingSelectAddress)))
-                .findFirst().ifPresent(item -> {
-                    LOG.d("[cancelStartingUnicast] " + item);
-                    requestAudioRouteEvent(new AudioRouteEvent(item.getAddress(), RESET));
-                });
+    @VisibleForTesting
+    void cancelStartingUnicast() {
+        Stream<AudioRouteEvent> cancelStream = mCachedAudioRoutes.values().stream()
+                .filter(item -> item.getState() == STARTING_UNICAST
+                        && (Objects.equals(item.getAddress(), mPendingActiveAddress)
+                        || Objects.equals(item.getAddress(), mPendingSelectAddress)))
+                .findFirst()
+                .stream()
+                .map(item -> new AudioRouteEvent(item.getAddress(), CANCEL_STARTING_UNICAST));
+
+        Stream<AudioRouteEvent> resetStream = mCachedAudioRoutes.values().stream()
+                .map(item -> new AudioRouteEvent(item.getAddress(), RESET));
+
+        requestAudioRouteEvents(Stream.concat(cancelStream, resetStream).toList());
     }
 
     private String zoneConfigInfosToString(List<CarAudioZoneConfigInfo> configs) {
@@ -375,26 +379,10 @@ public class AudioRoutesManager {
                     item -> new AudioRouteEvent(item.getAddress(), CHECK_CONDITIONS)).toList();
             processAudioRouteEvents(events, newAudioRouteItems);
         } else {
-            // If there is no self-driven state, that means there is no pending user action. In this
-            // condition, we just change the selected audio route as the Car Service
-            // indicates it.
-            Optional<AudioRouteEvent> stopEvent = newAudioRouteItems.values().stream()
-                    .filter(item -> !item.getAudioZoneConfigState().isSelected()
-                            && item.getState().isActiveState())
-                    .findFirst()
-                    .map(item -> new AudioRouteEvent(item.getAddress(), RESET));
-
-            Optional<AudioRouteEvent> startEvent = newAudioRouteItems.values().stream()
-                    .filter(item -> item.getAudioZoneConfigState().isSelected()
-                            && !item.getState().isActiveState())
-                    .findFirst()
-                    .map(item -> new AudioRouteEvent(item.getAddress(), START_UNICAST));
-
-            List<AudioRouteEvent> events = Stream.of(stopEvent, startEvent).flatMap(
-                    Optional::stream).toList();
-            if (!events.isEmpty()) {
-                processAudioRouteEvents(events, newAudioRouteItems);
-            }
+            // If not in a self-driven state (no pending user action), mirror the Car Audio.
+            List<AudioRouteEvent> events = newAudioRouteItems.values().stream().map(
+                    item -> new AudioRouteEvent(item.getAddress(), RESET)).toList();
+            processAudioRouteEvents(events, newAudioRouteItems);
         }
 
         applyAndNotifyNewAudioRouteItems(newAudioRouteItems, forceNotify);
@@ -533,7 +521,7 @@ public class AudioRoutesManager {
                     break;
 
                 case STARTING_UNICAST:
-                    if (command == RESET) {
+                    if (command == CANCEL_STARTING_UNICAST) {
                         newState = CREATED;
                         addNewCheckEventWithNewState = true;
                         mPendingActiveAddress = null;
@@ -588,23 +576,6 @@ public class AudioRoutesManager {
                     }
 
                     chainEvents.addAll(audioRouteItems.values().stream()
-                            .filter(item -> item.getState() == MULTICAST_READY_UNICAST_ACTIVE)
-                            .map(item -> new AudioRouteEvent(item.getAddress(), RESET))
-                            .toList());
-                    chainEvents.addAll(audioRouteItems.values().stream()
-                            .filter(item -> item.getState() == UNICAST_ACTIVE)
-                            .map(item -> new AudioRouteEvent(item.getAddress(), RESET))
-                            .toList());
-                    chainEvents.addAll(audioRouteItems.values().stream()
-                            .filter(item -> item.getState() == UNICAST_READY)
-                            .map(item -> new AudioRouteEvent(item.getAddress(), RESET))
-                            .toList());
-                    chainEvents.addAll(audioRouteItems.values().stream()
-                            .filter(item -> item.getState() == MULTICAST_READY_UNICAST_READY)
-                            .map(item -> new AudioRouteEvent(item.getAddress(), RESET))
-                            .toList());
-                    chainEvents.addAll(audioRouteItems.values().stream()
-                            .filter(item -> item.getState() == BROADCAST_ACTIVE)
                             .map(item -> new AudioRouteEvent(item.getAddress(), RESET))
                             .toList());
                     // Stop broadcast if unicast starts.

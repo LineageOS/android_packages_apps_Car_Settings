@@ -138,6 +138,8 @@ public class AudioRouteItem {
         LEAVE_BROADCAST,
         /** Command to reset the state. */
         RESET,
+        /** Command to cancel STARTING_UNICAST state. */
+        CANCEL_STARTING_UNICAST,
     }
 
     /** A data class to encapsulate the volume state of an audio route. */
