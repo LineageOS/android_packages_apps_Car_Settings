@@ -123,12 +123,24 @@ public class MobileNetworkFragmentTest {
     }
 
     private SubscriptionInfo createSubscriptionInfo(int subId, String name) {
-        SubscriptionInfo subInfo = new SubscriptionInfo(subId, /* iccId= */ "",
-                /* simSlotIndex= */ 0, /* displayName= */ name, /* carrierName= */ "",
-                /* nameSource= */ 0, /* iconTint= */ 0, /* number= */ "",
-                /* roaming= */ 0, /* icon= */ null, /* mcc= */ "", /* mnc= */ "",
-                /* countryIso= */ "", /* isEmbedded= */ false,
-                /* accessRules= */ null, /* cardString= */ "");
+        SubscriptionInfo subInfo = new SubscriptionInfo.Builder()
+                .setId(subId)
+                .setIccId("")
+                .setSimSlotIndex(0)
+                .setDisplayName(name)
+                .setCarrierName("")
+                .setDisplayNameSource(0)
+                .setIconTint(0)
+                .setNumber("")
+                .setDataRoaming(0)
+                .setIcon(null)
+                .setMcc("")
+                .setMnc("")
+                .setCountryIso("")
+                .setEmbedded(false)
+                .setNativeAccessRules(null)
+                .setCardString("")
+                .build();
         return subInfo;
     }
 
