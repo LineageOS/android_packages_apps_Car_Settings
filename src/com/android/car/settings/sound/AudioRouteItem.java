@@ -182,12 +182,27 @@ public class AudioRouteItem {
                     mMinVolume, mMaxVolume, mCurrentVolume, mUseVolumeControlProfile);
         }
 
+        /** Creates a new {@link Builder} from this {@link VolumeState}. */
+        public Builder toBuilder() {
+            return new Builder(this);
+        }
+
         /** Builder for {@link VolumeState}. */
         public static class Builder {
             private int mMinVolume = 0;
             private int mMaxVolume = 0;
             private int mCurrentVolume = 0;
             private boolean mUseVolumeControlProfile = false;
+
+            public Builder() {}
+
+            /** Constructor for {@link VolumeState.Builder} from a {@link VolumeState}. */
+            public Builder(VolumeState volumeState) {
+                mMinVolume = volumeState.getMinVolume();
+                mMaxVolume = volumeState.getMaxVolume();
+                mCurrentVolume = volumeState.getCurrentVolume();
+                mUseVolumeControlProfile = volumeState.useVolumeControlProfile();
+            }
 
             /** Sets the minimum volume. */
             public Builder setMinVolume(int minVolume) {
