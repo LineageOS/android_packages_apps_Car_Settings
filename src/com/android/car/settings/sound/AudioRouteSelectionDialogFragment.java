@@ -40,6 +40,8 @@ public class AudioRouteSelectionDialogFragment extends CarUiDialogFragment {
     private AlertDialog mAlertDialog;
     private AudioRoutesManager mAudioRoutesManager;
     private int mUsage;
+    private CarUiRadioButtonListItemAdapter mAdapter;
+    private final List<CarUiRadioButtonListItem> mItemList = new ArrayList<>();
 
     public AudioRouteSelectionDialogFragment(Context context) {
         mContext = context;
@@ -48,28 +50,43 @@ public class AudioRouteSelectionDialogFragment extends CarUiDialogFragment {
     }
 
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        List<String> addressList = mAudioRoutesManager.getAudioRouteList();
-        List<CarUiRadioButtonListItem> itemList = new ArrayList<>();
-        for (String address : addressList) {
-            CarUiRadioButtonListItem item = new CarUiRadioButtonListItem();
-            item.setTitle(mAudioRoutesManager.getDeviceName(address));
-            item.setOnItemClickedListener(l -> mAudioRoutesManager.setUnicast(address));
-            itemList.add(item);
-            if (address.equals(mAudioRoutesManager.getOutputAddress())) {
-                item.setChecked(true);
-            }
+    public void onDestroy() {
+        super.onDestroy();
+        if (mAudioRoutesManager != null) {
+            mAudioRoutesManager.tearDown();
         }
-        CarUiRadioButtonListItemAdapter adapter = new CarUiRadioButtonListItemAdapter(itemList);
+    }
+
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        mAudioRoutesManager.setAudioRoutesUpdateListener(this::onRoutesUpdated);
+        mAdapter = new CarUiRadioButtonListItemAdapter(mItemList);
 
         AlertDialogBuilder builder = new AlertDialogBuilder(requireActivity())
                 .setTitle(mContext.getString(R.string.audio_route_selector_title))
-                .setSingleChoiceItems(adapter)
+                .setSingleChoiceItems(mAdapter)
                 .setNeutralButton(R.string.audio_route_dialog_neutral_button_text,
                         /* listener */ null);
         mAlertDialog = builder.create();
 
         return mAlertDialog;
+    }
+
+    private void onRoutesUpdated(List<AudioRouteItem> routes) {
+        mItemList.clear();
+        for (AudioRouteItem route : routes) {
+            String address = route.getAddress();
+            CarUiRadioButtonListItem item = new CarUiRadioButtonListItem();
+            item.setTitle(mAudioRoutesManager.getDeviceName(address));
+            item.setOnItemClickedListener(l -> mAudioRoutesManager.setUnicast(address));
+            if (address.equals(mAudioRoutesManager.getOutputAddress())) {
+                item.setChecked(true);
+            }
+            mItemList.add(item);
+        }
+        if (mAdapter != null) {
+            mAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override
