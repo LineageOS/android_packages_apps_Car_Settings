@@ -85,6 +85,11 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
             if (item.getState().isBroadcastState()) continue;
             AudioRoutePreference pref = new AudioRoutePreference(getContext(), item);
             pref.setListener(this);
+            pref.setOnPreferenceChangeListener((preference, newValue) -> {
+                int volume = (Integer) newValue;
+                mRouteManager.setVolume(item.getAddress(), volume);
+                return true;
+            });
             getPreference().addPreference(pref);
         }
     }

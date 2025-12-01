@@ -177,7 +177,27 @@ public class AudioRouteSelectorControllerTest {
         mPreferenceController.onCreate(mLifecycleOwner);
         mPreferenceController.onMultiSelected(BT_DEVICE_ADDRESS,
                 CollapsibleSeekbarPreference.STATE_UNSELECTED);
-        verify(mAudioRoutesManager).joinBroadcast(BT_DEVICE_ADDRESS);
+    }
+
+    @Test
+    @EnableFlags(Flags.FLAG_NEW_AUDIO_ROUTING_UI)
+    public void onPreferenceChange_setVolume() {
+        mPreferenceController.onCreate(mLifecycleOwner);
+        mPreferenceController.onStart(mLifecycleOwner);
+        verify(mAudioRoutesManager).setAudioRoutesUpdateListener(mListenerCaptor.capture());
+        AudioRoutesManager.AudioRoutesUpdateListener capturedListener = mListenerCaptor.getValue();
+        when(mAudioDeviceAttributes.getName()).thenReturn(AUDIO_DEVICE_NAME);
+        when(mAudioDeviceAttributes.getAddress()).thenReturn(AUDIO_DEVICE_ADDRESS);
+        AudioRouteItem audioDevice = new AudioRouteItem.Builder(mAudioDeviceAttributes)
+                .setAudioZoneConfigState(new AudioRouteItem.AudioZoneConfigState.Builder()
+                        .build()
+                ).build();
+        capturedListener.onAudioRoutesUpdated(List.of(audioDevice));
+        AudioRoutePreference preference = (AudioRoutePreference) mPreference.getPreference(0);
+
+        preference.getOnPreferenceChangeListener().onPreferenceChange(preference, 50);
+
+        verify(mAudioRoutesManager).setVolume(AUDIO_DEVICE_ADDRESS, 50);
     }
 
     @Test

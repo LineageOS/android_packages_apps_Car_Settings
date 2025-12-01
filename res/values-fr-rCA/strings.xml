@@ -275,9 +275,11 @@
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Faire jouer du contenu multimédia sur"</string>
     <string name="audio_route_preference_listening" msgid="2187464983808020936">"Écoute en cours…"</string>
     <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"Disponible pour se joindre à l\'audio"</string>
-    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"Connexion à l\'appareil en cours…"</string>
-    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"Connexion au partage audio en cours…"</string>
-    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"Déconnexion du partage audio en cours…"</string>
+    <string name="audio_route_preference_connecting_device" msgid="2216441962040307488">"Connexion en cours…"</string>
+    <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Démarrage de la diffusion en cours…"</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Connexion en cours…"</string>
+    <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"Échec de la connexion à %s"</string>
+    <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Déconnexion en cours…"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Changement du contenu multimédia vers %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Luminosité"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Réglez l\'écran en fonction de la faible luminosité"</string>
@@ -330,7 +332,7 @@
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilomètres par litre"</string>
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Litres aux cent kilomètres"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Applis et notifications"</string>
-    <string name="all_applications" msgid="7798210477486822168">"Afficher toutes les applications"</string>
+    <string name="all_applications" msgid="7798210477486822168">"Afficher toutes les applis"</string>
     <string name="default_applications" msgid="1558183275638697087">"Applis par défaut"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"Applications altérant la performance"</string>
     <string name="app_permissions" msgid="32799922508313948">"Autorisations des applis"</string>

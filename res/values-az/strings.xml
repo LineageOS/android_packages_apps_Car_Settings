@@ -275,9 +275,11 @@
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Medianı oxudun"</string>
     <string name="audio_route_preference_listening" msgid="2187464983808020936">"Dinlənilir"</string>
     <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"Qoşulmaq üçün əlçatandır"</string>
-    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"Cihaza qoşulur"</string>
-    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"Audio paylaşımına qoşulur"</string>
-    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"Audio paylaşımından ayrılır"</string>
+    <string name="audio_route_preference_connecting_device" msgid="2216441962040307488">"Əlaqələndirilir…"</string>
+    <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Yayım başladılır..."</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Əlaqələndirilir…"</string>
+    <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"%1$s cihazı ilə əlaqələndirilmədi"</string>
+    <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Tərk edilir…"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Media %1$s olaraq dəyişdirilir"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Parlaqlıq"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Ekran parlaqlığını zəif işığa uyğunlaşdırın"</string>

@@ -275,9 +275,11 @@
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Medien abspielen über"</string>
     <string name="audio_route_preference_listening" msgid="2187464983808020936">"Hört zu"</string>
     <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"Verbindung möglich"</string>
-    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"Verbindung mit Gerät wird hergestellt"</string>
-    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"Verbindung mit Audiofreigabe wird hergestellt"</string>
-    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"Verbindung mit Audiofreigabe wird getrennt"</string>
+    <string name="audio_route_preference_connecting_device" msgid="2216441962040307488">"Verbindung wird hergestellt…"</string>
+    <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Übertragung wird gestartet…"</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Verbindung wird hergestellt…"</string>
+    <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"Verbindung zu %s fehlgeschlagen"</string>
+    <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Wird verlassen…"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Wechsel des Mediums zu %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Helligkeit"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Bildschirm für geringe Helligkeit anpassen"</string>

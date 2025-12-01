@@ -275,9 +275,11 @@
     <string name="audio_route_selector_title" msgid="9137648859313120159">"Медиафайл ойнатылатын құрылғы:"</string>
     <string name="audio_route_preference_listening" msgid="2187464983808020936">"Айта беріңіз"</string>
     <string name="audio_route_preference_available_to_join" msgid="5063798317104044676">"Қосылуға болады"</string>
-    <string name="audio_route_preference_connecting_device" msgid="6468937956684629305">"Құрылғыға қосылып жатыр"</string>
-    <string name="audio_route_preference_connecting_broadcast" msgid="6803306398476638059">"Аудио бөлісуге қосылып жатыр"</string>
-    <string name="audio_route_preference_disconnecting_broadcast" msgid="5152769561912051962">"Аудио бөлісуден ажыратылып жатыр"</string>
+    <string name="audio_route_preference_connecting_device" msgid="2216441962040307488">"Қосылып жатыр…"</string>
+    <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Аудио тарату басталып жатыр…"</string>
+    <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Қосылып жатыр…"</string>
+    <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"%s құрылғысына қосылу мүмкін болмады"</string>
+    <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Шығып жатырсыз…"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Медиафайл %1$s аудио шығысына ауысып жатыр."</string>
     <string name="display_brightness" msgid="5718970880488110840">"Жарықтық"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Экранды көмескі жарыққа реттеу"</string>
@@ -434,7 +436,7 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant және басқа қолданбалар үшін"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# қолданба өнімділікке әсер етеді.}other{# қолданба өнімділікке әсер етеді.}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Жүйеге және басқа параметрлерге"</string>
-    <string name="special_access" msgid="5730278220917123811">"Қолданба пайдалануға арналған арнайы рұқсат"</string>
+    <string name="special_access" msgid="5730278220917123811">"Арнайы қолданба рұқсаты"</string>
     <string name="show_system" msgid="4401355756969485287">"Жүйені көрсету"</string>
     <string name="hide_system" msgid="8845453295584638040">"Жүйені жасыру"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Жүйелік қолданбаларды жасыру"</string>

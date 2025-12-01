@@ -45,10 +45,18 @@ import org.mockito.MockitoAnnotations;
 @RunWith(AndroidJUnit4.class)
 public class AudioRoutePreferenceTest {
     private Context mContext;
+    private static final int MIN_VOLUME = 0;
+    private static final int MAX_VOLUME = 100;
+    private static final int CURRENT_VOLUME = 50;
+
     private PreferenceViewHolder mViewHolder;
     private AudioRoutePreference mPreference;
     @Mock
     private AudioDeviceAttributes mAudioDeviceAttributes;
+    @Mock
+    private AudioRouteItem.VolumeState mVolumeState;
+    @Mock
+    private AudioRouteItem.GlobalState mGlobalState;
 
     @Before
     public void setUp() {
@@ -56,6 +64,9 @@ public class AudioRoutePreferenceTest {
         when(mAudioDeviceAttributes.getName()).thenReturn("Test device name");
         when(mAudioDeviceAttributes.getAddress()).thenReturn("Test address");
         when(mAudioDeviceAttributes.getType()).thenReturn(TYPE_BUILTIN_SPEAKER);
+        when(mVolumeState.getMinVolume()).thenReturn(MIN_VOLUME);
+        when(mVolumeState.getMaxVolume()).thenReturn(MAX_VOLUME);
+        when(mVolumeState.getCurrentVolume()).thenReturn(CURRENT_VOLUME);
 
         mContext = ApplicationProvider.getApplicationContext();
         InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
@@ -65,6 +76,8 @@ public class AudioRoutePreferenceTest {
             AudioRouteItem item = new AudioRouteItem.Builder(mAudioDeviceAttributes)
                     .setName("Test Device")
                     .setState(AudioRouteItem.State.UNICAST_READY)
+                    .setVolumeState(mVolumeState)
+                    .setGlobalState(mGlobalState)
                     .build();
             mPreference = new AudioRoutePreference(mContext, item);
         });
@@ -257,6 +270,87 @@ public class AudioRoutePreferenceTest {
             assertThat(mPreference.getSummary()).isNull();
             assertThat(toBitmap(mPreference.getIcon()).sameAs(
                     toBitmap(mContext.getDrawable(R.drawable.ic_radio_btn_unchecked)))).isTrue();
+        });
+    }
+
+    @Test
+    public void onBindViewHolder_updateVolume() {
+        mPreference.onBindViewHolder(mViewHolder);
+
+        assertThat(mPreference.getMin()).isEqualTo(MIN_VOLUME);
+        assertThat(mPreference.getMax()).isEqualTo(MAX_VOLUME);
+        assertThat(mPreference.getValue()).isEqualTo(CURRENT_VOLUME);
+    }
+
+    @Test
+    public void onBindViewHolder_unicastActive_showSeekBar() {
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            AudioRouteItem item = new AudioRouteItem.Builder(mAudioDeviceAttributes)
+                    .setName("Test Device")
+                    .setState(AudioRouteItem.State.UNICAST_ACTIVE)
+                    .setVolumeState(mVolumeState)
+                    .setGlobalState(mGlobalState)
+                    .build();
+            mPreference = new AudioRoutePreference(mContext, item);
+
+            mPreference.onBindViewHolder(mViewHolder);
+
+            assertThat(mViewHolder.findViewById(R.id.seekbar_container).getVisibility()).isEqualTo(
+                    View.VISIBLE);
+        });
+    }
+
+    @Test
+    public void onBindViewHolder_multicastReadyUnicastActive_showSeekBar() {
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            AudioRouteItem item = new AudioRouteItem.Builder(mAudioDeviceAttributes)
+                    .setName("Test Device")
+                    .setState(AudioRouteItem.State.MULTICAST_READY_UNICAST_ACTIVE)
+                    .setVolumeState(mVolumeState)
+                    .setGlobalState(mGlobalState)
+                    .build();
+            mPreference = new AudioRoutePreference(mContext, item);
+
+            mPreference.onBindViewHolder(mViewHolder);
+
+            assertThat(mViewHolder.findViewById(R.id.seekbar_container).getVisibility()).isEqualTo(
+                    View.VISIBLE);
+        });
+    }
+
+    @Test
+    public void onBindViewHolder_multicastActive_showSeekBar() {
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            AudioRouteItem item = new AudioRouteItem.Builder(mAudioDeviceAttributes)
+                    .setName("Test Device")
+                    .setState(AudioRouteItem.State.MULTICAST_ACTIVE)
+                    .setVolumeState(mVolumeState)
+                    .setGlobalState(mGlobalState)
+                    .build();
+            mPreference = new AudioRoutePreference(mContext, item);
+
+            mPreference.onBindViewHolder(mViewHolder);
+
+            assertThat(mViewHolder.findViewById(R.id.seekbar_container).getVisibility()).isEqualTo(
+                    View.VISIBLE);
+        });
+    }
+
+    @Test
+    public void onBindViewHolder_unicastReady_hideSeekBar() {
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            AudioRouteItem item = new AudioRouteItem.Builder(mAudioDeviceAttributes)
+                    .setName("Test Device")
+                    .setState(AudioRouteItem.State.UNICAST_READY)
+                    .setVolumeState(mVolumeState)
+                    .setGlobalState(mGlobalState)
+                    .build();
+            mPreference = new AudioRoutePreference(mContext, item);
+
+            mPreference.onBindViewHolder(mViewHolder);
+
+            assertThat(mViewHolder.findViewById(R.id.seekbar_container).getVisibility()).isEqualTo(
+                    View.GONE);
         });
     }
 
