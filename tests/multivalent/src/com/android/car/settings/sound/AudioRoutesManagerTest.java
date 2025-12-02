@@ -1722,7 +1722,10 @@ public class AudioRoutesManagerTest {
     }
 
     private AudioRoutesManager createAudioRoutesManager() {
-        return new AudioRoutesManager(mContext, USAGE, mMockExecutor);
+        AudioRoutesManager audioRoutesManager = new AudioRoutesManager(mContext, USAGE,
+                mMockExecutor);
+        audioRoutesManager.setUseTimeout(false);
+        return audioRoutesManager;
     }
 
     private CarAudioZoneConfigInfo createZoneConfig(String name, String address,

@@ -129,6 +129,7 @@ public class AudioRoutesManager {
     private ScheduledFuture<?> mSelectTimeout = null;
     // Volume is scaled with Car Audio's min / max volumes.
     private final Map<String, Integer> mAudioVolumeCache = new ConcurrentHashMap<>();
+    private boolean mUseTimeout = true;
 
     private record AudioRouteEvent(String address, AudioRouteItem.Command command,
                                    AudioRouteItem.State state) {
@@ -182,6 +183,12 @@ public class AudioRoutesManager {
             mCarAudioManager.registerCarVolumeCallback(mCarVolumeCallback);
         }
         updateAndNotifyAudioRouteItemsIfChanged();
+    }
+
+    /** Sets whether to use timeout for audio route operations. */
+    @VisibleForTesting
+    void setUseTimeout(boolean useTimeout) {
+        mUseTimeout = useTimeout;
     }
 
     /** Gets the current output address. */
@@ -394,8 +401,8 @@ public class AudioRoutesManager {
                         mAudioZone);
                 LOG.d("[mSwitchAudioZoneConfigCallback] Audio zone configs: "
                         + zoneConfigInfosToString(configs));
-                cancelTimeout(mActiveTimeout);
-                cancelTimeout(mSelectTimeout);
+                cancelActiveTimeout();
+                cancelSelectTimeout();
                 cancelTimeout(mCallbackDebouncer);
                 updateAndNotifyAudioRouteItemsIfChanged();
             };
@@ -408,12 +415,13 @@ public class AudioRoutesManager {
                     List<CarAudioZoneConfigInfo> relevantConfigs = configs.stream().filter(
                             info -> info.getZoneId() == mAudioZone).toList();
                     logConfigChange(relevantConfigs, status);
-                    cancelTimeout(mActiveTimeout);
-                    cancelTimeout(mSelectTimeout);
+                    cancelActiveTimeout();
+                    cancelSelectTimeout();
                     mCallbackDebouncer = mExecutor.schedule(() -> {
                         cancelTimeout(mCallbackDebouncer);
                         updateAndNotifyAudioRouteItemsIfChanged();
-                        restartTimeouts();
+                        restartActiveTimeout();
+                        restartSelectTimeout();
                     }, DEBOUNCE_INTERVAL_IN_MILLIS, TimeUnit.MILLISECONDS);
                 }
 
@@ -428,24 +436,37 @@ public class AudioRoutesManager {
                 }
             };
 
-    private void restartTimeouts() {
-        cancelTimeout(mActiveTimeout);
-        if (mPendingActiveAddress != null) {
-            mActiveTimeout = mExecutor.schedule(() -> {
-                LOG.d("[mActiveTimeoutFuture] Timed out waiting for active: "
-                        + mPendingActiveAddress);
-                cancelStartingUnicast();
-            }, TIMEOUT_IN_SECS, TimeUnit.SECONDS);
-        }
+    private void restartActiveTimeout() {
+        mActiveTimeout = scheduleTimeout(mActiveTimeout, mPendingActiveAddress, () -> {
+            LOG.d("[mActiveTimeoutFuture] Timed out waiting for active: "
+                    + mPendingActiveAddress);
+            cancelStartingUnicast();
+        });
+    }
 
-        cancelTimeout(mSelectTimeout);
-        if (mPendingSelectAddress != null) {
-            mSelectTimeout = mExecutor.schedule(() -> {
-                LOG.d("[mSelectTimeoutFuture] Timed out waiting for select: "
-                        + mPendingSelectAddress);
-                cancelStartingUnicast();
-            }, TIMEOUT_IN_SECS, TimeUnit.SECONDS);
+    private void restartSelectTimeout() {
+        mSelectTimeout = scheduleTimeout(mSelectTimeout, mPendingSelectAddress, () -> {
+            LOG.d("[mSelectTimeoutFuture] Timed out waiting for select: "
+                    + mPendingSelectAddress);
+            cancelStartingUnicast();
+        });
+    }
+
+    private ScheduledFuture<?> scheduleTimeout(ScheduledFuture<?> currentFuture,
+            Object triggerAddress, @NonNull Runnable task) {
+        cancelTimeout(currentFuture);
+        if (!mUseTimeout || triggerAddress == null) {
+            return null;
         }
+        return mExecutor.schedule(task, TIMEOUT_IN_SECS, TimeUnit.SECONDS);
+    }
+
+    private void cancelActiveTimeout() {
+        cancelTimeout(mActiveTimeout);
+    }
+
+    private void cancelSelectTimeout() {
+        cancelTimeout(mSelectTimeout);
     }
 
     private void cancelTimeout(ScheduledFuture<?> timer) {
@@ -665,8 +686,8 @@ public class AudioRoutesManager {
                         addNewCheckEventWithNewState = true;
                         mPendingActiveAddress = null;
                         mPendingSelectAddress = null;
-                        cancelTimeout(mActiveTimeout);
-                        cancelTimeout(mSelectTimeout);
+                        cancelActiveTimeout();
+                        cancelSelectTimeout();
                         ContextCompat.getMainExecutor(mContext).execute(() -> {
                             Toast.makeText(mContext, mContext.getString(
                                     R.string.audio_route_preference_connecting_failed,
@@ -687,11 +708,12 @@ public class AudioRoutesManager {
                                 + audioRoute.getName());
                         audioRoute.getBluetoothDevice().setActive();
                         mPendingActiveAddress = audioRoute.getAddress();
+                        restartActiveTimeout();
                         break;
                     }
 
                     mPendingActiveAddress = null;
-                    cancelTimeout(mActiveTimeout);
+                    cancelActiveTimeout();
 
                     if (!audioRoute.getAudioZoneConfigState().isSelected()) {
                         if (Objects.equals(mPendingSelectAddress, audioRoute.getAddress())) {
@@ -703,11 +725,12 @@ public class AudioRoutesManager {
                                 + audioRoute.getName());
                         requestRouteSwitchInternal(audioRoute);
                         mPendingSelectAddress = audioRoute.getAddress();
+                        restartSelectTimeout();
                         break;
                     }
 
                     mPendingSelectAddress = null;
-                    cancelTimeout(mSelectTimeout);
+                    cancelSelectTimeout();
 
                     // Unicast becomes active.
                     if (isBroadcastReady
@@ -959,6 +982,8 @@ public class AudioRoutesManager {
         int zoneMaxVolume = mCarAudioManager.getGroupMaxVolume(groupId);
         int zoneMinVolume = mCarAudioManager.getGroupMinVolume(groupId);
         int zoneCurrentVolume = mCarAudioManager.getGroupVolume(groupId);
+        LOG.d("[createAudioRoutes] zoneCurrentVolume: " + zoneCurrentVolume);
+
         AudioRouteItem.VolumeState zoneVolumeState = new AudioRouteItem.VolumeState.Builder()
                 .setMaxVolume(zoneMaxVolume)
                 .setMinVolume(zoneMinVolume)
@@ -1045,6 +1070,7 @@ public class AudioRoutesManager {
             builder.setGlobalState(globalState);
             newAudioRoutes.put(device.getAddress(), builder.build());
         }
+        LOG.d("[createAudioRoutes] newAudioRoutes: " + newAudioRoutes);
         return newAudioRoutes;
     }
 
