@@ -69,6 +69,7 @@ import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.audiosharing.BaseLeBroadcastAssistantCallback;
 import com.android.car.settings.common.Logger;
+import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LeAudioProfile;
 import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast;
@@ -169,6 +170,9 @@ public class AudioRoutesManager {
         mUsage = usage;
         mCachedAudioRoutes = new ArrayMap<>();
         if (isAudioRoutingEnabled()) {
+            if (mBluetoothManager != null) {
+                mBluetoothManager.getEventManager().registerCallback(mBluetoothCallback);
+            }
             if (mLeBroadcastProfile != null && mLeBroadcastAssistantProfile != null) {
                 mLeBroadcastAssistantProfile.registerServiceCallBack(mExecutor,
                         mBaseLeBroadcastAssistantCallback);
@@ -218,6 +222,9 @@ public class AudioRoutesManager {
         if (mLeBroadcastAssistantProfile != null) {
             mLeBroadcastAssistantProfile.unregisterServiceCallBack(
                     mBaseLeBroadcastAssistantCallback);
+        }
+        if (mBluetoothManager != null) {
+            mBluetoothManager.getEventManager().unregisterCallback(mBluetoothCallback);
         }
         mExecutor.shutdown();
     }
@@ -320,12 +327,14 @@ public class AudioRoutesManager {
                             mCarAudioManager.getGroupMinVolume(groupId),
                             mCarAudioManager.getGroupMaxVolume(groupId));
                     if (cachedVolume != null && cachedVolume == scaledVolume) {
-                        LOG.d("[onDeviceVolumeChanged] Volume for device " + device.getAddress()
-                                + " is unchanged. Skipping update.");
+                        LOG.d(("[BluetoothVolumeControl.Callback#onDeviceVolumeChanged] Volume "
+                                + "for device %s is unchanged. Skipping update.")
+                                .formatted(device.getAddress()));
                         return;
                     }
-                    LOG.d("[onDeviceVolumeChanged] device: " + device.getAddress()
-                            + ", originalVolume: " + volume + ", scaledVolume: " + scaledVolume);
+                    LOG.d(("[BluetoothVolumeControl.Callback#onDeviceVolumeChanged] device: %s, "
+                            + "originalVolume: %s, scaledVolume: %s")
+                            .formatted(device.getAddress(), volume, scaledVolume));
                     mAudioVolumeCache.put(device.getAddress(), scaledVolume);
                     updateAndNotifyAudioRouteItemsIfChanged();
                 }
@@ -352,12 +361,13 @@ public class AudioRoutesManager {
                                     int volume = mCarAudioManager.getGroupVolume(groupId);
                                     Integer cachedVolume = mAudioVolumeCache.get(address);
                                     if (cachedVolume != null && cachedVolume == volume) {
-                                        LOG.d("[onGroupVolumeChanged] Volume for device " + address
-                                                + " is unchanged. Skipping update.");
+                                        LOG.d(("[CarVolumeCallback#onGroupVolumeChanged] Volume "
+                                                + "for device %s is unchanged. Skipping update.")
+                                                .formatted(address));
                                         return;
                                     }
-                                    LOG.d("[onGroupVolumeChanged] device: " + address + ", volume: "
-                                            + volume);
+                                    LOG.d(("[CarVolumeCallback#onGroupVolumeChanged] device: %s, "
+                                            + "volume: %s").formatted(address, volume));
                                     mAudioVolumeCache.put(address, volume);
                                     updateAndNotifyAudioRouteItemsIfChanged();
                                 });
@@ -379,27 +389,60 @@ public class AudioRoutesManager {
             new BaseLeBroadcastAssistantCallback() {
                 @Override
                 public void onSourceAdded(@NonNull BluetoothDevice sink, int sourceId, int reason) {
-                    LOG.d("[onSourceAdded] %s <%s>, sourceId: %s, reason: %s".formatted(
-                            sink.getName(), sink.getAddress(), sourceId, reason));
+                    LOG.d(("[BaseLeBroadcastAssistantCallback#onSourceAdded] %s <%s>, sourceId: "
+                            + "%s, reason: %s")
+                            .formatted(sink.getName(), sink.getAddress(), sourceId, reason));
                     updateAndNotifyAudioRouteItemsIfChanged();
                 }
 
                 @Override
                 public void onSourceRemoved(@NonNull BluetoothDevice sink, int sourceId,
                         int reason) {
-                    LOG.d("[onSourceRemoved] %s <%s>, sourceId: %s, reason: %s".formatted(
-                            sink.getName(), sink.getAddress(), sourceId, reason));
+                    LOG.d(("[BaseLeBroadcastAssistantCallback#onSourceRemoved] %s <%s>, sourceId: "
+                            + "%s, reason: %s")
+                            .formatted(sink.getName(), sink.getAddress(), sourceId, reason));
                     updateAndNotifyAudioRouteItemsIfChanged();
                 }
             };
 
+    private final BluetoothCallback mBluetoothCallback = new BluetoothCallback() {
+        @Override
+        public void onDeviceAdded(@NonNull CachedBluetoothDevice cachedDevice) {
+            LOG.d("[BluetoothCallback#onDeviceAdded] device: " + cachedDevice.getAddress());
+            updateAndNotifyAudioRouteItemsIfChanged();
+        }
+
+        @Override
+        public void onDeviceDeleted(@NonNull CachedBluetoothDevice cachedDevice) {
+            LOG.d("[BluetoothCallback#onDeviceDeleted] device: " + cachedDevice.getAddress());
+            updateAndNotifyAudioRouteItemsIfChanged();
+        }
+
+        @Override
+        public void onConnectionStateChanged(@Nullable CachedBluetoothDevice cachedDevice,
+                int state) {
+            LOG.d("[BluetoothCallback#onConnectionStateChanged] device: %s, state: %s".formatted(
+                    cachedDevice == null ? "null" : cachedDevice.getAddress(), state));
+            updateAndNotifyAudioRouteItemsIfChanged();
+        }
+
+        @Override
+        public void onProfileConnectionStateChanged(@NonNull CachedBluetoothDevice cachedDevice,
+                int state, int profileId) {
+            LOG.d(("[BluetoothCallback#onProfileConnectionStateChanged] device: %s, state: %s, "
+                    + "profileId: %s").formatted(cachedDevice.getAddress(), state, profileId));
+            updateAndNotifyAudioRouteItemsIfChanged();
+        }
+    };
+
+
     private final SwitchAudioZoneConfigCallback mSwitchAudioZoneConfigCallback =
             (zoneConfig, isSuccessful) -> {
-                LOG.d("[mSwitchAudioZoneConfigCallback] Audio zone switch to [%s] successful: %s"
+                LOG.d("[SwitchAudioZoneConfigCallback] Audio zone switch to [%s] successful: %s"
                         .formatted(zoneConfigInfoToString(zoneConfig), isSuccessful));
                 List<CarAudioZoneConfigInfo> configs = mCarAudioManager.getAudioZoneConfigInfos(
                         mAudioZone);
-                LOG.d("[mSwitchAudioZoneConfigCallback] Audio zone configs: "
+                LOG.d("[SwitchAudioZoneConfigCallback] Audio zone configs: "
                         + zoneConfigInfosToString(configs));
                 cancelActiveTimeout();
                 cancelSelectTimeout();
@@ -431,8 +474,8 @@ public class AudioRoutesManager {
                         case CONFIG_STATUS_AUTO_SWITCHED -> "CONFIG_STATUS_AUTO_SWITCHED";
                         default -> "Status: " + status;
                     };
-                    LOG.d("[onAudioZoneConfigurationsChanged]: (%s) %s".formatted(statusName,
-                            zoneConfigInfosToString(configs)));
+                    LOG.d("[AudioZoneConfigurationsChangeCallback]: (%s) %s"
+                            .formatted(statusName, zoneConfigInfosToString(configs)));
                 }
             };
 
@@ -827,8 +870,8 @@ public class AudioRoutesManager {
 
                     if (!isReceivingBroadcast(audioRoute.getBluetoothDevice().getDevice(),
                             broadcastMetadata)) {
-                        LOG.d("[handleEvents] <JOINING_BROADCAST> addSource " + audioRoute.getName()
-                                + " to broadcast");
+                        LOG.d("[handleEvents] <JOINING_BROADCAST> addSource %s to broadcast"
+                                .formatted(audioRoute.getName()));
                         mLeBroadcastAssistantProfile.addSource(
                                 audioRoute.getBluetoothDevice().getDevice(),
                                 broadcastMetadata, /* isGroupOp= */ true);
@@ -1101,9 +1144,9 @@ public class AudioRoutesManager {
                         return;
                     }
                     try {
-                        LOG.d("[requestRouteSwitchInternal] switchAudioZoneToConfig to "
-                                + carAudioZoneConfigInfo.getName() + " for "
-                                + switchedRoute.getName());
+                        LOG.d("[requestRouteSwitchInternal] switchAudioZoneToConfig to %s for %s"
+                                .formatted(carAudioZoneConfigInfo.getName(),
+                                        switchedRoute.getName()));
                         mCarAudioManager.switchAudioZoneToConfig(carAudioZoneConfigInfo,
                                 mExecutor,
                                 mSwitchAudioZoneConfigCallback);

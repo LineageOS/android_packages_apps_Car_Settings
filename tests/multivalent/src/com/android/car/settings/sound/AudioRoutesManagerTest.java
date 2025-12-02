@@ -59,6 +59,8 @@ import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.audiosharing.BaseAudioSharingPreferenceController;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
+import com.android.settingslib.bluetooth.BluetoothEventManager;
+import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
 import com.android.settingslib.bluetooth.LeAudioProfile;
@@ -118,6 +120,8 @@ public class AudioRoutesManagerTest {
     @Mock
     private LocalBluetoothManager mBluetoothManager;
     @Mock
+    private BluetoothEventManager mBluetoothEventManager;
+    @Mock
     private LocalBluetoothProfileManager mLocalBluetoothProfileManager;
     @Mock
     private LocalBluetoothLeBroadcast mLocalBluetoothLeBroadcast;
@@ -136,6 +140,7 @@ public class AudioRoutesManagerTest {
     private ArgumentCaptor<List<AudioRouteItem>> mAudioRoutesCaptor;
     private ArgumentCaptor<BluetoothVolumeControl.Callback> mVolumeControlCallbackCaptor;
     private ArgumentCaptor<CarAudioManager.CarVolumeCallback> mCarVolumeCallbackCaptor;
+    private ArgumentCaptor<BluetoothCallback> mBluetoothCallbackCaptor;
 
     @Mock
     private BluetoothDevice mReceivingBroadcastBluetoothDevice1;
@@ -165,6 +170,7 @@ public class AudioRoutesManagerTest {
         mVolumeControlCallbackCaptor = ArgumentCaptor.forClass(
                 BluetoothVolumeControl.Callback.class);
         mCarVolumeCallbackCaptor = ArgumentCaptor.forClass(CarAudioManager.CarVolumeCallback.class);
+        mBluetoothCallbackCaptor = ArgumentCaptor.forClass(BluetoothCallback.class);
         initMocks();
     }
 
@@ -1614,6 +1620,71 @@ public class AudioRoutesManagerTest {
                 AudioRouteItem.State.UNICAST_ACTIVE);
     }
 
+    @Test
+    public void bluetoothCallback_onDeviceAdded_updatesAudioRoutes() {
+        CachedBluetoothDevice device = createCachedBluetoothDevice(
+                "device", "address", null, true, false, true, false);
+        setupMockAudioRoutes(List.of(), List.of());
+        mAudioRoutesManager = createAudioRoutesManager();
+        verify(mBluetoothEventManager).registerCallback(mBluetoothCallbackCaptor.capture());
+        BluetoothCallback callback = mBluetoothCallbackCaptor.getValue();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        when(mCachedBluetoothDeviceManager.getCachedDevicesCopy()).thenReturn(List.of(device));
+        callback.onDeviceAdded(device);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(any());
+    }
+
+    @Test
+    public void bluetoothCallback_onDeviceDeleted_updatesAudioRoutes() {
+        CachedBluetoothDevice device = createCachedBluetoothDevice(
+                "device", "address", null, true, false, true, false);
+        setupMockAudioRoutes(List.of(), List.of(device));
+        mAudioRoutesManager = createAudioRoutesManager();
+        verify(mBluetoothEventManager).registerCallback(mBluetoothCallbackCaptor.capture());
+        BluetoothCallback callback = mBluetoothCallbackCaptor.getValue();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        when(mCachedBluetoothDeviceManager.getCachedDevicesCopy()).thenReturn(List.of());
+        callback.onDeviceDeleted(device);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(any());
+    }
+
+    @Test
+    public void bluetoothCallback_onConnectionStateChanged_updatesAudioRoutes() {
+        CachedBluetoothDevice device = createCachedBluetoothDevice(
+                "device", "address", null, true, false, true, false);
+        setupMockAudioRoutes(List.of(), List.of(device));
+        mAudioRoutesManager = createAudioRoutesManager();
+        verify(mBluetoothEventManager).registerCallback(mBluetoothCallbackCaptor.capture());
+        BluetoothCallback callback = mBluetoothCallbackCaptor.getValue();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        when(device.isConnectedA2dpDevice()).thenReturn(false);
+        callback.onConnectionStateChanged(device, BluetoothProfile.STATE_DISCONNECTED);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(any());
+    }
+
+    @Test
+    public void bluetoothCallback_onProfileConnectionStateChanged_updatesAudioRoutes() {
+        CachedBluetoothDevice device = createCachedBluetoothDevice(
+                "device", "address", null, true, false, true, false);
+        setupMockAudioRoutes(List.of(), List.of(device));
+        mAudioRoutesManager = createAudioRoutesManager();
+        verify(mBluetoothEventManager).registerCallback(mBluetoothCallbackCaptor.capture());
+        BluetoothCallback callback = mBluetoothCallbackCaptor.getValue();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        when(device.isConnectedA2dpDevice()).thenReturn(false);
+        callback.onProfileConnectionStateChanged(device, BluetoothProfile.STATE_DISCONNECTED,
+                BluetoothProfile.A2DP);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(any());
+    }
+
     private void setupMockAudioRoutes(List<CarAudioZoneConfigInfo> zoneInfos,
             List<CachedBluetoothDevice> cachedDevices) {
         when(mCarAudioManager.getAudioZoneConfigInfos(TEST_ZONE_ID))
@@ -1673,6 +1744,7 @@ public class AudioRoutesManagerTest {
                 .strictness(Strictness.LENIENT)
                 .startMocking();
         when(LocalBluetoothManager.getInstance(any(), any())).thenReturn(mBluetoothManager);
+        when(mBluetoothManager.getEventManager()).thenReturn(mBluetoothEventManager);
         when(mBluetoothManager.getProfileManager()).thenReturn(mLocalBluetoothProfileManager);
         when(mLocalBluetoothProfileManager.getLeAudioBroadcastProfile())
                 .thenReturn(mLocalBluetoothLeBroadcast);
