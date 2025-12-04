@@ -49,6 +49,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothLeBroadcastMetadata;
 import android.bluetooth.BluetoothLeBroadcastReceiveState;
 import android.bluetooth.BluetoothProfile;
+import android.bluetooth.BluetoothVolumeControl;
 import android.car.media.AudioZoneConfigurationsChangeCallback;
 import android.car.media.CarAudioManager;
 import android.car.media.CarAudioZoneConfigInfo;
@@ -70,6 +71,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.audiosharing.BaseLeBroadcastAssistantCallback;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
+import com.android.settingslib.bluetooth.LeAudioProfile;
 import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast;
 import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssistant;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -105,6 +107,7 @@ public class AudioRoutesManager {
     private LocalBluetoothLeBroadcast mLeBroadcastProfile;
     private LocalBluetoothLeBroadcastAssistant mLeBroadcastAssistantProfile;
     private VolumeControlProfile mVolumeControlProfile;
+    private LeAudioProfile mLeAudioProfile;
     private int mAudioZone;
     private final int mUsage;
     private String mLastSwitchedAddress;
@@ -120,6 +123,8 @@ public class AudioRoutesManager {
     private String mPendingSelectAddress = null;
     private CountDownTimer mCallbackDebouncer = null;
     private CountDownTimer mTimeoutTimer = null;
+    // Volume is scaled with Car Audio's min / max volumes.
+    private final Map<String, Integer> mAudioVolumeCache = new HashMap<>();
 
     private record AudioRouteEvent(String address, AudioRouteItem.Command command,
                                    AudioRouteItem.State state) {
@@ -148,6 +153,7 @@ public class AudioRoutesManager {
             mLeBroadcastAssistantProfile =
                     mBluetoothManager.getProfileManager().getLeAudioBroadcastAssistantProfile();
             mVolumeControlProfile = mBluetoothManager.getProfileManager().getVolumeControlProfile();
+            mLeAudioProfile = mBluetoothManager.getProfileManager().getLeAudioProfile();
         }
         mUsage = usage;
         mCachedAudioRoutes = new ArrayMap<>();
@@ -156,9 +162,14 @@ public class AudioRoutesManager {
                 mLeBroadcastAssistantProfile.registerServiceCallBack(context.getMainExecutor(),
                         mBaseLeBroadcastAssistantCallback);
             }
+            if (mVolumeControlProfile != null) {
+                mVolumeControlProfile.registerCallback(context.getMainExecutor(),
+                        mVolumeControlCallback);
+            }
             mCarAudioManager.clearAudioZoneConfigsCallback();
             mCarAudioManager.setAudioZoneConfigsChangeCallback(mContext.getMainExecutor(),
                     mAudioZoneConfigurationsChangeCallback);
+            mCarAudioManager.registerCarVolumeCallback(mCarVolumeCallback);
         }
         updateAndNotifyAudioRouteItemsIfChanged();
     }
@@ -182,6 +193,14 @@ public class AudioRoutesManager {
     public void tearDown() {
         if (mCarAudioManager != null) {
             mCarAudioManager.clearAudioZoneConfigsCallback();
+            mCarAudioManager.unregisterCarVolumeCallback(mCarVolumeCallback);
+        }
+        if (mVolumeControlProfile != null) {
+            mVolumeControlProfile.unregisterCallback(mVolumeControlCallback);
+        }
+        if (mLeBroadcastAssistantProfile != null) {
+            mLeBroadcastAssistantProfile.unregisterServiceCallBack(
+                    mBaseLeBroadcastAssistantCallback);
         }
     }
 
@@ -244,19 +263,95 @@ public class AudioRoutesManager {
             LOG.d("[setVolume] AudioRoute not found: " + address);
             return;
         }
+        int groupId = mCarAudioManager.getVolumeGroupIdForUsage(mAudioZone, mUsage);
+
         if (item.getVolumeState().useVolumeControlProfile()) {
             if (mVolumeControlProfile == null) {
                 LOG.d("[setVolume] VolumeControlProfile not available");
                 return;
             }
+            int scaledVolume = scaleVolume(volume,
+                    mCarAudioManager.getGroupMinVolume(groupId),
+                    mCarAudioManager.getGroupMaxVolume(groupId),
+                    MIN_LE_AUDIO_VOLUME,
+                    MAX_LE_AUDIO_VOLUME);
             mVolumeControlProfile.setDeviceVolume(item.getBluetoothDevice().getDevice(),
-                    volume, /* isGroupOp= */ true);
+                    scaledVolume, /* isGroupOp= */ true);
+            LOG.d("[setVolume] setDeviceVolume: %s %s".formatted(address, scaledVolume));
         } else {
-            int groupId = mCarAudioManager.getVolumeGroupIdForUsage(mAudioZone, mUsage);
             mCarAudioManager.setGroupVolume(mAudioZone, groupId, volume, /* flags= */ 0);
-            LOG.d("[setVolume] setGroupVolume: %s %s".formatted(groupId, volume));
+            LOG.d("[setVolume] setGroupVolume: %s %s".formatted(address, volume));
         }
     }
+
+    private final BluetoothVolumeControl.Callback mVolumeControlCallback =
+            new BluetoothVolumeControl.Callback() {
+                @Override
+                public void onDeviceVolumeChanged(@NonNull BluetoothDevice device, int volume) {
+                    if (!mCachedAudioRoutes.keySet().contains(device.getAddress())) {
+                        LOG.d("[onDeviceVolumeChanged] unknown address: " + device.getAddress());
+                        return;
+                    }
+                    int groupId = mCarAudioManager.getVolumeGroupIdForUsage(mAudioZone, mUsage);
+                    Integer cachedVolume = mAudioVolumeCache.get(device.getAddress());
+                    int scaledVolume = scaleVolume(volume,
+                            MIN_LE_AUDIO_VOLUME,
+                            MAX_LE_AUDIO_VOLUME,
+                            mCarAudioManager.getGroupMinVolume(groupId),
+                            mCarAudioManager.getGroupMaxVolume(groupId));
+                    if (cachedVolume != null && cachedVolume == scaledVolume) {
+                        LOG.d("[onDeviceVolumeChanged] Volume for device " + device.getAddress()
+                                + " is unchanged. Skipping update.");
+                        return;
+                    }
+                    LOG.d("[onDeviceVolumeChanged] device: " + device.getAddress()
+                            + ", originalVolume: " + volume + ", scaledVolume: " + scaledVolume);
+                    mAudioVolumeCache.put(device.getAddress(), scaledVolume);
+                    updateAndNotifyAudioRouteItemsIfChanged();
+
+                }
+            };
+
+    private final CarAudioManager.CarVolumeCallback mCarVolumeCallback =
+            new CarAudioManager.CarVolumeCallback() {
+                @Override
+                public void onGroupVolumeChanged(int zoneId, int groupId, int flags) {
+                    if (zoneId != mAudioZone) {
+                        return;
+                    }
+                    if (mCarAudioManager.getVolumeGroupIdForUsage(mAudioZone, mUsage) != groupId) {
+                        return;
+                    }
+
+                    mCachedAudioRoutes.entrySet().stream()
+                            .filter(item -> item.getValue().getState() == UNICAST_ACTIVE)
+                            .map(Map.Entry::getKey)
+                            .findFirst()
+                            .ifPresent(address -> {
+                                int volume = mCarAudioManager.getGroupVolume(groupId);
+                                Integer cachedVolume = mAudioVolumeCache.get(address);
+                                if (cachedVolume != null && cachedVolume == volume) {
+                                    LOG.d("[onGroupVolumeChanged] Volume for device " + address
+                                            + " is unchanged. Skipping update.");
+                                    return;
+                                }
+                                LOG.d("[onGroupVolumeChanged] device: " + address + ", volume: "
+                                        + volume);
+                                mAudioVolumeCache.put(address, volume);
+                                updateAndNotifyAudioRouteItemsIfChanged();
+                            });
+                }
+
+                @Override
+                public void onGroupMuteChanged(int zoneId, int groupId, int flags) {
+                    // Optionally handle mute changes
+                }
+
+                @Override
+                public void onMasterMuteChanged(int zoneId, int flags) {
+                    // Optionally handle master mute changes
+                }
+            };
 
     private final BaseLeBroadcastAssistantCallback mBaseLeBroadcastAssistantCallback =
             new BaseLeBroadcastAssistantCallback() {
@@ -807,8 +902,22 @@ public class AudioRoutesManager {
             return true;
         }
 
-        return audioRoutes.values().stream().anyMatch(
-                item -> item.getState() != mCachedAudioRoutes.get(item.getAddress()).getState());
+        return audioRoutes.values().stream().anyMatch(item -> {
+            AudioRouteItem cachedItem = mCachedAudioRoutes.get(item.getAddress());
+            if (item.getState() != cachedItem.getState()) {
+                return true;
+            }
+            // Compare VolumeState only if both are non-null
+            AudioRouteItem.VolumeState currentVolumeState = item.getVolumeState();
+            AudioRouteItem.VolumeState cachedVolumeState = cachedItem.getVolumeState();
+            if (currentVolumeState != null && cachedVolumeState != null) {
+                return currentVolumeState.getCurrentVolume()
+                        != cachedVolumeState.getCurrentVolume();
+            } else {
+                // If one is null and the other isn't, they are different
+                return currentVolumeState != cachedVolumeState;
+            }
+        });
     }
 
 
@@ -816,6 +925,7 @@ public class AudioRoutesManager {
         Map<String, AudioRouteItem> newAudioRoutes = new HashMap<>();
         List<CarAudioZoneConfigInfo> configs = mCarAudioManager.getAudioZoneConfigInfos(mAudioZone);
         LOG.d("[createAudioRoutes] CarAudioZoneConfigInfo: " + zoneConfigInfosToString(configs));
+        LOG.d("[createAudioRoutes] mAudioVolumeMap: " + mAudioVolumeCache);
 
         // If multiple active configs for the same name exist, the selected one wins.
         Map<String, CarAudioZoneConfigInfo> activeConfigs = configs.stream().filter(
@@ -831,7 +941,12 @@ public class AudioRoutesManager {
         int groupId = mCarAudioManager.getVolumeGroupIdForUsage(mAudioZone, mUsage);
         int zoneMaxVolume = mCarAudioManager.getGroupMaxVolume(groupId);
         int zoneMinVolume = mCarAudioManager.getGroupMinVolume(groupId);
-        int zoneCurrentVolume = mCarAudioManager.getGroupVolume(mAudioZone, groupId);
+        int zoneCurrentVolume = mCarAudioManager.getGroupVolume(groupId);
+        AudioRouteItem.VolumeState zoneVolumeState = new AudioRouteItem.VolumeState.Builder()
+                .setMaxVolume(zoneMaxVolume)
+                .setMinVolume(zoneMinVolume)
+                .setCurrentVolume(zoneCurrentVolume)
+                .build();
 
         // Register for all active car audio zone configs.
         for (CarAudioZoneConfigInfo config : activeConfigs.values()) {
@@ -854,12 +969,7 @@ public class AudioRoutesManager {
                                     .build());
                     builder.setGlobalState(globalState);
                     if (config.isSelected()) {
-                        builder.setVolumeState(
-                                new AudioRouteItem.VolumeState.Builder()
-                                        .setMaxVolume(zoneMaxVolume)
-                                        .setMinVolume(zoneMinVolume)
-                                        .setCurrentVolume(zoneCurrentVolume)
-                                        .build());
+                        builder.setVolumeState(zoneVolumeState);
                     }
                     newAudioRoutes.put(attr.getAddress(), builder.build());
                 }
@@ -899,24 +1009,21 @@ public class AudioRoutesManager {
                             .setIsReceivingBroadcast(isReceivingBroadcast)
                             .build();
 
-            if (audioZoneConfigState.isSelected()) {
-                builder.setVolumeState(newAudioRoutes.get(device.getAddress()).getVolumeState());
-            } else if (isReceivingBroadcast) {
-                // TODO: b/448672840 - Restore previous volume per each device.
-                int currentVolume = scaleVolume(
-                        /* value= */ zoneCurrentVolume,
-                        /* inMin= */ zoneMinVolume,
-                        /* inMax= */ zoneMaxVolume,
-                        /* outMin= */ MIN_LE_AUDIO_VOLUME,
-                        /* outMax= */ MAX_LE_AUDIO_VOLUME);
-
-                builder.setVolumeState(new AudioRouteItem.VolumeState.Builder()
-                        .setMaxVolume(MAX_LE_AUDIO_VOLUME)
-                        .setMinVolume(MIN_LE_AUDIO_VOLUME)
-                        .setCurrentVolume(currentVolume)
-                        .setUseVolumeControlProfile(true).build());
+            AudioRouteItem.VolumeState.Builder volumeStateBuilder = zoneVolumeState.toBuilder();
+            int cachedVolume = mAudioVolumeCache.getOrDefault(device.getAddress(), -1);
+            if (cachedVolume != -1) {
+                volumeStateBuilder.setCurrentVolume(cachedVolume);
             }
 
+            if (mLeAudioProfile.getBroadcastToUnicastFallbackGroup() == device.getGroupId()
+                    || audioZoneConfigState.isSelected()) {
+                volumeStateBuilder.setUseVolumeControlProfile(false);
+            } else {
+                volumeStateBuilder.setUseVolumeControlProfile(
+                        isVolumeControlSupported(device.getDevice()));
+            }
+
+            builder.setVolumeState(volumeStateBuilder.build());
             builder.setBluetoothDeviceState(bluetoothDeviceState);
             builder.setGlobalState(globalState);
             newAudioRoutes.put(device.getAddress(), builder.build());
@@ -1008,6 +1115,14 @@ public class AudioRoutesManager {
         mLeBroadcastProfile.startBroadcast(CarSettingsApplication.CAR_SETTINGS_PACKAGE_NAME,
                 /* language= */ null);
         mLeBroadcastProfile.setBroadcastCode(new byte[0]);
+    }
+
+    private boolean isVolumeControlSupported(BluetoothDevice device) {
+        if (mVolumeControlProfile == null) {
+            return false;
+        }
+        return mVolumeControlProfile.getConnectionStatus(device)
+                == BluetoothProfile.STATE_CONNECTED;
     }
 
     private static int scaleVolume(int value, int inMin, int inMax, int outMin, int outMax) {

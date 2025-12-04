@@ -256,6 +256,48 @@ public class AudioRouteItemTest {
     }
 
     @Test
+    public void testVolumeStateToBuilderCopiesAndModifiesCorrectly() {
+        int originalMin = 1;
+        int originalMax = 10;
+        int originalCurrent = 5;
+        boolean originalUseProfile = true;
+
+        AudioRouteItem.VolumeState originalState = new AudioRouteItem.VolumeState.Builder()
+                .setMinVolume(originalMin)
+                .setMaxVolume(originalMax)
+                .setCurrentVolume(originalCurrent)
+                .setUseVolumeControlProfile(originalUseProfile)
+                .build();
+
+        // Create a new builder from the original state
+        AudioRouteItem.VolumeState.Builder builder = originalState.toBuilder();
+
+        // Modify values in the new builder
+        int newMin = 2;
+        int newMax = 20;
+        int newCurrent = 8;
+        boolean newUseProfile = false;
+        builder.setMinVolume(newMin)
+                .setMaxVolume(newMax)
+                .setCurrentVolume(newCurrent)
+                .setUseVolumeControlProfile(newUseProfile);
+
+        AudioRouteItem.VolumeState newState = builder.build();
+
+        // Verify the new state has the modified values
+        assertThat(newState.getMinVolume()).isEqualTo(newMin);
+        assertThat(newState.getMaxVolume()).isEqualTo(newMax);
+        assertThat(newState.getCurrentVolume()).isEqualTo(newCurrent);
+        assertThat(newState.useVolumeControlProfile()).isEqualTo(newUseProfile);
+
+        // Verify the original state remains unchanged
+        assertThat(originalState.getMinVolume()).isEqualTo(originalMin);
+        assertThat(originalState.getMaxVolume()).isEqualTo(originalMax);
+        assertThat(originalState.getCurrentVolume()).isEqualTo(originalCurrent);
+        assertThat(originalState.useVolumeControlProfile()).isEqualTo(originalUseProfile);
+    }
+
+    @Test
     public void testGlobalStateBuilder() {
         boolean enabled = true;
         AudioRouteItem.GlobalState state = new AudioRouteItem.GlobalState.Builder()
