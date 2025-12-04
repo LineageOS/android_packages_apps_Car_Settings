@@ -492,9 +492,11 @@ public class AudioRoutesManager {
             boolean isBroadcasting = audioRouteItems.values().stream().anyMatch(
                     item -> item.getAudioRouteType() == TYPE_BLE_BROADCAST
                             && item.getAudioZoneConfigState().isSelected());
-            boolean isLeSelected = audioRouteItems.values().stream().anyMatch(
+            boolean isAnyBleUnicasting = audioRouteItems.values().stream().anyMatch(
                     item -> item.getAudioRouteType() == TYPE_BLE_HEADSET
                             && item.getAudioZoneConfigState().isSelected());
+            boolean isAnyReceivingBroadcast = audioRouteItems.values().stream().anyMatch(
+                    item -> item.getBluetoothDeviceState().isReceivingBroadcast());
 
             BluetoothLeBroadcastMetadata broadcastMetadata = getCurrentBroadcast();
 
@@ -521,7 +523,7 @@ public class AudioRoutesManager {
                     } else {
                         if (audioRoute.getGlobalState().isAudioSharingEnabled()
                                 && audioRoute.getAudioRouteType() == TYPE_BLE_HEADSET
-                                && isLeSelected) {
+                                && (isAnyBleUnicasting || isAnyReceivingBroadcast)) {
                             newState = MULTICAST_READY_UNICAST_READY;
                         } else {
                             newState = UNICAST_READY;
@@ -601,6 +603,7 @@ public class AudioRoutesManager {
                     }
 
                     chainEvents.addAll(audioRouteItems.values().stream()
+                            .filter(item -> item.getState() != MULTICAST_ACTIVE)
                             .map(item -> new AudioRouteEvent(item.getAddress(), RESET))
                             .toList());
                     // Stop broadcast if unicast starts.
@@ -758,8 +761,7 @@ public class AudioRoutesManager {
                     if (!audioRoute.getBluetoothDeviceState().isReceivingBroadcast()) {
                         LOG.d("[handleEvents] <LEAVING_BROADCAST> Left broadcast: "
                                 + audioRoute.getName());
-                        if (audioRouteItems.values().stream().noneMatch(
-                                item -> item.getBluetoothDeviceState().isReceivingBroadcast())) {
+                        if (!isAnyReceivingBroadcast) {
                             LOG.d("[handleEvents] <LEAVING_BROADCAST> All left. Stopping "
                                     + "broadcast");
                             mLeBroadcastProfile.stopLatestBroadcast();
