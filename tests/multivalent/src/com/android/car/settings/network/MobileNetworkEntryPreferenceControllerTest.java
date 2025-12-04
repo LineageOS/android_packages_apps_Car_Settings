@@ -511,12 +511,24 @@ public class MobileNetworkEntryPreferenceControllerTest {
 
     private SubscriptionInfo createSubscriptionInfo(int subId, int simSlotIndex,
             String displayName) {
-        SubscriptionInfo subInfo = new SubscriptionInfo(subId, /* iccId= */ "",
-                simSlotIndex, displayName, /* carrierName= */ "",
-                /* nameSource= */ 0, /* iconTint= */ 0, /* number= */ "",
-                /* roaming= */ 0, /* icon= */ null, /* mcc= */ "", "mncString",
-                /* countryIso= */ "", /* isEmbedded= */ false,
-                /* accessRules= */ null, /* cardString= */ "");
+        SubscriptionInfo subInfo = new SubscriptionInfo.Builder()
+                .setId(subId)
+                .setIccId("")
+                .setSimSlotIndex(simSlotIndex)
+                .setDisplayName(displayName)
+                .setCarrierName("")
+                .setDisplayNameSource(0)
+                .setIconTint(0)
+                .setNumber("")
+                .setDataRoaming(0)
+                .setIcon(null)
+                .setMcc("")
+                .setMnc("mncString")
+                .setCountryIso("")
+                .setEmbedded(false)
+                .setNativeAccessRules(null)
+                .setCardString("")
+                .build();
         return subInfo;
     }
 }
