@@ -300,12 +300,24 @@ public class DataUsageSummaryPreferenceControllerTest {
     }
 
     private void setCarrierName(CharSequence name) {
-        SubscriptionInfo subInfo = new SubscriptionInfo(/* id= */ 0, /* iccId= */ "",
-                /* simSlotIndex= */ 0, /* displayName= */ "", name,
-                /* nameSource= */ 0, /* iconTint= */ 0, /* number= */ "",
-                /* roaming= */ 0, /* icon= */ null, /* mcc= */ "", /* mnc= */ "",
-                /* countryIso= */ "", /* isEmbedded= */ false,
-                /* accessRules= */ null, /* cardString= */ "");
+        SubscriptionInfo subInfo = new SubscriptionInfo.Builder()
+                .setId(0)
+                .setIccId("")
+                .setSimSlotIndex(0)
+                .setDisplayName("")
+                .setCarrierName(name)
+                .setDisplayNameSource(0)
+                .setIconTint(0)
+                .setNumber("")
+                .setDataRoaming(0)
+                .setIcon(null)
+                .setMcc("")
+                .setMnc("")
+                .setCountryIso("")
+                .setEmbedded(false)
+                .setNativeAccessRules(null)
+                .setCardString("")
+                .build();
         when(mMockSubscriptionManager.getActiveSubscriptionInfo(SUB_ID)).thenReturn(subInfo);
     }
 

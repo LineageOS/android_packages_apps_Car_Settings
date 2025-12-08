@@ -256,6 +256,48 @@ public class AudioRouteItemTest {
     }
 
     @Test
+    public void testVolumeStateToBuilderCopiesAndModifiesCorrectly() {
+        int originalMin = 1;
+        int originalMax = 10;
+        int originalCurrent = 5;
+        boolean originalUseProfile = true;
+
+        AudioRouteItem.VolumeState originalState = new AudioRouteItem.VolumeState.Builder()
+                .setMinVolume(originalMin)
+                .setMaxVolume(originalMax)
+                .setCurrentVolume(originalCurrent)
+                .setUseVolumeControlProfile(originalUseProfile)
+                .build();
+
+        // Create a new builder from the original state
+        AudioRouteItem.VolumeState.Builder builder = originalState.toBuilder();
+
+        // Modify values in the new builder
+        int newMin = 2;
+        int newMax = 20;
+        int newCurrent = 8;
+        boolean newUseProfile = false;
+        builder.setMinVolume(newMin)
+                .setMaxVolume(newMax)
+                .setCurrentVolume(newCurrent)
+                .setUseVolumeControlProfile(newUseProfile);
+
+        AudioRouteItem.VolumeState newState = builder.build();
+
+        // Verify the new state has the modified values
+        assertThat(newState.getMinVolume()).isEqualTo(newMin);
+        assertThat(newState.getMaxVolume()).isEqualTo(newMax);
+        assertThat(newState.getCurrentVolume()).isEqualTo(newCurrent);
+        assertThat(newState.useVolumeControlProfile()).isEqualTo(newUseProfile);
+
+        // Verify the original state remains unchanged
+        assertThat(originalState.getMinVolume()).isEqualTo(originalMin);
+        assertThat(originalState.getMaxVolume()).isEqualTo(originalMax);
+        assertThat(originalState.getCurrentVolume()).isEqualTo(originalCurrent);
+        assertThat(originalState.useVolumeControlProfile()).isEqualTo(originalUseProfile);
+    }
+
+    @Test
     public void testGlobalStateBuilder() {
         boolean enabled = true;
         AudioRouteItem.GlobalState state = new AudioRouteItem.GlobalState.Builder()
@@ -265,7 +307,26 @@ public class AudioRouteItemTest {
     }
 
     @Test
+    public void state_getValue_returnsCorrectIntegerValue() {
+        // Verifies that each state enum returns the correct integer value.
+        assertThat(AudioRouteItem.State.UNSPECIFIED.getValue()).isEqualTo(0);
+        assertThat(AudioRouteItem.State.CREATED.getValue()).isEqualTo(1);
+        assertThat(AudioRouteItem.State.UNICAST_READY.getValue()).isEqualTo(2);
+        assertThat(AudioRouteItem.State.UNICAST_ACTIVE.getValue()).isEqualTo(3);
+        assertThat(AudioRouteItem.State.MULTICAST_READY_UNICAST_READY.getValue()).isEqualTo(4);
+        assertThat(AudioRouteItem.State.MULTICAST_READY_UNICAST_ACTIVE.getValue()).isEqualTo(5);
+        assertThat(AudioRouteItem.State.MULTICAST_ACTIVE.getValue()).isEqualTo(6);
+        assertThat(AudioRouteItem.State.STARTING_UNICAST.getValue()).isEqualTo(7);
+        assertThat(AudioRouteItem.State.JOINING_BROADCAST.getValue()).isEqualTo(8);
+        assertThat(AudioRouteItem.State.STARTING_BROADCAST.getValue()).isEqualTo(9);
+        assertThat(AudioRouteItem.State.LEAVING_BROADCAST.getValue()).isEqualTo(10);
+        assertThat(AudioRouteItem.State.BROADCAST_READY.getValue()).isEqualTo(11);
+        assertThat(AudioRouteItem.State.BROADCAST_ACTIVE.getValue()).isEqualTo(12);
+    }
+
+    @Test
     public void testState_isActiveState() {
+        assertThat(AudioRouteItem.State.UNSPECIFIED.isActiveState()).isFalse();
         assertThat(AudioRouteItem.State.CREATED.isActiveState()).isFalse();
         assertThat(AudioRouteItem.State.UNICAST_READY.isActiveState()).isFalse();
         assertThat(AudioRouteItem.State.UNICAST_ACTIVE.isActiveState()).isTrue();
@@ -282,6 +343,7 @@ public class AudioRouteItemTest {
 
     @Test
     public void testState_isStartingState() {
+        assertThat(AudioRouteItem.State.UNSPECIFIED.isStartingState()).isFalse();
         assertThat(AudioRouteItem.State.STARTING_UNICAST.isStartingState()).isTrue();
         assertThat(AudioRouteItem.State.JOINING_BROADCAST.isStartingState()).isTrue();
         assertThat(AudioRouteItem.State.CREATED.isStartingState()).isFalse();
@@ -291,6 +353,7 @@ public class AudioRouteItemTest {
 
     @Test
     public void testState_isSelfDrivenState() {
+        assertThat(AudioRouteItem.State.UNSPECIFIED.isSelfDrivenState()).isFalse();
         assertThat(AudioRouteItem.State.CREATED.isSelfDrivenState()).isTrue();
         assertThat(AudioRouteItem.State.STARTING_UNICAST.isSelfDrivenState()).isTrue();
         assertThat(AudioRouteItem.State.STARTING_BROADCAST.isSelfDrivenState()).isTrue();
@@ -303,6 +366,7 @@ public class AudioRouteItemTest {
 
     @Test
     public void testState_isBroadcastState() {
+        assertThat(AudioRouteItem.State.UNSPECIFIED.isBroadcastState()).isFalse();
         assertThat(AudioRouteItem.State.CREATED.isBroadcastState()).isFalse();
         assertThat(AudioRouteItem.State.UNICAST_READY.isBroadcastState()).isFalse();
         assertThat(AudioRouteItem.State.UNICAST_ACTIVE.isBroadcastState()).isFalse();

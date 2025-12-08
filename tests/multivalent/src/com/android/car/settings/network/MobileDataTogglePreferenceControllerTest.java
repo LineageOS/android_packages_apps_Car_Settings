@@ -380,13 +380,28 @@ public class MobileDataTogglePreferenceControllerTest {
     }
 
     private SubscriptionInfo createSubscriptionInfo(int subId, boolean isOpportunistic) {
-        SubscriptionInfo subInfo = new SubscriptionInfo(subId, /* iccId= */ "",
-                /* simSlotIndex= */ 0, /* displayName= */ "", /* carrierName= */ "",
-                /* nameSource= */ 0, /* iconTint= */ 0, /* number= */ "",
-                /* roaming= */ 0, /* icon= */ null, /* mcc= */ "", /* mnc= */ "",
-                /* countryIso= */ "", /* isEmbedded= */ false,
-                /* accessRules= */ null, /* cardString= */ "", isOpportunistic,
-                /* groupUUID= */ null, /* carrierId= */ 0, /* profileClass= */ 0);
+        SubscriptionInfo subInfo = new SubscriptionInfo.Builder()
+                .setId(subId)
+                .setIccId("")
+                .setSimSlotIndex(0)
+                .setDisplayName("")
+                .setCarrierName("")
+                .setDisplayNameSource(0)
+                .setIconTint(0)
+                .setNumber("")
+                .setDataRoaming(0)
+                .setIcon(null)
+                .setMcc("")
+                .setMnc("")
+                .setCountryIso("")
+                .setEmbedded(false)
+                .setNativeAccessRules(null)
+                .setCardString("")
+                .setOpportunistic(isOpportunistic)
+                .setGroupUuid(null)
+                .setCarrierId(0)
+                .setProfileClass(0)
+                .build();
         return subInfo;
     }
 

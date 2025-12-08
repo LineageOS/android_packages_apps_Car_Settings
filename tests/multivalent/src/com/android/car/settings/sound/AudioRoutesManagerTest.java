@@ -27,7 +27,9 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
@@ -39,6 +41,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothLeBroadcastMetadata;
 import android.bluetooth.BluetoothLeBroadcastReceiveState;
 import android.bluetooth.BluetoothProfile;
+import android.bluetooth.BluetoothVolumeControl;
 import android.car.media.CarAudioManager;
 import android.car.media.CarAudioZoneConfigInfo;
 import android.car.media.CarVolumeGroupInfo;
@@ -56,8 +59,11 @@ import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.audiosharing.BaseAudioSharingPreferenceController;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
+import com.android.settingslib.bluetooth.BluetoothEventManager;
+import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
+import com.android.settingslib.bluetooth.LeAudioProfile;
 import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcast;
 import com.android.settingslib.bluetooth.LocalBluetoothLeBroadcastAssistant;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -78,6 +84,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 @RunWith(AndroidJUnit4.class)
 public class AudioRoutesManagerTest {
@@ -96,6 +105,8 @@ public class AudioRoutesManagerTest {
     private static final String BT_LE_AUDIO_DEVICE_ADDRESS_1 = "bluetooth_le_audio_address_1";
     private static final String BT_LE_AUDIO_DEVICE_NAME_2 = "bluetooth_le_audio_2";
     private static final String BT_LE_AUDIO_DEVICE_ADDRESS_2 = "bluetooth_le_audio_address_2";
+    private static final String BT_LE_AUDIO_DEVICE_NAME_3 = "bluetooth_le_audio_3";
+    private static final String BT_LE_AUDIO_DEVICE_ADDRESS_3 = "bluetooth_le_audio_address_3";
     private static final String BT_LE_BROADCAST_DEVICE_NAME = "bluetooth_le_broadcast";
     private static final String BT_LE_BROADCAST_ADDRESS = "bluetooth_le_broadcast_address";
     private static final String CONFLICTING_ZONE_CONFIG_NAME = "conflicting_zone_config";
@@ -109,6 +120,8 @@ public class AudioRoutesManagerTest {
     @Mock
     private LocalBluetoothManager mBluetoothManager;
     @Mock
+    private BluetoothEventManager mBluetoothEventManager;
+    @Mock
     private LocalBluetoothProfileManager mLocalBluetoothProfileManager;
     @Mock
     private LocalBluetoothLeBroadcast mLocalBluetoothLeBroadcast;
@@ -117,33 +130,47 @@ public class AudioRoutesManagerTest {
     @Mock
     private VolumeControlProfile mVolumeControlProfile;
     @Mock
-    private CachedBluetoothDeviceManager mCachedBluetoothDeviceManager;
+    private LeAudioProfile mLeAudioProfile;
     @Mock
-    private BluetoothLeBroadcastMetadata mBluetoothLeBroadcastMetadata;
+    private AudioRoutesManager.AudioRoutesUpdateListener mListener;
     @Mock
-    private BluetoothDevice mBroadcastBluetoothDevice;
+    private ScheduledExecutorService mMockExecutor;
+    @Mock
+    private Toast mMockToast;
+    private ArgumentCaptor<List<AudioRouteItem>> mAudioRoutesCaptor;
+    private ArgumentCaptor<BluetoothVolumeControl.Callback> mVolumeControlCallbackCaptor;
+    private ArgumentCaptor<CarAudioManager.CarVolumeCallback> mCarVolumeCallbackCaptor;
+    private ArgumentCaptor<BluetoothCallback> mBluetoothCallbackCaptor;
+
     @Mock
     private BluetoothDevice mReceivingBroadcastBluetoothDevice1;
     @Mock
     private BluetoothDevice mReceivingBroadcastBluetoothDevice2;
     @Mock
+    private BluetoothDevice mReceivingBroadcastBluetoothDevice3;
+    @Mock
+    private BluetoothDevice mBroadcastBluetoothDevice;
+    @Mock
+    private BluetoothLeBroadcastMetadata mBluetoothLeBroadcastMetadata;
+    @Mock
     private BluetoothLeBroadcastReceiveState mBluetoothLeBroadcastReceiveState;
+    @Mock
+    private CachedBluetoothDeviceManager mCachedBluetoothDeviceManager;
     @Mock
     private AudioAttributes mAudioAttributes;
     @Mock
-    private AudioDeviceInfo mAudioDeviceInfo;
-    @Mock
     private AudioDeviceAttributes mAudioDeviceAttributes;
     @Mock
-    private AudioRoutesManager.AudioRoutesUpdateListener mListener;
-    @Mock
-    private Toast mMockToast;
-    private ArgumentCaptor<List<AudioRouteItem>> mAudioRoutesCaptor;
+    private AudioDeviceInfo mAudioDeviceInfo;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mAudioRoutesCaptor = ArgumentCaptor.forClass(List.class);
+        mVolumeControlCallbackCaptor = ArgumentCaptor.forClass(
+                BluetoothVolumeControl.Callback.class);
+        mCarVolumeCallbackCaptor = ArgumentCaptor.forClass(CarAudioManager.CarVolumeCallback.class);
+        mBluetoothCallbackCaptor = ArgumentCaptor.forClass(BluetoothCallback.class);
         initMocks();
     }
 
@@ -197,7 +224,7 @@ public class AudioRoutesManagerTest {
                 /* cachedDevices= */ List.of(a2dpBluetoothDevice, leAudioBluetoothDevice)
         );
 
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         List<String> audioRouteList = mAudioRoutesManager.getAudioRouteList();
         assertThat(audioRouteList).containsExactly(
@@ -229,13 +256,13 @@ public class AudioRoutesManagerTest {
                 /* cachedDevices= */ List.of()
         );
 
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         assertThat(mAudioRoutesManager.getOutputAddress()).isEqualTo(AUDIO_DEVICE_ADDRESS);
     }
 
     @Test
-    public void getActiveRoutes_returnsAudioRouteItems() {
+    public void createAudioRoutes_returnsAudioRouteItems() {
         CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
                 /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
                 /* address= */ AUDIO_DEVICE_ADDRESS,
@@ -281,15 +308,13 @@ public class AudioRoutesManagerTest {
         setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
         setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice1);
 
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
         assertThat(audioRouteItems.size()).isEqualTo(4);
 
         // Audio device, active and selected.
         AudioRouteItem deviceAudioRoute = audioRouteItems.get(AUDIO_DEVICE_ADDRESS);
-        assertThat(deviceAudioRoute).isNotNull();
-        assertThat(deviceAudioRoute.getName()).isEqualTo(AUDIO_DEVICE_NAME);
         assertThat(deviceAudioRoute.getAddress()).isEqualTo(AUDIO_DEVICE_ADDRESS);
         assertThat(deviceAudioRoute.getAudioRouteType()).isEqualTo(TYPE_BUILTIN_SPEAKER);
         assertThat(deviceAudioRoute.getBluetoothDevice()).isNull();
@@ -298,7 +323,6 @@ public class AudioRoutesManagerTest {
 
         // A2DP BT device, active.
         AudioRouteItem a2dpAudioRoute = audioRouteItems.get(BT_A2DP_DEVICE_ADDRESS);
-        assertThat(a2dpAudioRoute).isNotNull();
         assertThat(a2dpAudioRoute.getName()).isEqualTo(BT_A2DP_DEVICE_NAME);
         assertThat(a2dpAudioRoute.getAddress()).isEqualTo(BT_A2DP_DEVICE_ADDRESS);
         assertThat(a2dpAudioRoute.getAudioRouteType()).isEqualTo(TYPE_BLUETOOTH_A2DP);
@@ -314,7 +338,6 @@ public class AudioRoutesManagerTest {
 
         // LE Audio device, receiving broadcast.
         AudioRouteItem leAudioRoute = audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_1);
-        assertThat(leAudioRoute).isNotNull();
         assertThat(leAudioRoute.getName()).isEqualTo(BT_LE_AUDIO_DEVICE_NAME_1);
         assertThat(leAudioRoute.getAddress()).isEqualTo(BT_LE_AUDIO_DEVICE_ADDRESS_1);
         assertThat(leAudioRoute.getAudioRouteType()).isEqualTo(TYPE_BLE_HEADSET);
@@ -330,7 +353,6 @@ public class AudioRoutesManagerTest {
 
         // Broadcast device.
         AudioRouteItem broadcastAudioRoute = audioRouteItems.get(BT_LE_BROADCAST_ADDRESS);
-        assertThat(broadcastAudioRoute).isNotNull();
         assertThat(broadcastAudioRoute.getName()).isEqualTo(BT_LE_BROADCAST_DEVICE_NAME);
         assertThat(broadcastAudioRoute.getAddress()).isEqualTo(BT_LE_BROADCAST_ADDRESS);
         assertThat(broadcastAudioRoute.getAudioRouteType()).isEqualTo(TYPE_BLE_BROADCAST);
@@ -339,8 +361,7 @@ public class AudioRoutesManagerTest {
     }
 
     @Test
-    public void getActiveRoutes_setsVolumeStateCorrectly() {
-        // Scenario 1: audioZoneConfigState.isSelected() is true
+    public void createAudioRoutes_usesCarAudioVolume_forSelectedDevice() {
         CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
                 /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
                 /* address= */ AUDIO_DEVICE_ADDRESS,
@@ -355,19 +376,98 @@ public class AudioRoutesManagerTest {
         when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
         when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
         when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
-        when(mCarAudioManager.getGroupVolume(TEST_ZONE_ID, 1)).thenReturn(50);
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(50);
 
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
         AudioRouteItem deviceAudioRoute = audioRouteItems.get(AUDIO_DEVICE_ADDRESS);
 
-        assertThat(deviceAudioRoute.getVolumeState()).isNotNull();
         assertThat(deviceAudioRoute.getVolumeState().getMaxVolume()).isEqualTo(100);
         assertThat(deviceAudioRoute.getVolumeState().getMinVolume()).isEqualTo(0);
         assertThat(deviceAudioRoute.getVolumeState().getCurrentVolume()).isEqualTo(50);
         assertThat(deviceAudioRoute.getVolumeState().useVolumeControlProfile()).isFalse();
+    }
 
-        // Scenario 2: audioZoneConfigState.isSelected() is false and isReceivingBroadcast is true
+    @Test
+    public void createAudioRoutes_usesCarAudioVolume_forNonBluetoothRoutes() {
+        CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
+                /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ AUDIO_DEVICE_ADDRESS,
+                /* deviceName= */ AUDIO_DEVICE_NAME,
+                /* type= */ TYPE_BUILTIN_SPEAKER,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(deviceZoneConfig),
+                /* cachedDevices= */ List.of()
+        );
+        when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
+        when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
+        when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
+        // Initial volume from CarAudioManager
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(50);
+
+        mAudioRoutesManager = createAudioRoutesManager();
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+        AudioRouteItem deviceAudioRoute = audioRouteItems.get(AUDIO_DEVICE_ADDRESS);
+
+        assertThat(deviceAudioRoute.getVolumeState().getMaxVolume()).isEqualTo(100);
+        assertThat(deviceAudioRoute.getVolumeState().getMinVolume()).isEqualTo(0);
+        assertThat(deviceAudioRoute.getVolumeState().getCurrentVolume()).isEqualTo(50);
+        assertThat(deviceAudioRoute.getVolumeState().useVolumeControlProfile()).isFalse();
+    }
+
+    @Test
+    public void createAudioRoutes_usesCachedGroupVolume_forSelectedDevice() {
+        CarAudioZoneConfigInfo a2dpZoneConfig = createZoneConfig(
+                /* name= */ A2DP_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_A2DP_DEVICE_ADDRESS,
+                /* deviceName= */ BT_A2DP_DEVICE_NAME,
+                /* type= */ TYPE_BLUETOOTH_A2DP,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CachedBluetoothDevice a2dpBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_A2DP_DEVICE_NAME,
+                /* address= */ BT_A2DP_DEVICE_ADDRESS,
+                /* device= */ null,
+                /* isConnectedA2dp= */ true,
+                /* isConnectedLeAudio= */false,
+                /* isActiveA2dp= */ true,
+                /* isActiveLeAudio= */ false);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(a2dpZoneConfig),
+                /* cachedDevices= */ List.of(a2dpBluetoothDevice)
+        );
+        when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
+        when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
+        when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
+        // Initial volume 60
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(60);
+        mAudioRoutesManager = createAudioRoutesManager();
+        // Capture callback to trigger volume change and populate cache
+        verify(mCarAudioManager).registerCarVolumeCallback(mCarVolumeCallbackCaptor.capture());
+        CarAudioManager.CarVolumeCallback callback = mCarVolumeCallbackCaptor.getValue();
+
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(50);
+        // Trigger callback. This should set cache to 50.
+        callback.onGroupVolumeChanged(TEST_ZONE_ID, 1, 0);
+
+        AudioRouteItem a2dpRoute = mAudioRoutesManager.getActiveRoutes().get(
+                BT_A2DP_DEVICE_ADDRESS);
+        assertThat(a2dpRoute.getVolumeState().getCurrentVolume()).isEqualTo(50);
+    }
+
+    @Test
+    public void createAudioRoutes_usesCarAudioVolume_forLeAudioFallbackDevice() {
+        CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
+                /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ AUDIO_DEVICE_ADDRESS,
+                /* deviceName= */ AUDIO_DEVICE_NAME,
+                /* type= */ TYPE_BUILTIN_SPEAKER,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+
+        // Multicast LE Device is the unicast fallback => Use Car Audio volume.
         CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
                 /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
                 /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
@@ -389,31 +489,151 @@ public class AudioRoutesManagerTest {
         );
         setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
         setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice1);
+
+        // Fallback match for Device 1
+        when(leAudioBluetoothDevice.getGroupId()).thenReturn(10);
+        when(mLeAudioProfile.getBroadcastToUnicastFallbackGroup()).thenReturn(10);
+        when(mVolumeControlProfile.getConnectionStatus(mReceivingBroadcastBluetoothDevice1))
+                .thenReturn(BluetoothProfile.STATE_CONNECTED);
+
+        when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
         when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
         when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
-        when(mCarAudioManager.getGroupVolume(TEST_ZONE_ID, 1)).thenReturn(50);
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(50);
 
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
-        audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+        mAudioRoutesManager = createAudioRoutesManager();
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        // Check Scenario (Fallback)
         AudioRouteItem leAudioRoute = audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_1);
-
-        assertThat(leAudioRoute.getVolumeState()).isNotNull();
-        assertThat(leAudioRoute.getVolumeState().getMaxVolume()).isEqualTo(255);
+        assertThat(leAudioRoute.getVolumeState().getMaxVolume()).isEqualTo(100);
         assertThat(leAudioRoute.getVolumeState().getMinVolume()).isEqualTo(0);
-        // Scaled volume: (50 - 0) * (255 - 0) / (100 - 0) + 0 = 127.5 -> 128
-        assertThat(leAudioRoute.getVolumeState().getCurrentVolume()).isEqualTo(128);
+        assertThat(leAudioRoute.getVolumeState().getCurrentVolume()).isEqualTo(50);
+        assertThat(leAudioRoute.getVolumeState().useVolumeControlProfile()).isFalse();
+    }
+
+    @Test
+    public void createAudioRoutes_usesVcpVolume_forLeAudioDevice() {
+        CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
+                /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ AUDIO_DEVICE_ADDRESS,
+                /* deviceName= */ AUDIO_DEVICE_NAME,
+                /* type= */ TYPE_BUILTIN_SPEAKER,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+        // Multicast LE Device is NOT the unicast fallback => Use VCP.
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_2,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_2,
+                /* device= */ mReceivingBroadcastBluetoothDevice2,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(deviceZoneConfig, leAudioZoneConfig),
+                /* cachedDevices= */ List.of(leAudioBluetoothDevice)
+        );
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+        setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice2);
+        // No fallback match for Device, VCP supported.
+        when(leAudioBluetoothDevice.getGroupId()).thenReturn(20);
+        when(mLeAudioProfile.getBroadcastToUnicastFallbackGroup()).thenReturn(10);
+        when(mVolumeControlProfile.getConnectionStatus(mReceivingBroadcastBluetoothDevice2))
+                .thenReturn(BluetoothProfile.STATE_CONNECTED);
+        when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
+        when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
+        when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(50);
+        when(mReceivingBroadcastBluetoothDevice2.getAddress())
+                .thenReturn(BT_LE_AUDIO_DEVICE_ADDRESS_2);
+
+        mAudioRoutesManager = createAudioRoutesManager();
+        // Trigger volume change via VCP callback
+        verify(mVolumeControlProfile).registerCallback(any(),
+                mVolumeControlCallbackCaptor.capture());
+        BluetoothVolumeControl.Callback callback = mVolumeControlCallbackCaptor.getValue();
+        // 191 scales to 75 in range 0-100 from 0-255
+        callback.onDeviceVolumeChanged(mReceivingBroadcastBluetoothDevice2, 191);
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        // Check Scenario (Non-fallback, VCP)
+        AudioRouteItem leAudioRoute = audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_2);
+        assertThat(leAudioRoute.getVolumeState().getMaxVolume()).isEqualTo(100);
+        assertThat(leAudioRoute.getVolumeState().getMinVolume()).isEqualTo(0);
+        assertThat(leAudioRoute.getVolumeState().getCurrentVolume()).isEqualTo(75);
         assertThat(leAudioRoute.getVolumeState().useVolumeControlProfile()).isTrue();
     }
 
     @Test
-    public void getActiveRoutes_copiesPreviousState() {
+    public void createAudioRoutes_usesCarAudioVolume_forLeAudioNonVcpDevice() {
+        CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
+                /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ AUDIO_DEVICE_ADDRESS,
+                /* deviceName= */ AUDIO_DEVICE_NAME,
+                /* type= */ TYPE_BUILTIN_SPEAKER,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+        // Multicast LE Device is NOT the unicast fallback and VCP NOT supported => Use Car Audio.
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_3,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_3,
+                /* device= */ mReceivingBroadcastBluetoothDevice3,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(deviceZoneConfig, leAudioZoneConfig),
+                /* cachedDevices= */ List.of(leAudioBluetoothDevice)
+        );
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+        setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice3);
+        // No fallback match for Device, VCP NOT supported.
+        when(leAudioBluetoothDevice.getGroupId()).thenReturn(30);
+        when(mLeAudioProfile.getBroadcastToUnicastFallbackGroup()).thenReturn(10);
+        when(mVolumeControlProfile.getConnectionStatus(mReceivingBroadcastBluetoothDevice3))
+                .thenReturn(BluetoothProfile.STATE_DISCONNECTED);
+        when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
+        when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
+        when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(50);
+
+        mAudioRoutesManager = createAudioRoutesManager();
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        // Check Scenario (Non-fallback, Non-VCP)
+        AudioRouteItem leAudioRoute = audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_3);
+        assertThat(leAudioRoute.getVolumeState().getMaxVolume()).isEqualTo(100);
+        assertThat(leAudioRoute.getVolumeState().getMinVolume()).isEqualTo(0);
+        assertThat(leAudioRoute.getVolumeState().getCurrentVolume()).isEqualTo(50);
+        assertThat(leAudioRoute.getVolumeState().useVolumeControlProfile()).isFalse();
+    }
+
+    @Test
+    public void createAudioRoutes_copiesPreviousState() {
         // Set up initial cached routes with a specific state
         AudioRouteItem.State initialState = AudioRouteItem.State.UNICAST_READY;
         AudioDeviceAttributes audioDeviceAttributes = mock(AudioDeviceAttributes.class);
         AudioRouteItem initialAudioRoute = new AudioRouteItem.Builder(audioDeviceAttributes)
                 .setState(initialState)
                 .build();
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         mAudioRoutesManager.getActiveRoutes().put(AUDIO_DEVICE_ADDRESS, initialAudioRoute);
 
         // Trigger update
@@ -421,12 +641,11 @@ public class AudioRoutesManagerTest {
 
         // Verify that the state is copied
         AudioRouteItem deviceAudioRoute = audioRouteItems.get(AUDIO_DEVICE_ADDRESS);
-        assertThat(deviceAudioRoute).isNotNull();
         assertThat(deviceAudioRoute.getState()).isEqualTo(initialState);
     }
 
     @Test
-    public void getActiveRoutes_selectedConfigWins() {
+    public void createAudioRoutes_choosesSelectedConfigIfDuplicated() {
         CarAudioZoneConfigInfo unselectedConfig = createZoneConfig(
                 /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
                 /* address= */ AUDIO_DEVICE_ADDRESS,
@@ -443,13 +662,12 @@ public class AudioRoutesManagerTest {
                 /* isSelected= */ true);
         when(mCarAudioManager.getAudioZoneConfigInfos(TEST_ZONE_ID))
                 .thenReturn(List.of(unselectedConfig, selectedConfig));
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
 
         // Verify that the selected config wins
         AudioRouteItem deviceAudioRoute = audioRouteItems.get(AUDIO_DEVICE_ADDRESS);
-        assertThat(deviceAudioRoute).isNotNull();
         assertThat(deviceAudioRoute.getAudioZoneConfigState().isSelected()).isTrue();
     }
 
@@ -471,7 +689,7 @@ public class AudioRoutesManagerTest {
                 /* isSelected= */ false);
         when(mCarAudioManager.getAudioZoneConfigInfos(TEST_ZONE_ID))
                 .thenReturn(List.of(deviceZoneConfig, leBroadcastZoneConfig));
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         assertThat(mAudioRoutesManager.getDeviceName(AUDIO_DEVICE_ADDRESS)).isEqualTo(
                 AUDIO_DEVICE_NAME);
@@ -491,7 +709,7 @@ public class AudioRoutesManagerTest {
                 /* isSelected= */ false);
         when(mCarAudioManager.getAudioZoneConfigInfos(TEST_ZONE_ID))
                 .thenReturn(List.of(deviceZoneConfig));
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         assertThat(mAudioRoutesManager.getDeviceName(AUDIO_DEVICE_ADDRESS)).isEqualTo(
                 "audiodevice");
@@ -501,7 +719,7 @@ public class AudioRoutesManagerTest {
     public void isAudioRoutingEnabled_trueWhenFeatureEnabled() {
         when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_DYNAMIC_ROUTING)).thenReturn(
                 true);
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         assertThat(mAudioRoutesManager.isAudioRoutingEnabled()).isTrue();
     }
@@ -510,7 +728,7 @@ public class AudioRoutesManagerTest {
     public void isAudioRoutingEnabled_falseWhenFeatureDisabled() {
         when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_DYNAMIC_ROUTING)).thenReturn(
                 false);
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         assertThat(mAudioRoutesManager.isAudioRoutingEnabled()).isFalse();
     }
@@ -533,7 +751,7 @@ public class AudioRoutesManagerTest {
                 /* isSelected= */ false);
         when(mCarAudioManager.getAudioZoneConfigInfos(TEST_ZONE_ID))
                 .thenReturn(List.of(deviceZoneConfig, leBroadcastZoneConfig));
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
 
         assertThat(mAudioRoutesManager.isLeBroadcast(BT_LE_BROADCAST_ADDRESS)).isTrue();
         assertThat(mAudioRoutesManager.isLeBroadcast(AUDIO_DEVICE_ADDRESS)).isFalse();
@@ -578,7 +796,7 @@ public class AudioRoutesManagerTest {
         );
 
         // Initial state.
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         // State change notification 1.
         // AUDIO_DEVICE: UNICAST_ACTIVE
         // BT_A2DP_DEVICE: UNICAST_READY
@@ -670,7 +888,7 @@ public class AudioRoutesManagerTest {
         );
 
         // Initial state.
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         // State change notification 1.
         // AUDIO_DEVICE: UNICAST_READY
         // BT_A2DP_DEVICE: UNICAST_ACTIVE
@@ -768,7 +986,7 @@ public class AudioRoutesManagerTest {
         setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
 
         // Initial state.
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         // State change notification 1.
         // BT_LE_AUDIO_DEVICE_1: UNICAST_ACTIVE
         // BT_LE_AUDIO_DEVICE_2: MULTICAST_READY_UNICAST_READY
@@ -892,7 +1110,7 @@ public class AudioRoutesManagerTest {
         setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice2);
 
         // Initial state.
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         // State change notification 1.
         // AUDIO_DEVICE: UNICAST_READY
         // BT_LE_AUDIO_DEVICE_1: MULTICAST_ACTIVE
@@ -984,7 +1202,7 @@ public class AudioRoutesManagerTest {
 
     @Test
     public void tearDown_clearsCallback() {
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         mAudioRoutesManager.tearDown();
 
         /* Verifies that {@link CarAudioManager#clearAudioZoneConfigsCallback()} is called in
@@ -993,7 +1211,7 @@ public class AudioRoutesManagerTest {
     }
 
     @Test
-    public void setVolume_useVolumeControlProfile() {
+    public void setVolume_usesVolumeControlProfile_withScaledValue() {
         CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
                 /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
                 /* address= */ AUDIO_DEVICE_ADDRESS,
@@ -1005,7 +1223,7 @@ public class AudioRoutesManagerTest {
                 /* zoneInfos= */ List.of(deviceZoneConfig),
                 /* cachedDevices= */ List.of()
         );
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         AudioRouteItem item = mAudioRoutesManager.getActiveRoutes().get(AUDIO_DEVICE_ADDRESS);
         AudioRouteItem.VolumeState volumeState = mock(AudioRouteItem.VolumeState.class);
         when(volumeState.useVolumeControlProfile()).thenReturn(true);
@@ -1022,14 +1240,17 @@ public class AudioRoutesManagerTest {
                 .setGlobalState(item.getGlobalState())
                 .build();
         mAudioRoutesManager.getActiveRoutes().put(AUDIO_DEVICE_ADDRESS, item);
+        when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
+        when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
+        when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
 
         mAudioRoutesManager.setVolume(AUDIO_DEVICE_ADDRESS, 50);
 
-        verify(mVolumeControlProfile).setDeviceVolume(eq(bluetoothDevice), eq(50), eq(true));
+        verify(mVolumeControlProfile).setDeviceVolume(eq(bluetoothDevice), eq(128), eq(true));
     }
 
     @Test
-    public void setVolume_useCarAudioManager() {
+    public void setVolume_usesCarAudioManager() {
         CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
                 /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
                 /* address= */ AUDIO_DEVICE_ADDRESS,
@@ -1042,7 +1263,7 @@ public class AudioRoutesManagerTest {
                 /* cachedDevices= */ List.of()
         );
         when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
-        mAudioRoutesManager = new AudioRoutesManager(mContext, USAGE);
+        mAudioRoutesManager = createAudioRoutesManager();
         AudioRouteItem item = mAudioRoutesManager.getActiveRoutes().get(AUDIO_DEVICE_ADDRESS);
         AudioRouteItem.VolumeState volumeState = mock(AudioRouteItem.VolumeState.class);
         when(volumeState.useVolumeControlProfile()).thenReturn(false);
@@ -1060,6 +1281,408 @@ public class AudioRoutesManagerTest {
         mAudioRoutesManager.setVolume(AUDIO_DEVICE_ADDRESS, 50);
 
         verify(mCarAudioManager).setGroupVolume(eq(TEST_ZONE_ID), eq(1), eq(50), anyInt());
+    }
+
+    @Test
+    public void onDeviceVolumeChanged_updatesCacheAndNotifies() {
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leAudioZoneConfig),
+                /* cachedDevices= */ List.of(leAudioBluetoothDevice)
+        );
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+        setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice1);
+        when(mReceivingBroadcastBluetoothDevice1.getAddress()).thenReturn(
+                BT_LE_AUDIO_DEVICE_ADDRESS_1);
+        setupVolumeControlConnectionStatus(mReceivingBroadcastBluetoothDevice1,
+                BluetoothProfile.STATE_CONNECTED);
+        when(leAudioBluetoothDevice.getGroupId()).thenReturn(10);
+        when(mLeAudioProfile.getBroadcastToUnicastFallbackGroup()).thenReturn(20);
+        when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
+        when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
+        when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
+        // Initial volume
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(50);
+        mAudioRoutesManager = createAudioRoutesManager();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+        // Capture the callback
+        verify(mVolumeControlProfile).registerCallback(any(),
+                mVolumeControlCallbackCaptor.capture());
+        BluetoothVolumeControl.Callback callback = mVolumeControlCallbackCaptor.getValue();
+
+        // Trigger volume change
+        // Volume 200 (scaled from 0-255) to 0-100 -> ~78
+        // Scale logic: (200 - 0) * (100 - 0) / (255 - 0) + 0 = 78.43 -> 78
+        callback.onDeviceVolumeChanged(mReceivingBroadcastBluetoothDevice1, 200);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(mAudioRoutesCaptor.capture());
+        List<AudioRouteItem> routes = mAudioRoutesCaptor.getValue();
+        AudioRouteItem item = routes.stream().filter(
+                i -> i.getAddress().equals(BT_LE_AUDIO_DEVICE_ADDRESS_1)).findFirst().get();
+        // The volume state in the item should be the SCALED volume.
+        assertThat(item.getVolumeState().getMaxVolume()).isEqualTo(100);
+        assertThat(item.getVolumeState().getMinVolume()).isEqualTo(0);
+        assertThat(item.getVolumeState().getCurrentVolume()).isEqualTo(78);
+    }
+
+    @Test
+    public void onGroupVolumeChanged_updatesCacheAndNotifies() {
+        CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
+                /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ AUDIO_DEVICE_ADDRESS,
+                /* deviceName= */ AUDIO_DEVICE_NAME,
+                /* type= */ TYPE_BUILTIN_SPEAKER,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(deviceZoneConfig),
+                /* cachedDevices= */ List.of()
+        );
+        when(mCarAudioManager.getVolumeGroupIdForUsage(TEST_ZONE_ID, USAGE)).thenReturn(1);
+        when(mCarAudioManager.getGroupMaxVolume(1)).thenReturn(100);
+        when(mCarAudioManager.getGroupMinVolume(1)).thenReturn(0);
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(50);
+        mAudioRoutesManager = createAudioRoutesManager();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+        // Capture the callback
+        verify(mCarAudioManager).registerCarVolumeCallback(mCarVolumeCallbackCaptor.capture());
+        CarAudioManager.CarVolumeCallback callback = mCarVolumeCallbackCaptor.getValue();
+
+        // Trigger volume change
+        when(mCarAudioManager.getGroupVolume(1)).thenReturn(60);
+        callback.onGroupVolumeChanged(TEST_ZONE_ID, 1, 0);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(mAudioRoutesCaptor.capture());
+        List<AudioRouteItem> routes = mAudioRoutesCaptor.getValue();
+        AudioRouteItem item = routes.stream().filter(
+                i -> i.getAddress().equals(AUDIO_DEVICE_ADDRESS)).findFirst().get();
+        assertThat(item.getVolumeState().getMaxVolume()).isEqualTo(100);
+        assertThat(item.getVolumeState().getMinVolume()).isEqualTo(0);
+        assertThat(item.getVolumeState().getCurrentVolume()).isEqualTo(60);
+    }
+
+    @Test
+    public void testCreatedStateTransitions_toUnicastReady() {
+        CarAudioZoneConfigInfo a2dpZoneConfig = createZoneConfig(
+                /* name= */ A2DP_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_A2DP_DEVICE_ADDRESS,
+                /* deviceName= */ BT_A2DP_DEVICE_NAME,
+                /* type= */ TYPE_BLUETOOTH_A2DP,
+                /* isActive= */ false,
+                /* isSelected= */ false);
+        CachedBluetoothDevice a2dpBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_A2DP_DEVICE_NAME,
+                /* address= */ BT_A2DP_DEVICE_ADDRESS,
+                /* device= */ null,
+                /* isConnectedA2dp= */ true,
+                /* isConnectedLeAudio= */ false,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ false);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(a2dpZoneConfig),
+                /* cachedDevices= */ List.of(a2dpBluetoothDevice)
+        );
+        mAudioRoutesManager = createAudioRoutesManager();
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        assertThat(audioRouteItems.get(BT_A2DP_DEVICE_ADDRESS).getState()).isEqualTo(
+                AudioRouteItem.State.UNICAST_READY);
+    }
+
+    @Test
+    public void testCreatedStateTransitions_toBroadcastReady() {
+        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
+                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_BROADCAST_ADDRESS,
+                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
+                /* type= */ TYPE_BLE_BROADCAST,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leBroadcastZoneConfig),
+                /* cachedDevices= */ List.of());
+        mAudioRoutesManager = createAudioRoutesManager();
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        assertThat(audioRouteItems.get(BT_LE_BROADCAST_ADDRESS).getState()).isEqualTo(
+                AudioRouteItem.State.BROADCAST_READY);
+    }
+
+    @Test
+    public void testCreatedStateTransitions_toBroadcastActive() {
+        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
+                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_BROADCAST_ADDRESS,
+                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
+                /* type= */ TYPE_BLE_BROADCAST,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leBroadcastZoneConfig),
+                /* cachedDevices= */ List.of());
+        mAudioRoutesManager = createAudioRoutesManager();
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        assertThat(audioRouteItems.get(BT_LE_BROADCAST_ADDRESS).getState()).isEqualTo(
+                AudioRouteItem.State.BROADCAST_ACTIVE);
+    }
+
+    @Test
+    public void testCreatedStateTransitions_toMulticastActive() {
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leAudioZoneConfig),
+                /* cachedDevices= */ List.of(leAudioBluetoothDevice));
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+        setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice1);
+        mAudioRoutesManager = createAudioRoutesManager();
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        assertThat(audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_1).getState()).isEqualTo(
+                AudioRouteItem.State.MULTICAST_ACTIVE);
+    }
+
+    @Test
+    public void testCreatedStateTransitions_toUnicastActive() {
+        CarAudioZoneConfigInfo a2dpZoneConfig = createZoneConfig(
+                /* name= */ A2DP_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_A2DP_DEVICE_ADDRESS,
+                /* deviceName= */ BT_A2DP_DEVICE_NAME,
+                /* type= */ TYPE_BLUETOOTH_A2DP,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(a2dpZoneConfig),
+                /* cachedDevices= */ List.of());
+        mAudioRoutesManager = createAudioRoutesManager();
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        assertThat(audioRouteItems.get(BT_A2DP_DEVICE_ADDRESS).getState()).isEqualTo(
+                AudioRouteItem.State.UNICAST_ACTIVE);
+    }
+
+    @Test
+    public void testCreatedStateTransitions_toMulticastReadyUnicastActive() {
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
+                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_BROADCAST_ADDRESS,
+                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
+                /* type= */ TYPE_BLE_BROADCAST,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leAudioZoneConfig, leBroadcastZoneConfig),
+                /* cachedDevices= */ List.of());
+        mAudioRoutesManager = createAudioRoutesManager();
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        assertThat(audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_1).getState()).isEqualTo(
+                AudioRouteItem.State.MULTICAST_READY_UNICAST_ACTIVE);
+    }
+
+    @Test
+    public void testStateTransitions_toMulticastReadyUnicastReady_whenAlreadyBroadcasting() {
+        setAudioSharing(true);
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ false,
+                /* isSelected= */ false);
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+        CarAudioZoneConfigInfo selectedLeAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_2,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_2,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CachedBluetoothDevice selectedLeAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_2,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_2,
+                /* device= */ mReceivingBroadcastBluetoothDevice2,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leAudioZoneConfig, selectedLeAudioZoneConfig),
+                /* cachedDevices= */
+                List.of(leAudioBluetoothDevice, selectedLeAudioBluetoothDevice));
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+        clearBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice1);
+        setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice2);
+
+        mAudioRoutesManager = createAudioRoutesManager();
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        assertThat(audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_1).getState()).isEqualTo(
+                AudioRouteItem.State.MULTICAST_READY_UNICAST_READY);
+        assertThat(audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_2).getState()).isEqualTo(
+                AudioRouteItem.State.MULTICAST_ACTIVE);
+    }
+
+    @Test
+    public void testStateTransitions_toMulticastReadyUnicastReady_whenAnyUnicastFound() {
+        setAudioSharing(true);
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ false,
+                /* isSelected= */ false);
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+        CarAudioZoneConfigInfo selectedLeAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_2,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_2,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CachedBluetoothDevice selectedLeAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_2,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_2,
+                /* device= */ mReceivingBroadcastBluetoothDevice2,
+                /* isConnectedA2dp= */ true,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ true,
+                /* isActiveLeAudio= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leAudioZoneConfig, selectedLeAudioZoneConfig),
+                /* cachedDevices= */
+                List.of(leAudioBluetoothDevice, selectedLeAudioBluetoothDevice));
+
+        mAudioRoutesManager = createAudioRoutesManager();
+
+        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
+
+        assertThat(audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_1).getState()).isEqualTo(
+                AudioRouteItem.State.MULTICAST_READY_UNICAST_READY);
+        assertThat(audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_2).getState()).isEqualTo(
+                AudioRouteItem.State.UNICAST_ACTIVE);
+    }
+
+    @Test
+    public void bluetoothCallback_onDeviceAdded_updatesAudioRoutes() {
+        CachedBluetoothDevice device = createCachedBluetoothDevice(
+                "device", "address", null, true, false, true, false);
+        setupMockAudioRoutes(List.of(), List.of());
+        mAudioRoutesManager = createAudioRoutesManager();
+        verify(mBluetoothEventManager).registerCallback(mBluetoothCallbackCaptor.capture());
+        BluetoothCallback callback = mBluetoothCallbackCaptor.getValue();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        when(mCachedBluetoothDeviceManager.getCachedDevicesCopy()).thenReturn(List.of(device));
+        callback.onDeviceAdded(device);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(any());
+    }
+
+    @Test
+    public void bluetoothCallback_onDeviceDeleted_updatesAudioRoutes() {
+        CachedBluetoothDevice device = createCachedBluetoothDevice(
+                "device", "address", null, true, false, true, false);
+        setupMockAudioRoutes(List.of(), List.of(device));
+        mAudioRoutesManager = createAudioRoutesManager();
+        verify(mBluetoothEventManager).registerCallback(mBluetoothCallbackCaptor.capture());
+        BluetoothCallback callback = mBluetoothCallbackCaptor.getValue();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        when(mCachedBluetoothDeviceManager.getCachedDevicesCopy()).thenReturn(List.of());
+        callback.onDeviceDeleted(device);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(any());
+    }
+
+    @Test
+    public void bluetoothCallback_onConnectionStateChanged_updatesAudioRoutes() {
+        CachedBluetoothDevice device = createCachedBluetoothDevice(
+                "device", "address", null, true, false, true, false);
+        setupMockAudioRoutes(List.of(), List.of(device));
+        mAudioRoutesManager = createAudioRoutesManager();
+        verify(mBluetoothEventManager).registerCallback(mBluetoothCallbackCaptor.capture());
+        BluetoothCallback callback = mBluetoothCallbackCaptor.getValue();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        when(device.isConnectedA2dpDevice()).thenReturn(false);
+        callback.onConnectionStateChanged(device, BluetoothProfile.STATE_DISCONNECTED);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(any());
+    }
+
+    @Test
+    public void bluetoothCallback_onProfileConnectionStateChanged_updatesAudioRoutes() {
+        CachedBluetoothDevice device = createCachedBluetoothDevice(
+                "device", "address", null, true, false, true, false);
+        setupMockAudioRoutes(List.of(), List.of(device));
+        mAudioRoutesManager = createAudioRoutesManager();
+        verify(mBluetoothEventManager).registerCallback(mBluetoothCallbackCaptor.capture());
+        BluetoothCallback callback = mBluetoothCallbackCaptor.getValue();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        when(device.isConnectedA2dpDevice()).thenReturn(false);
+        callback.onProfileConnectionStateChanged(device, BluetoothProfile.STATE_DISCONNECTED,
+                BluetoothProfile.A2DP);
+
+        verify(mListener, times(2)).onAudioRoutesUpdated(any());
     }
 
     private void setupMockAudioRoutes(List<CarAudioZoneConfigInfo> zoneInfos,
@@ -1090,6 +1713,10 @@ public class AudioRoutesManagerTest {
         when(mLocalBluetoothLeBroadcastAssistant.getAllSources(leDevice)).thenReturn(List.of());
     }
 
+    private void setupVolumeControlConnectionStatus(BluetoothDevice device, int connectionStatus) {
+        when(mVolumeControlProfile.getConnectionStatus(device)).thenReturn(connectionStatus);
+    }
+
     private void verifyAudioRoutesState(List<AudioRouteItem> routes,
             Map<String, AudioRouteItem.State> expectedStates) {
         for (Map.Entry<String, AudioRouteItem.State> entry : expectedStates.entrySet()) {
@@ -1105,8 +1732,8 @@ public class AudioRoutesManagerTest {
         AudioRouteItem route = routes.stream()
                 .filter(item -> item.getAddress().equals(address))
                 .findFirst()
-                .orElse(null);
-        assertThat(route).isNotNull();
+                .orElseThrow(
+                        () -> new AssertionError("AudioRoute not found for address: " + address));
         assertThat(route.getState()).isEqualTo(expectedState);
     }
 
@@ -1117,6 +1744,7 @@ public class AudioRoutesManagerTest {
                 .strictness(Strictness.LENIENT)
                 .startMocking();
         when(LocalBluetoothManager.getInstance(any(), any())).thenReturn(mBluetoothManager);
+        when(mBluetoothManager.getEventManager()).thenReturn(mBluetoothEventManager);
         when(mBluetoothManager.getProfileManager()).thenReturn(mLocalBluetoothProfileManager);
         when(mLocalBluetoothProfileManager.getLeAudioBroadcastProfile())
                 .thenReturn(mLocalBluetoothLeBroadcast);
@@ -1124,9 +1752,21 @@ public class AudioRoutesManagerTest {
                 .thenReturn(mLocalBluetoothLeBroadcastAssistant);
         when(mLocalBluetoothProfileManager.getVolumeControlProfile())
                 .thenReturn(mVolumeControlProfile);
+        when(mLocalBluetoothProfileManager.getLeAudioProfile())
+                .thenReturn(mLeAudioProfile);
         when(mBluetoothManager.getCachedDeviceManager()).thenReturn(mCachedBluetoothDeviceManager);
 
+        doAnswer(invocation -> {
+            ((Runnable) invocation.getArgument(0)).run();
+            return null;
+        }).when(mMockExecutor).execute(any(Runnable.class));
+        doAnswer(invocation -> {
+            ((Runnable) invocation.getArgument(0)).run();
+            return mock(ScheduledFuture.class);
+        }).when(mMockExecutor).schedule(any(Runnable.class), anyLong(), any(TimeUnit.class));
+
         when(mContext.getApplicationContext()).thenReturn(mCarSettingsApplication);
+        when(mContext.getMainExecutor()).thenReturn(mMockExecutor);
         when(mCarSettingsApplication.getCarAudioManager()).thenReturn(mCarAudioManager);
         when(mCarSettingsApplication.getMyAudioZoneId()).thenReturn(TEST_ZONE_ID);
         when(mCarAudioManager.isAudioFeatureEnabled(AUDIO_FEATURE_DYNAMIC_ROUTING))
@@ -1151,6 +1791,13 @@ public class AudioRoutesManagerTest {
         sharedPrefs.edit().putBoolean(
                 BaseAudioSharingPreferenceController.USER_ENABLE_AUDIO_SHARING_KEY,
                 enable).commit();
+    }
+
+    private AudioRoutesManager createAudioRoutesManager() {
+        AudioRoutesManager audioRoutesManager = new AudioRoutesManager(mContext, USAGE,
+                mMockExecutor);
+        audioRoutesManager.setUseTimeout(false);
+        return audioRoutesManager;
     }
 
     private CarAudioZoneConfigInfo createZoneConfig(String name, String address,
