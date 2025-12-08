@@ -377,8 +377,8 @@
     <string name="app_data_usage_title" msgid="6991057296054761322">"Мобилен интернет и Wi‑Fi"</string>
     <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"Историја на сообраќај"</string>
     <string name="app_data_usage_total_usage" msgid="6166480544992906281">"Вкупно потрошен интернет"</string>
-    <string name="app_data_usage_foreground" msgid="76513424438149709">"Преден план"</string>
-    <string name="app_data_usage_background" msgid="6972054078770685280">"Заднина"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"Во преден план"</string>
+    <string name="app_data_usage_background" msgid="6972054078770685280">"Во заднина"</string>
     <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"Дозволете моб. интернет"</string>
     <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"Дозволете апликацијава да користи мобилен интернет"</string>
     <string name="app_data_usage_restrict_data_title" msgid="7080736007645963633">"Ограничен моб. интернет"</string>
@@ -389,9 +389,9 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Помош и гласовен запис"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Апликација за помош"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Користи го текстот од екранот"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Дозволи апликацијата за помош да пристапи до содржините на екранот како текст"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Дозволува апликацијата за помош да пристапи до содржините на екранот како текст"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Користи ја сликата од екранот"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Дозволи апликацијата за помош да пристапи до слика од екранот"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Дозволува апликацијата за помош да пристапи до слика од екранот"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Гласовно внесување"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Услуга за автоматско пополнување"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Нема"</string>
@@ -652,7 +652,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"Нема додадени сметки"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Сметки за: <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Автоматска синхронизација на податоци"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Дозволи им на апликациите автоматски да ги освежуваат податоците"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Им дозволува на апликациите автоматски да ги освежуваат податоците"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"Да се дозволи автоматско синхронизирање податоци?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"Сите промени што ќе ги извршите на вашите сметки во прелистувачот ќе се ископираат автоматски и во возилото.\n\nКај некои сметки, сите извршени промени преку возилото може да се ископираат автоматски и во прелистувачот."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"Да се забрани автоматско синхронизирање податоци?"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Апликации што ги бара производителот на вашиот автомобил за да ви помагаат при возење"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Политика"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Производителот на вашиот автомобил можеби сѐ уште има пристап до камерата на автомобилот"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Контрола на агенти на други апликации"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Извршувајте дејства на уредот и во други апликации"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Апликации за информации и забава"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Дозволете им на апликациите за информации и забава да снимаат фотографии и видеа"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Дозволено"</string>
@@ -717,7 +719,7 @@
     <string name="screen_lock_options" msgid="8531177937577168185">"Опции за заклучување"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Внесете ја шемата"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Потврди"</string>
-    <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Измени"</string>
+    <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Изменете"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Продолжи"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Повторно"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Прескокни"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Погледнете ги пакетите"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Готово"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Вашето возило не ја поддржува функцијава"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Поставки за сооднос"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Апликацијата ќе се рестартира кога ќе го промените соодносот. Може да ги изгубите незачуваните промени. Некои апликации може да не се оптимизирани за одредени соодноси."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Затвори"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Примени"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Стандардно за апликацијата"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Цел екран"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Половина екран"</string>
 </resources>

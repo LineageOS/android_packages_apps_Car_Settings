@@ -71,7 +71,7 @@
     <string name="mobile_data_usage" msgid="8171519864391091861">"မိုဘိုင်းဒေတာ သုံးစွဲမှု"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ဒေတာသတိပေးချက် သတ်မှတ်ရန်"</string>
     <string name="data_warning" msgid="116776633806885370">"ဒေတာသတိပေးချက်"</string>
-    <string name="set_data_limit" msgid="7136539812414500084">"ဒေတာကန့်သတ်ရန်"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"ဒေတာကန့်သတ်ချက် သတ်မှတ်ရန်"</string>
     <string name="data_limit" msgid="227338836292511425">"ဒေတာ အကန့်အသတ်"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ဒေတာအသုံးပြုမှု ကန့်သတ်ခြင်း"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"သင်သတ်မှတ်ထားသည့် ကန့်သတ်ချက်ရောက်သည်နှင့် သင့်ယာဉ်၏ ဦးပိုင်းယူနစ်သည် မိုဘိုင်းဒေတာကို ပိတ်သွားပါမည်။\n\nဒေတာသုံးစွဲမှုကို ဦးပိုင်းယူနစ်က တိုင်းတာခြင်းဖြစ်ပြီး ဖုန်းလိုင်းဝန်ဆောင်မှုပေးသူ၏ တွက်ချက်မှုနှင့် ကွာခြားနိုင်သောကြောင့် ကန့်သတ်ချက်မကျော်လွန်အောင် သတ်မှတ်ပါ။"</string>
@@ -701,6 +701,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"ကားမောင်းရာတွင် ကူညီရန် သင့်ကားထုတ်လုပ်သူက သတ်မှတ်ထားသော အက်ပ်များ"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"မူဝါဒ"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"သင်၏ ကားထုတ်လုပ်သူက ကားကင်မရာကို သုံးခွင့်ရှိနိုင်သေးသည်"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"အခြားအက်ပ်များ၏ အေးဂျင့်ထိန်းချုပ်မှု"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"သင့်စက်နှင့် အခြားအက်ပ်များတွင် လုပ်ဆောင်ချက်များ ဆောင်ရွက်နိုင်သည်"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"သတင်းနှင့် ဖျော်ဖြေရေးအက်ပ်များ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"သတင်းနှင့် ဖျော်ဖြေရေးအက်ပ်များအား ဓာတ်ပုံရိုက်ခွင့်နှင့် ဗီဒီယိုမှတ်တမ်းတင်ခွင့်ပေးသည်"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"ခွင့်ပြုထားသည်"</string>
@@ -833,7 +835,7 @@
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"အပြင်အဆင်"</string>
     <string name="driving_mode_title" msgid="8103270030335833998">"မောင်းနှင်မှု သတ်မှတ်ခြင်း"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"အပြင်အဆင်ဘောင်များ ပြပါ"</string>
-    <string name="show_force_rtl_title" msgid="8240732919603115320">"RTL အပြင်အဆင်အတိုင်း ဖြစ်စေခြင်း"</string>
+    <string name="show_force_rtl_title" msgid="8240732919603115320">"RTL အပြင်အဆင်အတိုင်း ဖြစ်စေရန်"</string>
     <string name="show_customization_overlay_title" msgid="2543804846629965883">"စိတ်ကြိုက်ပြင်ဆင်ခြင်း ထပ်ပိုးလွှာ"</string>
     <string name="device_admin_add_title" msgid="1294399588284546811">"သတင်းနှင့်ဖျော်ဖြေရေး စနစ် စီမံခန့်ခွဲသူ"</string>
     <string name="device_admin_activated_apps" msgid="568075063362271751">"ဖွင့်ထားသောအက်ပ်များ"</string>
@@ -935,7 +937,7 @@
     <string name="captions_settings_off" msgid="7568096968016015626">"ပိတ်"</string>
     <string name="captions_settings_on" msgid="5374984113566914978">"ဖွင့်"</string>
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"ဖန်သားပြင်ဖတ် အက်ပ်"</string>
-    <string name="show_captions_toggle_title" msgid="710582308974826311">"စာတန်းများ ပြပါ"</string>
+    <string name="show_captions_toggle_title" msgid="710582308974826311">"စာတန်းများ ပြရန်"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"စာသားအရွယ်အစား"</string>
     <string name="captions_settings_style_header" msgid="944591388386054372">"စာတန်းအရွယ်နှင့် ပုံစံ"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"အလွန်သေး"</string>
@@ -971,4 +973,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"အစီအစဉ်များ ကြည့်ရန်"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ပြီးပြီ"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ဤလုပ်ဆောင်ချက်ကို သင့်ယာဉ်တွင် မရနိုင်ပါ"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"အချိုးအစား ဆက်တင်များ"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"အချိုးအစား ပြောင်းလိုက်သောအခါ အက်ပ်ပြန်စပါမည်။ သိမ်းမထားသော အပြောင်းအလဲများ ဆုံးရှုံးနိုင်သည်။ အချို့အက်ပ်များသည် အချို့သောအချိုးအစားတွင် ကောင်းစွာအလုပ်မလုပ်ပါ။"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"ပိတ်ရန်"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"သုံးရန်"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"အက်ပ် မူရင်း"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ဖန်သားပြင်အပြည့်"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"ဖန်သားပြင်တစ်ဝက်"</string>
 </resources>

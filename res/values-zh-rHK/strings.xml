@@ -424,7 +424,7 @@
     <string name="apps_settings_title" msgid="3982535942394315336">"應用程式"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"最近開啟的應用程式"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"查看全部 %1$d 個應用程式"</string>
-    <string name="apps_permission_manager_title" msgid="8776335943862484131">"權限管理員"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"權限管理工具"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"控制應用程式資料存取權"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"「Google 助理」及其他"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# 個應用程式正在影響系統效能}other{# 個應用程式正在影響系統效能}}"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"你汽車製造商要求的駕駛輔助應用程式"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"政策"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"汽車製造商可能仍可存取汽車的相機"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"其他應用程式的代理控制項"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"在裝置和其他應用程式中執行操作"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"資訊娛樂應用程式"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"允許資訊娛樂應用程式拍照及錄影"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"允許"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看計劃"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完成"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"你的汽車不支援此功能"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"長寬比設定"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"變更長寬比後，應用程式會重新啟動。你可能會遺失未儲存的變更內容。部分應用程式可能並未針對特定長寬比進行優化。"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"關閉"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"套用"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"應用程式預設"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"全螢幕"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"半螢幕"</string>
 </resources>

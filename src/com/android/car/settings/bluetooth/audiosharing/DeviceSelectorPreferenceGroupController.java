@@ -27,7 +27,6 @@ import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsApplication;
-import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.ui.preference.CarUiTwoActionIconPreference;
@@ -206,7 +205,6 @@ public class DeviceSelectorPreferenceGroupController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (!Flags.carSettingsMultiCasting()) return CONDITIONALLY_UNAVAILABLE;
         if (isUserEnabled() && isBroadcastAvailable()) {
             return AVAILABLE;
         }

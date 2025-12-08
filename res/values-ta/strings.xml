@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"கார் ஓட்ட உங்களுக்கு உதவுவதற்காக உங்கள் கார் உற்பத்தியாளரால் சொல்லப்பட்ட ஆப்ஸ்"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"கொள்கை"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"உங்கள் காரின் கேமராவிற்கான அணுகலை இப்போதும் உங்கள் கார் தயாரிப்பாளர் கொண்டிருக்கக்கூடும்"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"பிற ஆப்ஸின் ஏஜெண்ட் கட்டுப்பாடு"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"உங்கள் சாதனத்திலும் பிற ஆப்ஸிலும் செயல்களை மேற்கொள்ளும்"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"இன்ஃபோடெயின்மென்ட் ஆப்ஸ்"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"படங்களை எடுக்கவும் வீடியோவை ரெக்கார்டு செய்யவும் இன்ஃபோடெயின்மென்ட் ஆப்ஸை அனுமதிக்கலாம்"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"அனுமதிக்கப்பட்டது"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"திட்டங்களைக் காட்டு"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"முடிந்தது"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"உங்கள் வாகனம் இந்த அம்சத்தை ஆதரிக்கவில்லை"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"தோற்ற விகித அமைப்புகள்"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"தோற்ற விகிதத்தை நீங்கள் மாற்றும்போது ஆப்ஸ் மீண்டும் தொடங்கும். சேமிக்கப்படாத மாற்றங்களை நீங்கள் இழக்க நேரிடலாம். குறிப்பிட்ட தோற்ற விகிதங்களில் சில ஆப்ஸைப் பயன்படுத்த முடியாமல் போகலாம்."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"மூடு"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"பயன்படுத்து"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ஆப்ஸ் இயல்பு"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"முழுத்திரை"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"பாதித்திரை"</string>
 </resources>

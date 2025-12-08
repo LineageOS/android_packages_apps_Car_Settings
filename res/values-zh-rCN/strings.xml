@@ -388,10 +388,10 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"注意：重新启动后，您必须将车辆解锁，才能运行此应用。"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"助手和语音输入"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"辅助应用"</string>
-    <string name="assist_access_context_title" msgid="8034851731390785301">"使用屏幕上的文字内容"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"使用屏幕文字"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"允许辅助应用获取屏幕上的文字内容"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"使用屏幕截图"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"允许辅助应用使用屏幕截图"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"允许辅助应用获取屏幕截图"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"语音输入"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"自动填充服务"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"无"</string>
@@ -519,7 +519,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"版权"</string>
     <string name="license_title" msgid="936705938435249965">"许可"</string>
     <string name="terms_title" msgid="5201471373602628765">"条款及条件"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"系统 WebView 许可"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"System WebView 许可"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"壁纸"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"卫星图像提供商：\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"型号"</string>
@@ -652,7 +652,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"未添加任何账号"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>的账号"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"自动同步数据"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"让应用自动刷新数据"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"允许应用自动刷新数据"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"要允许自动同步数据吗？"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"您在网络上对自己的账号进行的所有更改都会自动同步到您的车辆。\n\n有些账号可能还会将您在车辆上进行的所有更改自动同步到网络上。"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"要禁止自动同步数据吗？"</string>
@@ -694,12 +694,14 @@
     <string name="microphone_access_settings_summary" msgid="3531690421673836538">"选择应用能否使用您汽车的麦克风"</string>
     <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"信息娱乐应用"</string>
     <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"允许信息娱乐应用录音"</string>
-    <string name="camera_access_settings_title" msgid="1841809323727456945">"摄像头使用权限"</string>
+    <string name="camera_access_settings_title" msgid="1841809323727456945">"相机权限"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"选择应用能否使用您汽车的摄像头"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"必需的应用"</string>
     <string name="required_apps_group_summary" msgid="5026442309718220831">"汽车制造商提供驾驶辅助所需的应用"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"政策"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"您汽车的制造商或许仍可访问汽车摄像头"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"其他应用的代理控制"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"在您的设备和其他应用中执行操作"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"信息娱乐应用"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"允许信息娱乐应用拍照和录视频"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"已允许"</string>
@@ -814,7 +816,7 @@
     <string name="default_search_query" msgid="3137420627428857068">"搜索"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Google 助理和语音"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"数字助理应用"</string>
-    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"使用屏幕上的文字内容"</string>
+    <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"使用屏幕文字"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"允许 Google 助理获取屏幕上的内容"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"使用屏幕截图"</string>
     <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"允许 Google 助理获取屏幕截图"</string>
@@ -908,8 +910,8 @@
       <item quantity="one">相机应用</item>
     </plurals>
     <plurals name="default_email_app_title" formatted="false" msgid="7786093487229942743">
-      <item quantity="other">电子邮件客户端应用</item>
-      <item quantity="one">电子邮件客户端应用</item>
+      <item quantity="other">邮件客户端应用</item>
+      <item quantity="one">邮件客户端应用</item>
     </plurals>
     <plurals name="default_phone_app_title" formatted="false" msgid="72790081146542182">
       <item quantity="other">电话应用</item>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看套餐"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完成"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"您的车辆不支持此功能"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"宽高比设置"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"更改宽高比后，应用将重启。未保存的更改可能会丢失。某些应用可能无法针对特定宽高比进行优化。"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"关闭"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"应用"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"应用默认设置"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"全屏"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"半屏"</string>
 </resources>

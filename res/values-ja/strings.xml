@@ -75,8 +75,8 @@
     <string name="data_limit" msgid="227338836292511425">"データの上限"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"データ使用の上限の設定"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"車載ヘッドユニットで設定した上限に達するとモバイルデータが OFF になります。\n\nデータ使用量はヘッドユニットで測定された値ですが、携帯通信会社での使用量の計算はこれと異なることがあるため、余裕をもって上限を設定することをおすすめします。"</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"データ使用の警告の設定"</string>
-    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"データ使用の上限の設定"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"データ使用の警告を設定"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"データ使用の上限を設定"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"データ使用量はお使いのデバイスで測定されます。携帯通信会社のデータによって数値が異なる場合があります。"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"設定"</string>
     <string name="data_usage_warning_save_title" msgid="2900544287239037695">"保存"</string>
@@ -550,7 +550,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"設定をリセット"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ネットワーク設定をリセットしました"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"アプリの設定をリセット"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"この操作により、次の設定がすべてリセットされます。\n\n"<li>"無効化されているアプリ"</li>\n<li>"無効化されているアプリの通知"</li>\n<li>"特定の操作で使用するデフォルトのアプリ"</li>\n<li>"アプリのバックグラウンド データの制限"</li>\n<li>"権限のすべての制限"</li>\n\n"アプリのデータが失われることはありません。"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"この操作により、次の設定がすべてリセットされます。\n\n"<li>"無効化したアプリ"</li>\n<li>"アプリの無効化した通知"</li>\n<li>"特定の操作で使用するデフォルトのアプリ"</li>\n<li>"アプリのバックグラウンド データの制限"</li>\n<li>"権限のすべての制限"</li>\n\n"アプリのデータが失われることはありません。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"アプリをリセット"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"アプリの設定をリセットしました"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"すべてのデータを消去（初期設定にリセット）"</string>
@@ -573,7 +573,7 @@
     <string name="date_time_set_time_title" msgid="5884883050656937853">"時刻"</string>
     <string name="date_time_set_time" msgid="3684135432529445165">"日時を設定"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"タイムゾーン"</string>
-    <string name="date_time_set_timezone" msgid="4759353576185916944">"タイムゾーンの選択"</string>
+    <string name="date_time_set_timezone" msgid="4759353576185916944">"タイムゾーンを選択"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"日付"</string>
     <string name="date_time_set_date" msgid="2537494485643283230">"日付の設定"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"アルファベット順"</string>
@@ -654,12 +654,12 @@
     <string name="account_auto_sync_title" msgid="3238816995364191432">"データの自動同期"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"データの自動更新をアプリに許可します"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"データの自動同期を有効にしますか？"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ウェブでアカウントに変更を加えると自動的に車に反映されます。\n\nGoogle アカウントなど、アカウントによっては、車で変更を加えた場合も自動的にウェブに反映されます。"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"ウェブでアカウントに変更を加えると自動的に車に反映されます。\n\nアカウントによっては、車で加えた変更が自動的にウェブに反映されます。Google アカウントはその一例です。"</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"データの自動同期を無効にしますか？"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"OFF にすると、データの使用を節約できますが、最新情報を取得するには手動で各アカウントを同期する必要があります。また、更新があったときに通知を受け取れません。"</string>
     <string name="account_details_title" msgid="7529571432258448573">"アカウント情報"</string>
-    <string name="add_account_title" msgid="5988746086885210040">"アカウントの追加"</string>
-    <string name="add_an_account" msgid="1072285034300995091">"アカウントの追加"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"アカウントを追加"</string>
+    <string name="add_an_account" msgid="1072285034300995091">"アカウントを追加"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"制限付きプロファイルではアカウントを追加できません"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"アカウントを削除"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"アカウントを削除しますか？"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"運転をサポートするために車のメーカーが必要とするアプリ"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"ポリシー"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"車のメーカーが引き続き車のカメラにアクセスできる場合があります"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"他のアプリのエージェントのコントロール"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"デバイスと他のアプリで操作を実行します"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"インフォテインメント アプリ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"インフォテインメント アプリによる写真と動画の撮影を許可する"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"許可されたアプリ"</string>
@@ -721,7 +723,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"続行"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"再試行"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"スキップ"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"画面ロックの設定"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"画面ロックを設定"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN の選択"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"パスワードの選択"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"現在の画面ロック"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"プランを見る"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完了"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ご利用のデバイスはこの機能に対応していません"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"アスペクト比の設定"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"アスペクト比を変更すると、アプリが再起動します。保存されていない変更は失われる可能性があります。一部のアプリは特定のアスペクト比に合わせて最適化できない場合があります。"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"閉じる"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"適用"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"アプリのデフォルト"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"全画面表示"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"画面半分のみ表示"</string>
 </resources>

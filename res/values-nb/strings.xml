@@ -50,9 +50,9 @@
     <string name="data_usage_settings" msgid="7877132994777987848">"Databruk"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Primære data"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> er brukt"</string>
-    <string name="cell_data_warning" msgid="8997739664336571149">"Advarsel for databruk: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Advarsel om databruk: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> datagrense"</string>
-    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Advarsel for databruk: <xliff:g id="ID_1">^1</xliff:g> brukt, <xliff:g id="ID_2">^2</xliff:g> datagrense"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Advarsel om databruk: <xliff:g id="ID_1">^1</xliff:g> brukt, <xliff:g id="ID_2">^2</xliff:g> datagrense"</string>
     <string name="billing_cycle_days_left" msgid="1810100330204239102">"{count,plural, =1{# dag igjen}other{# dager igjen}}"</string>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"Ingen tid gjenstår"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Mindre enn én dag igjen"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Apper bilprodusenten trenger for å hjelpe deg med å kjøre"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Retningslinjer"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Bilprodusenten kan fortsatt ha tilgang til bilens kamera"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Agentkontroll av andre apper"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Utfør handlinger på enheten og i andre apper"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Infotainment-apper"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"La infotainment-apper ta bilder og spille inn video"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Tillatt"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Se abonnementer"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Ferdig"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Kjøretøyet ditt støtter ikke denne funksjonen"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Innstillinger for høyde/bredde-forhold"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Appen starter på nytt når du endrer høyde/bredde-forholdet. Du kan miste endringer som ikke er lagret. Enkelte apper er kanskje ikke optimalisert for visse høyde/bredde-forhold."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Lukk"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Bruk"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Appstandard"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Fullskjerm"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Halv skjerm"</string>
 </resources>

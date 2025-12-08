@@ -63,7 +63,7 @@
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Tarif anzeigen"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"Datennutzung durch Apps"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"Eingeschränkt"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tag für Zurücksetzung des Nutzungszyklus"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tag, an dem Nutzungszyklus zurückgesetzt wird"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Jeden Monat zurücksetzen am:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Festlegen"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datenwarnung &amp; Datenlimit"</string>
@@ -75,7 +75,7 @@
     <string name="data_limit" msgid="227338836292511425">"Datenlimit"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datennutzung begrenzen"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Das Infotainmentsystem deines Fahrzeugs deaktiviert mobile Daten, sobald das von dir festgelegte Limit erreicht wurde.\n\nDa die Datennutzung von dem Infotainmentsystem gemessen wird und dein Mobilfunkanbieter sie möglicherweise anders berechnet, solltest du von einem eher etwas niedrigeren Limit ausgehen."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Warnung für Datennutzung festlegen"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Warnung zur Datennutzung festlegen"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limit für Datennutzung festlegen"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Die Datennutzung wird von deinem Gerät gemessen. Diese Messung kann von derjenigen deines Mobilfunkanbieters abweichen."</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Festlegen"</string>
@@ -150,7 +150,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sicherheit"</string>
     <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
     <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
-    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Keiner"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Band für Zugangspunkt"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Band für Zugangspunkt wählen"</string>
@@ -555,7 +555,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App-Einstellungen wurden zurückgesetzt"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Alle Daten löschen"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Alle Daten und Profile aus dem Infotainmentsystem löschen"</string>
-    <string name="factory_reset_desc" msgid="2774024747279286354">"Hierdurch werden alle Daten aus dem Infotainmentsystem deines Fahrzeugs gelöscht, wie z. B. die Folgenden:\n\n"<li>"Deine Konten und Profile"</li>\n<li>"System- und App-Daten sowie entsprechende Einstellungen"</li>\n<li>"Heruntergeladene Apps"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Durch das Zurücksetzen auf die Werkseinstellungen werden alle Daten aus dem Infotainmentsystem deines Fahrzeugs gelöscht, wie z. B. die Folgenden:\n\n"<li>"Deine Konten und Profile"</li>\n<li>"System- und App-Daten sowie entsprechende Einstellungen"</li>\n<li>"Heruntergeladene Apps"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Du bist zurzeit in folgenden Konten angemeldet:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Für dieses Fahrzeug existieren bereits andere Profile."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Alle Daten löschen"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Apps, die der Hersteller deines Fahrzeugs benötigt, um dich beim Fahren zu unterstützen"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Datenschutzerklärung"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Dein Fahrzeughersteller kann möglicherweise weiterhin auf die Kamera deines Autos zugreifen"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"KI‑Agent-Steuerung anderer Apps"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Aktionen auf deinem Gerät und in anderen Apps ausführen"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Infotainment-Apps"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Infotainment-Apps erlauben, Bilder und Videos aufzunehmen"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Zugelassen"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Tarife ansehen"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Fertig"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Dein Fahrzeug unterstützt diese Funktion nicht"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Einstellungen für das Seitenverhältnis"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Wenn du das Seitenverhältnis änderst, wird die App neu gestartet. Dadurch können nicht gespeicherte Änderungen verloren gehen. Einige Apps sind möglicherweise nicht für bestimmte Seitenverhältnisse optimiert."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Schließen"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Übernehmen"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"App-Standard"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Vollbild"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Halbes Display"</string>
 </resources>

@@ -22,7 +22,6 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Process;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.privacy.RequiredInfotainmentAppsUtils;
@@ -54,9 +53,7 @@ public final class AdasPrivacyPolicyDisclosurePreferenceController
 
     @Override
     protected void onCreateInternal() {
-        if (Flags.requiredInfotainmentAppsSettingsPage()) {
-            addDefaultBypassLocationStateListener();
-        }
+        addDefaultBypassLocationStateListener();
     }
 
     @Override
@@ -70,15 +67,11 @@ public final class AdasPrivacyPolicyDisclosurePreferenceController
         Collection<String> adasApps = getLocationManager().getAdasAllowlist().getPackages();
         boolean showSummary = getLocationManager().isAdasGnssLocationEnabled();
         for (String adasApp : adasApps) {
-            CarUiTwoActionTextPreference preference;
-            if (com.android.internal.camera.flags.Flags.cameraPrivacyAllowlist()
-                    && Flags.requiredInfotainmentAppsSettingsPage()) {
+            CarUiTwoActionTextPreference preference = null;
+            if (com.android.internal.camera.flags.Flags.cameraPrivacyAllowlist()) {
                 preference = RequiredInfotainmentAppsUtils.createRequiredAppPreference(
                         getContext(), mPackageManager, adasApp, Process.myUserHandle(),
                         Manifest.permission_group.LOCATION, showSummary);
-            } else {
-                preference = AdasPrivacyPolicyUtil.createPrivacyPolicyPreference(
-                        getContext(), mPackageManager, adasApp, Process.myUserHandle());
             }
             if (preference != null) {
                 getPreference().addPreference(preference);

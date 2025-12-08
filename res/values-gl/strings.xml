@@ -74,7 +74,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Definir límite de uso de datos"</string>
     <string name="data_limit" msgid="227338836292511425">"Límite de uso de datos"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitar o uso de datos"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Desactivaranse os datos móbiles na unidade principal do vehículo unha vez que se acade o límite que estableceses.\n\nPosto que a unidade principal mide o uso de datos e que posiblemente o teu operador contabilice o uso de forma diferente, considera a posibilidade de configurar un límite conservador."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Desactivaranse os datos móbiles no sistema multimedia do vehículo unha vez que se acade o límite que estableceses.\n\nPosto que o sistema multimedia mide o uso de datos e que posiblemente o teu operador contabilice o uso de forma diferente, considera a posibilidade de configurar un límite conservador."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Definir advertencia de uso de datos"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Definir límite de uso de datos"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"A medición do uso de datos provén do teu dispositivo. Pode diferir con respecto á información do teu operador móbil."</string>
@@ -207,10 +207,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere desactivar o Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Unha aplicación quere activar o Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Unha aplicación quere desactivar o Bluetooth"</string>
-    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere que a túa unidade principal estea visible para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Unha aplicación quere que a túa unidade principal estea visible para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere activar o Bluetooth e que a túa unidade principal estea visible para outros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Unha aplicación quere activar o Bluetooth e que a túa unidade principal estea visible para outros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere que o teu sistema multimedia estea visible para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Unha aplicación quere que o teu sistema multimedia estea visible para outros dispositivos Bluetooth durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> quere activar o Bluetooth e que o teu sistema multimedia estea visible para outros dispositivos durante <xliff:g id="TIMEOUT">%2$d</xliff:g> segundos."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Unha aplicación quere activar o Bluetooth e que o teu sistema multimedia estea visible para outros dispositivos durante <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Visible para outros dispositivos como %1$s"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Os meus dispositivos"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"Conectados anteriormente"</string>
@@ -391,7 +391,7 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"Usar o texto da pantalla"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Permite que a aplicación de asistencia acceda aos contidos da pantalla en forma de texto"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Usar a captura de pantalla"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permite que a aplicación de asistencia acceda ás imaxes presentes na pantalla"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permite que a aplicación de asistencia acceda a unha imaxe da pantalla"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Entrada de voz"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Servizo de autocompletar"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ningunha aplicación"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Aplicacións requiridas polo fabricante do teu vehículo como axuda para a condución"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Política"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"O fabricante do coche pode seguir tendo acceso á cámara do vehículo"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Control de axentes doutras aplicacións"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Leva a cabo accións no teu dispositivo e noutras aplicacións"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Aplicacións de información/entretemento"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Permite que as aplicacións de información e entretemento tiren fotos e graven vídeos"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Permiso concedido"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Ver plans"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Feito"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"O teu vehículo non admite esta función"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Configuración da proporción"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"A aplicación reiniciarase cando cambies a proporción. Poderías perder os cambios que non gardases. Algunhas aplicacións talvez non estean optimizadas para determinadas proporcións."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Pechar"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Aplicar"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Proporción predeterminada da aplicación"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Pantalla completa"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Media pantalla"</string>
 </resources>

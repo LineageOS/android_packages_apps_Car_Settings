@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Apps de ajuda à condução exigidas pelo fabricante do carro"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Política"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"O fabricante do carro ainda pode ter acesso à câmara do seu carro"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Controlo de agentes de outras apps"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Execute ações no seu dispositivo e noutras apps"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Apps de infoentretenimento"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Permitir que as apps de infoentretenimento tirem fotos e gravem vídeos"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Permitida"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Ver planos"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Concluir"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"O seu veículo não suporta esta funcionalidade"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Definições de formato"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"A app vai reiniciar quando alterar o formato. Pode perder alterações não guardadas. Algumas apps podem não estar otimizadas para determinados formatos."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Fechar"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Aplicar"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Predefinição da app"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Ecrã inteiro"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Meio ecrã"</string>
 </resources>

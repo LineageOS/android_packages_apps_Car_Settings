@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Εφαρμογές που απαιτούνται από τον κατασκευαστή του αυτοκινήτου σας, οι οποίες βοηθούν στην οδήγηση"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Πολιτική"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Ο κατασκευαστής του αυτοκινήτου ενδέχεται να εξακολουθεί να έχει πρόσβαση στην κάμερα του αυτοκινήτου σας"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Έλεγχος άλλων εφαρμογών από τον εκπρόσωπο"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Εκτέλεση ενεργειών στη συσκευή σας και σε άλλες εφαρμογές"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Εφαρμογές ενημέρωσης και ψυχαγωγίας"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Επιτρέψτε στις εφαρμογές ενημέρωσης και ψυχαγωγίας να τραβούν φωτογραφίες και να εγγράφουν βίντεο"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Επιτρέπεται"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Δείτε τα προγράμματα"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Τέλος"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Το όχημά σας δεν υποστηρίζει αυτή τη λειτουργία"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Ρυθμίσεις λόγου διαστάσεων"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Θα γίνει επανεκκίνηση της εφαρμογής μόλις αλλάξετε τον λόγο διαστάσεων. Μπορεί να χάσετε τις μη αποθηκευμένες αλλαγές. Ορισμένες εφαρμογές μπορεί να μην έχουν βελτιστοποιηθεί για συγκεκριμένους λόγους διαστάσεων."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Κλείσιμο"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Εφαρμογή"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Προεπιλογή εφαρμογής"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Πλήρης οθόνη"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Μισή οθόνη"</string>
 </resources>

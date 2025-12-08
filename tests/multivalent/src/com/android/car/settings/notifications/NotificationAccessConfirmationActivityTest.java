@@ -36,7 +36,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
+import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Lifecycle;
@@ -53,6 +55,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.Collections;
 import java.util.Locale;
 
 /**
@@ -62,11 +65,12 @@ import java.util.Locale;
 public final class NotificationAccessConfirmationActivityTest {
     private static final ComponentName TEMP_COMPONENT_NAME = ComponentName.unflattenFromString(
             "com.temp/com.temp.k");
+    private static final String EXTRA_MOCK_SERVICE_INFO_PERMISSION = "mock_service_info_permission";
+    private static final String EXTRA_MOCK_INTENT_FILTER_ACTION = "mock_intent_filter_action";
 
     private final Context mContext = ApplicationProvider.getApplicationContext();
     private ActivityScenario<TestActivity> mActivityScenario;
     private TestActivity mActivity;
-    private PackageManager mPackageManager;
 
     @Mock
     private NotificationManager mNotificationManager;
@@ -86,6 +90,12 @@ public final class NotificationAccessConfirmationActivityTest {
         return info;
     }
 
+    private static ResolveInfo createResolveInfo(ServiceInfo service) {
+        ResolveInfo info = new ResolveInfo();
+        info.serviceInfo = service;
+        return info;
+    }
+
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
@@ -93,18 +103,14 @@ public final class NotificationAccessConfirmationActivityTest {
 
     @Test
     public void componentNameEmpty_finishes() {
-        Intent intent = new Intent(mContext, TestActivity.class);
-        mActivityScenario = ActivityScenario.launch(intent);
+        launchActivityWithValidIntent(/* componentName */ null, /* hasPermission */ true,
+                /* hasIntentFilter= */ true);
         assertThat(mActivityScenario.getState()).isEqualTo(Lifecycle.State.DESTROYED);
     }
 
     @Test
     public void showsDialog() throws Exception {
-        ServiceInfo info = createServiceInfoForTempComponent(
-                Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE);
-        doReturn(info).when(mPackageManager).getServiceInfo(info.getComponentName(), 0);
-
-        launchActivityWithValidIntent();
+        launchActivityWithValidIntent(/* hasPermission */ true, /* hasIntentFilter= */ true);
         assertThat(mActivityScenario.getState()).isAtLeast(Lifecycle.State.CREATED);
         assertThat(mActivity.mFinishTriggered).isFalse();
         assertThat(getConfirmationDialog().isShowing()).isTrue();
@@ -112,26 +118,22 @@ public final class NotificationAccessConfirmationActivityTest {
 
     @Test
     public void intentFilterMissing_finishes() {
-        launchActivityWithValidIntent();
-        assertThat(mActivity.mFinishTriggered).isTrue();
+        launchActivityWithValidIntent(/* hasPermission */ true, /* hasIntentFilter= */ false);
+        assertThat(mActivityScenario.getState()).isAtLeast(Lifecycle.State.DESTROYED);
     }
 
     @Test
     public void permissionMissing_finishes() throws Exception {
-        ServiceInfo info = createServiceInfoForTempComponent(/* permission = */ "");
-        doReturn(info).when(mPackageManager).getServiceInfo(info.getComponentName(), 0);
-
-        launchActivityWithValidIntent();
-        assertThat(mActivity.mFinishTriggered).isTrue();
+        launchActivityWithValidIntent(/* hasPermission */ false, /* hasIntentFilter= */ true);
+        assertThat(mActivityScenario.getState()).isAtLeast(Lifecycle.State.DESTROYED);
     }
 
     @Test
     public void onAllow_permissionAvailable_callsNotificationManager() throws Exception {
-        launchActivityWithValidIntent();
+        launchActivityWithValidIntent(/* hasPermission */ true, /* hasIntentFilter= */ true);
         assertThat(mActivityScenario.getState()).isAtLeast(Lifecycle.State.CREATED);
         ServiceInfo info = createServiceInfoForTempComponent(
                 Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE);
-        doReturn(info).when(mPackageManager).getServiceInfo(info.getComponentName(), 0);
 
         AndroidMockitoHelper.syncRunOnUiThread(mActivity, () -> {
             getConfirmationDialog().getButton(DialogInterface.BUTTON_POSITIVE).performClick();
@@ -144,7 +146,7 @@ public final class NotificationAccessConfirmationActivityTest {
 
     @Test
     public void onDeny_finishes() throws Exception {
-        launchActivityWithValidIntent();
+        launchActivityWithValidIntent(/* hasPermission */ true, /* hasIntentFilter= */ true);
         assertThat(mActivityScenario.getState()).isAtLeast(Lifecycle.State.CREATED);
 
         AndroidMockitoHelper.syncRunOnUiThread(mActivity, () -> {
@@ -163,27 +165,54 @@ public final class NotificationAccessConfirmationActivityTest {
                 .getDialog();
     }
 
-    private void launchActivityWithValidIntent() {
+    private void launchActivityWithValidIntent(ComponentName componentName, boolean hasPermission,
+            boolean hasIntentFilter) {
         Intent intent = new Intent(mContext, TestActivity.class)
-                .putExtra(EXTRA_COMPONENT_NAME, TEMP_COMPONENT_NAME);
+                .putExtra(EXTRA_MOCK_SERVICE_INFO_PERMISSION, hasPermission)
+                .putExtra(EXTRA_MOCK_INTENT_FILTER_ACTION, hasIntentFilter);
+        if (componentName != null) {
+            intent = intent.putExtra(EXTRA_COMPONENT_NAME, componentName);
+        }
 
         mActivityScenario = ActivityScenario.launch(intent);
-        mActivityScenario.onActivity(
-                activity -> {
-                    mActivity = activity;
-                    mPackageManager = mActivity.getPackageManager();
-                    mActivity.setPackageManagerSpy(mPackageManager);
-                    mActivity.setNotificationManagerSpy(mNotificationManager);
-                });
+        if (hasPermission && hasIntentFilter && componentName != null) {
+            // Activity will only complete onCreate() without calling finish() if the Intent is
+            // well-formed and contains the proper permission. Otherwise, it will go to state
+            // DESTROYED before entering onActivity.
+            // Check the Lifecycle of the ActivityScenario to see if it completed successfully.
+            mActivityScenario.onActivity(
+                    activity -> {
+                        mActivity = activity;
+                        mActivity.setNotificationManagerSpy(mNotificationManager);
+                    });
+        }
+    }
+
+    private void launchActivityWithValidIntent(boolean hasPermission, boolean hasIntentFilter) {
+        launchActivityWithValidIntent(TEMP_COMPONENT_NAME, hasPermission, hasIntentFilter);
     }
 
     public static final class TestActivity extends NotificationAccessConfirmationActivity {
-        @Nullable private PackageManager mPackageManagerSpy;
         @Nullable private NotificationManager mNotificationManagerSpy;
-        boolean mFinishTriggered;
+        @Nullable private PackageManager mPackageManagerSpy;
+        @Nullable private PackageManager mPmWithPermission;
+        @Nullable private PackageManager mPmWithNoPermission;
 
-        void setPackageManagerSpy(PackageManager packageManagerSpy) {
-            mPackageManagerSpy = packageManagerSpy;
+        boolean mFinishTriggered;
+        // {@code true} if we want to mock this TestActivity return a ServiceInfo with
+        // {@link Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE}
+        boolean mMockServiceInfoPermission = true;
+        // {@code true} if we want to return mock this TestActivity to have implemented
+        // Notification Listener Service intent-filter.
+        boolean mMockIntentFilterAction = true;
+
+        @Override
+        protected void onCreate(@android.annotation.Nullable Bundle savedInstanceState) {
+            mMockServiceInfoPermission = getIntent().getBooleanExtra(
+                    EXTRA_MOCK_SERVICE_INFO_PERMISSION, false);
+            mMockIntentFilterAction = getIntent().getBooleanExtra(
+                    EXTRA_MOCK_INTENT_FILTER_ACTION, false);
+            super.onCreate(savedInstanceState);
         }
 
         void setNotificationManagerSpy(NotificationManager notificationManagerSpy) {
@@ -192,16 +221,51 @@ public final class NotificationAccessConfirmationActivityTest {
 
         @Override
         public PackageManager getPackageManager() {
-            if (mPackageManagerSpy == null) {
-                mPackageManagerSpy = spy(super.getPackageManager());
-                try {
-                    ApplicationInfo info = createApplicationInfo();
-                    doReturn(info).when(mPackageManagerSpy).getApplicationInfo(any(), any());
-                } catch (PackageManager.NameNotFoundException e) {
-                    // do nothing... tests will fail when activity finishes during onCreate()
+            try {
+                if (mMockIntentFilterAction) {
+                    if (mMockServiceInfoPermission) {
+                        return getPmWithPermission();
+                    }
+                    return getPmWithNoPermission();
                 }
+                if (mPackageManagerSpy == null) {
+                    mPackageManagerSpy = spy(super.getPackageManager());
+                    doReturn(createApplicationInfo()).when(mPackageManagerSpy)
+                            .getApplicationInfo(any(), any());
+                }
+            } catch (PackageManager.NameNotFoundException e) {
+                // do nothing... tests will fail when activity finishes during onCreate()
             }
             return mPackageManagerSpy;
+        }
+
+        private PackageManager getPmWithPermission() throws PackageManager.NameNotFoundException {
+            if (mPmWithPermission == null) {
+                mPmWithPermission = spy(super.getPackageManager());
+                doReturn(createApplicationInfo()).when(mPmWithPermission)
+                        .getApplicationInfo(any(), any());
+                ResolveInfo infoWithPermission = createResolveInfo(
+                        createServiceInfoForTempComponent(
+                        Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE));
+                doReturn(Collections.singletonList(infoWithPermission)).when(mPmWithPermission)
+                        .queryIntentServicesAsUser(any(Intent.class), any(int.class),
+                                any(int.class));
+            }
+            return mPmWithPermission;
+        }
+
+        private PackageManager getPmWithNoPermission() throws PackageManager.NameNotFoundException {
+            if (mPmWithNoPermission == null) {
+                mPmWithNoPermission = spy(super.getPackageManager());
+                doReturn(createApplicationInfo()).when(mPmWithNoPermission)
+                        .getApplicationInfo(any(), any());
+                ResolveInfo infoWithPermission = createResolveInfo(
+                        createServiceInfoForTempComponent(/* permission= */ ""));
+                doReturn(Collections.singletonList(infoWithPermission)).when(mPmWithNoPermission)
+                                .queryIntentServicesAsUser(any(Intent.class), any(int.class),
+                                        any(int.class));
+            }
+            return mPmWithNoPermission;
         }
 
         @Override

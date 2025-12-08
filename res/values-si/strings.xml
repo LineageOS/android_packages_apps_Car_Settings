@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"ඔබට ධාවනය කිරීමට උදවු කිරීමට ඔබේ මෝටර් රථයේ නිෂ්පාදකයාට අවශ්‍ය යෙදුම්"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"ප්‍රතිපත්තිය"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ඔබේ මෝටර් රථ නිෂ්පාදකයාට තවමත් ඔබේ මෝටර් රථයේ කැමරාවට ප්‍රවේශය තිබිය හැක"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"වෙනත් යෙදුම්වල නියෝජිත පාලනය"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"ඔබේ උපාංගයේ සහ අනෙකුත් යෙදුම්වල ක්‍රියා සිදු කරන්න"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"තොරතුරු විනෝදාස්වාද යෙදුම්"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ඡායාරූප ගැනීමට සහ වීඩියෝ පටිගත කිරීමට තොරතුරු රසාස්වාදය යෙදුම්වලට ඉඩ දෙන්න"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"ඉඩ දුන්"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"සැලසුම් බලන්න"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"නිමයි"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ඔබේ වාහනය මෙම විශේෂාංගයට සහය නොදක්වයි"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"දර්ශන අනුපාත සැකසීම්"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"ඔබ දර්ශන අනුපාතය වෙනස් කළ විට යෙදුම නැවත ආරම්භ වනු ඇත. ඔබට නොසුරකින ලද වෙනස්කම් අහිමි විය හැක. සමහර යෙදුම් ඇතැම් දර්ශන අනුපාත සඳහා ප්‍රශස්ත නොකළ හැක."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"වසන්න"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"යොදන්න"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"පෙරනිමි යෙදුම"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"පූර්ණ තිරය"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"අර්ධ තිරය"</string>
 </resources>

@@ -533,7 +533,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"Bạn đã là nhà phát triển!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Không cần, bạn đã là nhà phát triển."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Tuỳ chọn cho nhà phát triển"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Tùy chọn đặt lại"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Đặt lại các lựa chọn"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Đặt lại mạng, ứng dụng hoặc thiết bị"</string>
     <string name="reset_network_title" msgid="3077846909739832734">"Đặt lại Wi‑Fi và Bluetooth"</string>
     <string name="reset_network_desc" msgid="3332203703135823033">"Thao tác này sẽ đặt lại chế độ cài đặt Wi‑Fi và Bluetooth, xoá bộ nhớ của thiết bị đã kết nối trước đó:"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Các ứng dụng mà nhà sản xuất ô tô cần để hỗ trợ bạn lái xe"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Chính sách"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Có thể nhà sản xuất ô tô vẫn có quyền truy cập vào camera ô tô của bạn"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Tác nhân kiểm soát các ứng dụng khác"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Thao tác trên thiết bị và trong các ứng dụng khác"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Ứng dụng thông tin giải trí"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Cho phép các ứng dụng thông tin giải trí chụp ảnh và quay video"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Được phép"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Xem các gói"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Xong"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Ô tô của bạn không hỗ trợ tính năng này"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Chế độ cài đặt tỷ lệ khung hình"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Ứng dụng sẽ khởi động lại khi bạn thay đổi tỷ lệ khung hình. Bạn có thể sẽ mất những thay đổi chưa lưu. Có thể một số ứng dụng chưa được tối ưu hoá cho một số tỷ lệ khung hình nhất định."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Đóng"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Áp dụng"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Mặc định của ứng dụng"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Toàn màn hình"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Nửa màn hình"</string>
 </resources>

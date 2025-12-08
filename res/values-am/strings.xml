@@ -377,7 +377,7 @@
     <string name="app_data_usage_title" msgid="6991057296054761322">"የውሂብ እና የWi-Fi አጠቃቀም"</string>
     <string name="app_data_usage_usage_history_title" msgid="5861801915345874959">"የአጠቃቀም ታሪክ"</string>
     <string name="app_data_usage_total_usage" msgid="6166480544992906281">"ጠቅላላ አጠቃቀም"</string>
-    <string name="app_data_usage_foreground" msgid="76513424438149709">"ቅድመ ገፅ"</string>
+    <string name="app_data_usage_foreground" msgid="76513424438149709">"ቅድመ ገጽ"</string>
     <string name="app_data_usage_background" msgid="6972054078770685280">"ዳራ"</string>
     <string name="app_data_usage_allow_data_title" msgid="2713343973040466293">"ውሂብ ይፍቀዱ"</string>
     <string name="app_data_usage_allow_data_summary" msgid="7431118326573403774">"ይህ መተግበሪያ የተንቀሳቃሽ ስልክ ውሂብን እንዲጠቀም ይፍቀዱ"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"እርስዎ እንዲነዱ ለማገዝ በመኪናዎ አምራች የሚጠየቁ መተግበሪያዎች"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"መመሪያ"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"የእርስዎ መኪና አምራች አሁንም የመኪናዎ ካሜራ መዳረሻ ሊኖረው ይችላል"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"የሌሎች መተግበሪያዎች ወኪል ቁጥጥር"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"መሣሪያዎ እና ሌሎች መተግበሪያዎች ላይ ተግባሮችን ያከናውኑ"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"የኢንፎቴይንመንት መተግበሪያዎች"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"የኢንፎቴይንመንት መተግበሪያዎች ፎቶዎችን እንዲያነሱ እና ቪድዮ እንዲቀርጹ ይፍቀዱ"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"የተፈቀደላቸው"</string>
@@ -930,7 +932,7 @@
     <string name="power_component_disabled" msgid="7084144472096800457">"ይህ ቅንብር አሁን መቀየር አይችልም"</string>
     <string name="accessibility_settings_title" msgid="2615042088419230347">"ተደራሽነት"</string>
     <string name="accessibility_settings_captions_title" msgid="4635141293524800795">"መግለጫ ፅሁፎች"</string>
-    <string name="captions_settings_title" msgid="5738067618097295831">"የመግለጫ ጽሁፍ ምርጫዎች"</string>
+    <string name="captions_settings_title" msgid="5738067618097295831">"የመግለጫ ጽሑፍ ምርጫዎች"</string>
     <string name="captions_settings_off" msgid="7568096968016015626">"አጥፋ"</string>
     <string name="captions_settings_on" msgid="5374984113566914978">"አብራ"</string>
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"ማያ ገፅ አንባቢ"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ዕቅዶችን ይመልከቱ"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ተከናውኗል"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ተሽከርካሪዎ ይህን ባህሪ አይደግፍም"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"የምጥጥነ ገፅታ ቅንብሮች"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"ምጥጥነ ገፅታውን ሲለውጡ መተግበሪያው እንደገና ይጀምራል። ያልተቀመጡ ለውጦችን ሊያጡ ይችላሉ። አንዳንድ መተግበሪያዎች ለተወሰኑ ምጥጥነ ገፅታዎች ሊተቡ አይችሉም።"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"ዝጋ"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"ተግብር"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"የመተግበሪያ ነባሪ"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ሙሉ ማያ ገፅ"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"ግማሽ ማያ ገፅ"</string>
 </resources>

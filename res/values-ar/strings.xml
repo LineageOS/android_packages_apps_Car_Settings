@@ -422,7 +422,7 @@
     <string name="opening_links_add_links_summary" msgid="7374297489426317237">"{count,plural, =1{رابط واحد لم تتم معالجته}zero{# رابط لم تتم معالجته}two{رابطان لم تتم معالجتهما}few{# روابط لم تتم معالجتها}many{# رابطًا لم تتم معالجته}other{# رابط لم تتم معالجته}}"</string>
     <string name="app_launch_footer" msgid="5685538708339270743">"يمكن للتطبيق التحقّق من الروابط ليتم فتحها تلقائيًا فيه."</string>
     <string name="apps_settings_title" msgid="3982535942394315336">"التطبيقات"</string>
-    <string name="apps_recently_opened" msgid="5320377037971195984">"التطبيقات التي تم فتحها مؤخرًا"</string>
+    <string name="apps_recently_opened" msgid="5320377037971195984">"التطبيقات التي فتحتها مؤخرًا"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"عرض جميع التطبيقات الـ ‎%1$d"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"إدارة الأذونات"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"التحكُّم في وصول التطبيقات إلى بياناتك"</string>
@@ -667,7 +667,7 @@
     <string name="remove_account_error_title" msgid="8368044943174826635">"أخفق حذف الحساب."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"مزامنة الحساب"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"تمّ تفعيل المزامنة لـ <xliff:g id="ID_1">%1$d</xliff:g> من إجمالي <xliff:g id="ID_2">%2$d</xliff:g> عنصر."</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"تم تفعيل المزامنة لكل العناصر."</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"المزامنة مفعَّلة لكل البيانات"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"المزامنة متوقفة لكل العناصر"</string>
     <string name="sync_disabled" msgid="393531064334628258">"المزامنة متوقفة."</string>
     <string name="sync_error" msgid="6698021343089247914">"خطأ في المزامنة"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"التطبيقات التي تطلبها الشركة المصنّعة لسيارتك من أجل مساعدتك في القيادة"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"السياسة"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"قد تظل الشركة المصنِّعة لسيارتك قادرة على الوصول إلى كاميرا سيارتك"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"تحكُّم الوكيل في التطبيقات الأخرى"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"يتيح لك هذا الإعداد تنفيذ إجراءات على جهازك وفي تطبيقات أخرى"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"تطبيقات نظام الترفيه والمعلومات"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"السماح لتطبيقات نظام الترفيه والمعلومات بالتقاط الصور وتسجيل الفيديوهات"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"التطبيقات المسموح لها"</string>
@@ -994,4 +996,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"الاطّلاع على الخطط"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"تم"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"لا تتيح مركبتك استخدام هذه الميزة"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"إعدادات نسبة العرض إلى الارتفاع"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"سيُعاد تشغيل التطبيق بعد تغيير نسبة العرض إلى الارتفاع. ربما لا تظهر التغييرات غير المحفوظة. وقد لا تتوافق بعض التطبيقات مع نِسب عرض إلى ارتفاع محدَّدة."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"إغلاق"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"تطبيق"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"نسبة العرض إلى الارتفاع التلقائية في التطبيق"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ملء الشاشة"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"نصف الشاشة"</string>
 </resources>

@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Applis requises par votre constructeur automobile pour vous aider à conduire"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Règles"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Votre constructeur automobile a peut-être encore accès à la caméra de votre véhicule"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Contrôle de l\'agent d\'autres applications"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Effectuez des actions sur votre appareil et dans d\'autres applis"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Applis d\'infoloisirs"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Autoriser les applis d\'infoloisirs à prendre des photos et à enregistrer des vidéos"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Autorisées"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Afficher les forfaits"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"OK"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Votre véhicule n\'est pas compatible avec cette fonctionnalité."</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Paramètres du format"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Si vous modifiez le format, l\'application redémarrera. Vous risquez de perdre les modifications non enregistrées. Certaines applis peuvent ne pas être optimisées pour certains formats."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Fermer"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Appliquer"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Paramètre par défaut de l\'appli"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Plein écran"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Moitié de l\'écran"</string>
 </resources>

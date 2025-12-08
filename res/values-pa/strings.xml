@@ -521,7 +521,7 @@
     <string name="terms_title" msgid="5201471373602628765">"ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ"</string>
     <string name="webview_license_title" msgid="6442372337052056463">"System WebView ਲਾਇਸੰਸ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ਵਾਲਪੇਪਰ"</string>
-    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ਉਪਗ੍ਰਹਿ ਇਮੇਜਰੀ ਪ੍ਰਦਾਨਕ:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ਉਪਗ੍ਰਹੀ ਚਿੱਤਰਨ ਪ੍ਰਦਾਨਕ:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"ਮਾਡਲ"</string>
     <string name="status_serial_number" msgid="9158889113131907656">"ਸੀਰੀਅਲ ਨੰਬਰ"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"ਹਾਰਡਵੇਅਰ ਵਰਜਨ"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਨਿਰਮਾਤਾ ਮੁਤਾਬਕ, ਗੱਡੀ ਚਲਾਉਣ ਵੇਲੇ ਤੁਹਾਡੇ ਲਈ ਲੋੜੀਂਦੀਆਂ ਲਾਹੇਵੰਦ ਐਪਾਂ"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"ਨੀਤੀ"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ਤੁਹਾਡੇ ਕਾਰ ਨਿਰਮਾਤਾ ਕੋਲ ਹਾਲੇ ਵੀ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਕੈਮਰੇ ਤੱਕ ਪਹੁੰਚ ਹੋ ਸਕਦੀ ਹੈ"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"ਹੋਰ ਐਪਾਂ ਦਾ ਏਜੰਟ ਕੰਟਰੋਲ"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"ਆਪਣੇ ਡੀਵਾਈਸ ਅਤੇ ਹੋਰ ਐਪਾਂ ਵਿੱਚ ਕਾਰਵਾਈਆਂ ਕਰੋ"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ਇੰਫ਼ੋਟੇਨਮੈਂਟ ਐਪਾਂ"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ਇੰਫ਼ੋਟੇਨਮੈਂਟ ਐਪਾਂ ਨੂੰ ਤਸਵੀਰ ਖਿੱਚਣ ਅਤੇ ਵੀਡੀਓ ਰਿਕਾਰਡ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"ਆਗਿਆ ਹੈ"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ਪਲਾਨ ਦੇਖੋ"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ਹੋ ਗਿਆ"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ਤੁਹਾਡਾ ਵਾਹਨ ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"ਆਕਾਰ ਅਨੁਪਾਤ ਸੰਬੰਧੀ ਸੈਟਿੰਗਾਂ"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"ਤੁਹਾਡੇ ਵੱਲੋਂ ਆਕਾਰ ਅਨੁਪਾਤ ਨੂੰ ਬਦਲਣ \'ਤੇ ਐਪ ਮੁੜ-ਸ਼ੁਰੂ ਹੋ ਜਾਵੇਗੀ। ਤੁਸੀਂ ਅਣਰੱਖਿਅਤ ਤਬਦੀਲੀਆਂ ਗੁਆ ਸਕਦੇ ਹੋ। ਸ਼ਾਇਦ ਕੁਝ ਐਪਾਂ ਨੂੰ ਕੁਝ ਵਿਸ਼ੇਸ਼ ਆਕਾਰ ਅਨੁਪਾਤ ਲਈ ਸੁਯੋਗ ਨਾ ਕੀਤਾ ਜਾਵੇ।"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"ਬੰਦ ਕਰੋ"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"ਲਾਗੂ ਕਰੋ"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ਐਪ ਪੂਰਵ-ਨਿਰਧਾਰਿਤ"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ਪੂਰੀ ਸਕ੍ਰੀਨ"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"ਅੱਧੀ ਸਕ੍ਰੀਨ"</string>
 </resources>

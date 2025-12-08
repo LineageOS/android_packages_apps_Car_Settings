@@ -546,12 +546,12 @@
     <string name="reset_network_select" msgid="2433825874868038739">"ನೆಟ್‌ವರ್ಕ್ ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"ಸೆಟ್ಟಿಂಗ್‌ ಮರುಹೊಂದಿಸಿ"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"ಮರುಹೊಂದಿಸುವುದೇ?"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ಎಲ್ಲಾ ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮರುಹೊಂದಿಸುವುದೇ? ನೀವು ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ಎಲ್ಲಾ ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮರುಹೊಂದಿಸಬೇಕೇ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ಸೆಟ್ಟಿಂಗ್‌ ಮರುಹೊಂದಿಸಿ"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ ಅನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"ಆ್ಯಪ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"ಇದು ಕೆಳಗಿನವುಗಳ ಎಲ್ಲಾ ಆದ್ಯತೆಗಳನ್ನು ಮರುಹೊಂದಿಸುತ್ತದೆ:\n\n"<li>"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದ ಆ್ಯಪ್‌ಗಳು"</li>\n<li>"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದ ಆ್ಯಪ್‌ ಅಧಿಸೂಚನೆಗಳು"</li>\n<li>"ಕ್ರಿಯೆಗಳಿಗಾಗಿ ಡೀಫಾಲ್ಟ್ ಆ್ಯಪ್‌ಗಳು"</li>\n<li>"ಆ್ಯಪ್‌ ಹಿನ್ನೆಲೆ ಡೇಟಾ ನಿರ್ಬಂಧಗಳು"</li>\n<li>"ಯಾವುದೇ ಅನುಮತಿ ನಿರ್ಬಂಧಗಳು"</li>\n\n"ಯಾವುದೇ ಆ್ಯಪ್‌ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳುವುದಿಲ್ಲ."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ಆ್ಯಪ್‍‍ಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ಆ್ಯಪ್‍‍ಗಳನ್ನು ರೀಸೆಟ್ ಮಾಡಿ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ಆ್ಯಪ್‍ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ರಿಸೆಟ್)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಸಿಸ್ಟಂನ ಎಲ್ಲಾ ಡೇಟಾ ಮತ್ತು ಪ್ರೊಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸುತ್ತದೆ"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"ನಿಮ್ಮ ಕಾರ್‌ನ ತಯಾರಕರ ಪ್ರಕಾರ, ಡ್ರೈವಿಂಗ್ ಕುರಿತಾಗಿ ನಿಮಗೆ ನೆರವಾಗಲು ಈ ಆ್ಯಪ್‌ಗಳು ಅಗತ್ಯವಿವೆ"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"ನೀತಿ"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ನಿಮ್ಮ ಕಾರ್‌ನ ತಯಾರಕರು ಇನ್ನೂ ನಿಮ್ಮ ಕಾರ್‌ನ ಕ್ಯಾಮರಾಗೆ ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಹೊಂದಿರಬಹುದು"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"ಇತರ ಆ್ಯಪ್‌ಗಳ ಏಜೆಂಟ್ ನಿಯಂತ್ರಣ"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಮತ್ತು ಇತರ ಆ್ಯಪ್‌ಗಳಲ್ಲಿ ಕ್ರಿಯೆಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"ಇನ್‌ಫೋಟೈನ್‌ಮೆಂಟ್ ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ಚಿತ್ರಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು ಮತ್ತು ವೀಡಿಯೊ ರೆಕಾರ್ಡ್ ಮಾಡಲು ಇನ್‌ಫೋಟೇನ್‌ಮೆಂಟ್ ಆ್ಯಪ್‌ಗಳನ್ನು ಅನುಮತಿಸಿ"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"ಅನುಮತಿಸಲಾಗಿದೆ"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ಪ್ಲಾನ್‌ಗಳನ್ನು ನೋಡಿ"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ಮುಗಿದಿದೆ"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ನಿಮ್ಮ ವಾಹನವು ಈ ಫೀಚರ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"ದೃಶ್ಯಾನುಪಾತ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"ನೀವು ದೃಶ್ಯಾನುಪಾತವನ್ನು ಬದಲಾಯಿಸಿದಾಗ ಆ್ಯಪ್ ಮರುಪ್ರಾರಂಭವಾಗುತ್ತದೆ. ಸೇವ್ ಮಾಡದಿರುವ ಬದಲಾವಣೆಗಳನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು. ಕೆಲವು ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ದಿಷ್ಟ ದೃಶ್ಯಾನುಪಾತಗಳಿಗಾಗಿ ಆಪ್ಟಿಮೈಸ್ ಮಾಡದೇ ಇರಬಹುದು."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"ಮುಚ್ಚಿರಿ"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"ಅನ್ವಯಿಸಿ"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ಆ್ಯಪ್ ಡೀಫಾಲ್ಟ್"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ಫುಲ್‌ಸ್ಕ್ರೀನ್"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"ಅರ್ಧ ಸ್ಕ್ರೀನ್"</string>
 </resources>

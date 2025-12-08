@@ -44,12 +44,13 @@ public class ActivityEmbeddingUtils {
      * not configured to force single pane.
      */
     public static boolean isEmbeddingActivityEnabled(Context context) {
-        boolean isSplitAvailable = SplitController.getInstance(context).getSplitSupportStatus()
-                == SplitController.SplitSupportStatus.SPLIT_AVAILABLE;
-        LOG.d("Is activity split enabled on this device: " + isSplitAvailable);
+        SplitController.SplitSupportStatus splitStatus =
+                SplitController.getInstance(context).getSplitSupportStatus();
+        LOG.d("Current embedding backend split status: " + splitStatus);
         boolean configForceSinglePane = context.getResources().getBoolean(
                 R.bool.config_global_force_single_pane);
-        return isSplitAvailable && !configForceSinglePane;
+        return splitStatus == SplitController.SplitSupportStatus.SPLIT_AVAILABLE
+                && !configForceSinglePane;
     }
 
     /**

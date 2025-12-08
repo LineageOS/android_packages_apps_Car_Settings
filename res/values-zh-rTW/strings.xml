@@ -143,10 +143,10 @@
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"當 Wi-Fi 功能無法連上網際網路時，使用行動數據 (可能會增加數據用量)。"</string>
     <string name="wifi_network_state_switch_subtitle" msgid="7462322882046013762">"尋找 Wi-Fi 網路並連線"</string>
     <string name="learn_more" msgid="8214605928933358604">"瞭解詳情"</string>
-    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"無線基地台名稱"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"熱點名稱"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"正在開啟「<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>」..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"其他裝置可連線至「<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>」"</string>
-    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"無線基地台密碼"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"熱點密碼"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"安全性"</string>
     <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
     <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
@@ -162,14 +162,14 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
     <string name="wifi_ap_2G_5G" msgid="5526758464441623079">"2.4 與 5.0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"請至少為 Wi-Fi 無線基地台選擇一個頻帶："</string>
-    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi 無線基地台"</string>
+    <string name="tether_settings_title_all" msgid="6076625733772210734">"Wi‑Fi 熱點"</string>
     <string name="hotspot_settings_title" msgid="8220814387592756713">"無線基地台"</string>
-    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"使用 Wi‑Fi 無線基地台"</string>
+    <string name="wifi_hotspot_switch_title" msgid="5011183846278097937">"使用 Wi‑Fi 熱點"</string>
     <string name="wifi_hotspot_state_off" msgid="6096709579204322798">"關閉"</string>
     <string name="wifi_hotspot_keep_on_title" msgid="2920327805105370804">"開車時一律使用無線基地台"</string>
     <string name="wifi_hotspot_keep_on_summary" msgid="7701814310702163462">"在車輛發動時啟用無線基地台"</string>
     <string name="wifi_hotspot_qr_code_text" msgid="6074599244483100567">"掃描這個 QR code 即可加入「%s」"</string>
-    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"無線基地台密碼：%s"</string>
+    <string name="wifi_hotspot_qr_code_password_text" msgid="400288180113940870">"熱點密碼：%s"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求關閉 Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"發生錯誤"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"車輛製造商為輔助駕駛，而必須使用的應用程式"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"政策"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"車輛製造商或許仍可存取車輛攝影機"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"其他應用程式的代理控制選項"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"在裝置和其他應用程式中執行操作"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"資訊娛樂系統應用程式"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"允許資訊娛樂系統應用程式拍照及錄影"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"允許"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看方案"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完成"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"本車輛不支援這項功能"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"顯示比例設定"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"變更顯示比例後，應用程式會重新啟動。你可能會失去未儲存的變更內容。部分應用程式可能未針對某些顯示比例完成最佳化調整。"</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"關閉"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"套用"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"應用程式預設"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"全螢幕"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"半螢幕"</string>
 </resources>

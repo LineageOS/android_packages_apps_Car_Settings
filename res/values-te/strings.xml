@@ -98,7 +98,7 @@
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"నెట్‌వర్క్‌ను జోడించండి"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"కనెక్ట్ చేయండి"</string>
     <string name="wifi_connecting" msgid="1930665730621677960">"కనెక్ట్ అవుతోంది…"</string>
-    <string name="wifi_disconnected" msgid="4485699234859368137">"కనెక్ట్ చేయబడలేదు"</string>
+    <string name="wifi_disconnected" msgid="4485699234859368137">"కనెక్ట్ కాలేదు"</string>
     <string name="wifi_not_in_range_message" msgid="2617126307140203787">"నెట్‌వర్క్, పరిధిలో లేదు"</string>
     <string name="wifi_password" msgid="5565632142720292397">"పాస్‌‌వర్డ్"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"పాస్‌వర్డ్‌ను చూపండి"</string>
@@ -148,7 +148,7 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ఇతర పరికరాలు <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>కు కనెక్ట్ కావచ్చు"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"హాట్‌స్పాట్ పాస్‌వర్డ్‌"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"సెక్యూరిటీ"</string>
-    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-వ్యక్తిగత"</string>
     <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-వ్యక్తిగతం"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ఏమీ లేవు"</string>
@@ -175,7 +175,7 @@
     <string name="wifi_error" msgid="3105105447117289410">"ఎర్రర్"</string>
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g>తో ఉపయోగించుకునే పరికరం"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"పరికరాలు ఏవీ కనుగొనబడలేదు. పరికరాలు ఆన్‌లో ఉన్నాయని మరియు కనెక్ట్ చేయడానికి అందుబాటులో ఉన్నాయని నిర్ధారించుకోండి."</string>
-    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"మళ్లీ ట్రై చేయండి"</string>
     <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ పరికరాన్ని ఎంచుకునే రిక్వెస్ట్‌ను రద్దు చేసింది."</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"అన్నింటినీ చూపు"</string>
@@ -198,7 +198,7 @@
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"ఈ వాహనం పేరు మార్చండి"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"పరికరం పేరు మార్చండి"</string>
     <string name="bluetooth_rename_button" msgid="2397892174725986383">"పేరు మార్చు"</string>
-    <string name="bluetooth_available_devices" msgid="1854446368146061448">"అందుబాటులో ఉన్న పరికరాలు"</string>
+    <string name="bluetooth_available_devices" msgid="1854446368146061448">"అందుబాటులో ఉన్న డివైజ్‌లు"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"ప్రొఫైళ్లు"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_turning_on" msgid="7046983059601710414">"బ్లూటూత్ ఆన్ అవుతోంది…"</string>
@@ -424,7 +424,7 @@
     <string name="apps_settings_title" msgid="3982535942394315336">"యాప్‌లు"</string>
     <string name="apps_recently_opened" msgid="5320377037971195984">"ఇటీవల తెరిచినవి"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"అన్ని %1$d యాప్‌లను చూడండి"</string>
-    <string name="apps_permission_manager_title" msgid="8776335943862484131">"అనుమతి మేనేజర్"</string>
+    <string name="apps_permission_manager_title" msgid="8776335943862484131">"అనుమతి (పర్మిషన్) మేనేజర్"</string>
     <string name="apps_permission_manager_summary" msgid="4180424218228141274">"మీ డేటాకు యాప్ యాక్సెస్‌ను కంట్రోల్ చేయండి"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant, ఇంకా మరిన్నింటి కోసం"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# యాప్, పనితీరును ప్రభావితం చేస్తుంది}other{# యాప్, పనితీరును ప్రభావితం చేస్తున్నాయి}}"</string>
@@ -521,7 +521,7 @@
     <string name="terms_title" msgid="5201471373602628765">"నిబంధనలు మరియు షరతులు"</string>
     <string name="webview_license_title" msgid="6442372337052056463">"సిస్టమ్ వెబ్ వీక్షణ లైసెన్స్‌లg"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"వాల్‌పేపర్‌లు"</string>
-    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ఉపగ్రహ ఫోటోలను అందించినవారు:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"శాటిలైట్ ఇమేజ్‌లను ప్రొవైడ్ చేసిన వారు:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"మోడల్"</string>
     <string name="status_serial_number" msgid="9158889113131907656">"సీరియల్ నంబర్"</string>
     <string name="hardware_revision" msgid="5713759927934872874">"హార్డ్‌వేర్ వెర్షన్"</string>
@@ -610,7 +610,7 @@
     <string name="delete_user_error_title" msgid="287249031795906102">"ప్రొఫైల్ తొలగించబడలేదు. మీరు పరికరాన్ని రీస్టార్ట్ చేసి, మళ్లీ ట్రై చేయవచ్చు."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"మీరు ప్రొఫైళ్లను మార్చినప్పుడు లేదా వాహనాన్ని రీస్టార్ట్ చేసినప్పుడు ఈ ప్రొఫైల్ తొలగించబడుతుంది."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"విస్మరించు"</string>
-    <string name="delete_user_error_retry" msgid="5116434895572670563">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"మళ్లీ ట్రై చేయండి"</string>
     <string name="delete_last_user_dialog_title" msgid="3454454005909291260">"చివరి యూజర్ ప్రొఫైల్‌ను తొలగించాలా?"</string>
     <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"మీరు ఈ వాహనం కోసం మిగిలి ఉన్న ఏకైక ప్రొఫైల్‌ను తొలగిస్తే, ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న మొత్తం డేటా, సెట్టింగ్‌లు, యాప్‌లు ఫ్యాక్టరీ రీసెట్ చేయబడతాయి."</string>
     <string name="delete_last_user_system_setup_required_message" msgid="726196874941282088">"రీసెట్ చేసిన తర్వాత, మీరు కొత్త ప్రొఫైల్‌ను సెటప్ చేయవచ్చు."</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"డ్రైవింగ్ చేయడంలో మీకు సహాయపడటానికి మీ కారు తయారీదారుకు (మ్యానుఫ్యాక్చరర్‌కు) కావాల్సిన యాప్‌లు"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"పాలసీ"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"మీ కారు తయారీదారుకు ఇప్పటికీ మీ కారు కెమెరా‌కు యాక్సెస్ ఉండవచ్చు"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"ఇతర యాప్‌లకు సంబంధించిన ఏజెంట్ కంట్రోల్"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"మీ డివైజ్‌లో, ఇతర యాప్‌ల్లో చర్యలను అమలు చేయండి"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"సమాచారంతో కూడిన వినోదం అందించే యాప్‌లు"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"ఫోటోలు తీయడానికి, వీడియోను రికార్డ్ చేయడానికి సమాచారంతో కూడిన వినోదం అందించే యాప్‌లను అనుమతించండి"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"అనుమతించినవి"</string>
@@ -719,7 +721,7 @@
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"నిర్ధారించు"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"మళ్లీ గీయి"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"కొనసాగించండి"</string>
-    <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"మళ్లీ ట్రై చేయండి"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"స్కిప్ చేయండి"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"స్క్రీన్ లాక్‌ను సెట్ చేయండి"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"మీ పిన్ ఎంచుకోండి"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"ప్లాన్‌లను చూడండి"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"పూర్తయింది"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"మీ వాహనం ఈ ఫీచర్‌ను సపోర్ట్ చేయట్లేదు"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"ఆకార నిష్పత్తి సెట్టింగ్‌లు"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"మీరు ఆకార నిష్పత్తిని మార్చినప్పుడు యాప్ రీస్టార్ట్ అవుతుంది. మీరు సేవ్ చేయని మార్పులను కోల్పోవచ్చు. కొన్ని యాప్‌లు నిర్దిష్ట ఆకార నిష్పత్తులకు ఆప్టిమైజ్ అవ్వకపోవచ్చు."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"మూసివేయండి"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"వర్తింపజేయండి"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"యాప్ ఆటోమేటిక్ సెట్టింగ్"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ఫుల్-స్క్రీన్"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"సగం స్క్రీన్"</string>
 </resources>

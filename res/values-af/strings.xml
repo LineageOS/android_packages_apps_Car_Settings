@@ -348,7 +348,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"Toestemmings"</string>
     <string name="app_info_all_services_label" msgid="6495363975322723452">"Alle dienste"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Kennisgewings"</string>
-    <string name="storage_application_label" msgid="5911779903670978586">"Berging en kas"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Berging en kasgeheue"</string>
     <string name="prioritize_app_performance_label" msgid="7264505023347026606">"Prioritiseer programwerkverrigting"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Weergawe: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Geen toestemmings is verleen nie"</string>
@@ -391,7 +391,7 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"Gebruik teks op die skerm"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Gee die bystandapp toegang tot die skerminhoud as teks"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Gebruik skermkiekie"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Gee die bystandapp toegang tot \'n prent van die skerm"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Gee die bystandapp toegang tot ’n prent van die skerm."</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Steminvoer"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Outovuldiens"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Geen"</string>
@@ -551,7 +551,7 @@
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Netwerkinstellings is teruggestel"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Stel appvoorkeure terug"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Dit sal alle voorkeure terugstel vir:\n\n"<li>"Gedeaktiveerde apps"</li>\n<li>"Gedeaktiveerde-appkennisgewings"</li>\n<li>"Verstekapps vir handelinge"</li>\n<li>"Agtergronddatabeperkings vir apps"</li>\n<li>"Enige toestemmingbeperkings"</li>\n\n"Jy sal geen appdata verloor nie."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Stel programme terug"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Stel apps terug"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Programvoorkeure is teruggestel"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Vee alle data uit (fabriekterugstelling)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Vee alle data en profiele van die inligtingvermaakstelsel af uit"</string>
@@ -636,13 +636,13 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Stelsel sluit lêers in wat gebruik word om Android-weergawe <xliff:g id="VERSION">%s</xliff:g> te laat werk"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Oudiolêers"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Bereken tans …"</string>
-    <string name="storage_application_size_label" msgid="1146156683170661354">"Programgrootte"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Appgrootte"</string>
     <string name="storage_data_size_label" msgid="7986110464268960652">"Profieldata"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Kasgeheue"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Totaal"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Vee berging uit"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Maak kas skoon"</string>
-    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vee programdata uit?"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vee appdata uit?"</string>
     <string name="storage_clear_data_dlg_text" msgid="3255314337644212283">"Hierdie app se data sal permanent uitgevee word. Dit sluit lêers, instellings, databasisse en ander appdata in."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Kon nie berging vir app uitvee nie."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> is veilig losgemaak"</string>
@@ -659,13 +659,13 @@
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Dit sal data bespaar, maar jy sal elke rekening self moet sinkroniseer om onlangse inligting in te samel. En jy sal nie kennisgewings ontvang wanneer opdaterings plaasvind nie."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Rekeninginligting"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Voeg rekening by"</string>
-    <string name="add_an_account" msgid="1072285034300995091">"Voeg \'n rekening by"</string>
+    <string name="add_an_account" msgid="1072285034300995091">"Voeg ’n rekening by"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Beperkte profiele kan nie rekeninge byvoeg nie"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Verwyder rekening"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Verwyder rekening?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"As hierdie rekening verwyder word, sal al sy boodskappe, kontakte en ander data op die toestel uitgevee word!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Kon nie rekening verwyder nie."</string>
-    <string name="account_sync_title" msgid="6541844336300236915">"Rekeningsinkronisering"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Rekening­sinkroni­sering"</string>
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Sinkronisering is aan vir <xliff:g id="ID_1">%1$d</xliff:g> van <xliff:g id="ID_2">%2$d</xliff:g> items"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Sinkronisering is aan vir alle items"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sinkronisering is af vir alle items"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Apps wat deur jou motor se vervaardiger vereis word om jou te help bestuur"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Beleid"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Jou motorvervaardiger het dalk steeds toegang tot jou motor se kamera"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Agentbeheer van ander apps"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Voer handelinge op jou toestel en in ander apps uit"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Inligtingvermaakapps"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Laat inligtingvermaakapps toe om foto\'s en video te neem"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Toegelaat"</string>
@@ -936,7 +938,7 @@
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"Skermleser"</string>
     <string name="show_captions_toggle_title" msgid="710582308974826311">"Wys onderskrifte"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"Teksgrootte"</string>
-    <string name="captions_settings_style_header" msgid="944591388386054372">"Grootte en styl van onderskrif"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"Grootte en styl van onderskrifte"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"Baie klein"</string>
     <string name="captions_settings_text_size_small" msgid="1481895299805450566">"Klein"</string>
     <string name="captions_settings_text_size_default" msgid="2227802573224038267">"Verstek"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Sien pakkette"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Klaar"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Jou voertuig steun nie hierdie kenmerk nie"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Aspekverhoudinginstellings"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Die app sal herbegin as jy die aspekverhouding verander. Jy kan ongestoorde veranderinge verloor. Sommige apps sal dalk nie vir sekere aspekverhoudings geoptimeer wees nie."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Maak toe"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Pas toe"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Appverstek"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Volskerm"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Halfskerm"</string>
 </resources>

@@ -41,9 +41,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
-import android.platform.test.annotations.DisableFlags;
-import android.platform.test.annotations.EnableFlags;
-import android.platform.test.flag.junit.SetFlagsRule;
 import android.widget.Toast;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -96,9 +93,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     public ActivityTestRule<BaseCarSettingsTestActivity> mActivityTestRule =
             new ActivityTestRule<>(BaseCarSettingsTestActivity.class);
 
-    @Rule
-    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
-
     @Before
     public void setUp() {
         mLifecycleOwner = new TestLifecycleOwner();
@@ -121,17 +115,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void unclickable_switchDisabled() throws Throwable {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
-        setIsClickable(false);
-
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
-        assertThat(mSwitchPreference.isChecked()).isTrue();
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void notVisible_switchHidden() throws Throwable {
         initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
         setIsVisible(false);
@@ -141,7 +124,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void isVisible_switchShown() throws Throwable {
         initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
         setIsVisible(true);
@@ -151,58 +133,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void unclickable_onPreferenceClicked_noChange_showToggleDisabledDialog() {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
-        setIsClickable(false);
-
-        mSwitchPreference.performClick();
-
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
-        assertThat(mSwitchPreference.isChecked()).isTrue();
-        verify(mLocationManager, never()).setAdasGnssLocationEnabled(anyBoolean());
-        verify(mFragmentController)
-                .showDialog(any(ConfirmationDialogFragment.class),
-                        eq(ConfirmationDialogFragment.TAG));
-    }
-
-    @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void unclickable_powerPolicyOff_onPreferenceClicked_showToggleDisabledDialog() {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
-        setIsClickable(false);
-        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
-                .handlePolicyChange(/* isOn= */ false);
-
-        mSwitchPreference.performClick();
-
-        verify(mLocationManager, never()).setAdasGnssLocationEnabled(anyBoolean());
-        verify(mFragmentController)
-                .showDialog(any(ConfirmationDialogFragment.class),
-                        eq(ConfirmationDialogFragment.TAG));
-    }
-
-    @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void powerPolicyOff_onPreferenceClicked_showCorrectToast() throws Throwable {
-        int correctToastId = R.string.power_component_disabled;
-        mActivityTestRule.runOnUiThread(() -> {
-            ExtendedMockito.when(Toast.makeText(any(), eq(correctToastId), anyInt()))
-                    .thenReturn(mToast);
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
-        setIsClickable(true);
-        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
-                .handlePolicyChange(/* isOn= */ false);
-
-        mSwitchPreference.performClick();
-
-        verify(mToast).show();
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void powerPolicyOff_onPreferenceClicked_showCorrectToast_flagReq() throws Throwable {
         int correctToastId = R.string.power_component_disabled;
         mActivityTestRule.runOnUiThread(() -> {
@@ -221,31 +151,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void onAdasIntentReceived_updateUi() {
-        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
-        setIsClickable(true);
-
-        ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
-                BroadcastReceiver.class);
-        ArgumentCaptor<IntentFilter> intentFilterCaptor = ArgumentCaptor.forClass(
-                IntentFilter.class);
-        verify(mContext, times(1))
-                .registerReceiver(broadcastReceiverArgumentCaptor.capture(),
-                        intentFilterCaptor.capture(), eq(Context.RECEIVER_NOT_EXPORTED));
-        List<IntentFilter> actions = intentFilterCaptor.getAllValues();
-        assertTrue(actions.get(0).hasAction(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED));
-
-        when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(true);
-        broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
-                new Intent(LocationManager.ACTION_ADAS_GNSS_ENABLED_CHANGED));
-
-        assertThat(mSwitchPreference.isEnabled()).isTrue();
-        assertThat(mSwitchPreference.isChecked()).isTrue();
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onAdasIntentReceived_updateUi_flagReq() {
         initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
         setIsVisible(true);
@@ -269,33 +174,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void onLocationIntentReceived_updateUi() {
-        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
-        setIsClickable(true);
-
-        ArgumentCaptor<BroadcastReceiver> broadcastReceiverArgumentCaptor = ArgumentCaptor.forClass(
-                BroadcastReceiver.class);
-        ArgumentCaptor<IntentFilter> intentFilterCaptor = ArgumentCaptor.forClass(
-                IntentFilter.class);
-
-        verify(mContext, times(1))
-                .registerReceiver(broadcastReceiverArgumentCaptor.capture(),
-                        intentFilterCaptor.capture(), eq(Context.RECEIVER_NOT_EXPORTED));
-        List<IntentFilter> actions = intentFilterCaptor.getAllValues();
-        assertTrue(actions.get(0).hasAction(LocationManager.MODE_CHANGED_ACTION));
-
-        when(mLocationManager.isLocationEnabled()).thenReturn(true);
-        when(mLocationManager.isAdasGnssLocationEnabled()).thenReturn(true);
-        broadcastReceiverArgumentCaptor.getValue().onReceive(mContext,
-                new Intent(LocationManager.MODE_CHANGED_ACTION));
-
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
-        assertThat(mSwitchPreference.isChecked()).isTrue();
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onLocationIntentReceived_updateUi_flagReq() {
         initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
         setIsVisible(true);
@@ -321,22 +199,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void onPreferenceClicked_adasDisabled_shouldEnable_notShowDialog() {
-        initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
-        setIsClickable(true);
-
-        mSwitchPreference.performClick();
-
-        assertThat(mSwitchPreference.isEnabled()).isTrue();
-        assertThat(mSwitchPreference.isChecked()).isTrue();
-        verify(mLocationManager).setAdasGnssLocationEnabled(true);
-        verify(mFragmentController, never())
-                .showDialog(any(ConfirmationDialogFragment.class), any());
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onPreferenceClicked_adasDisabled_shouldEnable() {
         initializePreference(/* isAdasLocationEnabled= */false, /* isMainLocationEnabled= */false);
         setIsVisible(true);
@@ -349,23 +211,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void onPreferenceClicked_adasEnabled_shouldStayEnable_showDialog() {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
-        setIsClickable(true);
-
-        mSwitchPreference.performClick();
-
-        assertThat(mSwitchPreference.isEnabled()).isTrue();
-        assertThat(mSwitchPreference.isChecked()).isTrue();
-        verify(mLocationManager, never()).setLocationEnabledForUser(anyBoolean(), any());
-        verify(mFragmentController)
-                .showDialog(any(ConfirmationDialogFragment.class),
-                        eq(ConfirmationDialogFragment.TAG));
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onPreferenceClicked_adasEnabled_shouldDisable_flagReq() {
         initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
         setIsVisible(true);
@@ -378,52 +223,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void confirmDialog_turnOffDriverAssistance() throws Throwable {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
-        setIsClickable(true);
-
-        mSwitchPreference.performClick();
-
-        // Capture the dialog that is shown on toggle.
-        ArgumentCaptor<ConfirmationDialogFragment> dialogCaptor = ArgumentCaptor.forClass(
-                ConfirmationDialogFragment.class);
-        verify(mFragmentController).showDialog(dialogCaptor.capture(),
-                eq(ConfirmationDialogFragment.TAG));
-
-        // Show the captured dialog on press the confirmation button.
-        ConfirmationDialogFragment dialog = dialogCaptor.getValue();
-        assertThat(dialogCaptor).isNotNull();
-        AlertDialog alertDialog = showDialog(dialog);
-
-        // Confirm action is the listener of negative button.
-        mActivityTestRule.runOnUiThread(() -> {
-            alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE).performClick();
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-
-        verify(mLocationManager).setAdasGnssLocationEnabled(false);
-    }
-
-    @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void onPowerPolicyChange_isEnabledChanges() {
-        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ false);
-        setIsClickable(true);
-
-        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
-                .handlePolicyChange(/* isOn= */ false);
-
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
-
-        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
-                .handlePolicyChange(/* isOn= */ true);
-
-        assertThat(mSwitchPreference.isEnabled()).isTrue();
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onPowerPolicyChange_isEnabledChanges_flagReq() {
         initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ false);
         setIsVisible(true);
@@ -440,21 +239,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
     }
 
     @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void onPowerPolicyChange_enabled_locationEnabled_switchStaysDisabled() {
-        initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ true);
-        setIsClickable(true);
-
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
-
-        mPreferenceController.mPowerPolicyListener.getPolicyChangeHandler()
-                .handlePolicyChange(/* isOn= */ true);
-
-        assertThat(mSwitchPreference.isEnabled()).isFalse();
-    }
-
-    @Test
-    @EnableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
     public void onPowerPolicyChange_enabled_locationEnabled_switchStaysDisabled_flagReq() {
         initializePreference(/* isAdasLocationEnabled= */ true, /* isMainLocationEnabled= */ true);
         setIsVisible(true);
@@ -465,34 +249,6 @@ public class AdasLocationSwitchPreferenceControllerTest {
                 .handlePolicyChange(/* isOn= */ true);
 
         assertThat(mSwitchPreference.isEnabled()).isFalse();
-    }
-
-    @Test
-    @DisableFlags(Flags.FLAG_REQUIRED_INFOTAINMENT_APPS_SETTINGS_PAGE)
-    public void cancelDialog_DriverAssistanceStaysOn() throws Throwable {
-        initializePreference(/* isAdasLocationEnabled= */true, /* isMainLocationEnabled= */false);
-        setIsClickable(true);
-
-        mSwitchPreference.performClick();
-
-        // Capture the dialog that is shown on toggle.
-        ArgumentCaptor<ConfirmationDialogFragment> dialogCaptor = ArgumentCaptor.forClass(
-                ConfirmationDialogFragment.class);
-        verify(mFragmentController).showDialog(dialogCaptor.capture(),
-                eq(ConfirmationDialogFragment.TAG));
-
-        // Show the captured dialog on press the confirmation button.
-        ConfirmationDialogFragment dialog = dialogCaptor.getValue();
-        assertThat(dialogCaptor).isNotNull();
-        AlertDialog alertDialog = showDialog(dialog);
-
-        // Cancel action is the listener of positive button.
-        mActivityTestRule.runOnUiThread(() -> {
-            alertDialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
-        });
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
-
-        verify(mLocationManager, never()).setAdasGnssLocationEnabled(false);
     }
 
     private void initializePreference(

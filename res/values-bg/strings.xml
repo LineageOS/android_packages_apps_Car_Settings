@@ -74,7 +74,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Задаване на лимит за данните"</string>
     <string name="data_limit" msgid="227338836292511425">"Лимит за данните"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ограничаване на преноса на данни"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Основното устройство на автомобила ви ще изключи мобилните данни, след като достигне зададения от вас лимит.\n\nТъй като преносът им се измерва от основното устройство, а операторът ви може да го отчита по различен начин, добре е да използвате умерен лимит."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Инфо-развлекателната система на автомобила ви ще изключи мобилните данни, след като достигне зададения от вас лимит.\n\nТъй като преносът им се измерва от инфо-развлекателната система, а операторът ви може да го отчита по различен начин, добре е да използвате умерен лимит."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Задаване на предупреждение за преноса на данни"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Задаване на ограничение за преноса на данни"</string>
     <string name="data_usage_settings_footer" msgid="681881387909678237">"Преносът на данни се измерва по устройството ви. Той може да е различен от данните на мобилния ви оператор."</string>
@@ -207,10 +207,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да изключи Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Приложение иска да включи Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Приложение иска да изключи Bluetooth"</string>
-    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да направи основното ви устройство видимо за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
-    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Приложение иска да направи основното ви устройство видимо за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да включи Bluetooth и да направи основното ви устройство видимо за други устройства за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Приложение иска да включи Bluetooth и да направи основното ви устройство видимо за други устройства за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да направи инфо-развлекателната система видима за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Приложение иска да направи инфо-развлекателната система видима за други устройства с Bluetooth за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> иска да включи Bluetooth и да направи инфо-развлекателната система видима за други устройства за <xliff:g id="TIMEOUT">%2$d</xliff:g> секунди."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Приложение иска да включи Bluetooth и да направи инфо-развлекателната система видима за други устройства за <xliff:g id="TIMEOUT">%1$d</xliff:g> секунди."</string>
     <string name="bluetooth_state_switch_summary" msgid="171929910916432266">"Вижда се като %1$s за други устройства"</string>
     <string name="bluetooth_my_devices" msgid="6352010339607939612">"Моите устройства"</string>
     <string name="bluetooth_previously_connected" msgid="5206229557831180323">"По-рано свързвани"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Приложения, които се изискват от производителя на автомобила ви, за да ви помагат да шофирате"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Декларация"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Производителят на автомобила ви пак може да има достъп до камерата на колата ви"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Контролиране на други приложения от агент"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Извършване на действия на устройството ви, както и в други приложения"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Приложения за основното устройство"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Разрешаване на приложенията за основното устройство да правят снимки и да записват видеоклипове"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Разрешено"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Вижте плановете"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Готово"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Превозното ви средство не поддържа тази функция"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Настройки за съотношението"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Когато промените съотношението, приложението ще се рестартира. Възможно е да изгубите незапазените промени. Някои приложения може да не са оптимизирани за определени съотношения."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Затваряне"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Прилагане"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Стандартно за приложението"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Цял екран"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Половин екран"</string>
 </resources>

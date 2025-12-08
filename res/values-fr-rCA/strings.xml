@@ -148,8 +148,8 @@
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"D\'autres appareils peuvent se connecter à <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Mot de passe du point d\'accès"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sécurité"</string>
-    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3-Personal"</string>
-    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3-Personal"</string>
+    <string name="wifi_hotspot_wpa3_sae" msgid="4752416911592950174">"WPA3 Personal"</string>
+    <string name="wifi_security_psk_sae" msgid="8738371461215752280">"WPA2/WPA3 Personal"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personnel"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Aucun"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Bande PA"</string>
@@ -353,7 +353,7 @@
     <string name="application_version_label" msgid="8556889839783311649">"Version : %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Aucune autorisation accordée"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Aucune autorisation demandée"</string>
-    <string name="unused_apps" msgid="648471933781010395">"Applications non utilisées"</string>
+    <string name="unused_apps" msgid="648471933781010395">"Applis non utilisées"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# application non utilisée}one{# application non utilisée}other{# applications non utilisées}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Retirer autorisations et libérer espace"</string>
     <string name="aspect_ratio_label" msgid="5484863076085548807">"Proportions (expérimental)"</string>
@@ -429,7 +429,7 @@
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Pour l\'assistant et plus"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{# application altérant la performance}one{# application altérant la performance}other{# applications altérant la performance}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"Au système et aux autres paramètres"</string>
-    <string name="special_access" msgid="5730278220917123811">"Accès spécial des applications"</string>
+    <string name="special_access" msgid="5730278220917123811">"Accès spécial des applis"</string>
     <string name="show_system" msgid="4401355756969485287">"Afficher le système"</string>
     <string name="hide_system" msgid="8845453295584638040">"Masquer les processus système"</string>
     <string name="hide_system_apps" msgid="6583947381056154020">"Masquer les applications systèmes"</string>
@@ -444,7 +444,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
     <string name="performance_impacting_apps_description" msgid="7361464904617808444">"Ces applications altèrent la performance du système, et leur exécution en arrière-plan a été bloquée.\nPriorisez l\'application pour permettre l\'utilisation en arrière-plan et retirez-là de cette liste."</string>
     <string name="performance_impacting_apps_button_label" msgid="8277507326717608783">"Prioriser l\'appli"</string>
-    <string name="premium_sms_access_title" msgid="4290463862145052004">"Message texte payant"</string>
+    <string name="premium_sms_access_title" msgid="4290463862145052004">"Messages texte payants"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Les messages texte de cette catégorie peuvent être payants et s\'ajouter aux factures mensuelles de votre fournisseur de services. Si vous activez l\'autorisation pour une application, vous serez en mesure d\'envoyer des messages texte payants à l\'aide de cette dernière."</string>
     <string name="usage_access_title" msgid="2306113730908698218">"Données d\'utilisation de l\'appli"</string>
     <string name="usage_access_description" msgid="7889884409739123407">"L\'accès à toutes les données d\'utilisation des applis permet à une appli de suivre les autres applis que vous utilisez et à quelle fréquence, ainsi que votre opérateur, vos paramètres de langue et d\'autres détails."</string>
@@ -551,7 +551,7 @@
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Les paramètres réseau ont été réinitialisés"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Réinitial. préférences des applis"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Cette opération réinitialise toutes les préférences relatives aux éléments suivants :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences des applications ont été réinitialisées"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Effacer les données (réinitialisation)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Effacer toutes les données et tous les profils du système d\'infodivertissement"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Les applis requises par votre constructeur automobile pour vous aider à conduire"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Politique"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Il se peut que le constructeur de votre automobile ait encore accès à la caméra de celle-ci"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Contrôle de l\'agent sur d\'autres applis"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Effectuez des actions sur votre appareil et sur d\'autres applis"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Applis d\'infodivertissement"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Autorisez les applis d\'infodivertissement à prendre des photos et à enregistrer des vidéos"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Autorisées"</string>
@@ -950,7 +952,7 @@
     <string name="captions_settings_text_style_yellow_on_blue" msgid="5072521958156112239">"Texte jaune sur fond bleu"</string>
     <string name="accessibility_settings_screen_reader_title" msgid="5113265553157624836">"Lecteur d\'écran"</string>
     <string name="screen_reader_settings_off" msgid="6081562047935689764">"Désactivé"</string>
-    <string name="screen_reader_settings_on" msgid="2168217218643349459">"énoncer les éléments à l\'écran"</string>
+    <string name="screen_reader_settings_on" msgid="2168217218643349459">"Énoncer les éléments à l\'écran"</string>
     <string name="enable_screen_reader_toggle_title" msgid="7641307781194619254">"Utiliser <xliff:g id="ACCESSIBILITY_APP_NAME">%1$s</xliff:g>"</string>
     <string name="screen_reader_options_title" msgid="1073640098442831819">"Options"</string>
     <string name="screen_reader_description_title" msgid="8766666406552388012">"Paramètres"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Voir les forfaits"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Terminé"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Votre véhicule ne prend pas en charge cette fonctionnalité"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Paramètres des proportions"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"L\'appli redémarrera lorsque vous aurez modifié les proportions. Vous pourriez perdre les modifications non enregistrées. Il se peut que certaines applis ne soient pas optimisées pour certaines proportions."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Fermer"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Appliquer"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Proportions par défaut de l\'appli"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Plein écran"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Moitié de l\'écran"</string>
 </resources>

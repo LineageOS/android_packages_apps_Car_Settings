@@ -1624,6 +1624,10 @@
     <string name="camera_access_disclaimer_summary">
         Your car manufacturer may still have access to your car\u2019s camera
     </string>
+    <!-- Title for the entrypoint that navigates to the App Function Access Settings page. [CHAR LIMIT=70]-->
+    <string name="app_function_access_settings_title">Agent control of other apps</string>
+    <!-- Summary for the entrypoint that navigates to the App Function Access Settings page. [CHAR LIMIT=130]-->
+    <string name="app_function_access_settings_summary">Perform actions on your device and in other apps</string>
     <!-- Title of infotainment apps accessing camera [CHAR LIMIT=40]-->
     <string name="camera_infotainment_apps_toggle_title">Infotainment apps</string>
     <!-- Summary of infotainment apps accessing camera [CHAR LIMIT=NONE]-->
@@ -2345,4 +2349,12 @@
     <!-- Toast message to let the user know that there is no supported function for this intent. [CHAR LIMIT=80]
     TODO(b/371591484): to update this string when UX finalizes it.-->
     <string name="unsupported_intents_toast_text">Your vehicle does not support this feature</string>
+
+    <string name="aspect_ratio_dialog_title">Aspect Ratio Settings</string>
+    <string name="aspect_ratio_dialog_message">The app will restart when you change the aspect ratio. You may lose unsaved changes. Some apps may not be optimized for certain aspect ratios.</string>
+    <string name="aspect_ratio_dialog_close_button_text">Close</string>
+    <string name="aspect_ratio_dialog_apply_button_text">Apply</string>
+    <string name="aspect_ratio_dialog_app_default_text">App default</string>
+    <string name="aspect_ratio_dialog_full_screen_text">Full screen</string>
+    <string name="aspect_ratio_dialog_half_screen_text">Half screen</string>
 </resources>

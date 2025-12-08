@@ -19,7 +19,6 @@ package com.android.car.settings.bluetooth.audiosharing;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.ui.preference.CarUiPreference;
 
@@ -41,7 +40,6 @@ public class AudioSharingPreferenceController extends BaseAudioSharingPreference
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (!Flags.carSettingsMultiCasting()) return CONDITIONALLY_UNAVAILABLE;
         if (isBluetoothStateOn() && isBroadcastAvailable()) {
             return AVAILABLE;
         }

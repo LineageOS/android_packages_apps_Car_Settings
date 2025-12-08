@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Zaidi"</string>
     <string name="display_settings" msgid="5325515247739279185">"Mwonekano"</string>
     <string name="brightness" msgid="2919605130898772866">"Hali ya mwangaza"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Ung\'aavu unaojirekebisha"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Ung’aavu unaojirekebisha"</string>
     <string name="auto_brightness_summary" msgid="2002570577219479702">"Rekebisha mwangaza wa skrini kulingana na mazingira"</string>
     <string name="theme_toggle_title" msgid="7091393596274709558">"Mandhari"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Mwanga wa Usiku umewashwa"</string>
@@ -45,7 +45,7 @@
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Tumia <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Kutumia mitandao ya ng\'ambo"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Unganisha huduma ya data wakati natumia mtandao wa ng\'ambo"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"Ungependa kuruhusu matumizi ya mitandao ya ng\'ambo?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Ungependa kutumia data ya mitandao ng’ambo?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Huenda ukatozwa ada za kutumia mitandao ya ng\'ambo."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Matumizi ya data"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Data ya msingi"</string>
@@ -66,7 +66,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Badilisha tarehe ya kipindi cha kutumia data"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Tarehe ya kila mwezi:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Weka"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Kikomo na onyo kuhusu matumizi ya data"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Kikomo na onyo la data"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Awamu ya programu zinavyotumia data"</string>
     <string name="mobile_data_usage" msgid="8171519864391091861">"Matumizi ya data ya mtandao wa simu"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Weka onyo la matumizi ya data"</string>
@@ -220,7 +220,7 @@
     <string name="uwb_toggle_title" msgid="8831695790040626922">"Bendi Pana Zaidi (UWB)"</string>
     <string name="uwb_toggle_summary" msgid="2206513296288659105">"Husaidia gari lako litambue mahali vifaa vya Bendi Pana Zaidi (UWB) vilipo"</string>
     <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Kusikiliza Pamoja"</string>
-    <string name="share_audio_switch_title" msgid="8798673733841544186">"Sikiliza pamoja na wengine"</string>
+    <string name="share_audio_switch_title" msgid="8798673733841544186">"Sikiliza na wengine"</string>
     <string name="share_audio_switch_summary" msgid="5123598607194828495">"Wasikilizaji wanahitaji vipokea sauti vyao vya kichwani vinavyotumia LE Audio"</string>
     <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Cheza sauti ya jaribio"</string>
     <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Kila mtu anayesikiliza anapaswa kuisikia"</string>
@@ -700,6 +700,8 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Programu zinazotakiwa na mtengenezaji wa gari lako ili kukusaidia kuendesha gari"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Sera"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Huenda mtengenezaji wa gari lako bado ana uwezo wa kufikia kamera ya gari lako"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"Usaidizi wa kudhibiti programu nyingine"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"Kutekeleza vitendo kwenye kifaa chako na katika programu nyingine"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Programu za habari na burudani"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Ruhusu programu za habari na burudani zipige picha na kurekodi video"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Zilizoruhusiwa"</string>
@@ -813,7 +815,7 @@
     <string name="add_user_restricted_while_driving" msgid="1037301074725362944">"Huwezi kuongeza wasifu unapoendesha gari"</string>
     <string name="default_search_query" msgid="3137420627428857068">"Tafuta"</string>
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Mratibu na sauti"</string>
-    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Programu ya mratibu dijitali"</string>
+    <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"Programu ya kiratibu dijitali"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"Tumia maandishi kutoka kwenye skrini"</string>
     <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"Ruhusu programu ya Mratibu ifikie maudhui ya skrini"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"Tumia picha ya skrini"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Angalia mipango"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Nimemaliza"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Gari lako halitumii kipengele hiki"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Mipangilio ya Uwiano"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Programu itafungwa kisha ifunguliwe upya utakapobadilisha uwiano. Huenda ukapoteza mabadiliko ambayo hujahifadhi. Huenda baadhi ya programu zisiweze kutumia uwiano fulani."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"Funga"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"Tumia"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Uwiano chaguomsingi wa programu"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Skrini nzima"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Nusu skrini"</string>
 </resources>

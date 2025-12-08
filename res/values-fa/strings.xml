@@ -183,7 +183,7 @@
     <string name="wifi_detail_share" msgid="3765487472190563802">"هم‌رسانی"</string>
     <string name="wifi_detail_share_description" msgid="1417559695973326762">"برای اتصال به Wi-Fi، این رمزینه پاسخ‌سریع را اسکن کنید"</string>
     <string name="wifi_detail_share_toast" msgid="9106513465439393280">"هم‌رسانی Wi-Fi برای این Wi-Fi دردسترس نیست."</string>
-    <string name="connected_settings_title" msgid="8868738903280658151">"دستگاه‌های متصل"</string>
+    <string name="connected_settings_title" msgid="8868738903280658151">"دستگاه‌های متصل‌شده"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"استفاده از بلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"دستگاه بی‌نام"</string>
@@ -515,7 +515,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"همیاران"</string>
     <string name="manual" msgid="4819839169843240804">"دفترچه راهنما"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"برچسب‌های نظارتی"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"دفترچه راهنمای ایمنی و مقررات نظارتی"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"راهنمای ایمنی و نظارتی"</string>
     <string name="copyright_title" msgid="4220237202917417876">"حق نشر"</string>
     <string name="license_title" msgid="936705938435249965">"مجوز"</string>
     <string name="terms_title" msgid="5201471373602628765">"شرایط و مقررات"</string>
@@ -609,7 +609,7 @@
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"همه برنامه‌ها و داده‌های این نمایه حذف خواهند شد"</string>
     <string name="delete_user_error_title" msgid="287249031795906102">"نمایه حذف نشد. می‌توانید دستگاه را بازراه‌اندازی و دوباره امتحان کنید."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"وقتی به نمایه دیگری بروید یا خودرو را بازراه‌اندازی کنید، این نمایه حذف خواهد شد."</string>
-    <string name="delete_user_error_dismiss" msgid="429156446763738273">"نپذیرفتن"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"بستن"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"امتحان مجدد"</string>
     <string name="delete_last_user_dialog_title" msgid="3454454005909291260">"آخرین نمایه باقی‌مانده حذف شود؟"</string>
     <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"اگر تنها نمایه باقی‌مانده را برای این خودرو حذف کنید، همه داده‌ها، تنظیمات، و برنامه‌های مرتبط با این نمایه پاک خواهند شد."</string>
@@ -700,11 +700,13 @@
     <string name="required_apps_group_summary" msgid="5026442309718220831">"برنامه‌هایی که سازنده خودرو برای کمک در رانندگی الزامی کرده است"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"خط‌مشی"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"ممکن است سازنده خودروتان همچنان به دوربین خودرو شما دسترسی داشته باشد"</string>
+    <string name="app_function_access_settings_title" msgid="7029660854535229000">"کنترل نماینده بر برنامه‌های دیگر"</string>
+    <string name="app_function_access_settings_summary" msgid="404048231298577346">"انجام کنش در دستگاهتان و در برنامه‌های دیگر"</string>
     <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"برنامه‌های اطلاعات-سرگرمی"</string>
     <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"اجازه دادن به برنامه‌های اطلاعات-سرگرمی برای گرفتن عکس و ضبط فیلم"</string>
-    <string name="permission_grant_allowed" msgid="4844649705788049638">"مجاز"</string>
+    <string name="permission_grant_allowed" msgid="4844649705788049638">"اجازه داشتن"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"همیشه"</string>
-    <string name="permission_grant_never" msgid="1357441946890127898">"غیرمجاز"</string>
+    <string name="permission_grant_never" msgid="1357441946890127898">"اجازه نداشتن"</string>
     <string name="permission_grant_in_use" msgid="2314262542396732455">"فقط درحین استفاده از برنامه"</string>
     <string name="permission_grant_ask" msgid="1613256400438907973">"هربار پرسیده شود"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"امنیت"</string>
@@ -716,7 +718,7 @@
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"انتخاب نوع قفل"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"گزینه‌های قفل"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"الگویتان را وارد کنید"</string>
-    <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"تأیید"</string>
+    <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"تأیید کردن"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"کشیدن مجدد"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"ادامه"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"امتحان مجدد"</string>
@@ -759,7 +761,7 @@
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"رمزهای ورود مطابقت ندارند"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"پاک کردن"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"لغو"</string>
-    <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تأیید"</string>
+    <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تأیید کردن"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"باید حداقل ۴ نویسه داشته باشد"</string>
     <string name="locktype_unavailable" msgid="2678317466336249126">"این نوع قفل دردسترس نیست."</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"فقط می‌تواند اعداد ۰ تا ۹ داشته باشد."</string>
@@ -795,7 +797,7 @@
     <string name="connect" msgid="5861699594602380150">"اتصال"</string>
     <string name="disconnect" msgid="6140789953324820336">"قطع اتصال"</string>
     <string name="delete_button" msgid="5840500432614610850">"حذف"</string>
-    <string name="remove_button" msgid="6664656962868194178">"حذف"</string>
+    <string name="remove_button" msgid="6664656962868194178">"برداشتن"</string>
     <string name="cancel" msgid="750286395700355455">"لغو"</string>
     <string name="allow" msgid="7519431342750394402">"اجازه دادن"</string>
     <string name="do_not_allow" msgid="3157082400084747525">"اجازه ندادن"</string>
@@ -806,7 +808,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"خروج از حالت نمایشی"</string>
     <string name="exit_retail_mode_dialog_body" msgid="6513854703627380365">"با این کار حساب نمایشی حذف و سیستم به داده‌های کارخانه بازنشانی می‌شود. همه داده‌های نمایه از بین می‌روند."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"خروج از حالت نمایشی"</string>
-    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"رد کردن"</string>
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"بستن"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"این ویژگی هنگام رانندگی در دسترس نیست"</string>
     <string name="restricted_for_passenger" msgid="7240117443887727753">"از راننده بخواهید تنظیم را تغییر دهد"</string>
     <string name="restricted_for_driver" msgid="3364388937671526800">"نمی‌توانید این کنش را انجام دهید"</string>
@@ -970,4 +972,11 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"دیدن طرح‌ها"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"تمام"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"خودرو شما از این ویژگی پشتیبانی نمی‌کند"</string>
+    <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"تنظیمات نسبت ابعادی"</string>
+    <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"وقتی نسبت ابعادی را تغییر می‌دهید، برنامه بازراه‌اندازی خواهد شد. ممکن است تغییرات ذخیره‌نشده را ازدست بدهید. ممکن است برخی‌از برنامه‌ها برای نسبت‌های ابعادی مشخصی بهینه‌سازی نشده باشند."</string>
+    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"بستن"</string>
+    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"اعمال"</string>
+    <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"پیش‌فرض برنامه"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"تمام‌صفحه"</string>
+    <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"نیم‌صفحه"</string>
 </resources>
