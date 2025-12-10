@@ -483,10 +483,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="drawable" name="wifi_signal"/>
       <item type="id" name="action_text"/>
       <item type="id" name="alphanumeric_pin"/>
-      <item type="id" name="aspect_ratio_dialog"/>
-      <item type="id" name="aspect_ratio_dialog_message"/>
-      <item type="id" name="aspect_ratio_dialog_title"/>
-      <item type="id" name="aspect_ratio_radio_group"/>
       <item type="id" name="audio_sharing_qr_code"/>
       <item type="id" name="bottomDivider"/>
       <item type="id" name="button1"/>
@@ -522,6 +518,10 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="id" name="cycle_reset_day_of_month"/>
       <item type="id" name="data_usage_edit_text"/>
       <item type="id" name="date_picker"/>
+      <item type="id" name="dialog_message"/>
+      <item type="id" name="dialog_radio_group"/>
+      <item type="id" name="dialog_title"/>
+      <item type="id" name="dialog_view"/>
       <item type="id" name="dismiss_button"/>
       <item type="id" name="down_arrow_container"/>
       <item type="id" name="entity_header"/>
@@ -635,8 +635,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="integer" name="recent_notifications_days_threshold"/>
       <item type="integer" name="user_switcher_num_col"/>
       <item type="layout" name="action_buttons_preference"/>
-      <item type="layout" name="aspect_ratio_dialog"/>
-      <item type="layout" name="aspect_ratio_dialog_activity"/>
+      <item type="layout" name="aspect_ratio_dialog_radio_buttons"/>
       <item type="layout" name="audio_route_preference_group"/>
       <item type="layout" name="audio_sharing_device_selector_preference_group"/>
       <item type="layout" name="audio_stream_qr_preference"/>
@@ -655,6 +654,7 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="layout" name="data_usage_summary_preference"/>
       <item type="layout" name="date_picker"/>
       <item type="layout" name="delete_preference_widget"/>
+      <item type="layout" name="display_density_dialog_radio_buttons"/>
       <item type="layout" name="divider_preference"/>
       <item type="layout" name="dropdown_preference_widget"/>
       <item type="layout" name="edit_profile_name_fragment"/>
@@ -683,6 +683,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="layout" name="time_picker"/>
       <item type="layout" name="top_level_preference"/>
       <item type="layout" name="top_level_recyclerview"/>
+      <item type="layout" name="two_column_radio_dialog"/>
+      <item type="layout" name="two_column_radio_dialog_activity"/>
       <item type="layout" name="usage_bytes_threshold_picker"/>
       <item type="layout" name="usage_cycle_reset_day_of_month_picker"/>
       <item type="layout" name="usage_indicator_preference"/>
@@ -782,13 +784,12 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="apps_view_all_apps_title"/>
       <item type="string" name="aspect_ratio_action_button"/>
       <item type="string" name="aspect_ratio_dialog_app_default_text"/>
-      <item type="string" name="aspect_ratio_dialog_apply_button_text"/>
-      <item type="string" name="aspect_ratio_dialog_close_button_text"/>
       <item type="string" name="aspect_ratio_dialog_full_screen_text"/>
       <item type="string" name="aspect_ratio_dialog_half_screen_text"/>
       <item type="string" name="aspect_ratio_dialog_message"/>
       <item type="string" name="aspect_ratio_dialog_title"/>
       <item type="string" name="aspect_ratio_label"/>
+      <item type="string" name="aspect_ratio_set_error"/>
       <item type="string" name="assist_access_context_summary"/>
       <item type="string" name="assist_access_context_title"/>
       <item type="string" name="assist_access_screenshot_summary"/>
@@ -1040,6 +1041,8 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="device_status"/>
       <item type="string" name="device_status_activity_title"/>
       <item type="string" name="device_status_summary"/>
+      <item type="string" name="dialog_apply_button_text"/>
+      <item type="string" name="dialog_close_button_text"/>
       <item type="string" name="direct_boot_unaware_dialog_message_car"/>
       <item type="string" name="disable_text"/>
       <item type="string" name="disabled_by_policy_title"/>
@@ -1052,6 +1055,13 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="disabled_by_policy_title_suspend_packages"/>
       <item type="string" name="disconnect"/>
       <item type="string" name="display_brightness"/>
+      <item type="string" name="display_density_dialog_default_text"/>
+      <item type="string" name="display_density_dialog_large_text"/>
+      <item type="string" name="display_density_dialog_larger_text"/>
+      <item type="string" name="display_density_dialog_message"/>
+      <item type="string" name="display_density_dialog_smaller_text"/>
+      <item type="string" name="display_density_dialog_title"/>
+      <item type="string" name="display_density_set_error"/>
       <item type="string" name="display_night_mode_summary"/>
       <item type="string" name="display_settings"/>
       <item type="string" name="do_not_allow"/>
@@ -1758,18 +1768,6 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="string" name="zone_list_menu_sort_by_timezone"/>
       <item type="style" name="ActionDialogTheme"/>
       <item type="style" name="AlertDialogTheme"/>
-      <item type="style" name="AspectRatioDialogActivityContainer"/>
-      <item type="style" name="AspectRatioDialogActivityTheme"/>
-      <item type="style" name="AspectRatioDialogApplyButton"/>
-      <item type="style" name="AspectRatioDialogButton"/>
-      <item type="style" name="AspectRatioDialogCloseButton"/>
-      <item type="style" name="AspectRatioDialogContainer"/>
-      <item type="style" name="AspectRatioDialogMessageAndActionContainer"/>
-      <item type="style" name="AspectRatioDialogMessageTextView"/>
-      <item type="style" name="AspectRatioDialogOptionsContainer"/>
-      <item type="style" name="AspectRatioDialogOptionsRadioButton"/>
-      <item type="style" name="AspectRatioDialogOptionsRadioGroup"/>
-      <item type="style" name="AspectRatioDialogTitle"/>
       <item type="style" name="CarSettingTheme"/>
       <item type="style" name="CarSettingsActivityDividerStyle"/>
       <item type="style" name="CarSettingsFragmentContainerStyle"/>
@@ -1780,13 +1778,25 @@ REGENERATE USING packages/apps/Car/libs/tools/rro/generate-overlayable.py
       <item type="style" name="ColoredTwoActionSwitchPreferenceStyle"/>
       <item type="style" name="DataUsageSummaryCarrierInfoTextAppearance"/>
       <item type="style" name="DataUsageSummaryCarrierInfoWarningTextAppearance"/>
+      <item type="style" name="DialogActivityContainer"/>
+      <item type="style" name="DialogActivityTheme"/>
+      <item type="style" name="DialogApplyButton"/>
+      <item type="style" name="DialogButton"/>
+      <item type="style" name="DialogCloseButton"/>
+      <item type="style" name="DialogContainer"/>
+      <item type="style" name="DialogMessageAndActionContainer"/>
+      <item type="style" name="DialogMessageTextView"/>
+      <item type="style" name="DialogOptionsContainer"/>
+      <item type="style" name="DialogOptionsRadioButton"/>
+      <item type="style" name="DialogOptionsRadioGroup"/>
+      <item type="style" name="DialogTitle"/>
       <item type="style" name="FallbackHome"/>
       <item type="style" name="FallbackHome.SetupWizard"/>
       <item type="style" name="LockPattern"/>
       <item type="style" name="NumberPickerStyle"/>
       <item type="style" name="PinPadKey"/>
-      <item type="style" name="PreferenceButtonIconAppearance"/>
       <item type="style" name="PreferenceButtonAppearance"/>
+      <item type="style" name="PreferenceButtonIconAppearance"/>
       <item type="style" name="UserDisclaimerActionButtonTextStyle"/>
       <item type="style" name="UserDisclaimerButtonStyle"/>
       <item type="xml" name="about_settings_fragment"/>

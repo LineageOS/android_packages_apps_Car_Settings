@@ -16,9 +16,11 @@
 
 package com.android.car.settings.displaycompat;
 
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.junit.Assert.assertThrows;
+import static org.mockito.ArgumentMatchers.anyFloat;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
@@ -30,10 +32,10 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.app.IActivityManager;
+import android.car.content.pm.CarPackageManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.IPackageManager;
 import android.content.pm.PackageManager;
 import android.os.RemoteException;
 import android.os.UserHandle;
@@ -54,26 +56,27 @@ import org.mockito.MockitoSession;
 import org.mockito.quality.Strictness;
 
 @RunWith(AndroidJUnit4.class)
-public class CarAspectRatioDialogHelperTest {
+public class CarDisplayDensityDialogHelperTest {
     private static final String TEST_PACKAGE_NAME = "com.test.package";
     private static final int TEST_USER_ID = 99;
-    private static final int RADIO_BUTTON_FULLSCREEN_ID = 4;
+    private static final int TEST_DISPLAY_ID = 20;
+    private static final int SELECTED_RADIO_BUTTON_ID = 4;
     @Rule
     public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
     @Mock
     private Context mContext;
     @Mock
-    private IPackageManager mPackageManager;
-    @Mock
     private IActivityManager mActivityManager;
+    @Mock
+    private CarPackageManager mCarPackageManager;
     @Mock
     private RadioGroup mRadioGroup;
     @Mock
-    private RadioButton mFullScreenRadioButton;
+    private RadioButton mSelectedRadioButton;
     @Mock
     private Runnable mDismissRunnable;
 
-    private CarAspectRatioDialogHelper mHelper;
+    private CarDisplayDensityDialogHelper mHelper;
     private MockitoSession mSession;
 
     @Before
@@ -85,8 +88,8 @@ public class CarAspectRatioDialogHelperTest {
                 .startMocking();
         ComponentName testComponentName = new ComponentName(TEST_PACKAGE_NAME, "TestClass");
 
-        mHelper = new CarAspectRatioDialogHelper(mContext, mPackageManager, mActivityManager,
-                mDismissRunnable, testComponentName, TEST_USER_ID);
+        mHelper = new CarDisplayDensityDialogHelper(mContext, mActivityManager, mCarPackageManager,
+                mDismissRunnable, testComponentName, TEST_USER_ID, TEST_DISPLAY_ID);
     }
 
     @After
@@ -97,15 +100,16 @@ public class CarAspectRatioDialogHelperTest {
     }
 
     @Test
-    public void submitResult_validArgs_setsAspectRatioAndRestartsApp() throws RemoteException {
+    public void submitResult_validArgs_setsDisplayDensityAndRestartsApp()
+            throws RemoteException, PackageManager.NameNotFoundException {
         ArgumentCaptor<UserHandle> userHandleCaptor =
                 ArgumentCaptor.forClass(UserHandle.class);
+        float selectedDisplayDensity = 0.9f;
 
-        mHelper.submitResult(mRadioGroup,
-                String.valueOf(PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN));
+        mHelper.submitResult(mRadioGroup, String.valueOf(selectedDisplayDensity));
 
-        verify(mPackageManager).setUserMinAspectRatio(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID),
-                eq(PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN));
+        verify(mCarPackageManager).setDensityScaleFactor(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID),
+                eq(TEST_DISPLAY_ID), eq(selectedDisplayDensity));
         verify(mActivityManager).stopAppForUser(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID));
         verify(mContext).startActivityAsUser(nullable(Intent.class), userHandleCaptor.capture());
         assertThat(userHandleCaptor.getValue().getIdentifier()).isEqualTo(TEST_USER_ID);
@@ -113,28 +117,21 @@ public class CarAspectRatioDialogHelperTest {
     }
 
     @Test
-    public void submitResult_invalidSelectedTagValueArg_throwsIllegalStateException() {
-        int incorrectMinAspectRatioValue = 999;
+    public void submitResult_nonFloatSelectedTagValueArg_throwsIllegalStateException() {
+        String nonFloatStringValue = "NON_FLOAT_STRING";
 
         assertThrows(IllegalStateException.class, () -> {
-            mHelper.submitResult(mRadioGroup, String.valueOf(incorrectMinAspectRatioValue));
+            mHelper.submitResult(mRadioGroup, nonFloatStringValue);
         });
     }
 
     @Test
-    public void submitResult_nonIntegerSelectedTagValueArg_throwsIllegalStateException() {
-        String nonIntegerStringValue = "NON_INTEGER_STRING";
-
-        assertThrows(IllegalStateException.class, () -> {
-            mHelper.submitResult(mRadioGroup, nonIntegerStringValue);
-        });
-    }
-
-    @Test
-    public void submitResult_nullSelectedTagValueArg_doesNothing() throws RemoteException {
+    public void submitResult_nullSelectedTagValueArg_doesNothing()
+            throws RemoteException, PackageManager.NameNotFoundException {
         mHelper.submitResult(mRadioGroup, /* selectedTagValue= */ null);
 
-        verify(mPackageManager, never()).setUserMinAspectRatio(anyString(), anyInt(), anyInt());
+        verify(mCarPackageManager, never()).setDensityScaleFactor(anyString(), anyInt(), anyInt(),
+                anyFloat());
         verify(mActivityManager, never()).stopAppForUser(anyString(), anyInt());
         verify(mContext, never()).startActivityAsUser(nullable(Intent.class),
                 nullable(UserHandle.class));
@@ -143,17 +140,17 @@ public class CarAspectRatioDialogHelperTest {
 
     @Test
     public void setDefaultSelection_updateRadioGroup_selectsCorrectRadioButton()
-            throws RemoteException {
-        when(mPackageManager.getUserMinAspectRatio(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID)))
-                .thenReturn(PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN);
+            throws PackageManager.NameNotFoundException {
+        float pkgDisplayDensity = 0.9f;
+        when(mCarPackageManager.getDensityScaleFactor(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID),
+                eq(TEST_DISPLAY_ID))).thenReturn(pkgDisplayDensity);
         when(mRadioGroup.getChildCount()).thenReturn(1);
-        when(mRadioGroup.getChildAt(0)).thenReturn(mFullScreenRadioButton);
-        when(mFullScreenRadioButton.getTag()).thenReturn(
-                String.valueOf(PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN));
-        when(mFullScreenRadioButton.getId()).thenReturn(RADIO_BUTTON_FULLSCREEN_ID);
+        when(mRadioGroup.getChildAt(0)).thenReturn(mSelectedRadioButton);
+        when(mSelectedRadioButton.getTag()).thenReturn(String.valueOf(pkgDisplayDensity));
+        when(mSelectedRadioButton.getId()).thenReturn(SELECTED_RADIO_BUTTON_ID);
 
         mHelper.setDefaultSelection(mRadioGroup);
 
-        verify(mRadioGroup).check(RADIO_BUTTON_FULLSCREEN_ID);
+        verify(mRadioGroup).check(SELECTED_RADIO_BUTTON_ID);
     }
 }

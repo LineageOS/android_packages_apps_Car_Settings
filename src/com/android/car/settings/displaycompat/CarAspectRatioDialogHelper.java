@@ -25,8 +25,6 @@ import static android.content.pm.PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN
 import static android.content.pm.PackageManager.USER_MIN_ASPECT_RATIO_SPLIT_SCREEN;
 import static android.content.pm.PackageManager.USER_MIN_ASPECT_RATIO_UNSET;
 
-import static com.android.systemui.car.Flags.displayCompatibilityV2;
-
 import android.app.ActivityManager;
 import android.app.AppGlobals;
 import android.app.IActivityManager;
@@ -38,11 +36,12 @@ import android.os.RemoteException;
 import android.os.UserHandle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
 import androidx.annotation.VisibleForTesting;
 
@@ -51,102 +50,107 @@ import com.android.car.settings.R;
 /**
  * Helper to help setup the dialog for setting the Aspect Ratio.
  */
-public class CarAspectRatioDialogHelper {
-    private static final String TAG = "CarAspectRatioADH";
+public class CarAspectRatioDialogHelper extends TwoColumnRadioDialogHelper {
+    private static final String TAG = "CarAspectRatioDH";
     private final Context mContext;
     private final IPackageManager mIPackageManager;
     private final IActivityManager mIActivityManager;
+    private final Runnable mDismissDialogRunnable;
+    private final ComponentName mTargetComponentName;
+    private final int mTargetUserId;
 
-    public CarAspectRatioDialogHelper(Context context) {
-        this(context, AppGlobals.getPackageManager(), ActivityManager.getService());
+    /**
+     * @param dismissDialogRunnable {@link Runnable} which will be called when the dialog need to be
+     *                              dismissed.
+     */
+    public CarAspectRatioDialogHelper(@NonNull Context context,
+            @NonNull Runnable dismissDialogRunnable, @NonNull ComponentName componentName,
+            int userId) {
+        this(context, AppGlobals.getPackageManager(), ActivityManager.getService(),
+                dismissDialogRunnable, componentName, userId);
     }
 
     @VisibleForTesting
-    CarAspectRatioDialogHelper(Context context, IPackageManager packageManager,
-            IActivityManager activityManager) {
+    public CarAspectRatioDialogHelper(@NonNull Context context,
+            @NonNull IPackageManager iPackageManager, @NonNull IActivityManager iActivityManager,
+            @NonNull Runnable dismissDialogRunnable, @NonNull ComponentName componentName,
+            int userId) {
+        super(dismissDialogRunnable);
         mContext = context;
-        mIPackageManager = packageManager;
-        mIActivityManager = activityManager;
+        mIPackageManager = iPackageManager;
+        mIActivityManager = iActivityManager;
+        mDismissDialogRunnable = dismissDialogRunnable;
+        mTargetComponentName = componentName;
+        mTargetUserId = userId;
     }
 
-    /**
-     * Setup the {@code dialogView} to let the user choose and set the aspect ratio for the given
-     * {@code componentName}.
-     *
-     * @param dismissDialog {@link Runnable} which will be called when the dialog need to be
-     *                      dismissed.
-     */
+
+    @Override
+    protected void setTitle(@NonNull TextView titleView) {
+        titleView.setText(R.string.aspect_ratio_dialog_title);
+    }
+
+    @Override
+    protected void setDescriptionMessage(@NonNull TextView descriptionMessageTextView) {
+        descriptionMessageTextView.setText(R.string.aspect_ratio_dialog_message);
+    }
+
+    @Override
+    protected void setupRadioButtons(@NonNull RadioGroup radioGroup) {
+        View.inflate(radioGroup.getContext(),
+                R.layout.aspect_ratio_dialog_radio_buttons, radioGroup);
+    }
+
+    @Override
+    protected void setDefaultSelection(@NonNull RadioGroup radioGroup) {
+        updateRadioGroupBasedOnCurrentAspectRatio(radioGroup);
+    }
+
     @RequiresPermission(android.Manifest.permission.INTERACT_ACROSS_USERS)
-    public void setupAspectRatioDialog(
-            @NonNull View dialogView, @NonNull ComponentName componentName, int userId,
-            Runnable dismissDialog) {
-        if (!displayCompatibilityV2()) {
+    @Override
+    protected void submitResult(@NonNull RadioGroup radioGroup, @Nullable String selectedTagValue) {
+        if (selectedTagValue == null) {
+            Log.d(TAG, "No aspect ratio value selected");
             return;
         }
-        if (mIPackageManager == null) {
-            Log.e(TAG, "CarPackageManager is null, the dialog cannot be created");
-            return;
-        }
-
-        Button buttonClose = dialogView.findViewById(R.id.button_close);
-        Button buttonApply = dialogView.findViewById(R.id.button_apply);
-        RadioGroup radioGroupAspectRatio = dialogView.findViewById(R.id.aspect_ratio_radio_group);
-
-        if (radioGroupAspectRatio == null || buttonApply == null) {
+        int selectedAspectRatioValue;
+        try {
+            selectedAspectRatioValue = Integer.parseInt(selectedTagValue);
+        } catch (NumberFormatException e) {
             throw new IllegalStateException(
-                    "Aspect Ratio Dialog requires RadioGroup and accept Button to be present.");
+                    "Incorrect Aspect Ratio value supplied: " + selectedTagValue, e);
+        }
+        if (!isValidAspectRatio(selectedAspectRatioValue)) {
+            throw new IllegalStateException(
+                    "Incorrect Aspect Ratio value supplied: " + selectedTagValue);
         }
 
-        // only make the apply button available once a selection has been made
-        buttonApply.setEnabled(radioGroupAspectRatio.getCheckedRadioButtonId() != -1);
-        radioGroupAspectRatio.setOnCheckedChangeListener(
-                (radioGroup, checkedId) -> buttonApply.setEnabled(checkedId != -1));
-        updateRadioGroupBasedOnCurrentAspectRatio(componentName, userId, radioGroupAspectRatio);
+        try {
+            Log.d(TAG, "Setting the UserMinAspectRatio for cmp: " + mTargetComponentName
+                    + ",  userId: " + mTargetUserId + " with the value: "
+                    + selectedAspectRatioValue);
+            mIPackageManager.setUserMinAspectRatio(mTargetComponentName.getPackageName(),
+                    mTargetUserId,
+                    selectedAspectRatioValue);
 
-        if (buttonClose != null) {
-            buttonClose.setOnClickListener(view -> dismissDialog.run());
+            mDismissDialogRunnable.run();
+
+            // app should be restarted after setting the aspect ratio
+            mIActivityManager.stopAppForUser(mTargetComponentName.getPackageName(), mTargetUserId);
+
+            Intent intent = new Intent(Intent.ACTION_MAIN);
+            intent.addCategory(Intent.CATEGORY_LAUNCHER);
+            intent.setComponent(mTargetComponentName);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            mContext.startActivityAsUser(intent, UserHandle.of(mTargetUserId));
+
+        } catch (RemoteException e) {
+            Log.e(TAG, "Exception when showing the dialog for cmp: " + mTargetComponentName, e);
+            Toast.makeText(mContext, R.string.aspect_ratio_set_error, Toast.LENGTH_LONG).show();
+        } finally {
+            // make sure the dialog is always closed
+            mDismissDialogRunnable.run();
         }
-        buttonApply.setOnClickListener(view -> {
-            int selectedRadioButtonId = radioGroupAspectRatio.getCheckedRadioButtonId();
-            int selectedAspectRatioValue = Integer.MIN_VALUE;
-            RadioButton selectedRadioButton = dialogView.findViewById(selectedRadioButtonId);
-            if (selectedRadioButton != null && selectedRadioButton.getTag() != null) {
-                selectedAspectRatioValue = Integer.parseInt(
-                        selectedRadioButton.getTag().toString());
-            }
-            if (selectedAspectRatioValue == Integer.MIN_VALUE) {
-                Log.d(TAG, "No aspect ratio value selected");
-                return;
-            }
-            if (!isValidAspectRatio(selectedAspectRatioValue)) {
-                throw new IllegalStateException("Incorrect Aspect Ratio value supplied.");
-            }
-
-            try {
-                Log.d(TAG, "Setting the UserMinAspectRatio for cmp: " + componentName
-                        + ",  userId: " + userId + " with the value: "
-                        + selectedAspectRatioValue);
-                mIPackageManager.setUserMinAspectRatio(componentName.getPackageName(), userId,
-                        selectedAspectRatioValue);
-
-                dismissDialog.run();
-
-                // app should be restarted after setting the aspect ratio
-                mIActivityManager.stopAppForUser(componentName.getPackageName(), userId);
-
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_LAUNCHER);
-                intent.setComponent(componentName);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                mContext.startActivityAsUser(intent, UserHandle.of(userId));
-
-            } catch (RemoteException e) {
-                Log.e(TAG, "Exception when showing the dialog for cmp: " + componentName, e);
-            } finally {
-                // make sure the dialog is always closed
-                dismissDialog.run();
-            }
-        });
     }
 
     private boolean isValidAspectRatio(int aspectRatio) {
@@ -161,10 +165,10 @@ public class CarAspectRatioDialogHelper {
     }
 
     private void updateRadioGroupBasedOnCurrentAspectRatio(
-            @NonNull ComponentName componentName, int userId, @NonNull RadioGroup radioGroup) {
+            @NonNull RadioGroup radioGroup) {
         try {
             int currentAspectRatioSelection = mIPackageManager.getUserMinAspectRatio(
-                    componentName.getPackageName(), userId);
+                    mTargetComponentName.getPackageName(), mTargetUserId);
             for (int i = 0; i < radioGroup.getChildCount(); i++) {
                 View child = radioGroup.getChildAt(i);
                 if (child == null) {
@@ -180,7 +184,9 @@ public class CarAspectRatioDialogHelper {
                 }
             }
         } catch (RemoteException e) {
-            Log.e(TAG, "Cannot get min aspect ratio for pkg: " + componentName.getPackageName(), e);
+            Log.e(TAG,
+                    "Cannot get min aspect ratio for pkg: " + mTargetComponentName.getPackageName(),
+                    e);
         }
     }
 }

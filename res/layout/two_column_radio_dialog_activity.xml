@@ -19,15 +19,15 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        style="@style/AspectRatioDialogActivityContainer"
+        style="@style/DialogActivityContainer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <include
-            android:id="@+id/aspect_ratio_dialog"
-            layout="@layout/aspect_ratio_dialog"
+            android:id="@+id/dialog_view"
+            layout="@layout/two_column_radio_dialog"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
