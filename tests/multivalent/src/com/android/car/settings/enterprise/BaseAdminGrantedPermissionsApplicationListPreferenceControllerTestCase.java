@@ -28,8 +28,11 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.spy;
 
+import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
+import android.os.UserManager;
 import android.util.ArrayMap;
 import android.util.Log;
 
@@ -61,6 +64,7 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
     private C mSpiedController;
 
     protected final String[] mPermissions;
+    protected UserManager mUserManager;
 
     private DummyPreferenceGroup mPreferenceGroup;
 
@@ -72,7 +76,15 @@ abstract class BaseAdminGrantedPermissionsApplicationListPreferenceControllerTes
     @UiThreadTest // Needed to instantiate DummyPreferenceGroup
     public void setExtraFixtures() {
         mSpiedController = spy(newController(mApplicationFeatureProvider));
-        mPreferenceGroup = new DummyPreferenceGroup(mSpiedContext);
+        mPreferenceGroup = new DummyPreferenceGroup(new ContextWrapper(mSpiedContext) {
+            @Override
+            public Object getSystemService(String name) {
+                if (Context.USER_SERVICE.equals(name)) {
+                    return mUserManager;
+                }
+                return super.getSystemService(name);
+            }
+        });
     }
 
     protected abstract C newController(ApplicationFeatureProvider provider);
