@@ -61,7 +61,6 @@ public class WifiRow extends SettingsQCItem {
         boolean wifiEnabled = wifiState == WifiManager.WIFI_STATE_ENABLED
                 || wifiState == WifiManager.WIFI_STATE_ENABLING;
 
-        // TODO(b/304694358): Use api that detects connected secondary networks
         Icon icon = Icon.createWithResource(getContext(), WifiQCUtils.getIcon(mWifiManager));
 
         String userRestriction = UserManager.DISALLOW_CONFIG_WIFI;
