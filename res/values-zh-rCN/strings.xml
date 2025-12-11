@@ -908,7 +908,7 @@
     <string name="enterprise_privacy_input_method" msgid="5062395693747004531">"默认键盘"</string>
     <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"已设为<xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"已设置全局 HTTP 代理"</string>
-    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"您个人资料中的可信凭据"</string>
+    <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"您个人资料中的可信凭证"</string>
     <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"管理员可以锁定信息娱乐系统并重置密码"</li>\n" "<li>"管理员可以删除信息娱乐系统中的数据"</li></string>
     <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"输入错误密码的尝试次数上限（如果超过此上限，系统将删除信息娱乐系统中的所有数据）"</string>
     <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"输入错误密码的尝试次数上限（如果超过此上限，系统将删除个人资料数据）"</string>
@@ -983,11 +983,29 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"查看套餐"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"完成"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"您的车辆不支持此功能"</string>
+    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
+    <skip />
+    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
+    <skip />
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"宽高比设置"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"更改宽高比后，应用将重启。未保存的更改可能会丢失。某些应用可能无法针对特定宽高比进行优化。"</string>
-    <string name="aspect_ratio_dialog_close_button_text" msgid="106373988244349134">"关闭"</string>
-    <string name="aspect_ratio_dialog_apply_button_text" msgid="6640581762487796778">"应用"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"应用默认设置"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"全屏"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"半屏"</string>
+    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
+    <skip />
+    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
+    <skip />
+    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
+    <skip />
+    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
+    <skip />
+    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
+    <skip />
+    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
+    <skip />
+    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
+    <skip />
+    <!-- no translation found for display_density_set_error (1044767285363807884) -->
+    <skip />
 </resources>
