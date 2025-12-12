@@ -2378,11 +2378,21 @@
     TODO(b/371591484): to update this string when UX finalizes it.-->
     <string name="unsupported_intents_toast_text">Your vehicle does not support this feature</string>
 
+    <string name="dialog_close_button_text">Close</string>
+    <string name="dialog_apply_button_text">Apply</string>
+
     <string name="aspect_ratio_dialog_title">Aspect Ratio Settings</string>
     <string name="aspect_ratio_dialog_message">The app will restart when you change the aspect ratio. You may lose unsaved changes. Some apps may not be optimized for certain aspect ratios.</string>
-    <string name="aspect_ratio_dialog_close_button_text">Close</string>
-    <string name="aspect_ratio_dialog_apply_button_text">Apply</string>
     <string name="aspect_ratio_dialog_app_default_text">App default</string>
     <string name="aspect_ratio_dialog_full_screen_text">Full screen</string>
     <string name="aspect_ratio_dialog_half_screen_text">Half screen</string>
+    <string name="aspect_ratio_set_error">Failed to update the aspect ratio settings.</string>
+
+    <string name="display_density_dialog_title">Display size and text</string>
+    <string name="display_density_dialog_message">Make everything onscreen look bigger or smaller. The app will restart when you change the aspect ratio. You may lose unsaved changes. Some apps may not be optimized for certain size.</string>
+    <string name="display_density_dialog_smaller_text">0.85x</string>
+    <string name="display_density_dialog_default_text">1x (default)</string>
+    <string name="display_density_dialog_large_text">1.25x</string>
+    <string name="display_density_dialog_larger_text">1.5x</string>
+    <string name="display_density_set_error">Failed to update the display size and text.</string>
 </resources>

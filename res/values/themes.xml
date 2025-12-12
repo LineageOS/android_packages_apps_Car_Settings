@@ -93,7 +93,7 @@
         <item name="android:navigationBarColor">#00000000</item>
     </style>
 
-    <style name="AspectRatioDialogActivityTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+    <style name="DialogActivityTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowNoTitle">true</item>

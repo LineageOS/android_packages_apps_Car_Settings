@@ -111,7 +111,7 @@
         <item name="normalTextColor">@color/car_ui_text_color_primary</item>
     </style>
 
-    <style name="AspectRatioDialogActivityContainer">
+    <style name="DialogActivityContainer">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">@dimen/aspect_ratio_dialog_width</item>
         <item name="android:background">@drawable/aspect_ratio_dialog_container_background</item>
@@ -120,14 +120,14 @@
         <item name="android:padding">24dp</item>
     </style>
 
-    <style name="AspectRatioDialogContainer">
+    <style name="DialogContainer">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
-    <style name="AspectRatioDialogMessageAndActionContainer">
+    <style name="DialogMessageAndActionContainer">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:orientation">vertical</item>
@@ -136,7 +136,7 @@
         <item name="android:padding">24dp</item>
     </style>
 
-    <style name="AspectRatioDialogTitle">
+    <style name="DialogTitle">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:orientation">vertical</item>
@@ -146,29 +146,29 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="AspectRatioDialogMessageTextView">
+    <style name="DialogMessageTextView">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_marginBottom">32dp</item>
         <item name="android:textAppearance">?oemTextAppearanceBodySmall</item>
     </style>
 
-    <style name="AspectRatioDialogButton">
+    <style name="DialogButton">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:textAppearance">?oemTextAppearanceBodyMedium</item>
     </style>
 
-    <style name="AspectRatioDialogCloseButton" parent="AspectRatioDialogButton">
+    <style name="DialogCloseButton" parent="DialogButton">
         <item name="android:layout_marginBottom">16dp</item>
     </style>
 
-    <style name="AspectRatioDialogApplyButton" parent="AspectRatioDialogButton">
+    <style name="DialogApplyButton" parent="DialogButton">
         <item name="android:backgroundTint">?oemColorPrimary</item>
         <item name="android:textColor">?oemColorOnPrimary</item>
     </style>
 
-    <style name="AspectRatioDialogOptionsContainer">
+    <style name="DialogOptionsContainer">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">0.4</item>
@@ -176,13 +176,13 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="AspectRatioDialogOptionsRadioGroup">
+    <style name="DialogOptionsRadioGroup">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:orientation">vertical</item>
     </style>
 
-    <style name="AspectRatioDialogOptionsRadioButton">
+    <style name="DialogOptionsRadioButton">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textAppearance">?oemTextAppearanceBodyMedium</item>

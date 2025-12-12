@@ -16,11 +16,15 @@
 
 package com.android.car.settings.displaycompat;
 
+import static android.view.Display.DEFAULT_DISPLAY;
+
 import static com.android.car.oem.tokens.Token.applyOemTokenStyle;
 import static com.android.systemui.car.Flags.displayCompatibilityV2;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.car.Car;
+import android.car.content.pm.CarPackageManager;
 import android.content.ComponentName;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,16 +35,21 @@ import androidx.annotation.Nullable;
 import com.android.car.settings.R;
 
 /**
- * Activity to show a dialog for setting the Aspect Ratio.
+ * Activity to show a dialog for setting the Display Density.
  */
-public class CarAspectRatioDialogActivity extends Activity {
-    private static final String TAG = "CarAspectRatioADA";
+public class CarDisplayDensityDialogActivity extends Activity {
+    private static final String TAG = "CarDisplayDensityDA";
     private static final String ACTION_SHOW_DIALOG =
-            "com.android.car.settings.aspectRatio.action.SHOW_DIALOG";
+            "com.android.car.settings.displayDensity.action.SHOW_DIALOG";
     private static final String EXTRA_KEY_COMPONENT_NAME =
-            "com.android.car.settings.aspectRatio.extra.COMPONENT_NAME";
+            "com.android.car.settings.displayDensity.extra.COMPONENT_NAME";
     private static final String EXTRA_KEY_USER_ID =
-            "com.android.car.settings.aspectRatio.extra.USER_ID";
+            "com.android.car.settings.displayDensity.extra.USER_ID";
+    private static final String EXTRA_KEY_DISPLAY_ID =
+            "com.android.car.settings.displayDensity.extra.DISPLAY_ID";
+
+    private Car mCar;
+    private CarPackageManager mCarPackageManager;
 
     @SuppressLint("MissingPermission")
     @Override
@@ -64,19 +73,43 @@ public class CarAspectRatioDialogActivity extends Activity {
             return;
         }
         int userId = getIntent().getIntExtra(EXTRA_KEY_USER_ID, this.getUserId());
+        int displayId = getIntent().getIntExtra(EXTRA_KEY_DISPLAY_ID, DEFAULT_DISPLAY);
+
+        if (mCarPackageManager == null) {
+            if (mCar == null) {
+                mCar = Car.createCar(this);
+            }
+            if (mCar == null) {
+                Log.e(TAG, "Could not get a car instance");
+                finish();
+                return;
+            }
+            mCarPackageManager = mCar.getCarManager(CarPackageManager.class);
+        }
 
         applyOemTokenStyle(this);
 
         setContentView(R.layout.two_column_radio_dialog_activity);
-        CarAspectRatioDialogHelper dialogHelper = new CarAspectRatioDialogHelper(this,
-                /* dismissDialogRunnable= */ () -> finish(), componentName, userId);
+        CarDisplayDensityDialogHelper dialogHelper = new CarDisplayDensityDialogHelper(this,
+                mCarPackageManager, /* dismissDialogRunnable= */ () -> finish(), componentName,
+                userId, displayId);
 
         View dialogView = findViewById(R.id.dialog_view);
         if (dialogView == null) {
             throw new IllegalStateException(
-                    "Aspect Ratio Dialog requires the dialog container with id "
+                    "Display density dialog requires the dialog container with id "
                             + "\"dialog_view\".");
         }
         dialogHelper.setupDialog(dialogView);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mCar != null) {
+            mCar.disconnect();
+            mCar = null;
+        }
+        mCarPackageManager = null;
     }
 }

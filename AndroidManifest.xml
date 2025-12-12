@@ -81,6 +81,8 @@
     <uses-permission android:name="android.car.permission.CAR_IDENTIFICATION"/>
     <uses-permission android:name="android.car.permission.CONTROL_APP_BLOCKING"/>
     <uses-permission android:name="android.car.permission.READ_PERSIST_TETHERING_SETTINGS"/>
+    <uses-permission android:name="android.car.permission.MANAGE_DISPLAY_COMPATIBILITY" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
     <permission android:name="com.android.car.settings.SET_INITIAL_LOCK"
         android:protectionLevel="signature|setup"/>
@@ -1389,12 +1391,24 @@
         </receiver>
 
         <activity android:name=".displaycompat.CarAspectRatioDialogActivity"
-            android:theme="@style/AspectRatioDialogActivityTheme"
+            android:theme="@style/DialogActivityTheme"
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.car.settings.aspectRatio.action.SHOW_DIALOG" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".displaycompat.CarDisplayDensityDialogActivity"
+            android:theme="@style/DialogActivityTheme"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.car.settings.displayDensity.action.SHOW_DIALOG" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
