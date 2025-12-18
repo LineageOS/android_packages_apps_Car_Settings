@@ -363,7 +363,8 @@
     <string name="unused_apps" msgid="648471933781010395">"Додатки, що не використовуються"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# додаток, що не використовується}one{# додаток, що не використовується}few{# додатки, що не використовуються}many{# додатків, що не використовуються}other{# додатка, що не використовується}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Скасувати дозволи й звільняти місце"</string>
-    <string name="aspect_ratio_label" msgid="5484863076085548807">"Формат (експериментальна функція)"</string>
+    <!-- no translation found for aspect_ratio_label (1852048794381949724) -->
+    <skip />
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"Відкрити"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"Формат додатка за умовчанням"</string>
     <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"На весь екран"</string>
@@ -995,29 +996,19 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Переглянути плани"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Готово"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Ваш автомобіль не підтримує цю функцію"</string>
-    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
-    <skip />
-    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
-    <skip />
+    <string name="dialog_close_button_text" msgid="5969322308259876044">"Закрити"</string>
+    <string name="dialog_apply_button_text" msgid="1103069196934735553">"Застосувати"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Налаштування формату"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Якщо змінити формат, додаток перезапуститься. Ви можете втратити незбережені зміни. Деякі додатки неможливо оптимізувати під певні формати."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Формат додатка за умовчанням"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"На весь екран"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"На половину екрана"</string>
-    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
-    <skip />
-    <!-- no translation found for display_density_set_error (1044767285363807884) -->
-    <skip />
+    <string name="aspect_ratio_set_error" msgid="591159290370230132">"Не вдалось оновити налаштування формату."</string>
+    <string name="display_density_dialog_title" msgid="3782055592374414189">"Масштаб і текст"</string>
+    <string name="display_density_dialog_message" msgid="1114355604684446232">"Збільшуйте або зменшуйте масштаб об’єктів на екрані. Якщо змінити формат, додаток перезапуститься. Ви можете втратити незбережені зміни. Деякі додатки неможливо адаптувати під певний розмір."</string>
+    <string name="display_density_dialog_smaller_text" msgid="3700434974750324075">"0,85x"</string>
+    <string name="display_density_dialog_default_text" msgid="1694704017691017287">"1x (за умовчанням)"</string>
+    <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1,25x"</string>
+    <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1,5x"</string>
+    <string name="display_density_set_error" msgid="1044767285363807884">"Не вдалось оновити масштаб і текст."</string>
 </resources>

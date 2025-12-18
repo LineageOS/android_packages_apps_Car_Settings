@@ -363,7 +363,8 @@
     <string name="unused_apps" msgid="648471933781010395">"အသုံးမပြုသော အက်ပ်များ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{အသုံးမပြုသောအက်ပ် # ခု}other{အသုံးမပြုသောအက်ပ် # ခု}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ခွင့်ပြုချက်ဖယ်ရှားပြီး နေရာလွတ်လုပ်ရန်"</string>
-    <string name="aspect_ratio_label" msgid="5484863076085548807">"အချိုးအစား (စမ်းသပ်ဆဲ)"</string>
+    <!-- no translation found for aspect_ratio_label (1852048794381949724) -->
+    <skip />
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"ဖွင့်ရန်"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"အက်ပ် မူရင်း"</string>
     <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"ဖန်သားပြင်အပြည့်"</string>
@@ -984,29 +985,19 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"အစီအစဉ်များ ကြည့်ရန်"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"ပြီးပြီ"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ဤလုပ်ဆောင်ချက်ကို သင့်ယာဉ်တွင် မရနိုင်ပါ"</string>
-    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
-    <skip />
-    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
-    <skip />
+    <string name="dialog_close_button_text" msgid="5969322308259876044">"ပိတ်ရန်"</string>
+    <string name="dialog_apply_button_text" msgid="1103069196934735553">"သုံးရန်"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"အချိုးအစား ဆက်တင်များ"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"အချိုးအစား ပြောင်းလိုက်သောအခါ အက်ပ်ပြန်စပါမည်။ သိမ်းမထားသော အပြောင်းအလဲများ ဆုံးရှုံးနိုင်သည်။ အချို့အက်ပ်များသည် အချို့သောအချိုးအစားတွင် ကောင်းစွာအလုပ်မလုပ်ပါ။"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"အက်ပ် မူရင်း"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ဖန်သားပြင်အပြည့်"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"ဖန်သားပြင်တစ်ဝက်"</string>
-    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
-    <skip />
-    <!-- no translation found for display_density_set_error (1044767285363807884) -->
-    <skip />
+    <string name="aspect_ratio_set_error" msgid="591159290370230132">"အချိုးအစားဆက်တင်များကို အပ်ဒိတ်လုပ်၍မရလိုက်ပါ။"</string>
+    <string name="display_density_dialog_title" msgid="3782055592374414189">"ပြကွက်အရွယ်အစားနှင့် စာသား"</string>
+    <string name="display_density_dialog_message" msgid="1114355604684446232">"စခရင်ရှိ အရာအားလုံးကို ပိုကြီး (သို့) ပိုသေးအောင် လုပ်နိုင်သည်။ အချိုးအစား ပြောင်းလိုက်သောအခါ အက်ပ်ပြန်စပါမည်။ သိမ်းမထားသော အပြောင်းအလဲများ ဆုံးရှုံးနိုင်သည်။ အက်ပ်အချို့သည် အချို့သောအရွယ်အစားတွင် ကောင်းစွာအလုပ်မလုပ်ပါ။"</string>
+    <string name="display_density_dialog_smaller_text" msgid="3700434974750324075">"0.85 ဆ"</string>
+    <string name="display_density_dialog_default_text" msgid="1694704017691017287">"၁ ဆ (မူရင်း)"</string>
+    <string name="display_density_dialog_large_text" msgid="3321980326255623059">"၁.၂၅ ဆ"</string>
+    <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"၁.၅ ဆ"</string>
+    <string name="display_density_set_error" msgid="1044767285363807884">"ပြကွက်အရွယ်အစားနှင့် စာသားကို အပ်ဒိတ်လုပ်၍မရလိုက်ပါ။"</string>
 </resources>

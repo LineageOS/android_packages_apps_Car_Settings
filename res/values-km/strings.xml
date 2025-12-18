@@ -363,7 +363,8 @@
     <string name="unused_apps" msgid="648471933781010395">"កម្មវិធី​ដែលមិន​ប្រើ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{កម្មវិធី​ដែលមិនប្រើ​ #}other{កម្មវិធី​ដែលមិនប្រើ​ #}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"ដក​ការអនុញ្ញាតចេញ និងបង្កើន​ទំហំផ្ទុក"</string>
-    <string name="aspect_ratio_label" msgid="5484863076085548807">"សមាមាត្រ (ពិសោធន៍)"</string>
+    <!-- no translation found for aspect_ratio_label (1852048794381949724) -->
+    <skip />
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"បើក"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"លំនាំដើមនៃកម្មវិធី"</string>
     <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"ពេញអេក្រង់"</string>
@@ -983,29 +984,19 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"មើល​គម្រោង"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"រួចរាល់"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"យានជំនិះរបស់អ្នកមិនអាចប្រើមុខងារនេះបានទេ"</string>
-    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
-    <skip />
-    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
-    <skip />
+    <string name="dialog_close_button_text" msgid="5969322308259876044">"បិទ"</string>
+    <string name="dialog_apply_button_text" msgid="1103069196934735553">"ដាក់ប្រើ"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"ការ​កំណត់សមាមាត្រ​"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"កម្មវិធីនេះ​នឹងចាប់ផ្ដើមឡើងវិញ នៅពេលអ្នកប្ដូរសមាមាត្រ។ អ្នកអាចបាត់បង់​ការផ្លាស់ប្ដូរ​ដែលមិនបានរក្សាទុក។ កម្មវិធីមួយចំនួនអាចមិនត្រូវបានបង្កើនប្រសិទ្ធភាពសម្រាប់សមាមាត្រជាក់លាក់ទេ។"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"លំនាំដើមនៃកម្មវិធី"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"អេក្រង់ពេញ"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"ពាក់កណ្ដាល​អេក្រង់"</string>
-    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
-    <skip />
-    <!-- no translation found for display_density_set_error (1044767285363807884) -->
-    <skip />
+    <string name="aspect_ratio_set_error" msgid="591159290370230132">"មិនអាចធ្វើបច្ចុប្បន្នភាពការកំណត់សមាមាត្របានទេ។"</string>
+    <string name="display_density_dialog_title" msgid="3782055592374414189">"អក្សរ និងទំហំបង្ហាញ"</string>
+    <string name="display_density_dialog_message" msgid="1114355604684446232">"ធ្វើឱ្យអ្វីគ្រប់យ៉ាងនៅលើអេក្រង់មើលទៅធំជាងមុន ឬតូចជាងមុន។ កម្មវិធីនេះ​នឹងចាប់ផ្ដើមឡើងវិញ នៅពេលអ្នកប្ដូរសមាមាត្រ។ អ្នកអាចនឹងបាត់បង់​ការផ្លាស់ប្ដូរ​ដែលមិនបានរក្សាទុក។ កម្មវិធីមួយចំនួនប្រហែលមិនត្រូវបានបង្កើនប្រសិទ្ធភាពសម្រាប់ទំហំជាក់លាក់ទេ។"</string>
+    <string name="display_density_dialog_smaller_text" msgid="3700434974750324075">"0.85x"</string>
+    <string name="display_density_dialog_default_text" msgid="1694704017691017287">"1x (លំនាំដើម)"</string>
+    <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
+    <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
+    <string name="display_density_set_error" msgid="1044767285363807884">"មិនអាចធ្វើបច្ចុប្បន្នភាពទំហំ​បង្ហាញ និងអក្សរបានទេ។"</string>
 </resources>

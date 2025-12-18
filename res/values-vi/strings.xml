@@ -363,7 +363,8 @@
     <string name="unused_apps" msgid="648471933781010395">"Ứng dụng không dùng đến"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# ứng dụng không dùng đến}other{# ứng dụng không dùng đến}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Xóa quyền và giải phóng dung lượng"</string>
-    <string name="aspect_ratio_label" msgid="5484863076085548807">"Tỷ lệ khung hình (Thử nghiệm)"</string>
+    <!-- no translation found for aspect_ratio_label (1852048794381949724) -->
+    <skip />
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"Mở"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"Theo mặc định của ứng dụng"</string>
     <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"Toàn màn hình"</string>
@@ -983,29 +984,19 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Xem các gói"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"Xong"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Ô tô của bạn không hỗ trợ tính năng này"</string>
-    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
-    <skip />
-    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
-    <skip />
+    <string name="dialog_close_button_text" msgid="5969322308259876044">"Đóng"</string>
+    <string name="dialog_apply_button_text" msgid="1103069196934735553">"Áp dụng"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Chế độ cài đặt tỷ lệ khung hình"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Ứng dụng sẽ khởi động lại khi bạn thay đổi tỷ lệ khung hình. Bạn có thể sẽ mất những thay đổi chưa lưu. Có thể một số ứng dụng chưa được tối ưu hoá cho một số tỷ lệ khung hình nhất định."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Mặc định của ứng dụng"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Toàn màn hình"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Nửa màn hình"</string>
-    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
-    <skip />
-    <!-- no translation found for display_density_set_error (1044767285363807884) -->
-    <skip />
+    <string name="aspect_ratio_set_error" msgid="591159290370230132">"Không cập nhật được chế độ cài đặt tỷ lệ khung hình."</string>
+    <string name="display_density_dialog_title" msgid="3782055592374414189">"Kích thước hiển thị và kích cỡ văn bản"</string>
+    <string name="display_density_dialog_message" msgid="1114355604684446232">"Phóng to hoặc thu nhỏ mọi nội dung trên màn hình. Ứng dụng sẽ khởi động lại khi bạn thay đổi tỷ lệ khung hình. Bạn có thể bị mất những thay đổi chưa lưu. Một số ứng dụng có thể chưa được tối ưu hoá cho một số kích thước."</string>
+    <string name="display_density_dialog_smaller_text" msgid="3700434974750324075">"0,85x"</string>
+    <string name="display_density_dialog_default_text" msgid="1694704017691017287">"1x (mặc định)"</string>
+    <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1,25x"</string>
+    <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1,5x"</string>
+    <string name="display_density_set_error" msgid="1044767285363807884">"Không cập nhật được kích thước hiển thị và kích cỡ văn bản."</string>
 </resources>

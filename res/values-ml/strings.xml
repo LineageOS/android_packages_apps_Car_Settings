@@ -363,7 +363,8 @@
     <string name="unused_apps" msgid="648471933781010395">"ഉപയോഗിക്കാത്ത ആപ്പുകൾ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{ഉപയോഗിക്കാത്ത # ആപ്പ്}other{ഉപയോഗിക്കാത്ത # ആപ്പുകൾ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"അനുമതികൾ നീക്കം ചെയ്‌ത് ഇടം സൃഷ്‌ടിക്കുക"</string>
-    <string name="aspect_ratio_label" msgid="5484863076085548807">"വീക്ഷണ അനുപാതം (പരീക്ഷണാത്മകം)"</string>
+    <!-- no translation found for aspect_ratio_label (1852048794381949724) -->
+    <skip />
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"തുറക്കുക"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"ആപ്പ് ഡിഫോൾട്ട്"</string>
     <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"പൂർണ്ണ സ്ക്രീൻ"</string>
@@ -983,29 +984,19 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"പ്ലാനുകൾ കാണുക"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"പൂർത്തിയായി"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"നിങ്ങളുടെ വാഹനം ഈ ഫീച്ചർ പിന്തുണയ്ക്കുന്നില്ല"</string>
-    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
-    <skip />
-    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
-    <skip />
+    <string name="dialog_close_button_text" msgid="5969322308259876044">"അടയ്ക്കുക"</string>
+    <string name="dialog_apply_button_text" msgid="1103069196934735553">"ബാധകമാക്കുക"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"വീക്ഷണ അനുപാത ക്രമീകരണം"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"നിങ്ങൾ വീക്ഷണ അനുപാതം മാറ്റുകയാണെങ്കിൽ ആപ്പ് റീസ്റ്റാർട്ട് ചെയ്യും. സംരക്ഷിക്കാത്ത മാറ്റങ്ങൾ നഷ്‌ടമായേക്കാം. ചില ആപ്പുകൾ നിർദ്ദിഷ്ട വീക്ഷണ അനുപാതങ്ങൾക്കായി ഒപ്റ്റിമൈസ് ചെയ്തേക്കില്ല."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ആപ്പ് ഡിഫോൾട്ട്"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"പൂർണ്ണ സ്ക്രീൻ"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"പകുതി സ്ക്രീൻ"</string>
-    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
-    <skip />
-    <!-- no translation found for display_density_set_error (1044767285363807884) -->
-    <skip />
+    <string name="aspect_ratio_set_error" msgid="591159290370230132">"വീക്ഷണ അനുപാതം ക്രമീകരണം അപ്ഡേറ്റ് ചെയ്യാനായില്ല."</string>
+    <string name="display_density_dialog_title" msgid="3782055592374414189">"ഡിസ്പ്ലേ വലുപ്പവും ടെക്‌സ്റ്റും"</string>
+    <string name="display_density_dialog_message" msgid="1114355604684446232">"ഓൺസ്ക്രീനിലുള്ള എല്ലാം വലുതോ ചെറുതോ ആയി കാണിക്കുക. നിങ്ങൾ വീക്ഷണ അനുപാതം മാറ്റുകയാണെങ്കിൽ ആപ്പ് റീസ്റ്റാർട്ട് ചെയ്യും. സംരക്ഷിക്കാത്ത മാറ്റങ്ങൾ നഷ്‌ടമായേക്കാം. ചില ആപ്പുകൾ നിർദ്ദിഷ്ട വലുപ്പത്തിനായി ഒപ്‌റ്റിമൈസ് ചെയ്‌തേക്കില്ല."</string>
+    <string name="display_density_dialog_smaller_text" msgid="3700434974750324075">"0.85x"</string>
+    <string name="display_density_dialog_default_text" msgid="1694704017691017287">"1x (ഡിഫോൾട്ട്)"</string>
+    <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
+    <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
+    <string name="display_density_set_error" msgid="1044767285363807884">"ഡിസ്പ്ലേ വലുപ്പവും ടെക്സ്റ്റും അപ്ഡേറ്റ് ചെയ്യാനായില്ല."</string>
 </resources>
