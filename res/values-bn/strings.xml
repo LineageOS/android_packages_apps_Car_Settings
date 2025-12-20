@@ -363,7 +363,8 @@
     <string name="unused_apps" msgid="648471933781010395">"ব্যবহার করা হয়নি এমন অ্যাপ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{ব্যবহার করা হয়নি এমন #টি অ্যাপ}one{ব্যবহার করা হয়নি এমন #টি অ্যাপ}other{ব্যবহার করা হয়নি এমন #টি অ্যাপ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"অনুমতি সরান এবং স্পেস খালি করুন"</string>
-    <string name="aspect_ratio_label" msgid="5484863076085548807">"অ্যাস্পেক্ট রেশিও (এক্সপেরিমেন্টাল)"</string>
+    <!-- no translation found for aspect_ratio_label (1852048794381949724) -->
+    <skip />
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"খুলুন"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"অ্যাপ ডিফল্ট"</string>
     <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"ফুল স্ক্রিন"</string>
@@ -983,29 +984,19 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"প্ল্যান দেখুন"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"হয়ে গেছে"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"আপনার ভেইকেলে এই ফিচার সাপোর্ট করে না"</string>
-    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
-    <skip />
-    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
-    <skip />
+    <string name="dialog_close_button_text" msgid="5969322308259876044">"বন্ধ করুন"</string>
+    <string name="dialog_apply_button_text" msgid="1103069196934735553">"প্রয়োগ করুন"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"অ্যাস্পেক্ট রেশিওর সেটিংস"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"আপনি অ্যাস্পেক্ট রেশিও পরিবর্তন করলে, অ্যাপ রিস্টার্ট হবে। সেভ না করা পরিবর্তন আপনি হারাতে পারেন। নির্দিষ্ট কোনও অ্যাস্পেক্ট রেশিওতে কিছু অ্যাপ অপ্টিমাইজ করা নাও যেতে পারে।"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"অ্যাপ ডিফল্ট"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ফুল-স্ক্রিন"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"হাফ স্ক্রিন"</string>
-    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
-    <skip />
-    <!-- no translation found for display_density_set_error (1044767285363807884) -->
-    <skip />
+    <string name="aspect_ratio_set_error" msgid="591159290370230132">"অ্যাস্পেক্ট রেশিও সেটিংস আপডেট করা যায়নি।"</string>
+    <string name="display_density_dialog_title" msgid="3782055592374414189">"ডিসপ্লে সাইজ ও টেক্সট"</string>
+    <string name="display_density_dialog_message" msgid="1114355604684446232">"স্ক্রিনে দেখানো সবকিছু বড় বা ছোট করে দেখুন। আপনি অ্যাস্পেক্ট রেশিও পরিবর্তন করলে, অ্যাপ রিস্টার্ট হবে। সেভ না করা পরিবর্তন আপনি হারাতে পারেন। নির্দিষ্ট কোনও সাইজে কিছু অ্যাপ অপ্টিমাইজ করা নাও যেতে পারে।"</string>
+    <string name="display_density_dialog_smaller_text" msgid="3700434974750324075">"০.৮৫x"</string>
+    <string name="display_density_dialog_default_text" msgid="1694704017691017287">"১x (ডিফল্ট)"</string>
+    <string name="display_density_dialog_large_text" msgid="3321980326255623059">"১.২৫x"</string>
+    <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"১.৫x"</string>
+    <string name="display_density_set_error" msgid="1044767285363807884">"ডিসপ্লে সাইজ ও টেক্সট আপডেট করা যায়নি।"</string>
 </resources>

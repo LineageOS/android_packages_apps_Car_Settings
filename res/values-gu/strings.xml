@@ -363,7 +363,8 @@
     <string name="unused_apps" msgid="648471933781010395">"બિનવપરાયેલી ઍપ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{બિનવપરાયેલી # ઍપ}one{બિનવપરાયેલી # ઍપ}other{બિનવપરાયેલી # ઍપ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"પરવાનગીઓ કાઢી નાખો અને જગ્યા ખાલી કરો"</string>
-    <string name="aspect_ratio_label" msgid="5484863076085548807">"સાપેક્ષ ગુણોત્તર (પ્રાયોગિક)"</string>
+    <!-- no translation found for aspect_ratio_label (1852048794381949724) -->
+    <skip />
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"ખોલો"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"ઍપ ડિફૉલ્ટ"</string>
     <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"પૂર્ણ સ્ક્રીન"</string>
@@ -983,29 +984,19 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"પ્લાન જુઓ"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"થઈ ગયું"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"તમારું વાહન આ સુવિધાને સપોર્ટ કરતું નથી"</string>
-    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
-    <skip />
-    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
-    <skip />
+    <string name="dialog_close_button_text" msgid="5969322308259876044">"બંધ કરો"</string>
+    <string name="dialog_apply_button_text" msgid="1103069196934735553">"લાગુ કરો"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"સાપેક્ષ ગુણોત્તરના સેટિંગ"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"જ્યારે તમે સાપેક્ષ ગુણોત્તરમાં ફેરફાર કરશો ત્યારે ઍપ ફરી શરૂ થશે. તમે સાચવ્યા ન હોય એવા ફેરફારો ગુમાવો એમ બને. અમુક ચોક્કસ સાપેક્ષ ગુણોત્તરો માટે કેટલીક ઍપ ઑપ્ટિમાઇઝ કરવામાં આવે નહીં એમ બની શકે છે."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ઍપ ડિફૉલ્ટ"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"પૂર્ણ સ્ક્રીન"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"અડધી સ્ક્રીન"</string>
-    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
-    <skip />
-    <!-- no translation found for display_density_set_error (1044767285363807884) -->
-    <skip />
+    <string name="aspect_ratio_set_error" msgid="591159290370230132">"સાપેક્ષ ગુણોત્તરના સેટિંગ અપડેટ કરવામાં નિષ્ફળ રહ્યાં."</string>
+    <string name="display_density_dialog_title" msgid="3782055592374414189">"ડિસ્પ્લે સાઇઝ અને ટેક્સ્ટ"</string>
+    <string name="display_density_dialog_message" msgid="1114355604684446232">"સ્ક્રીન પર દેખાતી દરેક વસ્તુને મોટી અથવા નાની કરો. જ્યારે તમે સાપેક્ષ ગુણોત્તરમાં ફેરફાર કરશો ત્યારે ઍપ ફરી શરૂ થશે. તમે સાચવ્યા ન હોય એવા ફેરફારો ગુમાવો તેવું બની શકે છે. અમુક ચોક્કસ કદ માટે કેટલીક ઍપ ઑપ્ટિમાઇઝ કરવામાં આવે નહીં એમ બની શકે છે."</string>
+    <string name="display_density_dialog_smaller_text" msgid="3700434974750324075">"0.85x"</string>
+    <string name="display_density_dialog_default_text" msgid="1694704017691017287">"1x (ડિફૉલ્ટ)"</string>
+    <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
+    <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
+    <string name="display_density_set_error" msgid="1044767285363807884">"ડિસ્પ્લે સાઇઝ અને ટેક્સ્ટ અપડેટ કરવામાં નિષ્ફળ રહ્યાં."</string>
 </resources>

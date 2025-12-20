@@ -363,7 +363,8 @@
     <string name="unused_apps" msgid="648471933781010395">"Applis inutilisées"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{# appli inutilisée}one{# appli inutilisée}other{# applis inutilisées}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"Supprimer autorisations et libérer espace"</string>
-    <string name="aspect_ratio_label" msgid="5484863076085548807">"Format (version expérimentale)"</string>
+    <!-- no translation found for aspect_ratio_label (1852048794381949724) -->
+    <skip />
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"Ouvrir"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"Paramètre par défaut de l\'appli"</string>
     <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"Plein écran"</string>
@@ -983,29 +984,19 @@
     <string name="connectivity_inactive_action_text" msgid="1200295991890069311">"Afficher les forfaits"</string>
     <string name="audio_route_dialog_neutral_button_text" msgid="3303313405283478327">"OK"</string>
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Votre véhicule n\'est pas compatible avec cette fonctionnalité."</string>
-    <!-- no translation found for dialog_close_button_text (5969322308259876044) -->
-    <skip />
-    <!-- no translation found for dialog_apply_button_text (1103069196934735553) -->
-    <skip />
+    <string name="dialog_close_button_text" msgid="5969322308259876044">"Fermer"</string>
+    <string name="dialog_apply_button_text" msgid="1103069196934735553">"Appliquer"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Paramètres du format"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Si vous modifiez le format, l\'application redémarrera. Vous risquez de perdre les modifications non enregistrées. Certaines applis peuvent ne pas être optimisées pour certains formats."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Paramètre par défaut de l\'appli"</string>
     <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"Plein écran"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"Moitié de l\'écran"</string>
-    <!-- no translation found for aspect_ratio_set_error (591159290370230132) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_title (3782055592374414189) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_message (1114355604684446232) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_smaller_text (3700434974750324075) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_default_text (1694704017691017287) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_large_text (3321980326255623059) -->
-    <skip />
-    <!-- no translation found for display_density_dialog_larger_text (4123744946718483040) -->
-    <skip />
-    <!-- no translation found for display_density_set_error (1044767285363807884) -->
-    <skip />
+    <string name="aspect_ratio_set_error" msgid="591159290370230132">"Échec de la mise à jour des paramètres de format d\'image."</string>
+    <string name="display_density_dialog_title" msgid="3782055592374414189">"Taille d\'affichage et texte"</string>
+    <string name="display_density_dialog_message" msgid="1114355604684446232">"Agrandissez ou réduisez la taille de tous les éléments à l\'écran. Si vous modifiez le format, l\'application redémarrera. Vous risquez de perdre les modifications non enregistrées. Il est possible que certaines applis ne soient pas optimisées pour certaines tailles."</string>
+    <string name="display_density_dialog_smaller_text" msgid="3700434974750324075">"x 0,85"</string>
+    <string name="display_density_dialog_default_text" msgid="1694704017691017287">"x 1 (valeur par défaut)"</string>
+    <string name="display_density_dialog_large_text" msgid="3321980326255623059">"x 1,25"</string>
+    <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"x 1,5"</string>
+    <string name="display_density_set_error" msgid="1044767285363807884">"Échec de la mise à jour de la taille d\'affichage et du texte."</string>
 </resources>
