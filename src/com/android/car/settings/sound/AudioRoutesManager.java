@@ -90,7 +90,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -1010,11 +1009,8 @@ public class AudioRoutesManager {
         LOG.d("[createAudioRoutes] CarAudioZoneConfigInfo: " + zoneConfigInfosToString(configs));
         LOG.d("[createAudioRoutes] mAudioVolumeMap: " + mAudioVolumeCache);
 
-        // If multiple active configs for the same name exist, the selected one wins.
-        Map<String, CarAudioZoneConfigInfo> activeConfigs = configs.stream().filter(
-                CarAudioZoneConfigInfo::isActive).collect(
-                Collectors.toMap(CarAudioZoneConfigInfo::getName, Function.identity(),
-                        (a, b) -> b.isSelected() ? b : a));
+        Map<String, CarAudioZoneConfigInfo> activeConfigs =
+                removeDuplicateZoneConfigsWithSameAddress(configs);
 
         boolean isAudioSharingEnabled = isAudioSharingEnabled();
         AudioRouteItem.GlobalState globalState =
@@ -1115,6 +1111,23 @@ public class AudioRoutesManager {
         }
         LOG.d("[createAudioRoutes] newAudioRoutes: " + newAudioRoutes);
         return newAudioRoutes;
+    }
+
+    @NonNull
+    private Map<String, CarAudioZoneConfigInfo> removeDuplicateZoneConfigsWithSameAddress(
+            List<CarAudioZoneConfigInfo> configs) {
+        return configs.stream()
+                .filter(CarAudioZoneConfigInfo::isActive)
+                .flatMap(config -> config.getConfigVolumeGroups().stream()
+                        .filter(group -> group.getAudioAttributes().stream()
+                                .anyMatch(attr -> attr.getUsage() == mUsage))
+                        .flatMap(group -> group.getAudioDeviceAttributes().stream())
+                        .map(device -> Map.entry(device.getAddress(), config)))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,   // Key: Device Address
+                        Map.Entry::getValue, // Value: CarAudioZoneConfigInfo
+                        // If address exists in multiple configs, prioritize the selected one.
+                        (a, b) -> b.isSelected() ? b : a));
     }
 
     private void requestRouteSwitchInternal(AudioRouteItem switchedRoute) {
