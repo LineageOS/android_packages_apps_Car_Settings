@@ -221,11 +221,7 @@ public class AddProfileHandler implements AddNewProfileTask.AddNewProfileListene
     }
 
     private boolean canAddMoreUsers() {
-        if (android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
-            return getUserManager(mContext).canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
-        } else {
-            return getUserManager(mContext).canAddMoreUsersLegacy();
-        }
+        return getUserManager(mContext).canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
     }
 
     @VisibleForTesting

@@ -182,7 +182,6 @@ public class AddProfilePreferenceControllerTest {
         setupPreferenceController();
         mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
@@ -197,7 +196,6 @@ public class AddProfilePreferenceControllerTest {
         setupPreferenceController();
         mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
@@ -214,7 +212,6 @@ public class AddProfilePreferenceControllerTest {
         setupPreferenceController();
         mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
@@ -231,7 +228,6 @@ public class AddProfilePreferenceControllerTest {
         setupPreferenceController();
         mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
@@ -318,7 +314,6 @@ public class AddProfilePreferenceControllerTest {
         when(mUserManager.isDemoUser()).thenReturn(false);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByUm(mUserManager, TEST_RESTRICTION, false);
-        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(false);
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -334,7 +329,6 @@ public class AddProfilePreferenceControllerTest {
         setupPreferenceController();
         mPreferenceController.setUserManager(mUserManager);
         when(mUserManager.isDemoUser()).thenReturn(false);
-        when(mUserManager.canAddMoreUsersLegacy()).thenReturn(true);
         when(mUserManager.canAddMoreUsers(anyString())).thenReturn(true);
         EnterpriseTestUtils
                 .mockUserRestrictionSetByDpm(mUserManager, TEST_RESTRICTION, true);
