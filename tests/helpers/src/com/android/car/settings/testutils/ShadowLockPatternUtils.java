@@ -17,7 +17,6 @@
 package com.android.car.settings.testutils;
 
 import android.app.admin.DevicePolicyManager;
-import android.os.SystemClock;
 
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockscreenCredential;
@@ -27,8 +26,6 @@ import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Shadow for LockPatternUtils.
@@ -43,8 +40,6 @@ public class ShadowLockPatternUtils {
     private static byte[] sSavedPattern;
     private static LockscreenCredential sClearLockCredential;
     private static int sClearLockUser = NO_USER;
-    private static Map<Integer, Duration> sUserToLockoutEndTimeMap = new HashMap<>();
-
 
     @Resetter
     public static void reset() {
@@ -53,7 +48,6 @@ public class ShadowLockPatternUtils {
         sSavedPattern = null;
         sClearLockCredential = null;
         sClearLockUser = NO_USER;
-        sUserToLockoutEndTimeMap.clear();
     }
 
     /**
@@ -113,25 +107,12 @@ public class ShadowLockPatternUtils {
     }
 
     /**
-     * Sets the lockout end time for a given user. Stored as a {@link Duration} representing the
-     * time since boot.
-     *
-     * @return the millis since boot of the lockout end time.
-     */
-    @Implementation
-    public Duration setLockoutAttemptDeadline(int userId, Duration deadline) {
-        Duration lockoutEndTime = Duration.ofMillis(SystemClock.elapsedRealtime()).plus(deadline);
-        sUserToLockoutEndTimeMap.put(userId, lockoutEndTime);
-        return lockoutEndTime;
-    }
-
-    /**
      * Gets the lockout end time for a given user.
      *
      * @return the time since boot of the lockout end time.
      */
     @Implementation
     public Duration getLockoutEndTime(int userId) {
-        return sUserToLockoutEndTimeMap.getOrDefault(userId, Duration.ZERO);
+        return Duration.ZERO;
     }
 }
