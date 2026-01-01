@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.contains;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.reset;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -66,7 +67,7 @@ public class ConfirmLockLockoutHelperTest {
     public void onCheckCompletedWithTimeout_timeoutIsZero_doesNothing() {
         runOnCheckCompletedWithTimeout(Duration.ZERO);
 
-        verify(mLockPatternUtils, never()).setLockoutAttemptDeadline(TEST_USER, Duration.ZERO);
+        verify(mLockPatternUtils, never()).getLockoutEndTime(TEST_USER);
     }
 
     @Test
@@ -77,10 +78,10 @@ public class ConfirmLockLockoutHelperTest {
     }
 
     @Test
-    public void onCheckCompletedWithTimeout_timeoutIsPositive_setsLockoutDeadline() {
+    public void onCheckCompletedWithTimeout_timeoutIsPositive_checksLockoutEndTime() {
         runOnCheckCompletedWithTimeout(TIMEOUT);
 
-        verify(mLockPatternUtils).setLockoutAttemptDeadline(TEST_USER, TIMEOUT);
+        verify(mLockPatternUtils, times(2)).getLockoutEndTime(TEST_USER);
     }
 
     @Test
