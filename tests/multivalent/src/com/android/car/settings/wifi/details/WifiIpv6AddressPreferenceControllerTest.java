@@ -25,6 +25,7 @@ import android.content.Context;
 import android.net.LinkAddress;
 import android.net.LinkProperties;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 import androidx.test.core.app.ApplicationProvider;
@@ -61,6 +62,8 @@ public class WifiIpv6AddressPreferenceControllerTest {
     @Mock
     private WifiInfoProvider mMockWifiInfoProvider;
     @Mock
+    private Lifecycle mMockLifecycle;
+    @Mock
     private LinkProperties mMockLinkProperties;
     @Mock
     private LinkAddress mMockLinkAddress;
@@ -76,6 +79,7 @@ public class WifiIpv6AddressPreferenceControllerTest {
         mPreference = new Preference(mContext);
         mPreferenceController = new WifiIpv6AddressPreferenceController(mContext,
                 /* preferenceKey= */ "key", mFragmentController, mCarUxRestrictions);
+        when(mFragmentController.getSettingsLifecycle()).thenReturn(mMockLifecycle);
         mPreferenceController.init(mMockWifiEntry, mMockWifiInfoProvider);
         PreferenceControllerTestUtil.assignPreference(mPreferenceController, mPreference);
         when(mMockWifiInfoProvider.getLinkProperties()).thenReturn(mMockLinkProperties);
