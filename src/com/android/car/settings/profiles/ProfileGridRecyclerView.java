@@ -426,11 +426,7 @@ public class ProfileGridRecyclerView extends RecyclerView {
         }
 
         private boolean canAddMoreUsers() {
-            if (android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
-                return mUserManager.canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
-            } else {
-                return mUserManager.canAddMoreUsersLegacy();
-            }
+            return mUserManager.canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
         }
 
         private void showMaxProfilesLimitReachedDialog() {
