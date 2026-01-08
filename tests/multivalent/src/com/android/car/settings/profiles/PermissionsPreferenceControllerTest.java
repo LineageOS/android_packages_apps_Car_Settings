@@ -106,7 +106,6 @@ public class PermissionsPreferenceControllerTest {
     }
 
     @After
-    @UiThreadTest
     public void tearDown() {
         if (mSession != null) {
             mSession.finishMocking();
