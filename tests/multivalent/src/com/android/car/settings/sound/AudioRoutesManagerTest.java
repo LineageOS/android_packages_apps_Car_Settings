@@ -59,8 +59,8 @@ import com.android.car.settings.CarSettingsApplication;
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.audiosharing.BaseAudioSharingPreferenceController;
 import com.android.dx.mockito.inline.extended.ExtendedMockito;
-import com.android.settingslib.bluetooth.BluetoothEventManager;
 import com.android.settingslib.bluetooth.BluetoothCallback;
+import com.android.settingslib.bluetooth.BluetoothEventManager;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
 import com.android.settingslib.bluetooth.LeAudioProfile;
@@ -645,7 +645,7 @@ public class AudioRoutesManagerTest {
     }
 
     @Test
-    public void createAudioRoutes_choosesSelectedConfigIfDuplicated() {
+    public void createAudioRoutes_choosesSelectedConfigIfDuplicatedAddress() {
         CarAudioZoneConfigInfo unselectedConfig = createZoneConfig(
                 /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
                 /* address= */ AUDIO_DEVICE_ADDRESS,
@@ -654,7 +654,7 @@ public class AudioRoutesManagerTest {
                 /* isActive= */ true,
                 /* isSelected= */ false);
         CarAudioZoneConfigInfo selectedConfig = createZoneConfig(
-                /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
+                /* name= */ "another_config_name",
                 /* address= */ AUDIO_DEVICE_ADDRESS,
                 /* deviceName= */ AUDIO_DEVICE_NAME,
                 /* type= */ TYPE_BUILTIN_SPEAKER,
@@ -666,7 +666,8 @@ public class AudioRoutesManagerTest {
 
         Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
 
-        // Verify that the selected config wins
+        // Verify that only one route exists (deduplicated by address) and it's the selected one
+        assertThat(audioRouteItems).hasSize(1);
         AudioRouteItem deviceAudioRoute = audioRouteItems.get(AUDIO_DEVICE_ADDRESS);
         assertThat(deviceAudioRoute.getAudioZoneConfigState().isSelected()).isTrue();
     }

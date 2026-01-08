@@ -119,11 +119,7 @@ public class AddProfilePreferenceController extends PreferenceController<Prefere
     }
 
     private boolean canAddMoreUsers() {
-        if (android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
-            return mUserManager.canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
-        } else {
-            return mUserManager.canAddMoreUsersLegacy();
-        }
+        return mUserManager.canAddMoreUsers(USER_TYPE_FULL_SECONDARY);
     }
 
     @VisibleForTesting

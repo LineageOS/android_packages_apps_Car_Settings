@@ -428,26 +428,8 @@ public class ProfileHelperTest {
     public void testGetMaxSupportedRealUsers_isHeadless() {
         ShadowUserManager.setIsHeadlessSystemUserMode(true);
 
-        if (android.multiuser.Flags.consistentMaxUsers()
-                && android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
-            when(mMockUserManager.getCurrentAllowedNumberOfUsers(
-                    eq(UserManager.USER_TYPE_FULL_SECONDARY))).thenReturn(4);
-            assertThat(mProfileHelper.getMaxSupportedRealProfiles()).isEqualTo(4);
-            return;
-        }
-
-        ShadowUserManager.setMaxSupportedUsersCount(7);
-
-        // Create System user, two managed profiles, and two normal users.
-        UserInfo user0 = createAdminUser(0);
-        UserInfo user1 = createNonAdminUser(10);
-        UserInfo user2 = createManagedProfile(11);
-        UserInfo user3 = createNonAdminUser(13);
-        UserInfo user4 = createManagedProfile(14);
-
-        mockGetUsers(user0, user1, user2, user3, user4);
-
-        // Max users - # managed profiles - headless system user.
+        when(mMockUserManager.getCurrentAllowedNumberOfUsers(
+                eq(UserManager.USER_TYPE_FULL_SECONDARY))).thenReturn(4);
         assertThat(mProfileHelper.getMaxSupportedRealProfiles()).isEqualTo(4);
     }
 
@@ -455,27 +437,9 @@ public class ProfileHelperTest {
     public void testGetMaxSupportedRealUsers_isNotHeadless() {
         ShadowUserManager.setIsHeadlessSystemUserMode(false);
 
-        if (android.multiuser.Flags.consistentMaxUsers()
-                && android.multiuser.Flags.maxUsersInCarIsForSecondary()) {
-            when(mMockUserManager.getCurrentAllowedNumberOfUsers(
-                    eq(UserManager.USER_TYPE_FULL_SECONDARY))).thenReturn(4);
-            // The system user counts as a real user, so add it as well.
-            assertThat(mProfileHelper.getMaxSupportedRealProfiles()).isEqualTo(5);
-            return;
-        }
-
-        ShadowUserManager.setMaxSupportedUsersCount(7);
-
-        // Create System user, two managed profiles, and two normal users.
-        UserInfo user0 = createAdminUser(0);
-        UserInfo user1 = createNonAdminUser(10);
-        UserInfo user2 = createManagedProfile(11);
-        UserInfo user3 = createNonAdminUser(13);
-        UserInfo user4 = createManagedProfile(14);
-
-        mockGetUsers(user0, user1, user2, user3, user4);
-
-        // Max users - # managed profiles
+        when(mMockUserManager.getCurrentAllowedNumberOfUsers(
+                eq(UserManager.USER_TYPE_FULL_SECONDARY))).thenReturn(4);
+        // The system user counts as a real user, so add it as well.
         assertThat(mProfileHelper.getMaxSupportedRealProfiles()).isEqualTo(5);
     }
 

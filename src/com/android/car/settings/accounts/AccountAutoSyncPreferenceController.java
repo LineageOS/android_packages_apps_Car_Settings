@@ -111,8 +111,8 @@ public class AccountAutoSyncPreferenceController extends PreferenceController<Tw
         ConfirmationDialogFragment dialogFragment =
                 new ConfirmationDialogFragment.Builder(getContext())
                         .setTitle(dialogTitle).setMessage(dialogMessage)
-                        .setPositiveButton(R.string.allow, mConfirmListener)
-                        .setNegativeButton(R.string.do_not_allow, /* rejectListener= */ null)
+                        .setPositiveButton(R.string.okay, mConfirmListener)
+                        .setNegativeButton(R.string.cancel, /* rejectListener= */ null)
                         .addArgumentBoolean(KEY_ENABLING, enabling)
                         .addArgumentParcelable(KEY_USER_HANDLE, mUserHandle)
                         .build();

@@ -457,52 +457,6 @@ public class ProfileHelper {
         return mUserManager.getUserInfo(UserHandle.myUserId());
     }
 
-    private static boolean areMaxUsersMethodFlagsEnabled() {
-        return android.multiuser.Flags.consistentMaxUsers()
-                && android.multiuser.Flags.maxUsersInCarIsForSecondary();
-    }
-
-    /**
-     * Maximum number of profiles allowed on the device. This includes real profiles, managed
-     * profiles and restricted profiles, but excludes guests.
-     *
-     * <p> It excludes system profile in headless system profile model.
-     *
-     * @return Maximum number of profiles that can be present on the device.
-     * @deprecated Use {@link #getMaxSupportedRealProfiles()} instead.
-     */
-    @Deprecated
-    private int getMaxSupportedProfiles() {
-        if (areMaxUsersMethodFlagsEnabled()) {
-            // TODO(b/394178333): When the flags are permanent, delete this method entirely.
-            throw new UnsupportedOperationException("This method is no longer supported");
-        }
-
-        int maxSupportedUsers = UserManager.getMaxSupportedUsers();
-        if (UserManager.isHeadlessSystemUserMode()) {
-            maxSupportedUsers -= 1;
-        }
-        return maxSupportedUsers;
-    }
-
-    private int getManagedProfilesCount() {
-        if (areMaxUsersMethodFlagsEnabled()) {
-            // TODO(b/394178333): When the flags are permanent, delete this method entirely.
-            throw new UnsupportedOperationException("This method is no longer supported");
-        }
-
-        List<UserInfo> users = getAllProfiles();
-
-        // Count all users that are managed profiles of another user.
-        int managedProfilesCount = 0;
-        for (UserInfo user : users) {
-            if (user.isManagedProfile()) {
-                managedProfilesCount++;
-            }
-        }
-        return managedProfilesCount;
-    }
-
     /**
      * Gets the maximum number of real (non-guest, non-managed profile) profiles that can be created
      * on the device. This is a dynamic value and it decreases with the increase of the number of
@@ -513,9 +467,6 @@ public class ProfileHelper {
      * @return Maximum number of real profiles that can be created.
      */
     public int getMaxSupportedRealProfiles() {
-        if (!areMaxUsersMethodFlagsEnabled()) {
-            return getMaxSupportedProfiles() - getManagedProfilesCount();
-        }
         // "Real" users means secondary users and - for non-HSUM devices - the full system user.
         return mUserManager.getCurrentAllowedNumberOfUsers(UserManager.USER_TYPE_FULL_SECONDARY)
                 + (UserManager.isHeadlessSystemUserMode() ? 0 : 1);
