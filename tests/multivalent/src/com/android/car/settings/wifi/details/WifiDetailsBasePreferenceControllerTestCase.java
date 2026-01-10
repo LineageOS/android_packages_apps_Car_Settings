@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.test.core.app.ApplicationProvider;
 
@@ -46,6 +47,8 @@ public abstract class WifiDetailsBasePreferenceControllerTestCase {
     @Mock
     protected FragmentController mFragmentController;
     @Mock
+    private Lifecycle mMockLifecycle;
+    @Mock
     protected WifiEntry mMockWifiEntry;
     @Mock
     protected WifiInfoProvider mMockWifiInfoProvider;
@@ -59,6 +62,7 @@ public abstract class WifiDetailsBasePreferenceControllerTestCase {
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
         mPreference = new WifiDetailsPreference(mContext);
+        when(mFragmentController.getSettingsLifecycle()).thenReturn(mMockLifecycle);
         getController().init(mMockWifiEntry, mMockWifiInfoProvider);
         PreferenceControllerTestUtil.assignPreference(getController(), mPreference);
         initTest();
