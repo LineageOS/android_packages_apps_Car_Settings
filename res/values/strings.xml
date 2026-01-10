@@ -2380,6 +2380,7 @@
 
     <string name="dialog_close_button_text">Close</string>
     <string name="dialog_apply_button_text">Apply</string>
+    <string name="dialog_create_button_text">Create</string>
 
     <string name="aspect_ratio_dialog_title">Aspect Ratio Settings</string>
     <string name="aspect_ratio_dialog_message">The app will restart when you change the aspect ratio. You may lose unsaved changes. Some apps may not be optimized for certain aspect ratios.</string>
@@ -2395,4 +2396,11 @@
     <string name="display_density_dialog_large_text">1.25x</string>
     <string name="display_density_dialog_larger_text">1.5x</string>
     <string name="display_density_set_error">Failed to update the display size and text.</string>
+
+    <!-- Title in dialog that pops up when an app requests permission to bind a widget [CHAR LIMIT=NONE] -->
+    <string name="allow_bind_app_widget_activity_allow_bind_title">Create widget and allow access?</string>
+    <!-- Message in dialog that pops up when an app requests permission to bind a widget [CHAR LIMIT=NONE] -->
+    <string name="allow_bind_app_widget_activity_allow_bind">After you create <xliff:g id="widget_label">%2$s</xliff:g> widget, <xliff:g id="widget_host_name">%1$s</xliff:g> can access everything displayed.</string>
+    <!-- Text for checkbox that pops up when an app requests permission to bind a widget [CHAR LIMIT=NONE] -->
+    <string name="allow_bind_app_widget_activity_always_allow_bind">Always allow <xliff:g id="widget_host_name">%1$s</xliff:g> to create widgets and access their data</string>
 </resources>
