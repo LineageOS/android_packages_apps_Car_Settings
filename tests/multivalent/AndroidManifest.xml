@@ -185,6 +185,10 @@
             android:name="com.android.car.settings.displaycompat.CarDisplayDensityDialogActivity"
             android:theme="@style/ActionDialogTheme" />
 
+        <activity
+            android:name="com.android.car.settings.appwidget.AllowBindAppWidgetActivityTest$TestAllowBindAppWidgetActivity"
+            android:theme="@style/AlertDialogTheme" />
+
         <receiver
             android:name="com.android.car.settings.enterprise.DefaultDeviceAdminReceiver">
             <meta-data android:name="android.app.device_admin"

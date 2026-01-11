@@ -1413,5 +1413,16 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".appwidget.AllowBindAppWidgetActivity"
+                android:theme="@style/AlertDialogTheme"
+                android:finishOnCloseSystemDialogs="true"
+                android:exported="true"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_BIND" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 </manifest>
