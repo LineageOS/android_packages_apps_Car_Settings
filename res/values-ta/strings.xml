@@ -336,7 +336,7 @@
     <string name="default_applications" msgid="1558183275638697087">"இயல்புநிலை ஆப்ஸ்"</string>
     <string name="performance_impacting_apps" msgid="3439260699394720569">"செயல்திறனைப் பாதிக்கும் ஆப்ஸ்"</string>
     <string name="app_permissions" msgid="32799922508313948">"ஆப்ஸ் அனுமதிகள்"</string>
-    <string name="app_permissions_summary" msgid="5402214755935368418">"தரவுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தும்"</string>
+    <string name="app_permissions_summary" msgid="5402214755935368418">"தரவுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தலாம்"</string>
     <string name="applications_settings" msgid="794261395191035632">"ஆப்ஸ் தகவல்"</string>
     <string name="force_stop" msgid="1616958676171167028">"ஆப்ஸை நிறுத்து"</string>
     <string name="force_stop_dialog_title" msgid="4481858344628934971">"ஆப்ஸை நிறுத்தவா?"</string>
@@ -432,7 +432,7 @@
     <string name="apps_recently_opened" msgid="5320377037971195984">"சமீபத்தில் திறந்தவை"</string>
     <string name="apps_view_all_apps_title" msgid="2322120325505230530">"எல்லா %1$d ஆப்ஸையும் காட்டு"</string>
     <string name="apps_permission_manager_title" msgid="8776335943862484131">"அனுமதி நிர்வாகம்"</string>
-    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"தரவுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தும்"</string>
+    <string name="apps_permission_manager_summary" msgid="4180424218228141274">"தரவுக்கான ஆப்ஸ் அணுகலைக் கட்டுப்படுத்தலாம்"</string>
     <string name="apps_default_apps_summary" msgid="2017792579839972926">"Assistant மற்றும் பலவற்றுக்கு"</string>
     <string name="performance_impacting_apps_summary" msgid="7762122057244111162">"{count,plural, =1{செயல்திறனை # ஆப்ஸ் பாதிக்கிறது}other{செயல்திறனை # ஆப்ஸ் பாதிக்கின்றன}}"</string>
     <string name="apps_special_app_access_summary" msgid="6464767436309742163">"சிஸ்டம் மற்றும் பிற அமைப்புகளுக்கு"</string>
@@ -985,6 +985,8 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"உங்கள் வாகனம் இந்த அம்சத்தை ஆதரிக்கவில்லை"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"மூடு"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"பயன்படுத்து"</string>
+    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
+    <skip />
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"தோற்ற விகித அமைப்புகள்"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"தோற்ற விகிதத்தை நீங்கள் மாற்றும்போது ஆப்ஸ் மீண்டும் தொடங்கும். சேமிக்கப்படாத மாற்றங்களை நீங்கள் இழக்க நேரிடலாம். குறிப்பிட்ட தோற்ற விகிதங்களில் சில ஆப்ஸைப் பயன்படுத்த முடியாமல் போகலாம்."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ஆப்ஸ் இயல்பு"</string>
@@ -998,4 +1000,10 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"டிஸ்ப்ளே அளவையும் வார்த்தை அளவையும் மாற்ற முடியவில்லை."</string>
+    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
+    <skip />
+    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
+    <skip />
+    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
+    <skip />
 </resources>

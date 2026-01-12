@@ -949,7 +949,7 @@
     <string name="screen_reader_settings_title" msgid="4012734340987826872">"Skrin rider"</string>
     <string name="show_captions_toggle_title" msgid="710582308974826311">"Taglavhalarni chiqarish"</string>
     <string name="captions_text_size_title" msgid="1960814652560877963">"Matn oʻlchami"</string>
-    <string name="captions_settings_style_header" msgid="944591388386054372">"Taglavha hajmi va uslubi"</string>
+    <string name="captions_settings_style_header" msgid="944591388386054372">"Tagyozuvlar hajmi va uslubi"</string>
     <string name="captions_settings_text_size_very_small" msgid="7476485317028306502">"Juda kichik"</string>
     <string name="captions_settings_text_size_small" msgid="1481895299805450566">"Kichik"</string>
     <string name="captions_settings_text_size_default" msgid="2227802573224038267">"Standart"</string>
@@ -985,6 +985,8 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Avtomobilingizda bu funksiya ishlamaydi"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"Yopish"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"Tatbiq etish"</string>
+    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
+    <skip />
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Tomonlar nisbati sozlamalari"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Tomonlar nisbati oʻzgarishi bilan ilova qaytadan ishga tushadi. Oʻzgarishlar saqlanmasligi mumkin. Ayrim ilovalar muayyan tomonlar nisbatiga optimallashtirilmagan boʻlishi mumkin."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Ilova standarti"</string>
@@ -998,4 +1000,10 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"Displey oʻlchami va matn yangilanmadi."</string>
+    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
+    <skip />
+    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
+    <skip />
+    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
+    <skip />
 </resources>
