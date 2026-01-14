@@ -828,9 +828,9 @@
     <string name="assistant_and_voice_setting_title" msgid="737733881661819853">"Assistant ಮತ್ತು ಧ್ವನಿ"</string>
     <string name="assistant_and_voice_assistant_app_title" msgid="5981647244625171285">"ಡಿಜಿಟಲ್ ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್"</string>
     <string name="assistant_and_voice_use_text_from_screen_title" msgid="5851460943413795599">"ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿರುವ ಪಠ್ಯವನ್ನು ಬಳಸಿ"</string>
-    <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"ಸ್ಕ್ರೀನ್‌ನ ವಿಷಯಗಳನ್ನು ಪ್ರವೇಶಿಸಲು Assistant ಗೆ ಅನುಮತಿಸಿ"</string>
+    <string name="assistant_and_voice_use_text_from_screen_summary" msgid="4161751708121301541">"ಸ್ಕ್ರೀನ್‌ನ ಕಂಟೆಂಟ್‌ಗಳನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು Assistant ಗೆ ಅನುಮತಿಸಿ"</string>
     <string name="assistant_and_voice_use_screenshot_title" msgid="1930735578425470046">"ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಅನ್ನು ಬಳಸಿ"</string>
-    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Assistant ಗೆ ಸ್ಕ್ರೀನ್ ಚಿತ್ರವನ್ನು ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸಿ"</string>
+    <string name="assistant_and_voice_use_screenshot_summary" msgid="3738474919393817950">"Assistant ಗೆ ಸ್ಕ್ರೀನ್ ಚಿತ್ರವನ್ನುಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು ಅನುಮತಿಸಿ"</string>
     <string name="notifications_recently_sent" msgid="9051696542615302799">"ಇತ್ತೀಚೆಗೆ ಕಳುಹಿಸಿರುವುದು"</string>
     <string name="notifications_all_apps" msgid="3557079551048958846">"ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="profiles_and_accounts_settings_title" msgid="2672643892127659812">"ಪ್ರೊಫೈಲ್‌ಗಳು ಮತ್ತು ಖಾತೆಗಳು"</string>
@@ -985,6 +985,8 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ನಿಮ್ಮ ವಾಹನವು ಈ ಫೀಚರ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"ಮುಚ್ಚಿರಿ"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"ಅನ್ವಯಿಸಿ"</string>
+    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
+    <skip />
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"ದೃಶ್ಯಾನುಪಾತ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"ನೀವು ದೃಶ್ಯಾನುಪಾತವನ್ನು ಬದಲಾಯಿಸಿದಾಗ ಆ್ಯಪ್ ಮರುಪ್ರಾರಂಭವಾಗುತ್ತದೆ. ಸೇವ್ ಮಾಡದಿರುವ ಬದಲಾವಣೆಗಳನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು. ಕೆಲವು ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ದಿಷ್ಟ ದೃಶ್ಯಾನುಪಾತಗಳಿಗಾಗಿ ಆಪ್ಟಿಮೈಸ್ ಮಾಡದೇ ಇರಬಹುದು."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ಆ್ಯಪ್ ಡೀಫಾಲ್ಟ್"</string>
@@ -998,4 +1000,10 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"ಡಿಸ್‌ಪ್ಲೇ ಗಾತ್ರ ಮತ್ತು ಪಠ್ಯವನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ."</string>
+    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
+    <skip />
+    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
+    <skip />
+    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
+    <skip />
 </resources>
