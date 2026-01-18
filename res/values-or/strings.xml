@@ -566,7 +566,7 @@
     <string name="factory_reset_accounts" msgid="5523956654938834209">"ଆପଣ ବର୍ତ୍ତମାନ ନିମ୍ନୋକ୍ତ ଆକାଉଣ୍ଟଗୁଡ଼ିକରେ ସାଇନ୍ ଇନ୍ କରିଛନ୍ତି:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"ଏହି ଗାଡ଼ି ପାଇଁ ଅନ୍ୟ ପ୍ରୋଫାଇଲଗୁଡ଼ିକୁ ସେଟ୍ ଅପ୍ କରାଯାଇଛି।"</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"ସମସ୍ତ ଡାଟା ଇରେଜ କରନ୍ତୁ"</string>
-    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"ସମସ୍ତ ଡାଟା ଖାଲି କରିବେ?"</string>
+    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"ସମସ୍ତ ଡାଟା ଇରେଜ କରିବେ?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"ଏହା ଆପଣଙ୍କର ସମସ୍ତ ବ୍ୟକ୍ତିଗତ ପ୍ରୋଫାଇଲ୍ ଡାଟା, ଆକାଉଣ୍ଟ ଏବଂ ଏହି ଇନଫୋଟେନମେଣ୍ଟ ସିଷ୍ଟମରେ ଡାଉନଲୋଡ୍ କରାଯାଇଥିବା ଆପକୁ ଡିଲିଟ୍ କରିବ।\n\nଆପଣ ଏହି କାର୍ଯ୍ୟକୁ ପୂର୍ବବତ୍ କରିପାରିବେ ନାହିଁ।"</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"ସବୁକିଛି ଖାଲି କରନ୍ତୁ"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"ଖାଲି କରାଯାଉଛି"</string>
@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ଆପଣଙ୍କ ଗାଡ଼ି ଏହି ଫିଚରକୁ ସମର୍ଥନ କରେ ନାହିଁ"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"ଲାଗୁ କରନ୍ତୁ"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"ତିଆରି କରନ୍ତୁ"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"ଚଉଡ଼ା ଓ ଉଚ୍ଚତାର ଅନୁପାତ ସେଟିଂସ"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"ଆପଣ ଚଉଡ଼ା ଓ ଉଚ୍ଚତାର ଅନୁପାତ ପରିବର୍ତ୍ତନ କଲେ ଏହି ଆପଟି ରିଷ୍ଟାର୍ଟ ହେବ। ଆପଣ ସେଭ କରାଯାଇନଥିବା ପରିବର୍ତ୍ତନଗୁଡ଼ିକୁ ହରାଇପାରନ୍ତି। ନିର୍ଦ୍ଦିଷ୍ଟ ଚଉଡ଼ା ଓ ଉଚ୍ଚତାର ଅନୁପାତ ପାଇଁ କିଛି ଆପ୍ସ ଅପ୍ଟିମାଇଜ ହୋଇନପାରେ।"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ଆପ ଡିଫଲ୍ଟ"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"ଡିସପ୍ଲେ ସାଇଜ ଏବଂ ଟେକ୍ସଟକୁ ଅପଡେଟ କରିବାରେ ବିଫଳ ହୋଇଛି।"</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"ୱିଜେଟ ତିଆରି କରି ଆକ୍ସେସର ଅନୁମତି ଦେବେ?"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"ଆପଣ <xliff:g id="WIDGET_LABEL">%2$s</xliff:g> ୱିଜେଟ ତିଆରି କରିବା ପରେ, <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> ଡିସପ୍ଲେ ହୋଇଥିବା ସବୁକିଛିକୁ ଆକ୍ସେସ କରିପାରିବ।"</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"ୱିଜେଟଗୁଡ଼ିକ ତିଆରି କରି ସେଗୁଡ଼ିକର ଡାଟା ଆକ୍ସେସ କରିବାକୁ <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>କୁ ସର୍ବଦା ଅନୁମତି ଦିଅନ୍ତୁ"</string>
 </resources>

@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Avtomobiliniz bu funksiyanı dəstəkləmir"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"Bağlayın"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"Tətbiq edin"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"Yaradın"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Tərəflər nisbəti ayarları"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Tərəflər nisbətini dəyişdikdə tətbiq yenidən başladılacaq. Yadda saxlanılmayan dəyişikliklər itə bilər. Bəzi tətbiqlər müəyyən tərəflər nisbəti üçün optimallaşdırılmaya bilər."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Tətbiq defoltu"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1,25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1,5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"Displey ölçüsü və mətni güncəllənmədi."</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"Vidcet yaradılsın və giriş icazəsi verilsin?"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"<xliff:g id="WIDGET_LABEL">%2$s</xliff:g> vidcetini yaratdıqdan sonra <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> göstərilən hər şeyə daxil ola bilər."</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> tətbiqinə vidcet yaratmağa və onların məlumatlarını əldə etməyə həmişə icazə verin"</string>
 </resources>

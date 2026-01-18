@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ඔබේ වාහනය මෙම විශේෂාංගයට සහය නොදක්වයි"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"වසන්න"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"යොදන්න"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"තනන්න"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"දර්ශන අනුපාත සැකසීම්"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"ඔබ දර්ශන අනුපාතය වෙනස් කළ විට යෙදුම නැවත ආරම්භ වනු ඇත. ඔබට නොසුරකින ලද වෙනස්කම් අහිමි විය හැක. සමහර යෙදුම් ඇතැම් දර්ශන අනුපාත සඳහා ප්‍රශස්ත නොකළ හැක."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"පෙරනිමි යෙදුම"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"සංදර්ශක ප්‍රමාණය සහ පෙළ යාවත්කාලීන කිරීමට අසමත් විය."</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"විජට් සාදා ප්‍රවේශයට ඉඩ ලබා දෙන්න ද?"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"ඔබ <xliff:g id="WIDGET_LABEL">%2$s</xliff:g> විජට් නිර්මාණය කළ පසු, <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> හට සංදර්ශනය වන සියල්ලට ප්‍රවේශ විය හැක."</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> හට සෑම විට ම විජට සෑදීමට සහ ඒවායේ දත්ත වෙත ප්‍රවේශ වීමට ඉඩ ලබා දෙන්න"</string>
 </resources>

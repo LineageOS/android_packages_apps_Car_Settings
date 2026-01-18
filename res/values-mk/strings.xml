@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Вашето возило не ја поддржува функцијава"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"Затвори"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"Примени"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"Создај"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Поставки за сооднос"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Апликацијата ќе се рестартира кога ќе го промените соодносот. Може да ги изгубите незачуваните промени. Некои апликации може да не се оптимизирани за одредени соодноси."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Стандардно за апликацијата"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1,25 пати"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1,5 пати"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"Не можеше да се ажурираат големината на приказот и текстот."</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"Да се создаде виџет и да се дозволи пристап?"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"Откако ќе создадете виџет за <xliff:g id="WIDGET_LABEL">%2$s</xliff:g>, <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> ќе може да пристапува до сѐ што се прикажува."</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"Секогаш дозволувај ѝ на апликацијата <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> да создава виџети и да пристапува до нивните податоци"</string>
 </resources>
