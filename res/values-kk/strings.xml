@@ -222,7 +222,7 @@
     <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"Аудио бөлісу"</string>
     <string name="share_audio_switch_title" msgid="8798673733841544186">"Аудионы бөлісу"</string>
     <string name="share_audio_switch_summary" msgid="5123598607194828495">"Тыңдаушыларға өз LE Audio құлақаспаптарын пайдалану қажет."</string>
-    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Дыбысты тексеріп көріңіз"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"Дыбысты тексеріп көру"</string>
     <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"Барлық тыңдаушы оны естуі керек."</string>
     <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"Белсенді медиа құрылғылар"</string>
     <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"Аудио трансляция параметрлері"</string>
@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"Көлігіңіз бұл функцияға қолдау көрсетпейді."</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"Жабу"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"Қолдану"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"Жасау"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"Арақатынас параметрлері"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"Арақатынасты өзгерткенде, қолданба өшіп қосылады. Сақталмаған өзгерістерді жоғалтып алуыңыз мүмкін. Кейбір қолданбалар белгілі бір арақатынастар үшін оңтайландырылмаған болуы мүмкін."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"Қолданбаның әдепкі арақатынасы"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1,25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1,5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"Экрандағы элементтердің өлшемі мен мәтін өзгертілмеді."</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"Виджет жасалып, оған кіруге рұқсат берілсін бе?"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"<xliff:g id="WIDGET_LABEL">%2$s</xliff:g> виджетін жасағаннан кейін, <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> көрсетілген барлық дерекке кіре алады."</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> қолданбасына виджетті жасауға және оның дерекқорына кіруге әрқашан рұқсат беру"</string>
 </resources>

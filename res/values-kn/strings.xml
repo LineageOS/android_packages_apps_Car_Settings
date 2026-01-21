@@ -187,7 +187,7 @@
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ಬ್ಲೂಟೂತ್‌"</string>
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"ಬ್ಲೂಟೂತ್ ಬಳಸಿ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ಹೆಸರಿಸದಿರುವ ಸಾಧನ"</string>
-    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ಜೋಡಿಸಲಾದ ಸಾಧನಗಳು"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ಪೇರ್ ಮಾಡಲಾದ ಸಾಧನಗಳು"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"ಹೊಸ ಸಾಧನವನ್ನು ಪೇರ್ ಮಾಡಿ"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ಪೇರ್ ಮಾಡಲು ಬ್ಲೂಟೂತ್ ಆನ್ ಆಗುತ್ತದೆ"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ಸಾಧನದ ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸುವುದೇ?"</string>
@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ನಿಮ್ಮ ವಾಹನವು ಈ ಫೀಚರ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"ಮುಚ್ಚಿರಿ"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"ಅನ್ವಯಿಸಿ"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"ರಚಿಸಿ"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"ದೃಶ್ಯಾನುಪಾತ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"ನೀವು ದೃಶ್ಯಾನುಪಾತವನ್ನು ಬದಲಾಯಿಸಿದಾಗ ಆ್ಯಪ್ ಮರುಪ್ರಾರಂಭವಾಗುತ್ತದೆ. ಸೇವ್ ಮಾಡದಿರುವ ಬದಲಾವಣೆಗಳನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳಬಹುದು. ಕೆಲವು ಆ್ಯಪ್‌ಗಳನ್ನು ನಿರ್ದಿಷ್ಟ ದೃಶ್ಯಾನುಪಾತಗಳಿಗಾಗಿ ಆಪ್ಟಿಮೈಸ್ ಮಾಡದೇ ಇರಬಹುದು."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"ಆ್ಯಪ್ ಡೀಫಾಲ್ಟ್"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"ಡಿಸ್‌ಪ್ಲೇ ಗಾತ್ರ ಮತ್ತು ಪಠ್ಯವನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ."</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"ವಿಜೆಟ್ ರಚಿಸಿ, ಆ್ಯಕ್ಸೆಸ್ ಅನ್ನು ಅನುಮತಿಸಬೇಕೆ?"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"ನೀವು <xliff:g id="WIDGET_LABEL">%2$s</xliff:g> ವಿಜೆಟ್ ಅನ್ನು ರಚಿಸಿದ ನಂತರ, <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> ಪ್ರದರ್ಶಿಸಲಾದ ಎಲ್ಲವನ್ನೂ ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಬಹುದು."</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"ವಿಜೆಟ್‌ಗಳನ್ನು ರಚಿಸಲು ಮತ್ತು ಅವುಗಳ ಡೇಟಾವನ್ನು ಆ್ಯಕ್ಸೆಸ್ ಮಾಡಲು <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> ಅನ್ನು ಯಾವಾಗಲೂ ಅನುಮತಿಸಿ"</string>
 </resources>

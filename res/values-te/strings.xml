@@ -281,7 +281,7 @@
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"%1$s‌కు కనెక్ట్ చేయడం సాధ్యపడలేదు"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"నిష్క్రమిస్తోంది…"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"మీడియా %1$sకు మారుతోంది"</string>
-    <string name="display_brightness" msgid="5718970880488110840">"ప్రకాశం"</string>
+    <string name="display_brightness" msgid="5718970880488110840">"బ్రైట్‌నెస్"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"స్క్రీన్‌ను తక్కువ కాంతికి సర్దుబాటు చేయండి"</string>
     <string name="units_settings" msgid="402325305096925886">"యూనిట్‌లు"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"వేగం"</string>
@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"మీ వాహనం ఈ ఫీచర్‌ను సపోర్ట్ చేయట్లేదు"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"మూసివేయండి"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"వర్తింపజేయండి"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"క్రియేట్ చేయండి"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"ఆకార నిష్పత్తి సెట్టింగ్‌లు"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"మీరు ఆకార నిష్పత్తిని మార్చినప్పుడు యాప్ రీస్టార్ట్ అవుతుంది. మీరు సేవ్ చేయని మార్పులను కోల్పోవచ్చు. కొన్ని యాప్‌లు నిర్దిష్ట ఆకార నిష్పత్తులకు ఆప్టిమైజ్ అవ్వకపోవచ్చు."</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"యాప్ ఆటోమేటిక్ సెట్టింగ్"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"డిస్‌ప్లే సైజ్, టెక్స్ట్‌ను అప్‌డేట్ చేయడం విఫలమైంది."</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"విడ్జెట్‌ను క్రియేట్ చేసి, యాక్సెస్‌ను అనుమతించాలా?"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"మీరు <xliff:g id="WIDGET_LABEL">%2$s</xliff:g> విడ్జెట్‌ను క్రియేట్ చేసిన తర్వాత, డిస్‌ప్లే చేసిన ప్రతి దాన్ని <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g> యాక్సెస్ చేయగలరు."</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"విడ్జెట్‌లను క్రియేట్ చేసి, వాటి డేటాను యాక్సెస్ చేయడానికి <xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>‌కు ఎల్లవేళలా అనుమతినివ్వండి"</string>
 </resources>

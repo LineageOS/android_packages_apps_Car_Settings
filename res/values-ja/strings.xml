@@ -222,7 +222,7 @@
     <string name="bluetooth_audio_sharing" msgid="5886869395645761760">"音声の共有"</string>
     <string name="share_audio_switch_title" msgid="8798673733841544186">"音声を共有"</string>
     <string name="share_audio_switch_summary" msgid="5123598607194828495">"聴くには LE Audio 対応ヘッドフォンが必要です。"</string>
-    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"テスト音声の再生"</string>
+    <string name="share_audio_test_sound_title" msgid="7570329148373530884">"テスト音声を再生"</string>
     <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"聴いている人全員に聞こえます"</string>
     <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"有効なメディア デバイス"</string>
     <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"音声ストリームの設定"</string>
@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"ご利用のデバイスはこの機能に対応していません"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"閉じる"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"適用"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"作成"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"アスペクト比の設定"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"アスペクト比を変更すると、アプリが再起動します。保存されていない変更は失われる可能性があります。一部のアプリは特定のアスペクト比に合わせて最適化できない場合があります。"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"アプリのデフォルト"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"表示サイズとテキストを更新できませんでした。"</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"ウィジェットの作成とアクセスの許可"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"<xliff:g id="WIDGET_LABEL">%2$s</xliff:g> ウィジェットを作成すると、<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>は表示されるすべてにアクセスできるようになります。"</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>によるウィジェットの作成とデータへのアクセスを常に許可する"</string>
 </resources>

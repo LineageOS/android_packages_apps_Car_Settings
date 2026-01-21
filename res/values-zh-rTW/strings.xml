@@ -224,7 +224,7 @@
     <string name="share_audio_switch_summary" msgid="5123598607194828495">"聆聽者需要使用自己的 LE Audio 耳機"</string>
     <string name="share_audio_test_sound_title" msgid="7570329148373530884">"播放測試音效"</string>
     <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"所有聆聽者應該都聽得到"</string>
-    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"有效的媒體裝置"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"使用中的媒體裝置"</string>
     <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"音訊串流設定"</string>
     <string name="audio_streaming_title" msgid="174897810502966132">"音訊串流 QR code"</string>
     <string name="scan_qr_code_to_connect" msgid="734470733189688139">"掃描 QR code 即可連線"</string>
@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"本車輛不支援這項功能"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"關閉"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"套用"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"建立"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"顯示比例設定"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"變更顯示比例後，應用程式會重新啟動。你可能會失去未儲存的變更內容。部分應用程式可能未針對某些顯示比例完成最佳化調整。"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"應用程式預設"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25 倍"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5 倍"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"無法更新顯示大小和文字。"</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"要建立小工具並允許存取？"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"建立「<xliff:g id="WIDGET_LABEL">%2$s</xliff:g>」小工具後，「<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>」即可存取所有顯示的內容。"</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"一律允許「<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>」建立小工具並存取其資料"</string>
 </resources>

@@ -180,7 +180,7 @@
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"连接成功"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"全部显示"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"正在搜索"</string>
-    <string name="wifi_detail_share" msgid="3765487472190563802">"共享"</string>
+    <string name="wifi_detail_share" msgid="3765487472190563802">"分享"</string>
     <string name="wifi_detail_share_description" msgid="1417559695973326762">"扫描此二维码以连接到 Wi-Fi"</string>
     <string name="wifi_detail_share_toast" msgid="9106513465439393280">"此 Wi‑Fi 不支持 Wi-Fi 共享。"</string>
     <string name="connected_settings_title" msgid="8868738903280658151">"已连接的设备"</string>
@@ -224,7 +224,7 @@
     <string name="share_audio_switch_summary" msgid="5123598607194828495">"收听者需要自备 LE 音频耳机"</string>
     <string name="share_audio_test_sound_title" msgid="7570329148373530884">"播放测试音"</string>
     <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"所有收听者应该都能听到"</string>
-    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"使用中的媒体设备"</string>
+    <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"正在使用的媒体设备"</string>
     <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"音频流设置"</string>
     <string name="audio_streaming_title" msgid="174897810502966132">"音频流二维码"</string>
     <string name="scan_qr_code_to_connect" msgid="734470733189688139">"扫描二维码即可连接"</string>
@@ -557,7 +557,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"重置设置"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"网络设置已重置"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"重置应用偏好设置"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"此操作将会重置以下所有偏好设置：\n\n"<li>"已停用的应用"</li>\n<li>"已停用的应用通知"</li>\n<li>"执行操作的默认应用"</li>\n<li>"应用的后台流量限制"</li>\n<li>"任何权限限制"</li>\n\n"您将不会丢失任何应用数据。"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"此操作将重置以下所有项目的偏好设置：\n\n"<li>"已停用的应用"</li>\n<li>"已停用的应用通知"</li>\n<li>"执行操作的默认应用"</li>\n<li>"应用的后台流量限制"</li>\n<li>"任何权限限制"</li>\n\n"您不会丢失任何应用数据。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重置应用"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重置应用偏好设置"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"清除所有数据（恢复出厂设置）"</string>
@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"您的车辆不支持此功能"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"关闭"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"应用"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"创建"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"宽高比设置"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"更改宽高比后，应用将重启。未保存的更改可能会丢失。某些应用可能无法针对特定宽高比进行优化。"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"应用默认设置"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25 倍"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5 倍"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"未能更新显示大小和文字。"</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"是否允许该应用创建微件并访问其数据？"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"创建“<xliff:g id="WIDGET_LABEL">%2$s</xliff:g>”微件后，“<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>”就可以访问该微件显示的所有内容。"</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"始终允许“<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>”创建微件并访问其数据"</string>
 </resources>

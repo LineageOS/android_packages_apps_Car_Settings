@@ -985,8 +985,7 @@
     <string name="unsupported_intents_toast_text" msgid="3112314947877145848">"你的汽車不支援此功能"</string>
     <string name="dialog_close_button_text" msgid="5969322308259876044">"關閉"</string>
     <string name="dialog_apply_button_text" msgid="1103069196934735553">"套用"</string>
-    <!-- no translation found for dialog_create_button_text (706194032067632007) -->
-    <skip />
+    <string name="dialog_create_button_text" msgid="706194032067632007">"建立"</string>
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"長寬比設定"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"變更長寬比後，應用程式會重新啟動。你可能會遺失未儲存的變更內容。部分應用程式可能並未針對特定長寬比進行優化。"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"應用程式預設"</string>
@@ -1000,10 +999,7 @@
     <string name="display_density_dialog_large_text" msgid="3321980326255623059">"1.25x"</string>
     <string name="display_density_dialog_larger_text" msgid="4123744946718483040">"1.5x"</string>
     <string name="display_density_set_error" msgid="1044767285363807884">"無法更新顯示大小和文字。"</string>
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind_title (4395478700621003438) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_allow_bind (9186583202360968858) -->
-    <skip />
-    <!-- no translation found for allow_bind_app_widget_activity_always_allow_bind (5068031593959518141) -->
-    <skip />
+    <string name="allow_bind_app_widget_activity_allow_bind_title" msgid="4395478700621003438">"是否要建立小工具並允許存取？"</string>
+    <string name="allow_bind_app_widget_activity_allow_bind" msgid="9186583202360968858">"建立「<xliff:g id="WIDGET_LABEL">%2$s</xliff:g>」小工具後，「<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>」便可以存取顯示的所有內容。"</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind" msgid="5068031593959518141">"永遠允許「<xliff:g id="WIDGET_HOST_NAME">%1$s</xliff:g>」建立小工具並存取其資料"</string>
 </resources>
