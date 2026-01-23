@@ -24,6 +24,8 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
 
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothProfile;
 import android.media.AudioDeviceAttributes;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -92,7 +94,10 @@ public class AudioRouteItemTest {
         when(mCachedBluetoothDevice.getName()).thenReturn(name);
         when(mCachedBluetoothDevice.getAddress()).thenReturn(address);
         when(mCachedBluetoothDevice.isConnectedA2dpDevice()).thenReturn(true);
-        when(mCachedBluetoothDevice.isConnectedLeAudioDevice()).thenReturn(false);
+        when(mCachedBluetoothDevice.isActiveDevice(BluetoothProfile.LE_AUDIO)).thenReturn(false);
+        BluetoothDevice mockDevice = org.mockito.Mockito.mock(
+                android.bluetooth.BluetoothDevice.class);
+        when(mCachedBluetoothDevice.getDevice()).thenReturn(mockDevice);
 
         AudioRouteItem audioRouteItem =
                 new AudioRouteItem.Builder(mCachedBluetoothDevice)
@@ -121,6 +126,9 @@ public class AudioRouteItemTest {
         // If both profiles are available, BLE is preferred.
         when(mCachedBluetoothDevice.isConnectedA2dpDevice()).thenReturn(true);
         when(mCachedBluetoothDevice.isConnectedLeAudioDevice()).thenReturn(true);
+        BluetoothDevice mockDevice = org.mockito.Mockito.mock(
+                android.bluetooth.BluetoothDevice.class);
+        when(mCachedBluetoothDevice.getDevice()).thenReturn(mockDevice);
 
         AudioRouteItem audioRouteItem =
                 new AudioRouteItem.Builder(mCachedBluetoothDevice)
