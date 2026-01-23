@@ -25,10 +25,11 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.pm.UserInfo;
 
+import android.telecom.TelecomManager;
+
 import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.profiles.ProfileHelper;
-import com.android.car.settings.testutils.ShadowDefaultDialerManager;
 import com.android.car.settings.testutils.ShadowSmsApplication;
 import com.android.car.settings.testutils.ShadowUserHelper;
 
@@ -37,6 +38,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowTelecomManager;
 
 import java.util.Collections;
 
@@ -52,14 +55,16 @@ public class ApplicationsUtilsTest {
 
     @After
     public void tearDown() {
-        ShadowDefaultDialerManager.reset();
         ShadowSmsApplication.reset();
         ShadowUserHelper.reset();
     }
 
     @Test
     public void isKeepEnabledPackage_defaultDialerApplication_returnsTrue() {
-        ShadowDefaultDialerManager.setDefaultDialerApplication(PACKAGE_NAME);
+        TelecomManager telecomManager = RuntimeEnvironment.application.getSystemService(
+                TelecomManager.class);
+        ShadowTelecomManager shadowTelecomManager = Shadow.extract(telecomManager);
+        shadowTelecomManager.setDefaultDialer(PACKAGE_NAME);
 
         assertThat(ApplicationsUtils.isKeepEnabledPackage(RuntimeEnvironment.application,
                 PACKAGE_NAME)).isTrue();

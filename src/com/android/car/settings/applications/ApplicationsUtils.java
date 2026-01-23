@@ -19,12 +19,15 @@ package com.android.car.settings.applications;
 import static android.provider.DeviceConfig.NAMESPACE_APP_HIBERNATION;
 
 import android.app.admin.DevicePolicyManager;
+import android.app.role.RoleManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.Process;
+import android.os.UserHandle;
 import android.provider.DeviceConfig;
-import android.telecom.DefaultDialerManager;
 import android.text.TextUtils;
+import android.telecom.TelecomManager;
 import android.util.ArraySet;
 
 import com.android.car.settings.profiles.ProfileHelper;
@@ -50,10 +53,18 @@ public class ApplicationsUtils {
     public static boolean isKeepEnabledPackage(Context context, String packageName) {
         // Find current default phone/sms app. We should keep them enabled.
         Set<String> keepEnabledPackages = new ArraySet<>();
-        String defaultDialer = DefaultDialerManager.getDefaultDialerApplication(context);
+        RoleManager roleManager = context.getSystemService(RoleManager.class);
+        if (roleManager != null) {
+            keepEnabledPackages.addAll(roleManager.getRoleHoldersAsUser(RoleManager.ROLE_DIALER,
+                    Process.myUserHandle()));
+        }
+
+        String defaultDialer =
+                context.getSystemService(TelecomManager.class).getDefaultDialerPackage();
         if (!TextUtils.isEmpty(defaultDialer)) {
             keepEnabledPackages.add(defaultDialer);
         }
+
         ComponentName defaultSms = SmsApplication.getDefaultSmsApplication(
                 context, /* updateIfNeeded= */ true);
         if (defaultSms != null) {

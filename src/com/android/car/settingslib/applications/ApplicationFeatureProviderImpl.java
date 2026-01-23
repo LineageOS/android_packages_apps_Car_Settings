@@ -18,6 +18,7 @@ package com.android.car.settingslib.applications;
 
 import android.Manifest;
 import android.app.admin.DevicePolicyManager;
+import android.app.role.RoleManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -29,10 +30,11 @@ import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
 import android.content.pm.UserInfo;
 import android.location.LocationManager;
+import android.os.Process;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.service.euicc.EuiccService;
-import android.telecom.DefaultDialerManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
 import android.util.Log;
@@ -147,10 +149,13 @@ public final class ApplicationFeatureProviderImpl implements ApplicationFeatureP
     public Set<String> getKeepEnabledPackages() {
         // Find current default phone/sms app. We should keep them enabled.
         final Set<String> keepEnabledPackages = new ArraySet<>();
-        final String defaultDialer = DefaultDialerManager.getDefaultDialerApplication(mContext);
-        if (!TextUtils.isEmpty(defaultDialer)) {
-            keepEnabledPackages.add(defaultDialer);
+
+        RoleManager roleManager = mContext.getSystemService(RoleManager.class);
+        if (roleManager != null) {
+            keepEnabledPackages.addAll(roleManager.getRoleHoldersAsUser(
+                    RoleManager.ROLE_DIALER, Process.myUserHandle()));
         }
+
         final ComponentName defaultSms = SmsApplication.getDefaultSmsApplication(
                 mContext, true /* updateIfNeeded */);
         if (defaultSms != null) {
