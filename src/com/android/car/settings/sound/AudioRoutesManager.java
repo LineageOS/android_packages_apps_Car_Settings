@@ -618,10 +618,7 @@ public class AudioRoutesManager {
                 .map(item -> new AudioRouteEvent(item.getAddress(),
                         AudioRouteItem.Command.CANCEL_STARTING_BROADCAST));
 
-        Stream<AudioRouteEvent> resetStream = mCachedAudioRoutes.values().stream()
-                .map(item -> new AudioRouteEvent(item.getAddress(), RESET));
-
-        requestAudioRouteEvents(Stream.concat(cancelStream, resetStream).toList());
+        requestAudioRouteEvents(cancelStream.toList());
     }
 
     private String zoneConfigInfosToString(List<CarAudioZoneConfigInfo> configs) {
@@ -922,6 +919,8 @@ public class AudioRoutesManager {
                     if (command == CANCEL_STARTING_BROADCAST) {
                         newState = CREATED;
                         addNewCheckEventWithNewState = true;
+                        mActivatingBroadcast = false;
+                        mSelectingBroadcast = false;
                         ContextCompat.getMainExecutor(mContext).execute(() -> {
                             Toast.makeText(mContext, mContext.getString(
                                     R.string.audio_route_preference_starting_broadcast_failed),

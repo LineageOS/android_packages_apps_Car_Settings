@@ -1203,6 +1203,281 @@ public class AudioRoutesManagerTest {
     }
 
     @Test
+    public void joinBroadcast_preventsDuplicateRequests() {
+        CarAudioZoneConfigInfo leAudioZoneConfig1 = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
+                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_BROADCAST_ADDRESS,
+                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
+                /* type= */ TYPE_BLE_BROADCAST,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+        CachedBluetoothDevice leAudioBluetoothDevice1 = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ true,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ true,
+                /* isActiveLeAudio= */ true);
+        setupMockAudioRoutes(
+                List.of(leAudioZoneConfig1, leBroadcastZoneConfig),
+                List.of(leAudioBluetoothDevice1)
+        );
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+
+        // Initial state.
+        mAudioRoutesManager = createAudioRoutesManager();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        // Simulate audio zone config for BT_LE_BROADCAST is selected.
+        when(leBroadcastZoneConfig.isActive()).thenReturn(true);
+        when(leBroadcastZoneConfig.isSelected()).thenReturn(true);
+
+        // Transition to JOINING_BROADCAST.
+        // This triggers the first addSource call.
+        mAudioRoutesManager.joinBroadcast(BT_LE_AUDIO_DEVICE_ADDRESS_1);
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+
+        // Simulate multiple updates while in JOINING_BROADCAST state.
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+
+        verify(mLocalBluetoothLeBroadcastAssistant, times(1)).addSource(
+                eq(mReceivingBroadcastBluetoothDevice1), any(), eq(true));
+    }
+
+    @Test
+    public void leaveBroadcast_preventsDuplicateRequests() {
+        CarAudioZoneConfigInfo deviceZoneConfig = createZoneConfig(
+                /* name= */ DEVICE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ AUDIO_DEVICE_ADDRESS,
+                /* deviceName= */ AUDIO_DEVICE_NAME,
+                /* type= */ TYPE_BUILTIN_SPEAKER,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+        CarAudioZoneConfigInfo leAudioZoneConfig1 = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
+                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_BROADCAST_ADDRESS,
+                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
+                /* type= */ TYPE_BLE_BROADCAST,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CachedBluetoothDevice leAudioBluetoothDevice1 = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ true,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ true,
+                /* isActiveLeAudio= */ true);
+        setupMockAudioRoutes(
+                /* zoneInfos= */
+                List.of(deviceZoneConfig, leAudioZoneConfig1, leBroadcastZoneConfig),
+                /* cachedDevices= */ List.of(leAudioBluetoothDevice1)
+        );
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+        setupBroadcastReceivingDevice(mReceivingBroadcastBluetoothDevice1);
+
+        // Initial state.
+        mAudioRoutesManager = createAudioRoutesManager();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        // Transition to LEAVING_BROADCAST.
+        // This triggers the first removeSource call.
+        mAudioRoutesManager.leaveBroadcast(BT_LE_AUDIO_DEVICE_ADDRESS_1);
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+
+        // Simulate multiple updates while in LEAVING_BROADCAST state.
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+
+        verify(mLocalBluetoothLeBroadcastAssistant, times(1)).removeSource(
+                eq(mReceivingBroadcastBluetoothDevice1), anyInt());
+    }
+
+    @Test
+    public void startBroadcast_rollbacksIfStartingBroadcastFailed() {
+        setAudioSharing(true);
+        // Setup initial state: Broadcast ready (inactive).
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
+                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_BROADCAST_ADDRESS,
+                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
+                /* type= */ TYPE_BLE_BROADCAST,
+                /* isActive= */ false, // Broadcast hasn't started, so is not active.
+                /* isSelected= */ false);
+
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leAudioZoneConfig, leBroadcastZoneConfig),
+                /* cachedDevices= */ List.of(leAudioBluetoothDevice));
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+
+        mAudioRoutesManager = createAudioRoutesManager();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        // 1. Act. Trigger Join Broadcast (Start Broadcast).
+        mAudioRoutesManager.joinBroadcast(BT_LE_AUDIO_DEVICE_ADDRESS_1);
+
+        // 2. Verify initial state: STARTING_BROADCAST
+        assertThat(mAudioRoutesManager.getActiveRoutes().get(
+                BT_LE_AUDIO_DEVICE_ADDRESS_1).getState()).isEqualTo(
+                AudioRouteItem.State.STARTING_BROADCAST);
+
+        // 3. Act. Simulate Broadcast Start Failure.
+        ArgumentCaptor<BluetoothLeBroadcast.Callback> broadcastCallbackCaptor =
+                ArgumentCaptor.forClass(BluetoothLeBroadcast.Callback.class);
+        verify(mLocalBluetoothLeBroadcast).registerServiceCallBack(any(),
+                broadcastCallbackCaptor.capture());
+        BluetoothLeBroadcast.Callback broadcastCallback = broadcastCallbackCaptor.getValue();
+        broadcastCallback.onBroadcastStartFailed(2);
+
+        // 4. Verify fallback to UNICAST_ACTIVE.
+        assertThat(mAudioRoutesManager.getActiveRoutes().get(
+                BT_LE_AUDIO_DEVICE_ADDRESS_1).getState()).isEqualTo(
+                AudioRouteItem.State.UNICAST_ACTIVE);
+        assertShowingToast(mContext.getString(
+                R.string.audio_route_preference_starting_broadcast_failed));
+
+        // 5. Retry Join Broadcast.
+        mAudioRoutesManager.joinBroadcast(BT_LE_AUDIO_DEVICE_ADDRESS_1);
+
+        // 6. Verify startBroadcast() called again this time for retrying.
+        verify(mLocalBluetoothLeBroadcast, times(2)).startBroadcast(any(), any());
+    }
+
+    @Test
+    public void joinBroadcast_preventsStartBroadcastCalls() {
+        setAudioSharing(true);
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
+                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_BROADCAST_ADDRESS,
+                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
+                /* type= */ TYPE_BLE_BROADCAST,
+                /* isActive= */ false,
+                /* isSelected= */ false);
+
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+
+        // Initial state: LE Audio device connected. Broadcast ready (not started).
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leAudioZoneConfig, leBroadcastZoneConfig),
+                /* cachedDevices= */ List.of(leAudioBluetoothDevice));
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+
+        mAudioRoutesManager = createAudioRoutesManager();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        // Act 1: Trigger Join Broadcast (Start Broadcast).
+        mAudioRoutesManager.joinBroadcast(BT_LE_AUDIO_DEVICE_ADDRESS_1);
+
+        // Act 2: Simulate duplicate request (e.g. from UI or another event).
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+
+        // Verify: startBroadcast() called only once.
+        verify(mLocalBluetoothLeBroadcast, times(1)).startBroadcast(any(), any());
+    }
+
+    @Test
+    public void joinBroadcast_preventsDuplicateRequestRouteSwitchInternalCalls() {
+        setAudioSharing(true);
+        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
+                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* type= */ TYPE_BLE_HEADSET,
+                /* isActive= */ true,
+                /* isSelected= */ true);
+        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
+                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
+                /* address= */ BT_LE_BROADCAST_ADDRESS,
+                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
+                /* type= */ TYPE_BLE_BROADCAST,
+                /* isActive= */ true,
+                /* isSelected= */ false);
+
+        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
+                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
+                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
+                /* device= */ mReceivingBroadcastBluetoothDevice1,
+                /* isConnectedA2dp= */ false,
+                /* isConnectedLeAudio= */ true,
+                /* isActiveA2dp= */ false,
+                /* isActiveLeAudio= */ true);
+
+        // Initial state: LE Audio device connected.
+        // Mock that broadcast IS started (Step 1 complete), but route not switched yet.
+        setupMockAudioRoutes(
+                /* zoneInfos= */ List.of(leAudioZoneConfig, leBroadcastZoneConfig),
+                /* cachedDevices= */ List.of(leAudioBluetoothDevice));
+        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
+
+        // Mock isBroadcastReady = true (Step 1 skipped).
+        when(mLocalBluetoothLeBroadcast.getAllBroadcastMetadata()).thenReturn(
+                List.of(mBluetoothLeBroadcastMetadata));
+        when(mBluetoothLeBroadcastMetadata.getSourceDevice()).thenReturn(mBroadcastBluetoothDevice);
+        // Mock isBroadcasting = false (Step 3 skipped, we stay in STARTING_BROADCAST).
+        when(mLocalBluetoothLeBroadcastAssistant.getAllSources(any())).thenReturn(List.of());
+
+        mAudioRoutesManager = createAudioRoutesManager();
+        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
+
+        // Act 1: Trigger Join Broadcast (skips Step 1, goes to Step 2).
+        mAudioRoutesManager.joinBroadcast(BT_LE_AUDIO_DEVICE_ADDRESS_1);
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+
+        // Act 2: Simulate subsequent update.
+        mAudioRoutesManager.updateAndNotifyAudioRouteItemsIfChanged();
+
+        // Verify: requestRouteSwitchInternal called only once.
+        verify(mCarAudioManager, times(1)).switchAudioZoneToConfig(eq(leBroadcastZoneConfig), any(),
+                any());
+    }
+
+    @Test
     public void tearDown_clearsCallback() {
         mAudioRoutesManager = createAudioRoutesManager();
         mAudioRoutesManager.tearDown();
@@ -1685,76 +1960,6 @@ public class AudioRoutesManagerTest {
                 BluetoothProfile.A2DP);
 
         verify(mListener, times(2)).onAudioRoutesUpdated(any());
-    }
-
-    @Test
-    public void startBroadcast_fails_updatesAudioRoutes() {
-        setAudioSharing(true);
-        // Setup initial state: Broadcast ready (inactive)
-        CarAudioZoneConfigInfo leAudioZoneConfig = createZoneConfig(
-                /* name= */ LE_AUDIO_ZONE_CONFIG_NAME,
-                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
-                /* deviceName= */ BT_LE_AUDIO_DEVICE_NAME_1,
-                /* type= */ TYPE_BLE_HEADSET,
-                /* isActive= */ true,
-                /* isSelected= */ false);
-        CarAudioZoneConfigInfo leBroadcastZoneConfig = createZoneConfig(
-                /* name= */ LE_BROADCAST_AUDIO_ZONE_CONFIG_NAME,
-                /* address= */ BT_LE_BROADCAST_ADDRESS,
-                /* deviceName= */ BT_LE_BROADCAST_DEVICE_NAME,
-                /* type= */ TYPE_BLE_BROADCAST,
-                /* isActive= */ true,
-                /* isSelected= */ false);
-
-        CachedBluetoothDevice leAudioBluetoothDevice = createCachedBluetoothDevice(
-                /* name= */ BT_LE_AUDIO_DEVICE_NAME_1,
-                /* address= */ BT_LE_AUDIO_DEVICE_ADDRESS_1,
-                /* device= */ mReceivingBroadcastBluetoothDevice1,
-                /* isConnectedA2dp= */ false,
-                /* isConnectedLeAudio= */ true,
-                /* isActiveA2dp= */ false,
-                /* isActiveLeAudio= */ true);
-
-        setupMockAudioRoutes(
-                /* zoneInfos= */ List.of(leAudioZoneConfig, leBroadcastZoneConfig),
-                /* cachedDevices= */ List.of(leAudioBluetoothDevice));
-        setupLeBroadcast(BT_LE_BROADCAST_ADDRESS);
-
-        mAudioRoutesManager = createAudioRoutesManager();
-        mAudioRoutesManager.setAudioRoutesUpdateListener(mListener);
-
-        // Verify initial state: BROADCAST_READY
-        Map<String, AudioRouteItem> audioRouteItems = mAudioRoutesManager.getActiveRoutes();
-        assertThat(audioRouteItems.get(BT_LE_BROADCAST_ADDRESS).getState()).isEqualTo(
-                AudioRouteItem.State.BROADCAST_READY);
-
-        // 1. Trigger Join Broadcast (Start Broadcast)
-        mAudioRoutesManager.joinBroadcast(BT_LE_BROADCAST_ADDRESS);
-
-        // // Verify state transition to STARTING_BROADCAST
-        // audioRouteItems = mAudioRoutesManager.getActiveRoutes();
-        // // Since joinBroadcast runs on executor, we need to wait/sync or just capture the callback interactions if checking intermediate state is hard without exposing executor.
-        // // However, we can capture the broadcast callback registration.
-        // ArgumentCaptor<BluetoothLeBroadcast.Callback> broadcastCallbackCaptor =
-        //         ArgumentCaptor.forClass(BluetoothLeBroadcast.Callback.class);
-        // verify(mLocalBluetoothLeBroadcast).registerServiceCallBack(any(),
-        //         broadcastCallbackCaptor.capture());
-        // BluetoothLeBroadcast.Callback broadcastCallback = broadcastCallbackCaptor.getValue();
-
-        // // 2. Simulate Broadcast Start Failure
-        // broadcastCallback.onBroadcastStartFailed(2);
-
-        // 3. Verify fallback to BROADCAST_READY (reset) and Toast shown
-        // We need to wait for the executor to process the failure callback.
-        // But since we mock executor to run immediately in setUp(), it should be fine.
-        // audioRouteItems = mAudioRoutesManager.getActiveRoutes();
-        // assertThat(audioRouteItems.get(BT_LE_AUDIO_DEVICE_ADDRESS_1).getState()).isEqualTo(
-        //         AudioRouteItem.State.UNICAST_ACTIVE);
-        // assertThat(audioRouteItems.get(BT_LE_BROADCAST_ADDRESS).getState()).isEqualTo(
-        //         AudioRouteItem.State.BROADCAST_READY);
-
-        // assertShowingToast(mContext.getString(
-        //         R.string.audio_route_preference_starting_broadcast_failed));
     }
 
     private void setupMockAudioRoutes(List<CarAudioZoneConfigInfo> zoneInfos,
