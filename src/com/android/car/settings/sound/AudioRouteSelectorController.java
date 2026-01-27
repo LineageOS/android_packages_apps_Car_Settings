@@ -43,7 +43,7 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
 
     AudioRoutesManager.AudioRoutesUpdateListener mAudioRoutesUpdateListener =
             audioRouteItems -> {
-                LOG.d("onAudioRoutesUpdated: " + audioRouteItems);
+                LOG.i("onAudioRoutesUpdated: " + audioRouteItems);
                 updatePreferenceOptions(audioRouteItems);
             };
 
@@ -78,7 +78,7 @@ public class AudioRouteSelectorController extends PreferenceController<AudioRout
                 || !mRouteManager.isAudioRoutingEnabled()) {
             return;
         }
-        LOG.d("Updating preferences options based on updated audio routes");
+        LOG.i("Updating preferences options based on updated audio routes");
         getPreference().removeAll();
         for (AudioRouteItem item : audioRouteItems) {
             // Broadcast is not displayed as a possible audio route.

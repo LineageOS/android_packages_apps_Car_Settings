@@ -21,6 +21,7 @@ import static android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP;
 import static android.media.AudioDeviceInfo.TYPE_UNKNOWN;
 
 import android.annotation.SuppressLint;
+import android.bluetooth.BluetoothAdapter;
 import android.media.AudioDeviceAttributes;
 import android.media.AudioDeviceInfo;
 
@@ -243,6 +244,7 @@ public class AudioRouteItem {
     private final GlobalState mGlobalState;
     private final State mState;
     private final VolumeState mVolumeState;
+    private final String mAnonymizedAddress;
     // TODO: b/451450273 - Remove mBluetoothDevice;
     @Nullable private final CachedBluetoothDevice mBluetoothDevice;
 
@@ -445,6 +447,7 @@ public class AudioRouteItem {
     private AudioRouteItem(Builder builder) {
         mName = builder.mName;
         mAddress = builder.mAddress;
+        mAnonymizedAddress = builder.mAnonymizedAddress;
         mAudioDeviceType = builder.mAudioDeviceType;
         mBluetoothDevice = builder.mBluetoothDevice;
         mAudioZoneConfigState = builder.mAudioZoneConfigState;
@@ -467,6 +470,11 @@ public class AudioRouteItem {
     /** Gets the address of the audio route. */
     public String getAddress() {
         return mAddress;
+    }
+
+    /** Gets the anonymized address of the audio route. */
+    public String getAnonymizedAddress() {
+        return mAnonymizedAddress;
     }
 
     /** Gets the audio device type of the route. */
@@ -510,6 +518,20 @@ public class AudioRouteItem {
         return mAudioDeviceType == TYPE_BLE_HEADSET || mAudioDeviceType == TYPE_BLUETOOTH_A2DP;
     }
 
+    /** Redacts the given address if it's a valid Bluetooth address. */
+    public static String redact(String address) {
+        if (address == null || address.isEmpty()) {
+            return address;
+        }
+        try {
+            return BluetoothAdapter.getDefaultAdapter().getRemoteDevice(address)
+                    .getAnonymizedAddress();
+        } catch (Exception e) {
+            // Fallback to original address if it's not a valid Bluetooth address
+        }
+        return address;
+    }
+
 
     @Override
     public String toString() {
@@ -518,7 +540,7 @@ public class AudioRouteItem {
                 + "VolumeState=%s}")
                 .formatted(
                         mName,
-                        mAddress,
+                        mAnonymizedAddress,
                         mState,
                         mAudioDeviceType,
                         mAudioZoneConfigState,
@@ -532,6 +554,7 @@ public class AudioRouteItem {
     public static class Builder {
         private String mName;
         private String mAddress;
+        private final String mAnonymizedAddress;
         private @AudioDeviceInfo.AudioDeviceType int mAudioDeviceType;
         @Nullable private CachedBluetoothDevice mBluetoothDevice;
         private AudioZoneConfigState mAudioZoneConfigState =
@@ -547,6 +570,7 @@ public class AudioRouteItem {
         public Builder(CachedBluetoothDevice bluetoothDevice) {
             mName = bluetoothDevice.getName();
             mAddress = bluetoothDevice.getAddress();
+            mAnonymizedAddress = bluetoothDevice.getDevice().getAnonymizedAddress();
             mAudioDeviceType = getBluetoothAudioType(bluetoothDevice);
 
             mBluetoothDevice = bluetoothDevice;
@@ -565,6 +589,7 @@ public class AudioRouteItem {
         public Builder(AudioDeviceAttributes audioDeviceAttributes) {
             mName = audioDeviceAttributes.getName();
             mAddress = audioDeviceAttributes.getAddress();
+            mAnonymizedAddress = AudioRouteItem.redact(mAddress);
             mAudioDeviceType = audioDeviceAttributes.getType();
         }
 
@@ -572,6 +597,7 @@ public class AudioRouteItem {
         public Builder(AudioRouteItem audioRouteItem) {
             mName = audioRouteItem.getName();
             mAddress = audioRouteItem.getAddress();
+            mAnonymizedAddress = audioRouteItem.getAnonymizedAddress();
             mAudioDeviceType = audioRouteItem.getAudioRouteType();
             mBluetoothDevice = audioRouteItem.getBluetoothDevice();
             mAudioZoneConfigState = audioRouteItem.getAudioZoneConfigState();

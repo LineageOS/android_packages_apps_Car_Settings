@@ -1836,6 +1836,11 @@ public class AudioRoutesManagerTest {
         when(mockDevice.isActiveDevice(BluetoothProfile.LE_AUDIO)).thenReturn(isActiveLeAudio);
         if (device != null) {
             when(mockDevice.getDevice()).thenReturn(device);
+        } else {
+            BluetoothDevice mockBluetoothDevice = mock(BluetoothDevice.class);
+            when(mockBluetoothDevice.getAddress()).thenReturn(address);
+            when(mockBluetoothDevice.getAnonymizedAddress()).thenReturn(address);
+            when(mockDevice.getDevice()).thenReturn(mockBluetoothDevice);
         }
         return mockDevice;
     }
