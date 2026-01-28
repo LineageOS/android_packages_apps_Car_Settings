@@ -588,6 +588,10 @@
     <string name="audio_route_preference_starting_broadcast_failed">Failed to start audio sharing</string>
     <!-- Summary for leaving broadcast audio state. [CHAR LIMIT=40] -->
     <string name="audio_route_preference_leaving_broadcast">Leaving...</string>
+    <!-- Summary for broadcast joining audio state failed. [CHAR LIMIT=60] -->
+    <string name="audio_route_preference_joining_broadcast_failed">Failed to join broadcast from %1$s</string>
+    <!-- Summary for broadcast leaving audio state failed. [CHAR LIMIT=60] -->
+    <string name="audio_route_preference_leaving_broadcast_failed">Failed to leave broadcast from %1$s</string>
 
 
 
