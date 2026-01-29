@@ -24,6 +24,8 @@ import static android.media.AudioDeviceInfo.TYPE_BLE_HEADSET;
 
 import static com.android.car.settings.bluetooth.audiosharing.BaseAudioSharingPreferenceController.isUserAudioSharingEnabled;
 import static com.android.car.settings.sound.AudioRouteItem.Command.CANCEL_STARTING_BROADCAST;
+import static com.android.car.settings.sound.AudioRouteItem.Command.CANCEL_JOINING_BROADCAST;
+import static com.android.car.settings.sound.AudioRouteItem.Command.CANCEL_LEAVING_BROADCAST;
 import static com.android.car.settings.sound.AudioRouteItem.Command.CANCEL_STARTING_UNICAST;
 import static com.android.car.settings.sound.AudioRouteItem.Command.CHECK_CONDITIONS;
 import static com.android.car.settings.sound.AudioRouteItem.Command.JOIN_BROADCAST;
@@ -423,6 +425,24 @@ public class AudioRoutesManager {
                             + "%s, reason: %s")
                             .formatted(sink.getName(), sink.getAddress(), sourceId, reason));
                     updateAndNotifyAudioRouteItemsIfChanged();
+                }
+
+                @Override
+                public void onSourceAddFailed(@NonNull BluetoothDevice sink,
+                        @NonNull BluetoothLeBroadcastMetadata source, int reason) {
+                    LOG.e(("[BaseLeBroadcastAssistantCallback#onSourceAddFailed] sink: %s, reason:"
+                            + " %d").formatted(sink.getAddress(), reason));
+                    requestAudioRouteEvent(
+                            new AudioRouteEvent(sink.getAddress(), CANCEL_JOINING_BROADCAST));
+                }
+
+                @Override
+                public void onSourceRemoveFailed(@NonNull BluetoothDevice sink, int sourceId,
+                        int reason) {
+                    LOG.e(("[BaseLeBroadcastAssistantCallback#onSourceRemoveFailed] sink: %s, "
+                            + "reason: %d").formatted(sink.getAddress(), reason));
+                    requestAudioRouteEvent(
+                            new AudioRouteEvent(sink.getAddress(), CANCEL_LEAVING_BROADCAST));
                 }
             };
 
@@ -991,6 +1011,20 @@ public class AudioRoutesManager {
                     break;
 
                 case JOINING_BROADCAST:
+                    if (command == CANCEL_JOINING_BROADCAST) {
+                        if (mJoiningBroadcastAddresses.contains(audioRoute.getAddress())) {
+                            mJoiningBroadcastAddresses.remove(audioRoute.getAddress());
+                        }
+                        newState = CREATED;
+                        addNewCheckEventWithNewState = true;
+                        ContextCompat.getMainExecutor(mContext).execute(() -> {
+                            Toast.makeText(mContext, mContext.getString(
+                                    R.string.audio_route_preference_joining_broadcast_failed,
+                                    audioRoute.getName()), Toast.LENGTH_SHORT).show();
+                        });
+                        break;
+                    }
+
                     if (command != CHECK_CONDITIONS) break;
 
                     if (!isBroadcasting) {
@@ -1011,7 +1045,6 @@ public class AudioRoutesManager {
                         mLeBroadcastAssistantProfile.addSource(
                                 audioRoute.getBluetoothDevice().getDevice(),
                                 broadcastMetadata, /* isGroupOp= */ true);
-
                     } else {
                         mJoiningBroadcastAddresses.remove(audioRoute.getAddress());
                         LOG.i("[handleEvents] <JOINING_BROADCAST> JOINED");
@@ -1057,6 +1090,20 @@ public class AudioRoutesManager {
                     break;
 
                 case LEAVING_BROADCAST:
+                    if (command == CANCEL_LEAVING_BROADCAST) {
+                        if (mLeavingBroadcastAddresses.contains(audioRoute.getAddress())) {
+                            mLeavingBroadcastAddresses.remove(audioRoute.getAddress());
+                        }
+                        newState = CREATED;
+                        addNewCheckEventWithNewState = true;
+                        ContextCompat.getMainExecutor(mContext).execute(() -> {
+                            Toast.makeText(mContext, mContext.getString(
+                                    R.string.audio_route_preference_leaving_broadcast_failed,
+                                    audioRoute.getName()), Toast.LENGTH_SHORT).show();
+                        });
+                        break;
+                    }
+
                     if (command != CHECK_CONDITIONS) break;
 
                     if (!mLeavingBroadcastAddresses.contains(audioRoute.getAddress())) {
