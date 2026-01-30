@@ -94,6 +94,8 @@ public class CollapsibleSeekbarPreference extends SeekBarPreference {
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
+        holder.setDividerAllowedAbove(false);
+        holder.setDividerAllowedBelow(false);
         // set-up preference icon for primary action
         View radioButton = requireViewByRefId(holder.itemView, android.R.id.icon);
         radioButton.setOnClickListener(
