@@ -16,7 +16,7 @@
 
 package com.android.car.settings.displaycompat;
 
-import static com.android.systemui.car.Flags.displayCompatibilityV2;
+import static com.android.systemui.car.Flags.displayCompatV2;
 
 import android.view.View;
 import android.widget.Button;
@@ -44,7 +44,7 @@ public abstract class TwoColumnRadioDialogHelper {
      * given {@code componentName}.
      */
     public void setupDialog(@NonNull View dialogView) {
-        if (!displayCompatibilityV2()) {
+        if (!displayCompatV2()) {
             return;
         }
         TextView titleTextView = dialogView.findViewById(R.id.dialog_title);

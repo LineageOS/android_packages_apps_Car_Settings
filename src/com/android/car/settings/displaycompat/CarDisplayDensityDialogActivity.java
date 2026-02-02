@@ -19,7 +19,7 @@ package com.android.car.settings.displaycompat;
 import static android.view.Display.DEFAULT_DISPLAY;
 
 import static com.android.car.oem.tokens.Token.applyOemTokenStyle;
-import static com.android.systemui.car.Flags.displayCompatibilityV2;
+import static com.android.systemui.car.Flags.displayCompatV2;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -55,7 +55,7 @@ public class CarDisplayDensityDialogActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!displayCompatibilityV2()) {
+        if (!displayCompatV2()) {
             finish();
             return;
         }
