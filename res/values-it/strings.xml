@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Avvio della trasmissione in corso…"</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Connessione in corso…"</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"Impossibile connettersi a %1$s"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"Impossibile avviare condivisione audio"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Uscita in corso..."</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"Impossibile partecipare alla trasmissione di %1$s"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"Impossibile abbandonare la trasmissione di %1$s"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Passaggio dei contenuti multimediali a %1$s in corso…"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Luminosità"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Regola lo schermo per condizioni di scarsa illuminazione"</string>
@@ -566,7 +569,7 @@
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Hai eseguito l\'accesso ai seguenti account:"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"Per questo veicolo sono già stati configurati altri profili."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Cancella tutti i dati"</string>
-    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Vuoi cancellare tutti i dati?"</string>
+    <string name="factory_reset_confirm_title" msgid="3354542161765761879">"Cancellare tutti i dati?"</string>
     <string name="factory_reset_confirm_desc" msgid="2037199381372030510">"Verranno cancellati tutti i dati del tuo profilo personale, i tuoi account e le app scaricate su questo sistema di infotainment.\n\nQuesta azione non può essere annullata."</string>
     <string name="factory_reset_confirm_button_text" msgid="1797490544756481809">"Cancella tutto"</string>
     <string name="factory_reset_progress_title" msgid="4580937077054738173">"Cancellazione…"</string>

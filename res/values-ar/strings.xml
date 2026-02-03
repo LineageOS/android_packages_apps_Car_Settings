@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"جارٍ بدء البث..."</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"جارٍ الاتصال..."</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"تعذّر الاتصال بـ ‎%1$s"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"تعذَّر بدء \"مشاركة الصوت\""</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"جارٍ المغادرة..."</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"تعذّر الانضمام إلى البث من ‎%1$s"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"تعذّرت مغادرة البث من ‎%1$s"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"تبديل مسار الوسائط إلى %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"السطوع"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"ضبط الشاشة على وضع \"الإضاءة المنخفضة\""</string>
@@ -537,7 +540,7 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"حدثت مشكلة أثناء تحميل التراخيص."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"جارٍ التحميل…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{لا تفصلك الآن عن الوصول إلى مرحلة مطوّري البرامج سوى خطوة واحدة.}zero{لا تفصلك الآن عن الوصول إلى مرحلة مطوّري البرامج سوى # خطوة.}two{لا تفصلك الآن عن الوصول إلى مرحلة مطوّري البرامج سوى خطوتين.}few{لا تفصلك الآن عن الوصول إلى مرحلة مطوّري البرامج سوى # خطوات.}many{لا تفصلك الآن عن الوصول إلى مرحلة مطوّري البرامج سوى # خطوة.}other{لا تفصلك الآن عن الوصول إلى مرحلة مطوّري البرامج سوى # خطوة.}}"</string>
-    <string name="show_dev_on" msgid="5339077400040834808">"لقد أصبحت الآن مطوّر برامج."</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"أهلاً بك بين المطوّرين"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"لا حاجة لذلك، فأنت مطوّر برامج فعلاً."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"خيارات المطوّرين"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"خيارات إعادة الضبط"</string>
