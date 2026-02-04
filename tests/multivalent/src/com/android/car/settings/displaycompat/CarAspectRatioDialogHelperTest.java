@@ -29,11 +29,9 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import android.app.IActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.IPackageManager;
 import android.content.pm.PackageManager;
 import android.os.RemoteException;
 import android.os.UserHandle;
@@ -42,6 +40,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import com.android.car.settings.applications.appinfo.AspectRatioManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -63,15 +63,13 @@ public class CarAspectRatioDialogHelperTest {
     @Mock
     private Context mContext;
     @Mock
-    private IPackageManager mPackageManager;
-    @Mock
-    private IActivityManager mActivityManager;
-    @Mock
     private RadioGroup mRadioGroup;
     @Mock
     private RadioButton mFullScreenRadioButton;
     @Mock
     private Runnable mDismissRunnable;
+    @Mock
+    private AspectRatioManager mAspectRatioManager;
 
     private CarAspectRatioDialogHelper mHelper;
     private MockitoSession mSession;
@@ -85,8 +83,8 @@ public class CarAspectRatioDialogHelperTest {
                 .startMocking();
         ComponentName testComponentName = new ComponentName(TEST_PACKAGE_NAME, "TestClass");
 
-        mHelper = new CarAspectRatioDialogHelper(mContext, mPackageManager, mActivityManager,
-                mDismissRunnable, testComponentName, TEST_USER_ID);
+        mHelper = new CarAspectRatioDialogHelper(mContext, mDismissRunnable, testComponentName,
+                TEST_USER_ID, mAspectRatioManager);
     }
 
     @After
@@ -104,9 +102,8 @@ public class CarAspectRatioDialogHelperTest {
         mHelper.submitResult(mRadioGroup,
                 String.valueOf(PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN));
 
-        verify(mPackageManager).setUserMinAspectRatio(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID),
+        verify(mAspectRatioManager).setUserMinAspectRatio(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID),
                 eq(PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN));
-        verify(mActivityManager).stopAppForUser(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID));
         verify(mContext).startActivityAsUser(nullable(Intent.class), userHandleCaptor.capture());
         assertThat(userHandleCaptor.getValue().getIdentifier()).isEqualTo(TEST_USER_ID);
         verify(mDismissRunnable, atLeastOnce()).run();
@@ -134,8 +131,7 @@ public class CarAspectRatioDialogHelperTest {
     public void submitResult_nullSelectedTagValueArg_doesNothing() throws RemoteException {
         mHelper.submitResult(mRadioGroup, /* selectedTagValue= */ null);
 
-        verify(mPackageManager, never()).setUserMinAspectRatio(anyString(), anyInt(), anyInt());
-        verify(mActivityManager, never()).stopAppForUser(anyString(), anyInt());
+        verify(mAspectRatioManager, never()).setUserMinAspectRatio(anyString(), anyInt(), anyInt());
         verify(mContext, never()).startActivityAsUser(nullable(Intent.class),
                 nullable(UserHandle.class));
         verify(mDismissRunnable, never()).run();
@@ -144,8 +140,8 @@ public class CarAspectRatioDialogHelperTest {
     @Test
     public void setDefaultSelection_updateRadioGroup_selectsCorrectRadioButton()
             throws RemoteException {
-        when(mPackageManager.getUserMinAspectRatio(eq(TEST_PACKAGE_NAME), eq(TEST_USER_ID)))
-                .thenReturn(PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN);
+        when(mAspectRatioManager.getUserMinAspectRatioValue(eq(TEST_PACKAGE_NAME),
+                eq(TEST_USER_ID))).thenReturn(PackageManager.USER_MIN_ASPECT_RATIO_FULLSCREEN);
         when(mRadioGroup.getChildCount()).thenReturn(1);
         when(mRadioGroup.getChildAt(0)).thenReturn(mFullScreenRadioButton);
         when(mFullScreenRadioButton.getTag()).thenReturn(
