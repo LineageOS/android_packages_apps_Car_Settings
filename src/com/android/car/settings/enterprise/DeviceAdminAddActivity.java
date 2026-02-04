@@ -16,6 +16,8 @@
 
 package com.android.car.settings.enterprise;
 
+import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.common.BaseCarSettingsActivity;
@@ -34,6 +36,12 @@ public final class DeviceAdminAddActivity extends BaseCarSettingsActivity {
 
     static final String EXTRA_CALLED_FROM_SUPPORT_DIALOG =
             "android.app.extra.CALLED_FROM_SUPPORT_DIALOG";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().setHideOverlayWindows(true);
+    }
 
     @Override
     protected Fragment getInitialFragment() {
