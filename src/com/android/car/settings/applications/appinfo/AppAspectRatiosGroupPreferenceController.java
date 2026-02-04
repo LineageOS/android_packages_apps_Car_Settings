@@ -125,6 +125,7 @@ public class AppAspectRatiosGroupPreferenceController extends
 
         try {
             getAspectRatioManager().setUserMinAspectRatio(mPackageName, mUserId, userAspectRatio);
+            getAspectRatioManager().stopApp(mPackageName);
             mSelectedKey = selectedKey;
         } catch (RemoteException e) {
             LOG.e("Unable to set user min aspect ratio");

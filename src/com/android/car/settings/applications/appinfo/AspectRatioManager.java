@@ -82,10 +82,12 @@ public final class AspectRatioManager {
             @PackageManager.UserMinAspectRatio int aspectRatio) throws RemoteException {
         mIPm.setUserMinAspectRatio(packageName, uid, aspectRatio);
         mBackupManager.dataChanged();
-        stopApp(packageName);
     }
 
-    private void stopApp(@NonNull String packageName) {
+    /**
+     * Force stops the provided package. Should be called after setUserMinAspectRatio()
+     */
+    public void stopApp(@NonNull String packageName) {
         mActivityManager.forceStopPackage(packageName);
     }
 

@@ -123,11 +123,12 @@ public class CarAspectRatioDialogHelper extends TwoColumnRadioDialogHelper {
             Log.d(TAG, "Setting the UserMinAspectRatio for cmp: " + mTargetComponentName
                     + ",  userId: " + mTargetUserId + " with the value: "
                     + selectedAspectRatioValue);
-            mDismissDialogRunnable.run();
             mAspectRatioManager.setUserMinAspectRatio(
                     mTargetComponentName.getPackageName(),
                     mTargetUserId,
                     selectedAspectRatioValue);
+            mDismissDialogRunnable.run();
+            mAspectRatioManager.stopApp(mTargetComponentName.getPackageName());
 
             Intent intent = new Intent(Intent.ACTION_MAIN);
             intent.addCategory(Intent.CATEGORY_LAUNCHER);
