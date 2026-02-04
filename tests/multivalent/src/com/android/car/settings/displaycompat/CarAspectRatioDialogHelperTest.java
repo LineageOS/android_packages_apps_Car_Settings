@@ -78,7 +78,7 @@ public class CarAspectRatioDialogHelperTest {
 
     @Before
     public void setUp() {
-        mSetFlagsRule.enableFlags(com.android.systemui.car.Flags.FLAG_DISPLAY_COMPATIBILITY_V2);
+        mSetFlagsRule.enableFlags(com.android.systemui.car.Flags.FLAG_DISPLAY_COMPAT_V2);
         mSession = mockitoSession()
                 .initMocks(this)
                 .strictness(Strictness.LENIENT)

@@ -69,7 +69,7 @@ public class CarAspectRatioDialogActivityTest {
 
     @Before
     public void setUp() {
-        mSetFlagsRule.enableFlags(com.android.systemui.car.Flags.FLAG_DISPLAY_COMPATIBILITY_V2);
+        mSetFlagsRule.enableFlags(com.android.systemui.car.Flags.FLAG_DISPLAY_COMPAT_V2);
         if (!RobolectricTestUtils.isRunningOnRobolectric()) {
             mSession = ExtendedMockito.mockitoSession()
                     .initMocks(this)
