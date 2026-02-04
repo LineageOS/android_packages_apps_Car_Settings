@@ -17,13 +17,10 @@
 package com.android.car.settings.enterprise;
 
 import android.annotation.Nullable;
-import android.app.AppOpsManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.os.Binder;
-import android.os.IBinder;
 import android.text.TextUtils;
 
 import androidx.preference.TwoStatePreference;
@@ -37,15 +34,11 @@ import com.android.internal.annotations.VisibleForTesting;
 public final class DeviceAdminAddHeaderPreferenceController
         extends BaseDeviceAdminAddPreferenceController<TwoStatePreference> {
 
-    private AppOpsManager mAppOps;
-    private final IBinder mToken = new Binder();
     private @Nullable ActivationListener mActivationListener;
 
     public DeviceAdminAddHeaderPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-
-        mAppOps = context.getSystemService(AppOpsManager.class);
     }
 
     DeviceAdminAddHeaderPreferenceController setActivationListener(ActivationListener listener) {
@@ -69,10 +62,6 @@ public final class DeviceAdminAddHeaderPreferenceController
     @VisibleForTesting
     void onResumeInternal(TwoStatePreference preference) {
         setCurrentStatus(preference);
-
-        // As long as we are running, don't let anyone overlay stuff on top of the screen.
-        mAppOps.setUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW, true, mToken);
-        mAppOps.setUserRestriction(AppOpsManager.OP_TOAST_WINDOW, true, mToken);
     }
 
     @Override
@@ -87,9 +76,6 @@ public final class DeviceAdminAddHeaderPreferenceController
     void onPauseInternal(TwoStatePreference preference) {
         // Disable the toggle button when paused, to prevent tapjacking.
         preference.setEnabled(false);
-
-        mAppOps.setUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW, false, mToken);
-        mAppOps.setUserRestriction(AppOpsManager.OP_TOAST_WINDOW, false, mToken);
     }
 
     @Override
