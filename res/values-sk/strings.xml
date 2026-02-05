@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Vysielanie sa začína…"</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Pripája sa…"</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"K zariadeniu %1$s sa nepodarilo pripojiť"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"Zdieľanie zvuku sa nepodarilo spustiť"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Končí sa…"</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"Nepodarilo sa pripojiť k vysielaniu od používateľa %1$s"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"Vysielanie od používateľa %1$s sa nepodarilo opustiť"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Prepínajú sa médiá na %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Jas"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Prispôsobujte obrazovku pri slabom svetle"</string>
@@ -538,7 +541,7 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Načítava sa…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Ešte # krok a bude z vás vývojár.}few{Ešte # kroky a bude z vás vývojár.}many{Ešte # kroku a bude z vás vývojár.}other{Ešte # krokov a bude z vás vývojár.}}"</string>
     <string name="show_dev_on" msgid="5339077400040834808">"Teraz ste vývojár!"</string>
-    <string name="show_dev_already" msgid="1678087328973865736">"Nie je to potrebné, už ste vývojár."</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"ViewerGender=OTHER Stačí, už ste vývojár. ViewerGender=FEMALE Stačí, už ste vývojárka. ViewerGender=MALE Stačí, už ste vývojár."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Pre vývojárov"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Možnosti resetu"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Reset siete, aplikácií alebo zariadenia"</string>

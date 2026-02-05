@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"درحال شروع همه‌فرستی…"</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"درحال اتصال…"</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"به %1$s متصل نشد"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"هم‌رسانی صدا شروع نشد"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"درحال خروج…"</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"پیوستن به همه‌فرستی از %1$s انجام نشد."</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"خروج از همه‌فرستی از %1$s انجام نشد."</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"درحال تغییر رسانه به %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"روشنایی"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"تنظیم صفحه‌نمایش برای نور کم"</string>
@@ -375,7 +378,7 @@
     <string name="app_aspect_ratio_footer" msgid="7814071704357140611">"وقتی نسبت ابعادی را تغییر می‌دهید، برنامه بازراه‌اندازی خواهد شد. ممکن است تغییرات ذخیره‌نشده را ازدست بدهید. ممکن است برخی‌از برنامه‌ها برای نسبت‌های ابعادی مشخصی بهینه‌سازی نشده باشند."</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s در فضای ذخیره‌سازی داخلی"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"از منابع سیستم برای اولویت‌بندی عملکرد برنامه استفاده می‌کند"</string>
-    <string name="app_open_by_default_title" msgid="7275063779631935446">"باز کردن به‌صورت پیش‌فرض"</string>
+    <string name="app_open_by_default_title" msgid="7275063779631935446">"باز کردن به‌طور پیش‌فرض"</string>
     <string name="app_open_by_default_summary" msgid="3261520150951464121">"برنامه اجازه دارد پیوندهای پشتیبانی‌شده را باز کند"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"مصرف داده"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"مصرف داده برنامه"</string>

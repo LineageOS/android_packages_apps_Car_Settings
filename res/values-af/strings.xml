@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Begin tans uitsending …"</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Koppel tans …"</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"Kon nie aan %1$s koppel nie"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"Kon nie oudiodeling begin nie"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Verlaat tans …"</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"Kon nie by uitsending vanaf %1$s aansluit nie"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"Kon nie uitsending vanaf %1$s verlaat nie"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Skakel media oor na %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Helderheid"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Pas skerm aan by swak lig"</string>
@@ -537,7 +540,7 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Kon nie die lisensies laai nie."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Laai tans …"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Jy het nou # stap oor voordat jy \'n ontwikkelaar is.}other{Jy het nou # stappe oor voordat jy \'n ontwikkelaar is.}}"</string>
-    <string name="show_dev_on" msgid="5339077400040834808">"Jy is nou \'n ontwikkelaar!"</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"Jy is nou ’n ontwikkelaar!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Dis nie nodig nie – jy is reeds \'n ontwikkelaar."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Ontwikkelaaropsies"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Terugstellingopsies"</string>
