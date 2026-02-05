@@ -56,3 +56,10 @@ flag {
     description: "An UI update to fragment for audio route picker."
     bug: "450096763"
 }
+
+flag {
+    name: "car_device_state"
+    namespace: "car_sys_exp"
+    description: "Flag that enabled the AppFunctionService which serves device state LLM info"
+    bug: "427789419"
+}
