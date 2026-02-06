@@ -119,7 +119,7 @@
         app:layout_constraintTop_toBottomOf="@id/collapsible_seekbar_preference_first_action_container"
         app:layout_constraintBottom_toBottomOf="parent">
         <SeekBar
-            android:id="@+id/seekbar"
+            android:id="@id/seekbar"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
             android:clickable="false"
             android:background="@null" />
 
-        <TextView android:id="@+id/seekbar_value"
+        <TextView android:id="@id/seekbar_value"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="right|center_vertical"

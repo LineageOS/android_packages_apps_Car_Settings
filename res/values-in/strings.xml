@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Memulai siaran..."</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Menghubungkan..."</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"Gagal terhubung ke %1$s"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"Gagal memulai berbagi audio"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Keluar..."</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"Gagal bergabung ke siaran %1$s"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"Gagal keluar dari siaran %1$s"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Mengalihkan media ke %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Kecerahan"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Menyesuaikan layar untuk cahaya redup"</string>
@@ -537,7 +540,7 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ada masalah saat memuat lisensi."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Memuat…"</string>
     <string name="show_dev_countdown" msgid="7416958516942072383">"{count,plural, =1{Anda perlu menyelesaikan # langkah lagi untuk menjadi developer.}other{Anda perlu menyelesaikan # langkah lagi untuk menjadi developer.}}"</string>
-    <string name="show_dev_on" msgid="5339077400040834808">"Anda sekarang berada di mode developer!"</string>
+    <string name="show_dev_on" msgid="5339077400040834808">"Anda sekarang berada di mode developer."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Tidak perlu, Anda sudah berada di mode developer."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opsi developer"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opsi reset"</string>

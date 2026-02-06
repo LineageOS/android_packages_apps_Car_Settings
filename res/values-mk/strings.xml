@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"Емитувањето започнува…"</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"Се поврзува…"</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"Не можеше да се поврзе со %1$s"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"Не може да се започне споделување аудио"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Се напушта…"</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"Не можеше да се придружи во емитувањето од %1$s"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"Не можеше да се напушти емитувањето од %1$s"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Се префрлаат аудиовизуелните содржини на %1$s"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Осветленост"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Приспособи го екранот за слаба светлина"</string>
@@ -376,7 +379,7 @@
     <string name="storage_type_internal" msgid="8918688427078709570">"%s во внатрешен капацитет"</string>
     <string name="prioritize_app_performance_summary" msgid="1081874788185691418">"Се користат ресурси на системот за да се стави приоритет на изведбата на апликацијата"</string>
     <string name="app_open_by_default_title" msgid="7275063779631935446">"Отворај стандардно"</string>
-    <string name="app_open_by_default_summary" msgid="3261520150951464121">"Дозволете ѝ на апликацијата да отвора поддржани линкови"</string>
+    <string name="app_open_by_default_summary" msgid="3261520150951464121">"Ѝ дозволува на апликацијата да отвора поддржани линкови"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Потрошен интернет"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Потрошен интернет од апл."</string>
     <string name="data_usage_usage_history_title" msgid="2386346082501471648">"Историја на сообраќај"</string>
@@ -574,13 +577,13 @@
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Датум и време"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Постави датум, време, временска зона и формати"</string>
     <string name="date_time_auto" msgid="6018635902717385962">"Постави време автоматски"</string>
-    <string name="zone_auto" msgid="4174874778459184605">"Постави часовна зона автоматски"</string>
+    <string name="zone_auto" msgid="4174874778459184605">"Постави временска зона автоматски"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Формат од 24 часа"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Користи 24-часовен формат"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Време"</string>
     <string name="date_time_set_time" msgid="3684135432529445165">"Поставете часовник"</string>
-    <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Часовна зона"</string>
-    <string name="date_time_set_timezone" msgid="4759353576185916944">"Изберете часовна зона"</string>
+    <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Временска зона"</string>
+    <string name="date_time_set_timezone" msgid="4759353576185916944">"Изберете временска зона"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Датум"</string>
     <string name="date_time_set_date" msgid="2537494485643283230">"Постави датум"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"Подреди по азбучен ред"</string>

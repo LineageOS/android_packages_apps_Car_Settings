@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"ব্রডকাস্ট শুরু হচ্ছে..."</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"কানেক্ট করা হচ্ছে…"</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"%1$s-এর সাথে কানেক্ট করা যায়নি"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"অডিও শেয়ারিং চালু করা যায়নি"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"ছেড়ে যাওয়া হচ্ছে..."</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"%1$s থেকে ব্রডকাস্টে যোগ দেওয়া যায়নি"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"%1$s থেকে ব্রডকাস্ট ছেড়ে বেরনো যায়নি"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"%1$s-এ মিডিয়া পরিবর্তন করা হচ্ছে"</string>
     <string name="display_brightness" msgid="5718970880488110840">"উজ্জ্বলতা"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"কম আলোর জন্য স্ক্রিন অ্যাডজাস্ট করুন"</string>
@@ -360,7 +363,7 @@
     <string name="application_version_label" msgid="8556889839783311649">"ভার্সন: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"কোনও অনুমতি দেওয়া হয় নি"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"কোনও অনুমতির অনুরোধ জানানো হয়নি"</string>
-    <string name="unused_apps" msgid="648471933781010395">"ব্যবহার করা হয়নি এমন অ্যাপ"</string>
+    <string name="unused_apps" msgid="648471933781010395">"অব্যবহৃত  অ্যাপ"</string>
     <string name="unused_apps_summary" msgid="8257304516038923072">"{count,plural, =1{ব্যবহার করা হয়নি এমন #টি অ্যাপ}one{ব্যবহার করা হয়নি এমন #টি অ্যাপ}other{ব্যবহার করা হয়নি এমন #টি অ্যাপ}}"</string>
     <string name="unused_apps_switch" msgid="4433958286200341563">"অনুমতি সরান এবং স্পেস খালি করুন"</string>
     <string name="aspect_ratio_label" msgid="1852048794381949724">"অ্যাস্পেক্ট রেশিও"</string>

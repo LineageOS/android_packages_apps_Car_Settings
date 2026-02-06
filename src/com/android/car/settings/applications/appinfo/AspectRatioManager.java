@@ -21,6 +21,7 @@ import static android.view.WindowManager.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO
 
 import android.app.ActivityManager;
 import android.app.AppGlobals;
+import android.app.backup.BackupManager;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;
@@ -46,11 +47,13 @@ public final class AspectRatioManager {
     private final Context mContext;
     private final IPackageManager mIPm;
     private final ActivityManager mActivityManager;
+    private final BackupManager mBackupManager;
 
     public AspectRatioManager(Context context) {
         mContext = context;
         mIPm = AppGlobals.getPackageManager();
         mActivityManager = mContext.getSystemService(ActivityManager.class);
+        mBackupManager = new BackupManager(context);
     }
 
     /** Determines whether an app should have aspect ratio settings */
@@ -78,10 +81,13 @@ public final class AspectRatioManager {
     public void setUserMinAspectRatio(@NonNull String packageName, int uid,
             @PackageManager.UserMinAspectRatio int aspectRatio) throws RemoteException {
         mIPm.setUserMinAspectRatio(packageName, uid, aspectRatio);
-        stopApp(packageName);
+        mBackupManager.dataChanged();
     }
 
-    private void stopApp(@NonNull String packageName) {
+    /**
+     * Force stops the provided package. Should be called after setUserMinAspectRatio()
+     */
+    public void stopApp(@NonNull String packageName) {
         mActivityManager.forceStopPackage(packageName);
     }
 

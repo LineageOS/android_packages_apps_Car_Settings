@@ -188,7 +188,7 @@
     <string name="bluetooth_toggle_title" msgid="1431803611346881088">"బ్లూటూత్‌ను ఉపయోగించండి"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"పేరులేని పరికరం"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"జత చేయబడిన పరికరాలు"</string>
-    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"కొత్త పరికరాన్ని పెయిర్ చేయండి"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"కొత్త డివైజ్‌ను పెయిర్ చేయండి"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"పెయిర్ చేయడం కోసం బ్లూటూత్ ఆన్ చేయబడుతుంది"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"పరికరాన్ని డిస్‌కనెక్ట్ చేయాలా?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"మీ వెహికల్‌ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> నుండి డిస్‌కనెక్ట్ అవుతుంది."</string>
@@ -279,7 +279,10 @@
     <string name="audio_route_preference_starting_broadcast" msgid="5796200319860568291">"ప్రసారం ప్రారంభమవుతోంది..."</string>
     <string name="audio_route_preference_connecting_broadcast" msgid="3958657387720690648">"కనెక్ట్ అవుతోంది..."</string>
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"%1$s‌కు కనెక్ట్ చేయడం సాధ్యపడలేదు"</string>
+    <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"ఆడియో షేరింగ్‌ను ప్రారంభించడం విఫలమైంది"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"నిష్క్రమిస్తోంది…"</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"%1$s నుండి ప్రసారంలో చేరడం విఫలమైంది"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"%1$s నుండి ప్రసారం నుండి ఎగ్జిట్ అవ్వడంలో విఫలమైంది"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"మీడియా %1$sకు మారుతోంది"</string>
     <string name="display_brightness" msgid="5718970880488110840">"బ్రైట్‌నెస్"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"స్క్రీన్‌ను తక్కువ కాంతికి సర్దుబాటు చేయండి"</string>
