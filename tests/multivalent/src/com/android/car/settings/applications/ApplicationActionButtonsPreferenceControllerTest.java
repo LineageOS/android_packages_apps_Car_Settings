@@ -32,6 +32,7 @@ import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.isNull;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
@@ -44,6 +45,7 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.admin.DevicePolicyManager;
 import android.app.role.RoleManager;
+import android.telecom.TelecomManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -114,6 +116,10 @@ public class ApplicationActionButtonsPreferenceControllerTest {
     private ActivityManager mMockActivityManager;
     @Mock
     private UserManager mMockUserManager;
+    @Mock
+    private TelecomManager mMockTelecomManager;
+    @Mock
+    private RoleManager mMockRoleManager;
 
     @Before
     public void setUp() {
@@ -232,9 +238,7 @@ public class ApplicationActionButtonsPreferenceControllerTest {
         activityInfo.permission = Manifest.permission.BROADCAST_SMS;
         phoneActivity.activityInfo = activityInfo;
 
-        RoleManager mockRoleManager = mock(RoleManager.class);
-        when(mContext.getSystemService(RoleManager.class)).thenReturn(mockRoleManager);
-        when(mockRoleManager.getRoleHoldersAsUser(eq(RoleManager.ROLE_DIALER),
+        when(mMockRoleManager.getRoleHoldersAsUser(eq(RoleManager.ROLE_DIALER),
                 any(UserHandle.class))).thenReturn(Collections.singletonList(PACKAGE_NAME));
 
         mPreferenceController.onCreate(mLifecycleOwner);
@@ -782,10 +786,15 @@ public class ApplicationActionButtonsPreferenceControllerTest {
         mPackageInfo.packageName = PACKAGE_NAME;
 
         when(mMockAppState.getEntry(eq(PACKAGE_NAME), anyInt())).thenReturn(mMockAppEntry);
-        when(mContext.getPackageManager()).thenReturn(mMockPm);
-        when(mContext.getSystemService(Context.ACTIVITY_SERVICE)).thenReturn(mMockActivityManager);
-        when(mContext.getSystemService(Context.DEVICE_POLICY_SERVICE)).thenReturn(mMockDpm);
-        when(mContext.getSystemService(Context.USER_SERVICE)).thenReturn(mMockUserManager);
+        doReturn(mMockPm).when(mContext).getPackageManager();
+        doReturn(mMockActivityManager).when(mContext).getSystemService(Context.ACTIVITY_SERVICE);
+        doReturn(mMockDpm).when(mContext).getSystemService(Context.DEVICE_POLICY_SERVICE);
+        doReturn(mMockUserManager).when(mContext).getSystemService(Context.USER_SERVICE);
+        doReturn(mMockTelecomManager).when(mContext).getSystemService(Context.TELECOM_SERVICE);
+        doReturn(mMockRoleManager).when(mContext).getSystemService(Context.ROLE_SERVICE);
+
+        doReturn(Context.TELECOM_SERVICE).when(mContext).getSystemServiceName(TelecomManager.class);
+        doReturn(Context.ROLE_SERVICE).when(mContext).getSystemServiceName(RoleManager.class);
 
         PackageInfo systemPackage = new PackageInfo();
         systemPackage.packageName = "android";
