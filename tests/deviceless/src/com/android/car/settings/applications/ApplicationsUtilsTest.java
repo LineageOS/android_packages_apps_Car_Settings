@@ -24,16 +24,19 @@ import static org.mockito.Mockito.when;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.pm.UserInfo;
-
+import android.platform.test.flag.junit.SetFlagsRule;
 import android.telecom.TelecomManager;
 
 import androidx.test.runner.AndroidJUnit4;
 
 import com.android.car.settings.profiles.ProfileHelper;
 import com.android.car.settings.testutils.ShadowSmsApplication;
+import com.android.car.settings.testutils.ShadowTelecomDependencies;
 import com.android.car.settings.testutils.ShadowUserHelper;
 
 import org.junit.After;
+import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
@@ -47,11 +50,20 @@ import java.util.Collections;
 @RunWith(AndroidJUnit4.class)
 @Config(
         shadows = {
-            ShadowUserHelper.class
+            ShadowUserHelper.class,
+            ShadowTelecomDependencies.class
         })
 public class ApplicationsUtilsTest {
 
     private static final String PACKAGE_NAME = "com.android.car.settings.test";
+
+    @Rule
+    public final SetFlagsRule mSetFlagsRule = new SetFlagsRule();
+
+    @Before
+    public void setUp() {
+        mSetFlagsRule.enableFlags(android.telecom.flags.Flags.FLAG_TELECOM_MAINLINE_API);
+    }
 
     @After
     public void tearDown() {
