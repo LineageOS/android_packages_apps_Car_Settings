@@ -36,6 +36,11 @@ android_robolectric_test {
         "token-shared-lib-prebuilt",
     ],
 
+    static_libs: [
+        "flag-junit",
+        "flag-junit-base",
+    ],
+
     enforce_uses_libs: false,
 
     java_resource_dirs: ["config"],
