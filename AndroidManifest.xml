@@ -17,6 +17,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.android.car.settings"
           coreApp="true"
           android:sharedUserId="android.uid.system"
@@ -1334,6 +1335,19 @@
         <service android:name=".setupservice.InitialLockSetupService"
                  android:exported="true"
                  android:permission="com.android.car.settings.SET_INITIAL_LOCK"/>
+
+        <service
+            android:name=".appfunctions.devicestate.DeviceStateService"
+            android:featureFlag="com.android.car.settings.car_device_state"
+            android:permission="android.permission.BIND_APP_FUNCTION_SERVICE"
+            android:exported="true">
+            <!-- Asset file is required as resource is not supported for this property. -->
+            <property android:name="android.app.appfunctions"
+                android:value="app_functions.xml"/>
+            <intent-filter>
+                <action android:name="android.app.appfunctions.AppFunctionService"/>
+            </intent-filter>
+        </service>
 
         <receiver android:name=".bluetooth.BluetoothPairingRequest"
             android:exported="true">
