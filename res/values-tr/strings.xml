@@ -281,8 +281,8 @@
     <string name="audio_route_preference_connecting_failed" msgid="4567689748332788205">"%1$s ile bağlantı kurulamadı"</string>
     <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"Ses paylaşımı başlatılamadı"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"Ayrılıyor…"</string>
-    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"%1$s kullanıcısının yayını açılamadı"</string>
-    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"%1$s kullanıcısının yayınından çıkılamadı"</string>
+    <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"%1$s cihazından yayın açılamadı"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"%1$s cihazındaki yayından çıkılamadı"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"Medya %1$s öğesine geçiriliyor"</string>
     <string name="display_brightness" msgid="5718970880488110840">"Parlaklık"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"Ekranı loş ışığa göre ayarla"</string>
@@ -959,7 +959,7 @@
     <string name="captions_settings_text_size_large" msgid="5198207220911360512">"Büyük"</string>
     <string name="captions_settings_text_size_very_large" msgid="949511539689307969">"Çok büyük"</string>
     <string name="captions_text_style_title" msgid="8547777957403577760">"Altyazı stili"</string>
-    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Uygulama tarafından ayarlandı"</string>
+    <string name="captions_settings_text_style_by_app" msgid="7014882290456996444">"Uygulama tarafından ayarlanan"</string>
     <string name="captions_settings_text_style_white_on_black" msgid="5758084000323596070">"Siyah üzerine beyaz"</string>
     <string name="captions_settings_text_style_black_on_white" msgid="3906140601916221220">"Beyaz üzerine siyah"</string>
     <string name="captions_settings_text_style_yellow_on_black" msgid="4681565950104511943">"Siyah üzerine sarı"</string>
