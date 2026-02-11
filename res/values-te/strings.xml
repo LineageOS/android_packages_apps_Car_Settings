@@ -282,7 +282,7 @@
     <string name="audio_route_preference_starting_broadcast_failed" msgid="2135487623811781977">"ఆడియో షేరింగ్‌ను ప్రారంభించడం విఫలమైంది"</string>
     <string name="audio_route_preference_leaving_broadcast" msgid="7222467734305708905">"నిష్క్రమిస్తోంది…"</string>
     <string name="audio_route_preference_joining_broadcast_failed" msgid="7861917958337684395">"%1$s నుండి ప్రసారంలో చేరడం విఫలమైంది"</string>
-    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"%1$s నుండి ప్రసారం నుండి ఎగ్జిట్ అవ్వడంలో విఫలమైంది"</string>
+    <string name="audio_route_preference_leaving_broadcast_failed" msgid="4374851662577429042">"%1$s నుండి ప్రసారంలో ఎగ్జిట్ అవ్వడం విఫలమైంది"</string>
     <string name="audio_route_selector_toast" msgid="338103814096108292">"మీడియా %1$sకు మారుతోంది"</string>
     <string name="display_brightness" msgid="5718970880488110840">"బ్రైట్‌నెస్"</string>
     <string name="display_night_mode_summary" msgid="4939425286027546230">"స్క్రీన్‌ను తక్కువ కాంతికి సర్దుబాటు చేయండి"</string>
@@ -624,9 +624,9 @@
     <string name="delete_last_user_dialog_title" msgid="3454454005909291260">"చివరి యూజర్ ప్రొఫైల్‌ను తొలగించాలా?"</string>
     <string name="delete_last_user_delete_warning" msgid="7189499586859833988">"మీరు ఈ వాహనం కోసం మిగిలి ఉన్న ఏకైక ప్రొఫైల్‌ను తొలగిస్తే, ఈ ప్రొఫైల్‌తో అనుబంధించబడి ఉన్న మొత్తం డేటా, సెట్టింగ్‌లు, యాప్‌లు ఫ్యాక్టరీ రీసెట్ చేయబడతాయి."</string>
     <string name="delete_last_user_system_setup_required_message" msgid="726196874941282088">"రీసెట్ చేసిన తర్వాత, మీరు కొత్త ప్రొఫైల్‌ను సెటప్ చేయవచ్చు."</string>
-    <string name="choose_new_admin_title" msgid="1915428454917699587">"కొత్త నిర్వాహకుడిని ఎంచుకోండి"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"కొత్త అడ్మిన్ ను ఎంచుకోండి"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"మీకు కనీసం ఒక నిర్వాహకుడు అవసరం. ఈ నిర్వహకుడిని తొలగించడానికి, ముందుగా ఒక ప్రత్యామ్నాయాన్ని ఎంచుకోండి."</string>
-    <string name="choose_new_admin_label" msgid="5987653639387437939">"నిర్వాహకుడిని ఎంచుకోండి"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"అడ్మిన్‌ను ఎంచుకోండి"</string>
     <string name="user_switch" msgid="6544839750534690781">"మార్చు"</string>
     <string name="current_user_name" msgid="3813671533249316823">"మీరు (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"పేరు"</string>
@@ -662,7 +662,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"ఖాతాలు జోడించబడలేదు"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> యొక్క ఖాతాలు"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"డేటాను ఆటోమేటిక్‌గా సింక్ చేయండి"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"డేటాను ఆటోమేటిక్‌గా రిఫ్రెష్ చేసేలా యాప్‌లు అనుమతించబడతాయి"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"యాప్‌లు, డేటాను ఆటోమేటిక్‌గా రిఫ్రెష్ చేస్తాయి"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="8068513213445588532">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించాలా?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="8683935973719807821">"మీరు వెబ్‌లో మీ ఖాతాలకు చేసే ఏవైనా మార్పులు, మీ వెహికల్‌కు ఆటోమేటిక్‌గా కాపీ చేయబడతాయి.\n\nకొన్ని ఖాతాలు మీరు వెహికల్‌లో చేసే ఏవైనా మార్పులను వెబ్‌కు కూడా ఆటోమేటిక్‌గా కాపీ చేయవచ్చు."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="6683011954002351091">"ఆటోమేటిక్ డేటా సింకింగ్‌ను అనుమతించవద్దా?"</string>

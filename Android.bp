@@ -40,9 +40,14 @@ android_library {
 
     srcs: carsettings_srcs,
 
+    optional_uses_libs: ["com.android.extensions.appfunctions"],
+
     static_libs: [
         "androidx.lifecycle_lifecycle-common-java8",
         "androidx.lifecycle_lifecycle-extensions",
+        "androidx.core_core",
+        "androidx.appsearch_appsearch",
+        "androidx.appsearch_appsearch-builtin-types",
         "androidx.preference_preference",
         "androidx.window_window",
         "androidx-constraintlayout_constraintlayout",
@@ -63,12 +68,16 @@ android_library {
         "car-data-subscription-lib",
         "oem-token-lib",
         "com_android_systemui_car_flags_lib",
+        "com.android.extensions.appfunctions.impl",
+        "appfunctions-schema",
     ],
 
     libs: [
         "android.car",
         "token-shared-lib-prebuilt",
     ],
+
+    flags_packages: ["com_android_car_settings_flags"],
 
     enforce_uses_libs: false,
 
@@ -245,6 +254,9 @@ android_library {
     ],
 
     static_libs: [
+        "androidx.core_core",
+        "androidx.appsearch_appsearch",
+        "androidx.appsearch_appsearch-builtin-types",
         "androidx.lifecycle_lifecycle-common-java8",
         "androidx.lifecycle_lifecycle-extensions",
         "androidx.preference_preference",
@@ -263,7 +275,13 @@ android_library {
         "car-data-subscription-lib",
         "oem-token-lib",
         "com_android_systemui_car_flags_lib",
+        "com.android.extensions.appfunctions.impl",
+        "appfunctions-schema",
     ],
+
+    optional_uses_libs: ["com.android.extensions.appfunctions"],
+
+    flags_packages: ["com_android_car_settings_flags"],
 
     enforce_uses_libs: false,
 
