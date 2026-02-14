@@ -362,7 +362,7 @@
             android:name=".common.CarSettingActivities$AssistantAndVoiceSettingsActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
-            <intent-filter>
+            <intent-filter android:priority="3">
                 <action android:name="android.settings.VOICE_INPUT_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
