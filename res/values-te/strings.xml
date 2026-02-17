@@ -176,7 +176,7 @@
     <string name="network_connection_request_dialog_title" msgid="8449606155059098762">"<xliff:g id="APPNAME">%1$s</xliff:g>తో ఉపయోగించుకునే పరికరం"</string>
     <string name="network_connection_timeout_dialog_message" msgid="2536299451668687586">"పరికరాలు ఏవీ కనుగొనబడలేదు. పరికరాలు ఆన్‌లో ఉన్నాయని మరియు కనెక్ట్ చేయడానికి అందుబాటులో ఉన్నాయని నిర్ధారించుకోండి."</string>
     <string name="network_connection_timeout_dialog_ok" msgid="2228662561126434792">"మళ్లీ ట్రై చేయండి"</string>
-    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ పరికరాన్ని ఎంచుకునే రిక్వెస్ట్‌ను రద్దు చేసింది."</string>
+    <string name="network_connection_errorstate_dialog_message" msgid="4268321315241218483">"ఏదో తప్పు జరిగింది. ఈ అప్లికేషన్ డివైజ్‌ను ఎంచుకునే రిక్వెస్ట్‌ను రద్దు చేసింది."</string>
     <string name="network_connection_connect_successful" msgid="7893957133113302365">"విజయవంతంగా కనెక్ట్ చేయబడింది"</string>
     <string name="network_connection_request_dialog_showall" msgid="776613149566461487">"అన్నింటినీ చూపు"</string>
     <string name="progress_scanning" msgid="7191583064717479795">"సెర్చ్ చేయడం"</string>
@@ -190,7 +190,7 @@
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"జత చేయబడిన పరికరాలు"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"కొత్త డివైజ్‌ను పెయిర్ చేయండి"</string>
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"పెయిర్ చేయడం కోసం బ్లూటూత్ ఆన్ చేయబడుతుంది"</string>
-    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"పరికరాన్ని డిస్‌కనెక్ట్ చేయాలా?"</string>
+    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"డివైజ్‌ను డిస్‌కనెక్ట్ చేయాలా?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"మీ వెహికల్‌ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> నుండి డిస్‌కనెక్ట్ అవుతుంది."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"వాహనం బ్లూటూత్ అడ్రస్‌: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"పరికర బ్లూటూత్ అడ్రస్: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
@@ -242,7 +242,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"సాధారణంగా 0000 లేదా 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"జత చేయడానికి రిక్వెస్ట్‌"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>తో పెయిర్ చేయడానికి ట్యాప్ చేయండి."</string>
-    <string name="bluetooth_device_picker" msgid="673238198452345475">"బ్లూటూత్ పరికరాన్ని ఎంచుకోండి"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"బ్లూటూత్ డివైజ్‌ను ఎంచుకోండి"</string>
     <string name="bluetooth_bonded_bluetooth_toggle_content_description" msgid="6800772154405846597">"బ్లూటూత్"</string>
     <string name="bluetooth_bonded_phone_toggle_content_description" msgid="8152794643249938377">"ఫోన్"</string>
     <string name="bluetooth_bonded_media_toggle_content_description" msgid="7803420585378155404">"మీడియా"</string>
@@ -544,7 +544,7 @@
     <string name="show_dev_already" msgid="1678087328973865736">"అవసరం లేదు, మీరు ఇప్పటికే డెవలపర్‌గా ఉన్నారు."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"డెవలపర్ ఆప్షన్లు"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"రీసెట్ ఆప్షన్లు"</string>
-    <string name="reset_options_summary" msgid="5508201367420359293">"నెట్‌వర్క్, యాప్‌లు లేదా పరికరాన్ని రీసెట్ చేయండి"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"నెట్‌వర్క్, యాప్‌లు లేదా డివైజ్‌ను రీసెట్ చేయండి"</string>
     <string name="reset_network_title" msgid="3077846909739832734">"Wi‑Fi, బ్లూటూత్‌ని రీసెట్ చేయండి"</string>
     <string name="reset_network_desc" msgid="3332203703135823033">"ఇది Wi‑Fi, బ్లూటూత్ సెట్టింగ్‌లను రీసెట్ చేస్తుంది, గతంలో కనెక్ట్ చేయబడిన మెమరీని తీసివేస్తుంది:"</string>
     <string name="reset_network_item_wifi" msgid="2876370861806060314"><li>"Wi‑Fi నెట్‌వర్క్‌లు, పాస్‌వర్డ్‌లు"</li></string>
@@ -617,7 +617,7 @@
     <string name="add_user_error_title" msgid="7589792057846396341">"కొత్త ప్రొఫైల్‌ను‌ క్రియేట్ చేయలేకపోయాము"</string>
     <string name="delete_user_dialog_title" msgid="575517556232943687">"ఈ ప్రొఫైల్‌ను తొలగించాలా?"</string>
     <string name="delete_user_dialog_message" msgid="3916865958419051299">"ఈ ప్రొఫైల్‌లోని మొత్తం యాప్‌లు, డేటా తొలగించబడతాయి"</string>
-    <string name="delete_user_error_title" msgid="287249031795906102">"ప్రొఫైల్ తొలగించబడలేదు. మీరు పరికరాన్ని రీస్టార్ట్ చేసి, మళ్లీ ట్రై చేయవచ్చు."</string>
+    <string name="delete_user_error_title" msgid="287249031795906102">"ప్రొఫైల్ తొలగించబడలేదు. మీరు డివైజ్‌ను రీస్టార్ట్ చేసి, మళ్లీ ట్రై చేయవచ్చు."</string>
     <string name="delete_user_error_set_ephemeral_title" msgid="9062453678745644817">"మీరు ప్రొఫైళ్లను మార్చినప్పుడు లేదా వాహనాన్ని రీస్టార్ట్ చేసినప్పుడు ఈ ప్రొఫైల్ తొలగించబడుతుంది."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"విస్మరించు"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"మళ్లీ ట్రై చేయండి"</string>
@@ -744,13 +744,13 @@
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"సెక్యూరిటీ కోసం, ఆకృతిని సెట్ చేయండి"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"తీసివేయండి"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"రద్దు చేయండి"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"మీ కొత్త అన్‌లాక్ ఆకృతి"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"మీ కొత్త అన్‌లాక్ ప్యాటర్న్ (ఆకృతి)"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"అన్‌లాక్ నమూనాని గీయండి"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"పూర్తయినప్పుడు వేలును తీసివేయండి"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ఆకృతి రికార్డ్ చేయబడింది"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ఆకృతి (ప్యాటర్న్) రికార్డ్ అయింది"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"నిర్ధారించడానికి ఆకృతిని మళ్లీ గీయండి"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"కనీసం 4 చుక్కలు కలపండి. మళ్లీ ట్రై చేయండి."</string>
-    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ఆకృతి తప్పు"</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ఆకృతి తప్పు (రాంగ్ ప్యాటర్న్)"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"అన్‌లాక్ నమూనాను ఎలా గీయాలి"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ఆకృతిని సేవ్ చేయడంలో ఎర్రర్ ఏర్పడింది"</string>
     <string name="lockpattern_too_many_failed_confirmation_attempts" msgid="4636307830951251013">"చాలా ఎక్కువ తప్పు ప్రయత్నాలు చేశారు. <xliff:g id="NUMBER">%d</xliff:g> సెకన్లలో మళ్లీ ట్రై చేయండి."</string>
@@ -844,7 +844,7 @@
     <string name="cannot_remove_driver_profile" msgid="4109363161608717969">"ఈ ప్రొఫైల్‌లో ప్రస్తుతం డ్రైవర్‌గా సైన్ ఇన్ చేశారు. ప్రొఫైల్ డ్రైవర్‌గా ఉపయోగించనప్పుడు మళ్లీ ట్రై చేయి."</string>
     <string name="qc_display_brightness" msgid="2939655289816201170">"డిస్‌ప్లే బ్రైట్‌నెస్"</string>
     <string name="qc_bluetooth_off_devices_info" msgid="8420985279976892700">"మీ పరికరాలను చూడటానికి, బ్లూటూత్‌ను ఆన్ చేయండి"</string>
-    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"పరికరాన్ని పెయిర్ చేయడానికి, బ్లూటూత్ సెట్టింగ్‌లను తెరవండి"</string>
+    <string name="qc_bluetooth_on_no_devices_info" msgid="7573736950041887300">"డివైజ్‌ను పెయిర్ చేయడానికి, బ్లూటూత్ సెట్టింగ్‌లను తెరవండి"</string>
     <string name="qc_ui_mode_title" msgid="2425571805732530923">"థీమ్"</string>
     <string name="driving_mode_title" msgid="8103270030335833998">"డ్రైవింగ్‌ను సెట్ చేయండి"</string>
     <string name="show_layout_bounds_title" msgid="8590148405645027755">"లేఅవుట్ హద్దులను చూపండి"</string>
