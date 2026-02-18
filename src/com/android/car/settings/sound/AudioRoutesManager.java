@@ -772,19 +772,25 @@ public class AudioRoutesManager {
 
             boolean addNewCheckEventWithNewState = false;
 
-            boolean isBroadcastReady = audioRouteItems.values().stream().anyMatch(
+            boolean isBroadcastReady = false;
+            boolean isBroadcasting = false;
+            boolean isAnyBleUnicasting = false;
+            boolean isAnyReceivingBroadcast = false;
+            BluetoothLeBroadcastMetadata broadcastMetadata = null;
+            if (isBroadcastAudioEnabled()) {
+                isBroadcastReady = audioRouteItems.values().stream().anyMatch(
                     item -> item.getAudioRouteType() == TYPE_BLE_BROADCAST
                             && item.getAudioZoneConfigState().isActive());
-            boolean isBroadcasting = audioRouteItems.values().stream().anyMatch(
-                    item -> item.getAudioRouteType() == TYPE_BLE_BROADCAST
-                            && item.getAudioZoneConfigState().isSelected());
-            boolean isAnyBleUnicasting = audioRouteItems.values().stream().anyMatch(
-                    item -> item.getAudioRouteType() == TYPE_BLE_HEADSET
-                            && item.getAudioZoneConfigState().isSelected());
-            boolean isAnyReceivingBroadcast = audioRouteItems.values().stream().anyMatch(
-                    item -> item.getBluetoothDeviceState().isReceivingBroadcast());
-
-            BluetoothLeBroadcastMetadata broadcastMetadata = getCurrentBroadcast();
+                isBroadcasting = audioRouteItems.values().stream().anyMatch(
+                        item -> item.getAudioRouteType() == TYPE_BLE_BROADCAST
+                                && item.getAudioZoneConfigState().isSelected());
+                isAnyBleUnicasting = audioRouteItems.values().stream().anyMatch(
+                        item -> item.getAudioRouteType() == TYPE_BLE_HEADSET
+                                && item.getAudioZoneConfigState().isSelected());
+                isAnyReceivingBroadcast = audioRouteItems.values().stream().anyMatch(
+                        item -> item.getBluetoothDeviceState().isReceivingBroadcast());
+                broadcastMetadata = getCurrentBroadcast();
+            }
 
             switch (audioRoute.getState()) {
                 case CREATED:
@@ -1273,8 +1279,11 @@ public class AudioRoutesManager {
                     : new AudioRouteItem.AudioZoneConfigState.Builder().build();
             builder.setAudioZoneConfigState(audioZoneConfigState);
 
-            boolean isReceivingBroadcast = isAudioSharingEnabled() && isReceivingBroadcast(
-                    device.getDevice(), getCurrentBroadcast());
+            boolean isReceivingBroadcast = false;
+            if (isBroadcastAudioEnabled() && isAudioSharingEnabled()) {
+                isReceivingBroadcast =
+                        isReceivingBroadcast(device.getDevice(), getCurrentBroadcast());
+            }
 
             AudioRouteItem.BluetoothDeviceState bluetoothDeviceState =
                     new AudioRouteItem.BluetoothDeviceState.Builder()
@@ -1291,7 +1300,8 @@ public class AudioRoutesManager {
                 volumeStateBuilder.setCurrentVolume(cachedVolume);
             }
 
-            if (mLeAudioProfile.getBroadcastToUnicastFallbackGroup() == device.getGroupId()
+            if (mLeAudioProfile != null
+                    && mLeAudioProfile.getBroadcastToUnicastFallbackGroup() == device.getGroupId()
                     || audioZoneConfigState.isSelected()) {
                 volumeStateBuilder.setUseVolumeControlProfile(false);
             } else {
@@ -1368,6 +1378,12 @@ public class AudioRoutesManager {
                 }
             }
         }
+    }
+
+    private boolean isBroadcastAudioEnabled() {
+        return (mLeAudioProfile != null
+                && mLeBroadcastProfile != null
+                && mLeBroadcastAssistantProfile != null);
     }
 
     private BluetoothLeBroadcastMetadata getCurrentBroadcast() {
