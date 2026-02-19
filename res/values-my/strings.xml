@@ -369,7 +369,7 @@
     <string name="aspect_ratio_label" msgid="1852048794381949724">"အချိုးအစား"</string>
     <string name="aspect_ratio_action_button" msgid="5581373962239508271">"ဖွင့်ရန်"</string>
     <string name="user_aspect_ratio_app_default" msgid="283669241296845522">"အက်ပ် မူရင်း"</string>
-    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"ဖန်သားပြင်အပြည့်"</string>
+    <string name="user_aspect_ratio_fullscreen" msgid="7558176135316113">"စခရင်အပြည့်"</string>
     <string name="user_aspect_ratio_half_screen" msgid="6294133158286722632">"ဖန်သားပြင်တစ်ဝက်"</string>
     <string name="user_aspect_ratio_device_size" msgid="960231007272059744">"စက်၏အချိုးအစား"</string>
     <string name="user_aspect_ratio_16_9" msgid="2419220677608547650">"၁၆ x ၉"</string>
@@ -407,8 +407,7 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"မရှိ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ရွေးထားသည်"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ကူညီပေးသူသည် သင်၏ မျက်နှာပြင်ပေါ်တွင် မြင်ရသည့် သို့မဟုတ် အက်ပ်များအထဲတွင် ရယူသုံးနိုင်သည့် အချက်အလက်များအပါအဝင် သင်၏ စနစ်ထဲတွင် သုံးနေသည့် အက်ပ်များအကြောင်း အချက်အလက်များကို ဖတ်ရှုနိုင်မည်။"</string>
-    <!-- syntax error in translation for autofill_confirmation_message (1832984461556991378) org.xmlpull.v1.XmlPullParserException: expected: /string read: xliff:g (position:END_TAG </xliff:g>@1:230 in     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;သင်သည် ဤအက်ပ်ကို ယုံကြည်ခြင်း ရှိမရှိ စစ်ဆေးပါ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill>%1$s</xliff:g> သည် သင်၏မျက်နှာပြင်ပေါ်ရှိ အရာများကို အသုံးပြု၍ မည်သည့်အရာများကို အော်တိုဖြည့်နိုင်ကြောင်း သတ်မှတ်သည်။"</string>
-)  -->
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;သင်သည် ဤအက်ပ်ကို ယုံကြည်ခြင်း ရှိမရှိ စစ်ဆေးပါ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; သည် သင်၏စခရင်ပေါ်ရှိ အရာများကို အသုံးပြု၍ မည်သည့်အရာများကို အော်တိုဖြည့်နိုင်ကြောင်း သတ်မှတ်သည်။"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"ဝန်ဆောင်မှုထည့်ပါ"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"လင့်ခ်များ ဖွင့်နေသည်"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"ထည့်ထားသည့် အက်ပ်များ"</string>
@@ -993,7 +992,7 @@
     <string name="aspect_ratio_dialog_title" msgid="5037908726234453003">"အချိုးအစား ဆက်တင်များ"</string>
     <string name="aspect_ratio_dialog_message" msgid="4199444972791605946">"အချိုးအစား ပြောင်းလိုက်သောအခါ အက်ပ်ပြန်စပါမည်။ သိမ်းမထားသော အပြောင်းအလဲများ ဆုံးရှုံးနိုင်သည်။ အချို့အက်ပ်များသည် အချို့သောအချိုးအစားတွင် ကောင်းစွာအလုပ်မလုပ်ပါ။"</string>
     <string name="aspect_ratio_dialog_app_default_text" msgid="5086218873843168173">"အက်ပ် မူရင်း"</string>
-    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"ဖန်သားပြင်အပြည့်"</string>
+    <string name="aspect_ratio_dialog_full_screen_text" msgid="888165107964490897">"စခရင်အပြည့်"</string>
     <string name="aspect_ratio_dialog_half_screen_text" msgid="3832684591279367444">"ဖန်သားပြင်တစ်ဝက်"</string>
     <string name="aspect_ratio_set_error" msgid="591159290370230132">"အချိုးအစားဆက်တင်များကို အပ်ဒိတ်လုပ်၍မရလိုက်ပါ။"</string>
     <string name="display_density_dialog_title" msgid="3782055592374414189">"ပြကွက်အရွယ်အစားနှင့် စာသား"</string>
