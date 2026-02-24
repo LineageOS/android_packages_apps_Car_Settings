@@ -132,9 +132,9 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
 
     @Override
     protected void updateState(PreferenceGroup preference) {
-        Map<Preference, Bundle> preferenceBundleMap = mExtraSettingsLoader.loadPreferences(
-                preference.getIntent());
         if (!mSettingsLoaded) {
+            Map<Preference, Bundle> preferenceBundleMap = mExtraSettingsLoader.loadPreferences(
+                    preference.getIntent());
             addExtraSettings(preferenceBundleMap);
             mSettingsLoaded = true;
         }
