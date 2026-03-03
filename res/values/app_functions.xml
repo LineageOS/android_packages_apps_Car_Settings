@@ -30,6 +30,9 @@
         The possible Enum values are: DRIVING, PARKED.
         They may affect what AI agents or the user can do in the car.
     </string>
+
+    <string name="invisible_screen_driving_state_values" translatable="false">
+        {"type":"Enum", "values": [ "%1$s", "%2$s"]}</string>
     <string name="invisible_screen_driving_state_driving" translatable="false">DRIVING</string>
     <string name="invisible_screen_driving_state_parked" translatable="false">PARKED</string>
 

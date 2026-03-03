@@ -48,7 +48,10 @@ open class DeviceStateService : AppFunctionService(), Delegate {
     }
 
     open fun getAppFunctions(): List<IdentifiableAppFunction> {
-        return listOf(GetUncategorizedDeviceState(this))
+        return listOf(
+            GetUncategorizedDeviceState(this),
+            GetDeviceStateMetadata(this)
+        )
     }
 
     override fun onExecuteFunction(
