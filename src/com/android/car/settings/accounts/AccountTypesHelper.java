@@ -37,6 +37,8 @@ import java.util.Set;
  * Utility that maintains a set of authorized account types.
  */
 public class AccountTypesHelper {
+    /** Bluetooth PBAP account type, not used for log-in by the user */
+    public static final String PBAP_CLIENT_ACCOUNT_TYPE = "com.android.bluetooth.pbapclient";
     /** Callback invoked when the set of authorized account types changes. */
     public interface OnChangeListener {
         /** Called when the set of authorized account types changes. */
@@ -57,7 +59,7 @@ public class AccountTypesHelper {
 
         // Default to hardcoded Bluetooth account type.
         mAccountTypesExclusionFilter = new HashSet<>();
-        mAccountTypesExclusionFilter.add("com.android.bluetooth.pbapsink");
+        mAccountTypesExclusionFilter.add(PBAP_CLIENT_ACCOUNT_TYPE);
         setAccountTypesExclusionFilter(mAccountTypesExclusionFilter);
 
         mUserHandle = UserHandle.of(UserHandle.myUserId());
