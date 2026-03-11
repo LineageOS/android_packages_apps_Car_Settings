@@ -155,12 +155,6 @@ public class SettingsQCRegistry {
             .appendPath("debug_force_rtl_toggle")
             .build();
 
-    public static final Uri DEBUG_CUSTOMIZATION_OVERLAY_URI = new Uri.Builder()
-            .scheme(ContentResolver.SCHEME_CONTENT)
-            .authority(AUTHORITY)
-            .appendPath("debug_customization_overlay_toggle")
-            .build();
-
     // End Uris
 
     @VisibleForTesting
@@ -190,7 +184,6 @@ public class SettingsQCRegistry {
         map.put(DEBUG_DRIVING_MODE_URI, DebugDriveModeRow.class);
         map.put(DEBUG_LAYOUT_BOUNDS_URI, DebugLayoutBoundsRow.class);
         map.put(DEBUG_FORCE_RTL_URI, DebugForceRTLRow.class);
-        map.put(DEBUG_CUSTOMIZATION_OVERLAY_URI, DebugCustomizationOverlayRow.class);
 
         return map;
     }
