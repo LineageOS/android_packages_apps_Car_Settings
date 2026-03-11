@@ -134,7 +134,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"网关"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"WLAN 偏好设置"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"自动开启 WLAN"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"位于已保存的高品质网络（例如您的家庭网络）附近时自动重新开启 WLAN"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"附近有已保存的高质量网络（如家用网络）时自动重新开启 WLAN"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"无法使用，因为位置信息服务已关闭。请开启"<annotation id="link">"位置信息服务"</annotation>"。"</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"要开启 WLAN 扫描功能吗？"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"开启"</string>
@@ -226,9 +226,9 @@
     <string name="share_audio_test_sound_summary" msgid="7071332264787908147">"所有收听者应该都能听到"</string>
     <string name="audio_sharing_active_media_devices" msgid="3845107517790253262">"正在使用的媒体设备"</string>
     <string name="audio_stream_settings_category_title" msgid="4274632745953092854">"音频流设置"</string>
-    <string name="audio_streaming_title" msgid="174897810502966132">"音频流二维码"</string>
+    <string name="audio_streaming_title" msgid="174897810502966132">"音频共享二维码"</string>
     <string name="scan_qr_code_to_connect" msgid="734470733189688139">"扫描二维码即可连接"</string>
-    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"若要收听音频流内容，其他人可以将兼容耳机连接到自己的 Android 设备，然后扫描此二维码。"</string>
+    <string name="audio_stream_qr_code_description" msgid="7809312868707708527">"若要收听音频内容，其他人可将兼容耳机连接到自己的 Android 设备，然后扫描此二维码。"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"蓝牙配对请求"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"配对和连接"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"蓝牙配对码"</string>
