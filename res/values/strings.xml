@@ -873,13 +873,9 @@
     <!-- Default assistant settings title. This setting allows users to select the default assistant for the device. [CHAR LIMIT=40] -->
     <string name="assist_app_settings">Assist app</string>
     <!-- Title for the text context preference to determine whether assist can access the data currently displayed on-screen [CHAR LIMIT=40] -->
-    <string name="assist_access_context_title">Use text from screen</string>
+    <string name="assist_access_screen_context_title">Use screen and app data</string>
     <!-- Summary for the text context preference to determine whether assist can access the data currently displayed on-screen [CHAR LIMIT=NONE] -->
-    <string name="assist_access_context_summary">Allow the assist app to access the screen contents as text</string>
-    <!-- Title for the screenshot context preference to determine whether assist can access the screenshot of your screen [CHAR LIMIT=40] -->
-    <string name="assist_access_screenshot_title">Use screenshot</string>
-    <!-- Summary for the screenshot context preference to determine whether assist can access the screenshot of your screen [CHAR LIMIT=NONE] -->
-    <string name="assist_access_screenshot_summary">Allow the assist app to access an image of the screen</string>
+    <string name="assist_access_screen_context_summary">Allow this assistant to access info and content from the app open on your screen</string>
     <!-- Title of the screen of the voice input settings [CHAR_LIMIT=40]-->
     <string name="voice_input_settings_title">Voice input</string>
     <!-- Title of the autofill service settings screen. [CHAR LIMIT=40] -->
