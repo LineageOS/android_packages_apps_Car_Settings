@@ -82,9 +82,16 @@ public class ActivityEmbeddingUtils {
      */
     static float getSplitRatio(Context context) {
         if (sSplitRatio == 0) {
+            //TODO: (b/492274665) enforce a dynamically updated split ratio
             float homepageWidth = context.getResources().getDimension(R.dimen.top_level_menu_width)
                     + context.getResources().getDimension(R.dimen.top_level_divider_width);
-            sSplitRatio = homepageWidth / getTaskAreaMaxWindowWidth(context);
+            int windowWidth = getTaskAreaMaxWindowWidth(context);
+            if (windowWidth < homepageWidth) {
+                LOG.e("Defaulting to 0.5 splitRatio. Invalid width was returned by WindowManager: "
+                        + windowWidth + ", it should not be less than homepage: " + homepageWidth);
+                return 0.5f;
+            }
+            sSplitRatio = homepageWidth / windowWidth;
         }
         return sSplitRatio;
     }
