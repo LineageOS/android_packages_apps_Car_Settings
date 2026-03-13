@@ -235,6 +235,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
             throw new IllegalArgumentException(
                     "cannot launch dialogs with launchFragment() - use showDialog() instead");
         }
+        populateMetaData();
         if (mIsSinglePane || this instanceof SubSettingsActivity) {
             updateFragmentContainer(fragment);
         } else {

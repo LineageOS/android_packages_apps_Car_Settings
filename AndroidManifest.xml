@@ -1091,6 +1091,7 @@
         <activity android:name=".deeplink.DeepLinkHomepageActivity"
                   android:exported="true"
                   android:enabled="false"
+                  android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
                   android:excludeFromRecents="true"
                   android:launchMode="singleTask"
                   android:taskAffinity=".deeplink.DeepLinkHomepageActivity"
