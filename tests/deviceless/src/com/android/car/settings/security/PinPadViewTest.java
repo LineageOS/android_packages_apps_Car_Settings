@@ -21,10 +21,12 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.MockitoAnnotations.initMocks;
 
+import android.content.Context;
 import android.view.View;
 
 import androidx.test.runner.AndroidJUnit4;
 
+import com.android.car.oem.tokens.Token;
 import com.android.car.settings.R;
 
 import org.junit.Before;
@@ -55,7 +57,8 @@ public class PinPadViewTest {
     @Before
     public void initPinPad() {
         initMocks(this);
-        mPinPadView = new PinPadView(RuntimeEnvironment.application);
+        Context testContext = Token.createOemStyledContext(RuntimeEnvironment.application);
+        mPinPadView = new PinPadView(testContext);
         mPinPadView.setPinPadClickListener(mClickListener);
     }
 
