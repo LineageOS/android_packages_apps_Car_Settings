@@ -464,7 +464,7 @@
     <string name="location_settings_title" msgid="901334356682423679">"Position"</string>
     <string name="location_toggle_title" msgid="836779750812064601">"Utiliser la localisation"</string>
     <string name="location_toggle_summary" msgid="5651728747635881194">"Utilisez la position de votre voiture dans toutes les applis que vous avez indiquées."</string>
-    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Applis d\'infoloisirs"</string>
+    <string name="location_infotainment_apps_toggle_title" msgid="2083924249183557387">"Applis d\'infodivertissement"</string>
     <string name="location_infotainment_apps_toggle_summary" msgid="6657657826985915806">"Autorise les applis à accéder à votre localisation"</string>
     <string name="location_toggle_off_warning" msgid="5959449346865136081">"Si vous désactivez cela, l\'accès à la position sera supprimé pour toutes les applis, sauf celles requises pour l\'aide à la conduite"</string>
     <string name="adas_location_toggle_off_warning" msgid="2269555998731648820">"Si vous désactivez cela, les applis d\'aide à la conduite basées sur les informations de localisation seront désactivées"</string>
@@ -502,8 +502,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour du système"</string>
     <string name="system_advanced_title" msgid="6303355131691523362">"Paramètres avancés"</string>
     <string name="system_advanced_summary" msgid="5833643795981791953">"À propos, informations légales, réinitialisation et plus encore"</string>
-    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Redémarrer le système d\'infoloisirs"</string>
-    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Redémarrer le système d\'infoloisirs de votre voiture peut prendre quelques minutes. Voulez-vous continuer ?"</string>
+    <string name="restart_infotainment_system_title" msgid="5174129167446756511">"Redémarrer le système d\'infodivertissement"</string>
+    <string name="restart_infotainment_system_dialog_text" msgid="6395281407323116808">"Redémarrer le système d\'infodivertissement de votre voiture peut prendre quelques minutes. Voulez-vous continuer ?"</string>
     <string name="continue_confirmation" msgid="1598892163951467191">"Continuer"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Version d\'Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Mise à jour du correctif de sécurité Android"</string>
@@ -565,7 +565,7 @@
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences relatives aux applications ont été réinitialisées"</string>
     <string name="factory_reset_title" msgid="4019066569214122052">"Effacer données (rétablir config. d\'usine)"</string>
     <string name="factory_reset_summary" msgid="854815182943504327">"Effacer tous les profils et données du système d\'infoloisirs"</string>
-    <string name="factory_reset_desc" msgid="2774024747279286354">"Cela effacera toutes les données du système d\'infoloisirs du véhicule, y compris :\n\n"<li>"Vos comptes et profils"</li>\n<li>"Les données et paramètres du système et des applis"</li>\n<li>"Les applis téléchargées"</li></string>
+    <string name="factory_reset_desc" msgid="2774024747279286354">"Cela effacera toutes les données du système d\'infodivertissement du véhicule, y compris :\n\n"<li>"Vos comptes et profils"</li>\n<li>"Les données et paramètres du système et des applis"</li>\n<li>"Les applis téléchargées"</li></string>
     <string name="factory_reset_accounts" msgid="5523956654938834209">"Vous êtes actuellement connecté aux comptes suivants :"</string>
     <string name="factory_reset_other_users_present" msgid="3852324375352090570">"D\'autres profils ont été configurés pour ce véhicule."</string>
     <string name="factory_reset_button_text" msgid="2626666247051368256">"Effacer toutes les données"</string>
@@ -702,16 +702,16 @@
     <string name="action_unavailable" msgid="7087119418684417249">"Cette action n\'est pas disponible pour votre profil"</string>
     <string name="microphone_access_settings_title" msgid="6748613084403267254">"Accès aux micros"</string>
     <string name="microphone_access_settings_summary" msgid="3531690421673836538">"Choisir si les applis ont accès aux micros de votre voiture"</string>
-    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Applis d\'infoloisirs"</string>
-    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Autoriser les applis d\'infoloisirs à réaliser des enregistrements audio"</string>
+    <string name="microphone_infotainment_apps_toggle_title" msgid="6625559365680936672">"Applis d\'infodivertissement"</string>
+    <string name="microphone_infotainment_apps_toggle_summary" msgid="5967713909533492475">"Autoriser les applis d\'infodivertissement à réaliser des enregistrements audio"</string>
     <string name="camera_access_settings_title" msgid="1841809323727456945">"Accès à la caméra"</string>
     <string name="camera_access_settings_summary" msgid="8820488359585532496">"Choisir si les applis ont accès aux caméras de votre voiture"</string>
     <string name="required_apps_group_title" msgid="8607608579973985786">"Applis requises"</string>
     <string name="required_apps_group_summary" msgid="5026442309718220831">"Applis requises par votre constructeur automobile pour vous aider à conduire"</string>
     <string name="required_apps_privacy_policy_button_text" msgid="960364076891996263">"Règles"</string>
     <string name="camera_access_disclaimer_summary" msgid="442467418242962647">"Votre constructeur automobile a peut-être encore accès à la caméra de votre véhicule"</string>
-    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Applis d\'infoloisirs"</string>
-    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Autoriser les applis d\'infoloisirs à prendre des photos et à enregistrer des vidéos"</string>
+    <string name="camera_infotainment_apps_toggle_title" msgid="6628966732265022536">"Applis d\'infodivertissement"</string>
+    <string name="camera_infotainment_apps_toggle_summary" msgid="2422476957183039039">"Autoriser les applis d\'infodivertissement à prendre des photos et à enregistrer des vidéos"</string>
     <string name="permission_grant_allowed" msgid="4844649705788049638">"Autorisées"</string>
     <string name="permission_grant_always" msgid="8851460274973784076">"Tout le temps"</string>
     <string name="permission_grant_never" msgid="1357441946890127898">"Non autorisées"</string>
@@ -854,16 +854,16 @@
     <string name="device_admin_deactivated_apps" msgid="3797263682500122872">"Applis désactivées"</string>
     <string name="device_admin_apps_description" msgid="1371935499168453457">"Les applications disposant de cette autorisation ont accès aux données de ce véhicule"</string>
     <string name="device_admin_apps_list_empty" msgid="7634804595645191123">"Aucune application d\'administration du véhicule"</string>
-    <string name="device_admin_status" msgid="4041772636856135168">"Cette application d\'administration du système d\'infoloisirs est active et permet à l\'appli <xliff:g id="APP_NAME">%1$s</xliff:g> d\'effectuer les opérations suivantes :"</string>
-    <string name="device_admin_warning" msgid="8997805999333600901">"Si vous activez l\'appli d\'administration du système d\'infoloisirs, l\'appli <xliff:g id="APP_NAME">%1$s</xliff:g> pourra effectuer les opérations suivantes :"</string>
-    <string name="add_device_admin_msg" msgid="8188888666879499482">"Activer appli du système d\'infoloisirs ?"</string>
-    <string name="add_device_admin" msgid="7674707256074840333">"Activer l\'appli du système d\'infoloisirs"</string>
+    <string name="device_admin_status" msgid="4041772636856135168">"Cette application d\'administration du système d\'infodivertissement est active et permet à l\'appli <xliff:g id="APP_NAME">%1$s</xliff:g> d\'effectuer les opérations suivantes :"</string>
+    <string name="device_admin_warning" msgid="8997805999333600901">"Si vous activez l\'appli d\'administration du système d\'infodivertissement, l\'appli <xliff:g id="APP_NAME">%1$s</xliff:g> pourra effectuer les opérations suivantes :"</string>
+    <string name="add_device_admin_msg" msgid="8188888666879499482">"Activer appli du système d\'infodivertissement ?"</string>
+    <string name="add_device_admin" msgid="7674707256074840333">"Activer l\'appli du système d\'infodivertissement"</string>
     <string name="deactivate_and_uninstall_device_admin" msgid="596399938769951696">"Désactiver et désinstaller"</string>
     <string name="remove_device_admin" msgid="3595343390502030723">"Désactiver l\'appli du système d\'infoloisirs"</string>
     <string name="admin_profile_owner_message" msgid="8361351256802954556">"Le gestionnaire de l\'organisation peut contrôler et gérer les applis et les données associées à ce profil, y compris les paramètres, les autorisations, l\'accès aux contenus de l\'entreprise, l\'activité réseau et les informations de localisation du véhicule."</string>
     <string name="admin_profile_owner_user_message" msgid="366072696508275753">"Le gestionnaire de l\'organisation peut contrôler et gérer les applis et les données associées à ce profil, y compris les paramètres, les autorisations, l\'accès aux contenus de l\'entreprise, l\'activité réseau et les informations de localisation de l\'appareil."</string>
-    <string name="admin_device_owner_message" msgid="896530502350904835">"Le gestionnaire de l\'organisation peut contrôler et gérer les applis et les données associées au système d\'infoloisirs, y compris les paramètres, les autorisations, l\'accès aux contenus de l\'entreprise, l\'activité réseau et les informations de localisation du véhicule."</string>
-    <string name="admin_financed_message" msgid="7357397436233684082">"Il est possible que le gestionnaire de l\'organisation puisse accéder aux données associées au système d\'infoloisirs, gérer les applis et modifier les paramètres de ce véhicule."</string>
+    <string name="admin_device_owner_message" msgid="896530502350904835">"Le gestionnaire de l\'organisation peut contrôler et gérer les applis et les données associées au système d\'infodivertissement, y compris les paramètres, les autorisations, l\'accès aux contenus de l\'entreprise, l\'activité réseau et les informations de localisation du véhicule."</string>
+    <string name="admin_financed_message" msgid="7357397436233684082">"Il est possible que le gestionnaire de l\'organisation puisse accéder aux données associées au système d\'infodivertissement, gérer les applis et modifier les paramètres de ce véhicule."</string>
     <string name="disabled_by_policy_title" msgid="1121694702115232518">"Paramètre non disponible"</string>
     <string name="disabled_by_policy_title_adjust_volume" msgid="7002865820552702232">"Impossible de modifier le volume dans ce véhicule géré"</string>
     <string name="disabled_by_policy_title_outgoing_calls" msgid="158752542663419500">"Impossible de passer des appels dans ce véhicule géré"</string>
@@ -883,11 +883,11 @@
     <string name="footer_learn_more_content_description" msgid="7749452309729272078">"En savoir plus sur <xliff:g id="SERVICE">%1$s</xliff:g>"</string>
     <string name="enterprise_privacy_settings" msgid="6496900796150572727">"Infos sur le véhicule géré"</string>
     <string name="enterprise_privacy_settings_summary_generic" msgid="5850991363779957797">"Paramètres gérés par l\'administrateur de flotte"</string>
-    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Pour autoriser l\'accès aux données de ce véhicule géré, l\'administrateur de flotte peut modifier les paramètres et installer un logiciel sur le système d\'infoloisirs.\n\nPour plus d\'informations, contactez votre administrateur de flotte."</string>
+    <string name="enterprise_privacy_header" msgid="4652489109303330306">"Pour autoriser l\'accès aux données de ce véhicule géré, l\'administrateur de flotte peut modifier les paramètres et installer un logiciel sur le système d\'infodivertissement.\n\nPour plus d\'informations, contactez votre administrateur de flotte."</string>
     <string name="enterprise_privacy_exposure_category" msgid="4870494030035008520">"Infos auxquelles votre administrateur de flotte a accès"</string>
     <string name="enterprise_privacy_exposure_changes_category" msgid="8837106430193547177">"Modifications effectuées par l\'administrateur de flotte"</string>
     <string name="enterprise_privacy_exposure_desc" msgid="7962571201715956427">" "<li>"Données associées au compte de votre véhicule géré"</li>\n" "<li>"Liste des applis de votre véhicule géré"</li>\n" "<li>"Temps passé et quantité de données utilisée pour chaque appli"</li></string>
-    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Votre accès au système d\'infoloisirs"</string>
+    <string name="enterprise_privacy_device_access_category" msgid="5820180227429886857">"Votre accès au système d\'infodivertissement"</string>
     <string name="enterprise_privacy_installed_packages" msgid="1069862734971848156">"Liste des applis de votre véhicule"</string>
     <string name="enterprise_privacy_apps_count_estimation_info" msgid="2684195229249659340">"Le nombre d\'applis est une estimation. Il est possible qu\'il n\'inclue pas les applis installées sans passer par le Play Store."</string>
     <plurals name="enterprise_privacy_number_packages_lower_bound" formatted="false" msgid="1628398874478431488">
@@ -911,8 +911,8 @@
     <string name="enterprise_privacy_input_method_name" msgid="2027313786295077607">"Défini sur <xliff:g id="APP_LABEL">%s</xliff:g>"</string>
     <string name="enterprise_privacy_global_http_proxy" msgid="1366593928008294049">"Proxy HTTP global défini"</string>
     <string name="enterprise_privacy_ca_certs_personal" msgid="5677098981429650665">"Identifiants de confiance dans votre profil personnel"</string>
-    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"L\'administrateur peut verrouiller le système d\'infoloisirs et réinitialiser le mot de passe"</li>\n" "<li>"L\'administrateur peut supprimer des données du système d\'infoloisirs"</li></string>
-    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Tentatives de saisie du mot de passe avant la suppression de toutes les données du système d\'infoloisirs"</string>
+    <string name="enterprise_privacy_device_access_desc" msgid="3442555102576036038">" "<li>"L\'administrateur peut verrouiller le système d\'infodivertissement et réinitialiser le mot de passe"</li>\n" "<li>"L\'administrateur peut supprimer des données du système d\'infodivertissement"</li></string>
+    <string name="enterprise_privacy_failed_password_wipe_device" msgid="4768743631260876559">"Tentatives de saisie du mot de passe avant la suppression de toutes les données du système d\'infodivertissement"</string>
     <string name="enterprise_privacy_failed_password_wipe_current_user" msgid="786246192213446835">"Tentatives de saisie du mot de passe avant la suppression des données du profil"</string>
     <plurals name="enterprise_privacy_number_failed_password_wipe" formatted="false" msgid="445847844239023816">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> tentative</item>
