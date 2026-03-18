@@ -31,6 +31,7 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
@@ -51,6 +52,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.enterprise.EnterpriseUtils;
+import com.android.settingslib.wifi.dpp.WifiDppIntentHelper;
 import com.android.wifitrackerlib.NetworkDetailsTracker;
 import com.android.wifitrackerlib.WifiEntry;
 import com.android.wifitrackerlib.WifiPickerTracker;
@@ -460,5 +462,65 @@ public class WifiUtil {
         fragmentController.showDialog(
                 EnterpriseUtils.getActionDisabledByAdminDialog(context, restriction),
                 DISABLED_BY_ADMIN_CONFIRM_DIALOG_TAG);
+    }
+
+    /**
+     * TODO(b/493987250): move this and phone method to SettingLib.
+     * Construct a barcode string for Wi-Fi network login.
+     * The logic and implementation is borrowed from
+     * {@link com.android.settings.wifi.dpp.WifiNetworkConfig#getQrCode}.
+     */
+    public static String getWifiShareQrCode(WifiManager wifiManager, WifiEntry wifiEntry) {
+        WifiConfiguration config = wifiEntry.getWifiConfiguration();
+        if (config == null) {
+            return null;
+        }
+
+        Intent intent = new Intent();
+        WifiDppIntentHelper.setConfiguratorIntentExtra(intent, wifiManager, config);
+
+        String ssid = intent.getStringExtra("ssid");
+        String securityString = intent.getStringExtra("security");
+        String password = intent.getStringExtra("preSharedKey");
+        boolean hiddenSsid = intent.getBooleanExtra("hiddenSsid", false);
+
+        final String empty = "";
+        return new StringBuilder("WIFI:")
+                .append("S:")
+                .append(escapeSpecialCharacters(ssid))
+                .append(";")
+                .append("T:")
+                .append(TextUtils.isEmpty(securityString) ? empty : securityString)
+                .append(";")
+                .append("P:")
+                .append(TextUtils.isEmpty(password) ? empty : escapeSpecialCharacters(password))
+                .append(";")
+                .append("H:")
+                .append(hiddenSsid)
+                .append(";;")
+                .toString();
+    }
+
+    /**
+     * TODO(b/493987250): move this and phone method to SettingLib.
+     * Escaped special characters "\", ";", ":", "," with a backslash.
+     * This method is directly copied from
+     * {@link com.android.settings.wifi.dpp.WifiNetworkConfig#escapeSpecialCharacters}.
+     */
+    private static String escapeSpecialCharacters(String str) {
+        if (TextUtils.isEmpty(str)) {
+            return str;
+        }
+
+        StringBuilder buf = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == '\\' || ch == ',' || ch == ';' || ch == ':') {
+                buf.append('\\');
+            }
+            buf.append(ch);
+        }
+
+        return buf.toString();
     }
 }
