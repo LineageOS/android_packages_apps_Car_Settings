@@ -121,6 +121,7 @@
             android:launchMode="singleTask"
             android:finishOnTaskLaunch="true"
             android:windowSoftInputMode="adjustPan"
+            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
             android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.SETTINGS" />
