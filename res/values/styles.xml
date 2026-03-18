@@ -43,10 +43,8 @@
 
     <style name="PinPadKey">
         <item name="android:gravity">center</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@*android:dimen/car_body1_size</item>
-        <item name="android:textColor">@*android:color/car_body3</item>
-        <item name="android:tint">@*android:color/car_body3</item>
+        <item name="android:textAppearance">?oemTextAppearanceTitleLarge</item>
+        <item name="android:tint">?oemColorOnSurface</item>
         <item name="android:clickable">true</item>
         <item name="android:background">?android:attr/selectableItemBackground</item>
     </style>
