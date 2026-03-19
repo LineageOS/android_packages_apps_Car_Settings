@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 
 import static com.android.car.settings.deeplink.DeepLinkHomepageActivity.EXTRA_TARGET_SECONDARY_CONTAINER;
 
+import android.app.Activity;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
@@ -74,7 +75,7 @@ import java.util.Map;
  */
 public abstract class SettingsFragment extends PreferenceFragment implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController, Indexable {
-
+    private static final Logger LOG = new Logger(SettingsFragment.class);
     @VisibleForTesting
     static final String DIALOG_FRAGMENT_TAG =
             "com.android.car.settings.common.SettingsFragment.DIALOG";
@@ -227,18 +228,31 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     }
 
     private boolean shouldDisableBackButton() {
-        if (getActivity() == null || getActivity().getIntent() == null) {
+        Activity hostActivity = getActivity();
+        if (hostActivity == null || hostActivity.getIntent() == null) {
+            LOG.d("Keep BACK button. getActivity() or getActivity().getIntent() is null");
             return false;
         }
-        if (getFragmentManager().getBackStackEntryCount() > 1
-                || getActivity().getIntent().getBooleanExtra(EXTRA_TARGET_SECONDARY_CONTAINER,
-                false)) {
+        LOG.d("Evaluating whether to disable BACK button for %s(%s)".formatted(
+                hostActivity.getClass().getSimpleName(), this.getClass().getSimpleName()));
+        if (hostActivity.getIntent().getBooleanExtra(EXTRA_TARGET_SECONDARY_CONTAINER, false)) {
+            LOG.d("Keep BACK button. Activity EXTRA_TARGET_SECONDARY_CONTAINER. Fragments"
+                    + " was launched either by DeepLink or Placeholder. ");
             return false;
         }
-        boolean startedBySettings = getActivity().getIntent().getAction() == null
+        int backEntryCount = getFragmentManager().getBackStackEntryCount();
+        if (backEntryCount > 1) {
+            LOG.d("Keep BACK button. FragmentManager contains %d stacks".formatted(backEntryCount));
+            return false;
+        }
+        boolean startedBySettings = hostActivity.getIntent().getAction() == null
                 || CarSettingsApplication.CAR_SETTINGS_PACKAGE_NAME.equals(
-                        getActivity().getLaunchedFromPackage());
-        return startedBySettings && ActivityEmbeddingUtils.isEmbeddingSplitActivated(getActivity());
+                        hostActivity.getLaunchedFromPackage());
+        boolean result = startedBySettings
+                && ActivityEmbeddingUtils.isEmbeddingSplitActivated(hostActivity);
+        LOG.d("Disable back button ONLY when started by setting AND is embedded. Disabling = %b"
+                .formatted(result));
+        return result;
     }
 
     @Override

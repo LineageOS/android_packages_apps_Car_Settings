@@ -51,7 +51,7 @@ import java.util.List;
  * Top level settings menu.
  */
 public class TopLevelMenuFragment extends SettingsFragment {
-
+    private static final Logger LOG = new Logger(TopLevelMenuFragment.class);
     /**
      * The preference key for the top-level menu item associated with a fragment.
      * This is intended to be included with fragments launched from top-level menu
@@ -96,9 +96,11 @@ public class TopLevelMenuFragment extends SettingsFragment {
         super.setupToolbar(toolbar);
         toolbar.setTitle(R.string.settings_label);
         if (ActivityEmbeddingUtils.isEmbeddingSplitActivated(getActivity())) {
+            LOG.d("DISABLE toolbar BACK and add ICON. Overriding because dual pane is enabled");
             toolbar.setLogo(R.drawable.ic_launcher_settings);
             toolbar.setNavButtonMode(NavButtonMode.DISABLED);
         } else {
+            LOG.d("Using default BACK button behavior");
             toolbar.setLogo(null);
             toolbar.setNavButtonMode(NavButtonMode.BACK);
         }

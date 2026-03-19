@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
+import static com.android.car.settings.activityembedding.ActivityEmbeddingUtils.EXTRA_IS_PLACEHOLDER_ACTIVITY;
 import static com.android.car.settings.deeplink.DeepLinkHomepageActivity.EXTRA_TARGET_SECONDARY_CONTAINER;
 import static com.android.car.settings.deeplink.DeepLinkHomepageActivity.convertToDeepLinkHomepageIntent;
 
@@ -44,10 +45,10 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.car.settings.activityembedding.ActivityEmbeddingUtils;
+import com.android.car.settings.deeplink.DeepLinkHomepageActivity;
 import com.android.car.ui.baselayout.Insets;
 import com.android.car.ui.baselayout.InsetsChangedListener;
 import com.android.car.ui.core.CarUi;
-import com.android.car.ui.toolbar.NavButtonMode;
 import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.core.lifecycle.HideNonSystemOverlayMixin;
 
@@ -94,12 +95,15 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LOG.d("onCreate: %s".formatted(this.getClass().getSimpleName()));
         populateMetaData();
         // When dual-pane is enabled, all activity-filter Intents into Settings should be relaunched
         // into the secondary container with the exception of HomepageActivity.
         // For any instance of BaseCarSettingsActivity, if its start-up Intent meets the conditions
         // for deep link, trampoline it and restart the activity on the secondary container.
         if (shouldUseSecondaryPaneForActivity()) {
+            LOG.d("Restarting %s to embed it with DeepLinkHomepageActivity"
+                    .formatted(this.getClass().getSimpleName()));
             startActivity(convertToDeepLinkHomepageIntent(getIntent()));
             finish();
             return;
@@ -136,18 +140,27 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         launchIfDifferent(getInitialFragment());
     }
 
+    /**
+     * TODO(b/495099823): fall through methods is not easily tested, and BaseCarSettingsActivity is
+     * getting too long. Consider refactoring this into an more observable class.
+     * @return {@code true} if this activity should be restarted in a DeepLinkHomepageActivity.
+     */
     private boolean shouldUseSecondaryPaneForActivity() {
+        String logPrefix = "Activity(%s): ".formatted(this.getClass().getSimpleName());
         if (!ActivityEmbeddingUtils.isEmbeddingActivityEnabled(this)) {
+            LOG.d(logPrefix + "No restart. Activity embedding in use");
             return false;
         }
         // Homepage and deeplink activity should never be hosted on the secondary pane.
         if (this instanceof CarSettingActivities.HomepageActivity) {
+            LOG.d(logPrefix + "No restart. Class is HomepageActivity of subclass");
             return false;
         }
         // All deeplink intents are received via intent-filter so getAction must not be null.
         // Only starts trampoline for deep link intents. Should return false for all the cases that
         // CarSettings app starts a SubSettingsActivity.
         if (getIntent().getAction() == null) {
+            LOG.d(logPrefix + "No restart. Intent action is null");
             return false;
         }
         // If the activity's launch mode is "singleInstance", it can't be embedded in Settings since
@@ -155,20 +168,32 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
         ActivityInfo info = getIntent().resolveActivityInfo(getPackageManager(),
                 PackageManager.MATCH_DEFAULT_ONLY);
         if (info.launchMode == ActivityInfo.LAUNCH_SINGLE_INSTANCE) {
+            LOG.d(logPrefix + "No restart. Class is singleInstance");
             return false;
         }
         // If the activity metadata is configured to be single pane, it should be directly shown.
         info = getActivityInfo(getPackageManager(), getComponentName());
         if (info != null && info.metaData != null
                 && info.metaData.getBoolean(META_DATA_KEY_SINGLE_PANE, false)) {
+            LOG.d(logPrefix + "No restart. Activity is configured in XML to be single pane");
             return false;
         }
         // This intent has already been restarted as deeplink intent, or was launched by another
         // activity already embedded on the secondary pane.
-        if (getIntent().getBooleanExtra(EXTRA_TARGET_SECONDARY_CONTAINER, false)) {
+        if (isTargetSecondaryContainer()) {
+            LOG.d(logPrefix + "No restart. Activity is target secondary pane");
             return false;
         }
+        LOG.d(logPrefix + "Restarting activity in a DeepLinkHomepageActivity");
         return true;
+    }
+
+    private boolean isTargetSecondaryContainer() {
+        return getIntent().getBooleanExtra(EXTRA_TARGET_SECONDARY_CONTAINER, false);
+    }
+
+    private boolean isLaunchedByPlaceholder() {
+        return getIntent().getBooleanExtra(EXTRA_IS_PLACEHOLDER_ACTIVITY, false);
     }
 
     private void populateMetaData() {
@@ -236,9 +261,22 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                     "cannot launch dialogs with launchFragment() - use showDialog() instead");
         }
         if (mIsSinglePane || this instanceof SubSettingsActivity) {
+            LOG.d("Updating contained fragment to %s in %s (isSinglePane = %b)".formatted(
+                    fragment.getClass().getSimpleName(), this.getClass().getSimpleName(),
+                    mIsSinglePane
+            ));
             updateFragmentContainer(fragment);
         } else {
             Intent intent = SubSettingsActivity.newInstance(this, fragment);
+            boolean targetSecondaryContainer = isTargetSecondaryContainer()
+                    || isLaunchedByPlaceholder() || this instanceof DeepLinkHomepageActivity;
+            if (targetSecondaryContainer) {
+                intent.putExtra(EXTRA_TARGET_SECONDARY_CONTAINER, true);
+            }
+            LOG.d("Starting a new SubSettingsActivity(%s) from %s(%s). Target secondary: %b"
+                    .formatted(fragment.getClass().getSimpleName(), this.getClass().getSimpleName(),
+                            getCurrentFragment().getClass().getSimpleName(),
+                            targetSecondaryContainer));
             setIntent(intent);
             startActivity(intent);
         }
@@ -365,7 +403,6 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
                 insets -> globalToolbarWrappedView.setPadding(
                         insets.getLeft(), insets.getTop(), insets.getRight(),
                         insets.getBottom()), /* hasToolbar= */ true);
-        mToolbar.setNavButtonMode(NavButtonMode.BACK);
     }
 
     /**
