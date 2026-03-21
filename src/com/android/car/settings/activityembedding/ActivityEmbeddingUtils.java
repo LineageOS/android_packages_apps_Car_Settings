@@ -46,7 +46,7 @@ public class ActivityEmbeddingUtils {
     public static boolean isEmbeddingActivityEnabled(Context context) {
         SplitController.SplitSupportStatus splitStatus =
                 SplitController.getInstance(context).getSplitSupportStatus();
-        LOG.d("Current embedding backend split status: " + splitStatus);
+        LOG.v("Current embedding backend split status: " + splitStatus);
         boolean configForceSinglePane = context.getResources().getBoolean(
                 R.bool.config_global_force_single_pane);
         return splitStatus == SplitController.SplitSupportStatus.SPLIT_AVAILABLE

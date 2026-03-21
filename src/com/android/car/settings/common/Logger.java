@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import android.os.Build;
 import android.util.Log;
 
 /**
@@ -187,13 +188,30 @@ public final class Logger {
         Log.wtf(TAG, mPrefix.concat(message), throwable);
     }
 
+    /**
+     * isV() represents "spammy" or granular logging for debugging more sophisticated traces, such
+     * as fragment updates, user clickers, activity launches, etc. There should NOT be enabled by
+     * default even on -userdebug or -eng builds as to clutter logcat.
+     * Developers should enable this manually when needing to follow an execution path, or trace
+     * exact values stored in some key classes.
+     * Use `adb shell setprop log.tag.CarSettings VERBOSE` and then restart the app with
+     * `adb shell am force-stop com.android.car.settings` to enable this change.
+     */
     private boolean isV() {
         return Log.isLoggable(TAG, Log.VERBOSE) || forceAllLogging();
     }
 
+    /**
+     * isD() represents information generally useful for fast debugging, and is suitable for targets
+     * on -userdebug and -eng builds. As a rule of thumb, you should be able to find these logs in a
+     * bugreport and help you identify if something has gone wrong quickly.
+     * Use `adb shell setprop log.tag.CarSettings DEBUG` and then restart the app with
+     * `adb shell am force-stop com.android.car.settings` to enable this change.
+     */
     private boolean isD() {
-        return Log.isLoggable(TAG, Log.DEBUG) || forceAllLogging();
+        return Log.isLoggable(TAG, Log.DEBUG) || Build.IS_DEBUGGABLE || forceAllLogging();
     }
+
 
     private boolean isI() {
         return Log.isLoggable(TAG, Log.INFO) || forceAllLogging();
