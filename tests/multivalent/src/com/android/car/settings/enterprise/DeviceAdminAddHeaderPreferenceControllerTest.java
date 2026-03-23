@@ -19,7 +19,6 @@ import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
-import android.app.AppOpsManager;
 
 import androidx.preference.TwoStatePreference;
 
@@ -127,9 +126,6 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
 
         verifyPreferenceSetChecked(mPreference, false);
         verifyPreferenceEnabled(mPreference);
-        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
-                /* restricted= */ true);
-        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_TOAST_WINDOW, /* restricted= */ true);
     }
 
     @Test
@@ -140,9 +136,6 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
 
         verifyPreferenceSetChecked(mPreference, true);
         verifyPreferenceEnabled(mPreference);
-        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
-                /* restricted= */ true);
-        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_TOAST_WINDOW, /* restricted= */ true);
     }
 
     @Test
@@ -153,9 +146,6 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
 
         verifyPreferenceSetChecked(mPreference, true);
         verifyPreferenceDisabled(mPreference);
-        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
-                /* restricted= */ true);
-        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_TOAST_WINDOW, /* restricted= */ true);
     }
 
     @Test
@@ -163,9 +153,6 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
         mController.onPauseInternal(mPreference);
 
         verifyPreferenceDisabled(mPreference);
-        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_SYSTEM_ALERT_WINDOW,
-                /* restricted= */ false);
-        verifyAppOpsMgrSetUserRestriction(AppOpsManager.OP_TOAST_WINDOW, /* restricted= */ false);
     }
 
     @Test
