@@ -30,6 +30,8 @@ import com.android.car.settings.common.Logger;
  * Utility class for retrieving Activity Embedding configurations to handle dual-pane layout.
  */
 public class ActivityEmbeddingUtils {
+    public static final String EXTRA_IS_PLACEHOLDER_ACTIVITY =
+            "com.android.car.settings.EXTRA_IS_PLACEHOLDER_ACTIVITY";
     // The smallest value of the smallest-width (sw) of the window in any rotation when
     // the split should be used.
     // Without rotation enabled, it is safe to set this number to 0dp;
@@ -100,8 +102,10 @@ public class ActivityEmbeddingUtils {
      * Returns the Intent to launch the default activity in dual-pane settings.
      */
     public static Intent getPlaceholderIntent(Context context) {
-        return new Intent().setClassName(context.getPackageName(),
-                context.getString(R.string.config_homepage_placeholder_class));
+        return new Intent()
+                .setClassName(context.getPackageName(),
+                        context.getString(R.string.config_homepage_placeholder_class))
+                .putExtra(EXTRA_IS_PLACEHOLDER_ACTIVITY, true);
     }
 
     /**
