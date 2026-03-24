@@ -32,6 +32,7 @@ import android.content.SharedPreferences;
 
 import androidx.preference.Preference;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.bluetooth.LeAudioProfile;
@@ -163,8 +164,9 @@ public abstract class BaseAudioSharingPreferenceController<T extends Preference>
      * management in Settings is available, {@code false} otherwise.
      */
     public boolean isBroadcastAvailable() {
-        return isBluetoothStateOn() && mBtManager != null && mLeAudioProfile != null
-                && mLeBroadcastProfile != null && mLeBroadcastAssistantProfile != null;
+        return isBluetoothStateOn() && mBtManager != null
+                && mLeAudioProfile != null && mLeBroadcastProfile != null
+                && mLeBroadcastAssistantProfile != null;
     }
 
     /**
@@ -187,7 +189,7 @@ public abstract class BaseAudioSharingPreferenceController<T extends Preference>
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (isUserEnabled() && isBroadcasting()) {
+        if (Flags.newAudioRoutingUi() && isUserEnabled() && isBroadcasting()) {
             return AVAILABLE;
         }
         return CONDITIONALLY_UNAVAILABLE;

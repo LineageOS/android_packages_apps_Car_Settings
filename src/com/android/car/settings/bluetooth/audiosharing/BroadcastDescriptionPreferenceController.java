@@ -21,6 +21,7 @@ import android.content.Context;
 
 import androidx.preference.PreferenceCategory;
 
+import com.android.car.settings.Flags;
 import com.android.car.settings.common.FragmentController;
 
 /**
@@ -40,7 +41,7 @@ public class BroadcastDescriptionPreferenceController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (isUserEnabled() && isBroadcastAvailable()) {
+        if (Flags.newAudioRoutingUi() && isUserEnabled() && isBroadcastAvailable()) {
             return AVAILABLE;
         }
         return CONDITIONALLY_UNAVAILABLE;
