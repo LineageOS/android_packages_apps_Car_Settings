@@ -29,7 +29,6 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.annotation.UserIdInt;
-import android.app.AppOpsManager;
 import android.app.admin.DeviceAdminInfo;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
@@ -39,7 +38,6 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.UserInfo;
-import android.os.IBinder;
 import android.os.UserHandle;
 import android.os.UserManager;
 
@@ -84,8 +82,6 @@ public abstract class BaseEnterpriseTestCase {
     protected DeviceAdminInfo mDefaultDeviceAdminInfo;
     protected DeviceAdminInfo mFancyDeviceAdminInfo;
 
-    @Mock
-    protected AppOpsManager mAppOpsMgr;
 
     @Mock
     protected DevicePolicyManager mDpm;
@@ -111,7 +107,6 @@ public abstract class BaseEnterpriseTestCase {
         assertWithMessage("mDpm").that(mDpm).isNotNull();
         assertWithMessage("mUm").that(mUm).isNotNull();
 
-        when(mSpiedContext.getSystemService(AppOpsManager.class)).thenReturn(mAppOpsMgr);
         when(mSpiedContext.getSystemService(DevicePolicyManager.class)).thenReturn(mDpm);
         when(mSpiedContext.getSystemService(PackageManager.class)).thenReturn(mSpiedPm);
         when(mSpiedContext.getPackageManager()).thenReturn(mSpiedPm);
@@ -275,7 +270,4 @@ public abstract class BaseEnterpriseTestCase {
         verify(mDpm, never()).removeActiveAdmin(any());
     }
 
-    protected final void verifyAppOpsMgrSetUserRestriction(int code, boolean restricted) {
-        verify(mAppOpsMgr).setUserRestriction(eq(code), eq(restricted), any(IBinder.class));
-    }
 }
