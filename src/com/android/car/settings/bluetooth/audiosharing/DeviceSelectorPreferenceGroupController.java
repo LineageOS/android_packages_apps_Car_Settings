@@ -27,6 +27,7 @@ import androidx.annotation.Nullable;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsApplication;
+import com.android.car.settings.Flags;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.ui.preference.CarUiTwoActionIconPreference;
@@ -205,7 +206,7 @@ public class DeviceSelectorPreferenceGroupController extends
 
     @Override
     protected int getDefaultAvailabilityStatus() {
-        if (isUserEnabled() && isBroadcastAvailable()) {
+        if (Flags.newAudioRoutingUi() && isUserEnabled() && isBroadcastAvailable()) {
             return AVAILABLE;
         }
         return CONDITIONALLY_UNAVAILABLE;
