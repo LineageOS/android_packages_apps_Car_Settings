@@ -85,8 +85,10 @@ public class CarSettingActivities {
     public static class HomepageActivity extends BaseCarSettingsActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
+            LOG.v("onCreate() <- Intent(%s)".formatted(getIntent()));
             super.onCreate(savedInstanceState);
             if (!isTaskRoot()) {
+                LOG.d("Restarting activity. isTaskRoot() must be true for HomepageActivity");
                 // When HomepageActivity is not launched as task root, such as via ACTION_SETTINGS,
                 // the placeholder will not be activated.
                 // In the DeepLinkHomepageActivity case, if the intent comes from another app, the
@@ -101,6 +103,7 @@ public class CarSettingActivities {
 
         @Override
         protected void onNewIntent(Intent intent) {
+            LOG.v("onNewIntent(%s)".formatted(intent));
             super.onNewIntent(intent);
             // Because HomepageActivity is a singleTask activity, after onCreate has already been
             // called, additional Intents will not call onCreate() again.

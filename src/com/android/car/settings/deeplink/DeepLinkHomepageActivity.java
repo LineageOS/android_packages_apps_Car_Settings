@@ -27,6 +27,7 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 
 import androidx.window.embedding.SplitRule;
@@ -60,28 +61,37 @@ public class DeepLinkHomepageActivity extends CarSettingActivities.HomepageActiv
     private static final Logger LOG = new Logger(DeepLinkHomepageActivity.class);
 
     @Override
-    protected void handleNewIntent(Intent intent) {
-        super.handleNewIntent(intent);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        maybeLaunchDeepLinkActivity(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
         maybeLaunchDeepLinkActivity(intent);
     }
 
-    /**
-     * Launches deep link activity to be directly two pane if it is supported.
-     */
     private void maybeLaunchDeepLinkActivity(Intent intent) {
+        if (intent == null) {
+            LOG.e("Cannot start deep link. Intent is null");
+            return;
+        }
         if (!ActivityEmbeddingUtils.isEmbeddingActivityEnabled(this)) {
-            Log.e(TAG, "Embedding is not enabled. Finishing DeepLinkHomepageActivity.");
+            Log.e(TAG, "Cannot start deep link. Embedding is not enabled. Finishing Activity");
             finish();
+            return;
         }
         Intent targetIntent;
         try {
             String intentUriString = intent.getStringExtra(
                     EXTRA_SETTINGS_EMBEDDED_DEEP_LINK_INTENT_URI);
             if (intentUriString == null) {
-                LOG.e("Unable to parse trampoline intent. Intent URI is null");
+                LOG.e("No trampoline intent URI found");
                 return;
             }
             targetIntent = Intent.parseUri(intentUriString, Intent.URI_INTENT_SCHEME);
+            LOG.d("Parsed targetIntent: " + targetIntent);
             targetIntent.setData(
                     intent.getParcelableExtra(EMBEDDED_DEEPLINK_INTENT_DATA, Uri.class));
         } catch (URISyntaxException e) {
@@ -92,7 +102,10 @@ public class DeepLinkHomepageActivity extends CarSettingActivities.HomepageActiv
         targetIntent.setComponent(targetComponentName);
         targetIntent.removeFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         targetIntent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
-        targetIntent.replaceExtras(intent);
+        if (intent.getExtras() != null) {
+            targetIntent.putExtras(intent.getExtras());
+        }
+
         ActivityEmbeddingRulesController.registerDualPaneSplitRule(this,
                 /* primaryComponent= */ new ComponentName(getApplicationContext(), getClass()),
                 /* secondaryComponent= */ targetComponentName,
@@ -102,6 +115,7 @@ public class DeepLinkHomepageActivity extends CarSettingActivities.HomepageActiv
                 /* clearTop= */ true);
         setTopLevelHeaderKey(getTopLevelHeaderKey(targetIntent));
         targetIntent.putExtra(EXTRA_TARGET_SECONDARY_CONTAINER, true);
+        LOG.d("Starting an activity in deeplink with startActivity() <- " + targetIntent);
         startActivity(targetIntent);
     }
 
