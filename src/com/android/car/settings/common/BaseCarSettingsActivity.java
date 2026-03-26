@@ -147,8 +147,9 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
      */
     private boolean shouldUseSecondaryPaneForActivity() {
         String logPrefix = "Activity(%s): ".formatted(this.getClass().getSimpleName());
+        LOG.v(logPrefix + "shouldUseSecondaryPaneForActivity? getIntent()=" + getIntent());
         if (!ActivityEmbeddingUtils.isEmbeddingActivityEnabled(this)) {
-            LOG.d(logPrefix + "No restart. Activity embedding in use");
+            LOG.d(logPrefix + "No restart. Activity embedding not enabled");
             return false;
         }
         // Homepage and deeplink activity should never be hosted on the secondary pane.
