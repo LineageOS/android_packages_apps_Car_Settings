@@ -68,11 +68,4 @@ public class PlaySoundPreferenceController extends
     protected Class<CarUiPreference> getPreferenceType() {
         return CarUiPreference.class;
     }
-
-    @Override
-    protected int getDefaultAvailabilityStatus() {
-        if (isUserEnabled() && isBroadcasting()) {
-            return AVAILABLE;
-        }
-        return CONDITIONALLY_UNAVAILABLE;
-    }}
+}

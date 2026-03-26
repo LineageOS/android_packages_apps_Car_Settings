@@ -49,6 +49,9 @@ public class SubSettingsActivity extends BaseCarSettingsActivity {
         try {
             String fragmentClass = getIntent().getStringExtra(KEY_SUB_SETTINGS_FRAGMENT);
             Bundle fragmentArgs = getIntent().getBundleExtra(KEY_SUB_SETTINGS_FRAGMENT_ARGS);
+            LOG.v("Getting initial fragment for SubSettingsActivity(%s), extras=%s".formatted(
+                    fragmentClass, getIntent().getExtras()));
+
             Fragment fragment = getSupportFragmentManager().getFragmentFactory().instantiate(
                     getClassLoader(), fragmentClass);
             fragment.setArguments(fragmentArgs);
