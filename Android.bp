@@ -51,7 +51,6 @@ android_library {
         "androidx.preference_preference",
         "androidx.window_window",
         "androidx-constraintlayout_constraintlayout",
-        "androidx.test.core",
         "car-apps-common",
         "car-setup-wizard-lib-utils",
         "WifiTrackerLib",
@@ -149,6 +148,7 @@ android_app {
 
     static_libs: [
         "CarSettings-core",
+        "androidx.test.core",
     ],
 
     enforce_uses_libs: false,
@@ -206,6 +206,7 @@ android_app {
 
     static_libs: [
         "CarSettings-core",
+        "androidx.test.core",
     ],
 
     // Testing only resources must be applied last so they take precedence.
