@@ -95,8 +95,8 @@ public class TopLevelMenuFragment extends SettingsFragment {
     protected void setupToolbar(@NonNull ToolbarController toolbar) {
         super.setupToolbar(toolbar);
         toolbar.setTitle(R.string.settings_label);
-        if (ActivityEmbeddingUtils.isEmbeddingSplitActivated(getActivity())) {
-            LOG.d("DISABLE toolbar BACK and add ICON. Overriding because dual pane is enabled");
+        if (ActivityEmbeddingUtils.isEmbeddingActivityEnabled(getActivity())) {
+            LOG.d("DISABLE toolbar BACK and add ICON. Overriding because embedding is enabled");
             toolbar.setLogo(R.drawable.ic_launcher_settings);
             toolbar.setNavButtonMode(NavButtonMode.DISABLED);
         } else {
