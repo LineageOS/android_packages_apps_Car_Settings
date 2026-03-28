@@ -48,6 +48,10 @@ public class SubSettingsActivity extends BaseCarSettingsActivity {
     protected Fragment getInitialFragment() {
         try {
             String fragmentClass = getIntent().getStringExtra(KEY_SUB_SETTINGS_FRAGMENT);
+            if (TopLevelMenuFragment.class.getName().equals(fragmentClass)) {
+                throw new IllegalArgumentException(
+                        "TopLevelMenuFragment cannot be launched as a SubSettingsActivity");
+            }
             Bundle fragmentArgs = getIntent().getBundleExtra(KEY_SUB_SETTINGS_FRAGMENT_ARGS);
             LOG.v("Getting initial fragment for SubSettingsActivity(%s), extras=%s".formatted(
                     fragmentClass, getIntent().getExtras()));

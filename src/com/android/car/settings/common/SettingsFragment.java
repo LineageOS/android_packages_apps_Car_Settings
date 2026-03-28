@@ -233,18 +233,24 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             LOG.d("Keep BACK button. getActivity() or getActivity().getIntent() is null");
             return false;
         }
-        LOG.d("Evaluating whether to disable BACK button for %s(%s)".formatted(
+
+        LOG.v("Evaluating whether to disable BACK button for %s(%s)".formatted(
                 hostActivity.getClass().getSimpleName(), this.getClass().getSimpleName()));
+
+        // Secondary container fragments (e.g. SubSettingsActivity in the right pane)
+        // ALWAYS get a back button for stack navigation.
         if (hostActivity.getIntent().getBooleanExtra(EXTRA_TARGET_SECONDARY_CONTAINER, false)) {
-            LOG.d("Keep BACK button. Activity EXTRA_TARGET_SECONDARY_CONTAINER. Fragments"
-                    + " was launched either by DeepLink or Placeholder. ");
+            LOG.d("Keep BACK button. Activity is target secondary container.");
             return false;
         }
+
+        // Fragments with a back stack deeper than 1 ALWAYS need a back button.
         int backEntryCount = getFragmentManager().getBackStackEntryCount();
         if (backEntryCount > 1) {
             LOG.d("Keep BACK button. FragmentManager contains %d stacks".formatted(backEntryCount));
             return false;
         }
+
         boolean startedBySettings = hostActivity.getIntent().getAction() == null
                 || CarSettingsApplication.CAR_SETTINGS_PACKAGE_NAME.equals(
                         hostActivity.getLaunchedFromPackage());
