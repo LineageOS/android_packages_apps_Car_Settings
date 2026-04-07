@@ -134,7 +134,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"ဂိတ်ဝ"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi သတ်မှတ်ချက်များ"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wi-Fi အလိုအလျောက် ဖွင့်ပါ"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"နေအိမ်ကွန်ရက်ကဲ့သို့ သိမ်းထားသည့် အဆင့်မြင့်ကွန်ရက်အနီးတွင် Wi‑Fi ပြန်ဖွင့်မည်"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"သင်၏နေအိမ်ကွန်ရက်ကဲ့သို့သော သိမ်းဆည်းထားသည့် အရည်အသွေးမြင့် ကွန်ရက်များအနီးသို့ ရောက်သည့်အခါ Wi-Fi ပြန်ပွင့်လာမည်"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"တည်နေရာကို ပိတ်ထားသောကြောင့် မရနိုင်ပါ။ "<annotation id="link">"တည်နေရာ"</annotation>" ကို ဖွင့်ပါ။"</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi ရှာဖွေမှု ဖွင့်လိုသလား။"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"ဖွင့်ရန်"</string>
@@ -398,10 +398,8 @@
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"မှတ်ချက်- ပြန်လည်စတင်ပြီးနောက် သင့်ယာဉ်ကို လော့ခ်မဖွင့်မချင်း ဤအက်ပ်ကို အသုံးပြု၍မရပါ။"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"အကူနှင့် အသံဖြင့်စာရိုက်ခြင်း"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"အကူအညီ အက်ပ်"</string>
-    <!-- no translation found for assist_access_screen_context_title (532741345297191473) -->
-    <skip />
-    <!-- no translation found for assist_access_screen_context_summary (6213684270429102575) -->
-    <skip />
+    <string name="assist_access_screen_context_title" msgid="532741345297191473">"စခရင်နှင့် အက်ပ်ဒေတာ သုံးခြင်း"</string>
+    <string name="assist_access_screen_context_summary" msgid="6213684270429102575">"ဤအထောက်အကူအား သင့်စခရင်တွင် ဖွင့်ထားသော အက်ပ်မှ အချက်အလက်နှင့် အကြောင်းအရာကို ဝင်ရောက်ကြည့်ရှုခွင့်ပြုပါ"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"အသံဖြင့် ထည့်သွင်းရန်"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"အော်တိုဖြည့် ဝန်ဆောင်မှု"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"မရှိ"</string>
