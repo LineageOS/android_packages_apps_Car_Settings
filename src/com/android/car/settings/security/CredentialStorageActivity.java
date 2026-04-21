@@ -142,10 +142,11 @@ public class CredentialStorageActivity extends FragmentActivity {
      * Check that the caller is either CertInstaller or Settings running in a profile of this user.
      */
     private boolean checkCallerIsCertInstallerOrSelfInProfile() {
-        if (TextUtils.equals(CERT_INSTALLER_PKG, getCallingPackage())) {
+        String launchedFromPackage = getLaunchedFromPackage();
+        if (TextUtils.equals(CERT_INSTALLER_PKG, launchedFromPackage)) {
             // CertInstaller is allowed to install credentials if it has the same signature as
             // Settings package.
-            return getPackageManager().checkSignatures(getCallingPackage(), getPackageName())
+            return getPackageManager().checkSignatures(launchedFromPackage, getPackageName())
                     == PackageManager.SIGNATURE_MATCH;
         }
 
