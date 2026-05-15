@@ -104,7 +104,7 @@ public abstract class DeviceAdminAppsPreferenceController
         preference.setIcon(deviceAdminInfo.loadIcon(mPm));
         CharSequence description = getDescription(deviceAdminInfo);
         if (!TextUtils.isEmpty(description)) {
-            preference.setSummary(deviceAdminInfo.loadDescription(mPm));
+            preference.setSummary(deviceAdminInfo.loadDescriptionSafe(mPm));
         }
         preference.setKey(deviceAdminInfo.getPackageName());
         ComponentName componentName = deviceAdminInfo.getComponent();
