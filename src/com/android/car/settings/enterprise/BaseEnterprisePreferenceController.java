@@ -78,7 +78,7 @@ abstract class BaseEnterprisePreferenceController<P extends Preference>
     @Nullable
     protected final CharSequence getDescription(DeviceAdminInfo deviceAdminInfo) {
         try {
-            return deviceAdminInfo.loadDescription(mPm);
+            return deviceAdminInfo.loadDescriptionSafe(mPm);
         } catch (Resources.NotFoundException e) {
             mLogger.v("No description for "
                     + deviceAdminInfo.getComponent().flattenToShortString());
