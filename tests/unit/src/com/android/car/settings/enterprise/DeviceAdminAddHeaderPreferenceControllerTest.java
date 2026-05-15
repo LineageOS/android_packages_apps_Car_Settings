@@ -191,7 +191,7 @@ public final class DeviceAdminAddHeaderPreferenceControllerTest extends
         verifyPreferenceSetChecked(mPreference, true);
         verifyPreferenceEnabled(mPreference);
         verifyPreferenceTitleSet(mPreference, mFancyDeviceAdminInfo.loadLabel(mRealPm));
-        verifyPreferenceSummarySet(mPreference, mFancyDeviceAdminInfo.loadDescription(mRealPm));
+        verifyPreferenceSummarySet(mPreference, mFancyDeviceAdminInfo.loadDescriptionSafe(mRealPm));
         verifyPreferenceIconSet(mPreference);
     }
 
