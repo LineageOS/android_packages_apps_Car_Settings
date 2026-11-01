@@ -15,6 +15,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="show_dev_countdown_cm">{count, plural,
+      =1      {Sekarang Anda # langkah lagi untuk mengaktifkan opsi pengembang}
+      other   {Sekarang anda # langkah lagi untuk mengaktifkan opsi pengembang}
+    }</string>
     <string name="show_dev_on_cm">Anda telah mengaktifkan opsi pengembang!</string>
     <string name="show_dev_already_cm">Tidak perlu, anda sudah mengaktifkan opsi pengembang.</string>
 </resources>
